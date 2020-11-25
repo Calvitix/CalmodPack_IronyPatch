@@ -1,0 +1,19 @@
+namespace = mandate
+country_event = {
+    id = mandate.162
+    title = mandate.162.title
+    desc = mandate.162.desc
+    picture = GFX_evt_civil_action
+    show_sound = event_assembly_fight
+    is_triggered_only = yes
+    trigger = {
+        has_event_chain = mandate_peacemaker_chain
+    }
+    immediate = {
+        failed_mandate_effect = yes
+        end_event_chain = mandate_peacemaker_chain
+    }
+    option = {
+        name = OK
+    }
+}

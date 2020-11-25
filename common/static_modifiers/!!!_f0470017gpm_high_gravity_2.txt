@@ -1,0 +1,13 @@
+gpm_high_gravity_2 = {
+    show_only_custom_tooltip = yes
+    custom_tooltip = do_pm_gpm_high_gravity_2
+    planet_jobs_alloys_produces_mult = 0.10
+    planet_buildings_cost_mult = 0.20
+    pop_environment_tolerance = -0.05
+    district_mining_max = -4
+    district_cheap_mining_max = -4
+    district_secure_mining_max = -4
+    district_surface_mining_max = -4
+    icon = "gfx/interface/icons/planet_modifiers/pm_high_gravity.dds"
+    icon_frame = 2
+}

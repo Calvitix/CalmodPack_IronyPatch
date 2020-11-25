@@ -1,0 +1,12 @@
+gpm_flat_terrain = {
+    show_only_custom_tooltip = yes
+    custom_tooltip = do_pm_gpm_flat_terrain
+    planet_buildings_cost_mult = -0.20
+    planet_jobs_minerals_produces_mult = -0.20
+    district_mining_max = -2
+    district_cheap_mining_max = -2
+    district_secure_mining_max = -2
+    district_surface_mining_max = -2
+    icon = "gfx/interface/icons/planet_modifiers/gpm_flat_terrain.dds"
+    icon_frame = 2
+}

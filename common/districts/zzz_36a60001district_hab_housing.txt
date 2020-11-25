@@ -1,0 +1,67 @@
+@hab_cost = 500
+@hab_maintenance = 2
+district_hab_housing = {
+    base_buildtime = 240
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        has_district_hab_housing = yes
+        uses_district_set = habitat
+    }
+    potential = {
+        has_district_hab_housing = yes
+        uses_district_set = habitat
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = @hab_cost
+        }
+        upkeep = {
+            energy = @hab_maintenance
+        }
+    }
+    planet_modifier = {
+        planet_housing_add = 8
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_maintenance_drone_add = 1
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = job_maintenance_drone_effect_desc
+    }
+    ai_weight = {
+        weight = 1
+        modifier = {
+            factor = 25
+            need_housing = yes
+        }
+        modifier = {
+            factor = 0
+            free_housing > 2
+        }
+        modifier = {
+            factor = 0
+            has_ascension_perk = ap_do_external_habitats
+        }
+    }
+    ai_resource_production = {
+        energy = 1
+        trigger = {
+            always = yes
+        }
+    }
+}

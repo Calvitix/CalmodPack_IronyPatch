@@ -1,0 +1,16 @@
+karst = {
+    show_only_custom_tooltip = yes
+    custom_tooltip = do_pm_karst
+    planet_jobs_minerals_produces_mult = 0.25
+    planet_jobs_engineering_research_produces_mult = 0.25
+    district_mining_max = 4
+    district_cheap_mining_max = 4
+    district_secure_mining_max = 4
+    district_surface_mining_max = 4
+    planet_orbital_bombardment_damage = -0.3
+    planet_housing_mult = -0.2
+    pop_environment_tolerance = -0.05
+    pop_growth_speed = -0.05
+    icon = "gfx/interface/icons/planet_modifiers/pm_karst.dds"
+    icon_frame = 1
+}

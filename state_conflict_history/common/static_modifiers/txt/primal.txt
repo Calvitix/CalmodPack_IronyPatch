@@ -1,0 +1,12 @@
+primal = {
+    show_only_custom_tooltip = yes
+    custom_tooltip = do_pm_primal
+    planet_jobs_energy_produces_mult = 0.25
+    planet_jobs_society_research_produces_mult = 0.25
+    district_generator_max = 4
+    pop_environment_tolerance = -0.1
+    planet_buildings_cost_mult = 0.1
+    planet_districts_cost_mult = 0.1
+    icon = "gfx/interface/icons/planet_modifiers/pm_primal.dds"
+    icon_frame = 1
+}

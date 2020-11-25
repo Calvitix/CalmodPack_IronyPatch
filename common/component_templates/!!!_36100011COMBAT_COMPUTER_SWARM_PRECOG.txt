@@ -1,0 +1,53 @@
+@cost4 = 20
+@power3 = -20
+@evasion2 = 15
+@fire_rate2 = 0.15
+utility_component_template = {
+    key = "COMBAT_COMPUTER_SWARM_PRECOG"
+    size = small
+    icon = "GFX_ship_part_computer_swarm_precog"
+    icon_frame = 1
+    power = @power3
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = @cost4
+        }
+    }
+    size_restriction = {
+        corvette
+        destroyer
+        cruiser
+        StrikeCruiser
+        Battlecruiser
+        battleship
+        Carrier
+        Dreadnought
+        titan
+        Flagship
+        escortcarrier
+        explorationship
+    }
+    component_set = "combat_computers"
+    ship_behavior = "swarm"
+    prerequisites = {
+        "tech_precognition_interface"
+    }
+    modifier = {
+        ship_evasion_add = @evasion2
+        ship_speed_mult = 0.20
+    }
+    ship_modifier = {
+        ship_fire_rate_mult = @fire_rate2
+    }
+    ai_weight = {
+        weight = 4
+        modifier = {
+            factor = 0.0
+            is_country_type = default
+            NOT = {
+                has_ascension_perk = ap_transcendence
+            }
+        }
+    }
+}

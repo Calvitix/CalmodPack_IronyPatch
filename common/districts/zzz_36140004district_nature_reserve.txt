@@ -1,0 +1,119 @@
+district_nature_reserve = {
+    base_buildtime = 360
+    min_for_deposits_on_planet = 2
+    max_for_deposits_on_planet = 8
+    show_on_uncolonized = {
+        has_nature_reserve_deposits = yes
+    }
+    potential = {
+        has_nature_reserve_deposits = yes
+    }
+    allow = {
+        special_production_district_allowed = yes
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = 500
+        }
+        upkeep = {
+            energy = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            job_do_park_ranger_add = 3
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_nature_development_drone_add = 3
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_nature_research_drone_add = 3
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_policy_flag = do_rural_housing
+            }
+        }
+        modifier = {
+            planet_housing_add = 2
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        text = job_do_park_ranger_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        text = job_nature_development_drone_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        text = job_nature_research_effect_desc
+    }
+    ai_weight = {
+        weight = 3
+        modifier = {
+            factor = 5
+            has_unemployed_specialists = yes
+        }
+        modifier = {
+            factor = 0
+            AND = {
+                free_jobs > 1
+                has_unemployed_workers = no
+                has_unemployed_specialists = no
+            }
+        }
+        modifier = {
+            factor = 50
+            has_designation = col_research
+        }
+    }
+    ai_resource_production = {
+        society_research = 5
+        trigger = {
+            always = yes
+        }
+    }
+}

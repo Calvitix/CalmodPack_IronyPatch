@@ -1,0 +1,710 @@
+room_selector = {
+    default = "default_room"
+    game_setup = {
+        "nrb1_room" = {
+        }
+        "nrb2_room" = {
+        }
+        "nrb3_room" = {
+        }
+        "nrb4_room" = {
+        }
+        "nrb5_room" = {
+        }
+        "nrb6_room" = {
+        }
+        "nrb7_room" = {
+        }
+        "nrb9_room" = {
+        }
+        "nrb10_room" = {
+        }
+        "nrb11_room" = {
+        }
+        "nrb12_room" = {
+        }
+        "nrb14_room" = {
+        }
+        "nrb15_room" = {
+        }
+        "nrb16_room" = {
+        }
+        "nrb17_room" = {
+        }
+        "nrb19_room" = {
+        }
+        "nrb20_room" = {
+        }
+        "nrb21_room" = {
+        }
+        "nrb22_room" = {
+        }
+        "nrb23_room" = {
+        }
+        "nrb24_room" = {
+        }
+        "nrb25_room" = {
+        }
+        "nrb26_room" = {
+        }
+        "nrb27_room" = {
+        }
+        "nrb29_room" = {
+        }
+        "nrb30_room" = {
+        }
+        "nrb31_room" = {
+        }
+        "nrb32_room" = {
+        }
+        "nrb33_room" = {
+        }
+        "nrb34_room" = {
+        }
+        "nrb35_room" = {
+        }
+        "nrb36_room" = {
+        }
+        "nrb37_room" = {
+        }
+        "nrb38_room" = {
+        }
+        "nrb39_room" = {
+        }
+        "nrb40_room" = {
+        }
+        "nrb41_room" = {
+        }
+        "nrb42_room" = {
+        }
+        "nrb43_room" = {
+        }
+        "nrb44_room" = {
+        }
+        "nrb45_room" = {
+        }
+        "nrb46_room" = {
+        }
+        "nrb47_room" = {
+        }
+        "nrb48_room" = {
+        }
+        "nrb49_room" = {
+        }
+        "nrb50_room" = {
+        }
+        "nrb52_room" = {
+        }
+        "nrb53_room" = {
+        }
+        "nrb54_room" = {
+        }
+        "nrb55_room" = {
+        }
+        "nrb56_room" = {
+        }
+        "nrb57_room" = {
+        }
+        "nrb60_room" = {
+        }
+        "nrb61_room" = {
+        }
+        "nrb63_room" = {
+        }
+        "nrb64_room" = {
+        }
+        "nrb65_room" = {
+        }
+        "nrb67_room" = {
+        }
+        "nrb68_room" = {
+        }
+        "nrb69_room" = {
+        }
+        "nrb70_room" = {
+        }
+        "nrb71_room" = {
+        }
+        "nrb73_room" = {
+        }
+        "nrb74_room" = {
+        }
+        "nrb75_room" = {
+        }
+        "nrb76_room" = {
+        }
+        "nrb77_room" = {
+        }
+        "nrb78_room" = {
+        }
+        "nrb80_room" = {
+        }
+        "nrb81_room" = {
+        }
+        "nrb82_room" = {
+        }
+        "nrb83_room" = {
+        }
+        "nrb84_room" = {
+        }
+        "nrb85_room" = {
+        }
+        "nrb86_room" = {
+        }
+        "nrb87_room" = {
+        }
+        "nrb88_room" = {
+        }
+        "nrb89_room" = {
+        }
+        "nrb90_room" = {
+        }
+        "nrb91_room" = {
+        }
+        "nrb92_room" = {
+        }
+        "nrb93_room" = {
+        }
+        "nrb95_room" = {
+        }
+        "nrb96_room" = {
+        }
+        "nrb97_room" = {
+        }
+        "nrb99_room" = {
+        }
+        "nrb100_room" = {
+        }
+        "nrb101_room" = {
+        }
+        "nrb102_room" = {
+        }
+        "nrb103_room" = {
+        }
+        "nrb104_room" = {
+        }
+        "nrb105_room" = {
+        }
+        "nrb106_room" = {
+        }
+        "nrb107_room" = {
+        }
+        "nrb108_room" = {
+        }
+        "nrb109_room" = {
+        }
+        "nrb110_room" = {
+        }
+        "nrb111_room" = {
+        }
+        "nrb112_room" = {
+        }
+        "nrb113_room" = {
+        }
+        "nrb115_room" = {
+        }
+        "nrb116_room" = {
+        }
+        "nrb117_room" = {
+        }
+        "nrb118_room" = {
+        }
+        "nrb119_room" = {
+        }
+        "nrb120_room" = {
+        }
+        "nrb122_room" = {
+        }
+        "nrb123_room" = {
+        }
+        "nrb124_room" = {
+        }
+        "nrb125_room" = {
+        }
+        "nrb126_room" = {
+        }
+        "nrb129_room" = {
+        }
+        "nrb130_room" = {
+        }
+        "nrb131_room" = {
+        }
+        "nrb132_room" = {
+        }
+        "nrb133_room" = {
+        }
+        "nrb134_room" = {
+        }
+        "nrb135_room" = {
+        }
+        "nrb136_room" = {
+        }
+        "nrb137_room" = {
+        }
+        "nrb138_room" = {
+        }
+        "nrb139_room" = {
+        }
+        "nrb140_room" = {
+        }
+        "nrb141_room" = {
+        }
+        "nrb142_room" = {
+        }
+        "nrb143_room" = {
+        }
+        "nrb144_room" = {
+        }
+        "nrb145_room" = {
+        }
+        "nrb146_room" = {
+        }
+        "nrb148_room" = {
+        }
+        "nrb149_room" = {
+        }
+        "nrb150_room" = {
+        }
+        "nrb151_room" = {
+        }
+        "nrb152_room" = {
+        }
+        "nrb153_room" = {
+        }
+        "nrb154_room" = {
+        }
+        "nrb155_room" = {
+        }
+        "nrb156_room" = {
+        }
+        "nrb157_room" = {
+        }
+        "nrb158_room" = {
+        }
+        "nrb159_room" = {
+        }
+        "nrb160_room" = {
+        }
+        "nrb161_room" = {
+        }
+        "nrb162_room" = {
+        }
+        "nrb165_room" = {
+        }
+        "nrb166_room" = {
+        }
+        "nrb167_room" = {
+        }
+        "nrb168_room" = {
+        }
+        "nrb169_room" = {
+        }
+        "nrb170_room" = {
+        }
+        "nrb171_room" = {
+        }
+        "nrb172_room" = {
+        }
+        "nrb173_room" = {
+        }
+        "nrb174_room" = {
+        }
+        "nrb175_room" = {
+        }
+        "nrb176_room" = {
+        }
+        "nrb177_room" = {
+        }
+        "nrb178_room" = {
+        }
+        "nrb179_room" = {
+        }
+        "nrb180_room" = {
+        }
+        "nrb181_room" = {
+        }
+        "nrb182_room" = {
+        }
+        "ego_nice_room" = {
+            always = no
+        }
+        "ego_angry_room" = {
+            always = no
+        }
+        "default_room" = {
+            always = yes
+        }
+        "personality_hegemonic_imperialists_room" = {
+            always = yes
+        }
+        "personality_federation_builders_room" = {
+            always = yes
+        }
+        "personality_democratic_crusaders_room" = {
+            always = yes
+        }
+        "personality_evangelizing_zealots_room" = {
+            always = yes
+        }
+        "personality_migrating_flock_room" = {
+            always = yes
+        }
+        "personality_spiritual_seekers_room" = {
+            always = yes
+        }
+        "personality_decadent_hierarchy_room" = {
+            always = yes
+        }
+        "personality_slaving_despots_room" = {
+            always = yes
+        }
+        "personality_erudite_explorers_room" = {
+            always = yes
+        }
+        "personality_fanatic_purifier_room" = {
+            always = yes
+        }
+        "personality_metalheads_room" = {
+            always = yes
+        }
+        "personality_harmonious_hierarchy_room" = {
+            always = yes
+        }
+        "personality_peaceful_traders_room" = {
+            always = yes
+        }
+        "personality_xenophobic_isolationists_room" = {
+            always = yes
+        }
+        "personality_ruthless_capitalists_room" = {
+            always = yes
+        }
+        "personality_honorbound_warriors_room" = {
+            always = yes
+        }
+        "personality_fanatic_befrienders_room" = {
+            always = yes
+        }
+        "personality_hive_mind_room" = {
+            always = yes
+        }
+        "runic_room" = {
+            always = yes
+        }
+        "scrappy_room" = {
+            always = yes
+        }
+        "crystalline_room" = {
+            always = yes
+        }
+        "organic_room" = {
+            always = yes
+        }
+        "gilded_room" = {
+            always = yes
+        }
+        "machine_room" = {
+            always = yes
+        }
+        "lithoid_room" = {
+            local_has_dlc = "Lithoids Species Pack"
+        }
+        "necroids_room" = {
+            local_has_dlc = "Necroids Species Pack"
+        }
+    }
+    ruler = {
+        "default_room" = {
+            always = no
+        }
+        "lithoid_room" = {
+            exists = owner
+            owner = {
+                lithoids_portrait = yes
+            }
+        }
+        "necroids_room" = {
+            exists = owner
+            owner = {
+                necroids_portrait = yes
+            }
+        }
+        "runic_room" = {
+            exists = owner
+            owner = {
+                OR = {
+                    has_ai_personality = map_plunderers_of_knowledge
+                    has_ai_personality = map_flowers_of_war
+                    has_ai_personality = map_unfathomable_artificers
+                }
+            }
+        }
+        "scrappy_room" = {
+            exists = owner
+            owner = {
+                OR = {
+                    has_ai_personality = map_adventure_seekers
+                    has_ai_personality = map_hopeless_pessimists
+                }
+            }
+        }
+        "gilded_room" = {
+            exists = owner
+            owner = {
+                OR = {
+                    has_ai_personality = map_studious_builders
+                    has_ai_personality = map_quiet_cultists
+                }
+            }
+        }
+        "personality_hegemonic_imperialists_room" = {
+            exists = owner
+            owner = {
+                OR = {
+                    has_ai_personality = hegemonic_imperialists
+                    has_ai_personality = map_insecure_imitators
+                    has_ai_personality = map_enforcers_of_law
+                    has_ai_personality = map_valiant_hearts
+                }
+            }
+        }
+        "personality_federation_builders_room" = {
+            exists = owner
+            owner = {
+                OR = {
+                    has_ai_personality = federation_builders
+                    has_ai_personality = map_aspiring_precursors
+                }
+            }
+        }
+        "personality_democratic_crusaders_room" = {
+            exists = owner
+            owner = {
+                OR = {
+                    has_ai_personality = democratic_crusaders
+                    has_ai_personality = map_slave_soldiers
+                    has_ai_personality = map_princes_of_madness
+                    has_ai_personality = map_proud_nationalists
+                }
+            }
+        }
+        "personality_evangelizing_zealots_room" = {
+            exists = owner
+            owner = {
+                OR = {
+                    has_ai_personality = evangelising_zealots
+                    has_ai_personality = map_defenders_of_the_faith
+                    has_ai_personality = map_benign_spirits
+                    has_ai_personality = map_reclusive_hermits
+                    has_ai_personality = map_quiet_cultists
+                }
+            }
+        }
+        "personality_migrating_flock_room" = {
+            exists = owner
+            owner = {
+                OR = {
+                    has_ai_personality = migrating_flock
+                    has_ai_personality = map_enterprising_corsairs
+                    has_ai_personality = map_total_nutcases
+                }
+            }
+        }
+        "personality_spiritual_seekers_room" = {
+            exists = owner
+            owner = {
+                OR = {
+                    has_ai_personality = spiritual_seekers
+                    has_ai_personality = map_carefree_hippies
+                    has_ai_personality = map_adventure_seekers
+                    has_ai_personality = map_sublime_porte
+                    has_ai_personality = map_warrior_mystics
+                    has_ai_personality = map_cultivated_scholar_gentry
+                }
+            }
+        }
+        "personality_decadent_hierarchy_room" = {
+            exists = owner
+            owner = {
+                OR = {
+                    has_ai_personality = decadent_hierarchy
+                    has_ai_personality = map_patronizing_colonizers
+                    has_ai_personality = map_cosmopolitan_imperials
+                }
+            }
+        }
+        "personality_slaving_despots_room" = {
+            exists = owner
+            owner = {
+                OR = {
+                    has_ai_personality = slaving_despots
+                    has_ai_personality = map_depraved_breeders
+                    has_ai_personality = map_bringers_of_paradise
+                    has_ai_personality = map_sadistic_loremasters
+                }
+            }
+        }
+        "personality_erudite_explorers_room" = {
+            exists = owner
+            owner = {
+                OR = {
+                    has_ai_personality = erudite_explorers
+                    has_ai_personality = map_totalitarian_patriots
+                    has_ai_personality = map_nonaligned_preservationists
+                    has_ai_personality = map_insidious_opportunists
+                    has_ai_personality = map_unfathomable_artificers
+                }
+            }
+        }
+        "personality_fanatic_purifier_room" = {
+            exists = owner
+            owner = {
+                OR = {
+                    has_ai_personality = fanatic_purifiers
+                    has_ai_personality = map_savage_raiders
+                    has_ai_personality = map_psychotic_hordes
+                    has_ai_personality = map_outcast_pariahs
+                    has_ai_personality = map_outcast_pariahs
+                }
+            }
+        }
+        "personality_metalheads_room" = {
+            exists = owner
+            owner = {
+                OR = {
+                    has_ai_personality = metalhead
+                    has_ai_personality = map_hedonistic_visionaries
+                    has_ai_personality = map_conoisseurs_of_food
+                }
+            }
+        }
+        "personality_harmonious_hierarchy_room" = {
+            exists = owner
+            owner = {
+                OR = {
+                    has_ai_personality = harmonious_hierarchy
+                    has_ai_personality = map_melodious_composers
+                    has_ai_personality = map_naive_appeasers
+                }
+            }
+        }
+        "personality_peaceful_traders_room" = {
+            exists = owner
+            owner = {
+                OR = {
+                    has_ai_personality = peaceful_traders
+                    has_ai_personality = map_slave_traders
+                }
+            }
+        }
+        "personality_xenophobic_isolationists_room" = {
+            exists = owner
+            owner = {
+                OR = {
+                    has_ai_personality = xenophobic_isolationists
+                    has_ai_personality = map_studious_builders
+                    has_ai_personality = map_dwellers_in_the_ephemeral
+                    has_ai_personality = map_hopeless_pessimists
+                    has_ai_personality = map_middle_kingdom
+                    has_ai_personality = map_plunderers_of_knowledge
+                    has_ai_personality = map_haughty_supremacists
+                }
+            }
+        }
+        "personality_ruthless_capitalists_room" = {
+            exists = owner
+            owner = {
+                OR = {
+                    has_ai_personality = ruthless_capitalists
+                    has_ai_personality = map_generous_philanthropists
+                    has_ai_personality = map_efficient_bureaucrats
+                    has_ai_personality = map_inspired_dreamers
+                    has_ai_personality = map_lazy_managers
+                    has_ai_personality = map_experts_in_xenocide
+                    has_ai_personality = map_surgeons_of_beauty
+                }
+            }
+        }
+        "personality_honorbound_warriors_room" = {
+            exists = owner
+            owner = {
+                OR = {
+                    has_ai_personality = honorbound_warriors
+                    has_ai_personality = map_guerilla_fighters
+                    has_ai_personality = map_civilized_nomads
+                    has_ai_personality = map_flowers_of_war
+                }
+            }
+        }
+        "personality_fanatic_befrienders_room" = {
+            exists = owner
+            owner = {
+                OR = {
+                    has_ai_personality = fanatic_befrienders
+                    has_ai_personality = map_splendid_isolationists
+                    has_ai_personality = map_storytelling_aficionados
+                    has_ai_personality = map_inspired_dreamers
+                    has_ai_personality = map_xenial_merrymakers
+                }
+            }
+        }
+        "personality_hive_mind_room" = {
+            exists = owner
+            owner = {
+                OR = {
+                    has_ai_personality = hive_mind
+                    has_ai_personality = map_trapped_in_a_machine
+                }
+            }
+        }
+        "machine_room" = {
+            exists = owner
+            owner = {
+                has_authority = auth_machine_intelligence
+                is_fallen_machine_empire = no
+            }
+        }
+        "personality_fallen_empire_machine_room" = {
+            exists = owner
+            owner = {
+                is_fallen_machine_empire = yes
+            }
+        }
+        "personality_fallen_empire_blue_room" = {
+            exists = owner
+            owner = {
+                OR = {
+                    has_ai_personality = fallen_empire_xenophile
+                    has_ai_personality = awakened_fallen_empire_xenophile
+                }
+            }
+        }
+        "personality_fallen_empire_cyan_room" = {
+            exists = owner
+            owner = {
+                OR = {
+                    has_ai_personality = fallen_empire_materialist
+                    has_ai_personality = awakened_fallen_empire_materialist
+                }
+            }
+        }
+        "personality_fallen_empire_red_room" = {
+            exists = owner
+            owner = {
+                OR = {
+                    has_ai_personality = fallen_empire_xenophobe
+                    has_ai_personality = awakened_fallen_empire_xenophobe
+                }
+            }
+        }
+        "personality_fallen_empire_teal_room" = {
+            exists = owner
+            owner = {
+                OR = {
+                    has_ai_personality = fallen_empire_spiritualist
+                    has_ai_personality = awakened_fallen_empire_spiritualist
+                }
+            }
+        }
+    }
+}

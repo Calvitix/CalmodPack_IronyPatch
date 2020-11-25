@@ -1,0 +1,12 @@
+gpm_hyper_complex_biome = {
+    show_only_custom_tooltip = yes
+    custom_tooltip = do_pm_gpm_hyper_complex_biome
+    planet_jobs_society_research_produces_mult = 0.10
+    planet_jobs_food_produces_mult = 0.20
+    district_farming_max = 2
+    district_nature_farms_max = 2
+    district_ocean_farms_max = 2
+    district_exotic_farms_max = 2
+    icon = "gfx/interface/icons/planet_modifiers/gpm_complex_biome.dds"
+    icon_frame = 1
+}

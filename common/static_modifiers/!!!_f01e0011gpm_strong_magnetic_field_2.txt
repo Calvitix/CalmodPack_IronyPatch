@@ -1,0 +1,12 @@
+gpm_strong_magnetic_field_2 = {
+    show_only_custom_tooltip = yes
+    custom_tooltip = do_pm_gpm_strong_magnetic_field_2
+    planet_jobs_energy_produces_mult = 0.20
+    district_generator_max = 4
+    district_solar_generator_max = 4
+    district_wind_turbines_max = 4
+    district_geothermal_generator_max = 4
+    district_tidal_generator_max = 4
+    icon = "gfx/interface/icons/planet_modifiers/pm_strong_magnetic_field.dds"
+    icon_frame = 2
+}

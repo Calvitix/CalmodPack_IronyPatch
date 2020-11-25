@@ -1,0 +1,67 @@
+namespace = mandate
+country_event = {
+    id = mandate.171
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        OR = {
+            has_event_chain = mandate_monthly_energy_chain
+            has_event_chain = mandate_monthly_minerals_chain
+            has_event_chain = mandate_monthly_alloys_chain
+            has_event_chain = mandate_monthly_food_chain
+            has_event_chain = mandate_monthly_consumer_goods_chain
+        }
+    }
+    immediate = {
+        if = {
+            limit = {
+                OR = {
+                    AND = {
+                        has_event_chain = mandate_monthly_energy_chain
+                        has_monthly_income = {
+                            resource = energy
+                            value >= 19.9
+                        }
+                    }
+                    AND = {
+                        has_event_chain = mandate_monthly_minerals_chain
+                        has_monthly_income = {
+                            resource = minerals
+                            value >= 29.9
+                        }
+                    }
+                    AND = {
+                        has_event_chain = mandate_monthly_food_chain
+                        has_monthly_income = {
+                            resource = food
+                            value >= 14.9
+                        }
+                    }
+                    AND = {
+                        has_event_chain = mandate_monthly_alloys_chain
+                        has_monthly_income = {
+                            resource = alloys
+                            value >= 11.9
+                        }
+                    }
+                    AND = {
+                        has_event_chain = mandate_monthly_consumer_goods_chain
+                        has_monthly_income = {
+                            resource = consumer_goods
+                            value >= 5.9
+                        }
+                    }
+                }
+            }
+            country_event = {
+                id = mandate.170
+            }
+        }
+        else = {
+            failed_mandate_effect = yes
+            country_event = {
+                id = mandate.2
+            }
+        }
+    }
+}

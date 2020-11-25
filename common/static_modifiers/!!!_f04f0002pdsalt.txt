@@ -1,0 +1,19 @@
+pdsalt = {
+    show_only_custom_tooltip = yes
+    custom_tooltip = do_pm_pdsalt
+    planet_jobs_minerals_produces_mult = 0.75
+    planet_jobs_food_produces_mult = -0.25
+    district_mining_max = 6
+    district_cheap_mining_max = 6
+    district_secure_mining_max = 6
+    district_surface_mining_max = 6
+    district_farming_max = -2
+    district_nature_farms_max = -2
+    district_ocean_farms_max = -2
+    district_exotic_farms_max = -2
+    planet_amenities_mult = -0.1
+    planet_buildings_upkeep_mult = 0.1
+    pop_growth_speed = -0.05
+    icon = "gfx/interface/icons/planet_modifiers/pm_pdsalt.dds"
+    icon_frame = 1
+}

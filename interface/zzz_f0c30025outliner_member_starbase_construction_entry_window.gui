@@ -1,0 +1,71 @@
+guiTypes = {
+    containerWindowType = {
+        name = "outliner_member_starbase_construction_entry_window"
+        size = {
+            width = 65
+            height = 22
+        }
+        position = {
+            x = 0
+            y = 0
+        }
+        iconType = {
+            name = "shipyard"
+            position = {
+                x = 0
+                y = -2
+            }
+            spriteType = "GFX_ship_class_small"
+            frame = 3
+            scale = 0.8
+        }
+        iconType = {
+            name = "module"
+            position = {
+                x = 0
+                y = 0
+            }
+            spriteType = "GFX_building_icon"
+        }
+        iconType = {
+            name = "building"
+            position = {
+                x = 0
+                y = 0
+            }
+            spriteType = "GFX_building_icon"
+        }
+        iconType = {
+            name = "defense"
+            position = {
+                x = -5
+                y = -7
+            }
+            spriteType = "GFX_army_icons"
+            frame = 1
+            scale = 0.85
+        }
+        iconType = {
+            name = "upgrade"
+            position = {
+                x = 2
+                y = 1
+            }
+            spriteType = "GFX_spaceport_upgrade"
+            scale = 0.47
+        }
+        overlappingElementsBoxType = {
+            name = "progress_bars"
+            position = {
+                x = 18
+                y = 3
+            }
+            size = {
+                x = 120
+                y = 30
+            }
+            spacing = 2.0
+            format = left
+        }
+    }
+}

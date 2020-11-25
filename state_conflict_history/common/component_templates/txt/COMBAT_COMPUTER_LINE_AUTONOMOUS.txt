@@ -1,0 +1,43 @@
+@cost4 = 20
+@power3 = -20
+@fire_rate3 = 0.20
+@accuracy4 = 20
+utility_component_template = {
+    key = "COMBAT_COMPUTER_LINE_AUTONOMOUS"
+    size = small
+    icon = "GFX_ship_part_computer_line_sapient"
+    icon_frame = 1
+    power = @power3
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = @cost4
+        }
+    }
+    size_restriction = {
+        corvette
+        destroyer
+        cruiser
+        StrikeCruiser
+        Battlecruiser
+        battleship
+        Carrier
+        Dreadnought
+        titan
+        Flagship
+        escortcarrier
+        explorationship
+    }
+    component_set = "combat_computers"
+    ship_behavior = "line"
+    prerequisites = {
+        "tech_combat_computers_autonomous"
+    }
+    ship_modifier = {
+        ship_fire_rate_mult = @fire_rate3
+        ship_accuracy_add = @accuracy4
+    }
+    ai_weight = {
+        weight = 5
+    }
+}

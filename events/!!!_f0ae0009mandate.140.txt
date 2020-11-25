@@ -1,0 +1,26 @@
+namespace = mandate
+country_event = {
+    id = mandate.140
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        has_event_chain = mandate_shipwright_chain
+    }
+    immediate = {
+        if = {
+            limit = {
+                used_naval_capacity_percent > 0.749
+            }
+            end_event_chain = mandate_shipwright_chain
+            country_event = {
+                id = mandate.141
+            }
+            break = yes
+        }
+        failed_mandate_effect = yes
+        end_event_chain = mandate_shipwright_chain
+        country_event = {
+            id = mandate.142
+        }
+    }
+}

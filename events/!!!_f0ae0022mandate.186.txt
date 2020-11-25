@@ -1,0 +1,41 @@
+namespace = mandate
+@unityreward = 10
+@unitymax = 1000000
+country_event = {
+    id = mandate.186
+    title = mandate.186.title
+    desc = mandate.186.desc
+    picture = GFX_evt_announcement
+    show_sound = event_announcement
+    is_triggered_only = yes
+    immediate = {
+        switch = {
+            trigger = has_event_chain
+            mandate_district_city_chain = {
+                end_event_chain = mandate_district_city_chain
+            }
+            mandate_district_generator_chain = {
+                end_event_chain = mandate_district_generator_chain
+            }
+            mandate_district_mining_chain = {
+                end_event_chain = mandate_district_mining_chain
+            }
+            mandate_district_farming_chain = {
+                end_event_chain = mandate_district_farming_chain
+            }
+        }
+        add_modifier = {
+            modifier = mandate_districts_mod
+            days = 3600
+        }
+    }
+    option = {
+        name = OK
+        add_monthly_resource_mult = {
+            resource = unity
+            value = @unityreward
+            min = @unitymin
+            max = @unitymax
+        }
+    }
+}

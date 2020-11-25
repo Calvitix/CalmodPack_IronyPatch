@@ -1,0 +1,11 @@
+gpm_juggernaut_manta_rays = {
+    show_only_custom_tooltip = yes
+    custom_tooltip = do_pm_gpm_juggernaut_manta_rays
+    planet_jobs_society_research_produces_mult = 0.10
+    district_farming_max = 3
+    district_nature_farms_max = 3
+    district_ocean_farms_max = 3
+    district_exotic_farms_max = 3
+    icon = "gfx/interface/icons/planet_modifiers/gpm_juggernaut_manta_rays.dds"
+    icon_frame = 1
+}

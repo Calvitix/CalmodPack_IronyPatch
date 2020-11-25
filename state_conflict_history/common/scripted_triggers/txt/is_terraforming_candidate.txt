@@ -1,0 +1,7 @@
+is_terraforming_candidate = {
+    OR = {
+        has_modifier = terraforming_candidate
+        has_modifier = terraforming_candidate_precursor
+        has_planet_flag = terraforming_candidate_precursor
+    }
+}

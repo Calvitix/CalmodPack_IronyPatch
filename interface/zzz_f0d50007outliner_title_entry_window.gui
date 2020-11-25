@@ -1,0 +1,80 @@
+guiTypes = {
+    @outliner_w = 302
+    @overlay_w = 290
+    containerWindowType = {
+        name = "outliner_title_entry_window"
+        size = {
+            width = 300
+            height = 28
+        }
+        position = {
+            x = 0
+            y = 0
+        }
+        orientation = upper_right
+        moveable = no
+        buttonType = {
+            name = "background"
+            id = "background"
+            quadTextureSprite = "GFX_glow_tile_line"
+            clicksound = outliner_click_tab
+            size = {
+                x = @overlay_w
+                y = 24
+            }
+            position = {
+                x = 3
+                y = 6
+            }
+        }
+        instantTextBoxType = {
+            name = "title"
+            font = "cg_16b"
+            text = ""
+            position = {
+                x = 0
+                y = 6
+            }
+            maxWidth = @outliner_w
+            maxHeight = 20
+            fixedSize = yes
+            format = center
+            text_color_code = "H"
+            alwaysTransparent = yes
+        }
+        instantTextBoxType = {
+            name = "amount"
+            font = "cg_16b"
+            text = "0"
+            position = {
+                x = -50
+                y = 6
+            }
+            maxWidth = 32
+            maxHeight = 20
+            fixedSize = yes
+            orientation = "UPPER_RIGHT"
+            format = right
+        }
+        smoothListBoxType = {
+            name = "list"
+            id = "list"
+            position = {
+                x = 0
+                y = 28
+            }
+            priority = 100
+            size = {
+                x = 300
+                y = 0
+            }
+            borderSize = {
+                x = 0
+                y = 0
+            }
+            spacing = 0
+            scrollbarType = "standardlistbox_slider_thick"
+            alwaysTransparent = yes
+        }
+    }
+}

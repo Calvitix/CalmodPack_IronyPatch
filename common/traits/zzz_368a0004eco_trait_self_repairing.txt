@@ -1,0 +1,8 @@
+eco_trait_self_repairing = {
+    cost = 1
+    allowed_archetypes = {
+        ROBOT
+        MACHINE
+    }
+    custom_tooltip = eco_trait_self_repairing_effect
+}

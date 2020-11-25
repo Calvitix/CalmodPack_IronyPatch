@@ -1,0 +1,88 @@
+district_ascended_housing = {
+    base_buildtime = 600
+    is_capped_by_modifier = yes
+    show_on_uncolonized = {
+        has_district_ascended_housing = yes
+        has_ascended_housing_deposits = yes
+        OR = {
+            uses_district_set = standard
+            uses_district_set = hive_world
+            uses_district_set = machine_world
+        }
+    }
+    potential = {
+        has_district_ascended_housing = yes
+        has_ascended_housing_deposits = yes
+        OR = {
+            uses_district_set = standard
+            uses_district_set = hive_world
+            uses_district_set = machine_world
+        }
+    }
+    allow = {
+        housing_district_allowed = yes
+    }
+    resources = {
+        category = planet_districts_cities
+        cost = {
+            minerals = 1000
+        }
+        upkeep = {
+            energy = 10
+        }
+    }
+    planet_modifier = {
+        planet_housing_add = 30
+        planet_max_buildings_add = 1
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_valid_civic = civic_agrarian_idyll
+            }
+        }
+        modifier = {
+            planet_housing_add = -10
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_technology = tech_housing_1
+            }
+        }
+        modifier = {
+            planet_housing_add = 10
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_technology = tech_housing_2
+            }
+        }
+        modifier = {
+            planet_housing_add = 10
+        }
+    }
+    ai_weight = {
+        weight = 10
+        modifier = {
+            factor = 25
+            need_housing = yes
+        }
+        modifier = {
+            factor = 0
+            free_housing > 3
+        }
+    }
+    ai_resource_production = {
+        energy = 10
+        trigger = {
+            always = yes
+        }
+    }
+}

@@ -1,0 +1,50 @@
+guiTypes = {
+    @outliner_w = 302
+    @outliner_h = 22
+    containerWindowType = {
+        name = "outliner_member_disabled_alert_entry_window"
+        size = {
+            width = @outliner_w
+            height = @outliner_h
+        }
+        position = {
+            x = 0
+            y = 0
+        }
+        orientation = upper_right
+        moveable = no
+        buttonType = {
+            name = "background"
+            quadTextureSprite = "GFX_outliner_member_small_bg"
+            position = {
+                x = -3
+                y = -5
+            }
+        }
+        iconType = {
+            name = "alerticon"
+            spriteType = "GFX_alerticons"
+            position = {
+                x = 7
+                y = 1
+            }
+            orientation = "UPPER_LEFT"
+            scale = 0.52
+        }
+        instantTextBoxType = {
+            name = "name"
+            font = "cg_16b"
+            text = "0"
+            position = {
+                x = 28
+                y = 1
+            }
+            maxWidth = 230
+            maxHeight = 20
+            fixedSize = yes
+            format = left
+            text_color_code = "g"
+            alwaysTransparent = yes
+        }
+    }
+}

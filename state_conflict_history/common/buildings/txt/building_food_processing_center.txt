@@ -1,0 +1,152 @@
+building_food_processing_center = {
+    base_buildtime = 480
+    can_build = no
+    category = resource
+    planet_modifier = {
+        planet_farmers_food_produces_mult = 0.25
+    }
+    allow = {
+        exists = owner
+        has_upgraded_capital = yes
+    }
+    destroy_trigger = {
+        OR = {
+            AND = {
+                exists = owner
+                owner = {
+                    is_ai = yes
+                    owner = {
+                        country_uses_food = no
+                    }
+                }
+            }
+            is_planet_class = pc_machine
+            has_modifier = resort_colony
+            buildings_no_motes = yes
+            num_districts = {
+                type = district_farming
+                value < 6
+            }
+            num_districts = {
+                type = district_farming_uncapped
+                value < 6
+            }
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+                is_fallen_empire_spiritualist = no
+            }
+        }
+        modifier = {
+            job_farmer_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_fallen_empire_spiritualist = yes
+            }
+        }
+        modifier = {
+            job_fe_acolyte_farm_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+            job_agri_drone_add = 2
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 500
+            volatile_motes = 50
+        }
+        upkeep = {
+            energy = 1
+            volatile_motes = 1
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = job_agri_drone_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire_spiritualist = no
+            }
+        }
+        text = job_farmer_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_fallen_empire_spiritualist = yes
+            }
+        }
+        text = job_fe_acolyte_farm_effect_desc
+    }
+    upgrades = {
+        building_crystal_pillar
+    }
+    prerequisites = {
+        "tech_food_processing_2"
+    }
+    ai_weight = {
+        weight = 0
+        modifier = {
+            weight = 30
+            buildings_has_motes = yes
+        }
+        modifier = {
+            factor = 2
+            exists = owner
+            owner = {
+                has_monthly_income = {
+                    resource = food
+                    value < 50
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                country_uses_food = no
+            }
+        }
+    }
+    ai_resource_production = {
+        food = 3
+        trigger = {
+            always = yes
+        }
+    }
+    on_built = {
+        planet = {
+            owner = {
+                set_timed_country_flag = {
+                    flag = buildings_new_mote_building
+                    days = 480
+                }
+            }
+        }
+    }
+}

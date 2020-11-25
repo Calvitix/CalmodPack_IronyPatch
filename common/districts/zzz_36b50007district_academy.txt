@@ -1,0 +1,111 @@
+district_academy = {
+    base_buildtime = 480
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        has_district_academy = yes
+    }
+    potential = {
+        has_district_academy = yes
+    }
+    conversion_ratio = 0.75
+    convert_to = {
+        district_academy_t2
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = 500
+        }
+        upkeep = {
+            energy = 5
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            job_officer_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_officer_drone_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+            has_special_ringworld_boost = yes
+        }
+        modifier = {
+            job_officer_add = 4
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+            has_special_ringworld_boost = yes
+        }
+        modifier = {
+            job_officer_drone_add = 4
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        text = job_officer_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = job_officer_drone_effect_desc
+    }
+    ai_weight = {
+        weight = 1
+        modifier = {
+            factor = 5
+            naval_increase_due_to_war = yes
+        }
+        modifier = {
+            factor = 10
+            wants_more_naval_capacity = yes
+        }
+        modifier = {
+            factor = 0
+            AND = {
+                free_jobs > 1
+                has_unemployed_workers = no
+            }
+        }
+    }
+    ai_resource_production = {
+        energy = 2
+        trigger = {
+            always = yes
+        }
+    }
+}

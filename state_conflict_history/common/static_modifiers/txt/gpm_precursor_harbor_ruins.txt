@@ -1,0 +1,11 @@
+gpm_precursor_harbor_ruins = {
+    show_only_custom_tooltip = yes
+    custom_tooltip = do_pm_gpm_precursor_harbor_ruins
+    planet_jobs_food_produces_mult = 0.20
+    district_farming_max = 10
+    district_nature_farms_max = 10
+    district_ocean_farms_max = 10
+    district_exotic_farms_max = 10
+    icon = "gfx/interface/icons/planet_modifiers/gpm_precursor_harbor_ruins.dds"
+    icon_frame = 5
+}

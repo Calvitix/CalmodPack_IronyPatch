@@ -1,0 +1,50 @@
+namespace = colony
+@tier4researchreward = 24
+@tier4researchmin = 150
+@tier4researchmax = 500
+planet_event = {
+    id = colony.101
+    title = "colony.101.name"
+    desc = "colony.101.desc"
+    picture = GFX_evt_society_research
+    show_sound = event_construction
+    location = ROOT
+    is_triggered_only = yes
+    immediate = {
+        set_planet_flag = did_not_terraform
+    }
+    option = {
+        name = EXCELLENT
+        if = {
+            limit = {
+                owner = {
+                    NOT = {
+                        has_technology = tech_terrestrial_sculpting
+                    }
+                }
+            }
+            owner = {
+                give_technology = {
+                    tech = tech_terrestrial_sculpting
+                }
+            }
+            break = yes
+        }
+        if = {
+            limit = {
+                owner = {
+                    has_technology = tech_terrestrial_sculpting
+                }
+            }
+            owner = {
+                add_monthly_resource_mult = {
+                    resource = society_research
+                    value = @tier4researchreward
+                    min = @tier4researchmin
+                    max = @tier4researchmax
+                }
+            }
+            break = yes
+        }
+    }
+}

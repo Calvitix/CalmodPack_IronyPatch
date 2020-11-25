@@ -1,0 +1,15 @@
+defined_text = {
+    name = GetDeDLead
+    text = {
+        trigger = {
+            loc_leader_masc = yes
+        }
+        localization_key = FRLOC_de
+    }
+    text = {
+        trigger = {
+            loc_leader_fem = yes
+        }
+        localization_key = FRLOC_d
+    }
+}

@@ -1,0 +1,33 @@
+@cost2 = 10
+@power2 = -15
+@fire_rate1 = 0.10
+@tracking1 = 10
+utility_component_template = {
+    key = "COMBAT_COMPUTER_PLATFORM_ADVANCED"
+    size = small
+    icon = "GFX_ship_part_computer_platform_advanced"
+    icon_frame = 1
+    power = @power2
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = @cost2
+        }
+    }
+    class_restriction = {
+        shipclass_military_station
+    }
+    component_set = "combat_computers"
+    ship_behavior = "platform"
+    prerequisites = {
+        "tech_combat_computers_2"
+    }
+    upgrades_to = "COMBAT_COMPUTER_PLATFORM_SAPIENT"
+    ship_modifier = {
+        ship_fire_rate_mult = @fire_rate1
+        ship_tracking_add = @tracking1
+    }
+    ai_weight = {
+        weight = 3
+    }
+}

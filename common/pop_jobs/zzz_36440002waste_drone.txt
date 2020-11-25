@@ -1,0 +1,168 @@
+waste_drone = {
+    category = simple_drone
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = eco_building_waste_recovery
+    possible = {
+        drone_job_check_trigger = yes
+    }
+    resources = {
+        category = planet_waste
+        produces = {
+            waste = -40
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_policy_flag = eco_policy_disposal
+                }
+            }
+            waste = -20
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_policy_flag = eco_policy_material
+                }
+            }
+            minerals = 1
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_policy_flag = eco_policy_default
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_policy_flag = eco_policy_food
+                }
+            }
+            food = 1
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_valid_civic = eco_civic_scavenger
+                }
+            }
+            food = 1
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_valid_civic = eco_civic_recycler
+                }
+            }
+            energy = 1
+        }
+    }
+    planet_modifier = {
+        planet_amenities_no_happiness_add = 1
+    }
+    triggered_planet_modifier = {
+        potential = {
+            owner = {
+                has_policy_flag = eco_policy_reuse
+            }
+        }
+        modifier = {
+            planet_amenities_no_happiness_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_trait = eco_trait_self_repairing
+        }
+        planet_amenities_no_happiness_add = 1
+    }
+    triggered_planet_modifier = {
+        potential = {
+            OR = {
+                has_trait = trait_robot_domestic_protocols
+                has_trait = trait_charismatic
+            }
+        }
+        modifier = {
+            planet_amenities_no_happiness_add = 0.2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_trait = trait_repugnant
+        }
+        modifier = {
+            planet_amenities_no_happiness_add = -0.2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_trait = eco_trait_self_repairing
+            OR = {
+                has_trait = trait_robot_domestic_protocols
+                has_trait = trait_charismatic
+            }
+        }
+        modifier = {
+            planet_amenities_no_happiness_add = 0.2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_trait = eco_trait_self_repairing
+            has_trait = trait_repugnant
+        }
+        modifier = {
+            planet_amenities_no_happiness_add = -0.2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_trait = eco_trait_self_repairing
+        }
+        planet_amenities_no_happiness_add = 1
+    }
+    triggered_planet_modifier = {
+        potential = {
+            OR = {
+                has_trait = trait_robot_domestic_protocols
+                has_trait = trait_charismatic
+            }
+            owner = {
+                has_policy_flag = eco_policy_reuse
+            }
+        }
+        modifier = {
+            planet_amenities_no_happiness_add = 0.2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_trait = trait_repugnant
+            owner = {
+                has_policy_flag = eco_policy_reuse
+            }
+        }
+        modifier = {
+            planet_amenities_no_happiness_add = -0.2
+        }
+    }
+    weight = {
+        weight = @simple_drone_job_weight
+        modifier = {
+            factor = 2
+            has_trait = eco_trait_self_repairing
+        }
+        modifier = {
+            factor = 1.1
+            exists = owner
+            years_passed < 1
+            owner = {
+                has_valid_civic = civic_machine_assimilator
+            }
+            has_trait = trait_cybernetic
+        }
+    }
+}

@@ -1,0 +1,284 @@
+decision_arcology_project = {
+    owned_planets_only = yes
+    icon = decision_arcology_project
+    enactment_time = 3600
+    resources = {
+        category = decisions
+        cost = {
+            influence = 200
+            minerals = 20000
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_ai = yes
+                }
+            }
+            influence = 20
+            minerals = 2000
+        }
+    }
+    potential = {
+        NOR = {
+            is_planet_class = pc_pdshroud
+            is_planet_class = pc_city
+            is_planet_class = pc_relic
+            has_modifier = resort_colony
+            has_modifier = penal_colony
+            has_modifier = slave_colony
+        }
+        habitable_structure = no
+        exists = owner
+        owner = {
+            has_ascension_perk = ap_arcology_project
+        }
+    }
+    allow = {
+        custom_tooltip = {
+            fail_text = decision_do_arcology_project_requirements
+            free_district_slots < 1
+            num_districts = {
+                type = district_farming
+                value < 1
+            }
+            num_districts = {
+                type = district_farming_uncapped
+                value < 1
+            }
+            num_districts = {
+                type = district_hydroponic_bay
+                value < 1
+            }
+            num_districts = {
+                type = district_nature_farms
+                value < 1
+            }
+            num_districts = {
+                type = district_ocean_farms
+                value < 1
+            }
+            num_districts = {
+                type = district_exotic_farms
+                value < 1
+            }
+            num_districts = {
+                type = district_mining
+                value < 1
+            }
+            num_districts = {
+                type = district_mining_uncapped
+                value < 1
+            }
+            num_districts = {
+                type = district_cheap_mining
+                value < 1
+            }
+            num_districts = {
+                type = district_secure_mining
+                value < 1
+            }
+            num_districts = {
+                type = district_surface_mining
+                value < 1
+            }
+            num_districts = {
+                type = district_generator
+                value < 1
+            }
+            num_districts = {
+                type = district_generator_uncapped
+                value < 1
+            }
+            num_districts = {
+                type = district_solar_generator
+                value < 1
+            }
+            num_districts = {
+                type = district_wind_turbines
+                value < 1
+            }
+            num_districts = {
+                type = district_geothermal_generator
+                value < 1
+            }
+            num_districts = {
+                type = district_tidal_generator
+                value < 1
+            }
+            num_districts = {
+                type = district_chemistry_industry
+                value < 1
+            }
+            num_districts = {
+                type = district_gas_refinery
+                value < 1
+            }
+            num_districts = {
+                type = district_crystal_mines
+                value < 1
+            }
+            num_districts = {
+                type = district_nature_reserve
+                value < 1
+            }
+            num_districts = {
+                type = district_research_complex
+                value < 1
+            }
+            num_districts = {
+                type = district_tourism
+                value < 1
+            }
+            num_districts = {
+                type = district_gardens
+                value < 1
+            }
+            num_districts = {
+                type = district_ecogardens
+                value < 1
+            }
+            # num_districts = {
+                # type = district_tibanna_gas_mines
+                # value < 1
+            # }
+            # num_districts = {
+                # type = district_kyber_crystal_mines
+                # value < 1
+            # }
+            num_districts = {
+                type = district_mining
+                value < 1
+            }
+            num_districts = {
+                type = district_generator
+                value < 1
+            }
+        }
+        num_uncleared_blockers < 1
+    }
+    effect = {
+        custom_tooltip = decision_arcology_project_effects
+        hidden_effect = {
+            clear_deposits = yes
+            change_pc = pc_city
+            reroll_districts = yes
+            IF = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_trait = trait_pc_aquatic_preference
+                        }
+                    }
+                }
+                set_planet_entity = {
+                    entity = "city_planet_entity"
+                    graphical_culture = owner
+                }
+            }
+            IF = {
+                limit = {
+                    owner = {
+                        has_trait = trait_pc_aquatic_preference
+                    }
+                }
+                set_planet_entity = {
+                    entity = "aquaticcity_planet_01_entity"
+                    picture = "pc_aquaticcity"
+                }
+            }
+            IF = {
+                limit = {
+                    owner = {
+                        has_trait = trait_pc_ammonia_preference
+                    }
+                }
+                IF = {
+                    limit = {
+                        NOT = {
+                            has_modifier = pdammoniaatmosphere
+                        }
+                    }
+                    add_modifier = {
+                        modifier = pdammoniaatmosphere
+                    }
+                }
+                remove_modifier = ammonia
+                set_planet_entity = {
+                    picture = pc_ammoniacity
+                }
+            }
+            IF = {
+                limit = {
+                    owner = {
+                        has_trait = trait_pc_methane_preference
+                    }
+                }
+                IF = {
+                    limit = {
+                        NOT = {
+                            has_modifier = pdmethaneatmosphere
+                        }
+                    }
+                    add_modifier = {
+                        modifier = pdmethaneatmosphere
+                    }
+                }
+                remove_modifier = methane
+                set_planet_entity = {
+                    picture = pc_methanecity
+                }
+            }
+            IF = {
+                limit = {
+                    owner = {
+                        has_trait = trait_pc_ash_preference
+                    }
+                }
+                IF = {
+                    limit = {
+                        NOT = {
+                            has_modifier = pdashatmosphere
+                        }
+                    }
+                    add_modifier = {
+                        modifier = pdashatmosphere
+                    }
+                }
+                remove_modifier = ash
+                set_planet_entity = {
+                    picture = pc_ashcity
+                }
+            }
+            owner = {
+                country_event = {
+                    id = distar.201
+                }
+            }
+            planet_event = {
+                id = mega.200
+            }
+            if = {
+                limit = {
+                    OR = {
+                        is_active_resolution = "resolution_ecology_environmental_control_board"
+                        is_active_resolution = "resolution_ecology_paradise_initiative"
+                    }
+                }
+                owner = {
+                    set_timed_country_flag = {
+                        flag = resolution_breached_terraformed
+                        days = 3600
+                    }
+                }
+            }
+        }
+    }
+    ai_weight = {
+        weight = 1
+        modifier = {
+            factor = 100000
+            has_planet_flag = do_ai_ecu_planned
+        }
+    }
+}

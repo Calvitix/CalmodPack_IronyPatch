@@ -1,0 +1,13 @@
+gpm_frequent_thunderstorms = {
+    show_only_custom_tooltip = yes
+    custom_tooltip = do_pm_gpm_frequent_thunderstorms
+    planet_jobs_physics_research_produces_mult = 0.10
+    planet_jobs_energy_produces_mult = 0.20
+    district_generator_max = 2
+    district_solar_generator_max = 2
+    district_wind_turbines_max = 2
+    district_geothermal_generator_max = 2
+    district_tidal_generator_max = 2
+    icon = "gfx/interface/icons/planet_modifiers/gpm_frequent_thunderstorms.dds"
+    icon_frame = 2
+}

@@ -1,0 +1,471 @@
+namespace = mandate
+planet_event = {
+    id = mandate.180
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        owner = {
+            OR = {
+                has_event_chain = mandate_district_city_chain
+                has_event_chain = mandate_district_generator_chain
+                has_event_chain = mandate_district_mining_chain
+                has_event_chain = mandate_district_farming_chain
+            }
+        }
+    }
+    immediate = {
+        switch = {
+            trigger = last_district_changed
+            district_city = {
+                owner = {
+                    if = {
+                        limit = {
+                            has_event_chain = mandate_district_city_chain
+                        }
+                        add_event_chain_counter = {
+                            event_chain = "mandate_district_city_chain"
+                            counter = "built_district"
+                            amount = 1
+                        }
+                    }
+                }
+            }
+            district_arcology_housing = {
+                owner = {
+                    if = {
+                        limit = {
+                            has_event_chain = mandate_district_city_chain
+                        }
+                        add_event_chain_counter = {
+                            event_chain = "mandate_district_city_chain"
+                            counter = "built_district"
+                            amount = 1
+                        }
+                    }
+                }
+            }
+            district_hab_housing = {
+                owner = {
+                    if = {
+                        limit = {
+                            has_event_chain = mandate_district_city_chain
+                        }
+                        add_event_chain_counter = {
+                            event_chain = "mandate_district_city_chain"
+                            counter = "built_district"
+                            amount = 1
+                        }
+                    }
+                }
+            }
+            district_rw_city = {
+                owner = {
+                    if = {
+                        limit = {
+                            has_event_chain = mandate_district_city_chain
+                        }
+                        add_event_chain_counter = {
+                            event_chain = "mandate_district_city_chain"
+                            counter = "built_district"
+                            amount = 2
+                        }
+                    }
+                }
+            }
+            district_generator = {
+                owner = {
+                    if = {
+                        limit = {
+                            has_event_chain = mandate_district_generator_chain
+                        }
+                        add_event_chain_counter = {
+                            event_chain = "mandate_district_generator_chain"
+                            counter = "built_district"
+                            amount = 1
+                        }
+                    }
+                }
+            }
+            district_generator_uncapped = {
+                owner = {
+                    if = {
+                        limit = {
+                            has_event_chain = mandate_district_generator_chain
+                        }
+                        add_event_chain_counter = {
+                            event_chain = "mandate_district_generator_chain"
+                            counter = "built_district"
+                            amount = 1
+                        }
+                    }
+                }
+            }
+            district_hab_energy = {
+                owner = {
+                    if = {
+                        limit = {
+                            has_event_chain = mandate_district_generator_chain
+                        }
+                        add_event_chain_counter = {
+                            event_chain = "mandate_district_generator_chain"
+                            counter = "built_district"
+                            amount = 1
+                        }
+                    }
+                }
+            }
+            district_hab_commercial = {
+                owner = {
+                    if = {
+                        limit = {
+                            has_event_chain = mandate_district_generator_chain
+                        }
+                        add_event_chain_counter = {
+                            event_chain = "mandate_district_generator_chain"
+                            counter = "built_district"
+                            amount = 1
+                        }
+                    }
+                }
+            }
+            district_rw_commercial = {
+                owner = {
+                    if = {
+                        limit = {
+                            has_event_chain = mandate_district_generator_chain
+                        }
+                        add_event_chain_counter = {
+                            event_chain = "mandate_district_generator_chain"
+                            counter = "built_district"
+                            amount = 2
+                        }
+                    }
+                }
+            }
+            district_mining = {
+                owner = {
+                    if = {
+                        limit = {
+                            has_event_chain = mandate_district_mining_chain
+                        }
+                        add_event_chain_counter = {
+                            event_chain = "mandate_district_mining_chain"
+                            counter = "built_district"
+                            amount = 1
+                        }
+                    }
+                }
+            }
+            district_mining_uncapped = {
+                owner = {
+                    if = {
+                        limit = {
+                            has_event_chain = mandate_district_mining_chain
+                        }
+                        add_event_chain_counter = {
+                            event_chain = "mandate_district_mining_chain"
+                            counter = "built_district"
+                            amount = 1
+                        }
+                    }
+                }
+            }
+            district_hab_mining = {
+                owner = {
+                    if = {
+                        limit = {
+                            has_event_chain = mandate_district_mining_chain
+                        }
+                        add_event_chain_counter = {
+                            event_chain = "mandate_district_mining_chain"
+                            counter = "built_district"
+                            amount = 2
+                        }
+                    }
+                }
+            }
+            district_farming = {
+                owner = {
+                    if = {
+                        limit = {
+                            has_event_chain = mandate_district_farming_chain
+                        }
+                        add_event_chain_counter = {
+                            event_chain = "mandate_district_farming_chain"
+                            counter = "built_district"
+                            amount = 1
+                        }
+                    }
+                }
+            }
+            district_farming_uncapped = {
+                owner = {
+                    if = {
+                        limit = {
+                            has_event_chain = mandate_district_farming_chain
+                        }
+                        add_event_chain_counter = {
+                            event_chain = "mandate_district_farming_chain"
+                            counter = "built_district"
+                            amount = 1
+                        }
+                    }
+                }
+            }
+            district_rw_farming = {
+                owner = {
+                    if = {
+                        limit = {
+                            has_event_chain = mandate_district_farming_chain
+                        }
+                        add_event_chain_counter = {
+                            event_chain = "mandate_district_farming_chain"
+                            counter = "built_district"
+                            amount = 2
+                        }
+                    }
+                }
+            }
+            district_underground_city = {
+                owner = {
+                    if = {
+                        limit = {
+                            has_event_chain = mandate_district_city_chain
+                        }
+                        add_event_chain_counter = {
+                            event_chain = "mandate_district_city_chain"
+                            counter = "built_district"
+                            amount = 1
+                        }
+                    }
+                }
+            }
+            district_ascended_housing = {
+                owner = {
+                    if = {
+                        limit = {
+                            has_event_chain = mandate_district_city_chain
+                        }
+                        add_event_chain_counter = {
+                            event_chain = "mandate_district_city_chain"
+                            counter = "built_district"
+                            amount = 1
+                        }
+                    }
+                }
+            }
+            district_ocean_housing = {
+                owner = {
+                    if = {
+                        limit = {
+                            has_event_chain = mandate_district_city_chain
+                        }
+                        add_event_chain_counter = {
+                            event_chain = "mandate_district_city_chain"
+                            counter = "built_district"
+                            amount = 1
+                        }
+                    }
+                }
+            }
+            district_generator_uncapped = {
+                owner = {
+                    if = {
+                        limit = {
+                            has_event_chain = mandate_district_generator_chain
+                        }
+                        add_event_chain_counter = {
+                            event_chain = "mandate_district_generator_chain"
+                            counter = "built_district"
+                            amount = 1
+                        }
+                    }
+                }
+            }
+            district_solar_generator = {
+                owner = {
+                    if = {
+                        limit = {
+                            has_event_chain = mandate_district_generator_chain
+                        }
+                        add_event_chain_counter = {
+                            event_chain = "mandate_district_generator_chain"
+                            counter = "built_district"
+                            amount = 1
+                        }
+                    }
+                }
+            }
+            district_wind_turbines = {
+                owner = {
+                    if = {
+                        limit = {
+                            has_event_chain = mandate_district_generator_chain
+                        }
+                        add_event_chain_counter = {
+                            event_chain = "mandate_district_generator_chain"
+                            counter = "built_district"
+                            amount = 1
+                        }
+                    }
+                }
+            }
+            district_geothermal_generator = {
+                owner = {
+                    if = {
+                        limit = {
+                            has_event_chain = mandate_district_generator_chain
+                        }
+                        add_event_chain_counter = {
+                            event_chain = "mandate_district_generator_chain"
+                            counter = "built_district"
+                            amount = 1
+                        }
+                    }
+                }
+            }
+            district_tidal_generator = {
+                owner = {
+                    if = {
+                        limit = {
+                            has_event_chain = mandate_district_generator_chain
+                        }
+                        add_event_chain_counter = {
+                            event_chain = "mandate_district_generator_chain"
+                            counter = "built_district"
+                            amount = 1
+                        }
+                    }
+                }
+            }
+            district_mining_uncapped = {
+                owner = {
+                    if = {
+                        limit = {
+                            has_event_chain = mandate_district_mining_chain
+                        }
+                        add_event_chain_counter = {
+                            event_chain = "mandate_district_mining_chain"
+                            counter = "built_district"
+                            amount = 1
+                        }
+                    }
+                }
+            }
+            district_cheap_mining = {
+                owner = {
+                    if = {
+                        limit = {
+                            has_event_chain = mandate_district_mining_chain
+                        }
+                        add_event_chain_counter = {
+                            event_chain = "mandate_district_mining_chain"
+                            counter = "built_district"
+                            amount = 1
+                        }
+                    }
+                }
+            }
+            district_secure_mining = {
+                owner = {
+                    if = {
+                        limit = {
+                            has_event_chain = mandate_district_mining_chain
+                        }
+                        add_event_chain_counter = {
+                            event_chain = "mandate_district_mining_chain"
+                            counter = "built_district"
+                            amount = 1
+                        }
+                    }
+                }
+            }
+            district_surface_mining = {
+                owner = {
+                    if = {
+                        limit = {
+                            has_event_chain = mandate_district_mining_chain
+                        }
+                        add_event_chain_counter = {
+                            event_chain = "mandate_district_mining_chain"
+                            counter = "built_district"
+                            amount = 1
+                        }
+                    }
+                }
+            }
+            district_farming_uncapped = {
+                owner = {
+                    if = {
+                        limit = {
+                            has_event_chain = mandate_district_farming_chain
+                        }
+                        add_event_chain_counter = {
+                            event_chain = "mandate_district_farming_chain"
+                            counter = "built_district"
+                            amount = 1
+                        }
+                    }
+                }
+            }
+            district_hydroponic_bay = {
+                owner = {
+                    if = {
+                        limit = {
+                            has_event_chain = mandate_district_farming_chain
+                        }
+                        add_event_chain_counter = {
+                            event_chain = "mandate_district_farming_chain"
+                            counter = "built_district"
+                            amount = 1
+                        }
+                    }
+                }
+            }
+            district_nature_farms = {
+                owner = {
+                    if = {
+                        limit = {
+                            has_event_chain = mandate_district_farming_chain
+                        }
+                        add_event_chain_counter = {
+                            event_chain = "mandate_district_farming_chain"
+                            counter = "built_district"
+                            amount = 1
+                        }
+                    }
+                }
+            }
+            district_ocean_farms = {
+                owner = {
+                    if = {
+                        limit = {
+                            has_event_chain = mandate_district_farming_chain
+                        }
+                        add_event_chain_counter = {
+                            event_chain = "mandate_district_farming_chain"
+                            counter = "built_district"
+                            amount = 1
+                        }
+                    }
+                }
+            }
+            district_exotic_farms = {
+                owner = {
+                    if = {
+                        limit = {
+                            has_event_chain = mandate_district_farming_chain
+                        }
+                        add_event_chain_counter = {
+                            event_chain = "mandate_district_farming_chain"
+                            counter = "built_district"
+                            amount = 1
+                        }
+                    }
+                }
+            }
+            default = {
+            }
+        }
+    }
+}

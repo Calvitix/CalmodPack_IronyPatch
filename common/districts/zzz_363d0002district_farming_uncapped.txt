@@ -1,0 +1,345 @@
+@base_cost = 300
+@hive_min_cost = 200
+@hive_food_cost = 100
+district_farming_uncapped = {
+    base_buildtime = 240
+    icon = district_farming
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        has_district_farming_uncapped = yes
+        OR = {
+            uses_district_set = standard
+            uses_district_set = hive_world
+            uses_district_set = machine_world
+        }
+    }
+    potential = {
+        has_district_farming_uncapped = yes
+        OR = {
+            uses_district_set = standard
+            uses_district_set = hive_world
+            uses_district_set = machine_world
+        }
+    }
+    allow = {
+        production_district_allowed = yes
+    }
+    conversion_ratio = 1
+    convert_to = {
+        district_farming
+        district_hydroponic_bay
+        district_nature_farms
+        district_ocean_farms
+        district_exotic_farms
+        district_efficient_farms
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = 300
+        }
+        upkeep = {
+            energy = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    OR = {
+                        is_hive_empire = no
+                        is_lithoid_empire = yes
+                    }
+                    is_plantoid_empire = no
+                }
+                has_global_flag = expanded_pops_active
+            }
+            minerals = @base_cost
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    OR = {
+                        is_hive_empire = yes
+                        is_plantoid_empire = yes
+                    }
+                    is_lithoid_empire = no
+                    NOT = {
+                        has_valid_civic = civic_integrated_bioarchitecture
+                    }
+                }
+                has_global_flag = expanded_pops_active
+            }
+            minerals = @hive_min_cost
+            food = @hive_food_cost
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    OR = {
+                        is_hive_empire = yes
+                        is_plantoid_empire = yes
+                    }
+                    is_lithoid_empire = no
+                    has_valid_civic = civic_integrated_bioarchitecture
+                }
+                has_global_flag = expanded_pops_active
+            }
+            food = 250
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    OR = {
+                        is_hive_empire = no
+                        is_lithoid_empire = yes
+                    }
+                    is_plantoid_empire = no
+                    NOT = {
+                        has_valid_civic = civic_integrated_bioarchitecture
+                    }
+                }
+                has_global_flag = expanded_pops_active
+            }
+            energy = 1
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    OR = {
+                        is_hive_empire = yes
+                        is_plantoid_empire = yes
+                    }
+                    is_lithoid_empire = no
+                }
+                has_global_flag = expanded_pops_active
+            }
+            energy = 0.7
+            food = 0.3
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    or = {
+                        has_valid_civic = civic_socialistic
+                    }
+                }
+            }
+            energy = 0.15
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_valid_civic = civic_agrarian_idyll
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_technology = tech_housing_agrarian_idyll
+                has_valid_civic = civic_agrarian_idyll
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_agri_drone_add = 4
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire_spiritualist = no
+            }
+        }
+        modifier = {
+            job_farmer_add = 3
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_fallen_empire_spiritualist = yes
+            }
+        }
+        modifier = {
+            job_fe_acolyte_farm_add = 3
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_policy_flag = do_rural_housing
+            }
+        }
+        modifier = {
+            planet_housing_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                or = {
+                    has_valid_civic = civic_socialistic
+                }
+            }
+        }
+        modifier = {
+            job_farmer_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_lithoid_empire = no
+                has_technology = tech_housing_agrarian_idyll
+                has_valid_civic = civic_agrarian_idyll
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_swapped_tradition = tr_prosperity_arcadian_housing
+                is_lithoid_empire = no
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_lithoid_empire = no
+                has_technology = tech_agrarian_goods
+                has_valid_civic = civic_agrarian_idyll
+            }
+        }
+        modifier = {
+            job_artisan_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_valid_civic = civic_agribusiness
+            }
+        }
+        modifier = {
+            job_farmer_add = 1
+            planet_housing_add = 1
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = job_agri_drone_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire_spiritualist = no
+            }
+        }
+        text = job_farmer_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_fallen_empire_spiritualist = yes
+            }
+        }
+        text = job_fe_acolyte_farm_effect_desc
+    }
+    prerequisites = {
+        tech_industrial_farming
+    }
+    ai_weight = {
+        weight = 1
+        modifier = {
+            factor = 17
+            need_food = yes
+        }
+        modifier = {
+            factor = 1.5
+            low_food_storage = yes
+        }
+        modifier = {
+            factor = 2
+            bad_food_economy = yes
+        }
+        modifier = {
+            factor = 5
+            has_unemployed_workers = yes
+        }
+        modifier = {
+            factor = 0
+            AND = {
+                free_jobs > 1
+                has_unemployed_workers = no
+            }
+        }
+        modifier = {
+            factor = 0
+            food_not_needed = yes
+        }
+        modifier = {
+            factor = 0.1
+            NOT = {
+                OR = {
+                    has_designation = farming
+                    has_designation = col_rural
+                    has_designation = col_rural_gestalt
+                }
+            }
+        }
+    }
+    ai_resource_production = {
+        food = 2
+        trigger = {
+            OR = {
+                low_food_income = yes
+                medium_food_income = yes
+            }
+        }
+    }
+}

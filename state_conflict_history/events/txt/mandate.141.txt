@@ -1,0 +1,26 @@
+namespace = mandate
+@unityreward = 10
+@unitymax = 1000000
+country_event = {
+    id = mandate.141
+    title = mandate.141.title
+    desc = mandate.141.desc
+    picture = GFX_evt_federation_fleet
+    show_sound = event_default
+    is_triggered_only = yes
+    option = {
+        name = OK
+        add_monthly_resource_mult = {
+            resource = unity
+            value = @unityreward
+            min = @unitymin
+            max = @unitymax
+        }
+        hidden_effect = {
+            add_modifier = {
+                modifier = mandate_shipwright_mod
+                days = 3600
+            }
+        }
+    }
+}

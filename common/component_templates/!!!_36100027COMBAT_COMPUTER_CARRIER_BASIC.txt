@@ -1,0 +1,39 @@
+@cost2 = 10
+@power1 = -10
+@engagement_range0 = 0.25
+utility_component_template = {
+    key = "COMBAT_COMPUTER_CARRIER_BASIC"
+    size = small
+    icon = "GFX_ship_part_computer_carrier_basic"
+    icon_frame = 1
+    power = @power1
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = @cost2
+        }
+    }
+    class_restriction = {
+        shipclass_military
+        shipclass_starbase
+    }
+    size_restriction = {
+        juggernaut
+        Carrier
+        escortcarrier
+        Flagship
+        explorationship
+    }
+    component_set = "combat_computers"
+    ship_behavior = "carrier"
+    prerequisites = {
+        "tech_combat_computers_1"
+    }
+    upgrades_to = "COMBAT_COMPUTER_CARRIER_ADVANCED"
+    ship_modifier = {
+        ship_engagement_range_mult = @engagement_range0
+    }
+    ai_weight = {
+        weight = 2
+    }
+}

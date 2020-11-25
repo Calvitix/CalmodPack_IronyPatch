@@ -1,0 +1,12 @@
+gpm_artificial_water = {
+    show_only_custom_tooltip = yes
+    custom_tooltip = do_pm_gpm_artificial_water
+    planet_jobs_engineering_research_produces_mult = 0.20
+    planet_jobs_food_produces_mult = -0.80
+    district_farming_max = -4
+    district_nature_farms_max = -4
+    district_ocean_farms_max = -4
+    district_exotic_farms_max = -4
+    icon = "gfx/interface/icons/planet_modifiers/gpm_artificial_water.dds"
+    icon_frame = 2
+}

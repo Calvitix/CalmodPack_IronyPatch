@@ -1,0 +1,12 @@
+gpm_extensive_cavern_system = {
+    show_only_custom_tooltip = yes
+    custom_tooltip = do_pm_gpm_extensive_cavern_system
+    planet_jobs_minerals_produces_mult = 0.25
+    district_mining_max = 4
+    district_cheap_mining_max = 4
+    district_secure_mining_max = 4
+    district_surface_mining_max = 4
+    planet_max_districts_add = 4
+    icon = "gfx/interface/icons/planet_modifiers/gpm_extensive_caverns.dds"
+    icon_frame = 1
+}

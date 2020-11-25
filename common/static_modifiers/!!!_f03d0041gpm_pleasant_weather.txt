@@ -1,0 +1,12 @@
+gpm_pleasant_weather = {
+    show_only_custom_tooltip = yes
+    custom_tooltip = do_pm_gpm_pleasant_weather
+    pop_environment_tolerance = 0.10
+    pop_amenities_usage_mult = -0.10
+    district_farming_max = 2
+    district_nature_farms_max = 2
+    district_ocean_farms_max = 2
+    district_exotic_farms_max = 2
+    icon = "gfx/interface/icons/planet_modifiers/gpm_pleasant_weather.dds"
+    icon_frame = 1
+}

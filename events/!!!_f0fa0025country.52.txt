@@ -1,0 +1,23 @@
+namespace = country
+ship_event = {
+    id = country.52
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        owner = {
+            has_event_chain = "survey_habitable_worlds_chain"
+        }
+        FROM = {
+            habitable_planet = yes
+        }
+    }
+    immediate = {
+        owner = {
+            add_event_chain_counter = {
+                event_chain = "survey_habitable_worlds_chain"
+                counter = "habitable_worlds_surveyed"
+                amount = 1
+            }
+        }
+    }
+}

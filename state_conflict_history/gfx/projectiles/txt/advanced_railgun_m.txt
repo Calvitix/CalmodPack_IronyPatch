@@ -1,0 +1,19 @@
+projectile_gfx_ballistic = {
+    name = "advanced_railgun_m"
+    color = {
+        1.0
+        0.55
+        0.1
+        1.0
+    }
+    hit_entity = "advanced_railgun_medium_hit_entity"
+    shield_hit_entity = "advanced_railgun_medium_shield_hit_entity"
+    muzzle_flash_entity = "advanced_railgun_medium_muzzle_entity"
+    entity = "advanced_railgun_tracer_round_medium_entity"
+    speed = 450.0
+    max_duration = 1.0
+    shield_impact = {
+        size = medium
+        delay = 0.0
+    }
+}

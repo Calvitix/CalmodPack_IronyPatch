@@ -1,0 +1,49 @@
+namespace = distar
+country_event = {
+    id = distar.3032
+    title = "distar.3032.name"
+    desc = "distar.3032.desc"
+    picture = GFX_evt_colony_settlement
+    show_sound = event_scanner
+    location = from
+    is_triggered_only = yes
+    immediate = {
+        create_species = {
+            name = random
+            class = MOL
+            portrait = "mol6"
+            namelist = "MOL2"
+            traits = {
+                trait = "trait_slow_learners"
+                trait = "trait_industrious"
+                trait = "trait_uplifted"
+            }
+            homeworld = root.capital_scope
+            effect = {
+                save_global_event_target_as = molluscoid_miners_species
+            }
+        }
+        capital_scope = {
+            while = {
+                count = 10
+                create_pop = {
+                    species = event_target:molluscoid_miners_species
+                }
+            }
+        }
+    }
+    option = {
+        name = EXCELLENT
+        custom_tooltip = distar.3032.a.tooltip
+        hidden_effect = {
+            if = {
+                limit = {
+                    has_event_chain = mandate_uplift_chain
+                }
+                country_event = {
+                    id = moremandate.82
+                }
+            }
+        }
+    }
+}

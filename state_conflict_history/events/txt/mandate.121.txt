@@ -1,0 +1,27 @@
+namespace = mandate
+@unityreward = 10
+@unitymax = 1000000
+country_event = {
+    id = mandate.121
+    title = mandate.121.title
+    desc = mandate.121.desc
+    picture = GFX_evt_satellite_in_orbit
+    show_sound = event_default
+    is_triggered_only = yes
+    immediate = {
+        end_event_chain = mandate_orbresearch_chain
+        add_modifier = {
+            modifier = mandate_orbital_research_mod
+            days = 3600
+        }
+    }
+    option = {
+        name = OK
+        add_monthly_resource_mult = {
+            resource = unity
+            value = @unityreward
+            min = @unitymin
+            max = @unitymax
+        }
+    }
+}
