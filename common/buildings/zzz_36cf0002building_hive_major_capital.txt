@@ -72,7 +72,7 @@ building_hive_major_capital = {
         text = job_patrol_drone_effect_desc
     }
     ai_weight = {
-        weight = 20
+        weight = 200
         modifier = {
             factor = 0.25
             owner = {

@@ -171,6 +171,6 @@ building_hab_capital = {
         "building_hab_major_capital"
     }
     ai_weight = {
-        weight = 1
+        weight = 100
     }
 }

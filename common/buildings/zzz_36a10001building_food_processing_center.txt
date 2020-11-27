@@ -63,7 +63,9 @@ building_food_processing_center = {
                 is_gestalt = yes
             }
         }
+        modifier = {
             job_agri_drone_add = 2
+        }
     }
     resources = {
         category = planet_buildings
@@ -72,7 +74,7 @@ building_food_processing_center = {
             volatile_motes = 50
         }
         upkeep = {
-            energy = 1
+            energy = 2
             volatile_motes = 1
         }
     }

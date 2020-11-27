@@ -1,10 +1,9 @@
-building_communal_housing_large = {
+building_paradise_dome = {
     base_buildtime = @b2_time
-    can_build = no
-    icon = building_paradise_dome
+    can_build = yes
     category = amenity
     potential = {
-        has_building = building_communal_housing
+        has_building = building_luxury_residence
         OR = {
             NOT = {
                 is_planet_class = pc_habitat
@@ -45,24 +44,25 @@ building_communal_housing_large = {
     destroy_trigger = {
         exists = owner
         OR = {
-            has_modifier = slave_colony
+            owner = {
+                is_regular_empire = no
+            }
+            owner = {
+                has_valid_civic = civic_shared_burden
+            }
             buildings_no_crystals = yes
-        }
-    }
-    show_tech_unlock_if = {
-        owner = {
-            is_regular_empire = yes
-            has_valid_civic = civic_shared_burden
+            has_modifier = slave_colony
         }
     }
     convert_to = {
+        building_organic_paradise
         building_drone_megastorage
         building_expanded_warren
-        building_paradise_dome
+        building_communal_housing_large
     }
     planet_modifier = {
-        planet_housing_add = 10
-        planet_amenities_add = 6
+        planet_housing_add = 6
+        planet_amenities_add = 10
     }
     triggered_planet_modifier = {
         potential = {
@@ -85,9 +85,19 @@ building_communal_housing_large = {
             energy = 3
             rare_crystals = @b2_rare_upkeep
         }
+    upgrades = {
+        "ebh_paradise_dome"
     }
     prerequisites = {
         "tech_paradise_dome"
+    }
+    show_tech_unlock_if = {
+        owner = {
+            is_regular_empire = yes
+            NOT = {
+                has_valid_civic = civic_shared_burden
+            }
+        }
     }
     ai_weight = {
         weight = 0

@@ -82,7 +82,7 @@ ap_engineered_evolution = {
         is_cyborg_empire = no
     }
     ai_weight = {
-        factor = 10
+        factor = 500
         modifier = {
             factor = 0
             num_owned_planets < 10

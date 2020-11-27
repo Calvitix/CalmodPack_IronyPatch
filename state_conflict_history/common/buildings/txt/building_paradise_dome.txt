@@ -1,6 +1,6 @@
 building_paradise_dome = {
     base_buildtime = @b2_time
-    can_build = no
+    can_build = yes
     category = amenity
     potential = {
         has_building = building_luxury_residence

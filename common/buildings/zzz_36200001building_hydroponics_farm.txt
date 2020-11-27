@@ -199,7 +199,7 @@ building_hydroponics_farm = {
             }
         }
         modifier = {
-            weight = 20
+            weight = 30  #20 Calvitix
             OR = {
                 free_housing > 3
                 owner = {

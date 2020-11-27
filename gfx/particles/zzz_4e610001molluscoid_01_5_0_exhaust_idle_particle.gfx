@@ -1,0 +1,7 @@
+objectTypes = {
+    pdxparticle = {
+        name = "molluscoid_01_5_0_exhaust_idle_particle"
+        type = "molluscoid_01_ship_exhaust_idle_file"
+        scale = 4.0
+    }
+}
