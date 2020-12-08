@@ -15,7 +15,7 @@ holy_gardener = {
     resources = {
         category = planet_botanists
         produces = {
-            unity = 20
+            unity = 10
         }
         upkeep = {
             food = 25

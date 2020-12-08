@@ -14,7 +14,7 @@ do_physicist = {
     resources = {
         category = planet_researchers
         produces = {
-            physics_research = 10
+            physics_research = 5
         }
     }
     weight = {

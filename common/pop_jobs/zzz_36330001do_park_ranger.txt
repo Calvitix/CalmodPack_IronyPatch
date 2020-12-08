@@ -15,7 +15,7 @@ do_park_ranger = {
         category = planet_researchers
         produces = {
             unity = 2
-            society_research = 10
+            society_research = 5
         }
         produces = {
             trigger = {

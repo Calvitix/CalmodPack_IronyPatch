@@ -1,6 +1,6 @@
 mineral_poor = {
     show_only_custom_tooltip = yes
-    custom_tooltip = do_pm_mineral_poor
+    custom_tooltip = do_pm_gpm_mineral_poor
     planet_jobs_minerals_produces_mult = -0.25
     district_mining_max = -3
     district_cheap_mining_max = -3

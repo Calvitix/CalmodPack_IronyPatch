@@ -14,7 +14,7 @@ do_engineer = {
     resources = {
         category = planet_researchers
         produces = {
-            engineering_research = 8
+            engineering_research = 4
             consumer_goods = 2
         }
     }

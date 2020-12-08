@@ -14,7 +14,7 @@ crafting_drone = {
     resources = {
         category = planet_researchers
         produces = {
-            engineering_research = 10
+            engineering_research = 5
         }
     }
     weight = {

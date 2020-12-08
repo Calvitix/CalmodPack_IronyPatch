@@ -9,9 +9,9 @@ gpm_precursor_archaeologist = {
     resources = {
         category = planet_researchers
         produces = {
-            physics_research = 16
-            engineering_research = 16
-            society_research = 16
+            physics_research = 8
+            engineering_research = 8
+            society_research = 8
             minor_artifacts = 0.1
         }
         upkeep = {

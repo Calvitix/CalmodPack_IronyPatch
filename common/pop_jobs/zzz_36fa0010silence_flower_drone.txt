@@ -15,9 +15,9 @@ silence_flower_drone = {
     resources = {
         category = planet_botanists
         produces = {
-            physics_research = 6
-            engineering_research = 6
-            society_research = 6
+            physics_research = 3
+            engineering_research = 3
+            society_research = 3
         }
         upkeep = {
             food = 4

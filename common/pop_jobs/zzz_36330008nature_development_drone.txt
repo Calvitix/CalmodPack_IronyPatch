@@ -15,7 +15,7 @@ nature_development_drone = {
         category = planet_researchers
         produces = {
             food = 2
-            society_research = 10
+            society_research = 5
         }
     }
     weight = {
