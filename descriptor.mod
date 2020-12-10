@@ -1,6 +1,7 @@
 dependencies={
 	"Plentiful Traditions 2.8.0"
 	"Plentiful Traditions 2.8.0 - Extra Perks"
+	"Dynamic Difficulty - Ultimate Customization"
 	"UI Overhaul Dynamic + Planetary Diversity"
 	"UI Overhaul Dynamic + Tiny Outliner v2"
 	"UI Overhaul Dynamic + Plentiful Traditions"
