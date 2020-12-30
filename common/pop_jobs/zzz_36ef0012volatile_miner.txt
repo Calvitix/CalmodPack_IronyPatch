@@ -10,13 +10,11 @@ volatile_miner = {
         category = planet_researchers
         produces = {
             society_research = 6
+            physics_research = 6
         }
         upkeep = {
-            consumer_goods = 1
+            consumer_goods = 2
         }
-    }
-    planet_modifier = {
-        planet_jobs_society_research_produces_mult = 0.025
     }
     weight = {
         weight = @specialist_job_weight

@@ -80,7 +80,7 @@ building_refinery = {
         text = job_gas_refiner_drone_effect_desc
     }
     ai_weight = {
-        weight = 0
+        weight = 1
         modifier = {
             weight = 50
             owner = {

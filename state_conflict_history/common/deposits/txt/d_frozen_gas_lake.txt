@@ -26,6 +26,7 @@ d_frozen_gas_lake = {
             is_planet_class = pc_relic
             is_cold = yes
             is_planet_class = pc_ammonia
+            is_planet_class = pc_sulfur
             is_planet_class = pc_acid
             is_planet_class = pc_methane
             is_planet_class = pc_graveyard
@@ -43,6 +44,10 @@ d_frozen_gas_lake = {
         modifier = {
             factor = @planet_type_bonus
             is_dry = yes
+        }
+        modifier = {
+            factor = @planet_type_bonus
+            is_pd_exotic = yes
         }
     }
 }

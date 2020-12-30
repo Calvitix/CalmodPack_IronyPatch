@@ -40,11 +40,13 @@ district_bioforge_maintenance = {
             }
         }
         modifier = {
-            job_synapse_drone_add = 10
+            job_synapse_drone_add = 5
+            job_maintenance_drone_add = 4
+            job_patrol_drone_add = 1
         }
     }
     triggered_desc = {
-        text = job_maintenance_drone_effect_desc
+        text = job_synapse_drone_effect_desc
     }
     ai_weight = {
         weight = 1

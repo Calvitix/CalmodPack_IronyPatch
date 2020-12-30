@@ -32,6 +32,7 @@ d_mineral_fields = {
             is_planet_class = pc_tundra
             is_planet_class = pc_rogue
             is_planet_class = pc_eyeball
+            is_planet_class = pc_glacio
             is_planet_class = pc_desertislands
             is_planet_class = pc_subarctic
             is_planet_class = pc_mangrove
@@ -40,12 +41,14 @@ d_mineral_fields = {
             is_planet_class = pc_steppe
             is_planet_class = pc_prairie
             is_planet_class = pc_veld
+            is_planet_class = pc_semiarid
             is_planet_class = pc_sandsea
             is_planet_class = pc_oasis
             is_planet_class = pc_swamp
             is_planet_class = pc_mud
             is_planet_class = pc_mushroom
             is_planet_class = pc_ammonia
+            is_planet_class = pc_sulfur
             is_planet_class = pc_acid
             is_planet_class = pc_methane
             is_planet_class = pc_antarctic
@@ -63,6 +66,10 @@ d_mineral_fields = {
         modifier = {
             factor = @planet_type_bonus
             is_cold = yes
+        }
+        modifier = {
+            factor = @planet_type_bonus
+            is_pd_exotic = yes
         }
     }
 }

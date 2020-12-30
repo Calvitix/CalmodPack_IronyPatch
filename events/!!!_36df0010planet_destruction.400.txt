@@ -1,0 +1,469 @@
+namespace = planet_destruction
+planet_event = {
+    id = planet_destruction.400
+    hide_window = yes
+    is_triggered_only = yes
+    immediate = {
+        if = {
+            limit = {
+                NOT = {
+                    is_planet_class = pc_ai
+                }
+                exists = owner
+                owner = {
+                    NOT = {
+                        is_same_value = from.owner
+                    }
+                }
+            }
+            from.owner = {
+                country_event = {
+                    id = planet_destruction.401
+                }
+            }
+        }
+        if = {
+            limit = {
+                is_planet_class = pc_ai
+                NOT = {
+                    has_planet_flag = machine_lair
+                }
+            }
+            set_planet_flag = destroyed_by_colossus
+            set_planet_flag = planet_godrayed
+            planet_event = {
+                id = crisis.2040
+            }
+            create_ambient_object = {
+                location = this
+                type = habitat_cracker_object
+                duration = 5
+                use_3d_location = yes
+                base_angle_towards = star
+                entity_face_object = star
+                entity_offset = {
+                    min = 0
+                    max = 0
+                }
+                entity_scale_to_size = yes
+                scale = 0.5
+            }
+        }
+        if = {
+            limit = {
+                is_planet_class = pc_ai
+                has_planet_flag = machine_lair
+            }
+            set_planet_flag = destroyed_by_colossus
+            set_planet_flag = planet_godrayed
+            from.owner = {
+                save_event_target_as = final_machine_world_destroyer
+            }
+            stop_crisis_sound = yes
+            planet_event = {
+                id = crisis.2046
+            }
+            create_ambient_object = {
+                location = this
+                type = habitat_cracker_object
+                duration = 5
+                use_3d_location = yes
+                base_angle_towards = star
+                entity_face_object = star
+                entity_offset = {
+                    min = 0
+                    max = 0
+                }
+                entity_scale_to_size = yes
+                scale = 0.5
+            }
+        }
+        if = {
+            limit = {
+                OR = {
+                    is_active_resolution = "resolution_rulesofwar_independent_tribunals"
+                    is_active_resolution = "resolution_rulesofwar_last_resort_doctrine"
+                    is_active_resolution = "resolution_rulesofwar_demobilization_initiative"
+                }
+            }
+            from.owner = {
+                set_timed_country_flag = {
+                    flag = resolution_breached_fired_godray
+                    days = 3600
+                }
+            }
+        }
+        if = {
+            limit = {
+                NOT = {
+                    is_planet_class = pc_ai
+                }
+                exists = owner
+                owner = {
+                    NOT = {
+                        is_same_value = from.owner
+                    }
+                    OR = {
+                        is_country_type = default
+                        is_country_type = fallen_empire
+                        is_country_type = awakened_fallen_empire
+                    }
+                }
+            }
+            add_threat = {
+                who = from.owner
+                amount = 3
+            }
+            every_country = {
+                limit = {
+                    NOR = {
+                        is_same_value = from.owner
+                        is_same_value = root.owner
+                        AND = {
+                            has_federation = yes
+                            is_in_federation_with = from.owner
+                        }
+                    }
+                    OR = {
+                        has_communications = from.owner
+                        has_communications = root.owner
+                    }
+                    OR = {
+                        AND = {
+                            has_federation = yes
+                            is_in_federation_with = root.owner
+                        }
+                        has_ai_personality = awakened_fallen_empire_materialist
+                        AND = {
+                            is_country_type = default
+                            OR = {
+                                is_materialist = yes
+                                is_egalitarian = yes
+                                has_authority = auth_machine_intelligence
+                            }
+                        }
+                    }
+                }
+                add_opinion_modifier = {
+                    modifier = opinion_converted_a_world
+                    who = from.owner
+                }
+            }
+            owner = {
+                add_opinion_modifier = {
+                    modifier = opinion_converted_my_world
+                    who = from.owner
+                }
+                if = {
+                    limit = {
+                        NOT = {
+                            has_ethic = ethic_gestalt_consciousness
+                        }
+                    }
+                    add_modifier = {
+                        modifier = colossus_victim
+                        days = 10800
+                    }
+                }
+            }
+            owner = {
+                add_static_war_exhaustion = {
+                    attacker = from.fleet.owner
+                    location = root
+                    value_for_planet_destruction = 1.0
+                }
+            }
+        }
+        every_owned_pop = {
+            limit = {
+                OR = {
+                    has_trait = trait_mechanical
+                    has_trait = trait_machine_unit
+                    has_trait = trait_hive_mind
+                    has_living_standard = {
+                        country = root.owner
+                        type = living_standard_organic_trophy
+                    }
+                }
+            }
+            kill_pop = yes
+        }
+        every_owned_pop = {
+            limit = {
+                NOR = {
+                    has_trait = trait_mechanical
+                    has_trait = trait_machine_unit
+                    has_trait = trait_hive_mind
+                    has_living_standard = {
+                        country = root.owner
+                        type = living_standard_organic_trophy
+                    }
+                }
+            }
+            pop_change_ethic = ethic_spiritualist
+        }
+        if = {
+            limit = {
+                is_planet_class = pc_habitat
+            }
+            spawn_habitat_divine_effect = yes
+        }
+        else_if = {
+            limit = {
+                is_planet_class = pc_ringworld_habitable
+            }
+            spawn_ringworld_divine_effect = yes
+        }
+        if = {
+            limit = {
+                OR = {
+                    is_planet_class = pc_habitat
+                    is_planet_class = pc_ringworld_habitable
+                }
+            }
+        }
+        else = {
+            switch = {
+                trigger = is_planet_class
+                pc_desert = {
+                    change_pc = pc_desert
+                }
+                pc_arid = {
+                    change_pc = pc_arid
+                }
+                pc_savannah = {
+                    change_pc = pc_savannah
+                }
+                pc_ocean = {
+                    change_pc = pc_ocean
+                }
+                pc_continental = {
+                    change_pc = pc_continental
+                }
+                pc_tropical = {
+                    change_pc = pc_tropical
+                }
+                pc_tundra = {
+                    change_pc = pc_tundra
+                }
+                pc_arctic = {
+                    change_pc = pc_arctic
+                }
+                pc_alpine = {
+                    change_pc = pc_alpine
+                }
+                pc_snow = {
+                    change_pc = pc_snow
+                }
+                pc_highland = {
+                    change_pc = pc_highland
+                }
+                pc_tidallylocked = {
+                    change_pc = pc_tidallylocked
+                }
+                pc_mangrove = {
+                    change_pc = pc_mangrove
+                }
+                pc_wetswamp = {
+                    change_pc = pc_wetswamp
+                }
+                pc_desertislands = {
+                    change_pc = pc_desertislands
+                }
+                pc_hajungle = {
+                    change_pc = pc_hajungle
+                }
+                pc_cascadian = {
+                    change_pc = pc_cascadian
+                }
+                pc_swamp = {
+                    change_pc = pc_swamp
+                }
+                pc_mud = {
+                    change_pc = pc_mud
+                }
+                pc_subarctic = {
+                    change_pc = pc_subarctic
+                }
+                pc_glacial = {
+                    change_pc = pc_glacial
+                }
+                pc_geothermal = {
+                    change_pc = pc_geothermal
+                }
+                pc_sandsea = {
+                    change_pc = pc_sandsea
+                }
+                pc_mesa = {
+                    change_pc = pc_mesa
+                }
+                pc_outback = {
+                    change_pc = pc_outback
+                }
+                pc_oasis = {
+                    change_pc = pc_oasis
+                }
+                pc_hadesert = {
+                    change_pc = pc_hadesert
+                }
+                pc_steppe = {
+                    change_pc = pc_steppe
+                }
+                pc_frozen_desert = {
+                    change_pc = pc_frozen_desert
+                }
+                pc_boreal = {
+                    change_pc = pc_boreal
+                }
+                pc_ammonia = {
+                    change_pc = pc_ammonia
+                }
+                pc_sulfur = {
+                    change_pc = pc_sulfur
+                }
+                pc_acid = {
+                    change_pc = pc_acid
+                }
+                pc_methane = {
+                    change_pc = pc_methane
+                }
+                pc_crystal = {
+                    change_pc = pc_crystal
+                }
+                pc_floating = {
+                    change_pc = pc_floating
+                }
+                pc_graveyard = {
+                    change_pc = pc_graveyard
+                }
+                pc_mushroom = {
+                    change_pc = pc_mushroom
+                }
+                pc_superhabitable = {
+                    change_pc = pc_superhabitable
+                }
+                pc_retinal = {
+                    change_pc = pc_retinal
+                }
+                pc_forest = {
+                    change_pc = pc_forest
+                }
+                pc_lake = {
+                    change_pc = pc_lake
+                }
+                pc_tepid = {
+                    change_pc = pc_tepid
+                }
+                pc_ecocity = {
+                    change_pc = pc_ecocity
+                }
+                pc_prairie = {
+                    change_pc = pc_prairie
+                }
+                pc_veld = {
+                    change_pc = pc_veld
+                }
+                pc_semiarid = {
+                    change_pc = pc_semiarid
+                }
+                pc_med = {
+                    change_pc = pc_med
+                }
+                pc_machine_factory = {
+                    change_pc = pc_machine_factory
+                }
+                pc_bioforge = {
+                    change_pc = pc_bioforge
+                }
+                pc_irradiated = {
+                    change_pc = pc_irradiated
+                }
+                pc_karst = {
+                    change_pc = pc_karst
+                }
+                pc_ash = {
+                    change_pc = pc_ash
+                }
+                pc_primal = {
+                    change_pc = pc_primal
+                }
+                pc_salt = {
+                    change_pc = pc_salt
+                }
+                pc_coral = {
+                    change_pc = pc_coral
+                }
+                pc_storm = {
+                    change_pc = pc_storm
+                }
+                pc_rogue = {
+                    change_pc = pc_rogue
+                }
+                pc_eyeball = {
+                    change_pc = pc_eyeball
+                }
+                pc_glacio = {
+                    change_pc = pc_glacio
+                }
+                pc_megaflora = {
+                    change_pc = pc_megaflora
+                }
+                pc_megafloratol = {
+                    change_pc = pc_megafloratol
+                }
+                pc_pdhive1 = {
+                    change_pc = pc_pdhive1
+                }
+                pc_pdhive2 = {
+                    change_pc = pc_pdhive2
+                }
+                pc_aquatic = {
+                    change_pc = pc_aquatic
+                }
+                pc_pd_barren_hab = {
+                    change_pc = pc_pd_barren_hab
+                }
+                pc_pd_barren_cold_hab = {
+                    change_pc = pc_pd_barren_cold_hab
+                }
+                pc_pd_gas_giant_hab = {
+                    change_pc = pc_pd_gas_giant_hab
+                }
+                pc_pd_molten_hab = {
+                    change_pc = pc_pd_molten_hab
+                }
+                pc_pd_frozen_hab = {
+                    change_pc = pc_pd_frozen_hab
+                }
+                pc_pd_toxic_hab = {
+                    change_pc = pc_pd_toxic_hab
+                }
+                pc_pd_hothouse_hab = {
+                    change_pc = pc_pd_hothouse_hab
+                }
+                pc_pd_asteroid_hab = {
+                    change_pc = pc_pd_asteroid_hab
+                }
+                pc_pdshroud = {
+                    change_pc = pc_pdshroud
+                }
+            }
+        }
+        add_modifier = {
+            modifier = god_rayed
+            days = 3600
+        }
+        if = {
+            limit = {
+                exists = owner
+                owner = {
+                    is_same_value = from.owner
+                }
+            }
+            add_modifier = {
+                modifier = uneasy_faith
+                days = 3600
+            }
+        }
+    }
+}

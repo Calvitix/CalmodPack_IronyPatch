@@ -110,7 +110,7 @@ building_communal_housing = {
         "building_communal_housing_large"
     }
     ai_weight = {
-        weight = 0
+        weight = 0.5
         modifier = {
             weight = 100
             free_housing < 3

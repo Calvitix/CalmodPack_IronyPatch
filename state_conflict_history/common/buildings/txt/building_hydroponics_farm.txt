@@ -247,7 +247,7 @@ building_hydroponics_farm = {
         }
     }
     ai_resource_production = {
-        food = 1
+        food = 2
         trigger = {
             always = yes
         }

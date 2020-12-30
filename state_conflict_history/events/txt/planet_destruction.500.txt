@@ -312,6 +312,9 @@ planet_event = {
                 pc_ammonia = {
                     change_pc = pc_ammonia
                 }
+                pc_sulfur = {
+                    change_pc = pc_sulfur
+                }
                 pc_acid = {
                     change_pc = pc_acid
                 }
@@ -354,6 +357,9 @@ planet_event = {
                 pc_veld = {
                     change_pc = pc_veld
                 }
+                pc_semiarid = {
+                    change_pc = pc_semiarid
+                }
                 pc_med = {
                     change_pc = pc_med
                 }
@@ -389,6 +395,9 @@ planet_event = {
                 }
                 pc_eyeball = {
                     change_pc = pc_eyeball
+                }
+                pc_glacio = {
+                    change_pc = pc_glacio
                 }
                 pc_megaflora = {
                     change_pc = pc_megaflora

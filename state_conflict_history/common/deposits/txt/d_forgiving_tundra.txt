@@ -29,6 +29,7 @@ d_forgiving_tundra = {
             is_planet_class = pc_tundra
             is_planet_class = pc_rogue
             is_planet_class = pc_eyeball
+            is_planet_class = pc_glacio
             is_planet_class = pc_storm
         }
         has_district_farming = yes

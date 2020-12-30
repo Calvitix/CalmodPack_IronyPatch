@@ -211,6 +211,27 @@ decision_arcology_project = {
             IF = {
                 limit = {
                     owner = {
+                        has_trait = trait_pc_sulfur_preference
+                    }
+                }
+                IF = {
+                    limit = {
+                        NOT = {
+                            has_modifier = pdsulfuratmosphere
+                        }
+                    }
+                    add_modifier = {
+                        modifier = pdsulfuratmosphere
+                    }
+                }
+                remove_modifier = pdsulfur
+                set_planet_entity = {
+                    picture = pc_sulfurcity
+                }
+            }
+            IF = {
+                limit = {
+                    owner = {
                         has_trait = trait_pc_methane_preference
                     }
                 }

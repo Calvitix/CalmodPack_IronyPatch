@@ -34,6 +34,9 @@ decision_prospect = {
         NOT = {
             is_planet_class = pc_ecocity
         }
+        NOT = {
+            is_planet_class = pc_pdfloraforge
+        }
         owner = {
             has_swapped_tradition = tr_adaptability_finish
         }

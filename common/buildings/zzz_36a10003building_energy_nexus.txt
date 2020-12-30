@@ -62,6 +62,7 @@ building_energy_nexus = {
                 is_planet_class = pc_pd_hothouse_hab
                 is_planet_class = pc_pd_toxic_hab
                 is_planet_class = pc_pd_molten_hab
+                is_planet_class = pc_pd_asteroid_hab
                 is_planet_class = pc_machine
                 is_planet_class = pc_hive
                 is_planet_class = pc_city
@@ -116,7 +117,7 @@ building_energy_nexus = {
         building_eludium_plant
     }
     ai_weight = {
-        weight = 0
+        weight = 1
         modifier = {
             weight = 30
             buildings_has_exotic_gases = yes

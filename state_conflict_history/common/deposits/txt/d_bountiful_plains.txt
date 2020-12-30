@@ -33,6 +33,7 @@ d_bountiful_plains = {
             is_planet_class = pc_graveyard
             is_planet_class = pc_prairie
             is_planet_class = pc_veld
+            is_planet_class = pc_semiarid
             is_planet_class = pc_steppe
         }
         has_district_farming = yes

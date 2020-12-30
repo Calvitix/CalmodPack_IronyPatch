@@ -24,6 +24,7 @@ random_list = {
         "pc_steppe"
         "pc_prairie"
         "pc_veld"
+        "pc_semiarid"
         "pc_retinal"
         "pc_cascadian"
         "pc_hadesert"

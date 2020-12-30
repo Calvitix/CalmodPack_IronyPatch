@@ -39,6 +39,7 @@ d_tempestous_mountain = {
             is_planet_class = pc_crystal
             is_planet_class = pc_technoorganic
             is_planet_class = pc_ammonia
+            is_planet_class = pc_sulfur
             is_planet_class = pc_acid
             is_planet_class = pc_methane
             is_planet_class = pc_graveyard

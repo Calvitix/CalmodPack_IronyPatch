@@ -15,6 +15,7 @@ trait_pc_savannah_preference = {
         pc_outback_habitability = 0.7
         pc_mesa_habitability = 0.7
         pc_veld_habitability = 0.7
+        pc_semiarid_habitability = 0.7
         pc_prairie_habitability = 0.6
         pc_oasis_habitability = 0.6
         pc_sandsea_habitability = 0.6
@@ -57,5 +58,6 @@ trait_pc_savannah_preference = {
         pc_megaflora_habitability = 0.2
         pc_rogue_habitability = 0.2
         pc_eyeball_habitability = 0.2
+        pc_glacio_habitability = 0.3
     }
 }

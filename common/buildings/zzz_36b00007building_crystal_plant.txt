@@ -81,7 +81,7 @@ building_crystal_plant = {
         "eb_crystal_plant"
     }
     ai_weight = {
-        weight = 0
+        weight = 1
         modifier = {
             factor = 0
             buildings_build_building = no

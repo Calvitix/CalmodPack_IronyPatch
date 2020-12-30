@@ -169,7 +169,7 @@ building_mineral_purification_plant = {
         text = job_fe_acolyte_mine_effect_desc
     }
     ai_weight = {
-        weight = 0
+        weight = 1
         modifier = {
             weight = 75
             NOR = {
@@ -199,7 +199,7 @@ building_mineral_purification_plant = {
             }
         }
         modifier = {
-            factor = 2
+            factor = 20
             exists = owner
             owner = {
                 has_monthly_income = {

@@ -100,7 +100,7 @@ building_paradise_dome = {
         }
     }
     ai_weight = {
-        weight = 0
+        weight = 0.5
         modifier = {
             weight = 1
             buildings_has_crystals = yes

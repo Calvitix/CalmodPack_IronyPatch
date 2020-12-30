@@ -138,13 +138,13 @@ building_mineral_purification_hub = {
         text = job_fe_acolyte_mine_effect_desc
     }
     ai_weight = {
-        weight = 0
+        weight = 1
         modifier = {
             weight = 30
             buildings_has_motes = yes
         }
         modifier = {
-            factor = 2
+            factor = 20
             exists = owner
             owner = {
                 has_monthly_income = {

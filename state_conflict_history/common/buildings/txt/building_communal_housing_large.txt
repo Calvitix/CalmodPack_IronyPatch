@@ -13,6 +13,27 @@ building_communal_housing_large = {
             NOT = {
                 is_planet_class = pc_habitat
             }
+            NOT = {
+                is_planet_class = pc_pd_barren_cold_hab
+            }
+            NOT = {
+                is_planet_class = pc_pd_barren_hab
+            }
+            NOT = {
+                is_planet_class = pc_pd_frozen_hab
+            }
+            NOT = {
+                is_planet_class = pc_pd_gas_giant_hab
+            }
+            NOT = {
+                is_planet_class = pc_pd_hothouse_hab
+            }
+            NOT = {
+                is_planet_class = pc_pd_toxic_hab
+            }
+            NOT = {
+                is_planet_class = pc_pd_molten_hab
+            }
             AND = {
                 has_planet_flag = advanced_habitat
                 exists = owner
@@ -76,7 +97,7 @@ building_communal_housing_large = {
         "ebh_communal_housing_large"
     }
     ai_weight = {
-        weight = 0
+        weight = 0.5
         modifier = {
             weight = 1
             buildings_has_crystals = yes

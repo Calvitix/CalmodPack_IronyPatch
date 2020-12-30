@@ -24,4 +24,4 @@ name="IronyModManager_Calmodpack"
 tags={
 	"Fixes"
 }
-supported_version="2.8.1"
+supported_version="2.8.*"

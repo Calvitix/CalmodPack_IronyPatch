@@ -9,15 +9,12 @@ slurry_distillers = {
     resources = {
         category = planet_metallurgists
         produces = {
-            alloys = 3
-            engineering_research = 3
+            alloys = 1.5
+            engineering_research = 6
         }
         upkeep = {
-            consumer_goods = 1
+            consumer_goods = 2
         }
-    }
-    planet_modifier = {
-        planet_jobs_alloys_produces_mult = 0.025
     }
     weight = {
         weight = @specialist_job_weight

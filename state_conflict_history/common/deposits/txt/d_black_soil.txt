@@ -31,6 +31,7 @@ d_black_soil = {
             is_planet_class = pc_steppe
             is_planet_class = pc_prairie
             is_planet_class = pc_veld
+            is_planet_class = pc_semiarid
             is_planet_class = pc_geothermal
             is_planet_class = pc_tidallylocked
             is_planet_class = pc_floating

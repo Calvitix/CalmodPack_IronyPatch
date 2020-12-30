@@ -29,6 +29,7 @@ d_rich_mountain = {
             is_planet_class = pc_tundra
             is_planet_class = pc_rogue
             is_planet_class = pc_eyeball
+            is_planet_class = pc_glacio
             is_planet_class = pc_gaia
             is_planet_class = pc_pdshroud
             is_planet_class = pc_relic
@@ -46,6 +47,7 @@ d_rich_mountain = {
             is_planet_class = pc_mud
             is_planet_class = pc_mushroom
             is_planet_class = pc_ammonia
+            is_planet_class = pc_sulfur
             is_planet_class = pc_acid
             is_planet_class = pc_methane
             is_planet_class = pc_tidallylocked
@@ -75,6 +77,10 @@ d_rich_mountain = {
         modifier = {
             factor = @planet_type_bonus
             is_cold = yes
+        }
+        modifier = {
+            factor = @planet_type_bonus
+            is_pd_exotic = yes
         }
     }
 }

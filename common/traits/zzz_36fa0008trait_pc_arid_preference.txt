@@ -21,6 +21,7 @@ trait_pc_arid_preference = {
         pc_desert_habitability = 0.6
         pc_steppe_habitability = 0.6
         pc_veld_habitability = 0.6
+        pc_semiarid_habitability = 0.6
         pc_oasis_habitability = 0.5
         pc_tundra_habitability = 0.5
         pc_continental_habitability = 0.4
@@ -57,5 +58,6 @@ trait_pc_arid_preference = {
         pc_megaflora_habitability = 0.2
         pc_rogue_habitability = 0.2
         pc_eyeball_habitability = 0.2
+        pc_glacio_habitability = 0.3
     }
 }

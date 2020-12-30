@@ -1,0 +1,48 @@
+special_init_01 = {
+    class = sc_black_hole
+    usage = misc_system_init
+    usage_odds = {
+        base = 3
+        modifier = {
+            factor = 0
+            any_neighbor_system = {
+                OR = {
+                    has_megastructure = gateway_ruined
+                    has_megastructure = lgate_base
+                    is_star_class = sc_black_hole
+                }
+            }
+        }
+    }
+    planet = {
+        class = star
+        orbit_distance = 0
+    }
+    change_orbit = 60
+    planet = {
+        count = {
+            min = 0
+            max = 1
+        }
+        class = "pc_broken"
+        size = {
+            min = 10
+            max = 15
+        }
+        init_effect = {
+            prevent_anomaly = yes
+        }
+    }
+    change_orbit = 30
+    planet = {
+        count = {
+            min = 0
+            max = 1
+        }
+        class = "pc_barren_cold"
+        size = {
+            min = 10
+            max = 20
+        }
+    }
+}

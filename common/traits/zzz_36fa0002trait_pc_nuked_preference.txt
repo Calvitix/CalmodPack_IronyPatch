@@ -1,9 +1,6 @@
 trait_pc_nuked_preference = {
     icon = "gfx/interface/icons/traits/trait_pc_nuked_preference.dds"
     modification = no
-    prerequisites = {
-        tech_ap_plentiful_traditions_tomb_life
-    }
     allowed_archetypes = {
         BIOLOGICAL
         PRESAPIENT
@@ -40,6 +37,7 @@ trait_pc_nuked_preference = {
         pc_hadesert_habitability = 0.6
         pc_prairie_habitability = 0.6
         pc_veld_habitability = 0.6
+        pc_semiarid_habitability = 0.6
         pc_med_habitability = 0.6
         pc_arctic_habitability = 0.6
         pc_alpine_habitability = 0.6
@@ -65,5 +63,6 @@ trait_pc_nuked_preference = {
         pc_rogue_habitability = 0.6
         pc_eyeball_habitability = 0.6
         pc_megaflora_habitability = 0.6
+        pc_glacio_habitability = 0.6
     }
 }

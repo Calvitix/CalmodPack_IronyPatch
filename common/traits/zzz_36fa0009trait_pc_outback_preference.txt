@@ -16,6 +16,7 @@ trait_pc_outback_preference = {
         pc_arid_habitability = 0.8
         pc_desert_habitability = 0.7
         pc_veld_habitability = 0.7
+        pc_semiarid_habitability = 0.7
         pc_mesa_habitability = 0.7
         pc_hadesert_habitability = 0.7
         pc_oasis_habitability = 0.6
@@ -57,5 +58,6 @@ trait_pc_outback_preference = {
         pc_megaflora_habitability = 0.2
         pc_rogue_habitability = 0.2
         pc_eyeball_habitability = 0.2
+        pc_glacio_habitability = 0.2
     }
 }

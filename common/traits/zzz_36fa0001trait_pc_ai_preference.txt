@@ -36,6 +36,7 @@ trait_pc_ai_preference = {
         pc_hadesert_habitability = 0.01
         pc_prairie_habitability = 0.01
         pc_veld_habitability = 0.01
+        pc_semiarid_habitability = 0.01
         pc_med_habitability = 0.01
         pc_arctic_habitability = 0.01
         pc_alpine_habitability = 0.01
@@ -60,5 +61,6 @@ trait_pc_ai_preference = {
         pc_rogue_habitability = 0.01
         pc_eyeball_habitability = 0.01
         pc_megaflora_habitability = 0.01
+        pc_glacio_habitability = 0.01
     }
 }

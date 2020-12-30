@@ -23,6 +23,7 @@ trait_pc_hadesert_preference = {
         pc_desert_habitability = 0.5
         pc_oasis_habitability = 0.5
         pc_veld_habitability = 0.5
+        pc_semiarid_habitability = 0.5
         pc_antarctic_habitability = 0.5
         pc_highland_habitability = 0.5
         pc_retinal_habitability = 0.4
@@ -56,6 +57,7 @@ trait_pc_hadesert_preference = {
         pc_coral_habitability = 0.8
         pc_megaflora_habitability = 0.2
         pc_rogue_habitability = 0.2
-        pc_eyeball_habitability = 0.3
+        pc_eyeball_habitability = 0.2
+        pc_glacio_habitability = 0.4
     }
 }

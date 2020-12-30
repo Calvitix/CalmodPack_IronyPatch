@@ -18,6 +18,7 @@ trait_pc_mesa_preference = {
         pc_desert_habitability = 0.6
         pc_outback_habitability = 0.6
         pc_veld_habitability = 0.6
+        pc_semiarid_habitability = 0.6
         pc_hadesert_habitability = 0.6
         pc_steppe_habitability = 0.6
         pc_sandsea_habitability = 0.5
@@ -57,5 +58,6 @@ trait_pc_mesa_preference = {
         pc_megaflora_habitability = 0.2
         pc_rogue_habitability = 0.2
         pc_eyeball_habitability = 0.3
+        pc_glacio_habitability = 0.4
     }
 }
