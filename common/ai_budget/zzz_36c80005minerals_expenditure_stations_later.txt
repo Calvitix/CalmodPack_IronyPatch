@@ -1,0 +1,14 @@
+minerals_expenditure_stations_later = {
+    resource = minerals
+    type = expenditure
+    category = stations
+    potential = {
+        years_passed > 12
+    }
+    fraction = {
+        weight = 0.4
+    }
+    static_min = {
+        base = 2000
+    }
+}

@@ -1,0 +1,3 @@
+NGameplay = {
+    ENVOY_HARM_RELATION_BASE = -1.0
+}

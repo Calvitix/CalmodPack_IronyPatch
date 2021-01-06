@@ -1,0 +1,3 @@
+NAI = {
+    MAX_TRUST_NAP = 25
+}

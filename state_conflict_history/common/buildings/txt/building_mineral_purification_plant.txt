@@ -119,7 +119,7 @@ building_mineral_purification_plant = {
     resources = {
         category = planet_buildings
         cost = {
-            minerals = 400
+            minerals = 200
         }
         cost = {
             trigger = {
@@ -127,7 +127,7 @@ building_mineral_purification_plant = {
                     is_robot_empire = yes
                 }
             }
-            minerals = 300
+            minerals = 100
             alloys = 100
         }
         upkeep = {
@@ -199,7 +199,7 @@ building_mineral_purification_plant = {
             }
         }
         modifier = {
-            factor = 20
+            factor = 2
             exists = owner
             owner = {
                 has_monthly_income = {

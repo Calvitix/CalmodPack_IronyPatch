@@ -30,6 +30,7 @@ d_lichen_fields = {
             is_planet_class = pc_frozen_desert
             is_planet_class = pc_glacial
             is_planet_class = pc_antarctic
+            is_planet_class = pc_aeolian
             is_planet_class = pc_karst
             is_planet_class = pc_ash
             is_planet_class_pc_marginal_cold = yes
@@ -41,6 +42,7 @@ d_lichen_fields = {
         modifier = {
             factor = 0.33
             is_planet_class = pc_nuked
+            is_planet_class = pc_irradiated
         }
         modifier = {
             factor = @planet_type_bonus

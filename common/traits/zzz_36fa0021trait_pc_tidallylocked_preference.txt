@@ -46,5 +46,6 @@ trait_pc_tidallylocked_preference = {
         pc_salt_habitability = 0.6
         pc_coral_habitability = 0.6
         pc_megaflora_habitability = 0.4
+        pc_supercon_habitability = 0.8
     }
 }

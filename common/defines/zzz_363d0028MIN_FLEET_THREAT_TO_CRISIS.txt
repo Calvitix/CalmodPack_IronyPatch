@@ -1,0 +1,3 @@
+NAI = {
+    MIN_FLEET_THREAT_TO_CRISIS = 50000
+}

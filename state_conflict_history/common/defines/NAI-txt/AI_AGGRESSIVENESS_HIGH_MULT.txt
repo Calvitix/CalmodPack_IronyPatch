@@ -1,0 +1,3 @@
+NAI = {
+    AI_AGGRESSIVENESS_HIGH_MULT = 3.0
+}

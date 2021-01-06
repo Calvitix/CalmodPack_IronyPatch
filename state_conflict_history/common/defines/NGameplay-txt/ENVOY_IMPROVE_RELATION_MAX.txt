@@ -1,0 +1,3 @@
+NGameplay = {
+    ENVOY_IMPROVE_RELATION_MAX = 75.0
+}

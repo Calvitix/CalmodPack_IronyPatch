@@ -24,6 +24,7 @@ d_crystal_reef = {
             is_planet_class = pc_geothermal
             is_planet_class = pc_superhabitable
             is_planet_class = pc_tidallylocked
+            is_planet_class = pc_supercon
             is_planet_class = pc_floating
             is_planet_class = pc_crystal
             is_planet_class = pc_technoorganic

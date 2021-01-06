@@ -1,0 +1,45 @@
+@high = 16
+@planet_type_bonus = 1.5
+d_arid_highlands = {
+    is_for_colonizeable = yes
+    use_for_min_max_adjustments = yes
+    use_weights_for_terraforming_swap_types = yes
+    should_swap_deposit_on_terraforming = yes
+    terraforming_swap_types = {
+        d_hot_springs
+        d_buzzing_plains
+        d_strong_currents
+        d_stormy_highlands
+        d_stormy_flats
+        d_boiling_lake
+        d_hot_vulcano
+        d_open_space
+        d_low_athmosphere_zone
+        d_underwater_hill
+        d_underwater_mountain
+    }
+    category = deposit_cat_energy
+    planet_modifier = {
+        district_generator_max = 1
+    }
+    potential = {
+        OR = {
+            is_dry = yes
+            is_planet_class = pc_tidallylocked
+            is_planet_class = pc_supercon
+            is_planet_class = pc_graveyard
+            is_planet_class_pc_irradiated_marginal = yes
+            is_planet_class_pc_hothouse = yes
+            is_planet_class_pc_desolate = yes
+            is_planet_class_pc_primordial = yes
+        }
+        has_district_generator = yes
+    }
+    drop_weight = {
+        weight = @high
+        modifier = {
+            factor = @planet_type_bonus
+            is_dry = yes
+        }
+    }
+}

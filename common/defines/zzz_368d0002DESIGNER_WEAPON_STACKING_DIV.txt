@@ -1,0 +1,3 @@
+NShip = {
+    DESIGNER_WEAPON_STACKING_DIV = 0.15
+}

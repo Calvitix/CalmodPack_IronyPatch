@@ -32,6 +32,10 @@ d_betharian_deposit = {
         }
         modifier = {
             factor = 2
+            is_planet_class = pc_supercon
+        }
+        modifier = {
+            factor = 2
             is_planet_class = pc_graveyard
         }
         modifier = {

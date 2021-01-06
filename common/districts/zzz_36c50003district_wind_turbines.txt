@@ -208,7 +208,6 @@ district_wind_turbines = {
             }
         }
         modifier = {
-            job_energy_technician_overseer_add = 1
             planet_housing_add = 1
         }
     }
@@ -222,7 +221,6 @@ district_wind_turbines = {
             }
         }
         modifier = {
-            job_energy_g_technician_overseer_add = 1
             planet_housing_add = 1
         }
     }
@@ -280,42 +278,352 @@ district_wind_turbines = {
         tech_power_plant_1
     }
     ai_weight = {
-        weight = 1.2
+        weight = 13
         modifier = {
-            factor = 18
-            need_energy = yes
-        }
-        modifier = {
-            factor = 1.4
-            low_energy_storage = yes
-        }
-        modifier = {
-            factor = 2
-            bad_energy_economy = yes
-        }
-        modifier = {
-            factor = 5
-            has_unemployed_workers = yes
-        }
-        modifier = {
-            factor = 0
-            AND = {
-                free_jobs > 1
-                has_unemployed_workers = no
+            factor = 0.001
+            free_jobs > 1
+            free_building_slots > 0
+            nand = {
+                any_owned_pop = {
+                    has_job = clerk
+                }
+                free_jobs < 4
             }
         }
         modifier = {
-            factor = 0
-            energy_not_needed = yes
+            factor = 4
+            owner = {
+                is_machine_empire = yes
+            }
         }
         modifier = {
-            factor = 0.1
-            NOT = {
-                OR = {
-                    has_designation = col_generator
-                    has_designation = col_rural
-                    has_designation = col_rural_gestalt
+            factor = 10
+            owner = {
+                is_machine_empire = yes
+                resource_income_compare = {
+                    resource = energy
+                    value < 10
                 }
+            }
+        }
+        modifier = {
+            factor = 20
+            owner = {
+                resource_income_compare = {
+                    resource = energy
+                    value < 20
+                }
+            }
+            years_passed > 3
+        }
+        modifier = {
+            factor = 100
+            any_owned_pop = {
+                is_unemployed = yes
+                is_pop_category = worker
+            }
+            free_jobs < 2
+        }
+        modifier = {
+            factor = 0.05
+            any_owned_pop = {
+                is_unemployed = yes
+                is_pop_category = specialist
+            }
+            free_jobs > 1
+        }
+        modifier = {
+            factor = 10
+            owner = {
+                has_technology = tech_terrestrial_sculpting
+            }
+        }
+        modifier = {
+            factor = 30
+            owner = {
+                has_ascension_perk = ap_world_shaper
+            }
+        }
+        modifier = {
+            factor = 10
+            owner = {
+                has_technology = tech_energy_torpedoes_2
+                used_naval_capacity_percent > 1
+            }
+        }
+        modifier = {
+            factor = 2
+            years_passed > 40
+        }
+        modifier = {
+            factor = 2
+            free_jobs < 3
+        }
+        modifier = {
+            factor = 0.0001
+            nor = {
+                any_owned_pop = {
+                    or = {
+                        has_job = clerk
+                        and = {
+                            is_unemployed = yes
+                            not = {
+                                is_pop_category = specialist
+                            }
+                        }
+                    }
+                }
+                free_jobs < 2
+                and = {
+                    owner = {
+                        is_gestalt = yes
+                    }
+                    or = {
+                        free_amenities > 12
+                        free_jobs < 4
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0.001
+            free_jobs > 3
+            free_district_slots < 3
+            not = {
+                any_owned_pop = {
+                    or = {
+                        has_job = clerk
+                        and = {
+                            is_unemployed = yes
+                            not = {
+                                is_pop_category = specialist
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 5
+            owner = {
+                is_machine_empire = yes
+                resource_income_compare = {
+                    resource = energy
+                    value < 10
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            owner = {
+                is_machine_empire = yes
+                resource_income_compare = {
+                    resource = energy
+                    value < 20
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            str_good_energy = yes
+        }
+        modifier = {
+            factor = 0
+            has_planet_flag = ecumen
+        }
+        modifier = {
+            factor = 0.001
+            free_district_slots = 0
+            free_housing < 2
+        }
+        modifier = {
+            factor = 0.05
+            free_amenities < -5
+            free_building_slots > 0
+        }
+        modifier = {
+            factor = 1.5
+            or = {
+                has_building = building_energy_grid
+                has_building = building_energy_nexus
+            }
+        }
+        modifier = {
+            factor = 5
+            owner = {
+                has_deficit = energy
+            }
+        }
+        modifier = {
+            factor = 3
+            owner = {
+                resource_stockpile_compare = {
+                    resource = energy
+                    value < 50
+                }
+            }
+        }
+        modifier = {
+            factor = 3
+            owner = {
+                resource_stockpile_compare = {
+                    resource = energy
+                    value < 100
+                }
+            }
+        }
+        modifier = {
+            factor = 10
+            owner = {
+                resource_income_compare = {
+                    resource = energy
+                    value < 20
+                }
+                resource_income_compare = {
+                    resource = minerals
+                    value > 50
+                }
+                resource_income_compare = {
+                    resource = food
+                    value > 40
+                }
+            }
+            years_passed > 7
+        }
+        modifier = {
+            factor = 50
+            owner = {
+                resource_income_compare = {
+                    resource = energy
+                    value < 60
+                }
+                resource_income_compare = {
+                    resource = minerals
+                    value > 50
+                }
+                resource_stockpile_compare = {
+                    resource = minerals
+                    value > 3000
+                }
+                resource_income_compare = {
+                    resource = food
+                    value > 40
+                }
+                resource_stockpile_compare = {
+                    resource = food
+                    value > 1000
+                }
+            }
+            years_passed > 20
+        }
+        modifier = {
+            factor = 4
+            owner = {
+                resource_income_compare = {
+                    resource = energy
+                    value < -60
+                }
+            }
+        }
+        modifier = {
+            factor = 3
+            owner = {
+                resource_income_compare = {
+                    resource = energy
+                    value < -50
+                }
+            }
+        }
+        modifier = {
+            factor = 3
+            owner = {
+                resource_income_compare = {
+                    resource = energy
+                    value < -30
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            owner = {
+                resource_income_compare = {
+                    resource = energy
+                    value < -20
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            owner = {
+                resource_income_compare = {
+                    resource = energy
+                    value < -10
+                }
+            }
+        }
+        modifier = {
+            factor = 1.5
+            owner = {
+                resource_income_compare = {
+                    resource = energy
+                    value < -5
+                }
+            }
+        }
+        modifier = {
+            factor = 0.85
+            owner = {
+                resource_income_compare = {
+                    resource = energy
+                    value > 10
+                }
+            }
+        }
+        modifier = {
+            factor = 0.8
+            owner = {
+                resource_income_compare = {
+                    resource = energy
+                    value > 30
+                }
+            }
+        }
+        modifier = {
+            factor = 0.75
+            owner = {
+                resource_income_compare = {
+                    resource = energy
+                    value > 60
+                }
+            }
+        }
+        modifier = {
+            factor = 0.7
+            owner = {
+                resource_income_compare = {
+                    resource = energy
+                    value > 120
+                }
+            }
+        }
+        modifier = {
+            factor = 3
+            not = {
+                owner = {
+                    has_country_flag = acceptable_energy_economy
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            owner = {
+                has_country_flag = fine_energy_economy
+            }
+        }
+        modifier = {
+            factor = 0.25
+            owner = {
+                has_country_flag = good_energy_economy
             }
         }
     }

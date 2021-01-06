@@ -1,0 +1,62 @@
+hangar_bay = {
+    icon = "GFX_starbase_hangar_bay"
+    section = "HANGAR_STARBASE_SECTION"
+    construction_days = 180
+    potential = {
+        exists = owner
+        owner = {
+            has_technology = tech_strike_craft_1
+        }
+        count_starbase_modules = {
+            type = hangar_bay
+            count < 10
+        }
+    }
+    resources = {
+        category = starbase_modules
+        cost = {
+            alloys = 50
+        }
+        upkeep = {
+            trigger = {
+                count_starbase_modules = {
+                    type = hangar_bay
+                    count < 11
+                }
+            }
+            alloys = 0.1
+        }
+        upkeep = {
+            trigger = {
+                count_starbase_modules = {
+                    type = hangar_bay
+                    count > 10
+                }
+            }
+            energy = 1000
+        }
+    }
+    station_modifier = {
+        starbase_trade_protection_range_add = 1
+        starbase_trade_protection_add = 5
+    }
+    ai_build_outside_chokepoint = yes
+    ai_weight = {
+        weight = 15
+        modifier = {
+            factor = 2
+            exists = owner
+            owner = {
+                is_preferred_weapons = weapon_type_strike_craft
+            }
+        }
+        modifier = {
+            factor = 0
+            count_starbase_modules = {
+                type = hangar_bay
+                count >= 4
+            }
+        }
+    }
+    show_in_tech = "tech_strike_craft_1"
+}

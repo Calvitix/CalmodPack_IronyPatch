@@ -6,6 +6,10 @@ district_chemistry_industry = {
         has_chemistry_deposits = yes
     }
     potential = {
+        exists = owner
+        owner = {
+            has_technology = tech_volatile_motes
+        }
         has_chemistry_deposits = yes
     }
     allow = {

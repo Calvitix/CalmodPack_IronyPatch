@@ -1,0 +1,3 @@
+NAI = {
+    HIGH_THREAT_THRESHOLD = 60
+}

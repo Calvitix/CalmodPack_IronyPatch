@@ -28,6 +28,7 @@ d_rugged_woods = {
             is_planet_class = pc_snow
             is_planet_class = pc_superhabitable
             is_planet_class = pc_tidallylocked
+            is_planet_class = pc_supercon
             is_planet_class = pc_crystal
             is_planet_class = pc_technoorganic
             is_planet_class = pc_retinal
@@ -35,6 +36,7 @@ d_rugged_woods = {
             is_planet_class = pc_lake
             is_planet_class = pc_tepid
             is_planet_class = pc_megaflora
+            is_planet_class = pc_megaflorahive
             is_planet_class = pc_megafloratol
             is_planet_class_pc_marginal_warm = yes
         }

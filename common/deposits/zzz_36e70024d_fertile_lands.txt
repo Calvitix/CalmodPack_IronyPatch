@@ -31,6 +31,7 @@ d_fertile_lands = {
             is_planet_class = pc_veld
             is_planet_class = pc_semiarid
             is_planet_class = pc_tidallylocked
+            is_planet_class = pc_supercon
             is_planet_class = pc_floating
             is_planet_class = pc_crystal
             is_planet_class = pc_technoorganic
@@ -44,6 +45,7 @@ d_fertile_lands = {
             is_planet_class = pc_lake
             is_planet_class = pc_tepid
             is_planet_class = pc_megaflora
+            is_planet_class = pc_megaflorahive
             is_planet_class = pc_megafloratol
             is_planet_class_pc_marginal_warm = yes
         }

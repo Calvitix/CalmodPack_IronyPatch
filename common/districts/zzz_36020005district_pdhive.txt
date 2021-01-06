@@ -3,23 +3,18 @@ district_pdhive = {
     base_buildtime = 480
     is_capped_by_modifier = no
     show_on_uncolonized = {
-        from = {
-            is_hive_empire = yes
-        }
         OR = {
             uses_district_set = pdbioforge
-            uses_district_set = pdmachinefactory
             uses_district_set = pdfloraforge
         }
     }
     potential = {
-        exists = owner
         owner = {
+            exists = owner
             is_hive_empire = yes
         }
         OR = {
             uses_district_set = pdbioforge
-            uses_district_set = pdmachinefactory
             uses_district_set = pdfloraforge
         }
     }

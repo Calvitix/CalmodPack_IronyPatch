@@ -69,13 +69,13 @@ district_hab_external_habitat = {
         text = job_maintenance_drone_effect_desc
     }
     ai_weight = {
-        weight = 2
+        weight = 5
         modifier = {
             factor = 25
             need_housing = yes
         }
         modifier = {
-            factor = 0
+            factor = 0.1
             free_housing > 2
         }
     }

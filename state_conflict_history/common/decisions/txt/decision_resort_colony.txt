@@ -27,6 +27,7 @@ decision_resort_colony = {
             is_regular_empire = yes
         }
         habitable_structure = no
+        has_upgraded_capital = no
         NOT = {
             owner = {
                 any_owned_planet = {

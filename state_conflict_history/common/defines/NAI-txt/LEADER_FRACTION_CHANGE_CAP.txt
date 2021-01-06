@@ -1,0 +1,3 @@
+NAI = {
+    LEADER_FRACTION_CHANGE_CAP = 11
+}

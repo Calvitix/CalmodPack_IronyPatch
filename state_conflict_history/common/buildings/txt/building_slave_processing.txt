@@ -51,12 +51,18 @@ building_slave_processing = {
         "tech_neural_implants"
     }
     ai_weight = {
-        weight = 1
+        weight = 5
         modifier = {
-            factor = 10
-            any_owned_pop = {
-                is_enslaved = yes
+            factor = 0
+            NOT = {
+                any_owned_pop = {
+                    is_enslaved = yes
+                }
             }
+        }
+        modifier = {
+            factor = 0
+            unsupervised_destruction = yes
         }
     }
 }

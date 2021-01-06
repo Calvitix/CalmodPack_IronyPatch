@@ -44,18 +44,28 @@ district_hab_housing = {
         text = job_maintenance_drone_effect_desc
     }
     ai_weight = {
-        weight = 1
+        weight = 0.5
         modifier = {
-            factor = 25
-            need_housing = yes
+            factor = 250
+            planet = {
+                num_districts = {
+                    type = district_hab_housing
+                    value < 1
+                }
+            }
         }
         modifier = {
-            factor = 0
-            free_housing > 2
-        }
-        modifier = {
-            factor = 0
-            has_ascension_perk = ap_do_external_habitats
+            factor = 250
+            planet = {
+                owner = {
+                    is_regular_empire = yes
+                    has_ascension_perk = ap_master_builders
+                }
+                num_districts = {
+                    type = district_hab_housing
+                    value < 2
+                }
+            }
         }
     }
     ai_resource_production = {

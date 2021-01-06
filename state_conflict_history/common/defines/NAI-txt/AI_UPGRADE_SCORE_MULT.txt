@@ -1,0 +1,3 @@
+NAI = {
+    AI_UPGRADE_SCORE_MULT = 80
+}

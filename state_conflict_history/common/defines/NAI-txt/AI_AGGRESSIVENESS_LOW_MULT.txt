@@ -1,0 +1,3 @@
+NAI = {
+    AI_AGGRESSIVENESS_LOW_MULT = 0.8
+}

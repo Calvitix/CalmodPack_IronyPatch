@@ -322,16 +322,16 @@ planet_jobs = {
             is_robot_pop = yes
         }
     }
-    triggered_produces_modifier = {
-        key = hfe_planet_jobs_psionic
-        modifier_types = {
-            mult
-            add
-        }
-        trigger = {
-            hfe_trigger_is_psionic = yes
-        }
-    }
+    # triggered_produces_modifier = {
+        # key = hfe_planet_jobs_psionic
+        # modifier_types = {
+            # mult
+            # add
+        # }
+        # trigger = {
+            # hfe_trigger_is_psionic = yes
+        # }
+    # }
     triggered_produces_modifier = {
         key = hfe_planet_jobs_war
         modifier_types = {

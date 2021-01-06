@@ -6,6 +6,10 @@ district_gas_refinery = {
         has_gas_deposits = yes
     }
     potential = {
+        exists = owner
+        owner = {
+            has_technology = tech_exotic_gases
+        }
         has_gas_deposits = yes
     }
     allow = {

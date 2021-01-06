@@ -52,6 +52,7 @@ d_mineral_fields = {
             is_planet_class = pc_acid
             is_planet_class = pc_methane
             is_planet_class = pc_antarctic
+            is_planet_class = pc_aeolian
             is_planet_class = pc_geothermal
             is_planet_class = pc_ash
             is_planet_class_pc_hothouse = yes

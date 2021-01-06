@@ -6,6 +6,10 @@ district_crystal_mines = {
         has_crystal_deposits = yes
     }
     potential = {
+        exists = owner
+        owner = {
+            has_technology = tech_rare_crystals
+        }
         has_crystal_deposits = yes
     }
     allow = {

@@ -25,7 +25,7 @@ col_generator = {
     }
     planet_modifier = {
         planet_district_generator_build_speed_mult = 0.25
-        planet_district_generator_uncapped_speed_mult = 0.25
+        #planet_district_generator_uncapped_speed_mult = 0.25
         planet_district_solar_generator_build_speed_mult = 0.25
         planet_district_wind_turbines_build_speed_mult = 0.25
         planet_district_geothermal_generator_build_speed_mult = 0.25

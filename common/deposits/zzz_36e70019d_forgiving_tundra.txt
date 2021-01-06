@@ -26,6 +26,7 @@ d_forgiving_tundra = {
         OR = {
             is_planet_class = pc_alpine
             is_planet_class = pc_highland
+            is_planet_class = pc_duneforest
             is_planet_class = pc_tundra
             is_planet_class = pc_rogue
             is_planet_class = pc_eyeball

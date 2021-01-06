@@ -29,6 +29,17 @@ building_energy_nexus = {
         potential = {
             exists = owner
             owner = {
+                is_fallen_empire_spiritualist = yes
+            }
+        }
+        modifier = {
+            job_fe_acolyte_generator_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
                 is_gestalt = yes
             }
         }
@@ -109,9 +120,19 @@ building_energy_nexus = {
             exists = owner
             owner = {
                 is_gestalt = no
+                is_fallen_empire_spiritualist = no
             }
         }
         text = job_technician_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_fallen_empire_spiritualist = yes
+            }
+        }
+        text = job_fe_acolyte_generator_effect_desc
     }
     upgrades = {
         building_eludium_plant
@@ -119,11 +140,86 @@ building_energy_nexus = {
     ai_weight = {
         weight = 1
         modifier = {
+            factor = 1.3
+            str_good_energy = yes
+        }
+        modifier = {
+            factor = 2
+            not = {
+                owner = {
+                    has_country_flag = acceptable_raw_economy
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            not = {
+                owner = {
+                    has_country_flag = fine_raw_economy
+                }
+            }
+        }
+        modifier = {
+            factor = 0.1
+            NOR = {
+                num_districts = {
+                    type = district_generator
+                    value > 4
+                }
+                num_districts = {
+                    type = district_generator_uncapped
+                    value > 4
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            OR = {
+                num_districts = {
+                    type = district_generator
+                    value > 10
+                }
+                num_districts = {
+                    type = district_generator_uncapped
+                    value > 10
+                }
+            }
+        }
+        modifier = {
+            factor = 0.01
+            or = {
+                years_passed < 12
+                not = {
+                    owner = {
+                        has_country_flag = good_raw_economy
+                    }
+                }
+                NOR = {
+                    num_districts = {
+                        type = district_generator
+                        value > 10
+                    }
+                    num_districts = {
+                        type = district_generator_uncapped
+                        value > 10
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0.05
+            or = {
+                owner = {
+                    excess_gases = no
+                }
+            }
+        }
+        modifier = {
             weight = 30
             buildings_has_exotic_gases = yes
         }
         modifier = {
-            factor = 2
+            factor = 20
             exists = owner
             owner = {
                 has_monthly_income = {
@@ -134,7 +230,7 @@ building_energy_nexus = {
         }
     }
     ai_resource_production = {
-        energy = 1
+        energy = 3
         trigger = {
             always = yes
         }

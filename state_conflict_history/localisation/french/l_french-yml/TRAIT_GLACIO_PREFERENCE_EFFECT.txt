@@ -1,0 +1,2 @@
+l_french:
+ TRAIT_GLACIO_PREFERENCE_EFFECT:1000 "Glaciovolcanic Habitability:$pd80$\nAlpine Habitability:$pd80$\nBoreal Habitability:$pd80$\nSnow Habitability:$pd80$\nHighland Habitability:$pd80$\n$COLD_PREFERENCE_EFFECT$"

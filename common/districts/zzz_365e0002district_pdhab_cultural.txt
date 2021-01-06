@@ -102,16 +102,6 @@ district_pdhab_cultural = {
         }
         text = job_culture_worker_effect_desc
     }
-    triggered_desc = {
-        trigger = {
-            exists = owner
-            owner = {
-                is_machine_empire = yes
-                has_valid_civic = civic_machine_servitor
-            }
-        }
-        text = job_bio_trophy_effect_desc
-    }
     ai_weight = {
         weight = 0
         modifier = {

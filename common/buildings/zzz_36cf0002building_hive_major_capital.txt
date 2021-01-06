@@ -15,6 +15,17 @@ building_hive_major_capital = {
             }
             is_fallen_empire = no
         }
+        OR = {
+            owner = {
+                is_ai = no
+            }
+            owner = {
+                has_resource = {
+                    type = minerals
+                    amount > @b2_time
+                }
+            }
+        }
     }
     convert_to = {
         building_machine_major_capital
