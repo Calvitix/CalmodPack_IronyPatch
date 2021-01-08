@@ -138,13 +138,13 @@ building_mineral_purification_hub = {
         text = job_fe_acolyte_mine_effect_desc
     }
     ai_weight = {
-        weight = 1
+        weight = 0
         modifier = {
             weight = 30
             buildings_has_motes = yes
         }
         modifier = {
-            factor = 20
+            factor = 2
             exists = owner
             owner = {
                 has_monthly_income = {
@@ -158,6 +158,16 @@ building_mineral_purification_hub = {
         minerals = 3
         trigger = {
             always = yes
+        }
+    }
+    on_built = {
+        planet = {
+            owner = {
+                set_timed_country_flag = {
+                    flag = buildings_new_mote_building
+                    days = 480
+                }
+            }
         }
     }
 }

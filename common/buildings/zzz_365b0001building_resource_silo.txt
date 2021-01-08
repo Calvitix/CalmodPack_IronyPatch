@@ -90,7 +90,7 @@ building_resource_silo = {
         text = job_clerk_effect_desc
     }
     ai_weight = {
-        weight = 1
+        weight = 0.5
         modifier = {
             weight = 5
             exists = owner
@@ -108,7 +108,7 @@ building_resource_silo = {
             is_active_resolution = "resolution_greatergood_universal_prosperity_mandate"
         }
         modifier = {
-            factor = 10
+            weight = 90000
             owner = {
                 has_ascension_perk = ap_arcology_project
                 NOT = {

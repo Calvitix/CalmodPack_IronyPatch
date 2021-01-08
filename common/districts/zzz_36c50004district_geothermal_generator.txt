@@ -1,7 +1,7 @@
 district_geothermal_generator = {
     base_buildtime = 240
     min_for_deposits_on_planet = 4
-    max_for_deposits_on_planet = 12
+    max_for_deposits_on_planet = 18
     show_on_uncolonized = {
         has_district_geothermal_generator = yes
         has_geothermal_deposits = yes

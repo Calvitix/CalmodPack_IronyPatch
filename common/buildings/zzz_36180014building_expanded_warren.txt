@@ -64,8 +64,24 @@ building_expanded_warren = {
     ai_weight = {
         weight = 0.5
         modifier = {
-            weight = 1
-            buildings_has_crystals = yes
+            weight = 1.5
+            OR = {
+                buildings_has_crystals = yes
+                num_buildings = {
+                    type = building_hive_warren
+                    value > 1
+                }
+            }
+        }
+        modifier = {
+            factor = 10
+            is_planet_class = pc_habitat
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_country_flag = buildings_new_crystal_building
+            }
         }
         modifier = {
             factor = 0

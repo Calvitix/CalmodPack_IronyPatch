@@ -1,7 +1,7 @@
 district_solar_generator = {
     base_buildtime = 240
     min_for_deposits_on_planet = 5
-    max_for_deposits_on_planet = 15
+    max_for_deposits_on_planet = 20
     show_on_uncolonized = {
         has_district_solar_generator = yes
         has_solar_deposits = yes

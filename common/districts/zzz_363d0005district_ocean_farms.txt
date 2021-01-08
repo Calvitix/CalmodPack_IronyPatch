@@ -1,7 +1,7 @@
 district_ocean_farms = {
     base_buildtime = 240
     min_for_deposits_on_planet = 2
-    max_for_deposits_on_planet = 8
+    max_for_deposits_on_planet = 10
     show_on_uncolonized = {
         has_district_ocean_farms = yes
         has_ocean_farming_deposits = yes
@@ -552,6 +552,10 @@ district_ocean_farms = {
                     has_civic = civic_machine_assimilator
                 }
             }
+        }
+        modifier = {
+            factor = 0
+            free_jobs > 15
         }
     }
     ai_resource_production = {

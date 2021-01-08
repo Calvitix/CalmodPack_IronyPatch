@@ -51,7 +51,7 @@ building_slave_processing = {
         "tech_neural_implants"
     }
     ai_weight = {
-        weight = 5
+        weight = 200
         modifier = {
             factor = 0
             NOT = {

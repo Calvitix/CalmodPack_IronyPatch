@@ -284,6 +284,14 @@ building_crystal_plant = {
             always = yes
         }
     }
+    on_built = {
+        owner = {
+            set_timed_country_flag = {
+                flag = buildings_new_crystal_plant
+                days = 480
+            }
+        }
+    }
     on_queued = {
         IF = {
             limit = {

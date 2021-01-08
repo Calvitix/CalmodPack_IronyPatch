@@ -32,5 +32,14 @@ building_planetary_shield_generator = {
     }
     ai_weight = {
         weight = 0
+        modifier = {
+            weight = 1
+            exists = owner
+            owner = {
+                is_at_war = yes
+            }
+            num_pops > 25
+            free_amenities < 10
+        }
     }
 }

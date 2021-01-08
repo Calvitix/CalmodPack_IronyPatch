@@ -50,7 +50,7 @@ district_robot_assembly = {
         modifier = {
             factor = 0
             AND = {
-                free_jobs > 2
+                free_jobs > 10
                 NOT = {
                     any_owned_pop = {
                         is_unemployed = yes

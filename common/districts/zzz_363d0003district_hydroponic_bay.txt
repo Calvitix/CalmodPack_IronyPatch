@@ -552,6 +552,10 @@ district_hydroponic_bay = {
                 }
             }
         }
+        modifier = {
+            factor = 0
+            free_jobs > 15
+        }
     }
     ai_resource_production = {
         food = 1.2

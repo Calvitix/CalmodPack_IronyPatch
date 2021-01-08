@@ -4,7 +4,7 @@
 district_farming = {
     base_buildtime = 240
     min_for_deposits_on_planet = 6
-    max_for_deposits_on_planet = 20
+    max_for_deposits_on_planet = 30
     show_on_uncolonized = {
         has_district_farming = yes
         OR = {
@@ -550,6 +550,10 @@ district_farming = {
                     has_civic = civic_machine_assimilator
                 }
             }
+        }
+        modifier = {
+            factor = 0
+            free_jobs > 15
         }
     }
     ai_resource_production = {

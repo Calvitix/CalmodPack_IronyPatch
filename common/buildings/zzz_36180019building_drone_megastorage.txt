@@ -61,8 +61,18 @@ building_drone_megastorage = {
     ai_weight = {
         weight = 0.5
         modifier = {
-            weight = 1
-            buildings_has_crystals = yes
+            weight = 1.5
+            OR = {
+                buildings_has_crystals = yes
+                num_buildings = {
+                    type = building_drone_storage
+                    value > 1
+                }
+            }
+        }
+        modifier = {
+            factor = 10
+            is_planet_class = pc_habitat
         }
         modifier = {
             factor = 0

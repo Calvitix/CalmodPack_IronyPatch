@@ -4,7 +4,7 @@
 district_secure_mining = {
     base_buildtime = 240
     min_for_deposits_on_planet = 3
-    max_for_deposits_on_planet = 15
+    max_for_deposits_on_planet = 20
     show_on_uncolonized = {
         has_district_secure_mining = yes
         has_secure_mining_deposits = yes

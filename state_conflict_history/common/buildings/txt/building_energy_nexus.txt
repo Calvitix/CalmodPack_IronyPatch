@@ -235,4 +235,14 @@ building_energy_nexus = {
             always = yes
         }
     }
+    on_built = {
+        planet = {
+            owner = {
+                set_timed_country_flag = {
+                    flag = buildings_new_gas_building
+                    days = 480
+                }
+            }
+        }
+    }
 }

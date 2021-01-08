@@ -1,7 +1,7 @@
 district_wind_turbines = {
     base_buildtime = 240
     min_for_deposits_on_planet = 5
-    max_for_deposits_on_planet = 10
+    max_for_deposits_on_planet = 15
     show_on_uncolonized = {
         has_district_wind_turbines = yes
         has_wind_deposits = yes

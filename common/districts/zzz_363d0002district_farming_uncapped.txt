@@ -552,6 +552,10 @@ district_farming_uncapped = {
                 needs_food_at_all = no
             }
         }
+        modifier = {
+            factor = 0
+            free_jobs > 15
+        }
     }
     ai_resource_production = {
         food = 2

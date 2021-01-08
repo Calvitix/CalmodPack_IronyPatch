@@ -30,9 +30,6 @@ building_drone_storage = {
             }
         }
     }
-    allow = {
-        buildings_simple_allow = yes
-    }
     convert_to = {
         building_luxury_residence
         building_communal_housing
@@ -73,7 +70,15 @@ building_drone_storage = {
             free_district_slots = 0
         }
         modifier = {
-            weight = 100
+            weight = 7000
+            free_housing < 1
+            free_district_slots = 0
+            NOT = {
+                is_planet_class = pc_habitat
+            }
+        }
+        modifier = {
+            weight = 7000
             is_planet_class = pc_habitat
             free_housing < 4
             OR = {

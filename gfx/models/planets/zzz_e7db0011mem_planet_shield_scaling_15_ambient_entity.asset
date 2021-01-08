@@ -1,0 +1,5 @@
+entity = {
+    name = "mem_planet_shield_scaling_15_ambient_entity"
+    pdxmesh = "mem_malthus_planet_shield_ambient_mesh"
+    scale = 6.2
+}

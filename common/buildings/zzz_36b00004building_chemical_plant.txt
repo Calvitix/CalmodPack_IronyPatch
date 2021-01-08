@@ -273,6 +273,9 @@ building_chemical_plant = {
                     resource = consumer_goods
                     value > 5
                 }
+                NOT = {
+                    has_country_flag = buildings_new_mote_plant
+                }
             }
         }
     }
@@ -300,6 +303,14 @@ building_chemical_plant = {
         volatile_motes = 1
         trigger = {
             always = yes
+        }
+    }
+    on_built = {
+        owner = {
+            set_timed_country_flag = {
+                flag = buildings_new_mote_plant
+                days = 480
+            }
         }
     }
     on_queued = {

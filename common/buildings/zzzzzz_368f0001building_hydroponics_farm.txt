@@ -165,7 +165,7 @@ building_hydroponics_farm = {
         "eb_hydrofarm2"
     }
     ai_weight = {
-        weight = 1
+        weight = 0.5
         modifier = {
             weight = 10
             NOR = {
@@ -247,7 +247,7 @@ building_hydroponics_farm = {
         }
     }
     ai_resource_production = {
-        food = 2
+        food = 1
         trigger = {
             always = yes
         }

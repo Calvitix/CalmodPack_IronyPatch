@@ -508,6 +508,10 @@ district_nature_farms = {
                 }
             }
         }
+        modifier = {
+            factor = 0
+            free_jobs > 15
+        }
     }
     ai_resource_production = {
         food = 2.8

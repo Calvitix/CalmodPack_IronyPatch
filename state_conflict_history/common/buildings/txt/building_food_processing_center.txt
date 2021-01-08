@@ -31,7 +31,30 @@ building_food_processing_center = {
                 type = district_farming_uncapped
                 value < 6
             }
+            or = {
+                and = {
+                    num_districts = {
+                        type = district_farming
+                        value < 1
+                    }
+                    num_districts = {
+                        type = district_farming_uncapped
+                        value < 1
+                    }
+                }
+                and = {
+                    free_jobs > 3
+                    exists = owner
+                    owner = {
+                        has_monthly_income = {
+                            resource = food
+                            value > 400
+                        }
+                    }
+                }
+            }
         }
+        buildings_no_motes = yes
     }
     triggered_planet_modifier = {
         potential = {

@@ -1,0 +1,13 @@
+entity = {
+    name = "mem_planet_shield_orila_scaling_15_ambient_entity"
+    pdxmesh = "mem_malthus_planet_shield_orila_ambient_mesh"
+    game_data = {
+        uv_animation_speed = 1.0
+        uv_animation_direction = {
+            0.0
+            0.0
+        }
+        bloom_factor = 0.7
+    }
+    scale = 2.6
+}

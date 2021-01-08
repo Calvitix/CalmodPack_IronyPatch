@@ -79,7 +79,15 @@ building_hive_warren = {
             free_district_slots = 0
         }
         modifier = {
-            weight = 100
+            weight = 7000
+            free_housing < 1
+            free_district_slots = 0
+            NOT = {
+                is_planet_class = pc_habitat
+            }
+        }
+        modifier = {
+            weight = 7000
             is_planet_class = pc_habitat
             free_housing < 4
             OR = {

@@ -40,11 +40,13 @@ anchorage = {
         }
         modifier = {
             factor = 200
+            owner = {
             resource_stockpile_compare = {
                 resource = alloys
                 value > 1000
             }
             used_naval_capacity_percent > 1.2
+            }
         }
     }
 }

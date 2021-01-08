@@ -85,10 +85,12 @@ shipyard = {
         }
         modifier = {
             factor = 0
+            owner = {
             count_owned_starbase = {
                 count > 4
                 limit = {
                     has_starbase_module = shipyard
+                    }
                 }
             }
         }
