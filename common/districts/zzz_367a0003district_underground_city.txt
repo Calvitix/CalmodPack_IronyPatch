@@ -147,6 +147,39 @@ district_underground_city = {
             factor = 10000
             has_planet_flag = build_city_here
         }
+        modifier = {
+            factor = 100
+            free_housing < -10
+        }
+        modifier = {
+            factor = 50
+            free_housing < -5
+        }
+        modifier = {
+            factor = 20
+            free_housing < 1
+        }
+        modifier = {
+            factor = 0.1
+            free_housing > 5
+            NOT = {
+                has_planet_flag = ecumen
+            }
+        }
+        modifier = {
+            factor = 0.01
+            free_housing > 15
+            NOT = {
+                has_planet_flag = ecumen
+            }
+        }
+        modifier = {
+            factor = 0.001
+            free_housing > 25
+            NOT = {
+                has_planet_flag = ecumen
+            }
+        }
     }
     ai_resource_production = {
         minerals = 1

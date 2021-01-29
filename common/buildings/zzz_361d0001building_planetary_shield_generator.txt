@@ -2,7 +2,6 @@ building_planetary_shield_generator = {
     base_buildtime = 600
     base_cap_amount = 1
     add_to_first_building_slot = yes
-    can_build = no
     category = army
     allow = {
         has_upgraded_capital = yes
@@ -29,11 +28,12 @@ building_planetary_shield_generator = {
         }
     }
     prerequisites = {
+        "tech_planetary_shield_generator"
     }
     ai_weight = {
         weight = 0
         modifier = {
-            weight = 1
+            weight = 2
             exists = owner
             owner = {
                 is_at_war = yes

@@ -485,7 +485,7 @@ district_mining = {
         tech_mechanized_mining
     }
     ai_weight = {
-        weight = 14
+        weight = 1
         modifier = {
             factor = 100
             any_owned_pop = {

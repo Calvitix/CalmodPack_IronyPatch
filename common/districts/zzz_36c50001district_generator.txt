@@ -279,7 +279,7 @@ district_generator = {
         tech_power_plant_1
     }
     ai_weight = {
-        weight = 13
+        weight = 1
         modifier = {
             factor = 0.001
             free_jobs > 1
@@ -403,6 +403,10 @@ district_generator = {
                     }
                 }
             }
+        }
+        modifier = {
+            factor = 0.001
+            free_jobs > 15
         }
         modifier = {
             factor = 5

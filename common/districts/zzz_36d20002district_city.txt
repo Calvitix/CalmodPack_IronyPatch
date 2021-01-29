@@ -270,7 +270,7 @@ district_city = {
         text = job_clerk_effect_desc
     }
     ai_weight = {
-        weight = 0.5
+        weight = 0.9
         modifier = {
             factor = 0.001
             num_pops < 8
@@ -293,6 +293,20 @@ district_city = {
         modifier = {
             factor = 0.1
             free_housing > 5
+            NOT = {
+                has_planet_flag = ecumen
+            }
+        }
+        modifier = {
+            factor = 0.01
+            free_housing > 15
+            NOT = {
+                has_planet_flag = ecumen
+            }
+        }
+        modifier = {
+            factor = 0.001
+            free_housing > 25
             NOT = {
                 has_planet_flag = ecumen
             }

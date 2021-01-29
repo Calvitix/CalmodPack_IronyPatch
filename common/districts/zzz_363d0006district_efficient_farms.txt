@@ -342,7 +342,7 @@ district_efficient_farms = {
         tech_industrial_farming
     }
     ai_weight = {
-        weight = 14
+        weight = 1
         modifier = {
             factor = 100
             any_owned_pop = {
@@ -381,6 +381,15 @@ district_efficient_farms = {
                 resource_income_compare = {
                     resource = food
                     value > 20
+                }
+            }
+        }
+        modifier = {
+            factor = 0.01
+            owner = {
+                resource_income_compare = {
+                    resource = food
+                    value > 100
                 }
             }
         }

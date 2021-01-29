@@ -529,7 +529,7 @@ district_farming_uncapped = {
             }
         }
         modifier = {
-            factor = 0.75
+            factor = 0.075
             owner = {
                 resource_income_compare = {
                     resource = food
@@ -538,7 +538,7 @@ district_farming_uncapped = {
             }
         }
         modifier = {
-            factor = 0.5
+            factor = 0.05
             owner = {
                 resource_income_compare = {
                     resource = food

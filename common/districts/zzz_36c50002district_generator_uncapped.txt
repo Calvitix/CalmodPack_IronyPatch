@@ -319,6 +319,10 @@ district_generator_uncapped = {
             }
         }
         modifier = {
+            factor = 0.001
+            free_jobs > 15
+        }
+        modifier = {
             factor = 5
             owner = {
                 is_machine_empire = yes
