@@ -81,7 +81,26 @@ building_refinery = {
         text = job_gas_refiner_drone_effect_desc
     }
     ai_weight = {
-        weight = 0.5
+        weight = 0
+        modifier = {
+            weight = 50
+            owner = {
+                has_monthly_income = {
+                    resource = exotic_gases
+                    value < 5
+                }
+            }
+            buildings_build_building = yes
+        }
+        modifier = {
+            weight = 200
+            owner = {
+                has_monthly_income = {
+                    resource = exotic_gases
+                    value < 1
+                }
+            }
+        }
         modifier = {
             factor = 3
             has_designation = col_refinery

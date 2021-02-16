@@ -1,0 +1,54 @@
+decision_planet_food_boost = {
+    owned_planets_only = yes
+    sound = event_administrative_work
+    icon = decision_resources
+    resources = {
+        category = decisions
+        cost = {
+            food = 1000
+        }
+    }
+    potential = {
+        owner = {
+            is_regular_empire = yes
+            is_lithoid_empire = no
+        }
+        NOR = {
+            has_modifier = planet_growth_discouraged
+            has_modifier = planet_population_control
+        }
+        always = no
+    }
+    allow = {
+        NOT = {
+            has_modifier = planet_food_boost
+        }
+    }
+    effect = {
+        add_modifier = {
+            modifier = "planet_food_boost"
+            days = 3600
+        }
+    }
+    ai_weight = {
+        weight = 5
+        modifier = {
+            factor = 0
+            owner = {
+                resource_stockpile_compare = {
+                    resource = food
+                    value < 1800
+                }
+            }
+        }
+        modifier = {
+            factor = 400
+            owner = {
+                has_resource = {
+                    type = food
+                    amount > 2000
+                }
+            }
+        }
+    }
+}

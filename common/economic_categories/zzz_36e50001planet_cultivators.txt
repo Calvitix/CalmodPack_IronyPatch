@@ -1,0 +1,8 @@
+planet_cultivators = {
+    icon = job_ehof_cultivator
+    parent = planet_jobs
+    generate_mult_modifiers = {
+        produces
+        upkeep
+    }
+}

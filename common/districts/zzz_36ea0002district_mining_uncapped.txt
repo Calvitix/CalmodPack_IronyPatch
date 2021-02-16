@@ -748,7 +748,7 @@ district_mining_uncapped = {
         }
     }
     ai_resource_production = {
-        minerals = 2
+        minerals = 1
         trigger = {
             OR = {
                 low_mineral_income = yes

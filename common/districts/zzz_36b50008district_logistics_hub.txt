@@ -127,7 +127,7 @@ district_logistics_hub = {
         text = job_calculator_effect_desc
     }
     ai_weight = {
-        weight = 1
+        weight = 10
         modifier = {
             factor = 10
             has_many_workers = yes
@@ -144,7 +144,7 @@ district_logistics_hub = {
         modifier = {
             factor = 0
             AND = {
-                free_jobs > 1
+                free_jobs > 10
                 has_unemployed_workers = no
                 has_unemployed_specialists = no
             }

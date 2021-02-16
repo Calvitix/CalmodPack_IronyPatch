@@ -363,6 +363,18 @@ planet_event = {
                 pc_ecocity = {
                     change_pc = pc_ecocity
                 }
+                pc_milarc = {
+                    change_pc = pc_milarc
+                }
+                pc_pdbiofort = {
+                    change_pc = pc_pdbiofort
+                }
+                pc_megaflorafort = {
+                    change_pc = pc_megaflorafort
+                }
+                pc_machine_fort = {
+                    change_pc = pc_machine_fort
+                }
                 pc_prairie = {
                     change_pc = pc_prairie
                 }

@@ -117,6 +117,15 @@ building_robot_assembly_plant = {
         weight = 50000
         modifier = {
             factor = 0
+            has_planet_flag = ecumen
+            owner = {
+                not = {
+                    has_technology = tech_droid_workers
+                }
+            }
+        }
+        modifier = {
+            factor = 0
             OR = {
                 is_planet_class = pc_habitat
                 is_planet_class = pc_pd_barren_cold_hab
@@ -137,6 +146,28 @@ building_robot_assembly_plant = {
                         value < 5
                     }
                 }
+            }
+        }
+        modifier = {
+            factor = 0.0001
+            num_pops > 70
+        }
+        modifier = {
+            factor = 0.0001
+            count_pops = {
+                limit = {
+                    is_unemployed = yes
+                }
+                count > 3
+            }
+        }
+        modifier = {
+            factor = 0
+            count_pops = {
+                limit = {
+                    is_unemployed = yes
+                }
+                count > 10
             }
         }
     }

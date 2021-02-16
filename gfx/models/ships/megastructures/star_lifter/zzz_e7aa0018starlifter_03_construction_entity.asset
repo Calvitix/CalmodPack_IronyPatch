@@ -1,0 +1,21 @@
+entity = {
+    name = "starlifter_03_construction_entity"
+    scale = 3.6
+    cull_radius = 1000
+    locator = {
+        name = "loc105"
+        position = {
+            0
+            0
+            0
+        }
+        rotation = {
+            0
+            0
+            0
+        }
+    }
+    attach = {
+        "loc105" = "starlifter_compressors_entity"
+    }
+}

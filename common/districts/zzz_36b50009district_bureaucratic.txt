@@ -85,7 +85,7 @@ district_bureaucratic = {
         text = job_synapse_drone_effect_desc
     }
     ai_weight = {
-        weight = 10
+        weight = 20
         modifier = {
             factor = 2
             owner = {
@@ -105,7 +105,7 @@ district_bureaucratic = {
             }
         }
         modifier = {
-            factor = 2
+            factor = 20
             owner = {
                 empire_sprawl_over_cap > 40
             }

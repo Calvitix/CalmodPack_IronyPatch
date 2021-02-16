@@ -1,3 +1,0 @@
-NAI = {
-    STARBASE_COLONY_SCORE = 45
-}

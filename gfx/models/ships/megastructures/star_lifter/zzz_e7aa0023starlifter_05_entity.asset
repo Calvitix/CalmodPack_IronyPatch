@@ -1,0 +1,259 @@
+entity = {
+    name = "starlifter_05_entity"
+    scale = 3.6
+    cull_radius = 1000
+    locator = {
+        name = "vertring"
+        position = {
+            0
+            0
+            0
+        }
+        rotation = {
+            0
+            0
+            90
+        }
+    }
+    locator = {
+        name = "loc105"
+        position = {
+            0
+            0
+            0
+        }
+        rotation = {
+            0
+            0
+            0
+        }
+    }
+    locator = {
+        name = "loc106"
+        position = {
+            0
+            0
+            0
+        }
+        rotation = {
+            0
+            0
+            0
+        }
+    }
+    locator = {
+        name = "loc107"
+        position = {
+            0
+            0
+            0
+        }
+        rotation = {
+            0
+            45
+            0
+        }
+    }
+    locator = {
+        name = "loc108"
+        position = {
+            0
+            0
+            0
+        }
+        rotation = {
+            0
+            -45
+            0
+        }
+    }
+    locator = {
+        name = "loc109"
+        position = {
+            0
+            0
+            0
+        }
+        rotation = {
+            90
+            90
+            0
+        }
+    }
+    locator = {
+        name = "cloud"
+        position = {
+            10
+            0
+            0
+        }
+        rotation = {
+            0
+            0
+            0
+        }
+    }
+    locator = {
+        name = "2stations"
+        position = {
+            0
+            0
+            0
+        }
+        rotation = {
+            0
+            0
+            90
+        }
+    }
+    locator = {
+        name = "shield"
+        position = {
+            0
+            0
+            0
+        }
+    }
+    locator = {
+        name = "hflux"
+        position = {
+            0
+            0
+            0
+        }
+        rotation = {
+            0
+            0
+            90
+        }
+    }
+    locator = {
+        name = "45flux1"
+        position = {
+            0
+            0
+            0
+        }
+        rotation = {
+            0
+            45
+            0
+        }
+    }
+    locator = {
+        name = "45flux2"
+        position = {
+            0
+            0
+            0
+        }
+        rotation = {
+            0
+            -45
+            0
+        }
+    }
+    locator = {
+        name = "drain1"
+        position = {
+            160
+            0
+            0
+        }
+        rotation = {
+            90
+            0
+            0
+        }
+    }
+    locator = {
+        name = "drain2"
+        position = {
+            -160
+            0
+            0
+        }
+        rotation = {
+            -90
+            0
+            0
+        }
+    }
+    locator = {
+        name = "drain5"
+        position = {
+            0
+            160
+            0
+        }
+        rotation = {
+            0
+            -90
+            0
+        }
+    }
+    locator = {
+        name = "drain6"
+        position = {
+            0
+            -160
+            0
+        }
+        rotation = {
+            0
+            90
+            0
+        }
+    }
+    attach = {
+        "vertring" = "starlifter_polartechring_entity"
+    }
+    attach = {
+        "loc105" = "starlifter_compressors_entity"
+    }
+    attach = {
+        "loc106" = "starlifter_energytwo_entity"
+    }
+    attach = {
+        "loc107" = "starlifter_accelerator_ring_entity"
+    }
+    attach = {
+        "loc108" = "starlifter_accelerator_ring_entity"
+    }
+    attach = {
+        "loc109" = "starlifter_polartechring_entity"
+    }
+    attach = {
+        "2stations" = "starlifter_compressors_entity"
+    }
+    attach = {
+        "cloud" = "starlifter_cloud_effect"
+    }
+    attach = {
+        "shield" = "starlifter_planet_shield_alt_ambient_entity"
+    }
+    attach = {
+        "vflux" = "nova_outbursts_entity"
+    }
+    attach = {
+        "hflux" = "nova_outbursts_entity"
+    }
+    attach = {
+        "45flux1" = "nova_outbursts_entity"
+    }
+    attach = {
+        "45flux2" = "nova_outbursts_entity"
+    }
+    attach = {
+        "drain1" = "starlifter_drain_entity"
+    }
+    attach = {
+        "drain2" = "starlifter_drain_entity"
+    }
+    attach = {
+        "drain5" = "starlifter_drain_entity"
+    }
+    attach = {
+        "drain6" = "starlifter_drain_entity"
+    }
+}

@@ -1,0 +1,175 @@
+building_production_center = {
+    base_buildtime = @b2_time
+    base_cap_amount = 1
+    category = manufacturing
+    potential = {
+        exists = owner
+        owner = {
+            is_gestalt = yes
+        }
+    }
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            owner = {
+                is_gestalt = no
+            }
+            buildings_no_motes = yes
+        }
+    }
+    allow = {
+        has_major_upgraded_capital = yes
+    }
+    planet_modifier = {
+        planet_metallurgists_produces_mult = 0.15
+        planet_artisans_produces_mult = 0.15
+        planet_cultivation_drones_produces_mult = 0.15
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @b2_minerals
+            volatile_motes = @b2_rare_cost
+        }
+        upkeep = {
+            energy = @b2_upkeep
+            volatile_motes = @b2_rare_upkeep
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        job_alloy_drone_add = 2
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        job_fabricator_add = 1
+    }
+    prerequisites = {
+        "tech_global_production_strategy"
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        text = job_alloy_drone_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        text = job_fabricator_effect_desc
+    }
+    show_tech_unlock_if = {
+        is_gestalt = yes
+    }
+    ai_weight = {
+        weight = 0
+        modifier = {
+            weight = 10
+            OR = {
+                has_building = building_foundry_1
+                has_building = building_foundry_2
+                has_building = building_foundry_3
+                has_building = building_factory_1
+                has_building = building_factory_2
+                has_building = building_factory_3
+            }
+        }
+        modifier = {
+            weight = 1
+            free_building_slots = 0
+        }
+        modifier = {
+            factor = 0
+            has_building = building_institute
+        }
+        modifier = {
+            factor = 9999
+            has_planet_flag = ecumen
+        }
+        modifier = {
+            factor = 0.5
+            free_amenities < -10
+        }
+        modifier = {
+            factor = 4
+            count_pops = {
+                limit = {
+                    OR = {
+                        has_job = artisan
+                        has_job = artisan_drone
+                    }
+                }
+                count > 5
+            }
+        }
+        modifier = {
+            factor = 0
+            unsupervised_destruction = yes
+            count_pops = {
+                limit = {
+                    OR = {
+                        has_job = foundry
+                        has_job = alloy_drone
+                        has_job = fabricator
+                    }
+                }
+                count < 3
+            }
+        }
+        modifier = {
+            factor = 4
+            count_pops = {
+                limit = {
+                    OR = {
+                        has_job = foundry
+                        has_job = alloy_drone
+                        has_job = fabricator
+                    }
+                }
+                count > 5
+            }
+        }
+        modifier = {
+            factor = 5
+            count_pops = {
+                limit = {
+                    OR = {
+                        has_job = artisan
+                        has_job = artisan_drone
+                    }
+                }
+                count > 10
+            }
+        }
+        modifier = {
+            factor = 5
+            count_pops = {
+                limit = {
+                    OR = {
+                        has_job = foundry
+                        has_job = alloy_drone
+                        has_job = fabricator
+                    }
+                }
+                count > 10
+            }
+        }
+    }
+}

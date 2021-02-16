@@ -1,7 +1,0 @@
-NGraphics = {
-    ORBIT_HSV = {
-        0.0
-        0.0
-        0.75
-    }
-}

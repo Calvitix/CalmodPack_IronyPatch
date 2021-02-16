@@ -1,0 +1,186 @@
+interstellar_habitat_0 = {
+    entity = "construction_platform_entity"
+    construction_entity = "construction_platform_entity"
+    portrait = "GFX_megastructure_construction_background"
+    place_entity_on_planet_plane = no
+    show_galactic_map_icon = yes
+    prerequisites = {
+        giga_tech_interstellar_habitat
+    }
+    build_time = 1800
+    resources = {
+        category = megastructures
+        cost = {
+            alloys = 3500
+            influence = 150
+        }
+        upkeep = {
+            energy = 5
+        }
+    }
+    potential = {
+        has_technology = giga_tech_interstellar_habitat
+        NOT = {
+            has_global_flag = stellarhabitat_disabled
+        }
+        OR = {
+            check_variable = {
+                which = giga_stellarhabitat_cap
+                value = 0
+            }
+            check_variable = {
+                which = giga_current_stellarhabitat
+                value < giga_stellarhabitat_cap
+            }
+        }
+    }
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_inside_border"
+            is_inside_border = from
+        }
+        custom_tooltip = {
+            fail_text = "requires_surveyed_system"
+            NOT = {
+                any_system_planet = {
+                    is_surveyed = {
+                        who = prev.from
+                        status = no
+                    }
+                }
+            }
+        }
+    }
+    placement_rules = {
+        planet_possible = {
+            custom_tooltip = {
+                fail_text = "requires_no_existing_megastructure"
+                planet_has_no_megastructure = yes
+            }
+            custom_tooltip = {
+                fail_text = "must_build_around_star"
+                is_star = yes
+            }
+            custom_tooltip = {
+                fail_text = "requires_no_anomaly"
+                has_anomaly = no
+            }
+            custom_tooltip = {
+                fail_text = "cant_build_on_interstellar_habitat"
+                NOT = {
+                    solar_system = {
+                        has_star_flag = habitat_system
+                    }
+                }
+            }
+            custom_tooltip = {
+                fail_text = "requires_not_capped"
+                from = {
+                    OR = {
+                        check_variable = {
+                            which = giga_stellarhabitat_cap
+                            value = 0
+                        }
+                        check_variable = {
+                            which = giga_current_stellarhabitat
+                            value < giga_stellarhabitat_cap
+                        }
+                    }
+                }
+            }
+        }
+    }
+    ai_weight = {
+        weight = 300
+        modifier = {
+            factor = 0.1
+            any_neighbor_system = {
+                exists = owner
+                NOT = {
+                    owner = {
+                        is_same_value = from
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            any_neighbor_system = {
+                any_neighbor_system = {
+                    exists = owner
+                    NOT = {
+                        owner = {
+                            is_same_value = from
+                        }
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0.00
+            from = {
+                has_country_flag = has_recently_built_interstellar_habitat
+            }
+        }
+        modifier = {
+            factor = 0.00
+            from = {
+                check_variable = {
+                    which = completed_i_ringworlds
+                    value > 1
+                }
+            }
+        }
+        modifier = {
+            factor = 0.50
+            from = {
+                check_variable = {
+                    which = completed_i_ringworlds
+                    value = 1
+                }
+            }
+        }
+        modifier = {
+            factor = 0.00
+            from = {
+                has_country_flag = giga_started_i_ringworld
+            }
+        }
+    }
+    on_build_complete = {
+        save_event_target_as = giga_system
+        set_variable = {
+            which = i_ring_segments
+            value = 0
+        }
+        save_event_target_as = interstellar_system
+        fromfrom.planet = {
+            save_event_target_as = giga_planet
+            if = {
+                limit = {
+                    exists = orbital_station
+                }
+                orbital_station = {
+                    dismantle = yes
+                }
+            }
+            set_planet_flag = megastructure
+            set_planet_flag = has_megastructure
+        }
+        from = {
+            set_timed_country_flag = {
+                flag = has_recently_built_interstellar_habitat
+                years = 20
+            }
+            set_country_flag = giga_started_i_ringworld
+            change_variable = {
+                which = giga_current_stellarhabitat
+                value = 1
+            }
+            country_event = {
+                id = giga_dialog.2901
+            }
+        }
+        remove_megastructure = fromfrom
+    }
+}

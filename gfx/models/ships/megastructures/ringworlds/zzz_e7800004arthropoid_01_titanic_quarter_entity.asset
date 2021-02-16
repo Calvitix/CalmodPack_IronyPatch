@@ -1,0 +1,127 @@
+@ringworld_scale = 2.45
+entity = {
+    name = "arthropoid_01_titanic_quarter_entity"
+    cull_radius = 9999
+    game_data = {
+        size = 50
+        shader_type = ship
+        emissive_recolor_crunch = 50.0
+    }
+    default_state = "idle"
+    state = {
+        name = "idle"
+        start_event = {
+            trigger_once = yes
+            sound = {
+                soundeffect = "ringworld_hum_idle_02"
+                stop_on_state_change = yes
+            }
+        }
+    }
+    state = {
+        name = "construction"
+        start_event = {
+            trigger_once = yes
+            sound = {
+                soundeffect = "ringworld_construction_ambient"
+            }
+        }
+    }
+    locator = {
+        name = "locator1"
+        position = {
+            -1338.34435
+            0
+            -471.72055
+        }
+        rotation = {
+            -37.5
+            0
+            0
+        }
+    }
+    locator = {
+        name = "locator2"
+        position = {
+            -841.8004
+            0
+            -185.09995
+        }
+        rotation = {
+            -22.5
+            0
+            0
+        }
+    }
+    locator = {
+        name = "locator3"
+        position = {
+            -287.875
+            0
+            -36.75
+        }
+        rotation = {
+            -7.5
+            0
+            0
+        }
+    }
+    locator = {
+        name = "locator4"
+        position = {
+            287.875
+            0
+            -36.75
+        }
+        rotation = {
+            7.5
+            0
+            0
+        }
+    }
+    locator = {
+        name = "locator5"
+        position = {
+            841.8004
+            0
+            -185.09995
+        }
+        rotation = {
+            22.5
+            0
+            0
+        }
+    }
+    locator = {
+        name = "locator6"
+        position = {
+            1338.34435
+            0
+            -471.72055
+        }
+        rotation = {
+            37.5
+            0
+            0
+        }
+    }
+    attach = {
+        locator1 = "arthropoid_01_titanic_construction_entity"
+    }
+    attach = {
+        locator2 = "arthropoid_01_titanic_construction_entity"
+    }
+    attach = {
+        locator3 = "arthropoid_01_titanic_construction_entity"
+    }
+    attach = {
+        locator4 = "arthropoid_01_titanic_construction_entity"
+    }
+    attach = {
+        locator5 = "arthropoid_01_titanic_construction_entity"
+    }
+    attach = {
+        locator6 = "arthropoid_01_titanic_construction_entity"
+    }
+    scale = @ringworld_scale
+}

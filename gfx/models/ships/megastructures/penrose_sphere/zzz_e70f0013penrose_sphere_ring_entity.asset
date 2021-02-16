@@ -1,0 +1,69 @@
+entity = {
+    name = "penrose_sphere_ring_entity"
+    scale = 2.6
+    cull_radius = 500
+    locator = {
+        name = "root_01"
+        position = {
+            0
+            0
+            0
+        }
+    }
+    locator = {
+        name = "root_02"
+        position = {
+            0
+            0
+            0
+        }
+        rotation = {
+            0
+            -45
+            0
+        }
+    }
+    locator = {
+        name = "root_03"
+        position = {
+            0
+            0
+            0
+        }
+        rotation = {
+            0
+            45
+            0
+        }
+    }
+    attach = {
+        root_01 = "penrose_sphere_frame_entity"
+    }
+    attach = {
+        root_01 = "penrose_sphere_1_entity"
+    }
+    attach = {
+        root_01 = "penrose_sphere_2_entity"
+    }
+    attach = {
+        root_01 = "penrose_sphere_3_entity"
+    }
+    attach = {
+        root_01 = "penrose_sphere_4_entity"
+    }
+    attach = {
+        root_02 = "blackhole_ring_entity"
+    }
+    attach = {
+        root_03 = "blackhole_ring_entity"
+    }
+    attach = {
+        root_01 = "penta_rays_entity"
+    }
+    attach = {
+        root_01 = "hexa_rays_entity"
+    }
+    game_data = {
+        emissive_recolor_crunch = 6.0
+    }
+}

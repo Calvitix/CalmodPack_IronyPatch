@@ -21,6 +21,7 @@ dependencies={
 	"Planetary Diversity - Shroud Worlds"
 	"UI Overhaul Dynamic - Dark UI"
 	"UI Overhaul Dynamic + Expanded Colours"
+	"District Overhaul 2 Bugfix"
 }
 path="E:/Documents/Paradox Interactive/Stellaris/mod/IronyModManager_Calmodpack"
 name="IronyModManager_Calmodpack"

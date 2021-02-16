@@ -1,0 +1,80 @@
+@ringworld_north_scale = 10800
+@ringworld_south_scale = -10800
+@ringworld_west_scale = 10800
+@ringworld_east_scale = -10800
+entity = {
+    name = "arthropoid_01_gargantuan_full_entity"
+    cull_radius = 9999
+    game_data = {
+        size = 50
+        shader_type = ship
+        emissive_recolor_crunch = 50.0
+    }
+    locator = {
+        name = "ringworld_north"
+        position = {
+            @ringworld_north_scale
+            0
+            0
+        }
+        rotation = {
+            90
+            0
+            0
+        }
+    }
+    locator = {
+        name = "ringworld_south"
+        position = {
+            @ringworld_south_scale
+            0
+            0
+        }
+        rotation = {
+            -90
+            0
+            0
+        }
+    }
+    locator = {
+        name = "ringworld_west"
+        position = {
+            0
+            0
+            @ringworld_west_scale
+        }
+        rotation = {
+            0
+            0
+            0
+        }
+    }
+    locator = {
+        name = "ringworld_east"
+        position = {
+            0
+            0
+            @ringworld_east_scale
+        }
+        rotation = {
+            180
+            0
+            0
+        }
+    }
+    state = {
+        name = "construction"
+    }
+    attach = {
+        ringworld_north = "arthropoid_01_gargantuan_quarter_entity"
+    }
+    attach = {
+        ringworld_south = "arthropoid_01_gargantuan_quarter_entity"
+    }
+    attach = {
+        ringworld_west = "arthropoid_01_gargantuan_quarter_entity"
+    }
+    attach = {
+        ringworld_east = "arthropoid_01_gargantuan_quarter_entity"
+    }
+}

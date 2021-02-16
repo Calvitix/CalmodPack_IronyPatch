@@ -1,0 +1,229 @@
+orbital_arcology_0 = {
+    entity = "construction_platform_entity"
+    construction_entity = "construction_platform_entity"
+    portrait = "GFX_megastructure_construction_background"
+    place_entity_on_planet_plane = no
+    prerequisites = {
+        giga_tech_orbital_arcologies
+    }
+    build_time = 900
+    resources = {
+        category = megastructures
+        cost = {
+            alloys = 1500
+            influence = 75
+        }
+        upkeep = {
+            energy = 5
+            alloys = 5
+        }
+    }
+    potential = {
+        has_technology = giga_tech_orbital_arcologies
+        NOT = {
+            has_global_flag = orbital_arcologies_disabled
+        }
+        OR = {
+            check_variable = {
+                which = giga_orbital_arcologies_cap
+                value = 0
+            }
+            check_variable = {
+                which = giga_current_orbital_arcologies
+                value < giga_orbital_arcologies_cap
+            }
+        }
+    }
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_inside_border"
+            is_inside_border = from
+        }
+        custom_tooltip = {
+            fail_text = "requires_surveyed_system"
+            giga_system_is_surveyed = yes
+        }
+        custom_tooltip = {
+            fail_text = "requires_not_capped"
+            from = {
+                OR = {
+                    check_variable = {
+                        which = giga_orbital_arcologies_cap
+                        value = 0
+                    }
+                    check_variable = {
+                        which = giga_current_orbital_arcologies
+                        value < giga_orbital_arcologies_cap
+                    }
+                }
+            }
+        }
+    }
+    placement_rules = {
+        planet_possible = {
+            custom_tooltip = {
+                fail_text = "requires_surveyed_planet"
+                is_surveyed = {
+                    who = prev.from
+                    status = yes
+                }
+            }
+            custom_tooltip = {
+                fail_text = "requires_no_anomaly"
+                has_anomaly = no
+            }
+            custom_tooltip = {
+                fail_text = "requires_not_asteroid"
+                is_asteroid = no
+            }
+            custom_tooltip = {
+                fail_text = "must_build_around_habitable_planet"
+                is_colony = yes
+            }
+            custom_tooltip = {
+                fail_text = "requires_not_star"
+                is_star = no
+            }
+            custom_tooltip = {
+                fail_text = "requires_non_giga_habitable_structure"
+                giga_habitable_structure = no
+            }
+            custom_tooltip = {
+                fail_text = "requires_no_orbital_arcology"
+                NOT = {
+                    has_planet_flag = orbital_arcology
+                }
+            }
+        }
+    }
+    ai_weight = {
+        weight = 300
+        modifier = {
+            factor = 0.1
+            any_neighbor_system = {
+                exists = owner
+                NOT = {
+                    owner = {
+                        is_same_value = from
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            any_neighbor_system = {
+                any_neighbor_system = {
+                    exists = owner
+                    NOT = {
+                        owner = {
+                            is_same_value = from
+                        }
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 4
+            fromfrom.planet = {
+                is_capital = yes
+            }
+        }
+        modifier = {
+            factor = 2
+            fromfrom.planet = {
+                OR = {
+                    is_planet_class = pc_city
+                    count_owned_pop = {
+                        count >= 40
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            fromfrom.planet = {
+                NOR = {
+                    is_capital = yes
+                    is_planet_class = pc_city
+                    count_owned_pop = {
+                        count >= 40
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0.00
+            from = {
+                has_country_flag = has_recently_built_orbital_arcology
+            }
+        }
+    }
+    on_build_complete = {
+        save_event_target_as = giga_system
+        fromfrom.planet = {
+            save_event_target_as = giga_planet
+            if = {
+                limit = {
+                    exists = orbital_station
+                }
+                orbital_station = {
+                    dismantle = yes
+                }
+            }
+            set_planet_flag = orbital_arcology
+        }
+        if = {
+            limit = {
+                fromfrom.planet = {
+                    planet_size < 13
+                }
+            }
+            spawn_megastructure = {
+                type = "orbital_arcology_0_s"
+                owner = from
+                location = fromfrom.planet
+            }
+            remove_megastructure = fromfrom
+        }
+        else_if = {
+            limit = {
+                fromfrom.planet = {
+                    planet_size >= 13
+                    planet_size <= 21
+                }
+            }
+            spawn_megastructure = {
+                type = "orbital_arcology_0_m"
+                owner = from
+                location = fromfrom.planet
+            }
+            remove_megastructure = fromfrom
+        }
+        else_if = {
+            limit = {
+                fromfrom.planet = {
+                    planet_size > 21
+                }
+            }
+            spawn_megastructure = {
+                type = "orbital_arcology_0_l"
+                owner = from
+                location = fromfrom.planet
+            }
+            remove_megastructure = fromfrom
+        }
+        from = {
+            set_timed_country_flag = {
+                flag = has_recently_built_orbital_arcology
+                years = 20
+            }
+            country_event = {
+                id = giga_dialog.901
+            }
+            change_variable = {
+                which = giga_current_orbital_arcologies
+                value = 1
+            }
+        }
+    }
+}

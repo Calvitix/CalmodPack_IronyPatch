@@ -1,0 +1,57 @@
+entity = {
+    name = "orbital_arcology_segment_entity"
+    cull_radius = @cull_radius_1
+    pdxmesh = "ringworld_habitable_01_mesh"
+    default_state = "idle"
+    state = {
+        name = "idle"
+        state_time = 100
+        time_offset = {
+            0
+            100
+        }
+        start_event = {
+            trigger_once = yes
+            sound = {
+                soundeffect = "ringworld_hum_idle_01"
+                stop_on_state_change = yes
+            }
+        }
+        start_event = {
+            trigger_once = yes
+            sound = {
+                soundeffect = "ringworld_hum_idle_02"
+                stop_on_state_change = yes
+            }
+        }
+    }
+    state = {
+        name = "construction"
+        start_event = {
+            trigger_once = yes
+            sound = {
+                soundeffect = "ringworld_construction_ambient"
+            }
+        }
+    }
+    meshsettings = {
+        name = "pCube20Shape"
+        index = 0
+        texture_diffuse = "ringworld_habitable_diffuse.dds"
+        texture_normal = "giga_ringworld_habitable_normal.dds"
+        texture_specular = "ringworld_habitable_specular.dds"
+        shader = "PdxMeshTerra"
+    }
+    meshsettings = {
+        name = "polySurface9Shape"
+        index = 0
+        texture_diffuse = "city_planet_mammalian_01_diffuse.dds"
+        texture_normal = "city_planet_mammalian_01_normal.dds"
+        texture_specular = "city_planet_mammalian_01_specular.dds"
+        shader = "PdxMeshTerra"
+    }
+    game_data = {
+        size = 50
+    }
+    scale = 0.554
+}

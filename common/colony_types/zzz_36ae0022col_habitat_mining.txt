@@ -4,7 +4,6 @@ col_habitat_mining = {
         OR = {
             uses_district_set = habitat
             uses_district_set = pdarchive
-            uses_district_set = pdplanethab
         }
         has_planet_flag = mining_habitat
     }

@@ -1,0 +1,14 @@
+entity = {
+    name = "gigaorbitingring_tube_part_entity"
+    pdxmesh = "giga_part_tube_mesh"
+    cull_radius = 1500.0
+    default_state = "idle"
+    state = {
+        name = "idle"
+        state_time = 5
+    }
+    game_data = {
+        shader_type = ship
+        emissive_recolor_crunch = 50.0
+    }
+}

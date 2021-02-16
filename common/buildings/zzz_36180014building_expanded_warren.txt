@@ -8,9 +8,6 @@ building_expanded_warren = {
     category = amenity
     potential = {
         has_building = ebh_hive_warren2
-        owner = {
-            is_ai = no
-        }
     }
     allow = {
         has_upgraded_capital = yes
@@ -64,7 +61,7 @@ building_expanded_warren = {
     ai_weight = {
         weight = 0.5
         modifier = {
-            weight = 1.5
+            weight = 3.5
             OR = {
                 buildings_has_crystals = yes
                 num_buildings = {

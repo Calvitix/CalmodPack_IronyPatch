@@ -1,2 +1,0 @@
-french:
- triggered_opinion_infinity_gauntlet:1000 "Assembling the Infinity Gauntlet"

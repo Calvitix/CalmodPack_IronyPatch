@@ -1,0 +1,36 @@
+entity = {
+    name = "interstellar_habitat_construction_entity"
+    cull_radius = 1500
+    locator = {
+        name = "loc102"
+        position = {
+            0
+            0
+            0
+        }
+        rotation = {
+            45
+            0
+            0
+        }
+    }
+    locator = {
+        name = "loc103"
+        position = {
+            0
+            0
+            0
+        }
+        rotation = {
+            0
+            0
+            0
+        }
+    }
+    attach = {
+        loc102 = "interstellar_habitat_four_entity"
+    }
+    attach = {
+        loc103 = "giga_ringworld_seam_entity_01_full_entity"
+    }
+}

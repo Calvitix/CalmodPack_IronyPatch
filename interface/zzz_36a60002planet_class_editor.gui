@@ -6,7 +6,6 @@ guiTypes = {
     @sub_window_width_large = 1370
     @sub_window_pos_x_1650_large = 110
     @planet_box_width = 321
-    @planet_box_height_4 = 364
     @planet_box_height_5 = 439
     @icon_size = 75
     @planet_box_1_x = 6
@@ -30,14 +29,15 @@ guiTypes = {
     @planet_col_10 = 747
     @planet_col_11 = 822
     @planet_col_12 = 897
-    @planet_box_exotic_x = 587
-    @planet_box_exotic_y = 388
-    @exotic_row_1 = 437
-    @exotic_col_1 = 599
-    @exotic_col_2 = 673
-    @exotic_col_3 = 747
-    @exotic_col_4 = 821
-    @exotic_col_5 = 895
+    @planet_box_exotic_x = 259
+    @planet_box_exotic_y = 446
+    @exotic_row_1 = 495
+    @exotic_col_1 = 269
+    @exotic_col_2 = 344
+    @exotic_col_3 = 419
+    @exotic_col_4 = 494
+    @exotic_col_5 = 569
+    @exotic_col_6 = 644
     containerWindowType = {
         name = "planet_class_editor"
         position = {
@@ -429,6 +429,7 @@ guiTypes = {
                 width = -5
                 height = -71
             }
+            verticalScrollbar = "right_vertical_slider_thick"
             clipping = yes
             background = {
                 name = "background"
@@ -493,7 +494,7 @@ guiTypes = {
                 }
                 size = {
                     width = @planet_box_width
-                    height = @planet_box_height_4
+                    height = @planet_box_height_5
                 }
                 background = {
                     name = "background"
@@ -544,7 +545,7 @@ guiTypes = {
                 }
                 size = {
                     width = @planet_box_width
-                    height = @planet_box_height_4
+                    height = @planet_box_height_5
                 }
                 background = {
                     name = "background"
@@ -594,7 +595,7 @@ guiTypes = {
                     y = @planet_box_exotic_y
                 }
                 size = {
-                    width = 396
+                    width = 471
                     height = 138
                 }
                 background = {
@@ -631,7 +632,7 @@ guiTypes = {
                         x = 0
                         y = 10
                     }
-                    maxWidth = 396
+                    maxWidth = 471
                     maxHeight = 20
                     orientation = "UPPER_LEFT"
                     text_color_code = "B"
@@ -1073,9 +1074,23 @@ guiTypes = {
                 pdx_tooltip = "$pc_veld$ $dry$"
             }
             buttonType = {
-                name = "pc_tidallylocked"
+                name = "pc_semiarid"
                 position = {
                     x = @planet_col_5
+                    y = @planet_row_4
+                }
+                spriteType = "GFX_ui_planet_icon"
+                size = {
+                    x = @icon_size
+                    y = @icon_size
+                }
+                clicksound = "select_click"
+                pdx_tooltip = "$pc_semiarid$ $dry$"
+            }
+            buttonType = {
+                name = "pc_tidallylocked"
+                position = {
+                    x = @planet_col_6
                     y = @planet_row_4
                 }
                 spriteType = "GFX_ui_planet_icon_rare"
@@ -1089,7 +1104,7 @@ guiTypes = {
             buttonType = {
                 name = "pc_coral"
                 position = {
-                    x = @planet_col_6
+                    x = @planet_col_7
                     y = @planet_row_4
                 }
                 spriteType = "GFX_ui_planet_icon_rare"
@@ -1103,7 +1118,7 @@ guiTypes = {
             buttonType = {
                 name = "pc_salt"
                 position = {
-                    x = @planet_col_7
+                    x = @planet_col_8
                     y = @planet_row_4
                 }
                 spriteType = "GFX_ui_planet_icon_rare"
@@ -1117,8 +1132,8 @@ guiTypes = {
             buttonType = {
                 name = "pc_primal"
                 position = {
-                    x = @planet_col_8
-                    y = @planet_row_4
+                    x = @planet_col_5
+                    y = @planet_row_5
                 }
                 spriteType = "GFX_ui_planet_icon_rare"
                 size = {
@@ -1127,6 +1142,20 @@ guiTypes = {
                 }
                 clicksound = "select_click"
                 pdx_tooltip = "$pc_primal$ $dry$ $UIO_PD_RARE_PLANET$"
+            }
+            buttonType = {
+                name = "pc_supercon"
+                position = {
+                    x = @planet_col_6
+                    y = @planet_row_5
+                }
+                spriteType = "GFX_ui_planet_icon_rare"
+                size = {
+                    x = @icon_size
+                    y = @icon_size
+                }
+                clicksound = "select_click"
+                pdx_tooltip = "$pc_supercon$ $dry$ $UIO_PD_RARE_PLANET$"
             }
             buttonType = {
                 name = "pc_arctic"
@@ -1297,9 +1326,37 @@ guiTypes = {
                 pdx_tooltip = "$pc_mud$ $cold$"
             }
             buttonType = {
-                name = "pc_storm"
+                name = "pc_aeolian"
                 position = {
                     x = @planet_col_9
+                    y = @planet_row_4
+                }
+                spriteType = "GFX_ui_planet_icon"
+                size = {
+                    x = @icon_size
+                    y = @icon_size
+                }
+                clicksound = "select_click"
+                pdx_tooltip = "$pc_aeolian$ $cold$"
+            }
+            buttonType = {
+                name = "pc_duneforest"
+                position = {
+                    x = @planet_col_10
+                    y = @planet_row_4
+                }
+                spriteType = "GFX_ui_planet_icon"
+                size = {
+                    x = @icon_size
+                    y = @icon_size
+                }
+                clicksound = "select_click"
+                pdx_tooltip = "$pc_duneforest$ $cold$"
+            }
+            buttonType = {
+                name = "pc_storm"
+                position = {
+                    x = @planet_col_11
                     y = @planet_row_4
                 }
                 spriteType = "GFX_ui_planet_icon_rare"
@@ -1313,7 +1370,7 @@ guiTypes = {
             buttonType = {
                 name = "pc_rogue"
                 position = {
-                    x = @planet_col_10
+                    x = @planet_col_12
                     y = @planet_row_4
                 }
                 spriteType = "GFX_ui_planet_icon_rare"
@@ -1327,8 +1384,8 @@ guiTypes = {
             buttonType = {
                 name = "pc_eyeball"
                 position = {
-                    x = @planet_col_11
-                    y = @planet_row_4
+                    x = @planet_col_9
+                    y = @planet_row_5
                 }
                 spriteType = "GFX_ui_planet_icon_rare"
                 size = {
@@ -1337,6 +1394,20 @@ guiTypes = {
                 }
                 clicksound = "select_click"
                 pdx_tooltip = "$pc_eyeball$ $cold$ $UIO_PD_RARE_PLANET$"
+            }
+            buttonType = {
+                name = "pc_glacio"
+                position = {
+                    x = @planet_col_10
+                    y = @planet_row_5
+                }
+                spriteType = "GFX_ui_planet_icon_rare"
+                size = {
+                    x = @icon_size
+                    y = @icon_size
+                }
+                clicksound = "select_click"
+                pdx_tooltip = "$pc_glacio$ $cold$ $UIO_PD_RARE_PLANET$"
             }
             buttonType = {
                 name = "pc_ammonia"
@@ -1407,6 +1478,20 @@ guiTypes = {
                 }
                 clicksound = "select_click"
                 pdx_tooltip = "$pc_acid$ $exotic$"
+            }
+            buttonType = {
+                name = "pc_sulfur"
+                position = {
+                    x = @exotic_col_6
+                    y = @exotic_row_1
+                }
+                spriteType = "GFX_ui_planet_icon"
+                size = {
+                    x = @icon_size
+                    y = @icon_size
+                }
+                clicksound = "select_click"
+                pdx_tooltip = "$pc_sulfur$ $exotic$"
             }
             containerWindowType = {
                 name = "selected"

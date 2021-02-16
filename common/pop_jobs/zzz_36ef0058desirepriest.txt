@@ -31,7 +31,7 @@ desirepriest = {
     }
     planet_modifier = {
         planet_amenities_add = 10
-        pop_happiness = 0.05
+        pop_happiness = 0.02
     }
     triggered_planet_modifier = {
         potential = {

@@ -1,0 +1,53 @@
+entity = {
+    name = "giga_alderson_ruined_left_01_entity"
+    pdxmesh = "giga_alderson_full_mesh"
+    cull_radius = 99999
+    game_data = {
+        size = 250
+    }
+    default_state = "idle"
+    state = {
+        name = "idle"
+        state_time = 100
+        time_offset = {
+            0
+            100
+        }
+    }
+    state = {
+        name = "construction"
+    }
+    meshsettings = {
+        name = "underneath"
+        index = 0
+        texture_diffuse = "giga_disk_frame_diffuse.dds"
+        texture_normal = "giga_disk_frame_normal.dds"
+        texture_specular = "giga_disk_frame_specular.dds"
+        shader = "PdxMeshTerra"
+    }
+    meshsettings = {
+        name = "surface_inner"
+        index = 0
+        texture_diffuse = "giga_disk_ruined_left_diffuse.dds"
+        texture_normal = "giga_disk_ruined_left_normal.dds"
+        texture_specular = "giga_disk_ruined_left_specular.dds"
+        shader = "PdxMeshTerra"
+    }
+    meshsettings = {
+        name = "surface_mid"
+        index = 0
+        texture_diffuse = "giga_disk_ruined_left_diffuse.dds"
+        texture_normal = "giga_disk_ruined_left_normal.dds"
+        texture_specular = "giga_disk_ruined_left_specular.dds"
+        shader = "PdxMeshTerra"
+    }
+    meshsettings = {
+        name = "surface_outer"
+        index = 0
+        texture_diffuse = "giga_disk_ruined_left_diffuse.dds"
+        texture_normal = "giga_disk_ruined_left_normal.dds"
+        texture_specular = "giga_disk_ruined_left_specular.dds"
+        shader = "PdxMeshTerra"
+    }
+    scale = 3
+}

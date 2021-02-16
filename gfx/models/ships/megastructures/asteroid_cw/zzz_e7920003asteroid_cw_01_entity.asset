@@ -1,0 +1,20 @@
+entity = {
+    name = "asteroid_cw_01_entity"
+    scale = 2
+    cull_radius = 500
+    game_data = {
+        emissive_recolor_crunch = 50
+        size = 15
+    }
+    locator = {
+        name = center
+        position = {
+            0
+            25
+            0
+        }
+    }
+    attach = {
+        center = "cw_01_entity"
+    }
+}

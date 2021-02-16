@@ -1,6 +1,0 @@
-spriteTypes = {
-    spriteType = {
-        name = "GFX_ui_planet_icon"
-        texturefile = "gfx/ui_overhaul_qhd/masks/planet_mask.dds"
-    }
-}

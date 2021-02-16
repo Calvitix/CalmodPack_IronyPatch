@@ -1,0 +1,6 @@
+entity = {
+    name = "giga_ringworld_seam_damaged_entity"
+    cull_radius = @cull_radius_1
+    pdxmesh = "ringworld_seam_damaged_01_mesh"
+    scale = 0.554
+}

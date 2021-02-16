@@ -1,3 +1,0 @@
-NCamera = {
-    GALAXY_MIN_PITCH = -70
-}

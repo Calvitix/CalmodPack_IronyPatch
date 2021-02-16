@@ -1,0 +1,36 @@
+entity = {
+    name = "interstellar_habitat_entity"
+    cull_radius = 1500
+    locator = {
+        name = "loc101"
+        position = {
+            0
+            0
+            0
+        }
+        rotation = {
+            0
+            0
+            0
+        }
+    }
+    locator = {
+        name = "loc102"
+        position = {
+            0
+            0
+            0
+        }
+        rotation = {
+            45
+            0
+            0
+        }
+    }
+    attach = {
+        loc101 = "interstellar_habitat_stacked_core"
+    }
+    attach = {
+        loc102 = "interstellar_habitat_four_entity"
+    }
+}

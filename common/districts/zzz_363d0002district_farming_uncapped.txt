@@ -294,271 +294,107 @@ district_farming_uncapped = {
         tech_industrial_farming
     }
     ai_weight = {
-        weight = 3
+        weight = 0
         modifier = {
-            factor = 2
-            free_jobs < 5
-        }
-        modifier = {
-            factor = 2
+            weight = 3
             owner = {
-                is_hive_empire = yes
-            }
-        }
-        modifier = {
-            factor = 2
-            years_passed > 40
-        }
-        modifier = {
-            factor = 2
-            years_passed > 100
-        }
-        modifier = {
-            factor = 2
-            str_good_food = yes
-        }
-        modifier = {
-            factor = 0
-            has_planet_flag = ecumen
-        }
-        modifier = {
-            factor = 0.07
-            free_amenities < -5
-        }
-        modifier = {
-            factor = 1.5
-            or = {
-                has_building = building_food_processing_facility
-                has_building = building_food_processing_center
-            }
-        }
-        modifier = {
-            factor = 0.2
-            owner = {
-                resource_income_compare = {
-                    resource = energy
-                    value < 20
-                }
-                resource_income_compare = {
-                    resource = food
-                    value > 50
-                }
-                resource_stockpile_compare = {
-                    resource = food
-                    value > 2500
-                }
-            }
-        }
-        modifier = {
-            factor = 0.001
-            free_district_slots = 0
-            free_housing < 2
-        }
-        modifier = {
-            factor = 0.001
-            nor = {
-                any_owned_pop = {
-                    or = {
-                        has_job = clerk
-                        and = {
-                            is_shackled_robot = yes
-                            is_unemployed = yes
-                        }
-                    }
-                }
-                free_jobs < 2
-                and = {
-                    owner = {
-                        is_gestalt = yes
-                    }
-                    free_amenities > 10
-                    free_jobs < 6
-                }
-            }
-        }
-        modifier = {
-            factor = 0.001
-            free_jobs > 3
-            free_district_slots < 3
-            not = {
-                any_owned_pop = {
-                    or = {
-                        has_job = clerk
-                        and = {
-                            is_unemployed = yes
-                            not = {
-                                is_pop_category = specialist
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        modifier = {
-            factor = 0
-            owner = {
-                is_mechanical_empire = yes
-                NOR = {
-                    has_civic = civic_machine_servitor
-                    has_civic = civic_machine_assimilator
-                }
-            }
-        }
-        modifier = {
-            factor = 1.5
-            years_passed > 10
-            owner = {
-                resource_stockpile_compare = {
+                country_uses_food = yes
+                has_monthly_income = {
                     resource = food
                     value < 100
                 }
             }
-        }
-        modifier = {
-            factor = 0.75
-            owner = {
-                resource_stockpile_compare = {
-                    resource = food
-                    value > 4000
+            num_free_districts = {
+                type = district_mining
+                value = 0
+            }
+            num_free_districts = {
+                type = district_generator
+                value = 0
+            }
+            OR = {
+                free_jobs < 2
+                any_owned_pop = {
+                    is_unemployed = yes
+                    NOT = {
+                        has_citizenship_type = {
+                            type = citizenship_organic_trophy
+                        }
+                    }
+                    NOR = {
+                        is_pop_category = specialist
+                        is_pop_category = ruler
+                    }
                 }
             }
         }
         modifier = {
-            factor = 0.75
-            owner = {
-                resource_stockpile_compare = {
-                    resource = food
-                    value > 5000
+            weight = 250
+            years_passed > 4
+            OR = {
+                free_jobs < 3
+                any_owned_pop = {
+                    is_unemployed = yes
+                    NOT = {
+                        has_citizenship_type = {
+                            type = citizenship_organic_trophy
+                        }
+                    }
+                    NOR = {
+                        is_pop_category = specialist
+                        is_pop_category = ruler
+                    }
+                }
+            }
+            OR = {
+                owner = {
+                    country_uses_food = yes
+                    has_monthly_income = {
+                        resource = food
+                        value < 20
+                    }
+                }
+                owner = {
+                    country_uses_food = no
+                    has_monthly_income = {
+                        resource = food
+                        value < -1
+                    }
                 }
             }
         }
         modifier = {
-            factor = 0.75
+            weight = 1
+            free_jobs < 5
             owner = {
-                resource_stockpile_compare = {
-                    resource = food
-                    value > 6000
+                has_resource = {
+                    type = food
+                    amount < 10
                 }
-            }
-        }
-        modifier = {
-            factor = 5
-            owner = {
-                has_deficit = food
-            }
-        }
-        modifier = {
-            factor = 3
-            owner = {
-                resource_income_compare = {
-                    resource = food
-                    value < -40
-                }
-            }
-        }
-        modifier = {
-            factor = 3
-            owner = {
-                resource_income_compare = {
-                    resource = food
-                    value < -30
-                }
-            }
-        }
-        modifier = {
-            factor = 2
-            owner = {
-                resource_income_compare = {
-                    resource = food
-                    value < -20
-                }
-            }
-        }
-        modifier = {
-            factor = 2
-            owner = {
-                resource_income_compare = {
-                    resource = food
-                    value < -10
-                }
-            }
-        }
-        modifier = {
-            factor = 2
-            owner = {
-                resource_income_compare = {
+                has_monthly_income = {
                     resource = food
                     value < 0
                 }
             }
         }
         modifier = {
-            factor = 0.8
+            factor = 10
             owner = {
-                resource_income_compare = {
-                    resource = food
-                    value > 10
-                }
-            }
-        }
-        modifier = {
-            factor = 0.8
-            owner = {
-                resource_income_compare = {
-                    resource = food
-                    value > 20
-                }
-            }
-        }
-        modifier = {
-            factor = 0.8
-            owner = {
-                resource_income_compare = {
-                    resource = food
-                    value > 30
-                }
-            }
-        }
-        modifier = {
-            factor = 0.8
-            owner = {
-                resource_income_compare = {
-                    resource = food
-                    value > 40
-                }
-            }
-        }
-        modifier = {
-            factor = 0.075
-            owner = {
-                resource_income_compare = {
-                    resource = food
-                    value > 50
-                }
-            }
-        }
-        modifier = {
-            factor = 0.05
-            owner = {
-                resource_income_compare = {
-                    resource = food
-                    value > 100
-                }
+                has_deficit = food
             }
         }
         modifier = {
             factor = 0
             owner = {
-                needs_food_at_all = no
+                country_uses_food = no
+                NOT = {
+                    has_deficit = food
+                }
             }
-        }
-        modifier = {
-            factor = 0
-            free_jobs > 15
         }
     }
     ai_resource_production = {
-        food = 2
+        food = 1
         trigger = {
             OR = {
                 low_food_income = yes

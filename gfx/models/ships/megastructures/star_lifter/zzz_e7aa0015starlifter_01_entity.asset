@@ -1,0 +1,37 @@
+entity = {
+    name = "starlifter_01_entity"
+    scale = 3.6
+    cull_radius = 1000
+    locator = {
+        name = "loc107"
+        position = {
+            0
+            0
+            0
+        }
+        rotation = {
+            0
+            45
+            0
+        }
+    }
+    locator = {
+        name = "loc108"
+        position = {
+            0
+            0
+            0
+        }
+        rotation = {
+            0
+            -45
+            0
+        }
+    }
+    attach = {
+        "loc107" = "starlifter_accelerator_ring_entity"
+    }
+    attach = {
+        "loc108" = "starlifter_accelerator_ring_entity"
+    }
+}

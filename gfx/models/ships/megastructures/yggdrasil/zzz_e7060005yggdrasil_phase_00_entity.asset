@@ -1,0 +1,27 @@
+@Rescale01 = 20
+entity = {
+    name = "yggdrasil_phase_00_entity"
+    pdxmesh = "yggdrasil_phase_00_mesh"
+    cull_radius = 1500
+    scale = @Rescale01
+    meshsettings = {
+        name = "body"
+        index = 0
+        texture_diffuse = "yggdrasil_ruined_diffuse.dds"
+        texture_normal = "yggdrasil_ruined_normal.dds"
+        texture_specular = "yggdrasil_ruined_specular.dds"
+        shader = "PdxMeshShip"
+    }
+    meshsettings = {
+        name = "glass"
+        index = 0
+        texture_diffuse = "giga_glass_clear_diffuse.dds"
+        texture_normal = "giga_glass_clear_normal.dds"
+        texture_specular = "giga_glass_clear_specular.dds"
+        shader = "AlphaBlendNoDepth"
+    }
+    default_state = "idle"
+    state = {
+        name = "idle"
+    }
+}

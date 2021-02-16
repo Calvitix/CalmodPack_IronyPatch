@@ -16,6 +16,7 @@ col_city = {
             is_planet_class = pc_cybrex
             is_planet_class = pc_habitat
             uses_district_set = city_world
+            uses_district_set = pdshroudarc
             uses_district_set = ring_world
             uses_district_set = habitat
             uses_district_set = pdarchive
@@ -24,6 +25,9 @@ col_city = {
             uses_district_set = pdbioforge
             uses_district_set = pdmachinefactory
             uses_district_set = pdfloraforge
+            uses_district_set = pdmilarc
+            uses_district_set = pdbiofort
+            uses_district_set = pdmachinefort
         }
         is_special_colony_type = no
     }

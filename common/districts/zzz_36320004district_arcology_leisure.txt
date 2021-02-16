@@ -34,6 +34,9 @@ district_arcology_leisure = {
             exotic_gases = 2
         }
     }
+    planet_modifier = {
+        planet_housing_add = 10
+    }
     triggered_planet_modifier = {
         potential = {
             exists = owner

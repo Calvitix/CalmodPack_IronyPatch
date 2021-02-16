@@ -1,0 +1,131 @@
+psychic_beacon_0 = {
+    entity = "construction_platform_entity"
+    construction_entity = "construction_platform_entity"
+    portrait = "GFX_megastructure_construction_background"
+    place_entity_on_planet_plane = no
+    entity_offset = {
+        x = -5
+        y = -5
+    }
+    prerequisites = {
+        giga_tech_psychic_beacon
+    }
+    build_time = 1800
+    resources = {
+        category = megastructures
+        cost = {
+            alloys = 5000
+            influence = 300
+        }
+        upkeep = {
+            energy = 20
+        }
+    }
+    potential = {
+        has_technology = giga_tech_psychic_beacon
+        NOT = {
+            has_global_flag = psychic_beacon_disabled
+        }
+        OR = {
+            check_variable = {
+                which = giga_psychic_beacon_cap
+                value = 0
+            }
+            check_variable = {
+                which = giga_current_psychic_beacon
+                value < giga_psychic_beacon_cap
+            }
+        }
+    }
+    possible = {
+        exists = starbase
+        custom_tooltip = {
+            fail_text = "requires_inside_border"
+            is_inside_border = from
+        }
+        custom_tooltip = {
+            fail_text = "requires_surveyed_system"
+            giga_system_is_surveyed = yes
+        }
+        custom_tooltip = {
+            fail_text = "requires_not_capped"
+            from = {
+                OR = {
+                    check_variable = {
+                        which = giga_psychic_beacon_cap
+                        value = 0
+                    }
+                    check_variable = {
+                        which = giga_current_psychic_beacon
+                        value < giga_psychic_beacon_cap
+                    }
+                }
+            }
+        }
+    }
+    placement_rules = {
+        planet_possible = {
+            custom_tooltip = {
+                fail_text = "requires_survey_not_habitable"
+                is_surveyed = {
+                    who = prev.from
+                    status = yes
+                }
+                colonizeable_planet = no
+            }
+            custom_tooltip = {
+                fail_text = "requires_no_anomaly"
+                has_anomaly = no
+            }
+            custom_tooltip = {
+                fail_text = "requires_no_existing_megastructure"
+                planet_has_no_megastructure = yes
+            }
+            custom_tooltip = {
+                fail_text = "requires_not_star"
+                is_star = no
+            }
+            custom_tooltip = {
+                fail_text = "requires_not_minor_planetary_body"
+                is_asteroid = no
+                is_moon = no
+            }
+            custom_tooltip = {
+                fail_text = "requires_not_ring_world"
+                is_ringworld = no
+            }
+        }
+    }
+    ai_weight = {
+        factor = 0
+    }
+    on_build_complete = {
+        save_event_target_as = giga_system
+        fromfrom.planet = {
+            save_event_target_as = giga_planet
+            if = {
+                limit = {
+                    exists = orbital_station
+                }
+                orbital_station = {
+                    dismantle = yes
+                }
+            }
+            set_planet_flag = megastructure
+            set_planet_flag = has_megastructure
+        }
+        from = {
+            set_timed_country_flag = {
+                flag = has_recently_built_psychic_beacon
+                years = 20
+            }
+            country_event = {
+                id = giga_dialog.11001
+            }
+            change_variable = {
+                which = giga_current_psychic_beacon
+                value = 1
+            }
+        }
+    }
+}

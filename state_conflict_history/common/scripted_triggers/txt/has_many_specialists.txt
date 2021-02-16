@@ -1,8 +1,0 @@
-has_many_specialists = {
-    count_pops = {
-        limit = {
-            is_pop_category = specialist
-        }
-        count >= 20
-    }
-}

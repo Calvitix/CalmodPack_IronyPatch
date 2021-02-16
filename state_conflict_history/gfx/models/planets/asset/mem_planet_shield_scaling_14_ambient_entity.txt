@@ -1,5 +1,0 @@
-entity = {
-    name = "mem_planet_shield_scaling_14_ambient_entity"
-    pdxmesh = "mem_malthus_planet_shield_ambient_mesh"
-    scale = 5.8
-}

@@ -39,7 +39,7 @@ naval_admin_hive = {
     possible = {
         specialist_job_check_trigger = yes
         owner = {
-            is_gestalt = no
+            is_gestalt = yes
         }
     }
     weight = {

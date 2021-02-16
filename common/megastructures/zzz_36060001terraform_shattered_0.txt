@@ -1,0 +1,185 @@
+terraform_shattered_0 = {
+    entity = "giga_consite_5_5_entity"
+    construction_entity = "giga_consite_5_5_entity"
+    portrait = "GFX_megastructure_construction_background"
+    place_entity_on_planet_plane = no
+    prerequisites = {
+        giga_tech_terraform_shattered
+    }
+    build_time = 1260
+    resources = {
+        category = megastructures
+        cost = {
+            alloys = 2000
+            influence = 75
+        }
+        upkeep = {
+            energy = 5
+        }
+    }
+    potential = {
+        has_technology = giga_tech_terraform_shattered
+        NOT = {
+            has_global_flag = glue_disabled
+        }
+        OR = {
+            check_variable = {
+                which = giga_glue_cap
+                value = 0
+            }
+            check_variable = {
+                which = giga_current_glue
+                value < giga_glue_cap
+            }
+        }
+    }
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_inside_border"
+            is_inside_border = from
+        }
+        custom_tooltip = {
+            fail_text = "requires_not_capped"
+            from = {
+                OR = {
+                    check_variable = {
+                        which = giga_glue_cap
+                        value = 0
+                    }
+                    check_variable = {
+                        which = giga_current_glue
+                        value < giga_glue_cap
+                    }
+                }
+            }
+        }
+    }
+    placement_rules = {
+        planet_possible = {
+            custom_tooltip = {
+                fail_text = "requires_no_anomaly"
+                has_anomaly = no
+            }
+            custom_tooltip = {
+                fail_text = "requires_no_existing_megastructure"
+                planet_has_no_megastructure = yes
+            }
+            custom_tooltip = {
+                fail_text = "requires_survey_not_habitable"
+                is_surveyed = {
+                    who = prev.from
+                    status = yes
+                }
+                colonizeable_planet = no
+            }
+            custom_tooltip = {
+                fail_text = "requires_not_asteroid"
+                is_asteroid = no
+            }
+            custom_tooltip = {
+                fail_text = "requires_not_star"
+                is_star = no
+            }
+            custom_tooltip = {
+                fail_text = "must_build_around_shattered"
+                OR = {
+                    is_planet_class = pc_shattered
+                    is_planet_class = pc_shattered_2
+                    is_planet_class = pc_broken
+                }
+            }
+        }
+    }
+    ai_weight = {
+        weight = 300
+        modifier = {
+            factor = 0.50
+            any_neighbor_system = {
+                exists = owner
+                NOT = {
+                    owner = {
+                        is_same_value = from
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 3.00
+            fromfrom.planet = {
+                planet_size >= 25
+            }
+        }
+        modifier = {
+            factor = 2.00
+            fromfrom.planet = {
+                planet_size < 25
+                planet_size >= 20
+            }
+        }
+        modifier = {
+            factor = 1.50
+            fromfrom.planet = {
+                planet_size < 20
+                planet_size >= 15
+            }
+        }
+        modifier = {
+            factor = 0.00
+            fromfrom.planet = {
+                planet_size < 15
+            }
+        }
+        modifier = {
+            factor = 0
+            from = {
+                any_planet_within_border = {
+                    is_colonizable = yes
+                    planet_size > 15
+                }
+            }
+        }
+        modifier = {
+            factor = 0.00
+            from = {
+                has_country_flag = has_recently_built_terraform_shattered
+            }
+        }
+        modifier = {
+            factor = 0
+            from = {
+                OR = {
+                    has_megastructure = terraform_shattered_0
+                    has_megastructure = terraform_shattered_1
+                    has_megastructure = terraform_shattered_2
+                    has_megastructure = terraform_shattered_3
+                    has_megastructure = terraform_shattered_4
+                }
+            }
+        }
+    }
+    on_build_complete = {
+        save_event_target_as = giga_system
+        fromfrom.planet = {
+            save_event_target_as = giga_planet
+            if = {
+                limit = {
+                    exists = orbital_station
+                }
+                orbital_station = {
+                    dismantle = yes
+                }
+            }
+            set_planet_flag = megastructure
+            set_planet_flag = has_megastructure
+        }
+        from = {
+            set_timed_country_flag = {
+                flag = has_recently_built_terraform_shattered
+                years = 20
+            }
+            country_event = {
+                id = giga_dialog.11201
+            }
+        }
+    }
+}

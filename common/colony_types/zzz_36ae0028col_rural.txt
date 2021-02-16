@@ -18,12 +18,16 @@ col_rural = {
             uses_district_set = habitat
             uses_district_set = ring_world
             uses_district_set = city_world
+            uses_district_set = pdshroudarc
             uses_district_set = pdarchive
             uses_district_set = pdecocity
             uses_district_set = pdplanethab
             uses_district_set = pdbioforge
             uses_district_set = pdmachinefactory
             uses_district_set = pdfloraforge
+            uses_district_set = pdmilarc
+            uses_district_set = pdbiofort
+            uses_district_set = pdmachinefort
         }
         is_special_colony_type = no
     }
@@ -40,7 +44,7 @@ col_rural = {
         planet_district_nature_farms_build_speed_mult = 0.25
         planet_district_ocean_farms_build_speed_mult = 0.25
         planet_district_exotic_farms_build_speed_mult = 0.25
-        planet_district_generator_uncapped_speed_mult = 0.25
+        planet_district_generator_uncapped_build_speed_mult = 0.25
         planet_district_solar_generator_build_speed_mult = 0.25
         planet_district_wind_turbines_build_speed_mult = 0.25
         planet_district_geothermal_generator_build_speed_mult = 0.25

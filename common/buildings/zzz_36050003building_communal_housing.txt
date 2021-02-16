@@ -100,7 +100,7 @@ building_communal_housing = {
         "building_communal_housing_large"
     }
     ai_weight = {
-        weight = 0.5
+        weight = 0
         modifier = {
             weight = 100
             free_housing < 3
@@ -122,6 +122,7 @@ building_communal_housing = {
             has_building = building_communal_housing
             owner = {
                 has_technology = tech_paradise_dome
+            }
             }
         modifier = {
             weight = 7000

@@ -1,2 +1,0 @@
-l_spanish:
- advanced_defense_slave_army:0 "Advanced Defense Slave Army"

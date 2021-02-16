@@ -1,0 +1,85 @@
+entity = {
+    name = "interstellar_habitat_stacked_core"
+    cull_radius = 1500
+    scale = 12
+    locator = {
+        name = "loc101"
+        position = {
+            0
+            20
+            0
+        }
+        rotation = {
+            0
+            0
+            0
+        }
+    }
+    locator = {
+        name = "loc102"
+        position = {
+            0
+            -20
+            0
+        }
+        rotation = {
+            0
+            180
+            0
+        }
+    }
+    locator = {
+        name = "loc103"
+        position = {
+            0
+            0
+            0
+        }
+        rotation = {
+            0
+            0
+            0
+        }
+    }
+    locator = {
+        name = "loc104"
+        position = {
+            0
+            29
+            0
+        }
+        rotation = {
+            0
+            0
+            0
+        }
+    }
+    locator = {
+        name = "loc105"
+        position = {
+            0
+            -29
+            0
+        }
+        rotation = {
+            0
+            180
+            0
+        }
+    }
+    attach = {
+        loc101 = "interstellar_habitat_top_entity"
+    }
+    attach = {
+        loc102 = "interstellar_habitat_top_entity"
+    }
+    attach = {
+        loc103 = "interstellar_habitat_core_entity"
+    }
+    attach = {
+        loc104 = "interstellar_habitat_part_entity"
+    }
+    attach = {
+        loc105 = "interstellar_habitat_part_entity"
+    }
+}

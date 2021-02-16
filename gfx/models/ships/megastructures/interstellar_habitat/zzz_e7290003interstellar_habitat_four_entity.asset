@@ -1,0 +1,68 @@
+entity = {
+    name = "interstellar_habitat_four_entity"
+    locator = {
+        name = "loc107"
+        position = {
+            0
+            0
+            0
+        }
+        rotation = {
+            0
+            0
+            0
+        }
+    }
+    locator = {
+        name = "loc108"
+        position = {
+            0
+            0
+            0
+        }
+        rotation = {
+            90
+            0
+            0
+        }
+    }
+    locator = {
+        name = "loc109"
+        position = {
+            0
+            0
+            0
+        }
+        rotation = {
+            180
+            0
+            0
+        }
+    }
+    locator = {
+        name = "loc110"
+        position = {
+            0
+            0
+            0
+        }
+        rotation = {
+            270
+            0
+            0
+        }
+    }
+    attach = {
+        loc107 = "interstellar_ring_tube_long_entity"
+    }
+    attach = {
+        loc108 = "interstellar_ring_tube_long_entity"
+    }
+    attach = {
+        loc109 = "interstellar_ring_tube_long_entity"
+    }
+    attach = {
+        loc110 = "interstellar_ring_tube_long_entity"
+    }
+    scale = 3
+}

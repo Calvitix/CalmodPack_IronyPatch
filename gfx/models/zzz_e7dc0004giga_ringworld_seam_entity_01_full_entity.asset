@@ -1,0 +1,71 @@
+entity = {
+    name = "giga_ringworld_seam_entity_01_full_entity"
+    cull_radius = 10000.0
+    state = {
+        name = "construction"
+    }
+    locator = {
+        name = "ringworld_north"
+        position = {
+            1350
+            0
+            0
+        }
+        rotation = {
+            90
+            0
+            0
+        }
+    }
+    locator = {
+        name = "ringworld_south"
+        position = {
+            -1350
+            0
+            0
+        }
+        rotation = {
+            -90
+            0
+            0
+        }
+    }
+    locator = {
+        name = "ringworld_west"
+        position = {
+            0
+            0
+            1350
+        }
+        rotation = {
+            0
+            0
+            0
+        }
+    }
+    locator = {
+        name = "ringworld_east"
+        position = {
+            0
+            0
+            -1350
+        }
+        rotation = {
+            180
+            0
+            0
+        }
+    }
+    attach = {
+        ringworld_north = "giga_ringworld_3x_seams_entity"
+    }
+    attach = {
+        ringworld_south = "giga_ringworld_3x_seams_entity"
+    }
+    attach = {
+        ringworld_west = "giga_ringworld_3x_seams_entity"
+    }
+    attach = {
+        ringworld_east = "giga_ringworld_3x_seams_entity"
+    }
+}

@@ -1,0 +1,21 @@
+entity = {
+    name = "crystal_megabore_2_construction_entity"
+    cull_radius = 500
+    locator = {
+        name = "loc103"
+        position = {
+            0
+            -168.5
+            0
+        }
+        rotation = {
+            0
+            -90
+            0
+        }
+    }
+    attach = {
+        "loc103" = "crystal_megabore_beam_no_beam_entity"
+    }
+    scale = 1.25
+}

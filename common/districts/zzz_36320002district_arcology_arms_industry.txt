@@ -26,6 +26,9 @@ district_arcology_arms_industry = {
             volatile_motes = 2
         }
     }
+    planet_modifier = {
+        planet_housing_add = 10
+    }
     triggered_planet_modifier = {
         potential = {
             exists = owner

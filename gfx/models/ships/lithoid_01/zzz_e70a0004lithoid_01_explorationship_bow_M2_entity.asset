@@ -1,0 +1,54 @@
+entity = {
+    name = "lithoid_01_explorationship_bow_M2_entity"
+    pdxmesh = "lithoid_01_cruiser_bow_M2_mesh"
+    default_state = "idle"
+    state = {
+        name = "idle"
+        state_time = 5
+        event = {
+            time = 0.0
+            node = "light_locator_01"
+            particle = "lithoid_01_ship_light_effect"
+            keep_particle = yes
+            trigger_once = yes
+        }
+        event = {
+            time = 0.0
+            node = "light_locator_02"
+            particle = "lithoid_01_ship_light_effect"
+            keep_particle = yes
+            trigger_once = yes
+        }
+    }
+    state = {
+        name = "moving"
+        state_time = 5
+        event = {
+            time = 0.0
+            node = "light_locator_01"
+            particle = "lithoid_01_ship_light_effect"
+            keep_particle = yes
+            trigger_once = yes
+        }
+        event = {
+            time = 0.0
+            node = "light_locator_02"
+            particle = "lithoid_01_ship_light_effect"
+            keep_particle = yes
+            trigger_once = yes
+        }
+    }
+    state = {
+        name = "death"
+        state_time = 5
+    }
+    attach = {
+        base = "lithoid_01_connector_dist_s_3_entity"
+    }
+    attach = {
+        medium_gun_01 = "lithoid_01_turret_connection_m_3_entity"
+    }
+    attach = {
+        medium_gun_02 = "lithoid_01_turret_connection_m_3_entity"
+    }
+}

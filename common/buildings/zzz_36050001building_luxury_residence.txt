@@ -85,7 +85,7 @@ building_luxury_residence = {
         "building_paradise_dome"
     }
     ai_weight = {
-        weight = 0.5
+        weight = 0
         modifier = {
             weight = 100
             free_housing < 2

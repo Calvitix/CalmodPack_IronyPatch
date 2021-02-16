@@ -1,0 +1,18 @@
+@RescaleSubstellarCompressorPhase01 = 2
+entity = {
+    name = "gasignitor_phase_01_entity"
+    cull_radius = 500
+    scale = 0.9
+    locator = {
+        name = "root_01"
+        position = {
+            0
+            0
+            0
+        }
+    }
+    attach = {
+        root_01 = "gasignitor_part_2_entity"
+    }
+    scale = @RescaleSubstellarCompressorPhase01
+}

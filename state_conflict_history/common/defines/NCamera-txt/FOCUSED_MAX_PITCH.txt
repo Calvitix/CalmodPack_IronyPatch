@@ -1,3 +1,0 @@
-NCamera = {
-    FOCUSED_MAX_PITCH = 110
-}

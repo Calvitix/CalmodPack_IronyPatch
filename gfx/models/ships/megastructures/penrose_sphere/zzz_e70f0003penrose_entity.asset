@@ -1,0 +1,70 @@
+entity = {
+    name = "penrose_entity"
+    pdxmesh = "ringworld_construction_mesh"
+    cull_radius = 9999
+    meshsettings = {
+        name = "polySurface128Shape"
+        index = 0
+        texture_diffuse = "giga_ringworld_construction_diffuse.dds"
+        texture_normal = "giga_ringworld_construction_normal.dds"
+        texture_specular = "ringworld_construction_specular.dds"
+        shader = "PdxMeshTerra"
+    }
+    meshsettings = {
+        name = "polySurface161Shape"
+        index = 0
+        texture_diffuse = "giga_ringworld_seam_arthropoid_01_diffuse.dds"
+        texture_normal = "giga_ringworld_seam_normal.dds"
+        texture_specular = "ringworld_seam_arthropoid_01_specular.dds"
+        shader = "PdxMeshTerra"
+    }
+    locator = {
+        name = "locator1"
+        position = {
+            -450
+            0
+            -450
+        }
+        rotation = {
+            -90
+            0
+            0
+        }
+    }
+    locator = {
+        name = "locator2"
+        position = {
+            -225
+            0
+            -60.289
+        }
+        rotation = {
+            -30
+            0
+            0
+        }
+    }
+    locator = {
+        name = "locator3"
+        position = {
+            225
+            0
+            -60.289
+        }
+        rotation = {
+            30
+            0
+            0
+        }
+    }
+    attach = {
+        locator1 = "penrose_ringworld_3x_seams_entity"
+    }
+    attach = {
+        locator2 = "penrose_construction_entity"
+    }
+    attach = {
+        locator3 = "penrose_construction_entity"
+    }
+    scale = 3
+}

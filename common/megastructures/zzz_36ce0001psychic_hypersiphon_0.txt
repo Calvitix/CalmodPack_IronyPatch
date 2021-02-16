@@ -1,0 +1,118 @@
+psychic_hypersiphon_0 = {
+    entity = "giga_consite_7_7_entity"
+    construction_entity = "giga_consite_7_7_entity"
+    portrait = "GFX_megastructure_construction_background"
+    place_entity_on_planet_plane = no
+    prerequisites = {
+        giga_tech_psychic_hypersiphon_5
+    }
+    build_time = 1800
+    resources = {
+        category = megastructures
+        cost = {
+            alloys = 3000
+            influence = 150
+        }
+        upkeep = {
+            energy = 10
+        }
+    }
+    potential = {
+        has_ascension_perk = ap_transcendence
+        has_technology = giga_tech_psychic_hypersiphon_5
+        NOT = {
+            has_global_flag = siphon_disabled
+        }
+        OR = {
+            check_variable = {
+                which = giga_siphon_cap
+                value = 0
+            }
+            check_variable = {
+                which = giga_current_siphon
+                value < giga_siphon_cap
+            }
+        }
+    }
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_inside_border"
+            is_inside_border = from
+        }
+        custom_tooltip = {
+            fail_text = "requires_no_existing_psychic_hypersiphon"
+            from = {
+                giga_has_psychic_hypersiphon = no
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_surveyed_system"
+            giga_system_is_surveyed = yes
+        }
+        custom_tooltip = {
+            fail_text = "requires_not_capped"
+            from = {
+                OR = {
+                    check_variable = {
+                        which = giga_siphon_cap
+                        value = 0
+                    }
+                    check_variable = {
+                        which = giga_current_siphon
+                        value < giga_siphon_cap
+                    }
+                }
+            }
+        }
+    }
+    placement_rules = {
+        planet_possible = {
+            custom_tooltip = {
+                fail_text = "requires_no_existing_megastructure"
+                planet_has_no_megastructure = yes
+            }
+            custom_tooltip = {
+                fail_text = "must_build_around_star"
+                is_star = yes
+            }
+            custom_tooltip = {
+                fail_text = "requires_no_anomaly"
+                has_anomaly = no
+            }
+            custom_tooltip = {
+                fail_text = "requires_standard_planet_class"
+                giga_is_standard_star = yes
+            }
+        }
+    }
+    ai_weight = {
+        factor = 0
+    }
+    on_build_complete = {
+        save_event_target_as = giga_system
+        fromfrom.planet = {
+            save_event_target_as = giga_planet
+        }
+        from = {
+            country_event = {
+                id = giga_dialog.1401
+            }
+            change_variable = {
+                which = giga_current_siphon
+                value = 1
+            }
+        }
+        fromfrom.planet = {
+            if = {
+                limit = {
+                    exists = orbital_station
+                }
+                orbital_station = {
+                    dismantle = yes
+                }
+            }
+            set_planet_flag = megastructure
+            set_planet_flag = has_megastructure
+        }
+    }
+}

@@ -316,8 +316,16 @@ district_city = {
             has_planet_flag = build_city_here
         }
         modifier = {
-            factor = 5000
-            has_planet_flag = ecumen
+            factor = 1000
+            free_district_slots < 5
+            has_planet_flag = do_ai_ecu_planned
+        }
+        modifier = {
+            factor = 0
+            free_housing > 2
+            NOT = {
+                has_planet_flag = do_ai_ecu_planned
+            }
         }
     }
     ai_resource_production = {

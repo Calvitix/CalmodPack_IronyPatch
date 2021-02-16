@@ -97,7 +97,6 @@ district_pdbiofort_housing = {
             }
         }
         text = job_patrol_drone_effect_desc
-        text = job_warrior_drone_effect_desc
     }
     ai_weight = {
         weight = 0

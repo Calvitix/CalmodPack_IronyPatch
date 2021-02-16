@@ -1,3 +1,0 @@
-NCamera = {
-    SYSTEM_MIN_PITCH = -70
-}

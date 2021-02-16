@@ -1,0 +1,16 @@
+entity = {
+    name = "giga_alderson_frame_part_01_entity"
+    pdxmesh = "giga_alderson_empty_mesh"
+    game_data = {
+        size = 250
+    }
+    meshsettings = {
+        name = "frame"
+        index = 0
+        texture_diffuse = "giga_disk_frame_diffuse.dds"
+        texture_normal = "giga_disk_frame_normal.dds"
+        texture_specular = "giga_disk_frame_specular.dds"
+        shader = "PdxMeshTerra"
+    }
+    scale = 3
+}

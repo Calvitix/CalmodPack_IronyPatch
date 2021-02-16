@@ -1,0 +1,103 @@
+district_giga_birch_structure = {
+    base_buildtime = 600
+    ai_weight = {
+        weight = 1000
+    }
+    is_capped_by_modifier = yes
+    show_on_uncolonized = {
+        uses_district_set = giga_birch
+    }
+    potential = {
+        uses_district_set = giga_birch
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = @giga_birch_cost
+        }
+        upkeep = {
+            energy = @giga_birch_maintenance
+        }
+    }
+    triggered_planet_modifier = {
+        planet_housing_add = 100
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            job_structure_manager_add = 1
+            job_structure_manager_per_pop = 0.01
+            job_technician_add = 75
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_structure_mind_add = 1
+            job_structure_mind_per_pop = 0.01
+            job_technician_drone_add = 75
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_structure_process_add = 1
+            job_structure_process_per_pop = 0.01
+            job_technician_drone_add = 75
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+                has_valid_civic = civic_machine_servitor
+            }
+        }
+        modifier = {
+            job_bio_trophy_add = 100
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        text = "jobs_structure_desc"
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        text = "jobs_structure_mind_desc"
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        text = "jobs_structure_process_desc"
+    }
+}

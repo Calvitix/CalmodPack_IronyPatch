@@ -31,7 +31,7 @@ district_hab_housing = {
             }
         }
         modifier = {
-            job_maintenance_drone_add = 1
+            job_maintenance_drone_add = 2
         }
     }
     triggered_desc = {

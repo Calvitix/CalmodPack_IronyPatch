@@ -1,0 +1,107 @@
+quasi_stellar_obliterator_0 = {
+    entity = "construction_platform_entity"
+    construction_entity = "construction_platform_entity"
+    portrait = "GFX_megastructure_construction_background"
+    place_entity_on_planet_plane = no
+    entity_offset = {
+        x = -150
+        y = -7
+    }
+    prerequisites = {
+        giga_tech_quasi_stellar_1
+    }
+    build_time = 1800
+    resources = {
+        category = megastructures
+        cost = {
+            alloys = 100000
+            influence = 150
+        }
+        upkeep = {
+            energy = 5
+        }
+    }
+    potential = {
+        has_ascension_perk = ap_qso
+        has_technology = giga_tech_quasi_stellar_1
+        NOT = {
+            has_global_flag = quasistellar_disabled
+        }
+    }
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_no_existing_quasistellar"
+            from = {
+                NOT = {
+                    has_country_flag = built_quasistellar
+                }
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_inside_border"
+            is_inside_border = from
+        }
+        custom_tooltip = {
+            fail_text = "requires_surveyed_system"
+            giga_system_is_surveyed = yes
+        }
+    }
+    placement_rules = {
+        planet_possible = {
+            custom_tooltip = {
+                fail_text = "requires_no_existing_megastructure"
+                planet_has_no_megastructure = yes
+            }
+            custom_tooltip = {
+                fail_text = "requires_no_anomaly"
+                has_anomaly = no
+            }
+            custom_tooltip = {
+                fail_text = "must_build_around_core_quasar"
+                is_planet_class = pc_core_quasar
+            }
+        }
+    }
+    ai_weight = {
+        factor = 0
+    }
+    on_build_complete = {
+        save_event_target_as = giga_system
+        set_global_flag = quasistellar_construction
+        fromfrom.planet = {
+            save_event_target_as = giga_planet
+            if = {
+                limit = {
+                    exists = orbital_station
+                }
+                orbital_station = {
+                    dismantle = yes
+                }
+            }
+            set_planet_flag = megastructure
+            set_planet_flag = has_megastructure
+            set_planet_flag = cant_build_here
+            set_planet_flag = cant_target_this_planet
+        }
+        every_system = {
+            limit = {
+                distance = {
+                    source = prev
+                    use_bypasses = no
+                    min_jumps = 1
+                    max_jumps = 4
+                }
+            }
+            every_system_planet = {
+                set_planet_flag = cant_build_here
+                set_planet_flag = cant_target_this_planet
+            }
+        }
+        from = {
+            country_event = {
+                id = giga_qso.2000
+            }
+            set_country_flag = built_quasistellar
+        }
+    }
+}

@@ -85,7 +85,7 @@ district_spaceport = {
         text = job_pilot_drone_effect_desc
     }
     ai_weight = {
-        weight = 1
+        weight = 20
         modifier = {
             factor = 5
             should_increase_naval_capacity = yes
@@ -109,7 +109,7 @@ district_spaceport = {
         modifier = {
             factor = 0
             AND = {
-                free_jobs > 1
+                free_jobs > 6
                 has_unemployed_workers = no
             }
         }

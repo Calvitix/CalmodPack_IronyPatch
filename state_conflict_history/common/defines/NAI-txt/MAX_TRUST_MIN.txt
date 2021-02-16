@@ -1,3 +1,0 @@
-NAI = {
-    MAX_TRUST_MIN = 25
-}

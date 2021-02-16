@@ -1,0 +1,170 @@
+ehof_megastructure_phase0 = {
+    entity = "construction_platform_entity"
+    portrait = "GFX_megastructure_construction_background"
+    construction_entity = "construction_platform_entity"
+    entity_offset = {
+        x = -15
+        y = 15
+    }
+    show_galactic_map_icon = yes
+    place_entity_on_planet_plane = no
+    build_time = @phase_0_build_time
+    resources = {
+        category = megastructures
+        cost = {
+            influence = @phase_0_influence_cost
+            alloys = @phase_0_alloy_cost
+            energy = @phase_0_energy_cost
+        }
+        upkeep = {
+            energy = @phase_0_energy_upkeep
+        }
+    }
+    prerequisites = {
+        "tech_ehof_phase_01"
+    }
+    potential = {
+        check_variable = {
+            which = ehof_phase
+            value < 1
+        }
+        NOT = {
+            has_global_flag = ehof_disabled
+        }
+    }
+    possible = {
+        exists = starbase
+        custom_tooltip = {
+            fail_text = "requires_inside_border"
+            is_inside_border = from
+        }
+        custom_tooltip = {
+            fail_text = "requires_surveyed_system"
+            giga_system_is_surveyed = yes
+        }
+        custom_tooltip = {
+            fail_text = "requires_no_existing_ehof"
+            from = {
+                NOT = {
+                    any_owned_megastructure = {
+                        is_an_ehof = yes
+                    }
+                }
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_no_existing_megastructure"
+            has_no_non_gate_megastructure = yes
+        }
+        custom_tooltip = {
+            fail_text = "requires_no_gargantua"
+            NOT = {
+                has_star_flag = guardians_technosphere_system
+            }
+        }
+    }
+    placement_rules = {
+        planet_possible = {
+            custom_tooltip = {
+                fail_text = "requires_no_existing_megastructure"
+                planet_has_no_megastructure = yes
+            }
+            custom_tooltip = {
+                fail_text = "must_build_around_star"
+                is_star = yes
+            }
+            custom_tooltip = {
+                fail_text = "requires_no_anomaly"
+                has_anomaly = no
+            }
+            custom_tooltip = {
+                fail_text = "must_build_around_black_hole"
+                giga_black_hole = yes
+            }
+        }
+    }
+    ai_weight = {
+        factor = 50
+        modifier = {
+            factor = 0.1
+            any_neighbor_system = {
+                exists = owner
+                NOT = {
+                    owner = {
+                        is_same_value = from
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            has_global_flag = ehof_disabled
+        }
+        modifier = {
+            factor = 0
+            has_global_flag = ehof_ai_disabled
+        }
+        modifier = {
+            factor = 0
+            any_country = {
+                is_country_type = global_event
+                check_variable = {
+                    which = amount_of_ehofs
+                    value >= giga_ehof_ai_cap
+                }
+            }
+        }
+    }
+    on_build_start = {
+        random_country = {
+            limit = {
+                is_country_type = global_event
+            }
+            change_variable = {
+                which = amount_of_ehofs
+                value = 1
+            }
+        }
+    }
+    on_build_cancel = {
+        random_country = {
+            limit = {
+                is_country_type = global_event
+            }
+            subtract_variable = {
+                which = amount_of_ehofs
+                value = 1
+            }
+        }
+    }
+    on_build_complete = {
+        fromfrom = {
+            remove_megastructure_flag = ehof_phase_01
+            remove_megastructure_flag = ehof_phase_02
+            remove_megastructure_flag = ehof_phase_03
+            remove_megastructure_flag = ehof_phase_04
+            set_megastructure_flag = ehof_phase_00
+            planet = {
+                set_planet_flag = megastructure
+                set_planet_flag = has_megastructure
+                if = {
+                    limit = {
+                        has_orbital_station = yes
+                    }
+                    orbital_station = {
+                        dismantle = yes
+                    }
+                }
+            }
+        }
+        from = {
+            set_variable = {
+                which = ehof_phase
+                value = 0
+            }
+            country_event = {
+                id = ehof_megastructure.101
+            }
+        }
+    }
+}

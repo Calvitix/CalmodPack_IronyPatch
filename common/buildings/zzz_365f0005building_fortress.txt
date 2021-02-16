@@ -9,17 +9,19 @@ building_fortress = {
     }
     destroy_trigger = {
         exists = owner
-        owner = {
-            is_ai = yes
-        }
-        num_buildings = {
-            type = building_fortress
-            value > 1
-        }
-        NOT = {
-            owner = {
-                has_tradition = tr_plentiful_defence_5
+        OR = {
+            num_buildings = {
+                type = building_fortress
+                value > 1
             }
+            free_building_slots = 0
+            owner = {
+                is_ai = yes
+            }
+            owner = {
+                used_naval_capacity_percent < 0.4
+            }
+            buildings_no_motes = yes
         }
     }
     planet_modifier = {
@@ -48,7 +50,7 @@ building_fortress = {
         }
     }
     resources = {
-        category = planet_buildings
+        category = planet_buildings_strongholds
         cost = {
             minerals = 400
             volatile_motes = 50
@@ -137,7 +139,6 @@ building_fortress = {
         }
     }
     on_built = {
-        planet = {
             owner = {
                 set_timed_country_flag = {
                     flag = buildings_new_mote_building
@@ -146,7 +147,6 @@ building_fortress = {
                 set_timed_country_flag = {
                     flag = adv_foundry_built
                     days = 1000
-                }
             }
         }
     }

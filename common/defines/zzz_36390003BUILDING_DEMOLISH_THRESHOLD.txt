@@ -1,0 +1,3 @@
+NAI = {
+    BUILDING_DEMOLISH_THRESHOLD = -0.6
+}
