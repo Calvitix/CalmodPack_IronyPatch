@@ -1,0 +1,90 @@
+@planet_type_bonus = 1.5
+d_black_soil = {
+    is_for_colonizeable = yes
+    use_for_min_max_adjustments = yes
+    category = deposit_cat_food
+    use_weights_for_terraforming_swap_types = yes
+    should_swap_deposit_on_terraforming = yes
+    terraforming_swap_types = {
+        d_teeming_reef
+        d_marvelous_oasis
+        d_tropical_island
+        d_fungal_forest
+        d_complex_ecosystem
+        d_exotic_fauna
+        d_hydrocarbon_lakes
+        d_ammonia_seas
+    }
+    planet_modifier = {
+        district_farming_max = 3
+        planet_jobs_food_produces_mult = 0.05
+    }
+    potential = {
+        OR = {
+            is_planet_class = pc_continental
+            is_planet_class = pc_savannah
+            is_planet_class = pc_gaia
+            is_planet_class = pc_pdshroud
+            is_planet_class = pc_wetswamp
+            is_planet_class = pc_cascadian
+            is_planet_class = pc_subarctic
+            is_planet_class = pc_steppe
+            is_planet_class = pc_prairie
+            is_planet_class = pc_veld
+            is_planet_class = pc_semiarid
+            is_planet_class = pc_geothermal
+            is_planet_class = pc_tidallylocked
+            is_planet_class = pc_supercon
+            is_planet_class = pc_floating
+            is_planet_class = pc_crystal
+            is_planet_class = pc_technoorganic
+            is_planet_class = pc_graveyard
+            is_planet_class = pc_floating
+            is_planet_class = pc_crystal
+            is_planet_class = pc_technoorganic
+            is_planet_class = pc_retinal
+            is_planet_class = pc_forest
+            is_planet_class = pc_lake
+            is_planet_class = pc_tepid
+            is_planet_class = pc_megaflora
+            is_planet_class = pc_megaflorahive
+            is_planet_class = pc_megafloratol
+            is_planet_class = pc_ash
+            is_planet_class = pc_primal
+            is_planet_class_pc_marginal_warm = yes
+            has_modifier = "equatorial_world"
+        }
+        NOR = {
+            has_modifier = "young_world"
+            has_modifier = "panthalassic_world"
+            has_modifier = "arid_tidally_locked"
+            has_modifier = "ocean_tidally_locked"
+        }
+        has_district_farming = yes
+    }
+    drop_weight = {
+        weight = 4
+        modifier = {
+            factor = @planet_type_bonus
+            is_wet = yes
+        }
+        modifier = {
+            factor = 3
+            has_modifier = "prairie_world"
+        }
+        modifier = {
+            factor = 0.5
+            OR = {
+                is_planet_class = pc_savannah
+                has_modifier = "pangea_world"
+            }
+        }
+        modifier = {
+            factor = 0.25
+            OR = {
+                is_planet_class = pc_ocean
+                has_modifier = "coriolis_world"
+            }
+        }
+    }
+}

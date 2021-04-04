@@ -1,0 +1,8 @@
+random_list = {
+    name = "rl_SMCO_asteroids"
+    planets = {
+        pc_asteroid
+        pc_ice_asteroid
+        pc_rare_crystal_asteroid
+    }
+}

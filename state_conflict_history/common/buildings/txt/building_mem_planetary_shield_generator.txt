@@ -1,0 +1,147 @@
+building_mem_planetary_shield_generator = {
+    icon = "building_planetary_shield_generator"
+    base_buildtime = 600
+    base_cap_amount = 1
+    add_to_first_building_slot = yes
+    category = army
+    planet_modifier = {
+        planet_orbital_bombardment_damage = -0.5
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_country_flag = moon_bump_shield_completed
+            }
+        }
+        modifier = {
+            planet_orbital_bombardment_damage = -0.25
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 500
+            alloys = 50
+        }
+        upkeep = {
+            energy = 5
+        }
+    }
+    upgrades = {
+        building_mem_planetary_shield_generator_heavy
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            job_researcher_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_brain_drone_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_calculator_add = 1
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        text = job_researcher_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        text = job_brain_drone_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        text = job_calculator_effect_desc
+    }
+    potential = {
+        planet = {
+            NOT = {
+                is_planet_class = pc_asteroid
+            }
+        }
+        NOR = {
+            has_building = "building_mem_planetary_shield_generator_heavy"
+            has_building = "building_mem_planetary_shield_generator_orila"
+        }
+    }
+    allow = {
+        has_upgraded_capital = yes
+        has_global_flag = mem_more_events_mod
+    }
+    prerequisites = {
+        "tech_planetary_shield_generator"
+    }
+    ai_weight = {
+        weight = 0
+        modifier = {
+            weight = 1
+            exists = owner
+            owner = {
+                is_at_war = yes
+            }
+            num_pops > 25
+            free_amenities > 10
+        }
+        modifier = {
+            weight = 500000
+            solar_system = {
+                OR = {
+                    has_star_flag = space_locusts_current_location
+                    any_neighbor_system = {
+                        has_star_flag = space_locusts_current_location
+                    }
+                    any_neighbor_system = {
+                        any_neighbor_system = {
+                            has_star_flag = space_locusts_current_location
+                        }
+                    }
+                }
+            }
+        }
+        modifier = {
+            weight = 10
+            num_buildings = {
+                type = building_fortress
+                value > 0
+            }
+        }
+    }
+}

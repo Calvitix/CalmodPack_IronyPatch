@@ -1,0 +1,43 @@
+namespace = distar
+ship_event = {
+    id = distar.46
+    title = "distar.46.name"
+    desc = "distar.46.desc"
+    picture = GFX_evt_surreal_visions
+    show_sound = event_scanner
+    location = event_target:dark_flow_gateway
+    is_triggered_only = yes
+    immediate = {
+        random_system_megastructure = {
+            limit = {
+                OR = {
+                    is_megastructure_type = gateway_ruined
+                    is_megastructure_type = gateway_restored
+                }
+            }
+            save_event_target_as = dark_flow_gateway
+        }
+        solar_system = {
+            save_event_target_as = dark_flow_gateway_system
+        }
+    }
+    option = {
+        name = DISCONCERTING
+        owner = {
+            add_monthly_resource_mult = {
+                resource = physics_research
+                value = @tier2researchreward
+                min = @tier2researchmin
+                max = @tier2researchmax
+            }
+            hidden_effect = {
+                set_country_flag = lcluster_clue_dark_flow
+                pop_lcluster_event = yes
+            }
+        }
+        leader = {
+            add_trait = leader_trait_paranoid
+            add_skill = 2
+        }
+    }
+}

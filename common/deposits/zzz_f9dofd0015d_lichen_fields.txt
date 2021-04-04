@@ -1,0 +1,96 @@
+@planet_type_bonus = 1.5
+d_lichen_fields = {
+    is_for_colonizeable = yes
+    use_for_min_max_adjustments = yes
+    category = deposit_cat_food
+    use_weights_for_terraforming_swap_types = yes
+    should_swap_deposit_on_terraforming = yes
+    terraforming_swap_types = {
+        d_bountiful_plains
+        d_rugged_woods
+        d_green_hills
+        d_forgiving_tundra
+        d_boggy_fens
+        d_nutritious_mudland
+        d_natural_farmland
+        d_interesting_wildlife
+        d_complex_ecosystem
+        d_exotic_fauna
+        d_sea_grass
+        d_searing_desert
+        d_mineral_fields
+        d_lichen_fields
+        d_bountiful_plains
+        d_green_hills
+        d_nutritious_mudland
+        d_fertile_lands
+        d_quicksand_basin
+        d_dune_sea
+        d_forgiving_tundra
+        d_radioactive_wasteland
+    }
+    planet_modifier = {
+        district_farming_max = 1
+        planet_jobs_food_produces_mult = -0.1
+    }
+    potential = {
+        OR = {
+            is_planet_class = pc_nuked
+            is_planet_class = pc_irradiated
+            is_planet_class = pc_arctic
+            is_planet_class = pc_frozen_desert
+            is_planet_class = pc_glacial
+            is_planet_class = pc_antarctic
+            is_planet_class = pc_aeolian
+            is_planet_class = pc_karst
+            is_planet_class = pc_ash
+            is_planet_class_pc_marginal_cold = yes
+            has_modifier = "young_world"
+        }
+        has_district_farming = yes
+        NOR = {
+            has_modifier = "cryokarst_world"
+            has_modifier = "equatorial_world"
+            has_modifier = "lava_world"
+            has_modifier = "glacial_world"
+            has_modifier = "ice_world"
+            has_modifier = "cold_desert"
+        }
+    }
+    drop_weight = {
+        weight = 1
+        modifier = {
+            factor = 0.33
+            is_planet_class = pc_nuked
+            is_planet_class = pc_irradiated
+        }
+        modifier = {
+            factor = @planet_type_bonus
+            is_wet = yes
+        }
+        modifier = {
+            factor = 1.5
+            has_modifier = "lush_planet"
+        }
+        modifier = {
+            factor = 0.5
+            has_modifier = "bleak_planet"
+        }
+        modifier = {
+            factor = 0.5
+            is_planet_class = pc_arctic
+        }
+        modifier = {
+            factor = 0.25
+            OR = {
+                is_planet_class = pc_nuked
+                has_modifier = "geothermal_world"
+                has_modifier = "mineral_world"
+            }
+        }
+        modifier = {
+            factor = 0
+            has_modifier = "cryokarst_world"
+        }
+    }
+}

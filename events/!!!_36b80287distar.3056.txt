@@ -1,0 +1,125 @@
+namespace = distar
+country_event = {
+    id = distar.3056
+    title = "distar.3056.name"
+    desc = "distar.3056.desc"
+    picture = GFX_evt_physics_research
+    show_sound = event_scanner
+    location = from
+    trackable = yes
+    is_triggered_only = yes
+    option = {
+        name = distar.3056.a
+        enable_special_project = {
+            name = "speed_demon_open_box_project"
+            location = root.owner.capital_scope
+            owner = root.owner
+        }
+        custom_tooltip = distar.3056.a.tooltip
+        add_monthly_resource_mult = {
+            resource = physics_research
+            value = @tier4researchreward
+            min = @tier4researchmin
+            max = @tier4researchmax
+        }
+    }
+    option = {
+        name = distar.3056.b
+        custom_tooltip = distar.3056.b.tooltip
+        add_monthly_resource_mult = {
+            resource = energy
+            value = @tier2materialreward
+            min = @tier2materialmin
+            max = @tier2materialmax
+        }
+        add_monthly_resource_mult = {
+            resource = minerals
+            value = @tier1materialreward
+            min = @tier1materialmin
+            max = @tier1materialmax
+        }
+        custom_tooltip = distar.3056.a.tooltip
+        add_monthly_resource_mult = {
+            resource = physics_research
+            value = @tier3researchreward
+            min = @tier3researchmin
+            max = @tier3researchmax
+        }
+        hidden_effect = {
+            if = {
+                limit = {
+                    any_relation = {
+                        is_robot_empire = no
+                        is_homicidal = no
+                        is_ai = yes
+                        OR = {
+                            is_country_type = default
+                            is_country_type = ascended_empire
+                            is_country_type = lost_empire
+                        }
+                        OR = {
+                            is_xenophile = yes
+                            is_materialist = yes
+                            is_friendly_to = ROOT
+                            is_cordial_to = ROOT
+                            is_protective_to = ROOT
+                        }
+                    }
+                }
+                random_relation = {
+                    limit = {
+                        is_robot_empire = no
+                        is_homicidal = no
+                        is_ai = yes
+                        OR = {
+                            is_country_type = default
+                            is_country_type = ascended_empire
+                            is_country_type = lost_empire
+                        }
+                        OR = {
+                            is_xenophile = yes
+                            is_materialist = yes
+                            is_friendly_to = ROOT
+                            is_cordial_to = ROOT
+                            is_protective_to = ROOT
+                        }
+                    }
+                    save_event_target_as = purchasing_country
+                    random_list = {
+                        1 = {
+                            ROOT = {
+                                set_country_flag = modification_stronger
+                            }
+                            modify_species = {
+                                species = this
+                                add_trait = trait_social_pheromones
+                            }
+                        }
+                        1 = {
+                            ROOT = {
+                                set_country_flag = modification_adaptive
+                            }
+                            modify_species = {
+                                species = this
+                                add_trait = trait_bioadaptability
+                            }
+                        }
+                        1 = {
+                            ROOT = {
+                                set_country_flag = modification_longlived
+                            }
+                            modify_species = {
+                                species = this
+                                add_trait = trait_limited_regeneration
+                            }
+                        }
+                    }
+                }
+                country_event = {
+                    id = anomalymod.89
+                    days = 10
+                }
+            }
+        }
+    }
+}

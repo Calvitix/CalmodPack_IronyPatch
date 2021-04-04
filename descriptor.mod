@@ -5,6 +5,7 @@ dependencies={
 	"UI Overhaul Dynamic + Planetary Diversity"
 	"UI Overhaul Dynamic + Tiny Outliner v2"
 	"!!Planetary Diversity AI Terraforming Patch"
+	"UI Overhaul Dynamic + SpeedDial"
 	"UI Overhaul Dynamic + Plentiful Traditions"
 	"Patch for Plentiful Perks and Pl-Di"
 	"! Starnet for NSC2"
@@ -22,6 +23,8 @@ dependencies={
 	"UI Overhaul Dynamic - Dark UI"
 	"UI Overhaul Dynamic + Expanded Colours"
 	"District Overhaul 2 Bugfix"
+	"Diverse New Frontiers"
+	"Planetary Diversity - Ringworlds"
 }
 path="E:/Documents/Paradox Interactive/Stellaris/mod/IronyModManager_Calmodpack"
 name="IronyModManager_Calmodpack"

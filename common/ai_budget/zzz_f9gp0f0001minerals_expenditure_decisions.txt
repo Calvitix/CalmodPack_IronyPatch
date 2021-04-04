@@ -1,0 +1,17 @@
+minerals_expenditure_decisions = {
+    resource = minerals
+    type = expenditure
+    category = decisions
+    potential = {
+        has_resource = {
+            type = minerals
+            amount > 5000
+        }
+    }
+    fraction = {
+        weight = 0.2
+    }
+    static_max = {
+        base = 2000
+    }
+}

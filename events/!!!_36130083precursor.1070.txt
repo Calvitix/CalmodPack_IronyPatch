@@ -1,0 +1,28 @@
+namespace = precursor
+ship_event = {
+    id = precursor.1070
+    title = "precursor.1070.name"
+    desc = "precursor.1070.desc"
+    picture = GFX_evt_mining_station
+    location = FROM
+    trackable = yes
+    is_triggered_only = yes
+    immediate = {
+        hidden_effect = {
+            owner = {
+                set_country_flag = first_league_14
+            }
+        }
+    }
+    option = {
+        name = CURIOUS
+        from = {
+            set_deposit = d_energy_4
+            enable_special_project = {
+                name = "FIRST_LEAGUE_ARCHEOLOGY_14"
+                location = this
+                owner = root.owner
+            }
+        }
+    }
+}

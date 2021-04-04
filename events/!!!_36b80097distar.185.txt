@@ -1,0 +1,41 @@
+namespace = distar
+ship_event = {
+    id = distar.185
+    title = "distar.185.name"
+    desc = {
+        text = "distar.185.desc"
+        trigger = {
+            owner = {
+                NOT = {
+                    has_authority = auth_machine_intelligence
+                }
+            }
+        }
+    }
+    desc = {
+        text = "distar.185.mi.desc"
+        trigger = {
+            owner = {
+                has_authority = auth_machine_intelligence
+            }
+        }
+    }
+    picture = GFX_evt_aggressive_flora
+    show_sound = event_alien_nature
+    location = from
+    is_triggered_only = yes
+    option = {
+        name = DISCONCERTING
+        FROM = {
+            add_deposit = d_predatory_plants
+        }
+        owner = {
+            add_monthly_resource_mult = {
+                resource = society_research
+                value = @tier2researchreward
+                min = @tier2researchmin
+                max = @tier2researchmax
+            }
+        }
+    }
+}

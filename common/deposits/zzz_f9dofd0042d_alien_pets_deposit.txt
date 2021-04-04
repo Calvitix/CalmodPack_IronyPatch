@@ -1,0 +1,126 @@
+@mid_rare = 0.25
+d_alien_pets_deposit = {
+    is_for_colonizeable = yes
+    category = deposit_cat_rare_blocker
+    all_blocker_swap_types = yes
+    potential = {
+        can_have_habitable_deposits = yes
+        NOR = {
+            has_modifier = "panthalassic_world"
+            has_modifier = "storm_world"
+            has_modifier = "ocean_tidally_locked"
+            has_modifier = "glacial_world"
+            has_modifier = "ice_world"
+        }
+    }
+    time = 180
+    resources = {
+        category = deposit_blockers
+        cost = {
+            energy = 500
+        }
+    }
+    planet_modifier = {
+        building_xeno_zoo_max = 1
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            job_pioneer_add = 1
+            job_smuggler_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_opportunist_drone_add = 1
+            job_aberrant_drone_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_scout_drone_add = 1
+            job_renegade_drone_add = 1
+        }
+    }
+    drop_weight = {
+        weight = @mid_rare
+        modifier = {
+            factor = 2
+            is_planet_class = pc_gaia
+        }
+        modifier = {
+            factor = 2
+            is_extreme_subclass = yes
+        }
+        modifier = {
+            factor = 2
+            is_planet_class = pc_pdshroud
+        }
+        modifier = {
+            factor = 2
+            is_planet_class = pc_geothermal
+        }
+        modifier = {
+            factor = 2
+            is_planet_class = pc_superhabitable
+        }
+        modifier = {
+            factor = 2
+            is_planet_class = pc_tidallylocked
+        }
+        modifier = {
+            factor = 2
+            is_planet_class = pc_supercon
+        }
+        modifier = {
+            factor = 2
+            is_planet_class = pc_graveyard
+        }
+        modifier = {
+            factor = 2
+            is_planet_class = pc_floating
+        }
+        modifier = {
+            factor = 2
+            is_planet_class = pc_crystal
+        }
+        modifier = {
+            factor = 2
+            is_planet_class = pc_technoorganic
+        }
+        modifier = {
+            factor = 2
+            is_planet_class = pc_karst
+        }
+        modifier = {
+            factor = 0
+            solar_system = {
+                OR = {
+                    has_star_flag = empire_home_system
+                    has_star_flag = sol_system
+                    has_star_flag = deneb_system
+                }
+            }
+        }
+    }
+    ai_weight = {
+        weight = 0
+    }
+}

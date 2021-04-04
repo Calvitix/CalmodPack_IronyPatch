@@ -1,0 +1,127 @@
+district_bureaucratic_t2 = {
+    base_buildtime = 360
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        has_district_bureaucratic_t2 = yes
+    }
+    potential = {
+        has_district_bureaucratic_t2 = yes
+    }
+    conversion_ratio = 1
+    convert_to = {
+        district_bureaucratic
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            alloys = 20
+            minerals = 600
+        }
+        upkeep = {
+            energy = 8
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            job_bureaucrat_add = 10
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_synapse_drone_add = 10
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+            has_special_ringworld_boost = yes
+        }
+        modifier = {
+            job_bureaucrat_add = 20
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+            has_special_ringworld_boost = yes
+        }
+        modifier = {
+            job_synapse_drone_add = 20
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        text = job_bureaucrat_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = job_synapse_drone_effect_desc
+    }
+    ai_weight = {
+        weight = 12
+        modifier = {
+            factor = 2
+            owner = {
+                empire_sprawl_over_cap > 0
+            }
+        }
+        modifier = {
+            factor = 2
+            owner = {
+                empire_sprawl_over_cap > 10
+            }
+        }
+        modifier = {
+            factor = 2
+            owner = {
+                empire_sprawl_over_cap > 20
+            }
+        }
+        modifier = {
+            factor = 2
+            owner = {
+                empire_sprawl_over_cap > 40
+            }
+        }
+        modifier = {
+            factor = 2
+            owner = {
+                has_valid_civic = civic_byzantine_bureaucracy
+            }
+        }
+    }
+    ai_resource_production = {
+        energy = 5
+        trigger = {
+            always = yes
+        }
+    }
+}

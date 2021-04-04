@@ -1,0 +1,150 @@
+district_gas_refinery = {
+    base_buildtime = 480
+    min_for_deposits_on_planet = 2
+    max_for_deposits_on_planet = 5
+    show_on_uncolonized = {
+        has_gas_deposits = yes
+    }
+    potential = {
+        exists = owner
+        owner = {
+            has_technology = tech_exotic_gases
+        }
+        has_gas_deposits = yes
+    }
+    allow = {
+        production_district_allowed = yes
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            trigger = {
+                from = {
+                    is_ai = no
+                }
+            }
+            minerals = 600
+            alloys = 20
+        }
+        cost = {
+            trigger = {
+                from = {
+                    is_ai = yes
+                }
+            }
+            minerals = 800
+        }
+        upkeep = {
+            energy = 4
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_gas_extraction_drone_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire_spiritualist = no
+            }
+        }
+        modifier = {
+            job_gas_extractor_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_fallen_empire_spiritualist = yes
+            }
+        }
+        modifier = {
+            job_gas_extractor_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_policy_flag = do_rural_housing
+            }
+        }
+        modifier = {
+            planet_housing_add = 2
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = job_gas_extraction_drone_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire_spiritualist = no
+            }
+        }
+        text = job_gas_extractor_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_fallen_empire_spiritualist = yes
+            }
+        }
+        text = job_gas_extractor_effect_desc
+    }
+    ai_weight = {
+        weight = 4
+        modifier = {
+            factor = 8
+            need_exotic_gases = yes
+        }
+        modifier = {
+            factor = 1.85
+            low_exotic_gases_storage = yes
+        }
+        modifier = {
+            factor = 5
+            has_unemployed_workers = yes
+        }
+        modifier = {
+            factor = 0
+            AND = {
+                free_jobs > 1
+                has_unemployed_workers = no
+            }
+        }
+        modifier = {
+            factor = 0
+            exotic_gases_not_needed = yes
+        }
+        modifier = {
+            factor = 2
+            has_designation = col_refinery
+        }
+    }
+    ai_resource_production = {
+        exotic_gases = 2
+        trigger = {
+            exotic_gases_not_needed = no
+        }
+    }
+}

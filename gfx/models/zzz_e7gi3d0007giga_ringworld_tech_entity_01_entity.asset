@@ -1,0 +1,39 @@
+@ringworld_segment_size = 50
+entity = {
+    name = "giga_ringworld_tech_entity_01_entity"
+    cull_radius = 1500
+    pdxmesh = "ringworld_tech_01_mesh"
+    default_state = "idle"
+    state = {
+        name = "idle"
+        state_time = 5
+        event = {
+            time = 0
+            node = "tech_1"
+            particle = "ringworld_tech_particle"
+            keep_particle = yes
+            trigger_once = yes
+        }
+        event = {
+            time = 1
+            node = "tech_3"
+            particle = "ringworld_tech_particle"
+            keep_particle = yes
+            trigger_once = yes
+        }
+    }
+    state = {
+        name = "construction"
+    }
+    meshsettings = {
+        name = "pasted__polySurface28Shape"
+        index = 0
+        texture_diffuse = "giga_ringworld_tech_diffuse.dds"
+        texture_normal = "ringworld_tech_normal.dds"
+        texture_specular = "ringworld_tech_specular.dds"
+        shader = "PdxMeshTerra"
+    }
+    game_data = {
+        size = @ringworld_segment_size
+    }
+}

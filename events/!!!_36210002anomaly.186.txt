@@ -1,0 +1,125 @@
+namespace = anomaly
+ship_event = {
+    id = anomaly.186
+    title = "anomaly.186.name"
+    desc = {
+        text = anomaly.186.desc.v1
+        trigger = {
+            hidden:owner = {
+                is_machine_empire = no
+                OR = {
+                    has_policy_flag = ai_outlawed
+                    has_ethic = ethic_spiritualist
+                    has_ethic = ethic_fanatic_spiritualist
+                    NOT = {
+                        has_technology = tech_synthetic_workers
+                    }
+                }
+            }
+        }
+    }
+    desc = {
+        text = anomaly.186.desc.v3
+        trigger = {
+            hidden:owner = {
+                OR = {
+                    has_technology = tech_synthetic_workers
+                    is_machine_empire = yes
+                }
+                NOR = {
+                    has_policy_flag = ai_outlawed
+                    has_ethic = ethic_spiritualist
+                    has_ethic = ethic_fanatic_spiritualist
+                }
+            }
+        }
+    }
+    picture = GFX_evt_sapient_AI
+    show_sound = event_radio_chatter
+    location = fromfrom
+    is_triggered_only = yes
+    trackable = yes
+    option = {
+        name = "anomaly.186.a"
+        hidden_effect = {
+            owner = {
+                country_event = {
+                    id = story.5
+                    days = 30
+                }
+            }
+        }
+        owner = {
+            add_monthly_resource_mult = {
+                resource = engineering_research
+                value = @tier4researchreward
+                min = @tier4researchmin
+                max = @tier4researchmax
+            }
+        }
+    }
+    option = {
+        name = "anomaly.186.c"
+        trigger = {
+            owner = {
+                OR = {
+                    has_technology = tech_synthetic_workers
+                    is_machine_empire = yes
+                }
+                NOR = {
+                    has_policy_flag = ai_outlawed
+                    has_ethic = ethic_spiritualist
+                    has_ethic = ethic_fanatic_spiritualist
+                }
+            }
+        }
+        allow = {
+            owner = {
+                NOT = {
+                    has_policy_flag = ai_outlawed
+                }
+            }
+        }
+        owner = {
+            capital_scope = {
+                enable_special_project = {
+                    name = "LIMBO_2_PROJECT"
+                    location = this
+                    owner = root.owner
+                }
+            }
+        }
+    }
+    option = {
+        name = "anomaly.186.d"
+        trigger = {
+            owner = {
+                is_machine_empire = no
+                OR = {
+                    NOT = {
+                        has_technology = tech_synthetic_workers
+                    }
+                    has_policy_flag = ai_outlawed
+                    has_ethic = ethic_spiritualist
+                    has_ethic = ethic_fanatic_spiritualist
+                }
+            }
+        }
+        owner = {
+            add_monthly_resource_mult = {
+                resource = engineering_research
+                value = @tier3researchreward
+                min = @tier3researchmin
+                max = @tier3researchmax
+            }
+        }
+        hidden_effect = {
+            fromfrom = {
+                set_planet_flag = limbo_planet
+            }
+            owner = {
+                set_country_flag = limbo_downloaded
+            }
+        }
+    }
+}

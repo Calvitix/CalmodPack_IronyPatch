@@ -1,0 +1,11 @@
+carbon_world = {
+    show_only_custom_tooltip = yes
+    custom_tooltip = do_pm_carbon_world
+    planet_jobs_minerals_produces_mult = 0.15
+    district_mining_max = 2
+    district_cheap_mining_max = 2
+    district_secure_mining_max = 2
+    district_surface_mining_max = 2
+    icon = "gfx/interface/icons/planet_modifiers/pm_carbon_world.dds"
+    icon_frame = 2
+}

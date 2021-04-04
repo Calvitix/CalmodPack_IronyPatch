@@ -1,0 +1,4 @@
+COCOON_TYPE = {
+    species_trait_points = 0
+    species_max_traits = 0
+}

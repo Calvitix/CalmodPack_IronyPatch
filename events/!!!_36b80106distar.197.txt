@@ -1,0 +1,33 @@
+namespace = distar
+planet_event = {
+    id = distar.197
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        has_planet_flag = living_planet
+        from = {
+            has_event_chain = "living_planet_chain"
+            NOT = {
+                has_country_flag = completed_living_sea
+            }
+        }
+        OR = {
+            is_dry = yes
+            is_cold = yes
+            is_tropical = yes
+            is_machine = yes
+            is_city = yes
+        }
+    }
+    immediate = {
+        remove_modifier = "living_sea"
+        remove_modifier = "pm_study_the_sea"
+        from = {
+            end_event_chain = "living_planet_chain"
+            remove_country_flag = strange_calling_fired
+            country_event = {
+                id = distar.198
+            }
+        }
+    }
+}

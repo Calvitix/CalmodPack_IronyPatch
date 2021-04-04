@@ -1,0 +1,40 @@
+namespace = distar
+ship_event = {
+    id = distar.3010
+    title = "impossible_organism_title"
+    desc = "distar.3010.desc"
+    picture = GFX_evt_toxic
+    show_sound = event_scanner
+    location = from
+    trackable = yes
+    is_triggered_only = yes
+    immediate = {
+        fromfrom = {
+            save_event_target_as = impossible_organism_planet
+            clear_deposits = yes
+        }
+        save_event_target_as = impossible_organism_science_ship
+    }
+    option = {
+        name = distar.3010.a
+        enable_special_project = {
+            name = "impossible_organism_project_1"
+            location = root.owner.capital_scope
+            owner = root.owner
+        }
+    }
+    option = {
+        name = distar.3010.b
+        custom_tooltip = distar.3010.b.tooltip
+        hidden_effect = {
+            event_target:impossible_organism_planet = {
+                add_modifier = {
+                    modifier = impossible_organism
+                    days = -1
+                }
+                clear_deposits = yes
+                add_deposit = d_society_6
+            }
+        }
+    }
+}

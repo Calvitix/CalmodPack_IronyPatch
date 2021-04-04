@@ -1,0 +1,44 @@
+namespace = distar
+country_event = {
+    id = distar.3012
+    title = "distar.3012.name"
+    desc = "distar.3012.desc"
+    picture = GFX_evt_microscopic_life
+    show_sound = event_scanner
+    location = from
+    is_triggered_only = yes
+    option = {
+        name = distar.3012.a
+        trigger = {
+            NOR = {
+                has_valid_civic = civic_fanatic_purifiers
+                has_valid_civic = civic_machine_terminator
+            }
+        }
+        custom_tooltip = distar.3012.a.tooltip
+        hidden_effect = {
+            country_event = {
+                id = distar.3013
+                days = 250
+                random = 50
+            }
+        }
+    }
+    option = {
+        name = distar.3012.b
+        custom_tooltip = distar.3012.b.tooltip
+        if = {
+            limit = {
+                is_xenophile = yes
+            }
+            gain_negative_media_coverage = yes
+        }
+        hidden_effect = {
+            country_event = {
+                id = distar.3014
+                days = 1300
+                random = 200
+            }
+        }
+    }
+}

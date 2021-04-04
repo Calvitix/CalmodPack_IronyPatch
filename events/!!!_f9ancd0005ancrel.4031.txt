@@ -1,0 +1,96 @@
+namespace = ancrel
+planet_event = {
+    id = ancrel.4031
+    title = ancrel.4031.name
+    desc = {
+        trigger = {
+            has_planet_flag = oracle_d_dense_jungle
+        }
+        text = ancrel.4031.desc_jungle
+    }
+    desc = {
+        trigger = {
+            has_planet_flag = oracle_d_exofungus
+        }
+        text = ancrel.4031.desc_exofungus
+    }
+    desc = {
+        trigger = {
+            has_planet_flag = oracle_d_mountain_range
+        }
+        text = ancrel.4031.desc_mountain
+    }
+    desc = {
+        trigger = {
+            has_planet_flag = oracle_d_toxic_kelp
+        }
+        text = ancrel.4031.desc_kelp
+    }
+    desc = {
+        trigger = {
+            has_planet_flag = oracle_d_deep_sinkhole
+        }
+        text = ancrel.4031.desc_sinkhole
+    }
+    desc = {
+        trigger = {
+            has_planet_flag = oracle_d_quicksand_basin
+        }
+        text = ancrel.4031.desc_basin
+    }
+    desc = {
+        trigger = {
+            has_planet_flag = oracle_d_noxious_swamp
+        }
+        text = ancrel.4031.desc_swamp
+    }
+    desc = {
+        trigger = {
+            has_planet_flag = oracle_d_massive_glacier
+        }
+        text = ancrel.4031.desc_glacier
+    }
+    desc = {
+        trigger = {
+            has_planet_flag = oracle_d_impenetrable_taiga
+        }
+        text = ancrel.4031.desc_taiga
+    }
+    desc = {
+        trigger = {
+            has_planet_flag = oracle_d_flooded_plain
+        }
+        text = ancrel.4031.desc_flood_plain
+    }
+    desc = {
+        trigger = {
+            has_planet_flag = oracle_d_impassable_erg
+        }
+        text = ancrel.4031.desc_erg
+    }
+    picture = GFX_evt_crashed_station
+    show_sound = event_mystic_reveal
+    location = this
+    is_triggered_only = yes
+    option = {
+        name = ancrel.4031.a
+        create_archaeological_site = oracle_digsite
+        add_deposit = d_archaeological_site
+        save_global_event_target_as = oracle_digsite_planet
+    }
+    option = {
+        name = ancrel.4031.b
+    }
+    after = {
+        remove_planet_flag = oracle_d_dense_jungle
+        remove_planet_flag = oracle_d_exofungus
+        remove_planet_flag = oracle_d_mountain_range
+        remove_planet_flag = oracle_d_toxic_kelp
+        remove_planet_flag = oracle_d_deep_sinkhole
+        remove_planet_flag = oracle_d_quicksand_basin
+        remove_planet_flag = oracle_d_noxious_swamp
+        remove_planet_flag = oracle_d_massive_glacier
+        remove_planet_flag = oracle_d_impenetrable_taiga
+        remove_planet_flag = oracle_d_flooded_plain
+    }
+}

@@ -1,0 +1,23 @@
+entity = {
+    name = "interstellar_habitat_core_entity"
+    pdxmesh = "thinktank_part1_mesh"
+    cull_radius = 1500
+    scale = 1.2
+    default_state = "idle"
+    state = {
+        name = "idle"
+        animation = "idle"
+    }
+    meshsettings = {
+        name = "body1Shape"
+        index = 0
+        texture_diffuse = "molluscoid_think_tank_01_diffuse.dds"
+        texture_normal = "molluscoid_think_tank_01_normal.dds"
+        texture_specular = "molluscoid_think_tank_01_specular.dds"
+        shader = "PdxMeshShip"
+    }
+    game_data = {
+        shader_type = ship
+        emissive_recolor_crunch = 50
+    }
+}

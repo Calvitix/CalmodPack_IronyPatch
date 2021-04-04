@@ -1,0 +1,76 @@
+entity = {
+    name = "elven_01_vanilla_full_entity"
+    cull_radius = 9999
+    game_data = {
+        size = 50
+        shader_type = ship
+        emissive_recolor_crunch = 50
+    }
+    locator = {
+        name = "ringworld_north"
+        position = {
+            450
+            0
+            0
+        }
+        rotation = {
+            90
+            0
+            0
+        }
+    }
+    locator = {
+        name = "ringworld_south"
+        position = {
+            -450
+            0
+            0
+        }
+        rotation = {
+            -90
+            0
+            0
+        }
+    }
+    locator = {
+        name = "ringworld_west"
+        position = {
+            0
+            0
+            450
+        }
+        rotation = {
+            0
+            0
+            0
+        }
+    }
+    locator = {
+        name = "ringworld_east"
+        position = {
+            0
+            0
+            -450
+        }
+        rotation = {
+            180
+            0
+            0
+        }
+    }
+    state = {
+        name = "construction"
+    }
+    attach = {
+        ringworld_north = "elven_01_vanilla_quarter_entity"
+    }
+    attach = {
+        ringworld_south = "elven_01_vanilla_quarter_entity"
+    }
+    attach = {
+        ringworld_west = "elven_01_vanilla_quarter_entity"
+    }
+    attach = {
+        ringworld_east = "elven_01_vanilla_quarter_entity"
+    }
+}

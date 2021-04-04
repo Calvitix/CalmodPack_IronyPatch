@@ -1,6 +1,0 @@
-entity = {
-    name = "square_world_corner_ruined_entity"
-    pdxmesh = "squareworld_corner_ruined_mesh"
-    cull_radius = @cull_radius_1
-    scale = 2.45
-}

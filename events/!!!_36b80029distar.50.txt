@@ -1,0 +1,206 @@
+namespace = distar
+ship_event = {
+    id = distar.50
+    title = "distar.50.name"
+    desc = {
+        trigger = {
+            owner = {
+                has_country_flag = amoeba_encountered
+            }
+        }
+        text = "distar.50.desc"
+    }
+    desc = {
+        trigger = {
+            owner = {
+                NOT = {
+                    has_country_flag = amoeba_encountered
+                }
+            }
+        }
+        text = "distar.50.desc.first_enc"
+    }
+    picture = GFX_evt_friendly_amoeba
+    show_sound = event_space_amoeba
+    location = from
+    is_triggered_only = yes
+    immediate = {
+        create_country = {
+            name = "NAME_Lost_Amoeba"
+            type = faction
+            auto_delete = yes
+            flag = {
+                icon = {
+                    category = "pirate"
+                    file = "flag_pirate_3.dds"
+                }
+                background = {
+                    category = "backgrounds"
+                    file = "00_solid.dds"
+                }
+                colors = {
+                    "blue"
+                    "blue"
+                    "null"
+                    "null"
+                }
+            }
+            effect = {
+                set_faction_hostility = {
+                    target = root.owner
+                    set_hostile = no
+                    set_neutral = no
+                    set_friendly = yes
+                }
+                create_fleet = {
+                    name = "NAME_Lost_Amoeba"
+                    effect = {
+                        set_owner = prev
+                        create_ship = {
+                            name = "NAME_Lost_Amoeba"
+                            design = "NAME_Small_Space_Organism_Teal"
+                            prefix = no
+                            upgradable = no
+                        }
+                save_event_target_as = lost_amoeba_country
+                        set_location = {
+                            target = from
+                            distance = 5
+                            angle = random
+                        }
+                        set_fleet_stance = passive
+                        set_fleet_flag = lost_amoeba_fleet@root.owner
+                        save_event_target_as = lost_amoeba_fleet
+                    }
+                    settings = {
+                        can_upgrade = no
+                        can_disband = no
+                        can_change_composition = no
+                        can_change_leader = no
+                        uses_naval_capacity = no
+                        spawn_debris = yes
+                    }
+                }
+            }
+        }
+        root = {
+            fleet = {
+                save_event_target_as = science_ship_fleet
+            }
+        }
+        event_target:lost_amoeba_fleet = {
+            auto_follow_fleet = {
+                target = event_target:science_ship_fleet
+                attack_fleet = no
+            }
+        }
+    }
+    option = {
+        name = distar.50.a
+        event_target:lost_amoeba_fleet = {
+            set_owner = root.owner
+        }
+        hidden_effect = {
+            leader = {
+                save_global_event_target_as = amoeba_finding_scientist
+            }
+            owner = {
+                set_country_flag = amoeba_befriended
+                set_variable = {
+                    which = amoebas_owned
+                    value = 1
+                }
+                country_event = {
+                    id = distar.51
+                    days = 365
+                    random = 60
+                }
+                random_list = {
+                    66 = {
+                        country_event = {
+                            id = anomalymod.22
+                            days = 430
+                        }
+                    }
+                    33 = {
+                    }
+                }
+                country_event = {
+                    id = distar.304
+                    days = 36500
+                }
+                IF = {
+                    limit = {
+                        NOT = {
+                            has_country_flag = amoeba_encountered
+                        }
+                    }
+                    capital_scope = {
+                        enable_special_project = {
+                            name = "INVESTIGATE_SPACE_AMOEBA"
+                            location = this
+                            owner = root.owner
+                        }
+                    }
+                    set_country_flag = amoeba_encountered
+                }
+            }
+        }
+    }
+    option = {
+        name = distar.50.b
+        custom_tooltip = distar.50.b.tooltip
+        hidden_effect = {
+            owner = {
+                country_event = {
+                    id = distar.52
+                    days = 90
+                }
+                IF = {
+                    limit = {
+                        NOT = {
+                            has_country_flag = amoeba_encountered
+                        }
+                    }
+                    capital_scope = {
+                        enable_special_project = {
+                            name = "INVESTIGATE_SPACE_AMOEBA"
+                            location = this
+                            owner = root.owner
+                        }
+                    }
+                    set_country_flag = amoeba_encountered
+                }
+            }
+        }
+    }
+    option = {
+        name = "distar.50.c"
+        event_target:lost_amoeba_fleet = {
+            enable_special_project = {
+                name = "DISSECTION_PROJECT"
+                location = this
+                owner = root.owner
+            }
+        }
+        hidden_effect = {
+            owner = {
+                IF = {
+                    limit = {
+                        NOT = {
+                            has_country_flag = amoeba_encountered
+                        }
+                    }
+                    capital_scope = {
+                        enable_special_project = {
+                            name = "INVESTIGATE_SPACE_AMOEBA"
+                            location = this
+                            owner = root.owner
+                        }
+                    }
+                    set_country_flag = amoeba_encountered
+                }
+            }
+        }
+    }
+}

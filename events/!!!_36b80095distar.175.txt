@@ -1,0 +1,93 @@
+namespace = distar
+country_event = {
+    id = distar.175
+    hide_window = yes
+    is_triggered_only = yes
+    immediate = {
+        IF = {
+            LIMIT = {
+                NOR = {
+                    has_ethic = ethic_xenophobe
+                    has_ethic = ethic_fanatic_xenophobe
+                }
+            }
+            every_owned_planet = {
+                limit = {
+                    OR = {
+                        any_owned_pop = {
+                            has_trait = trait_brainslug
+                        }
+                        leader = {
+                            has_trait = leader_trait_governor_brainslug
+                        }
+                    }
+                }
+                add_modifier = {
+                    modifier = brainslug_woes
+                    days = 14600
+                }
+            }
+            every_owned_planet = {
+                limit = {
+                    NOR = {
+                        any_owned_pop = {
+                            has_trait = trait_brainslug
+                        }
+                        leader = {
+                            has_trait = leader_trait_governor_brainslug
+                        }
+                    }
+                }
+                add_modifier = {
+                    modifier = brainslug_woes
+                    days = 7300
+                }
+            }
+        }
+        ELSE_IF = {
+            LIMIT = {
+                has_ethic = ethic_xenophobe
+            }
+            every_owned_planet = {
+                limit = {
+                    OR = {
+                        any_owned_pop = {
+                            has_trait = trait_brainslug
+                        }
+                        leader = {
+                            has_trait = leader_trait_governor_brainslug
+                        }
+                    }
+                }
+                add_modifier = {
+                    modifier = brainslug_woes_phobe
+                    days = 14600
+                }
+            }
+            every_owned_planet = {
+                limit = {
+                    NOR = {
+                        any_owned_pop = {
+                            has_trait = trait_brainslug
+                        }
+                        leader = {
+                            has_trait = leader_trait_governor_brainslug
+                        }
+                    }
+                }
+                add_modifier = {
+                    modifier = brainslug_woes_phobe
+                    days = 7300
+                }
+            }
+        }
+        ELSE = {
+            every_owned_planet = {
+                add_modifier = {
+                    modifier = brainslug_woes_phobe
+                    days = 15000
+                }
+            }
+        }
+    }
+}

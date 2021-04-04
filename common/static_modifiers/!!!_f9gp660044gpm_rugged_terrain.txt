@@ -1,0 +1,12 @@
+gpm_rugged_terrain = {
+    show_only_custom_tooltip = yes
+    custom_tooltip = do_pm_gpm_rugged_terrain
+    planet_buildings_cost_mult = 0.1
+    planet_jobs_minerals_produces_mult = 0.2
+    district_mining_max = 3
+    district_cheap_mining_max = 3
+    district_secure_mining_max = 3
+    district_surface_mining_max = 3
+    icon = "gfx/interface/icons/planet_modifiers/gpm_rugged_terrain.dds"
+    icon_frame = 2
+}

@@ -1,0 +1,68 @@
+namespace = primitive
+country_event = {
+    id = primitive.28
+    hide_window = yes
+    trigger = {
+        is_country_type = primitive
+        has_country_flag = steam_age
+        NOT = {
+            has_country_flag = recently_advanced
+        }
+    }
+    mean_time_to_happen = {
+        years = 75
+        modifier = {
+            factor = 0.75
+            any_owned_planet = {
+                has_modifier = mineral_rich
+            }
+        }
+        modifier = {
+            factor = 0.5
+            any_owned_planet = {
+                has_modifier = ultra_rich
+            }
+        }
+    }
+    immediate = {
+        set_timed_country_flag = {
+            flag = recently_advanced
+            days = 2160
+        }
+        set_primitive_age_effect = {
+            primitive_age = industrial_age
+        }
+        set_graphical_culture = industrial_01
+        change_country_flag = {
+            icon = {
+                category = "special"
+                file = "primitive.dds"
+            }
+            background = {
+                category = "backgrounds"
+                file = "new_dawn.dds"
+            }
+            colors = {
+                "beige"
+                "yellow"
+                "null"
+                "null"
+            }
+        }
+        capital_scope = {
+            clear_blockers = yes
+            add_deposit = d_decrepit_dwellings
+            add_deposit = d_failing_infrastructure
+            if = {
+                limit = {
+                    exists = observation_outpost_owner
+                }
+                observation_outpost_owner = {
+                    country_event = {
+                        id = primitive.29
+                    }
+                }
+            }
+        }
+    }
+}

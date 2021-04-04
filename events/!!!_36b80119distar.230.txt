@@ -1,0 +1,80 @@
+namespace = distar
+fleet_event = {
+    id = distar.230
+    title = "distar.230.name"
+    desc = "distar.230.desc"
+    picture = GFX_evt_junkheap
+    show_sound = event_scanner
+    location = root
+    is_triggered_only = yes
+    trigger = {
+        from = {
+            has_star_flag = ratling_system
+        }
+        owner = {
+            is_country_type = default
+            NOT = {
+                has_country_flag = discovered_ratlings
+            }
+        }
+        NOR = {
+            exists = event_target:ratling_pre_space_country
+            exists = event_target:ratling_country
+        }
+    }
+    immediate = {
+        owner = {
+            set_country_flag = discovered_ratlings
+            country_event = {
+                id = story.5
+                days = 30
+            }
+            random_country = {
+                limit = {
+                    is_country_type = global_event
+                }
+                country_event = {
+                    id = distar.232
+                    days = 9000
+                    random = 3600
+                }
+            }
+        }
+        from = {
+            random_system_planet = {
+                limit = {
+                    has_planet_flag = ratling_planet
+                }
+                save_event_target_as = ratling_planet_tar
+            }
+        }
+        event_target:ratling_capital = {
+            add_anomaly = {
+                category = DISTAR_RAT_CAT
+            }
+        }
+    }
+    option = {
+        name = CURIOUS
+        small_artifact_reward = yes
+    }
+    option = {
+        name = SCUM
+        exclusive_trigger = {
+            owner = {
+                OR = {
+                    has_ethic = ethic_xenophobe
+                    has_ethic = ethic_fanatic_xenophobe
+                }
+            }
+        }
+    }
+    option = {
+        name = "distar.230.exter"
+        exclusive_trigger = {
+            owner = {
+                has_civic = civic_machine_terminator
+            }
+        }
+    }
+}

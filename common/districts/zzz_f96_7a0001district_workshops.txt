@@ -1,0 +1,174 @@
+district_workshops = {
+    base_buildtime = 360
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        has_district_workshops = yes
+    }
+    potential = {
+        has_district_workshops = yes
+    }
+    conversion_ratio = 0.75
+    convert_to = {
+        district_workshops_t2
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            trigger = {
+                from = {
+                    is_ai = no
+                }
+            }
+            minerals = 500
+            alloys = 50
+        }
+        cost = {
+            trigger = {
+                from = {
+                    is_ai = yes
+                }
+            }
+            minerals = 500
+        }
+        upkeep = {
+            energy = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            job_do_engineer_add = 3
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_crafting_drone_add = 3
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_engineering_drone_add = 3
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+            has_special_ringworld_boost = yes
+        }
+        modifier = {
+            job_do_engineer_add = 7
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+            has_special_ringworld_boost = yes
+        }
+        modifier = {
+            job_crafting_drone_add = 7
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+            has_special_ringworld_boost = yes
+        }
+        modifier = {
+            job_engineering_drone_add = 7
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        text = job_do_engineer_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        text = job_crafting_drone_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        text = job_engineering_drone_effect_desc
+    }
+    ai_weight = {
+        weight = 3
+        modifier = {
+            factor = 10
+            should_invest_into_research = yes
+        }
+        modifier = {
+            factor = 5
+            has_unemployed_specialists = yes
+        }
+        modifier = {
+            factor = 1.1
+            positive_engineering_modifier_low = yes
+        }
+        modifier = {
+            factor = 1.5
+            positive_engineering_modifier_medium = yes
+        }
+        modifier = {
+            factor = 2
+            positive_engineering_modifier_large = yes
+        }
+        modifier = {
+            factor = 0
+            can_invest_into_research = no
+        }
+        modifier = {
+            factor = 0
+            AND = {
+                free_jobs > 1
+                has_unemployed_workers = no
+                has_unemployed_specialists = no
+            }
+        }
+    }
+    ai_resource_production = {
+        engineering_research = 5
+        trigger = {
+            always = yes
+        }
+    }
+}

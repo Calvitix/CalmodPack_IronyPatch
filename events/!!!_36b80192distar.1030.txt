@@ -1,0 +1,39 @@
+namespace = distar
+ship_event = {
+    id = distar.1030
+    title = "distar.1030.name"
+    desc = "distar.1030.desc"
+    picture = GFX_evt_city_ruins
+    show_sound = event_alien_signal
+    location = FROM
+    is_triggered_only = yes
+    immediate = {
+        owner = {
+            country_event = {
+                id = story.5
+                days = 30
+            }
+        }
+    }
+    option = {
+        name = distar.1030.a
+        From = {
+            enable_special_project = {
+                name = "BIG_RIP"
+                location = from
+                owner = root.owner
+            }
+        }
+    }
+    option = {
+        name = distar.1030.b
+        owner = {
+            add_resource = {
+                influence = 50
+            }
+        }
+    }
+    after = {
+        small_artifact_reward = yes
+    }
+}

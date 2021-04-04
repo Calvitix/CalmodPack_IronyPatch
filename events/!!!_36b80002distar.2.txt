@@ -1,0 +1,96 @@
+namespace = distar
+country_event = {
+    id = distar.2
+    title = "distar.2.name"
+    desc = {
+        trigger = {
+            NOT = {
+                has_authority = auth_machine_intelligence
+            }
+        }
+        text = "distar.2.desc"
+    }
+    desc = {
+        trigger = {
+            has_authority = auth_machine_intelligence
+        }
+        text = "distar.2.desc.machi"
+    }
+    location = event_target:wreckage_owner
+    diplomatic = yes
+    is_triggered_only = yes
+    picture_event_data = {
+        portrait = event_target:wreckage_owner
+        planet_background = event_target:wreckage_owner
+        graphical_culture = event_target:wreckage_owner
+        city_level = event_target:wreckage_owner
+        room = event_target:wreckage_owner.ruler
+    }
+    option = {
+        trigger = {
+            resource_stockpile_compare = {
+                resource = minerals
+                value >= 300
+            }
+        }
+        name = distar.2.a
+        event_target:wreckage_owner = {
+            add_opinion_modifier = {
+                who = root
+                modifier = opinion_stole_supplies
+            }
+        }
+        hidden_effect = {
+            event_target:supply_wreckage_tar = {
+                destroy_ambient_object = this
+            }
+        }
+    }
+    option = {
+        trigger = {
+            resource_stockpile_compare = {
+                resource = minerals
+                value >= 300
+            }
+            NOT = {
+                is_at_war_with = event_target:wreckage_owner
+            }
+        }
+        name = distar.2.b
+        add_resource = {
+            minerals = -300
+        }
+        hidden_effect = {
+            event_target:wreckage_owner = {
+                add_resource = {
+                    minerals = 300
+                }
+            }
+        }
+        hidden_effect = {
+            event_target:supply_wreckage_tar = {
+                destroy_ambient_object = this
+            }
+        }
+    }
+    option = {
+        trigger = {
+            resource_stockpile_compare = {
+                resource = minerals
+                value < 300
+            }
+        }
+        name = TOOPOOR
+        event_target:wreckage_owner = {
+            add_opinion_modifier = {
+                who = root
+                modifier = opinion_stole_supplies
+            }
+        }
+        hidden_effect = {
+            event_target:supply_wreckage_tar = {
+                destroy_ambient_object = this
+            }
+        }
+    }
+}

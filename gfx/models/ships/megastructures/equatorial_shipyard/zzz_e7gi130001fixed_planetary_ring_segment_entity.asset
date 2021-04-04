@@ -1,0 +1,36 @@
+@cull_radius_1 = 1500
+entity = {
+    name = "fixed_planetary_ring_segment_entity"
+    pdxmesh = "giga_vanilla_habitable_mesh"
+    cull_radius = @cull_radius_1
+    scale = 0.554
+    game_data = {
+        size = 50
+        shader_type = ship
+        emissive_recolor_crunch = 50
+    }
+    default_state = "idle"
+    state = {
+        name = "idle"
+        state_time = 5
+    }
+    state = {
+        name = "construction"
+    }
+    meshsettings = {
+        name = "ringworld_vanilla_habitable"
+        index = 0
+        texture_diffuse = "giga_ringworld_habitable_diffuse.dds"
+        texture_normal = "giga_ringworld_habitable_normal.dds"
+        texture_specular = "ringworld_habitable_specular.dds"
+        shader = "PdxMeshTerra"
+    }
+    meshsettings = {
+        name = "ringworld_vanilla_habitable"
+        index = 1
+        texture_diffuse = "giga_planetary_computer_diffuse.dds"
+        texture_normal = "giga_planetary_computer_normal.dds"
+        texture_specular = "giga_planetary_computer_spec.dds"
+        shader = "PdxMeshTerra"
+    }
+}

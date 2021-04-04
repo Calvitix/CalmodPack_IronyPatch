@@ -1,0 +1,543 @@
+ring_world_restored = {
+    entity = ""
+    construction_entity = "vanilla_quarter_construction_entity"
+    portrait = "GFX_megastructure_construction_background"
+    upgrade_from = {
+        ring_world_ruined
+    }
+    build_time = 3600
+    resources = {
+        category = megastructures
+        cost = {
+            alloys = 10000
+        }
+    }
+    possible = {
+        exists = from
+        from = {
+            has_technology = tech_mega_engineering
+        }
+        custom_tooltip = {
+            fail_text = "requires_surveyed_system"
+            giga_system_is_surveyed = yes
+        }
+    }
+    ai_weight = {
+        weight = 300
+        modifier = {
+            weight = 0
+            from = {
+                is_country_type = fallen_empire
+            }
+        }
+    }
+    on_build_start = {
+        if = {
+            limit = {
+                from = {
+                    NOR = {
+                        graphical_culture = arthropoid_01
+                        graphical_culture = avian_01
+                        graphical_culture = fungoid_01
+                        graphical_culture = humanoid_01
+                        graphical_culture = mammalian_01
+                        graphical_culture = molluscoid_01
+                        graphical_culture = plantoid_01
+                        graphical_culture = reptilian_01
+                        graphical_culture = lithoid_01
+                        graphical_culture = necroid_01
+                    }
+                }
+            }
+            fromfrom = {
+                set_graphical_culture = mammalian_01
+            }
+        }
+        else = {
+            fromfrom = {
+                set_graphical_culture = root.from
+            }
+        }
+    }
+    on_build_complete = {
+        giga_remove_system_debris = yes
+        change_variable = {
+            which = ring_segments
+            value = 1
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = ring_segments
+                    value >= 4
+                }
+            }
+            set_variable = {
+                which = ring_segments
+                value = 0
+            }
+            from = {
+                remove_country_flag = giga_started_ringworld
+                change_variable = {
+                    which = completed_ringworlds
+                    value = 1
+                }
+            }
+        }
+        from = {
+            set_country_flag = has_built_or_repaired_megastructure
+            country_event = {
+                id = utopia.2017
+            }
+        }
+        spawn_planet = {
+            class = "pc_ringworld_tech"
+            location = fromfrom
+            orbit_angle_offset = 30
+            init_effect = {
+                set_name = "Section d'Anneau"
+                set_planet_entity = {
+                    entity = "vanilla_tech_entity"
+                    graphical_culture = fromfrom
+                }
+                surveyed = {
+                    set_surveyed = yes
+                    surveyor = from
+                }
+                set_all_comms_surveyed = yes
+                set_planet_flag = forbid_guillis_planet_modifiers
+                set_planet_flag = megastructure
+                set_planet_flag = has_megastructure
+                set_planet_flag = colony_event
+            }
+        }
+        spawn_planet = {
+            class = "pc_ringworld_seam"
+            location = fromfrom
+            init_effect = {
+                set_name = "Section d'Anneau"
+                set_planet_entity = {
+                    entity = "vanilla_seam_entity"
+                    graphical_culture = fromfrom
+                }
+                surveyed = {
+                    set_surveyed = yes
+                    surveyor = from
+                }
+                set_all_comms_surveyed = yes
+                set_planet_flag = forbid_guillis_planet_modifiers
+                set_planet_flag = megastructure
+                set_planet_flag = has_megastructure
+            }
+        }
+        spawn_planet = {
+            class = "pc_ringworld_habitable"
+            location = fromfrom
+            orbit_angle_offset = -30
+            init_effect = {
+                set_planet_entity = {
+                    entity = "vanilla_gaia_habitable_entity"
+                    graphical_culture = fromfrom
+                }
+                surveyed = {
+                    set_surveyed = yes
+                    surveyor = from
+                }
+                set_all_comms_surveyed = yes
+                clear_blockers = yes
+                save_event_target_as = ring_section
+                trigger_megastructure_icon = yes
+                set_planet_flag = forbid_guillis_planet_modifiers
+                set_planet_flag = megastructure
+                set_planet_flag = has_megastructure
+                set_planet_flag = colony_event
+                set_planet_flag = giga_ringworld_van
+            }
+        }
+        if = {
+            limit = {
+                NOT = {
+                    has_star_flag = ring_01
+                }
+            }
+            set_star_flag = ring_01
+            event_target:ring_section = {
+                set_name = "Section Habitable A"
+            }
+        }
+        else_if = {
+            limit = {
+                NOT = {
+                    has_star_flag = ring_02
+                }
+            }
+            set_star_flag = ring_02
+            event_target:ring_section = {
+                set_name = "Section Habitable B"
+            }
+        }
+        else_if = {
+            limit = {
+                NOT = {
+                    has_star_flag = ring_03
+                }
+            }
+            set_star_flag = ring_03
+            event_target:ring_section = {
+                set_name = "Section Habitable C"
+            }
+        }
+        else_if = {
+            limit = {
+                NOT = {
+                    has_star_flag = ring_04
+                }
+            }
+            set_star_flag = ring_04
+            event_target:ring_section = {
+                set_name = "Section Habitable D"
+            }
+        }
+        else_if = {
+            limit = {
+                NOT = {
+                    has_star_flag = ring_05
+                }
+            }
+            set_star_flag = ring_05
+            event_target:ring_section = {
+                set_name = "Section Habitable E"
+            }
+        }
+        else_if = {
+            limit = {
+                NOT = {
+                    has_star_flag = ring_06
+                }
+            }
+            set_star_flag = ring_06
+            event_target:ring_section = {
+                set_name = "Section Habitable F"
+            }
+        }
+        else_if = {
+            limit = {
+                NOT = {
+                    has_star_flag = ring_07
+                }
+            }
+            set_star_flag = ring_07
+            event_target:ring_section = {
+                set_name = "Section Habitable G"
+            }
+        }
+        else_if = {
+            limit = {
+                NOT = {
+                    has_star_flag = ring_08
+                }
+            }
+            set_star_flag = ring_08
+            event_target:ring_section = {
+                set_name = "Section Habitable H"
+            }
+        }
+        else_if = {
+            limit = {
+                NOT = {
+                    has_star_flag = ring_09
+                }
+            }
+            set_star_flag = ring_09
+            event_target:ring_section = {
+                set_name = "Section Habitable I"
+            }
+        }
+        else_if = {
+            limit = {
+                NOT = {
+                    has_star_flag = ring_10
+                }
+            }
+            set_star_flag = ring_10
+            event_target:ring_section = {
+                set_name = "Section Habitable J"
+            }
+        }
+        else_if = {
+            limit = {
+                NOT = {
+                    has_star_flag = ring_11
+                }
+            }
+            set_star_flag = ring_11
+            event_target:ring_section = {
+                set_name = "Section Habitable K"
+            }
+        }
+        else_if = {
+            limit = {
+                NOT = {
+                    has_star_flag = ring_12
+                }
+            }
+            set_star_flag = ring_12
+            event_target:ring_section = {
+                set_name = "Section Habitable L"
+            }
+        }
+        else_if = {
+            limit = {
+                NOT = {
+                    has_star_flag = ring_13
+                }
+            }
+            set_star_flag = ring_13
+            event_target:ring_section = {
+                set_name = "Section Habitable M"
+            }
+        }
+        else_if = {
+            limit = {
+                NOT = {
+                    has_star_flag = ring_14
+                }
+            }
+            set_star_flag = ring_14
+            event_target:ring_section = {
+                set_name = "Section Habitable N"
+            }
+        }
+        else_if = {
+            limit = {
+                NOT = {
+                    has_star_flag = ring_15
+                }
+            }
+            set_star_flag = ring_15
+            event_target:ring_section = {
+                set_name = "Section Habitable O"
+            }
+        }
+        else_if = {
+            limit = {
+                NOT = {
+                    has_star_flag = ring_16
+                }
+            }
+            set_star_flag = ring_16
+            event_target:ring_section = {
+                set_name = "Section Habitable P"
+            }
+        }
+        else_if = {
+            limit = {
+                NOT = {
+                    has_star_flag = ring_17
+                }
+            }
+            set_star_flag = ring_17
+            event_target:ring_section = {
+                set_name = "Section Habitable Q"
+            }
+        }
+        else_if = {
+            limit = {
+                NOT = {
+                    has_star_flag = ring_18
+                }
+            }
+            set_star_flag = ring_18
+            event_target:ring_section = {
+                set_name = "Section Habitable R"
+            }
+        }
+        else_if = {
+            limit = {
+                NOT = {
+                    has_star_flag = ring_19
+                }
+            }
+            set_star_flag = ring_19
+            event_target:ring_section = {
+                set_name = "Section Habitable S"
+            }
+        }
+        else_if = {
+            limit = {
+                NOT = {
+                    has_star_flag = ring_20
+                }
+            }
+            set_star_flag = ring_20
+            event_target:ring_section = {
+                set_name = "Section Habitable T"
+            }
+        }
+        else_if = {
+            limit = {
+                NOT = {
+                    has_star_flag = ring_21
+                }
+            }
+            set_star_flag = ring_21
+            event_target:ring_section = {
+                set_name = "Section Habitable U"
+            }
+        }
+        else_if = {
+            limit = {
+                NOT = {
+                    has_star_flag = ring_22
+                }
+            }
+            set_star_flag = ring_22
+            event_target:ring_section = {
+                set_name = "Section Habitable V"
+            }
+        }
+        else_if = {
+            limit = {
+                NOT = {
+                    has_star_flag = ring_23
+                }
+            }
+            set_star_flag = ring_23
+            event_target:ring_section = {
+                set_name = "Section Habitable W"
+            }
+        }
+        else_if = {
+            limit = {
+                NOT = {
+                    has_star_flag = ring_24
+                }
+            }
+            set_star_flag = ring_24
+            event_target:ring_section = {
+                set_name = "Section Habitable X"
+            }
+        }
+        else_if = {
+            limit = {
+                NOT = {
+                    has_star_flag = ring_25
+                }
+            }
+            set_star_flag = ring_25
+            event_target:ring_section = {
+                set_name = "Section Habitable Y"
+            }
+        }
+        else_if = {
+            limit = {
+                NOT = {
+                    has_star_flag = ring_26
+                }
+            }
+            set_star_flag = ring_26
+            event_target:ring_section = {
+                set_name = "Section Habitable Z"
+            }
+        }
+        else_if = {
+            limit = {
+                NOT = {
+                    has_star_flag = ring_27
+                }
+            }
+            set_star_flag = ring_27
+            event_target:ring_section = {
+                set_name = "Section Habitable Aa"
+            }
+        }
+        else_if = {
+            limit = {
+                NOT = {
+                    has_star_flag = ring_28
+                }
+            }
+            set_star_flag = ring_28
+            event_target:ring_section = {
+                set_name = "Section Habitable Ab"
+            }
+        }
+        else_if = {
+            limit = {
+                NOT = {
+                    has_star_flag = ring_29
+                }
+            }
+            set_star_flag = ring_29
+            event_target:ring_section = {
+                set_name = "Section Habitable Ac"
+            }
+        }
+        else_if = {
+            limit = {
+                NOT = {
+                    has_star_flag = ring_30
+                }
+            }
+            set_star_flag = ring_30
+            event_target:ring_section = {
+                set_name = "Section Habitable Ad"
+            }
+        }
+        else_if = {
+            limit = {
+                NOT = {
+                    has_star_flag = ring_31
+                }
+            }
+            set_star_flag = ring_31
+            event_target:ring_section = {
+                set_name = "Section Habitable Ae"
+            }
+        }
+        else_if = {
+            limit = {
+                NOT = {
+                    has_star_flag = ring_32
+                }
+            }
+            set_star_flag = ring_32
+            event_target:ring_section = {
+                set_name = "Section Habitable Af"
+            }
+            remove_star_flag = ring_01
+            remove_star_flag = ring_02
+            remove_star_flag = ring_03
+            remove_star_flag = ring_04
+            remove_star_flag = ring_05
+            remove_star_flag = ring_06
+            remove_star_flag = ring_07
+            remove_star_flag = ring_08
+            remove_star_flag = ring_09
+            remove_star_flag = ring_10
+            remove_star_flag = ring_11
+            remove_star_flag = ring_12
+            remove_star_flag = ring_13
+            remove_star_flag = ring_14
+            remove_star_flag = ring_15
+            remove_star_flag = ring_16
+            remove_star_flag = ring_17
+            remove_star_flag = ring_18
+            remove_star_flag = ring_19
+            remove_star_flag = ring_20
+            remove_star_flag = ring_21
+            remove_star_flag = ring_22
+            remove_star_flag = ring_23
+            remove_star_flag = ring_24
+            remove_star_flag = ring_25
+            remove_star_flag = ring_26
+            remove_star_flag = ring_27
+            remove_star_flag = ring_28
+            remove_star_flag = ring_29
+            remove_star_flag = ring_30
+            remove_star_flag = ring_31
+            remove_star_flag = ring_32
+        }
+        remove_megastructure = fromfrom
+    }
+}

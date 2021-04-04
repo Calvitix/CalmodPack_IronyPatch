@@ -1,0 +1,13 @@
+gpm_unstable_tectonics_2 = {
+    show_only_custom_tooltip = yes
+    custom_tooltip = do_pm_gpm_unstable_tectonics_2
+    pop_environment_tolerance = -0.1
+    planet_districts_cost_mult = 0.2
+    planet_buildings_cost_mult = 0.2
+    district_mining_max = -4
+    district_cheap_mining_max = -4
+    district_secure_mining_max = -4
+    district_surface_mining_max = -4
+    icon = "gfx/interface/icons/planet_modifiers/pm_unstable_tectonics.dds"
+    icon_frame = 3
+}

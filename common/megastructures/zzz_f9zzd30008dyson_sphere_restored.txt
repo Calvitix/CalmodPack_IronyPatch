@@ -1,0 +1,69 @@
+dyson_sphere_restored = {
+    entity = "dyson_sphere_phase_05_entity"
+    construction_entity = "dyson_sphere_part_4_entity"
+    portrait = "GFX_megastructure_dyson_sphere_background"
+    upgrade_from = {
+        dyson_sphere_ruined
+    }
+    build_time = @dyson_r_buildtime_g_star
+    resources = {
+        category = megastructures
+        cost = {
+            alloys = @dyson_r_cost_alloys_g_star
+        }
+        produces = {
+            energy = @dyson_r_produces_energy_g_star
+        }
+    }
+    possible = {
+        exists = from
+        from = {
+            has_technology = tech_mega_engineering
+        }
+    }
+    ai_weight = {
+        factor = 10
+    }
+    on_build_start = {
+        fromfrom = {
+            set_graphical_culture = root.from
+        }
+    }
+    on_build_complete = {
+        every_system_planet = {
+            if = {
+                limit = {
+                    has_modifier = terraforming_candidate
+                }
+                remove_modifier = terraforming_candidate
+            }
+            if = {
+                limit = {
+                    is_planet_class = pc_barren
+                }
+                change_pc = pc_barren_cold
+            }
+            else_if = {
+                limit = {
+                    OR = {
+                        is_planet_class = pc_molten
+                        is_planet_class = pc_toxic
+                    }
+                }
+                change_pc = pc_frozen
+            }
+        }
+        giga_remove_system_debris = yes
+        from = {
+            set_country_flag = has_built_or_repaired_megastructure
+            set_country_flag = has_built_or_repaired_gigastructure
+            country_event = {
+                id = utopia.2011
+            }
+        }
+        fromfrom.planet = {
+            set_planet_flag = megastructure
+            set_planet_flag = has_megastructure
+        }
+    }
+}

@@ -1,0 +1,52 @@
+namespace = distar
+country_event = {
+    id = distar.3011
+    title = "impossible_organism_title"
+    desc = "distar.3011.desc"
+    picture = GFX_evt_microscopic_life
+    show_sound = event_scanner
+    location = from
+    trackable = yes
+    is_triggered_only = yes
+    option = {
+        name = distar.3011.a
+        trigger = {
+            NOR = {
+                has_ethic = ethic_xenophobe
+                has_ethic = ethic_fanatic_xenophobe
+                has_valid_civic = civic_machine_terminator
+            }
+        }
+        enable_special_project = {
+            name = "impossible_organism_project_2"
+            location = root.owner.capital_scope
+            owner = root.owner
+        }
+    }
+    option = {
+        name = distar.3011.a.phobe
+        trigger = {
+            OR = {
+                has_ethic = ethic_xenophobe
+                has_ethic = ethic_fanatic_xenophobe
+                has_valid_civic = civic_machine_terminator
+            }
+        }
+        enable_special_project = {
+            name = "impossible_organism_project_2"
+            location = root.owner.capital_scope
+            owner = root.owner
+        }
+    }
+    option = {
+        name = distar.3011.b
+        custom_tooltip = distar.3011.b.tooltip
+        hidden_effect = {
+            country_event = {
+                id = distar.3014
+                days = 1700
+                random = 200
+            }
+        }
+    }
+}

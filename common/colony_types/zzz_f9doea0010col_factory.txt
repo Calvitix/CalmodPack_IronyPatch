@@ -1,0 +1,140 @@
+@free_districts_verylow_threshold = 3
+@free_districts_high_threshold = 15
+col_factory = {
+    icon = 6
+    potential = {
+        exists = owner
+        OR = {
+            owner = {
+                is_regular_empire = yes
+            }
+            owner = {
+                has_civic = civic_machine_servitor
+            }
+        }
+        NOR = {
+            is_planet_class = pc_city
+            is_planet_class = pc_ringworld_habitable
+            is_planet_class = pc_cybrex
+            is_planet_class = pc_machine
+            is_planet_class = pc_hive
+            is_planet_class = pc_habitat
+        }
+        is_special_colony_type = no
+    }
+    planet_modifier = {
+        planet_building_factory_1_build_speed_mult = 0.25
+        planet_district_production_hub_build_speed_mult = 0.25
+        planet_district_civilian_industry_build_speed_mult = 0.25
+        planet_artisans_upkeep_mult = -0.2
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_galactic_community_member = yes
+            }
+            OR = {
+                is_active_resolution = "resolution_industry_environmental_ordinance_waivers"
+                is_active_resolution = "resolution_industry_project_cornucopia"
+            }
+        }
+        modifier = {
+            planet_artisans_produces_mult = 0.05
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            add = 50
+            has_designation = col_factory
+        }
+        modifier = {
+            add = 51
+            has_planet_flag = do_ai_consumer_goods
+        }
+        modifier = {
+            add = 2
+            owner = {
+                has_monthly_income = {
+                    resource = consumer_goods
+                    value < 5
+                }
+            }
+            OR = {
+                num_free_districts = {
+                    type = district_city
+                    value >= @free_districts_high_threshold
+                }
+                num_free_districts = {
+                    type = district_hive
+                    value >= @free_districts_high_threshold
+                }
+                num_free_districts = {
+                    type = district_nexus
+                    value >= @free_districts_high_threshold
+                }
+            }
+        }
+        modifier = {
+            add = 5
+            has_designation = col_factory
+        }
+        modifier = {
+            add = 1
+            num_buildings = {
+                type = building_factory_1
+                value >= 2
+            }
+        }
+        modifier = {
+            add = 2
+            num_buildings = {
+                type = building_factory_1
+                value >= 3
+            }
+        }
+        modifier = {
+            add = 3
+            num_buildings = {
+                type = building_factory_1
+                value >= 4
+            }
+        }
+        modifier = {
+            add = 2
+            num_buildings = {
+                type = building_factory_2
+                value >= 1
+            }
+        }
+        modifier = {
+            add = 4
+            num_buildings = {
+                type = building_factory_2
+                value >= 2
+            }
+        }
+        modifier = {
+            add = 5
+            num_buildings = {
+                type = building_factory_3
+                value >= 1
+            }
+        }
+        modifier = {
+            factor = 0
+            num_buildings = {
+                type = building_factory_1
+                value = 0
+            }
+            num_buildings = {
+                type = building_factory_2
+                value = 0
+            }
+            num_buildings = {
+                type = building_factory_3
+                value = 0
+            }
+        }
+    }
+}

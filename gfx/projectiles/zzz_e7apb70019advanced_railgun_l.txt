@@ -1,0 +1,21 @@
+@normalprojectilespeed = 330
+@maxduration = 6
+projectile_gfx_ballistic = {
+    name = "advanced_railgun_l"
+    color = {
+        1
+        0.55
+        0.1
+        1
+    }
+    hit_entity = "advanced_railgun_large_hit_entity"
+    shield_hit_entity = "advanced_railgun_large_shield_hit_entity"
+    muzzle_flash_entity = "advanced_railgun_large_muzzle_entity"
+    entity = "advanced_railgun_tracer_round_large_entity"
+    speed = @normalprojectilespeed
+    max_duration = @maxduration
+    shield_impact = {
+        size = large
+        delay = 0
+    }
+}

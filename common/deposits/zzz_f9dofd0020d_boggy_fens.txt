@@ -1,0 +1,93 @@
+@high = 16
+@planet_type_bonus = 1.5
+d_boggy_fens = {
+    is_for_colonizeable = yes
+    use_for_min_max_adjustments = yes
+    category = deposit_cat_food
+    use_weights_for_terraforming_swap_types = yes
+    should_swap_deposit_on_terraforming = yes
+    terraforming_swap_types = {
+        d_lichen_fields
+        d_bountiful_plains
+        d_rugged_woods
+        d_green_hills
+        d_forgiving_tundra
+        d_nutritious_mudland
+        d_natural_farmland
+        d_interesting_wildlife
+        d_complex_ecosystem
+        d_exotic_fauna
+        d_sea_grass
+        d_bubbling_swamp
+        d_fuming_bog
+        d_quicksand_basin
+        d_noxious_swamp
+        d_massive_glacier
+        d_boggy_fens
+    }
+    planet_modifier = {
+        district_farming_max = 1
+        planet_jobs_society_research_produces_mult = 0.05
+    }
+    potential = {
+        OR = {
+            is_planet_class = pc_ocean
+        has_district_farming = yes
+            is_planet_class = pc_subarctic
+            is_planet_class = pc_swamp
+            is_planet_class = pc_mud
+            is_planet_class = pc_mushroom
+            is_planet_class = pc_wetswamp
+        }
+        NOR = {
+            has_modifier = "panthalassic_world"
+            has_modifier = "cold_desert"
+        }
+    }
+    drop_weight = {
+        weight = 3
+        modifier = {
+            factor = @planet_type_bonus
+            is_wet = yes
+        }
+        modifier = {
+            factor = 1.5
+            has_modifier = "lush_planet"
+        }
+        modifier = {
+            factor = 0.5
+            has_modifier = "bleak_planet"
+        }
+        modifier = {
+            factor = 3
+            has_modifier = "bog_world"
+        }
+        modifier = {
+            factor = 2
+            is_wet = yes
+        }
+        modifier = {
+            factor = 2
+            OR = {
+                has_modifier = "swamp_world"
+                has_modifier = "poisonous_world"
+            }
+        }
+        modifier = {
+            factor = 0.5
+            is_planet_class = pc_ocean
+        }
+        modifier = {
+            factor = 0.25
+            OR = {
+                is_planet_class = pc_tundra
+                has_modifier = "jungle_world"
+                has_modifier = "crag_world"
+            }
+        }
+        modifier = {
+            factor = 0
+            has_modifier = "panthalassic_world"
+        }
+    }
+}

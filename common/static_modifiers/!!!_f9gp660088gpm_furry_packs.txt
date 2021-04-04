@@ -1,0 +1,12 @@
+gpm_furry_packs = {
+    show_only_custom_tooltip = yes
+    custom_tooltip = do_pm_gpm_furry_packs
+    planet_pops_consumer_goods_upkeep_mult = 0.15
+    planet_jobs_food_produces_mult = 0.2
+    district_farming_max = 3
+    district_nature_farms_max = 3
+    district_ocean_farms_max = 3
+    district_exotic_farms_max = 3
+    icon = "gfx/interface/icons/planet_modifiers/gpm_furry_packs.dds"
+    icon_frame = 2
+}

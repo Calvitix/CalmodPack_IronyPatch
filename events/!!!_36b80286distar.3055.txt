@@ -1,0 +1,345 @@
+namespace = distar
+country_event = {
+    id = distar.3055
+    title = "distar.3055.name"
+    desc = {
+        trigger = {
+            hidden:owner = {
+                switch = {
+                    trigger = has_country_flag
+                    alien_box_researched = {
+                        text = distar.3055.desc.1
+                    }
+                    default = {
+                        text = distar.3055.desc
+                    }
+                }
+            }
+        }
+    }
+    picture = GFX_evt_genetic_modification
+    show_sound = event_scanner
+    location = from
+    is_triggered_only = yes
+    option = {
+        name = distar.3055.a
+        allow = {
+            is_robot_empire = no
+        }
+        custom_tooltip = distar.3055.a.tooltip
+        hidden_effect = {
+            modify_species = {
+                species = this
+                add_trait = trait_social_pheromones
+            }
+            set_country_flag = verystrong_added
+            change_dominant_species = {
+                species = last_created_species
+            }
+            while = {
+                limit = {
+                    any_owned_pop = {
+                        is_subspecies = root
+                        NOT = {
+                            has_trait = trait_social_pheromones
+                        }
+                    }
+                }
+                random_owned_pop = {
+                    limit = {
+                        is_subspecies = root
+                        NOT = {
+                            has_trait = trait_social_pheromones
+                        }
+                    }
+                    root = {
+                        modify_species = {
+                            species = prev.species
+                            add_trait = trait_social_pheromones
+                        }
+                    }
+                }
+            }
+            set_country_flag = modification_stronger
+            country_event = {
+                id = distar.3057
+                days = 5
+            }
+        }
+    }
+    option = {
+        name = distar.3055.b
+        allow = {
+            is_robot_empire = no
+        }
+        custom_tooltip = distar.3055.b.tooltip
+        hidden_effect = {
+            modify_species = {
+                species = this
+                add_trait = trait_bioadaptability
+            }
+            set_country_flag = extremelyadaptive_added
+            change_dominant_species = {
+                species = last_created_species
+            }
+            while = {
+                limit = {
+                    any_owned_pop = {
+                        is_subspecies = root
+                        NOT = {
+                            has_trait = trait_bioadaptability
+                        }
+                    }
+                }
+                random_owned_pop = {
+                    limit = {
+                        is_subspecies = root
+                        NOT = {
+                            has_trait = trait_bioadaptability
+                        }
+                    }
+                    root = {
+                        modify_species = {
+                            species = prev.species
+                            add_trait = trait_bioadaptability
+                        }
+                    }
+                }
+            }
+            set_country_flag = modification_adaptive
+            country_event = {
+                id = distar.3057
+                days = 5
+            }
+        }
+    }
+    option = {
+        name = distar.3055.c
+        allow = {
+            is_robot_empire = no
+        }
+        custom_tooltip = distar.3055.c.tooltip
+        hidden_effect = {
+            modify_species = {
+                species = this
+                add_trait = trait_limited_regeneration
+            }
+            set_country_flag = venerable_added
+            change_dominant_species = {
+                species = last_created_species
+            }
+            while = {
+                limit = {
+                    any_owned_pop = {
+                        is_subspecies = root
+                        NOT = {
+                            has_trait = trait_limited_regeneration
+                        }
+                    }
+                }
+                random_owned_pop = {
+                    limit = {
+                        is_subspecies = root
+                        NOT = {
+                            has_trait = trait_limited_regeneration
+                        }
+                    }
+                    root = {
+                        modify_species = {
+                            species = prev.species
+                            add_trait = trait_limited_regeneration
+                        }
+                    }
+                }
+            }
+            set_country_flag = modification_longlived
+            country_event = {
+                id = distar.3057
+                days = 5
+            }
+        }
+    }
+    option = {
+        name = distar.3055.d
+        custom_tooltip = distar.3055.d.tooltip
+        add_monthly_resource_mult = {
+            resource = energy
+            value = @tier3materialreward
+            min = @tier3materialmin
+            max = @tier3materialmax
+        }
+        add_monthly_resource_mult = {
+            resource = minerals
+            value = @tier2materialreward
+            min = @tier2materialmin
+            max = @tier2materialmax
+        }
+        hidden_effect = {
+            if = {
+                limit = {
+                    any_relation = {
+                        is_robot_empire = no
+                        is_homicidal = no
+                        is_ai = yes
+                        OR = {
+                            is_country_type = default
+                            is_country_type = ascended_empire
+                            is_country_type = lost_empire
+                        }
+                        OR = {
+                            is_xenophile = yes
+                            is_materialist = yes
+                            is_friendly_to = ROOT
+                            is_cordial_to = ROOT
+                            is_protective_to = ROOT
+                        }
+                    }
+                }
+                random_relation = {
+                    limit = {
+                        is_robot_empire = no
+                        is_homicidal = no
+                        is_ai = yes
+                        OR = {
+                            is_country_type = default
+                            is_country_type = ascended_empire
+                            is_country_type = lost_empire
+                        }
+                        OR = {
+                            is_xenophile = yes
+                            is_materialist = yes
+                            is_friendly_to = ROOT
+                            is_cordial_to = ROOT
+                            is_protective_to = ROOT
+                        }
+                    }
+                    save_event_target_as = purchasing_country
+                    random_list = {
+                        1 = {
+                            ROOT = {
+                                set_country_flag = modification_stronger
+                            }
+                            modify_species = {
+                                species = this
+                                add_trait = trait_social_pheromones
+                            }
+                            change_dominant_species = {
+                                species = last_created_species
+                            }
+                            while = {
+                                limit = {
+                                    any_owned_pop = {
+                                        is_subspecies = event_target:purchasing_country
+                                        NOT = {
+                                            has_trait = trait_social_pheromones
+                                        }
+                                    }
+                                }
+                                random_owned_pop = {
+                                    limit = {
+                                        is_subspecies = event_target:purchasing_country
+                                        NOT = {
+                                            has_trait = trait_social_pheromones
+                                        }
+                                    }
+                                    root = {
+                                        modify_species = {
+                                            species = prev.species
+                                            add_trait = trait_social_pheromones
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        1 = {
+                            ROOT = {
+                                set_country_flag = modification_adaptive
+                            }
+                            modify_species = {
+                                species = this
+                                add_trait = trait_bioadaptability
+                            }
+                            change_dominant_species = {
+                                species = last_created_species
+                            }
+                            while = {
+                                limit = {
+                                    any_owned_pop = {
+                                        is_subspecies = event_target:purchasing_country
+                                        NOT = {
+                                            has_trait = trait_bioadaptability
+                                        }
+                                    }
+                                }
+                                random_owned_pop = {
+                                    limit = {
+                                        is_subspecies = event_target:purchasing_country
+                                        NOT = {
+                                            has_trait = trait_bioadaptability
+                                        }
+                                    }
+                                    root = {
+                                        modify_species = {
+                                            species = prev.species
+                                            add_trait = trait_bioadaptability
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        1 = {
+                            ROOT = {
+                                set_country_flag = modification_longlived
+                            }
+                            modify_species = {
+                                species = this
+                                add_trait = trait_limited_regeneration
+                            }
+                            change_dominant_species = {
+                                species = last_created_species
+                            }
+                            while = {
+                                limit = {
+                                    any_owned_pop = {
+                                        is_subspecies = event_target:purchasing_country
+                                        NOT = {
+                                            has_trait = trait_limited_regeneration
+                                        }
+                                    }
+                                }
+                                random_owned_pop = {
+                                    limit = {
+                                        is_subspecies = event_target:purchasing_country
+                                        NOT = {
+                                            has_trait = trait_limited_regeneration
+                                        }
+                                    }
+                                    root = {
+                                        modify_species = {
+                                            species = prev.species
+                                            add_trait = trait_limited_regeneration
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                country_event = {
+                    id = anomalymod.89
+                    days = 5
+                }
+            }
+        }
+    }
+    option = {
+        name = distar.3055.e
+        custom_tooltip = distar.3055.e.tooltip
+        add_monthly_resource_mult = {
+            resource = society_research
+            value = @tier5materialreward
+            min = @tier5materialmin
+            max = @tier5materialmax
+        }
+    }
+}

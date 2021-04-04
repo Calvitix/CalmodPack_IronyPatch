@@ -1,0 +1,11 @@
+gpm_titanic_geo_form = {
+    show_only_custom_tooltip = yes
+    custom_tooltip = do_pm_gpm_titanic_geo_form
+    planet_jobs_minerals_produces_mult = 0.2
+    district_mining_max = 4
+    district_cheap_mining_max = 4
+    district_secure_mining_max = 4
+    district_surface_mining_max = 4
+    icon = "gfx/interface/icons/planet_modifiers/gpm_titanic_geo_form.dds"
+    icon_frame = 1
+}

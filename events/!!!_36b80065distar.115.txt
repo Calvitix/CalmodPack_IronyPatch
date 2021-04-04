@@ -1,0 +1,51 @@
+namespace = distar
+ship_event = {
+    id = distar.115
+    title = "distar.115.name"
+    desc = "distar.115.desc"
+    picture = GFX_evt_toxic
+    show_sound = event_scanner
+    location = from
+    is_triggered_only = yes
+    immediate = {
+        from = {
+            if = {
+                limit = {
+                    has_deposit_for = shipclass_research_station
+                }
+                clear_deposits = yes
+            }
+        }
+    }
+    option = {
+        name = INTERESTING
+        trigger = {
+            leader = {
+                NOR = {
+                    has_trait = leader_trait_expertise_materials
+                    has_trait = leader_trait_expertise_industry
+                }
+            }
+        }
+        from = {
+            add_deposit = d_minerals_2
+            add_deposit = d_alloys_2
+        }
+    }
+    option = {
+        name = INTERESTING
+        trigger = {
+            leader = {
+                OR = {
+                    has_trait = leader_trait_expertise_materials
+                    has_trait = leader_trait_expertise_industry
+                }
+            }
+        }
+        from = {
+            add_deposit = d_minerals_2
+            add_deposit = d_alloys_2
+            add_deposit = d_volatile_motes_1
+        }
+    }
+}

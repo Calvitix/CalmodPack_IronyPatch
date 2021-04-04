@@ -1,0 +1,178 @@
+namespace = distar
+ship_event = {
+    id = distar.1040
+    title = "distar.1040.name"
+    desc = "distar.1040.desc"
+    picture = GFX_evt_sapient_AI
+    show_sound = event_alien_signal
+    location = FROM
+    is_triggered_only = yes
+    immediate = {
+        owner = {
+            country_event = {
+                id = story.5
+                days = 30
+            }
+        }
+    }
+    option = {
+        name = distar.1040.a
+        custom_tooltip = distar.1040.a.tooltip
+        hidden_effect = {
+            owner = {
+                set_country_flag = lcluster_clue_bunker_bot
+                pop_lcluster_event = yes
+            }
+        }
+        owner = {
+            add_resource = {
+                alloys = 100
+            }
+            add_resource = {
+                rare_crystals = 50
+            }
+            add_resource = {
+                volatile_motes = 50
+            }
+        }
+    }
+    option = {
+        name = distar.1040.b
+        trigger = {
+            leader = {
+                NOR = {
+                    has_trait = leader_trait_expertise_computing
+                    has_trait = leader_trait_custom_AI_assistant
+                    has_trait = leader_trait_sapient_AI_assistant
+                }
+            }
+        }
+        custom_tooltip = distar.1040.b.tooltip
+        hidden_effect = {
+            owner = {
+                set_country_flag = lcluster_clue_bunker_bot
+                pop_lcluster_event = yes
+                if = {
+                    limit = {
+                        has_distar = yes
+                        NOT = {
+                            has_country_flag = encountered_first_lgate
+                        }
+                    }
+                    random_list = {
+                        1 = {
+                            country_event = {
+                                id = anomalymod.80
+                                days = 10
+                            }
+                        }
+                        2 = {
+                        }
+                    }
+                }
+            }
+        }
+        owner = {
+            add_modifier = {
+                modifier = mega_computer
+                days = 3600
+            }
+        }
+    }
+    option = {
+        name = distar.1040.b
+        trigger = {
+            leader = {
+                OR = {
+                    has_trait = leader_trait_expertise_computing
+                    has_trait = leader_trait_custom_AI_assistant
+                    has_trait = leader_trait_sapient_AI_assistant
+                }
+            }
+        }
+        custom_tooltip = distar.1040.b.tooltip.alt
+        hidden_effect = {
+            owner = {
+                set_country_flag = lcluster_clue_bunker_bot
+                pop_lcluster_event = yes
+                if = {
+                    limit = {
+                        has_distar = yes
+                        NOT = {
+                            has_country_flag = encountered_first_lgate
+                        }
+                    }
+                    random_list = {
+                        1 = {
+                            country_event = {
+                                id = anomalymod.80
+                                days = 10
+                            }
+                        }
+                        2 = {
+                        }
+                    }
+                }
+            }
+        }
+        owner = {
+            add_modifier = {
+                modifier = mega_computer_alt
+                days = -1
+            }
+        }
+    }
+    option = {
+        name = distar.1040.c
+        custom_tooltip = distar.1040.c.tooltip
+        hidden_effect = {
+            owner = {
+                set_country_flag = lcluster_clue_bunker_bot
+                pop_lcluster_event = yes
+                if = {
+                    limit = {
+                        has_distar = yes
+                        NOT = {
+                            has_country_flag = encountered_first_lgate
+                        }
+                    }
+                    random_list = {
+                        1 = {
+                            country_event = {
+                                id = anomalymod.80
+                                days = 10
+                            }
+                        }
+                        1 = {
+                        }
+                    }
+                    country_event = {
+                        id = anomalymod.81
+                        days = 18000
+                        random = 72000
+                    }
+                }
+                else_if = {
+                    limit = {
+                        has_distar = yes
+                        has_country_flag = encountered_first_lgate
+                    }
+                    country_event = {
+                        id = anomalymod.81
+                        days = 18000
+                        random = 72000
+                    }
+                }
+            }
+        }
+        owner = {
+            add_resource = {
+                influence = 200
+            }
+        }
+        custom_tooltip = distar.1040.c.tooltip
+    }
+    after = {
+        small_artifact_reward = yes
+    }
+}

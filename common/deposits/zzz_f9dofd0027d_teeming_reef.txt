@@ -1,0 +1,85 @@
+@planet_type_bonus = 1.5
+d_teeming_reef = {
+    is_for_colonizeable = yes
+    use_for_min_max_adjustments = yes
+    category = deposit_cat_food
+    use_weights_for_terraforming_swap_types = yes
+    should_swap_deposit_on_terraforming = yes
+    terraforming_swap_types = {
+        d_black_soil
+        d_marvelous_oasis
+        d_tropical_island
+        d_fungal_forest
+        d_complex_ecosystem
+        d_exotic_fauna
+        d_hydrocarbon_lakes
+        d_ammonia_seas
+        d_submerged_ore_veins
+        d_salt_flat
+        d_massive_glacier
+        d_toxic_kelp
+        d_teeming_reef
+    }
+    planet_modifier = {
+        district_farming_max = 2
+        planet_jobs_society_research_produces_mult = 0.05
+    }
+    potential = {
+        OR = {
+            is_planet_class = pc_gaia
+            is_planet_class = pc_pdshroud
+            is_planet_class = pc_ocean
+            is_planet_class = pc_aquatic
+            is_planet_class = pc_desertislands
+            is_planet_class = pc_superhabitable
+            is_planet_class = pc_graveyard
+            is_planet_class = pc_floating
+            is_planet_class = pc_crystal
+            is_planet_class = pc_technoorganic
+            has_modifier = "mediterranean_world"
+            has_modifier = "oasis_world"
+            has_modifier = "cryokarst_world"
+            has_modifier = "ocean_tidally_locked"
+        }
+        has_district_farming = yes
+    }
+    drop_weight = {
+        weight = 8
+        modifier = {
+            factor = @planet_type_bonus
+            is_wet = yes
+        }
+        modifier = {
+            factor = 1.5
+            has_modifier = "lush_planet"
+        }
+        modifier = {
+            factor = 0.5
+            has_modifier = "bleak_planet"
+        }
+        modifier = {
+            factor = 3
+            has_modifier = "atoll_world"
+        }
+        modifier = {
+            factor = 2
+            OR = {
+                has_modifier = "panthalassic_world"
+                has_modifier = "young_world"
+            }
+        }
+        modifier = {
+            factor = 0.5
+            OR = {
+                is_planet_class = pc_continental
+                is_planet_class = pc_gaia
+                has_modifier = "mediterranean_world"
+                has_modifier = "oasis_world"
+            }
+        }
+        modifier = {
+            factor = 0.25
+            has_modifier = "boreal_world"
+        }
+    }
+}

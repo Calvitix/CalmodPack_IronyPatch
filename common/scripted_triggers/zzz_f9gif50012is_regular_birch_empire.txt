@@ -1,0 +1,6 @@
+is_regular_birch_empire = {
+    OR = {
+        is_regular_empire = yes
+        is_country_type = dormant_aeternum
+    }
+}

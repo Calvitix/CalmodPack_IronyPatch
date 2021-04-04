@@ -1,2 +1,0 @@
-﻿l_french:
- count_owned_megastructure_trigger:1000 "Number of Owned Megastructures$CONDITIONS$ $IS_NOT$ $COMPARATOR$ $NUM|Y$"

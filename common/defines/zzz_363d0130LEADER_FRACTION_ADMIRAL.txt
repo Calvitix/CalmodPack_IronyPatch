@@ -1,3 +1,0 @@
-NAI = {
-    LEADER_FRACTION_ADMIRAL = 0.35
-}

@@ -1,0 +1,9 @@
+random_list = {
+    name = "rl_dark_stars"
+    stars = {
+        "sc_l"
+        "sc_t"
+        "sc_y"
+        "sc_d"
+    }
+}

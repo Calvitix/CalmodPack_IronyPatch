@@ -1,0 +1,38 @@
+namespace = anomaly
+ship_event = {
+    id = anomaly.185
+    title = "anomaly.185.name"
+    desc = "anomaly.185.desc"
+    show_sound = event_radio_chatter
+    picture = GFX_evt_landing_ship_2
+    location = from
+    trackable = yes
+    is_triggered_only = yes
+    option = {
+        name = OK
+        small_artifact_reward = yes
+        from = {
+            enable_special_project = {
+                name = "LIMBO_1_PROJECT"
+                location = this
+                owner = root
+            }
+        }
+        if = {
+            limit = {
+                from = {
+                    can_be_terraforming_candidate = yes
+                }
+            }
+            custom_tooltip = TERRAFORMING_CANDIDATE_EFFECT
+            hidden_effect = {
+                from = {
+                    add_modifier = {
+                        modifier = "terraforming_candidate"
+                        days = -1
+                    }
+                }
+            }
+        }
+    }
+}

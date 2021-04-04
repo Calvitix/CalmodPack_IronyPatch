@@ -1,0 +1,52 @@
+namespace = primitive
+country_event = {
+    id = primitive.24
+    hide_window = yes
+    trigger = {
+        is_country_type = primitive
+        has_country_flag = late_medieval_age
+        NOT = {
+            has_country_flag = recently_advanced
+        }
+    }
+    mean_time_to_happen = {
+        years = 160
+    }
+    immediate = {
+        set_timed_country_flag = {
+            flag = recently_advanced
+            days = 2160
+        }
+        set_primitive_age_effect = {
+            primitive_age = renaissance_age
+        }
+        change_country_flag = {
+            icon = {
+                category = "special"
+                file = "primitive.dds"
+            }
+            background = {
+                category = "backgrounds"
+                file = "new_dawn.dds"
+            }
+            colors = {
+                "pink"
+                "burgundy"
+                "null"
+                "null"
+            }
+        }
+        capital_scope = {
+            if = {
+                limit = {
+                    exists = observation_outpost_owner
+                }
+                observation_outpost_owner = {
+                    country_event = {
+                        id = primitive.25
+                    }
+                }
+            }
+        }
+    }
+}

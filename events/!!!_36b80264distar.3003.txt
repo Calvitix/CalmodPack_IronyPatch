@@ -1,0 +1,38 @@
+namespace = distar
+country_event = {
+    id = distar.3003
+    title = "trojan_asteroid_title"
+    desc = {
+        text = "distar.3003.desc"
+        trigger = {
+            owner = {
+                NOT = {
+                    has_ethic = ethic_gestalt_consciousness
+                }
+            }
+        }
+    }
+    desc = {
+        text = "distar.3003.gc.desc"
+        trigger = {
+            owner = {
+                has_ethic = ethic_gestalt_consciousness
+            }
+        }
+    }
+    picture = GFX_evt_small_space_battle
+    show_sound = event_scanner
+    location = event_target:trojan_asteroid
+    trackable = yes
+    is_triggered_only = yes
+    option = {
+        name = OK
+        event_target:trojan_asteroid = {
+            enable_special_project = {
+                name = "trojan_asteroid_project"
+                location = event_target:trojan_asteroid
+                owner = root.owner
+            }
+        }
+    }
+}

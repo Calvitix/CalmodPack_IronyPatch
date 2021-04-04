@@ -1,0 +1,114 @@
+namespace = colony
+planet_event = {
+    id = colony.103
+    title = "colony.103.name"
+    desc = "colony.103.desc"
+    picture = GFX_evt_colony_settlement
+    show_sound = event_planetary_riot
+    location = ROOT
+    pre_triggers = {
+        has_owner = yes
+        is_homeworld = no
+        original_owner = yes
+        has_ground_combat = no
+    }
+    trigger = {
+        has_planet_flag = did_not_terraform
+        NOT = {
+            has_planet_flag = terraforming_drought
+        }
+        num_pops > 0
+    }
+    mean_time_to_happen = {
+        months = 240
+    }
+    immediate = {
+        set_timed_planet_flag = {
+            flag = terraforming_drought
+            days = 19800
+        }
+    }
+    option = {
+        name = colony.103.a
+        every_owned_pop = {
+            add_modifier = {
+                modifier = "pop_drought"
+                days = 3600
+            }
+        }
+    }
+    option = {
+        name = colony.103.b
+        trigger = {
+            count_pops = {
+                limit = {
+                    is_robot_pop = no
+                }
+                count < 9
+            }
+            owner = {
+                resource_stockpile_compare = {
+                    resource = energy
+                    value >= 150
+                }
+            }
+        }
+        owner = {
+            add_resource = {
+                energy = -150
+            }
+        }
+    }
+    option = {
+        name = colony.103.b
+        trigger = {
+            AND = {
+                count_pops = {
+                    limit = {
+                        is_robot_pop = no
+                    }
+                    count > 8
+                }
+                count_pops = {
+                    limit = {
+                        is_robot_pop = no
+                    }
+                    count < 17
+                }
+            }
+            owner = {
+                resource_stockpile_compare = {
+                    resource = energy
+                    value >= 375
+                }
+            }
+        }
+        owner = {
+            add_resource = {
+                energy = -375
+            }
+        }
+    }
+    option = {
+        name = colony.103.b
+        trigger = {
+            count_pops = {
+                limit = {
+                    is_robot_pop = no
+                }
+                count > 16
+            }
+            owner = {
+                resource_stockpile_compare = {
+                    resource = energy
+                    value >= 650
+                }
+            }
+        }
+        owner = {
+            add_resource = {
+                energy = -600
+            }
+        }
+    }
+}

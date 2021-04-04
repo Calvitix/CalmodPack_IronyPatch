@@ -1,0 +1,112 @@
+namespace = distar
+ship_event = {
+    id = distar.1045
+    title = "distar.1045.name"
+    desc = "distar.1045.desc"
+    picture = GFX_evt_clocks
+    show_sound = event_mystic_reveal
+    location = FROM
+    is_triggered_only = yes
+    immediate = {
+        FROM = {
+            save_event_target_as = atomic_clock_planet
+        }
+        owner = {
+            country_event = {
+                id = story.5
+                days = 30
+            }
+            set_country_flag = atomic_clock
+        }
+    }
+    option = {
+        name = distar.1045.a
+        custom_tooltip = distar.1045.a.tooltip
+        owner = {
+            add_monthly_resource_mult = {
+                resource = engineering_research
+                value = @tier2researchreward
+                min = @tier2researchmin
+                max = @tier2researchmax
+            }
+        }
+        hidden_effect = {
+            owner = {
+                random_list = {
+                    100 = {
+                        country_event = {
+                            id = distar.310
+                            days = 15123
+                        }
+                    }
+                    200 = {
+                        modifier = {
+                            factor = 0
+                            FROM = {
+                                solar_system = {
+                                    NOT = {
+                                        any_system_planet = {
+                                            OR = {
+                                                is_planet_class = pc_pulsar
+                                                is_planet_class = pc_neutron_star
+                                                is_planet_class = pc_magnetar
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        modifier = {
+                            factor = 0
+                            has_leviathans = no
+                        }
+                        country_event = {
+                            id = anomalymod.104
+                            days = 7923
+                        }
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = distar.1045.b
+        custom_tooltip = distar.1045.b.tooltip
+        owner = {
+            add_monthly_resource_mult = {
+                resource = engineering_research
+                value = @tier2researchreward
+                min = @tier2researchmin
+                max = @tier2researchmax
+            }
+        }
+        hidden_effect = {
+            random_list = {
+                6 = {
+                    ship_event = {
+                        id = anomalymod.116
+                        days = 3
+                    }
+                }
+                11 = {
+                    ship_event = {
+                        id = anomalymod.117
+                        days = 3
+                    }
+                }
+                2 = {
+                    ship_event = {
+                        id = anomalymod.118
+                        days = 3
+                    }
+                }
+                1 = {
+                    ship_event = {
+                        id = anomalymod.119
+                        days = 3
+                    }
+                }
+            }
+        }
+    }
+}

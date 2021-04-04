@@ -1,0 +1,49 @@
+namespace = anomaly
+country_event = {
+    id = anomaly.5025
+    title = "anomaly.5025.name"
+    desc = "anomaly.5025.desc"
+    diplomatic = yes
+    picture_event_data = {
+        room = no_video_feed_room
+    }
+    trigger = {
+        has_country_flag = new_baldarak_settled
+        OR = {
+            NOT = {
+                has_country_flag = new_baldarak_contact_lost
+            }
+            has_country_flag = new_baldarak_occupation_4
+            has_country_flag = baldarak_revolution_4
+        }
+        NOT = {
+            has_country_flag = baldarak_science_academy
+        }
+    }
+    mean_time_to_happen = {
+        months = 320
+        modifier = {
+            factor = 0.5
+            OR = {
+                has_country_flag = new_baldarak_occupation_4
+                has_country_flag = baldarak_revolution_4
+            }
+        }
+        modifier = {
+            factor = 0.5
+            mid_game_years_passed >= 25
+        }
+    }
+    immediate = {
+        set_country_flag = baldarak_science_academy
+    }
+    option = {
+        name = anomaly.5025.a
+        add_monthly_resource_mult = {
+            resource = physics_research
+            value = @tier3researchreward
+            min = @tier3researchmin
+            max = @tier3researchmax
+        }
+    }
+}

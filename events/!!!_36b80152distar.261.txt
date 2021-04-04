@@ -1,0 +1,144 @@
+namespace = distar
+ship_event = {
+    id = distar.261
+    title = "distar.261.name"
+    desc = "distar.261.desc"
+    picture = GFX_evt_animal_wildlife
+    show_sound = event_alien_nature
+    location = from
+    is_triggered_only = yes
+    option = {
+        name = FASCINATING
+        owner = {
+            small_artifact_reward = yes
+            add_monthly_resource_mult = {
+                resource = society_research
+                value = @tier3researchreward
+                min = @tier3researchmin
+                max = @tier3researchmax
+            }
+        }
+    }
+    option = {
+        name = "distar.234.phobe"
+        exclusive_trigger = {
+            owner = {
+                is_xenophobe = yes
+            }
+        }
+        owner = {
+            small_artifact_reward = yes
+            add_monthly_resource_mult = {
+                resource = society_research
+                value = @tier3researchreward
+                min = @tier3researchmin
+                max = @tier3researchmax
+            }
+        }
+    }
+    option = {
+        name = INTERESTING
+        exclusive_trigger = {
+            owner = {
+                OR = {
+                    has_ethic = ethic_fanatic_authoritarian
+                    has_civic = civic_slaver_guilds
+                }
+            }
+        }
+        owner = {
+            small_artifact_reward = yes
+            add_monthly_resource_mult = {
+                resource = society_research
+                value = @tier3researchreward
+                min = @tier3researchmin
+                max = @tier3researchmax
+            }
+        }
+    }
+    option = {
+        name = TASTY
+        exclusive_trigger = {
+            owner = {
+                has_civic = civic_hive_devouring_swarm
+            }
+        }
+        owner = {
+            small_artifact_reward = yes
+            add_monthly_resource_mult = {
+                resource = society_research
+                value = @tier3researchreward
+                min = @tier3researchmin
+                max = @tier3researchmax
+            }
+        }
+    }
+    option = {
+        name = "distar.261.a.servi"
+        exclusive_trigger = {
+            owner = {
+                has_civic = civic_machine_servitor
+            }
+        }
+        owner = {
+            small_artifact_reward = yes
+            add_monthly_resource_mult = {
+                resource = society_research
+                value = @tier3researchreward
+                min = @tier3researchmin
+                max = @tier3researchmax
+            }
+        }
+    }
+    option = {
+        name = "distar.261.a.assim"
+        exclusive_trigger = {
+            owner = {
+                has_civic = civic_machine_assimilator
+            }
+        }
+        owner = {
+            small_artifact_reward = yes
+            add_monthly_resource_mult = {
+                resource = society_research
+                value = @tier3researchreward
+                min = @tier3researchmin
+                max = @tier3researchmax
+            }
+        }
+    }
+    option = {
+        name = "distar.261.a.exter"
+        exclusive_trigger = {
+            owner = {
+                has_civic = civic_machine_terminator
+            }
+        }
+        owner = {
+            small_artifact_reward = yes
+            add_monthly_resource_mult = {
+                resource = society_research
+                value = @tier2researchreward
+                min = @tier2researchmin
+                max = @tier2researchmax
+            }
+        }
+    }
+    option = {
+        name = SCUM
+        exclusive_trigger = {
+            owner = {
+                has_civic = civic_fanatic_purifiers
+            }
+        }
+        owner = {
+            small_artifact_reward = yes
+            add_monthly_resource_mult = {
+                resource = society_research
+                value = @tier2researchreward
+                min = @tier2researchmin
+                max = @tier2researchmax
+            }
+        }
+    }
+}

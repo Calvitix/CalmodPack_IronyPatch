@@ -1,0 +1,33 @@
+dyson_sphere_3 = {
+    entity = "dyson_sphere_phase_03_entity"
+    construction_entity = "dyson_sphere_part_2_entity"
+    portrait = "GFX_megastructure_construction_background"
+    upgrade_from = {
+        dyson_sphere_2
+    }
+    prerequisites = {
+        "tech_dyson_sphere"
+    }
+    show_prereqs = yes
+    ai_weight = {
+        factor = 10
+    }
+    build_time = @dyson_p3_buildtime_g_star
+    resources = {
+        category = megastructures
+        cost = {
+            alloys = @dyson_p3_cost_alloys_g_star
+        }
+        produces = {
+            energy = @dyson_p3_produces_energy_g_star
+        }
+    }
+    on_build_complete = {
+        every_system_planet = {
+            limit = {
+                has_modifier = terraforming_candidate
+            }
+            remove_modifier = terraforming_candidate
+        }
+    }
+}

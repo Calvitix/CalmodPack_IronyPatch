@@ -47,7 +47,7 @@ ehof_megastructure_phase0 = {
             from = {
                 NOT = {
                     any_owned_megastructure = {
-                        is_an_ehof = yes
+                        is_any_ehof = yes
                     }
                 }
             }
@@ -139,10 +139,7 @@ ehof_megastructure_phase0 = {
     }
     on_build_complete = {
         fromfrom = {
-            remove_megastructure_flag = ehof_phase_01
-            remove_megastructure_flag = ehof_phase_02
-            remove_megastructure_flag = ehof_phase_03
-            remove_megastructure_flag = ehof_phase_04
+            remove_ehof_flags = yes
             set_megastructure_flag = ehof_phase_00
             planet = {
                 set_planet_flag = megastructure
@@ -156,6 +153,12 @@ ehof_megastructure_phase0 = {
                     }
                 }
             }
+        }
+        set_star_flag = ehof_megastructure_system@from
+        save_event_target_as = ehof_megastructure_system
+        every_system_planet = {
+            set_planet_flag = cant_build_here
+            set_planet_flag = cant_target_this_planet
         }
         from = {
             set_variable = {

@@ -1,0 +1,119 @@
+guiTypes = {
+    @outliner_w = 302
+    @outliner_h = 22
+    containerWindowType = {
+        name = "outliner_member_fleet_civilian_entry_window"
+        size = {
+            width = @outliner_w
+            height = @outliner_h
+        }
+        position = {
+            x = 0
+            y = 0
+        }
+        orientation = upper_right
+        moveable = no
+        buttonType = {
+            name = "background"
+            quadTextureSprite = "GFX_outliner_member_small_bg"
+            position = {
+                x = -3
+                y = -5
+            }
+            clicksound = click_outliner
+        }
+        containerWindowType = {
+            name = "selected_overlay"
+            position = {
+                x = 0
+                y = 0
+            }
+            size = {
+                width = @outliner_w
+                height = 100%
+            }
+            background = {
+                name = "selected_bg"
+                spriteType = "GFX_glow_tile_orange_no_padding"
+                alwaysTransparent = yes
+            }
+        }
+        iconType = {
+            name = "fleet_status"
+            position = {
+                x = 4
+                y = 0
+            }
+            spriteType = "GFX_fleet_status_icon"
+            frame = 20
+            scale = 0.7
+        }
+        iconType = {
+            name = "leader_level"
+            position = {
+                x = 156
+                y = -1
+            }
+            spriteType = "GFX_outliner_leader_level"
+            frame = 10
+            alwaysTransparent = yes
+        }
+        instantTextBoxType = {
+            name = "type"
+            font = "cg_16b"
+            text = "0"
+            position = {
+                x = 28
+                y = 1
+            }
+            maxWidth = 158
+            maxHeight = 20
+            fixedSize = yes
+            format = left
+            text_color_code = "E"
+            alwaysTransparent = yes
+        }
+        instantTextBoxType = {
+            name = "name"
+            font = "cg_16b"
+            text = "0"
+            position = {
+                x = -112
+                y = 1
+            }
+            maxWidth = 100
+            maxHeight = 20
+            fixedSize = yes
+            orientation = "UPPER_RIGHT"
+            format = left
+            text_color_code = "g"
+            alwaysTransparent = yes
+        }
+        instantTextBoxType = {
+            name = "location"
+            font = "cg_16b"
+            text = "100"
+            position = {
+                x = 100
+                y = 1
+            }
+            maxWidth = 74
+            maxHeight = 20
+            fixedSize = yes
+            orientation = "UPPER_RIGHT"
+            format = right
+            text_color_code = "g"
+            alwaysTransparent = yes
+        }
+        iconType = {
+            name = "progress"
+            position = {
+                x = -112
+                y = 5
+            }
+            orientation = "UPPER_RIGHT"
+            spriteType = "GFX_outliner_planet_construction_progressbar"
+            frame = 50
+        }
+    }
+}

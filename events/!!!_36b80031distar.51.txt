@@ -1,0 +1,332 @@
+namespace = distar
+country_event = {
+    id = distar.51
+    title = "distar.51.name"
+    desc = "distar.51.desc"
+    picture = GFX_evt_friendly_amoeba
+    show_sound = event_space_amoeba
+    location = event_target:lost_amoeba_adult_fleet
+    is_triggered_only = yes
+    trigger = {
+        exists = event_target:lost_amoeba_fleet
+    }
+    immediate = {
+        create_fleet = {
+            name = "NAME_Adopted_Amoeba"
+            effect = {
+                set_owner = root
+                create_ship = {
+                    name = "NAME_Adopted_Amoeba"
+                    design = "NAME_Large_Space_Organism_Teal"
+                    prefix = no
+                    upgradable = no
+                    effect = {
+                        save_event_target_as = lost_amoeba_ship
+                    }
+                }
+                set_location = {
+                    target = event_target:lost_amoeba_fleet
+                }
+                set_fleet_stance = passive
+                set_fleet_flag = lost_amoeba_adult_fleet@root
+                save_event_target_as = lost_amoeba_adult_fleet
+            }
+            settings = {
+                can_upgrade = no
+                can_disband = no
+                can_change_composition = no
+                can_change_leader = no
+                uses_naval_capacity = no
+            }
+        }
+        event_target:lost_amoeba_fleet = {
+            delete_fleet = {
+                target = this
+                destroy_template = yes
+            }
+        }
+        if = {
+            limit = {
+                NOT = {
+                    has_modifier = adopted_amoeba
+                }
+            }
+            add_modifier = {
+                modifier = "adopted_amoeba"
+                days = -1
+            }
+        }
+        event_target:lost_amoeba_fleet = {
+            set_timed_fleet_flag = {
+                flag = lost_amoeba_mating_timer
+                days = 3600
+            }
+        }
+    }
+    option = {
+        name = "distar.51.a"
+        allow = {
+            NOT = {
+                has_ethic = ethic_fanatic_xenophobe
+            }
+            is_homicidal = no
+        }
+        event_target:lost_amoeba_adult_fleet = {
+            set_name = "NAME_Bubbles"
+            hidden_effect = {
+                add_modifier = {
+                    modifier = "amoeba_speed_boost"
+                    days = -1
+                }
+                add_modifier = {
+                    modifier = "evolved_weapon_boost"
+                    days = -1
+                }
+                add_modifier = {
+                    modifier = "evolved_firing_rate"
+                    days = -1
+                }
+                add_modifier = {
+                    modifier = "evolved_evasion"
+                    days = -1
+                }
+            }
+        }
+        hidden_effect = {
+            event_target:lost_amoeba_ship = {
+                set_name = "NAME_Bubbles"
+            }
+        }
+    }
+    option = {
+        name = "distar.51.b"
+        event_target:lost_amoeba_adult_fleet = {
+            set_name = "NAME_Nyx"
+            hidden_effect = {
+                add_modifier = {
+                    modifier = "amoeba_speed_boost"
+                    days = -1
+                }
+                add_modifier = {
+                    modifier = "evolved_weapon_boost"
+                    days = -1
+                }
+                add_modifier = {
+                    modifier = "evolved_firing_rate"
+                    days = -1
+                }
+                add_modifier = {
+                    modifier = "evolved_evasion"
+                    days = -1
+                }
+            }
+        }
+        hidden_effect = {
+            event_target:lost_amoeba_ship = {
+                set_name = "NAME_Nyx"
+            }
+        }
+    }
+    option = {
+        name = "distar.51.c"
+        event_target:lost_amoeba_adult_fleet = {
+            set_name = "NAME_Renegade"
+            hidden_effect = {
+                add_modifier = {
+                    modifier = "amoeba_speed_boost"
+                    days = -1
+                }
+                add_modifier = {
+                    modifier = "evolved_weapon_boost"
+                    days = -1
+                }
+                add_modifier = {
+                    modifier = "evolved_firing_rate"
+                    days = -1
+                }
+                add_modifier = {
+                    modifier = "evolved_evasion"
+                    days = -1
+                }
+            }
+        }
+        hidden_effect = {
+            event_target:lost_amoeba_ship = {
+                set_name = "NAME_Renegade"
+            }
+        }
+    }
+    option = {
+        name = "distar.51.d"
+        event_target:lost_amoeba_adult_fleet = {
+            set_name = "NAME_Euka"
+            hidden_effect = {
+                add_modifier = {
+                    modifier = "amoeba_speed_boost"
+                    days = -1
+                }
+                add_modifier = {
+                    modifier = "evolved_weapon_boost"
+                    days = -1
+                }
+                add_modifier = {
+                    modifier = "evolved_firing_rate"
+                    days = -1
+                }
+                add_modifier = {
+                    modifier = "evolved_evasion"
+                    days = -1
+                }
+            }
+        }
+        hidden_effect = {
+            event_target:lost_amoeba_ship = {
+                set_name = "NAME_Euka"
+            }
+        }
+    }
+    option = {
+        name = "distar.51.e"
+        event_target:lost_amoeba_adult_fleet = {
+            set_name = "NAME_Cyto"
+            hidden_effect = {
+                add_modifier = {
+                    modifier = "amoeba_speed_boost"
+                    days = -1
+                }
+                add_modifier = {
+                    modifier = "evolved_weapon_boost"
+                    days = -1
+                }
+                add_modifier = {
+                    modifier = "evolved_firing_rate"
+                    days = -1
+                }
+                add_modifier = {
+                    modifier = "evolved_evasion"
+                    days = -1
+                }
+            }
+        }
+        hidden_effect = {
+            event_target:lost_amoeba_ship = {
+                set_name = "NAME_Cyto"
+            }
+        }
+    }
+    option = {
+        name = "distar.51.f"
+        event_target:lost_amoeba_adult_fleet = {
+            set_name = "NAME_Boomer"
+            hidden_effect = {
+                add_modifier = {
+                    modifier = "amoeba_speed_boost"
+                    days = -1
+                }
+                add_modifier = {
+                    modifier = "evolved_weapon_boost"
+                    days = -1
+                }
+                add_modifier = {
+                    modifier = "evolved_firing_rate"
+                    days = -1
+                }
+                add_modifier = {
+                    modifier = "evolved_evasion"
+                    days = -1
+                }
+            }
+        }
+        hidden_effect = {
+            event_target:lost_amoeba_ship = {
+                set_name = "NAME_Boomer"
+            }
+        }
+    }
+    option = {
+        name = "distar.51.g"
+        event_target:lost_amoeba_adult_fleet = {
+            set_name = "NAME_Blaze"
+            hidden_effect = {
+                add_modifier = {
+                    modifier = "amoeba_speed_boost"
+                    days = -1
+                }
+                add_modifier = {
+                    modifier = "evolved_weapon_boost"
+                    days = -1
+                }
+                add_modifier = {
+                    modifier = "evolved_firing_rate"
+                    days = -1
+                }
+                add_modifier = {
+                    modifier = "evolved_evasion"
+                    days = -1
+                }
+            }
+        }
+        hidden_effect = {
+            event_target:lost_amoeba_ship = {
+                set_name = "NAME_Blaze"
+            }
+        }
+    }
+    option = {
+        name = "distar.51.h"
+        event_target:lost_amoeba_adult_fleet = {
+            set_name = "NAME_Nova"
+            hidden_effect = {
+                add_modifier = {
+                    modifier = "amoeba_speed_boost"
+                    days = -1
+                }
+                add_modifier = {
+                    modifier = "evolved_weapon_boost"
+                    days = -1
+                }
+                add_modifier = {
+                    modifier = "evolved_firing_rate"
+                    days = -1
+                }
+                add_modifier = {
+                    modifier = "evolved_evasion"
+                    days = -1
+                }
+            }
+        }
+        hidden_effect = {
+            event_target:lost_amoeba_ship = {
+                set_name = "NAME_Nova"
+            }
+        }
+    }
+    option = {
+        name = "distar.51.more"
+        hidden_effect = {
+            country_event = {
+                id = distar.55
+            }
+        }
+        event_target:lost_amoeba_adult_fleet = {
+            hidden_effect = {
+                add_modifier = {
+                    modifier = "amoeba_speed_boost"
+                    days = -1
+                }
+                add_modifier = {
+                    modifier = "evolved_weapon_boost"
+                    days = -1
+                }
+                add_modifier = {
+                    modifier = "evolved_firing_rate"
+                    days = -1
+                }
+                add_modifier = {
+                    modifier = "evolved_evasion"
+                    days = -1
+                }
+            }
+        }
+    }
+}

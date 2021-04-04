@@ -1,0 +1,87 @@
+namespace = distar
+ship_event = {
+    id = distar.1090
+    title = "distar.1090.name"
+    desc = "distar.1090.desc"
+    picture = {
+        trigger = {
+            from = {
+                is_tropical = yes
+            }
+        }
+        picture = GFX_evt_tropical
+    }
+    picture = {
+        trigger = {
+            from = {
+                is_continental = yes
+            }
+        }
+        picture = GFX_evt_continental
+    }
+    picture = {
+        trigger = {
+            from = {
+                NOR = {
+                    is_continental = yes
+                    is_tropical = yes
+                }
+            }
+        }
+        picture = GFX_evt_animal_wildlife
+    }
+    show_sound = event_construction
+    location = FROM
+    is_triggered_only = yes
+    immediate = {
+        owner = {
+            country_event = {
+                id = story.5
+                days = 30
+            }
+        }
+        From = {
+            add_deposit = d_harvester_fields
+            add_modifier = {
+                modifier = ancient_harvesters
+                days = -1
+            }
+        }
+    }
+    option = {
+        name = distar.1090.a
+        trigger = {
+            owner = {
+                country_uses_food = yes
+            }
+        }
+        small_artifact_reward = yes
+        tooltip = {
+            From = {
+                add_deposit = d_harvester_fields
+                add_modifier = {
+                    modifier = ancient_harvesters
+                    days = -1
+                }
+            }
+        }
+    }
+    option = {
+        name = distar.1090.b
+        trigger = {
+            owner = {
+                country_uses_food = no
+            }
+        }
+        small_artifact_reward = yes
+        tooltip = {
+            From = {
+                add_deposit = d_harvester_fields
+                add_modifier = {
+                    modifier = ancient_harvesters
+                    days = -1
+                }
+            }
+        }
+    }
+}

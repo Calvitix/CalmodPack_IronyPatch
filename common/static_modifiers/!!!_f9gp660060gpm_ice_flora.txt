@@ -1,0 +1,12 @@
+gpm_ice_flora = {
+    show_only_custom_tooltip = yes
+    custom_tooltip = do_pm_gpm_ice_flora
+    pop_happiness = 0.05
+    planet_jobs_food_produces_mult = 0.2
+    district_farming_max = 3
+    district_nature_farms_max = 3
+    district_ocean_farms_max = 3
+    district_exotic_farms_max = 3
+    icon = "gfx/interface/icons/planet_modifiers/gpm_ice_flora.dds"
+    icon_frame = 1
+}

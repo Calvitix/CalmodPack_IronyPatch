@@ -1,0 +1,82 @@
+district_cloning_facility = {
+    base_buildtime = 720
+    min_for_deposits_on_planet = 1
+    max_for_deposits_on_planet = 4
+    show_on_uncolonized = {
+        from = {
+            is_regular_empire = yes
+        }
+        has_assembly_deposits = yes
+    }
+    potential = {
+        exists = owner
+        owner = {
+            is_regular_empire = yes
+        }
+        has_assembly_deposits = yes
+    }
+    allow = {
+        assembly_production_district_allowed = yes
+    }
+    conversion_ratio = 1
+    convert_to = {
+        district_robot_assembly
+        district_drone_lab
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            trigger = {
+                from = {
+                    is_ai = no
+                }
+            }
+            minerals = 1000
+            alloys = 50
+        }
+        cost = {
+            trigger = {
+                from = {
+                    is_ai = yes
+                }
+            }
+            minerals = 2000
+        }
+        upkeep = {
+            energy = 20
+        }
+    }
+    planet_modifier = {
+        job_clone_scientist_add = 2
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+        }
+        text = job_clone_scientist_desc
+    }
+    ai_weight = {
+        weight = 50
+        modifier = {
+            factor = 0
+            low_energy_income = yes
+        }
+        modifier = {
+            factor = 0
+            AND = {
+                free_jobs > 2
+                NOT = {
+                    any_owned_pop = {
+                        is_unemployed = yes
+                    }
+                }
+            }
+        }
+    }
+    ai_resource_production = {
+        energy = 10
+        trigger = {
+            always = yes
+        }
+    }
+}

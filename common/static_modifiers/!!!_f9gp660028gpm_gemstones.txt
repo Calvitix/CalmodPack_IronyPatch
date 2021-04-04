@@ -1,0 +1,11 @@
+gpm_gemstones = {
+    show_only_custom_tooltip = yes
+    custom_tooltip = do_pm_gpm_gemstones
+    trade_value_mult = 0.3
+    district_mining_max = 3
+    district_cheap_mining_max = 3
+    district_secure_mining_max = 3
+    district_surface_mining_max = 3
+    icon = "gfx/interface/icons/planet_modifiers/gpm_gemstones.dds"
+    icon_frame = 1
+}

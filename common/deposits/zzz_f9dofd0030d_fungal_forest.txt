@@ -1,0 +1,121 @@
+d_fungal_forest = {
+    is_for_colonizeable = yes
+    use_for_min_max_adjustments = yes
+    category = deposit_cat_blockers
+    use_weights_for_blocker_swap_types = yes
+    blocker_swap_types = {
+        d_hot_springs
+        d_geothermal_vent
+        d_veiny_cliffs
+        d_mineral_fields
+        d_ore_rich_caverns
+        d_rich_mountain
+        d_lichen_fields
+        d_dust_caverns
+        d_fuming_bog
+        d_frozen_gas_lake
+        d_crystalline_caverns
+        d_betharian_deposit
+        d_karst_cave
+    }
+    use_weights_for_terraforming_swap_types = yes
+    should_swap_deposit_on_terraforming = yes
+    terraforming_swap_types = {
+        d_lush_jungle
+        d_black_soil
+        d_teeming_reef
+        d_marvelous_oasis
+        d_tropical_island
+        d_complex_ecosystem
+        d_exotic_fauna
+        d_hydrocarbon_lakes
+        d_ammonia_seas
+        d_huge_tree
+        d_dense_jungle
+        d_noxious_swamp
+        d_rugged_woods
+        d_forgiving_tundra
+        d_fungal_forest
+    }
+    time = 180
+    resources = {
+        category = deposit_blockers
+        cost = {
+            energy = 500
+        }
+        produces = {
+            food = 1
+        }
+    }
+    planet_modifier = {
+        planet_jobs_society_research_produces_mult = 0.1
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            job_pioneer_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_opportunist_drone_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_scout_drone_add = 1
+        }
+    }
+    potential = {
+        OR = {
+            is_cold = yes
+            is_planet_class = pc_storm
+            is_planet_class_pc_marginal_cold = yes
+            has_modifier = "fungal_world"
+        }
+        NOR = {
+            has_modifier = "cryokarst_world"
+            has_modifier = "equatorial_world"
+            has_modifier = "glacial_world"
+            has_modifier = "ice_world"
+        }
+    }
+    drop_weight = {
+        weight = 1
+        modifier = {
+            factor = 5
+            has_modifier = "fungal_world"
+        }
+        modifier = {
+            factor = 0.5
+            is_planet_class = pc_arctic
+        }
+        modifier = {
+            factor = 0.25
+            OR = {
+                has_modifier = "mineral_world"
+                has_modifier = "cold_desert"
+            }
+        }
+    }
+    ai_weight = {
+        weight = 0
+    }
+}

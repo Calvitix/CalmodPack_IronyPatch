@@ -1,0 +1,11 @@
+gpm_colossal_cliffs = {
+    show_only_custom_tooltip = yes
+    custom_tooltip = do_pm_gpm_colossal_cliffs
+    planet_jobs_minerals_produces_mult = 0.3
+    district_mining_max = 6
+    district_cheap_mining_max = 6
+    district_secure_mining_max = 6
+    district_surface_mining_max = 6
+    icon = "gfx/interface/icons/planet_modifiers/gpm_colossal_cliffs.dds"
+    icon_frame = 1
+}

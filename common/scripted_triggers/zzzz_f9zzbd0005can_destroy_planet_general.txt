@@ -1,0 +1,14 @@
+can_destroy_planet_general = {
+    is_star = no
+    NOT = {
+        is_planet_class = pc_birch
+    }
+    OR = {
+        NOT = {
+            exists = owner
+        }
+        owner = {
+            is_hostile = from.owner
+        }
+    }
+}

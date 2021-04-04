@@ -1,0 +1,141 @@
+namespace = distar
+ship_event = {
+    id = distar.70
+    title = "distar.70.name"
+    desc = "distar.70.desc"
+    picture = GFX_evt_clones
+    show_sound = event_laboratory_sound
+    location = from
+    is_triggered_only = yes
+    immediate = {
+        from = {
+            set_deposit = d_physics_3
+        }
+    }
+    option = {
+        name = "distar.70.a"
+        trigger = {
+            owner = {
+                NOR = {
+                    AND = {
+                        has_authority = auth_machine_intelligence
+                        NOR = {
+                            has_civic = civic_machine_terminator
+                            has_civic = civic_machine_assimilator
+                            has_civic = civic_machine_servitor
+                        }
+                    }
+                    AND = {
+                        has_authority = auth_hive_mind
+                        NOT = {
+                            has_civic = civic_hive_devouring_swarm
+                        }
+                    }
+                }
+            }
+        }
+        small_artifact_reward = yes
+        from = {
+            enable_special_project = {
+                name = "CRYO_CLONES_PROJECT"
+                location = this
+                owner = root.owner
+            }
+        }
+        hidden_effect = {
+            owner = {
+                pop_lcluster_event = yes
+            }
+        }
+    }
+    option = {
+        name = "distar.70.b"
+        from = {
+            add_modifier = {
+                modifier = clones_in_cryo
+                days = -1
+            }
+            add_deposit = d_society_4
+        }
+        hidden_effect = {
+            owner = {
+                pop_lcluster_event = yes
+            }
+        }
+    }
+    option = {
+        name = "distar.70.exter"
+        custom_tooltip = "distar.70.exter.tooltip"
+        exclusive_trigger = {
+            owner = {
+                has_civic = civic_machine_terminator
+            }
+        }
+        owner = {
+            add_monthly_resource_mult = {
+                resource = influence
+                value = @tier3influencereward
+                min = @tier3influencemin
+                max = @tier3influencemax
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = @tier1unityreward
+                min = @tier1unitymin
+                max = @tier1unitymax
+            }
+            hidden_effect = {
+                pop_lcluster_event = yes
+            }
+        }
+    }
+    option = {
+        name = "distar.70.fp"
+        custom_tooltip = "distar.70.fp.tooltip"
+        exclusive_trigger = {
+            owner = {
+                has_civic = civic_fanatic_purifiers
+            }
+        }
+        owner = {
+            add_monthly_resource_mult = {
+                resource = influence
+                value = @tier3influencereward
+                min = @tier3influencemin
+                max = @tier3influencemax
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = @tier1unityreward
+                min = @tier1unitymin
+                max = @tier1unitymax
+            }
+            hidden_effect = {
+                pop_lcluster_event = yes
+            }
+        }
+    }
+    option = {
+        name = "distar.70.no_room"
+        trigger = {
+            owner = {
+                NOR = {
+                    has_civic = civic_hive_devouring_swarm
+                    has_civic = civic_machine_terminator
+                }
+            }
+        }
+        from = {
+            add_modifier = {
+                modifier = clones_in_cryo
+                days = -1
+            }
+            add_deposit = d_society_4
+        }
+        hidden_effect = {
+            owner = {
+                pop_lcluster_event = yes
+            }
+        }
+    }
+}

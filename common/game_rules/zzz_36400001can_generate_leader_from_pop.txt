@@ -9,9 +9,15 @@ can_generate_leader_from_pop = {
     NOT = {
         has_trait = trait_plentiful_traditions_cocoon
     }
+    NOT = {
+        has_trait = trait_memorex_comatos
+    }
+    NOT = {
+        has_trait = trait_infested_basic
+    }
     OR = {
         This = {
-            is_robot_pop = no
+        is_robot_pop = no
         }
         root = {
             has_technology = tech_synthetic_leaders
@@ -21,6 +27,15 @@ can_generate_leader_from_pop = {
         }
         root = {
             is_mechanical_empire = yes
+        }
+    }
+    OR = {
+        is_same_species = root
+        root = {
+            NAND = {
+                has_origin = origin_necrophage
+                has_trait = trait_necrophage
+            }
         }
     }
 }

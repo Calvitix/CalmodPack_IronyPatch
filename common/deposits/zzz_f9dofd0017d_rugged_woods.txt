@@ -1,0 +1,105 @@
+d_rugged_woods = {
+    is_for_colonizeable = yes
+    use_for_min_max_adjustments = yes
+    category = deposit_cat_blockers
+    use_weights_for_blocker_swap_types = yes
+    blocker_swap_types = {
+        d_rushing_waterfalls
+        d_veiny_cliffs
+        d_mineral_fields
+        d_ore_rich_caverns
+        d_rich_mountain
+        d_bountiful_plains
+        d_green_hills
+        d_boggy_fens
+        d_fertile_lands
+        d_black_soil
+        d_dust_caverns
+        d_bubbling_swamp
+        d_fuming_bog
+        d_crystalline_caverns
+        d_betharian_deposit
+        d_karst_cave
+    }
+    use_weights_for_terraforming_swap_types = yes
+    should_swap_deposit_on_terraforming = yes
+    terraforming_swap_types = {
+        d_lush_jungle
+        d_black_soil
+        d_marvelous_oasis
+        d_huge_tree
+        d_dense_jungle
+        d_noxious_swamp
+        d_rugged_woods
+        d_forgiving_tundra
+        d_fungal_forest
+        d_vast_crevasse
+    }
+    time = 180
+    resources = {
+        category = deposit_blockers
+        cost = {
+            energy = 500
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            job_pioneer_add = 1
+            job_smuggler_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_opportunist_drone_add = 1
+            job_aberrant_drone_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_scout_drone_add = 1
+            job_renegade_drone_add = 1
+        }
+    }
+    potential = {
+        is_planet_class = pc_continental
+        NOT = {
+            has_modifier = "young_world"
+        }
+    }
+    drop_weight = {
+        weight = 16
+        modifier = {
+            factor = 2
+            has_modifier = "boreal_world"
+        }
+        modifier = {
+            factor = 0.5
+            OR = {
+                has_modifier = "rocky_world"
+                has_modifier = "forest_world"
+                has_modifier = "pangea_world"
+            }
+        }
+    }
+    ai_weight = {
+        weight = 0.5
+    }
+}

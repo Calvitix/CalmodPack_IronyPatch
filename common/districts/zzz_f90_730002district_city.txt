@@ -1,0 +1,324 @@
+@city_cost = 500
+@city_hive_min_cost = 333
+@city_hive_food_cost = 167
+district_city = {
+    base_buildtime = 480
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        from = {
+            is_regular_empire = yes
+        }
+        has_district_city = yes
+        OR = {
+            uses_district_set = standard
+            uses_district_set = hive_world
+            uses_district_set = machine_world
+        }
+    }
+    potential = {
+        exists = owner
+        owner = {
+            is_regular_empire = yes
+        }
+        has_district_city = yes
+        OR = {
+            uses_district_set = standard
+            uses_district_set = hive_world
+            uses_district_set = machine_world
+        }
+    }
+    allow = {
+        housing_district_allowed = yes
+    }
+    conversion_ratio = 0.5
+    convert_to = {
+        district_hive
+        district_nexus
+        district_suburban_city
+        district_shelters
+        district_underground_city
+        district_slums
+        district_arcology_housing
+    }
+    resources = {
+        category = planet_districts_cities
+        cost = {
+            minerals = 500
+        }
+        upkeep = {
+            energy = 3
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    OR = {
+                        is_hive_empire = no
+                        is_lithoid_empire = yes
+                    }
+                    is_plantoid_empire = no
+                }
+                has_global_flag = expanded_pops_active
+            }
+            minerals = @city_cost
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    OR = {
+                        is_hive_empire = yes
+                        is_plantoid_empire = yes
+                    }
+                    is_lithoid_empire = no
+                    NOT = {
+                        has_valid_civic = civic_integrated_bioarchitecture
+                    }
+                }
+                has_global_flag = expanded_pops_active
+            }
+            minerals = @city_hive_min_cost
+            food = @city_hive_food_cost
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    OR = {
+                        is_hive_empire = yes
+                        is_plantoid_empire = yes
+                    }
+                    is_lithoid_empire = no
+                    has_valid_civic = civic_integrated_bioarchitecture
+                }
+                has_global_flag = expanded_pops_active
+            }
+            food = 400
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    OR = {
+                        is_hive_empire = no
+                        is_lithoid_empire = yes
+                    }
+                    is_plantoid_empire = no
+                    NOT = {
+                        has_valid_civic = civic_integrated_bioarchitecture
+                    }
+                }
+                has_global_flag = expanded_pops_active
+            }
+            energy = 2
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    OR = {
+                        is_hive_empire = yes
+                        is_plantoid_empire = yes
+                    }
+                    is_lithoid_empire = no
+                }
+                has_global_flag = expanded_pops_active
+            }
+            energy = 1.3
+            food = 0.7
+        }
+    }
+    planet_modifier = {
+        planet_housing_add = 10
+        job_clerk_add = 1
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_valid_civic = civic_agrarian_idyll
+            }
+        }
+        modifier = {
+            planet_housing_add = -1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_technology = tech_housing_1
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_technology = tech_housing_2
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_policy_flag = do_centralized_housing
+            }
+        }
+        modifier = {
+            planet_amenities_add = 8
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_policy_flag = do_rural_housing
+            }
+        }
+        modifier = {
+            planet_housing_add = -3
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_non_swapped_tradition = tr_prosperity_public_works
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_non_swapped_tradition = tr_prosperity_interstellar_franchising
+            }
+        }
+        modifier = {
+            job_clerk_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                OR = {
+                    has_valid_civic = civic_consumerism
+                }
+            }
+        }
+        modifier = {
+            job_clerk_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                or = {
+                    has_valid_civic = civic_welfare_state
+                    has_valid_civic = civic_shared_burden
+                }
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_valid_civic = civic_master_computer_urban_planner
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        text = job_clerk_effect_desc
+    }
+    ai_weight = {
+        weight = 0.9
+        modifier = {
+            factor = 0.001
+            num_pops < 8
+            not = {
+                has_planet_flag = ecumen
+            }
+        }
+        modifier = {
+            factor = 100
+            free_housing < -10
+        }
+        modifier = {
+            factor = 50
+            free_housing < -5
+        }
+        modifier = {
+            factor = 20
+            free_housing < 1
+        }
+        modifier = {
+            factor = 0.1
+            free_housing > 5
+            NOT = {
+                has_planet_flag = ecumen
+            }
+        }
+        modifier = {
+            factor = 0.01
+            free_housing > 15
+            NOT = {
+                has_planet_flag = ecumen
+            }
+        }
+        modifier = {
+            factor = 0.001
+            free_housing > 25
+            NOT = {
+                has_planet_flag = ecumen
+            }
+        }
+        modifier = {
+            factor = 10000
+            has_planet_flag = build_city_here
+        }
+        modifier = {
+            factor = 1000
+            free_district_slots < 5
+            has_planet_flag = do_ai_ecu_planned
+        }
+        modifier = {
+            factor = 0
+            free_housing > 2
+            NOT = {
+                has_planet_flag = do_ai_ecu_planned
+            }
+        }
+    }
+    ai_resource_production = {
+        consumer_goods = 1
+        trigger = {
+            always = yes
+        }
+    }
+}

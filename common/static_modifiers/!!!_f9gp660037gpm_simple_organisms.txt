@@ -1,0 +1,11 @@
+gpm_simple_organisms = {
+    show_only_custom_tooltip = yes
+    custom_tooltip = do_pm_gpm_simple_organisms
+    planet_jobs_food_produces_mult = -0.2
+    district_farming_max = -2
+    district_nature_farms_max = -2
+    district_ocean_farms_max = -2
+    district_exotic_farms_max = -2
+    icon = "gfx/interface/icons/planet_modifiers/gpm_simple_organisms.dds"
+    icon_frame = 3
+}

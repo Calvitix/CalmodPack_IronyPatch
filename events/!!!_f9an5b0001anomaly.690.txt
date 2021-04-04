@@ -1,0 +1,50 @@
+namespace = anomaly
+ship_event = {
+    id = anomaly.690
+    title = "anomaly.690.name"
+    desc = "anomaly.690.desc"
+    picture = GFX_evt_alien_nature
+    show_sound = event_ship_bridge
+    location = FROM
+    is_triggered_only = yes
+    immediate = {
+        from = {
+            clear_deposits = yes
+        }
+        owner = {
+            country_event = {
+                id = story.1
+                days = 2
+            }
+        }
+        owner = {
+            set_timed_country_flag = {
+                flag = found_recent_toxic_life
+                days = 1800
+            }
+        }
+        FROM = {
+            if = {
+                limit = {
+                    is_planetary_diversity_active = yes
+                }
+                change_pc = pc_ammonia
+                reset_planet = yes
+            }
+        }
+    }
+    option = {
+        name = FASCINATING
+        hidden_effect = {
+            FROM = {
+                add_modifier = {
+                    modifier = "ammonia_biosphere"
+                    days = -1
+                }
+            }
+        }
+        FROM = {
+            set_deposit = d_society_3
+        }
+    }
+}

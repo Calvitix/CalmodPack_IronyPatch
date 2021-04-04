@@ -1,0 +1,31 @@
+namespace = distar
+ship_event = {
+    id = distar.6
+    title = "distar.6.name"
+    desc = "distar.6.desc"
+    picture = GFX_evt_dead_city
+    show_sound = event_scanner
+    location = from
+    is_triggered_only = yes
+    immediate = {
+        owner = {
+            country_event = {
+                id = story.5
+                days = 30
+            }
+        }
+    }
+    option = {
+        name = INTERESTING
+        small_artifact_reward = yes
+        from = {
+            add_deposit = d_society_4
+            hidden_effect = {
+                add_modifier = {
+                    modifier = frozen_in_time
+                    days = -1
+                }
+            }
+        }
+    }
+}

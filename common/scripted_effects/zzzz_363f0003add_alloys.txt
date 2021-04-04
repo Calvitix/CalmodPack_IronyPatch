@@ -1,0 +1,13 @@
+add_alloys = {
+    random_list = {
+        16 = {
+            set_deposit = d_alloys_1
+        }
+        4 = {
+            set_deposit = d_alloys_2
+        }
+        1 = {
+            set_deposit = d_alloys_3
+        }
+    }
+}

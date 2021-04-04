@@ -1,0 +1,129 @@
+@low_rare = 0.1
+@planet_type_bonus = 1.5
+d_crystal_forest = {
+    is_for_colonizeable = yes
+    category = deposit_cat_rare_blocker
+    all_blocker_swap_types = yes
+    use_weights_for_terraforming_swap_types = yes
+    should_swap_deposit_on_terraforming = yes
+    terraforming_swap_types = {
+        d_crystal_reef
+    }
+    potential = {
+        can_have_habitable_deposits = yes
+        NOR = {
+            is_planet_class = pc_ocean
+            is_planet_class = pc_nuked
+            is_planet_class = pc_irradiated
+            is_planet_class = pc_gaia
+            is_planet_class = pc_pdshroud
+            is_planet_class = pc_sterile
+            has_modifier = "cryokarst_world"
+            has_modifier = "underground_world"
+            has_modifier = "ocean_tidally_locked"
+        }
+    }
+    time = 180
+    resources = {
+        category = deposit_blockers
+        cost = {
+            energy = 500
+        }
+    }
+    planet_modifier = {
+        building_crystal_mines_max = 2
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            job_pioneer_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_opportunist_drone_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_scout_drone_add = 1
+        }
+    }
+    drop_weight = {
+        weight = @low_rare
+        modifier = {
+            factor = @planet_type_bonus
+            is_cold = yes
+        }
+        modifier = {
+            factor = 2
+            is_planet_class = pc_gaia
+        }
+        modifier = {
+            factor = 2
+            is_planet_class = pc_pdshroud
+        }
+        modifier = {
+            factor = 1
+            is_planet_class = pc_graveyard
+        }
+        modifier = {
+            factor = 1
+            is_planet_class = pc_floating
+        }
+        modifier = {
+            factor = 1
+            is_planet_class = pc_crystal
+        }
+        modifier = {
+            factor = 1
+            is_planet_class = pc_technoorganic
+        }
+        modifier = {
+            factor = 10
+            has_modifier = "mineral_world"
+        }
+        modifier = {
+            factor = 5
+            has_modifier = "glacial_world"
+        }
+        modifier = {
+            factor = 2
+            is_extreme_subclass = yes
+        }
+        modifier = {
+            factor = 1.5
+            is_cold = yes
+        }
+        modifier = {
+            factor = 0
+            solar_system = {
+                OR = {
+                    has_star_flag = empire_home_system
+                    has_star_flag = sol_system
+                    has_star_flag = deneb_system
+                }
+            }
+        }
+    }
+    ai_weight = {
+        weight = 0
+    }
+}

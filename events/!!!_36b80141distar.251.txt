@@ -1,0 +1,72 @@
+namespace = distar
+ship_event = {
+    id = distar.251
+    title = "distar.251.name"
+    desc = {
+        trigger = {
+            event_target:phaseshift_planet = {
+                is_planet_class = pc_gaia
+            }
+        }
+        text = "distar.251.desc.shroud"
+    }
+    desc = {
+        trigger = {
+            event_target:phaseshift_planet = {
+                is_planet_class = pc_shrouded
+            }
+        }
+        text = "distar.251.desc.gaia"
+    }
+    picture = GFX_evt_surreal_visions
+    show_sound = event_mystic_reveal
+    location = event_target:phaseshift_planet
+    is_triggered_only = yes
+    trigger = {
+        exists = event_target:phaseshift_planet
+    }
+    immediate = {
+        event_target:phaseshift_planet = {
+            IF = {
+                limit = {
+                    is_planet_class = pc_shrouded
+                }
+                change_pc = pc_gaia
+                clear_deposits = yes
+                add_deposit = d_active_volcano
+                add_deposit = d_mountain_range
+                add_deposit = d_tempestous_mountain
+                add_deposit = d_underwater_vent
+                add_deposit = d_buzzing_plains
+                add_deposit = d_submerged_ore_veins
+                add_deposit = d_submerged_ore_veins
+                add_deposit = d_lush_jungle
+                add_deposit = d_natural_farmland
+                add_deposit = d_natural_farmland
+                add_deposit = d_alien_pets_deposit
+                add_deposit = d_teeming_reef
+                add_deposit = d_zro_deposit_5
+            }
+            ELSE_IF = {
+                limit = {
+                    is_planet_class = pc_gaia
+                }
+                change_pc = pc_shrouded
+                clear_deposits = yes
+                add_deposit = d_zro_deposit_5
+                add_deposit = d_energy_10
+            }
+        }
+    }
+    option = {
+        name = INCREDIBLE
+        owner = {
+            add_monthly_resource_mult = {
+                resource = physics_research
+                value = @tier3researchreward
+                min = @tier3researchmin
+                max = @tier3researchmax
+            }
+        }
+    }
+}

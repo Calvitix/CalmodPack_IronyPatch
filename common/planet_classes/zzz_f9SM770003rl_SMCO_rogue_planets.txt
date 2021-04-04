@@ -1,0 +1,7 @@
+random_list = {
+    name = "rl_SMCO_rogue_planets"
+    planets = {
+        pc_SMCO_small_rogue_planet
+        pc_SMCO_sub_brown_dwarf_planet
+    }
+}

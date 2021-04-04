@@ -1,0 +1,63 @@
+namespace = distar
+ship_event = {
+    id = distar.220
+    title = "distar.220.name"
+    desc = {
+        trigger = {
+            owner = {
+                NOT = {
+                    has_authority = auth_machine_intelligence
+                }
+            }
+        }
+        text = "distar.220.desc"
+    }
+    desc = {
+        trigger = {
+            owner = {
+                has_authority = auth_machine_intelligence
+            }
+        }
+        text = "distar.220.desc.machi"
+    }
+    picture = GFX_evt_alien_ruins
+    show_sound = event_ghost_town
+    location = from
+    is_triggered_only = yes
+    immediate = {
+        owner = {
+            country_event = {
+                id = story.5
+                days = 30
+            }
+        }
+    }
+    option = {
+        name = FASCINATING
+        custom_tooltip = "distar.220.a.tooltip"
+        owner = {
+            small_artifact_reward = yes
+            add_monthly_resource_mult = {
+                resource = engineering_research
+                value = @tier1researchreward
+                min = @tier1researchmin
+                max = @tier1researchmax
+            }
+            add_monthly_resource_mult = {
+                resource = physics_research
+                value = @tier1researchreward
+                min = @tier1researchmin
+                max = @tier1researchmax
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = @tier1unityreward
+                min = @tier1unitymin
+                max = @tier1unitymax
+            }
+            hidden_effect = {
+                pop_lcluster_event = yes
+            }
+        }
+    }
+}

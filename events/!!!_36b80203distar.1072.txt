@@ -1,0 +1,38 @@
+namespace = distar
+country_event = {
+    id = distar.1072
+    title = "distar.1072.name"
+    desc = "distar.1072.desc"
+    picture = GFX_evt_ship_in_orbit_2
+    show_sound = event_alien_nature
+    location = From.From
+    is_triggered_only = yes
+    immediate = {
+        event_target:anomalous_star = {
+            surveyed = {
+                set_surveyed = yes
+                surveyor = root
+            }
+        }
+    }
+    option = {
+        name = distar.1072.a
+        from.leader = {
+            add_trait = leader_trait_meticulous
+            add_experience = 200
+        }
+        event_target:anomalous_star = {
+            if = {
+                limit = {
+                    has_deposit_for = shipclass_research_station
+                }
+                clear_deposits = yes
+            }
+            add_deposit = d_energy_8
+            surveyed = {
+                set_surveyed = yes
+                surveyor = root
+            }
+        }
+    }
+}
