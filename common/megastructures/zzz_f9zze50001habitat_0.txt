@@ -42,6 +42,15 @@ habitat_0 = {
             has_civic = civic_great_khans_legacy
             has_country_flag = democratic_khanate_flag
         }
+        OR = {
+            is_ai = no
+            NOT = {
+                any_planet_within_border = {
+                    is_planet_class = pc_habitat
+                    is_colony = no
+                }
+            }
+        }
     }
     possible = {
         exists = starbase
@@ -139,6 +148,17 @@ habitat_0 = {
             }
         }
         modifier = {
+            factor = 5
+            or = {
+                fromfrom.planet = {
+                    has_deposit = d_energy_1
+                }
+                fromfrom.planet = {
+                    has_deposit = d_energy_2
+                }
+            }
+        }
+        modifier = {
             factor = 0
             any_system_planet = {
                 is_planet_class = pc_habitat
@@ -170,6 +190,10 @@ habitat_0 = {
                 }
             }
         }
+    }
+    on_build_start = {
+    }
+    on_build_cancel = {
     }
     on_build_complete = {
         spawn_planet = {
