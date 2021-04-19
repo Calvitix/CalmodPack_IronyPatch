@@ -1,3 +1,0 @@
-NAI = {
-    LEADER_FRACTION_GOVERNOR = 0.1
-}

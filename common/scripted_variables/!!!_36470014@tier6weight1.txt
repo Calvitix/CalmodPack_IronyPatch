@@ -1,1 +1,0 @@
-@tier6weight1 = 15

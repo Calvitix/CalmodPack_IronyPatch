@@ -1,3 +1,0 @@
-NGameplay = {
-    SPAWN_SYSTEM_ATTEMPTS = 30
-}

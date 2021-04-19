@@ -1,3 +1,0 @@
-NCamera = {
-    SYSTEM_MAX_PITCH = 110
-}

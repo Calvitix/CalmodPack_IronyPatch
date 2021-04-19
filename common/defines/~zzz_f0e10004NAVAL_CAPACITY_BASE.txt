@@ -1,3 +1,0 @@
-NGameplay = {
-    NAVAL_CAPACITY_BASE = 25
-}

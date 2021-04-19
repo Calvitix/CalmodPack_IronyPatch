@@ -1,3 +1,0 @@
-NAI = {
-    LEADER_FRACTION_GENERAL = 0.005
-}

@@ -1,3 +1,0 @@
-NCamera = {
-    GALAXY_MAX_PITCH = 180
-}

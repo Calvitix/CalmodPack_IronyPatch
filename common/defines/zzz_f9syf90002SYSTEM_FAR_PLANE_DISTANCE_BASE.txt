@@ -1,3 +1,0 @@
-NCamera = {
-    SYSTEM_FAR_PLANE_DISTANCE_BASE = 50000
-}

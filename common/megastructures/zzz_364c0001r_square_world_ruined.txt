@@ -1,7 +1,0 @@
-r_square_world_ruined = {
-    entity = "squareworld_segment_ruined_mega_entity"
-    portrait = "GFX_megastructure_construction_background"
-    potential = {
-        always = no
-    }
-}

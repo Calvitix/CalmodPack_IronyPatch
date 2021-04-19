@@ -1,3 +1,0 @@
-NCamera = {
-    FOCUSED_MIN_ZOOM_MULT = 0.3
-}

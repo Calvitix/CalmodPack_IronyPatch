@@ -1,3 +1,0 @@
-NAI = {
-    LEADER_FRACTION_SCIENTIST = 0.6
-}

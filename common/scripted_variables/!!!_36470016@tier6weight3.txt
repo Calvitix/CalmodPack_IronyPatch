@@ -1,1 +1,0 @@
-@tier6weight3 = 17
