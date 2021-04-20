@@ -114,7 +114,7 @@ palace_guard = {
         }
         modifier = {
             factor = 20
-            has_job = enforcer
+            has_job = palace_guard
             OR = {
                 has_trait = trait_robust
                 has_trait = trait_robot_efficient_processors

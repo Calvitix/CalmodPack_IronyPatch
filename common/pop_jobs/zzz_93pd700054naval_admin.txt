@@ -42,7 +42,7 @@ naval_admin = {
         }
     }
     weight = {
-        weight = @soldier_job_weight
+        weight = @specialist_job_weight
         modifier = {
             factor = 10
             exists = planet

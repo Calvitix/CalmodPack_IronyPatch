@@ -114,7 +114,7 @@ capital_security = {
         }
         modifier = {
             factor = 20
-            has_job = enforcer
+            has_job = capital_security
             OR = {
                 has_trait = trait_robust
                 has_trait = trait_robot_efficient_processors

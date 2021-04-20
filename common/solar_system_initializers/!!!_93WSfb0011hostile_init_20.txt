@@ -20,9 +20,12 @@ hostile_init_20 = {
             is_inside_nebula = yes
             any_neighbor_system = {
                 ignore_hyperlanes = yes
-                NOT = {
-                    is_star_class = sc_dn
+                limit = {
+                    NOT = {
+                        is_star_class = sc_dn
+                    }
                 }
+                always = yes
             }
         }
     }

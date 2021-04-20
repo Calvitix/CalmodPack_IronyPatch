@@ -1562,21 +1562,26 @@ room_selector = {
         "trader5_room" = {
             always = yes
         }
-        # "ethic_light_side_room" = {
-            # has_ethic = ethic_light_side
-        # }
-        # "ethic_light_side2_room" = {
-            # has_ethic = ethic_light_side
-        # }
-        # "ethic_dark_side_room" = {
-            # has_ethic = ethic_dark_side
-        # }
-        # "ethic_dark_side2_room" = {
-            # has_ethic = ethic_dark_side
-        # }
-        # "ethic_dark_side3_room" = {
-            # has_ethic = ethic_dark_side
-        # }
+        "ethic_light_side_room" = {
+            exists = owner
+			owner = { has_ethic = ethic_light_side }
+        }
+        "ethic_light_side2_room" = {
+            exists = owner
+			owner = { has_ethic = ethic_light_side }
+        }
+        "ethic_dark_side_room" = {
+            exists = owner
+			owner = { has_ethic = ethic_dark_side }
+        }
+        "ethic_dark_side2_room" = {
+            exists = owner
+			owner = { has_ethic = ethic_dark_side }
+        }
+        "ethic_dark_side3_room" = {
+            exists = owner
+			owner = { has_ethic = ethic_dark_side }
+        }
         "masseffect_room" = {
             always = yes
         }
@@ -1587,10 +1592,12 @@ room_selector = {
             always = yes
         }
         "imperium1_room" = {
-            has_civic = civic_imperial_cult
+            exists = owner
+			owner = { has_civic = civic_imperial_cult }
         }
         "imperium2_room" = {
-            has_civic = civic_imperial_cult
+            exists = owner
+			owner = { has_civic = civic_imperial_cult }
         }
         "xenomorph_room" = {
             always = yes

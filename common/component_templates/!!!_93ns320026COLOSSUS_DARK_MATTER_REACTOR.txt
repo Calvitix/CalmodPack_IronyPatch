@@ -14,8 +14,6 @@ utility_component_template = {
     component_set = "power_core"
     size_restriction = {
         colossus
-        precursor_colossus
-        fe_goliath
         juggernaut
         star_eater
     }

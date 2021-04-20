@@ -18,7 +18,6 @@ hostile_init_18 = {
             factor = 0
             OR = {
                 has_star_flag = empire_cluster
-                host_has_dlc = "Apocalypse"
                 is_fe_cluster = yes
             }
         }
@@ -31,9 +30,12 @@ hostile_init_18 = {
             is_inside_nebula = yes
             any_neighbor_system = {
                 ignore_hyperlanes = yes
-                NOT = {
-                    is_star_class = sc_dn
+                limit = {
+                    NOT = {
+                        is_star_class = sc_dn
+                    }
                 }
+                always = yes
             }
         }
     }

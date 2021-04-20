@@ -136,6 +136,24 @@ district_arcology_civilian_industry = {
         potential = {
             exists = owner
             owner = {
+                AND = {
+                    has_civic = civic_manufactory
+                    is_regular_empire = yes
+                }
+            }
+            OR = {
+                has_modifier = "industrialized_planet"
+                has_modifier = "industrialized_arcology"
+            }
+        }
+        modifier = {
+            job_artisan_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
                 is_machine_empire = yes
                 has_edict = industrial_maintenance
             }

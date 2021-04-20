@@ -31,11 +31,56 @@ manager = {
             trade_value_add = 0.75
         }
     }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_valid_civic = civic_efficiency_expert
+            }
+        }
+        modifier = {
+            trade_value_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_trait = trait_thrifty
+            exists = owner
+            owner = {
+                has_valid_civic = civic_efficiency_expert
+            }
+        }
+        modifier = {
+            trade_value_add = 0.5
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_trait = trait_nuumismatic_administration
+            exists = owner
+            owner = {
+                has_valid_civic = civic_efficiency_expert
+            }
+        }
+        modifier = {
+            trade_value_add = 0.5
+        }
+    }
     resources = {
         category = planet_managers
         produces = {
             unity = 3
             society_research = 2
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_valid_civic = civic_efficiency_expert
+                }
+            }
+            unity = 1
+            society_research = -2
         }
         upkeep = {
             consumer_goods = 2

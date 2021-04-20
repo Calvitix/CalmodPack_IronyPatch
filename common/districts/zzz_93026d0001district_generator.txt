@@ -8,6 +8,9 @@ district_generator = {
     }
     potential = {
         uses_district_set = standard
+        NOT = {
+            has_modifier = urban_idyll_colony
+        }
     }
     allow = {
         NOT = {
