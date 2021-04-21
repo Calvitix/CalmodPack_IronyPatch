@@ -229,7 +229,7 @@ district_farming = {
         }
     }
     ai_resource_production = {
-        food = 1
+        food = 4
         trigger = {
             always = yes
         }

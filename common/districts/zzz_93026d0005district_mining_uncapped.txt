@@ -222,7 +222,7 @@ district_mining_uncapped = {
         }
     }
     ai_resource_production = {
-        minerals = 1
+        minerals = 4
         trigger = {
             always = yes
         }

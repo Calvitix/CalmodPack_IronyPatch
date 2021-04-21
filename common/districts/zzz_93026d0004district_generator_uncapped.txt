@@ -220,7 +220,7 @@ district_generator_uncapped = {
         }
     }
     ai_resource_production = {
-        energy = 1
+        energy = 4
         trigger = {
             always = yes
         }

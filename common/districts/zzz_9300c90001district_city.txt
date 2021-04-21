@@ -69,8 +69,8 @@ district_city = {
                 is_regular_empire = yes
                 or = {
                     is_ai = no
-                    years_passed < 15
-                    years_passed > 90
+                    years_passed < 10
+                    years_passed > 150
                 }
             }
         }
