@@ -3,6 +3,12 @@ penrose_weaver_drone = {
     condition_string = DRONE_JOB_TRIGGER
     building_icon = building_nano_forge
     clothes_texture_index = 2
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
     possible = {
         drone_job_check_trigger = yes
         owner = {

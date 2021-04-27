@@ -2,7 +2,10 @@ district_rw_farming = {
     base_buildtime = @giga_rw_district_buildtime
     is_capped_by_modifier = no
     show_on_uncolonized = {
-        uses_district_set = ring_world
+        OR = {
+            uses_district_set = ring_world
+            is_planet_class = pc_giga_penrose_habitable
+        }
         exists = from
         from = {
             OR = {
@@ -13,6 +16,7 @@ district_rw_farming = {
         OR = {
             is_planet_class = pc_ringworld_habitable
             is_planet_class = pc_squareworld_habitable
+            is_planet_class = pc_giga_penrose_habitable
             has_planet_flag = giga_rw_hive
         }
         NOT = {
@@ -20,7 +24,10 @@ district_rw_farming = {
         }
     }
     potential = {
-        uses_district_set = ring_world
+        OR = {
+            uses_district_set = ring_world
+            is_planet_class = pc_giga_penrose_habitable
+        }
         exists = owner
         owner = {
             OR = {
@@ -31,6 +38,7 @@ district_rw_farming = {
         OR = {
             is_planet_class = pc_ringworld_habitable
             is_planet_class = pc_squareworld_habitable
+            is_planet_class = pc_giga_penrose_habitable
             has_planet_flag = giga_rw_hive
         }
         NOT = {

@@ -19,16 +19,18 @@ pc_nsc_freebooter_habitat = {
     extra_orbit_size = 0
     extra_planet_count = 0
     chance_of_ring = 0
-    planet_size = 12
+    planet_size = 6
     moon_size = 1
     colonizable = yes
     district_set = nsc_freebooter_habitat
-    ideal = no
     starting_planet = no
     orbit_lines = no
     has_colonization_influence_cost = no
     is_artificial_planet = yes
+    default_planet_selection = yes
     modifier = {
         planet_colony_development_speed_mult = 2
+        planet_max_buildings_add = 12
     }
+    carry_cap_per_free_district = @carry_cap_low
 }

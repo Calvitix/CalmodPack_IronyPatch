@@ -70,7 +70,7 @@ district_arcology_pdtrade = {
             exists = owner
             owner = {
                 NOT = {
-                    is_gesalt = yes
+                    is_gestalt = yes
                 }
             }
         }

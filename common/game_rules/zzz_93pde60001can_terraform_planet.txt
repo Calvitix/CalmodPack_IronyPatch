@@ -7,16 +7,16 @@ can_terraform_planet = {
             is_sapient = no
         }
     }
+    NAND = {
+        root = {
+            has_origin = origin_pd_tree_of_life
+        }
+    }
     custom_tooltip = {
         fail_text = NO_TERRAFORM_UNDERGROUND_WORLD
         NOR = {
             has_modifier = "underground_world"
             has_modifier = "cryokarst_world"
-        }
-    }
-    NAND = {
-        root = {
-            has_origin = origin_pd_tree_of_life
         }
     }
     custom_tooltip = {

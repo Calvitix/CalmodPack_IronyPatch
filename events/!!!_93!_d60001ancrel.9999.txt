@@ -1,0 +1,83 @@
+ship_event = {
+    id = ancrel.9999
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        has_ancrel = yes
+        FROM = {
+            NOT = {
+                exists = archaeological_site
+            }
+            NOT = {
+                has_planet_flag = suppress_archaeological_sites
+            }
+            NOT = {
+                has_planet_flag = statue_world
+            }
+        }
+    }
+    immediate = {
+        random_list = {
+            400 = {
+            }
+            5 = {
+                modifier = {
+                    factor = 0.05
+                    OR = {
+                        owner = {
+                            is_ai = yes
+                        }
+                        owner = {
+                            has_country_flag = discovered_site
+                        }
+                    }
+                }
+                modifier = {
+                    factor = 10
+                    from = {
+                        colonizeable_planet = yes
+                    }
+                }
+                from = {
+                    prevent_anomaly = yes
+                    create_archaeological_site = random
+                    if = {
+                        limit = {
+                            from = {
+                                can_be_terraforming_candidate = yes
+                            }
+                        }
+                        custom_tooltip = TERRAFORMING_CANDIDATE_EFFECT
+                        hidden_effect = {
+                            from = {
+                                add_modifier = {
+                                    modifier = "terraforming_candidate"
+                                    days = -1
+                                }
+                            }
+                        }
+                    }
+                }
+                owner = {
+                    if = {
+                        limit = {
+                            count_system = {
+                                count > 800
+                            }
+                        }
+                        set_timed_country_flag = {
+                            flag = discovered_site
+                            days = 3600
+                        }
+                    }
+                    else = {
+                        set_timed_country_flag = {
+                            flag = discovered_site
+                            days = 1800
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -15,7 +15,7 @@ district_nsc_freebooter_hab_foundry = {
     resources = {
         category = planet_district_nsc_freebooter_hab_foundry
         cost = {
-            minerals = 750
+            minerals = 500
         }
         upkeep = {
             energy = 3
@@ -84,20 +84,10 @@ district_nsc_freebooter_hab_foundry = {
         }
         text = job_fabricator_effect_desc
     }
-    ai_weight = {
-        weight = 0
-        modifier = {
-            weight = 500
-            owner = {
-                has_monthly_income = {
-                    resource = alloys
-                    value < 500
-                }
-                has_monthly_income = {
-                    resource = minerals
-                    value > 99
-                }
-            }
+    ai_resource_production = {
+        alloys = 10
+        trigger = {
+            always = yes
         }
     }
 }

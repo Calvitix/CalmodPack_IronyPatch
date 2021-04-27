@@ -1,4 +1,3 @@
-@base_cost = 300
 district_generator = {
     base_buildtime = 240
     min_for_deposits_on_planet = 3
@@ -24,7 +23,21 @@ district_generator = {
     resources = {
         category = planet_districts
         cost = {
-            minerals = @base_cost
+            trigger = {
+                from = {
+                    is_ai = no
+                }
+            }
+            alloys = 20
+            minerals = 400
+        }
+        cost = {
+            trigger = {
+                from = {
+                    is_ai = yes
+                }
+            }
+            minerals = 400
         }
         upkeep = {
             energy = 1

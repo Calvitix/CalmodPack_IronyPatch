@@ -1,0 +1,44 @@
+namespace = country
+ship_event = {
+    id = country.5
+    title = "country.5.name"
+    desc = "country.5.desc"
+    picture = GFX_evt_satellite_in_orbit
+    show_sound = event_scanner
+    location = ROOT
+    is_triggered_only = yes
+    option = {
+        name = "country.5.a"
+        FROM = {
+            save_event_target_as = ion_trail_system
+        }
+        hidden_effect = {
+            owner = {
+                set_country_flag = chasing_ion_trail
+                set_country_flag = probe_salvage_flag
+            }
+            closest_system = {
+                limit = {
+                    NOR = {
+                        exists = space_owner
+                        has_star_flag = probe_system_1
+                        has_star_flag = probe_system_2
+                        has_star_flag = probe_system_3
+                        has_star_flag = probe_system_4
+                        has_star_flag = hostile_system
+                        is_same_value = event_target:ion_trail_system
+                    }
+                }
+                save_event_target_as = ion_trail_target
+                set_star_flag = ion_trail_target
+            }
+            create_point_of_interest = {
+                id = probe_ion_trail_poi.1
+                name = "probe_ion_trail_poi"
+                desc = "probe_ion_trail_poi_desc"
+                event_chain = "sublight_probes_chain"
+                location = event_target:ion_trail_target
+            }
+        }
+    }
+}

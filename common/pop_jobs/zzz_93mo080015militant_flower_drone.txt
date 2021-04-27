@@ -17,9 +17,9 @@ militant_flower_drone = {
         upkeep = {
             food = 5
         }
-        country_modifier = {
-            country_naval_cap_add = 7
-        }
+    }
+    country_modifier = {
+        country_naval_cap_add = 7
     }
     pop_modifier = {
         pop_defense_armies_add = 5

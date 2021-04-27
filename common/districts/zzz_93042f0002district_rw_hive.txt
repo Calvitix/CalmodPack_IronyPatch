@@ -6,7 +6,11 @@ district_rw_hive = {
         from = {
             is_hive_empire = yes
         }
-        uses_district_set = ring_world
+        OR = {
+            uses_district_set = ring_world
+            is_planet_class = pc_interstellar_ringworld_habitable
+            is_planet_class = pc_giga_penrose_habitable
+        }
         NOT = {
             has_modifier = ringworld_upgrade_timer
         }
@@ -16,7 +20,11 @@ district_rw_hive = {
         owner = {
             is_hive_empire = yes
         }
-        uses_district_set = ring_world
+        OR = {
+            uses_district_set = ring_world
+            is_planet_class = pc_interstellar_ringworld_habitable
+            is_planet_class = pc_giga_penrose_habitable
+        }
         NOT = {
             has_modifier = ringworld_upgrade_timer
         }

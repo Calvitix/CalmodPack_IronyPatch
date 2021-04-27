@@ -1,0 +1,32 @@
+namespace = crisis
+country_event = {
+    id = crisis.1008
+    title = "crisis.1008.name"
+    desc = "crisis.1008.desc"
+    picture = GFX_evt_physics_research
+    show_sound = event_alien_signal
+    is_triggered_only = yes
+    option = {
+        name = crisis.1008.a
+        hidden_effect = {
+            if = {
+                limit = {
+                    OR = {
+                        has_megastructure = spy_orb_4
+                        has_megastructure = spy_orb_restored
+                    }
+                }
+                country_event = {
+                    id = crisis.1009
+                    days = 3
+                }
+            }
+            else = {
+                country_event = {
+                    id = crisis.1009
+                    days = 30
+                }
+            }
+        }
+    }
+}

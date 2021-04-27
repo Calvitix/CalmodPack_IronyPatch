@@ -84,65 +84,15 @@ district_giga_birch_ktisma = {
         potential = {
             exists = owner
             owner = {
-                is_regular_birch_empire = yes
+                is_regular_empire = yes
             }
         }
         modifier = {
             job_enforcer_add = 15
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_regular_birch_empire = yes
-            }
-        }
-        modifier = {
             job_artisan_add = 22
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_regular_birch_empire = yes
-            }
-        }
-        modifier = {
             job_foundry_add = 20
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_regular_birch_empire = yes
-            }
-        }
-        modifier = {
             job_chemist_add = 6
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_regular_birch_empire = yes
-            }
-        }
-        modifier = {
             job_translucer_add = 6
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_regular_birch_empire = yes
-            }
-        }
-        modifier = {
             job_gas_refiner_add = 6
         }
     }
@@ -155,49 +105,9 @@ district_giga_birch_ktisma = {
         }
         modifier = {
             job_patrol_drone_add = 15
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_hive_empire = yes
-            }
-        }
-        modifier = {
             job_alloy_drone_add = 42
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_hive_empire = yes
-            }
-        }
-        modifier = {
             job_chemist_drone_add = 6
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_hive_empire = yes
-            }
-        }
-        modifier = {
             job_translucer_drone_add = 6
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_hive_empire = yes
-            }
-        }
-        modifier = {
             job_gas_refiner_drone_add = 6
         }
     }
@@ -210,49 +120,9 @@ district_giga_birch_ktisma = {
         }
         modifier = {
             job_patrol_drone_add = 15
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_machine_empire = yes
-            }
-        }
-        modifier = {
             job_fabricator_add = 42
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_machine_empire = yes
-            }
-        }
-        modifier = {
             job_chemist_drone_add = 6
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_machine_empire = yes
-            }
-        }
-        modifier = {
             job_translucer_drone_add = 6
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_machine_empire = yes
-            }
-        }
-        modifier = {
             job_gas_refiner_drone_add = 6
         }
     }

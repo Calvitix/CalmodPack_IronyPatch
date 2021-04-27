@@ -1,9 +1,15 @@
-@insula_specialist_weight = 20
+@insula_specialist_weight = 1000
 bore_manager = {
     category = specialist
     condition_string = SPECIALIST_JOB_TRIGGER
     building_icon = building_nano_forge
     clothes_texture_index = 2
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
     possible = {
         complex_specialist_job_check_trigger = yes
         owner = {
@@ -21,13 +27,6 @@ bore_manager = {
     }
     weight = {
         weight = @insula_specialist_weight
-        modifier = {
-            factor = 0.2
-            has_citizenship_rights = no
-            NOT = {
-                has_trait = trait_mechanical
-            }
-        }
         modifier = {
             factor = 2
             has_living_standard = {
@@ -58,14 +57,6 @@ bore_manager = {
             }
         }
         modifier = {
-            factor = 0.1
-            can_take_servant_job = yes
-        }
-        modifier = {
-            factor = 0.65
-            has_trait = trait_presapient_proles
-        }
-        modifier = {
             factor = 1.5
             has_job = bore_manager
         }
@@ -76,10 +67,6 @@ bore_manager = {
         modifier = {
             factor = 2
             has_trait = trait_psionic
-        }
-        modifier = {
-            factor = 0.1
-            has_trait = trait_enigmatic_intelligence_failed
         }
         modifier = {
             factor = 2
@@ -97,13 +84,6 @@ bore_manager = {
             OR = {
                 has_trait = trait_robust
                 has_trait = trait_robot_efficient_processors
-            }
-        }
-        modifier = {
-            factor = 0.8
-            is_enslaved = yes
-            has_slavery_type = {
-                type = slavery_indentured
             }
         }
         modifier = {

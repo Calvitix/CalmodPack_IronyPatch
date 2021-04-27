@@ -108,7 +108,7 @@ district_giga_planet_leisure = {
             }
         }
         modifier = {
-            job_priest_add = 2
+            job_culture_worker_add = 2
         }
     }
     triggered_planet_modifier = {

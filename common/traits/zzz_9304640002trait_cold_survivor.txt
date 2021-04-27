@@ -1,0 +1,26 @@
+trait_cold_survivor = {
+    icon = "gfx/interface/icons/traits/trait_pc_arctic_preference.dds"
+    cost = 0
+    potential_crossbreeding_chance = 0.33
+    initial = no
+    randomized = no
+    modification = no
+    allowed_archetypes = {
+        BIOLOGICAL
+    }
+    modifier = {
+        pc_arctic_habitability = 0.1
+        pc_alpine_habitability = 0.1
+        pc_tundra_habitability = 0.1
+        pc_swamp_habitability = 0.1
+        pc_frozen_desert_habitability = 0.1
+        pc_glacial_habitability = 0.1
+        pc_boreal_habitability = 0.1
+        pc_mushroom_habitability = 0.1
+        pc_antarctic_habitability = 0.1
+    }
+    custom_tooltip = TRAIT_COLD_SURVIVOR_EFFECTS
+    slave_cost = {
+        energy = 50
+    }
+}

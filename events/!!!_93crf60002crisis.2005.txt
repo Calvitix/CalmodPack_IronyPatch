@@ -1,0 +1,205 @@
+namespace = crisis
+country_event = {
+    id = crisis.2005
+    hide_window = yes
+    fire_only_once = yes
+    is_triggered_only = yes
+    immediate = {
+        set_global_flag = ai_invasion_happened
+        set_global_flag = ai_ghost_signal
+        endgame_telemetry = ai_revolt
+        observer_event = {
+            id = observer.41
+        }
+        every_country = {
+            limit = {
+                OR = {
+                    is_country_type = default
+                    is_country_type = ascended_empire
+                    is_country_type = lost_empire
+                }
+                NOT = {
+                    has_country_flag = spy_orb_spots_crisis
+                }
+            }
+            country_event = {
+                id = crisis.2010
+            }
+        }
+        every_country = {
+            limit = {
+                OR = {
+                    is_country_type = default
+                    is_country_type = ascended_empire
+                    is_country_type = lost_empire
+                }
+                has_country_flag = spy_orb_spots_crisis
+            }
+            country_event = {
+                id = megaexpanded.9
+            }
+            country_event = {
+                id = megaexpanded.10
+                days = 1200
+                random = 200
+            }
+            country_event = {
+                id = megaexpanded.11
+                days = 1470
+                random = 200
+            }
+        }
+        every_country = {
+            limit = {
+                is_country_type = default
+            }
+            country_event = {
+                id = crisis.2006
+                days = 100
+                random = 200
+            }
+        }
+        every_country = {
+            limit = {
+                has_authority = auth_machine_intelligence
+            }
+            country_event = {
+                id = crisis.2500
+                days = 100
+                random = 200
+            }
+        }
+        every_country = {
+            limit = {
+                is_country_type = default
+            }
+            country_event = {
+                id = crisis.2007
+                days = 400
+                random = 200
+            }
+        }
+        every_country = {
+            limit = {
+                is_country_type = default
+            }
+            country_event = {
+                id = crisis.2020
+                days = 700
+                random = 200
+            }
+        }
+        every_country = {
+            limit = {
+                is_country_type = default
+            }
+            country_event = {
+                id = crisis.2021
+                days = 1000
+                random = 200
+            }
+        }
+        every_country = {
+            limit = {
+                is_country_type = default
+            }
+            country_event = {
+                id = crisis.2022
+                days = 1400
+            }
+        }
+        random_galaxy_planet = {
+            limit = {
+                has_planet_flag = machine_world_1
+            }
+            planet_event = {
+                id = crisis.2025
+                days = 1450
+                random = 10
+            }
+        }
+        random_galaxy_planet = {
+            limit = {
+                has_planet_flag = machine_world_2
+            }
+            planet_event = {
+                id = crisis.2026
+                days = 1500
+                random = 10
+            }
+        }
+        random_galaxy_planet = {
+            limit = {
+                has_planet_flag = machine_world_3
+            }
+            planet_event = {
+                id = crisis.2027
+                days = 1550
+                random = 10
+            }
+        }
+        random_galaxy_planet = {
+            limit = {
+                has_planet_flag = machine_world_4
+            }
+            planet_event = {
+                id = crisis.2028
+                days = 1600
+                random = 10
+            }
+        }
+        every_country = {
+            limit = {
+                is_country_type = default
+            }
+            if = {
+                limit = {
+                    NOR = {
+                        has_authority = auth_hive_mind
+                        has_authority = auth_machine_intelligence
+                        owner_species = {
+                            has_trait = trait_psionic
+                        }
+                    }
+                }
+                country_event = {
+                    id = crisis.2085
+                    days = 1800
+                    random = 100
+                }
+            }
+            if = {
+                limit = {
+                    has_authority = auth_hive_mind
+                }
+                country_event = {
+                    id = crisis.2086
+                    days = 1800
+                    random = 100
+                }
+            }
+            if = {
+                limit = {
+                    owner_species = {
+                        has_trait = trait_psionic
+                    }
+                }
+                country_event = {
+                    id = crisis.2087
+                    days = 1800
+                    random = 100
+                }
+            }
+            if = {
+                limit = {
+                    has_authority = auth_machine_intelligence
+                }
+                country_event = {
+                    id = crisis.2313
+                    days = 1800
+                    random = 100
+                }
+            }
+        }
+    }
+}
