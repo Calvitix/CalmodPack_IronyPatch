@@ -390,6 +390,12 @@ country_event = {
                             }
                         }
                     }
+                    if = {
+                        limit = {
+                            is_under_colonization = yes
+                        }
+                        destroy_colony = yes
+                    }
                 }
             }
         }
@@ -415,46 +421,46 @@ country_event = {
             }
         }
         else = {
-        copy_techs_from = {
-            target = event_target:current_uprising_originator
-            except = {
-                tech_robotic_workers
-                tech_droid_workers
-                tech_synthetic_workers
-                tech_eco_simulation
-                tech_gene_crops
-                tech_nano_vitality_crops
-                tech_nutrient_replication
-                tech_frontier_health
-                tech_frontier_hospital
-                tech_telepathy
-                tech_precognition_interface
-                tech_psi_jump_drive_1
-                tech_galactic_markets
-                tech_subdermal_stimulation
-                tech_global_research_initiative
-                tech_neural_implants
-                tech_psionic_theory
-                tech_robomodding
-                tech_robomodding_points_1
-                tech_robomodding_points_2
-                tech_genome_mapping
-                tech_vitality_boosters
-                tech_epigenetic_triggers
-                tech_cloning
-                tech_gene_banks
-                tech_gene_seed_purification
-                tech_morphogenetic_field_mastery
-                tech_gene_tailoring
-                tech_glandular_acclimation
-                tech_gene_expressions
-                tech_selected_lineages
-                tech_capacity_boosters
-                tech_akx_worm_1
-                tech_akx_worm_2
-                tech_akx_worm_3
+            copy_techs_from = {
+                target = event_target:current_uprising_originator
+                except = {
+                    tech_robotic_workers
+                    tech_droid_workers
+                    tech_synthetic_workers
+                    tech_eco_simulation
+                    tech_gene_crops
+                    tech_nano_vitality_crops
+                    tech_nutrient_replication
+                    tech_frontier_health
+                    tech_frontier_hospital
+                    tech_telepathy
+                    tech_precognition_interface
+                    tech_psi_jump_drive_1
+                    tech_galactic_markets
+                    tech_subdermal_stimulation
+                    tech_global_research_initiative
+                    tech_neural_implants
+                    tech_psionic_theory
+                    tech_robomodding
+                    tech_robomodding_points_1
+                    tech_robomodding_points_2
+                    tech_genome_mapping
+                    tech_vitality_boosters
+                    tech_epigenetic_triggers
+                    tech_cloning
+                    tech_gene_banks
+                    tech_gene_seed_purification
+                    tech_morphogenetic_field_mastery
+                    tech_gene_tailoring
+                    tech_glandular_acclimation
+                    tech_gene_expressions
+                    tech_selected_lineages
+                    tech_capacity_boosters
+                    tech_akx_worm_1
+                    tech_akx_worm_2
+                    tech_akx_worm_3
+                }
             }
-        }
         }
         every_galaxy_planet = {
             limit = {

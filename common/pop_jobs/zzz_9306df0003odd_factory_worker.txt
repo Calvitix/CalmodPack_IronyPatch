@@ -33,8 +33,13 @@ odd_factory_worker = {
         }
         modifier = {
             factor = 0
-            owner = {
-                has_country_flag = odd_factory_pause
+            OR = {
+                owner = {
+                    has_country_flag = odd_factory_pause
+                }
+                planet = {
+                    num_pops < 2
+                }
             }
         }
     }

@@ -1,5 +1,5 @@
 can_orbital_bombard = {
-    exists = from.owner
+    exists = FROM.OWNER
     NOT = {
         any_owned_ship = {
             is_ship_size = colossus
@@ -105,6 +105,12 @@ can_orbital_bombard = {
             FROM.CONTROLLER = {
                 is_country_type = default
             }
+        }
+    }
+    FROM = {
+        NOR = {
+            has_modifier = "underground_world"
+            has_modifier = "cryokarst_world"
         }
     }
 }

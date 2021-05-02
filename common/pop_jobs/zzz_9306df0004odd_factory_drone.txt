@@ -21,5 +21,11 @@ odd_factory_drone = {
     }
     weight = {
         weight = 999
+        modifier = {
+            factor = 0
+            planet = {
+                num_pops < 2
+            }
+        }
     }
 }
