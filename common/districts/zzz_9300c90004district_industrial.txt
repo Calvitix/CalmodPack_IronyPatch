@@ -20,6 +20,7 @@ district_industrial = {
         NOT = {
             has_modifier = slave_colony
         }
+        str_industrial_district_allow = yes
     }
     conversion_ratio = 0.5
     convert_to = {
@@ -502,7 +503,7 @@ district_industrial = {
         }
     }
     ai_resource_production = {
-        alloys = 1
+        alloys = 3
         trigger = {
             planet = {
                 not = {
@@ -512,12 +513,31 @@ district_industrial = {
         }
     }
     ai_resource_production = {
-        consumer_goods = 1
+        alloys = 5
+        trigger = {
+            planet = {
+                has_designation = col_foundry
+            }
+        }
+    }
+    ai_resource_production = {
+        consumer_goods = 3
         trigger = {
             planet = {
                 not = {
                     has_designation = col_foundry
                 }
+            }
+            owner = {
+                country_uses_consumer_goods = yes
+            }
+        }
+    }
+    ai_resource_production = {
+        consumer_goods = 5
+        trigger = {
+            planet = {
+                has_designation = col_factory
             }
             owner = {
                 country_uses_consumer_goods = yes

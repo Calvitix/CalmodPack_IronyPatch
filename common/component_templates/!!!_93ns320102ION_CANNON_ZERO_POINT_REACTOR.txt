@@ -16,7 +16,7 @@ utility_component_template = {
     size_restriction = {
         ion_cannon
     }
-    upgrades_to = "ION_CANNON_DARK_MATTER_REACTOR"
+    upgrades_to = "ION_CANNON_NHSC_ADV_REACTOR_1"
     ai_weight = {
         weight = 5
     }

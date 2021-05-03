@@ -13,6 +13,7 @@ district_mining = {
         NOT = {
             has_modifier = resort_colony
         }
+        str_mineral_district_allow = yes
     }
     conversion_ratio = 1
     convert_to = {
@@ -220,6 +221,21 @@ district_mining = {
         minerals = 4
         trigger = {
             always = yes
+        }
+    }
+    ai_resource_production = {
+        minerals = 1
+        trigger = {
+            nor = {
+                has_designation = col_factory
+                has_designation = col_foundry
+            }
+        }
+    }
+    ai_resource_production = {
+        minerals = 2
+        trigger = {
+            has_designation = col_mining
         }
     }
 }

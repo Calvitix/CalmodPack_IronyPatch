@@ -15,6 +15,7 @@ district_generator = {
         NOT = {
             has_modifier = resort_colony
         }
+        str_energy_district_allow = yes
     }
     conversion_ratio = 1
     convert_to = {
@@ -236,6 +237,21 @@ district_generator = {
         energy = 4
         trigger = {
             always = yes
+        }
+    }
+    ai_resource_production = {
+        energy = 1
+        trigger = {
+            nor = {
+                has_designation = col_factory
+                has_designation = col_foundry
+            }
+        }
+    }
+    ai_resource_production = {
+        energy = 1
+        trigger = {
+            has_designation = col_generator
         }
     }
 }

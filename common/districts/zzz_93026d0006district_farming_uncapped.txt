@@ -13,6 +13,7 @@ district_farming_uncapped = {
         NOT = {
             has_modifier = resort_colony
         }
+        str_food_district_allow = yes
     }
     conversion_ratio = 1
     convert_to = {
@@ -226,7 +227,7 @@ district_farming_uncapped = {
         }
     }
     ai_resource_production = {
-        food = 1
+        food = 5
         trigger = {
             always = yes
         }
