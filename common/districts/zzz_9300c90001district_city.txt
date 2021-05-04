@@ -161,6 +161,18 @@ district_city = {
     ai_resource_production = {
         alloys = 10
         trigger = {
+            str_force_city_district = yes
+        }
+    }
+    ai_resource_production = {
+        energy = 10
+        trigger = {
+            str_force_city_district = yes
+        }
+    }
+    ai_resource_production = {
+        alloys = 10
+        trigger = {
             num_pops > 15
             years_passed > 40
             free_housing < 20

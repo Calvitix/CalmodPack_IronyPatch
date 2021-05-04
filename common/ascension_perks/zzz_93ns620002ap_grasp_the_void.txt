@@ -13,7 +13,11 @@ ap_grasp_the_void = {
                 fail_text = "requires_discovery_tree"
                 has_tradition = tr_discovery_faith_in_science
             }
+        custom_tooltip = {
+            fail_text = "requires_ascension_perks_1"
+            num_ascension_perks > 0
         }
+    }
     }
     modifier = {
         country_starbase_capacity_add = 10
@@ -39,12 +43,12 @@ ap_grasp_the_void = {
             is_xenophobe = yes
         }
         modifier = {
-            factor = 3
+            factor = 5
             rusher = yes
             used_naval_capacity_percent > 0.95
             resource_stockpile_compare = {
                 resource = alloys
-                value > 2000
+                value > 3000
             }
         }
     }

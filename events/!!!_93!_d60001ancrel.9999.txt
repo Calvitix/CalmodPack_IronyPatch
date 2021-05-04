@@ -1,3 +1,4 @@
+namespace = ancrel
 ship_event = {
     id = ancrel.9999
     hide_window = yes
@@ -7,6 +8,11 @@ ship_event = {
         FROM = {
             NOT = {
                 exists = archaeological_site
+            }
+            solar_system = {
+                NOT = {
+                    is_star_class = sc_dn
+                }
             }
             NOT = {
                 has_planet_flag = suppress_archaeological_sites

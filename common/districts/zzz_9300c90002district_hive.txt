@@ -92,4 +92,16 @@ district_hive = {
             planet_housing_add = 1
         }
     }
+    ai_resource_production = {
+        alloys = 10
+        trigger = {
+            str_force_city_district = yes
+        }
+    }
+    ai_resource_production = {
+        energy = 10
+        trigger = {
+            str_force_city_district = yes
+        }
+    }
 }
