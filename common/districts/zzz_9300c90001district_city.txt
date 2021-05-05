@@ -31,7 +31,6 @@ district_city = {
         NOT = {
             has_modifier = slave_colony
         }
-        str_city_district_allow = yes
     }
     conversion_ratio = 0.5
     convert_to = {
