@@ -3,6 +3,7 @@ gestalt_colony_admin = {
     condition_string = DRONE_JOB_TRIGGER
     building_icon = building_capital
     clothes_texture_index = 3
+    icon = administrator
     possible_pre_triggers = {
         is_enslaved = no
         has_owner = yes

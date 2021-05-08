@@ -105,7 +105,7 @@ district_giga_planet_wind = {
         }
     }
     ai_resource_production = {
-        energy = 1
+        energy = 5
         trigger = {
             always = yes
         }

@@ -105,7 +105,7 @@ district_giga_planet_geothermal = {
         }
     }
     ai_resource_production = {
-        energy = 1
+        energy = 5
         trigger = {
             always = yes
         }

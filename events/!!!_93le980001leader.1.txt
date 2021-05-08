@@ -1,7 +1,30 @@
 namespace = leader
-namespace = leader
 country_event = {
     id = leader.1
+    title = "leader.1.name"
+    desc = {
+        trigger = {
+            has_authority = auth_hive_mind
+        }
+        text = "leader.1.desc.hive"
+    }
+    desc = {
+        trigger = {
+            has_authority = auth_machine_intelligence
+        }
+        text = "leader.1.desc.machine"
+    }
+    desc = {
+        trigger = {
+            NOR = {
+                has_authority = auth_hive_mind
+                has_authority = auth_machine_intelligence
+            }
+        }
+        text = "leader.1.desc"
+    }
+    picture = GFX_evt_federation_fleet
+    location = ROOT
     hide_window = yes
     is_triggered_only = yes
     trigger = {

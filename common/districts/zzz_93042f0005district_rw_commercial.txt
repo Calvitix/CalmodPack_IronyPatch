@@ -77,19 +77,9 @@ district_rw_commercial = {
         }
     }
     triggered_planet_modifier = {
-        modifier = {
-            planet_housing_add = 10
-        }
-    }
-    triggered_planet_modifier = {
-        modifier = {
-            job_merchant_add = 2
-        }
-    }
-    triggered_planet_modifier = {
-        modifier = {
-            job_clerk_add = 10
-        }
+        planet_housing_add = 10
+        job_merchant_add = 2
+        job_clerk_add = 6
     }
     triggered_desc = {
         trigger = {

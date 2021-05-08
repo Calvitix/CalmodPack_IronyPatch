@@ -23,6 +23,22 @@ miner = {
         produces = {
             minerals = 4
         }
+        produces = {
+            trigger = {
+                planet = {
+                    has_active_building = building_mineral_purification_plant
+                }
+            }
+            minerals = 1
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_active_building = building_mineral_purification_hub
+                }
+            }
+            minerals = 2
+        }
         upkeep = {
             trigger = {
                 exists = owner
@@ -129,7 +145,7 @@ miner = {
             owner = {
                 has_monthly_income = {
                     resource = minerals
-                    value < 30
+                    value < 0
                 }
             }
         }

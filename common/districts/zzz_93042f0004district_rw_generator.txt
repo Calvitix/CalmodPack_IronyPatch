@@ -144,43 +144,6 @@ district_rw_generator = {
     }
     triggered_planet_modifier = {
         potential = {
-            exists = owner
-            owner = {
-                is_gestalt = yes
-            }
-            has_active_building = building_energy_nexus
-        }
-        modifier = {
-            job_technician_drone_add = 5
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_gestalt = no
-                is_fallen_empire_spiritualist = no
-            }
-            has_active_building = building_energy_nexus
-        }
-        modifier = {
-            job_technician_add = 5
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_fallen_empire_spiritualist = yes
-            }
-            has_active_building = building_energy_nexus
-        }
-        modifier = {
-            job_fe_acolyte_generator_add = 5
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
             has_planet_flag = giga_rw_hive
             exists = owner
             owner = {

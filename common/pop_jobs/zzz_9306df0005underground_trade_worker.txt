@@ -40,8 +40,8 @@ underground_trade_worker = {
         potential = {
             has_trait = trait_repugnant
             OR = {
-                has_ethic = ethic_xenophobe
-                has_ethic = ethic_fanatic_xenophobe
+                has_ethic = ethic_xenophile
+                has_ethic = ethic_fanatic_xenophile
             }
         }
         modifier = {

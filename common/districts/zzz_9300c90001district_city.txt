@@ -65,6 +65,9 @@ district_city = {
     triggered_planet_modifier = {
         potential = {
             exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
             str_enable_clerks = yes
         }
         modifier = {
