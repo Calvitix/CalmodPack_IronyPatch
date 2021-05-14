@@ -1,0 +1,21 @@
+trait_td_ghosts = {
+    cost = 2
+    potential_crossbreeding_chance = 0
+    sorting_priority = 9
+    modification = no
+    opposites = {
+        "trait_td_shifting_souls"
+        "trait_td_artificial_spirits"
+        "trait_td_exiles_of_the_end"
+        "trait_td_semimechanized"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        PRESAPIENT
+        LITHOID
+    }
+    modifier = {
+        planet_jobs_society_research_produces_mult = 0.125
+        species_leader_exp_gain = 0.25
+    }
+}

@@ -1,6 +1,6 @@
 pc_t_star_big = {
     entity = "t_star_class_star_big_entity"
-    entity_scale = 30
+    entity_scale = 20
     picture = "pc_browndwarf"
     icon_frame = 14
     atmosphere_color = hsv {

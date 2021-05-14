@@ -1,0 +1,34 @@
+trait_td_terrible_punishment = {
+    cost = 3
+    potential_crossbreeding_chance = 0.5
+    icon = "gfx/interface/icons/traits/imported_icons/leader_trait_demoralizer.dds"
+    initial = no
+    randomized = no
+    advanced_trait = yes
+    opposites = {
+        "trait_hive_mind"
+        "trait_td_multi_hiveminded"
+        "trait_td_emotionless"
+        "trait_td_psychopathic"
+        "trait_td_thymoleptic_implants"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        PRESAPIENT
+    }
+    slave_cost = {
+        energy = -250
+    }
+    ai_weight = {
+        weight = 0
+    }
+    modifier = {
+        pop_happiness = -10
+        planet_jobs_produces_mult = -0.95
+        planet_pops_food_upkeep_mult = -2
+        planet_pops_consumer_goods_upkeep_mult = -2
+        pop_amenities_usage_mult = -0.5
+        pop_housing_usage_mult = -0.5
+        species_leader_exp_gain = -2
+    }
+}

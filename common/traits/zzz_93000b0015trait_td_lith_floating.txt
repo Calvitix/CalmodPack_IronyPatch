@@ -1,0 +1,15 @@
+trait_td_lith_floating = {
+    cost = 1
+    potential_crossbreeding_chance = 1
+    icon = "gfx/interface/icons/traits/trait_td_flying.dds"
+    opposites = {
+        "trait_td_air_swimming"
+    }
+    allowed_archetypes = {
+        LITHOID
+    }
+    modifier = {
+        pop_amenities_usage_mult = -0.05
+        pop_housing_usage_mult = -0.05
+    }
+}

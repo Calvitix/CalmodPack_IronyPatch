@@ -1,0 +1,22 @@
+trait_td_lith_dimensional_absent = {
+    cost = -2
+    potential_crossbreeding_chance = 1
+    icon = "gfx/interface/icons/traits/trait_td_dimensional_absent.dds"
+    opposites = {
+        "trait_td_shadow_creatures"
+        "trait_td_mirror_images"
+    }
+    allowed_archetypes = {
+        LITHOID
+    }
+    slave_cost = {
+        energy = -50
+    }
+    ai_weight = {
+        weight = 0
+    }
+    modifier = {
+        pop_growth_speed = -0.05
+        leader_age = -15
+    }
+}

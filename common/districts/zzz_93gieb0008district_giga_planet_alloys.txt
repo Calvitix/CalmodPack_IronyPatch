@@ -175,7 +175,7 @@ district_giga_planet_alloys = {
         }
     }
     ai_resource_production = {
-        alloys = 5
+        alloys = 1
         trigger = {
             always = yes
         }

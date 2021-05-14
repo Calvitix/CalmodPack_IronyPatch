@@ -1,0 +1,10 @@
+trait_td_rbot_reassembly = {
+    cost = 1
+    allowed_archetypes = {
+        ROBOT
+        MACHINE
+    }
+    modifier = {
+        pop_resettlement_cost_mult = -0.25
+    }
+}

@@ -1,0 +1,32 @@
+trait_td_psychopathic = {
+    cost = -2
+    potential_crossbreeding_chance = 1
+    custom_tooltip = TRAIT_TD_PSYCHOPATHIC_EFFECT
+    opposites = {
+        "trait_hive_mind"
+        "trait_decadent"
+        "trait_td_multi_hiveminded"
+        "trait_td_futurespawns"
+        "trait_td_witness"
+        "trait_td_noblesse_oblige"
+        "trait_td_aristocratic"
+        "trait_td_lust_for_power"
+        "trait_td_rite_of_succession"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        PRESAPIENT
+        LITHOID
+    }
+    ai_weight = {
+        weight = 0
+    }
+    slave_cost = {
+        energy = -75
+    }
+    forced_happiness = yes
+    modifier = {
+        pop_growth_speed = -0.125
+        army_damage_mult = 0.1
+    }
+}

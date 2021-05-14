@@ -84,6 +84,16 @@ technician = {
             can_take_servant_job = no
         }
         modifier = {
+            factor = 200
+            OR = {
+                is_non_sapient_robot = yes
+                is_shackled_robot = yes
+            }
+            owner = {
+                is_ai = yes
+            }
+        }
+        modifier = {
             factor = 0.25
             can_take_servant_job = yes
         }
@@ -135,6 +145,16 @@ technician = {
         modifier = {
             factor = 1.5
             has_trait = trait_void_dweller_1
+        }
+        modifier = {
+            factor = 200
+            OR = {
+                is_non_sapient_robot = yes
+                is_shackled_robot = yes
+            }
+            owner = {
+                is_ai = yes
+            }
         }
         modifier = {
             factor = 250

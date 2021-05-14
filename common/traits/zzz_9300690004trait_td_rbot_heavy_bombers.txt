@@ -1,0 +1,20 @@
+trait_td_rbot_heavy_bombers = {
+    cost = 2
+    allowed_archetypes = {
+        ROBOT
+        MACHINE
+    }
+    species_potential_add = {
+        exists = from
+        from = {
+            OR = {
+                has_authority = auth_machine_intelligence
+                has_technology = tech_droid_workers
+            }
+        }
+    }
+    modifier = {
+        army_damage_mult = 0.5
+        army_collateral_damage_mult = 0.5
+    }
+}

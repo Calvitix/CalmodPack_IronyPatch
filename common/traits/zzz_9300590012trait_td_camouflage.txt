@@ -1,0 +1,26 @@
+trait_td_camouflage = {
+    cost = 1
+    potential_crossbreeding_chance = 1
+    icon = "gfx/interface/icons/traits/imported_icons/trait_bioadaptability.dds"
+    opposites = {
+        "trait_robust"
+        "trait_extremely_adaptive"
+        "trait_adaptive"
+        "trait_nonadaptive"
+        "trait_td_harmonization"
+        "trait_td_slow_adaption"
+        "trait_td_nostalgia"
+        "trait_td_paradise_lost"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        PRESAPIENT
+    }
+    slave_cost = {
+        energy = 25
+    }
+    modifier = {
+        pop_environment_tolerance = 0.05
+        army_health = 0.1
+    }
+}

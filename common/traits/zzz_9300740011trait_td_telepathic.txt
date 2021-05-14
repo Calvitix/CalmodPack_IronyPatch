@@ -1,0 +1,21 @@
+trait_td_telepathic = {
+    cost = 1
+    potential_crossbreeding_chance = 0.25
+    icon = "gfx/interface/icons/traits/imported_icons/leader_trait_expertise_psionics.dds"
+    opposites = {
+        "trait_td_vestigial_psionic"
+        "trait_td_lith_vestigial_psionic"
+        "trait_td_exiles_of_the_end"
+        "trait_td_closed_minded"
+        "trait_td_umbral_shroud"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        PRESAPIENT
+        LITHOID
+    }
+    modifier = {
+        planet_jobs_unity_produces_mult = 0.025
+        planet_jobs_society_research_produces_mult = 0.05
+    }
+}

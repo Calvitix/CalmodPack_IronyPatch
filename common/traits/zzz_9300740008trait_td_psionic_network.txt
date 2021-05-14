@@ -1,0 +1,24 @@
+trait_td_psionic_network = {
+    cost = 4
+    potential_crossbreeding_chance = 0.25
+    opposites = {
+        "trait_td_remote_telepathic"
+        "trait_td_common_thoughts"
+        "trait_td_telepathic"
+        "trait_td_vestigial_psionic"
+        "trait_td_lith_vestigial_psionic"
+        "trait_td_exiles_of_the_end"
+        "trait_td_closed_minded"
+        "trait_td_umbral_shroud"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        PRESAPIENT
+        LITHOID
+    }
+    modifier = {
+        planet_jobs_unity_produces_mult = 0.25
+        planet_jobs_society_research_produces_mult = 0.075
+        pop_government_ethic_attraction = 0.1
+    }
+}

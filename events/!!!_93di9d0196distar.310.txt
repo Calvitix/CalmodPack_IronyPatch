@@ -1,0 +1,117 @@
+namespace = distar
+country_event = {
+    id = distar.310
+    hide_window = yes
+    is_triggered_only = yes
+    immediate = {
+        random_list = {
+            0 = {
+                modifier = {
+                    add = 40
+                    FROMFROM.solar_system = {
+                        any_system_planet = {
+                            habitable_planet = no
+                            has_anomaly = no
+                            planet_size > 8
+                            planet_size < 25
+                            NOT = {
+                                is_planet_class = "pc_broken"
+                            }
+                            is_star = no
+                        }
+                    }
+                }
+                country_event = {
+                    id = distar.311
+                }
+            }
+            0 = {
+                modifier = {
+                    add = 40
+                    FROMFROM.solar_system = {
+                        has_access_fleet = root
+                    }
+                }
+                country_event = {
+                    id = distar.315
+                }
+            }
+            40 = {
+                modifier = {
+                    add = 1
+                    FROMFROM.solar_system = {
+                        any_system_planet = {
+                            habitable_planet = no
+                            has_anomaly = no
+                            is_star = no
+                        }
+                    }
+                }
+                country_event = {
+                    id = distar.320
+                }
+            }
+            0 = {
+                modifier = {
+                    add = 40
+                    FROMFROM.solar_system = {
+                        any_system_planet = {
+                            has_anomaly = no
+                            exists = owner
+                            owner = {
+                                is_primitive = yes
+                            }
+                            NOT = {
+                                is_planet_class = pc_ringworld_habitable
+                            }
+                        }
+                    }
+                }
+                country_event = {
+                    id = distar.330
+                }
+            }
+            0 = {
+                modifier = {
+                    add = 40
+                    FROMFROM.solar_system = {
+                        any_system_planet = {
+                            habitable_planet = yes
+                            is_colony = no
+                            is_under_colonization = no
+                            has_anomaly = no
+                        }
+                    }
+                }
+                country_event = {
+                    id = distar.335
+                }
+            }
+            20 = {
+                country_event = {
+                    id = anomalymod.100
+                }
+            }
+            20 = {
+                country_event = {
+                    id = anomalymod.103
+                }
+            }
+            20 = {
+                country_event = {
+                    id = anomalymod.107
+                }
+            }
+            5 = {
+                country_event = {
+                    id = anomalymod.108
+                }
+            }
+            1 = {
+                country_event = {
+                    id = anomalymod.109
+                }
+            }
+        }
+    }
+}

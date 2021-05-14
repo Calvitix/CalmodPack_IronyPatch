@@ -1,0 +1,18 @@
+trait_td_rbot_ragged = {
+    cost = 3
+    icon = "gfx/interface/icons/traits/imported_icons/trait_robot_recycled.dds"
+    opposites = {
+        "trait_robot_mass_produced"
+        "trait_robot_custom_made"
+        "trait_robot_recycled"
+        "trait_robot_luxurious"
+        "trait_td_rbot_identifying_gems"
+    }
+    allowed_archetypes = {
+        ROBOT
+        MACHINE
+    }
+    assembling_modifier = {
+        planet_pop_assemblers_upkeep_mult = -0.275
+    }
+}

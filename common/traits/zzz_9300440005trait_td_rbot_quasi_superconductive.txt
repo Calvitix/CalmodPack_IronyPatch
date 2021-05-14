@@ -1,0 +1,23 @@
+trait_td_rbot_quasi_superconductive = {
+    cost = 1
+    icon = "gfx/interface/icons/traits/imported_icons/trait_robot_superconductive.dds"
+    opposites = {
+        "trait_robot_superconductive"
+    }
+    allowed_archetypes = {
+        ROBOT
+        MACHINE
+    }
+    species_potential_add = {
+        exists = from
+        from = {
+            OR = {
+                has_authority = auth_machine_intelligence
+                has_technology = tech_droid_workers
+            }
+        }
+    }
+    modifier = {
+        planet_jobs_energy_produces_mult = 0.075
+    }
+}

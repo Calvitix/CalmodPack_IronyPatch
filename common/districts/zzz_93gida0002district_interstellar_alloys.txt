@@ -11,9 +11,6 @@ district_interstellar_alloys = {
     }
     conversion_ratio = 1
     convert_to = {
-        district_interstellar_city
-        district_interstellar_hive
-        district_interstellar_nexus
     }
     resources = {
         category = planet_districts
@@ -105,12 +102,6 @@ district_interstellar_alloys = {
         modifier = {
             factor = 0.01
             OR = {
-                planet = {
-                    has_district = district_interstellar_generator
-                }
-                planet = {
-                    has_district = district_interstellar_commercial
-                }
                 planet = {
                     has_district = district_interstellar_science
                 }

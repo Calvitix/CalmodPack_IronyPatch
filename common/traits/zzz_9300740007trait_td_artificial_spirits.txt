@@ -1,0 +1,23 @@
+trait_td_artificial_spirits = {
+    cost = -3
+    potential_crossbreeding_chance = 0
+    sorting_priority = 9
+    modification = no
+    opposites = {
+        "trait_td_exiles_of_the_end"
+        "trait_td_semimechanized"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        PRESAPIENT
+        LITHOID
+    }
+    slave_cost = {
+        energy = -200
+    }
+    modifier = {
+        pop_growth_speed = -0.2
+        planet_jobs_engineering_research_produces_mult = 0.1
+        planet_jobs_physics_research_produces_mult = 0.1
+    }
+}

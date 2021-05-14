@@ -1,0 +1,13 @@
+trait_td_rbot_machine_cults = {
+    cost = 1
+    opposites = {
+        "trait_td_rbot_deus_ex_machina"
+        "trait_td_rbot_golems"
+    }
+    allowed_archetypes = {
+        MACHINE
+    }
+    modifier = {
+        planet_jobs_unity_produces_mult = 0.15
+    }
+}

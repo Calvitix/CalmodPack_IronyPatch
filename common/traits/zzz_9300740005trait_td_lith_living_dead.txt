@@ -1,0 +1,21 @@
+trait_td_lith_living_dead = {
+    cost = -2
+    potential_crossbreeding_chance = 0.25
+    icon = "gfx/interface/icons/traits/trait_td_living_dead.dds"
+    opposites = {
+        "trait_td_ghosts"
+        "trait_td_shifting_souls"
+        "trait_td_artificial_spirits"
+    }
+    allowed_archetypes = {
+        LITHOID
+    }
+    ai_weight = {
+        weight = 0
+    }
+    modifier = {
+        army_damage_mult = -0.2
+        army_morale = -0.2
+        army_health = -0.4
+    }
+}

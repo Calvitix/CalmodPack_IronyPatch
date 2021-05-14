@@ -1,0 +1,16 @@
+trait_td_magnetic = {
+    cost = 1
+    potential_crossbreeding_chance = 1
+    allowed_archetypes = {
+        BIOLOGICAL
+        PRESAPIENT
+        LITHOID
+    }
+    slave_cost = {
+        energy = 25
+    }
+    modifier = {
+        planet_jobs_energy_produces_mult = 0.05
+        planet_jobs_physics_research_produces_mult = 0.05
+    }
+}

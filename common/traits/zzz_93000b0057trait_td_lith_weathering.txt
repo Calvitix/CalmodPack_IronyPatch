@@ -1,0 +1,18 @@
+trait_td_lith_weathering = {
+    cost = -1
+    potential_crossbreeding_chance = 1
+    icon = "gfx/interface/icons/traits/trait_td_rotting_body.dds"
+    opposites = {
+        "trait_td_lith_holey"
+    }
+    allowed_archetypes = {
+        LITHOID
+    }
+    ai_weight = {
+        weight = 0
+    }
+    modifier = {
+        army_health = -0.15
+        leader_age = -15
+    }
+}

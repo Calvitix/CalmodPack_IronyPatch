@@ -1,0 +1,22 @@
+trait_td_photosynthetic = {
+    cost = 0
+    potential_crossbreeding_chance = 1
+    icon = "gfx/interface/icons/traits/imported_icons/trait_ruler_fertility_preacher.dds"
+    opposites = {
+        "trait_td_aura_absorption"
+        "trait_td_gluttony"
+        "trait_td_sitomaniac"
+        "trait_td_devourers"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        PRESAPIENT
+    }
+    ai_weight = {
+        weight = 0
+    }
+    modifier = {
+        planet_pops_food_upkeep_mult = -0.075
+        army_damage_mult = -0.15
+    }
+}

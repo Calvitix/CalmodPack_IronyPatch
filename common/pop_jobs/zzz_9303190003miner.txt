@@ -52,6 +52,9 @@ miner = {
     weight = {
         weight = @worker_job_weight
         modifier = {
+            factor = 2
+        }
+        modifier = {
             factor = 3
             OR = {
                 has_trait = trait_industrious
@@ -85,6 +88,16 @@ miner = {
                 NOT = {
                     has_technology = tech_droid_workers
                 }
+            }
+        }
+        modifier = {
+            factor = 200
+            OR = {
+                is_non_sapient_robot = yes
+                is_shackled_robot = yes
+            }
+            owner = {
+                is_ai = yes
             }
         }
         modifier = {

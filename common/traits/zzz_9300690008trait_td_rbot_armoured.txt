@@ -1,0 +1,11 @@
+trait_td_rbot_armoured = {
+    cost = 1
+    icon = "gfx/interface/icons/traits/trait_td_metal_exoskeleton.dds"
+    allowed_archetypes = {
+        ROBOT
+        MACHINE
+    }
+    modifier = {
+        army_health = 0.25
+    }
+}

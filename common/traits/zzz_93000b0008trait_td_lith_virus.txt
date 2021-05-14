@@ -1,0 +1,29 @@
+trait_td_lith_virus = {
+    cost = 3
+    potential_crossbreeding_chance = 0
+    sorting_priority = 9
+    icon = "gfx/interface/icons/traits/trait_td_virus.dds"
+    modification = no
+    opposites = {
+        "trait_td_swarm_that_walks"
+        "trait_td_energy_slimes"
+        "trait_td_shadow_creatures"
+        "trait_td_mirror_images"
+        "trait_td_ghosts"
+        "trait_td_shifting_souls"
+        "trait_td_artificial_spirits"
+        "trait_td_exiles_of_the_end"
+        "trait_td_semimechanized"
+    }
+    allowed_archetypes = {
+        LITHOID
+    }
+    slave_cost = {
+        energy = 25
+    }
+    modifier = {
+        leader_age = 25
+        pop_growth_speed = 0.025
+        army_morale = -0.15
+    }
+}

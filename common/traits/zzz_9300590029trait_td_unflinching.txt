@@ -1,0 +1,20 @@
+trait_td_unflinching = {
+    cost = -1
+    potential_crossbreeding_chance = 1
+    icon = "gfx/interface/icons/traits/imported_icons/leader_trait_reluctant.dds"
+    opposites = {
+        "trait_conformists"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        PRESAPIENT
+        LITHOID
+    }
+    ai_weight = {
+        weight = 0
+    }
+    modifier = {
+        pop_cat_slave_political_power = 2
+        army_defense_morale_mult = 0.25
+    }
+}

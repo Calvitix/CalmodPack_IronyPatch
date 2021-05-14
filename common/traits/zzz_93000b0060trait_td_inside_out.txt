@@ -1,0 +1,18 @@
+trait_td_inside_out = {
+    cost = -3
+    potential_crossbreeding_chance = 1
+    allowed_archetypes = {
+        BIOLOGICAL
+        PRESAPIENT
+    }
+    slave_cost = {
+        energy = -50
+    }
+    ai_weight = {
+        weight = 0
+    }
+    modifier = {
+        army_health = -0.3
+        pop_environment_tolerance = -0.1
+    }
+}

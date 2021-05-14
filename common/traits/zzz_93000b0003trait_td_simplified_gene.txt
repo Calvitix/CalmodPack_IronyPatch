@@ -1,0 +1,24 @@
+trait_td_simplified_gene = {
+    cost = -2
+    potential_crossbreeding_chance = 1
+    opposites = {
+        "trait_td_complicated_gene"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        PRESAPIENT
+        LITHOID
+    }
+    slave_cost = {
+        energy = -25
+    }
+    ai_weight = {
+        weight = 0
+    }
+    modifier = {
+        pop_environment_tolerance = -0.05
+        planet_jobs_engineering_research_produces_mult = -0.05
+        planet_jobs_physics_research_produces_mult = -0.05
+        planet_jobs_society_research_produces_mult = -0.05
+    }
+}

@@ -1,0 +1,14 @@
+trait_td_rbot_earthshaking_excavators = {
+    cost = 3
+    opposites = {
+        "trait_robot_power_drills"
+        "trait_td_rbot_ore_scanner"
+    }
+    allowed_archetypes = {
+        ROBOT
+        MACHINE
+    }
+    modifier = {
+        planet_jobs_minerals_produces_mult = 0.2
+    }
+}

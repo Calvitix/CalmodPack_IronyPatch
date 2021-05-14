@@ -161,19 +161,26 @@ district_city = {
         }
     }
     ai_resource_production = {
-        alloys = 10
+        alloys = 30
         trigger = {
             str_force_city_district = yes
         }
     }
     ai_resource_production = {
+        society_research = 50
+        trigger = {
+            str_force_city_district = yes
+        }
+    }
+    ai_resource_production = {
+        energy = 30
+        trigger = {
+            str_force_city_district = yes
+        }
+    }
+    ai_resource_production = {
+        alloys = 10
         energy = 10
-        trigger = {
-            str_force_city_district = yes
-        }
-    }
-    ai_resource_production = {
-        alloys = 10
         trigger = {
             num_pops > 15
             years_passed > 40

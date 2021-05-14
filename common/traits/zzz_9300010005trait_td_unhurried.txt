@@ -1,0 +1,24 @@
+trait_td_unhurried = {
+    cost = 3
+    potential_crossbreeding_chance = 1
+    custom_tooltip = TRAIT_TD_UNHURRIED_EFFECT
+    opposites = {
+        "trait_hive_mind"
+        "trait_robust"
+        "trait_venerable"
+        "trait_enduring"
+        "trait_fleeting"
+        "trait_td_eternal_youth"
+        "trait_td_precocious"
+        "trait_td_hale"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        PRESAPIENT
+    }
+    leader_age_min = 56
+    leader_age_max = 100
+    modifier = {
+        leader_age = 80
+    }
+}

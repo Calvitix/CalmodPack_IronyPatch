@@ -1,0 +1,37 @@
+trait_td_abominations = {
+    cost = -3
+    potential_crossbreeding_chance = 0
+    sorting_priority = 9
+    modification = no
+    opposites = {
+        "trait_agrarian"
+        "trait_td_aura_absorption"
+        "trait_td_therianthropic"
+        "trait_td_vampiric"
+        "trait_td_eternal_youth"
+        "trait_td_parasite"
+        "trait_td_lith_parasite"
+        "trait_td_virus"
+        "trait_td_lith_virus"
+        "trait_td_swarm_that_walks"
+        "trait_td_energy_slimes"
+        "trait_td_shadow_creatures"
+        "trait_td_mirror_images"
+        "trait_td_ghosts"
+        "trait_td_shifting_souls"
+        "trait_td_artificial_spirits"
+        "trait_td_exiles_of_the_end"
+        "trait_td_semimechanized"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+    }
+    slave_cost = {
+        energy = -100
+    }
+    modifier = {
+        planet_jobs_food_produces_mult = -0.3
+        army_damage_mult = 0.15
+        pc_nuked_habitability = 0.15
+    }
+}

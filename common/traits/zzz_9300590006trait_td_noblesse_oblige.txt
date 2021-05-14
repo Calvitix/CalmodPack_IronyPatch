@@ -1,0 +1,19 @@
+trait_td_noblesse_oblige = {
+    cost = 1
+    potential_crossbreeding_chance = 1
+    opposites = {
+        "trait_hive_mind"
+        "trait_presapient_proles"
+        "trait_td_aristocratic"
+        "trait_td_lust_for_power"
+        "trait_td_rite_of_succession"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    modifier = {
+        pop_cat_worker_happiness = 0.075
+        planet_jobs_unity_produces_mult = 0.05
+    }
+}

@@ -1,0 +1,23 @@
+trait_td_fruitage = {
+    cost = 1
+    potential_crossbreeding_chance = 1
+    icon = "gfx/interface/icons/traits/imported_icons/leader_trait_food.dds"
+    opposites = {
+        "trait_agrarian"
+        "trait_td_hunter_gatherers"
+        "trait_td_hunters"
+        "trait_td_gatherers"
+        "trait_td_eolithic"
+        "trait_td_abominations"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        PRESAPIENT
+    }
+    slave_cost = {
+        energy = 25
+    }
+    modifier = {
+        planet_jobs_food_produces_mult = 0.075
+    }
+}

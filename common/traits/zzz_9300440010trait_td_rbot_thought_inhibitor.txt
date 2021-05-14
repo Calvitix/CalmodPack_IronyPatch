@@ -1,0 +1,33 @@
+trait_td_rbot_thought_inhibitor = {
+    cost = -2
+    icon = "gfx/interface/icons/traits/imported_icons/leader_trait_erratic_morality_core.dds"
+    opposites = {
+        "trait_robot_logic_engines"
+        "trait_td_rbot_children_of_singularity"
+        "trait_td_rbot_autoanalysis"
+        "trait_td_rbot_mobile_synchrotrons"
+        "trait_td_rbot_curiosity_scripts"
+        "trait_td_rbot_missing_number"
+    }
+    allowed_archetypes = {
+        ROBOT
+    }
+    species_potential_add = {
+        exists = from
+        from = {
+            has_technology = tech_synthetic_workers
+            NOT = {
+                has_policy_flag = ai_outlawed
+            }
+        }
+    }
+    ai_weight = {
+        weight = 0
+    }
+    forced_happiness = yes
+    modifier = {
+        planet_jobs_engineering_research_produces_mult = -0.15
+        planet_jobs_physics_research_produces_mult = -0.15
+        planet_jobs_society_research_produces_mult = -0.15
+    }
+}

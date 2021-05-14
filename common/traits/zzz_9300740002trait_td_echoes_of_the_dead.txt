@@ -1,0 +1,21 @@
+trait_td_echoes_of_the_dead = {
+    cost = 1
+    potential_crossbreeding_chance = 0.25
+    opposites = {
+        "trait_td_ghosts"
+        "trait_td_flesh_and_spirit"
+        "trait_td_living_dead"
+        "trait_td_lith_living_dead"
+        "trait_td_shifting_souls"
+        "trait_td_artificial_spirits"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        PRESAPIENT
+        LITHOID
+    }
+    modifier = {
+        planet_jobs_society_research_produces_mult = 0.05
+        species_leader_exp_gain = 0.1
+    }
+}

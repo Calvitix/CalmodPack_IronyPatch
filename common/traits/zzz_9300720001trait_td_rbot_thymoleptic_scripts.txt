@@ -1,0 +1,21 @@
+trait_td_rbot_thymoleptic_scripts = {
+    cost = 1
+    opposites = {
+        "trait_robot_loyalty_circuits"
+        "trait_td_rbot_obedience_code"
+        "trait_td_rbot_thought_inhibitor"
+    }
+    allowed_archetypes = {
+        ROBOT
+    }
+    species_potential_add = {
+        exists = from
+        from = {
+            has_technology = tech_synthetic_workers
+            NOT = {
+                has_policy_flag = ai_outlawed
+            }
+        }
+    }
+    forced_happiness = yes
+}

@@ -1,0 +1,22 @@
+trait_td_lith_energivore = {
+    cost = 2
+    potential_crossbreeding_chance = 1
+    icon = "gfx/interface/icons/traits/trait_td_energivore.dds"
+    opposites = {
+        "trait_td_lith_metalivore"
+        "trait_td_lith_controlled_metabolism"
+        "trait_td_lith_efficient_metabolism"
+        "trait_td_lith_gluttony"
+        "trait_td_lith_sitomaniac"
+    }
+    allowed_archetypes = {
+        LITHOID
+    }
+    slave_cost = {
+        energy = -25
+    }
+    modifier = {
+        planet_pops_minerals_upkeep_mult = -0.225
+        planet_jobs_energy_produces_mult = -0.05
+    }
+}

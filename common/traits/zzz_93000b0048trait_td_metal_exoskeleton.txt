@@ -1,0 +1,31 @@
+trait_td_metal_exoskeleton = {
+    cost = 2
+    potential_crossbreeding_chance = 1
+    opposites = {
+        "trait_td_carapace"
+        "trait_td_persistent"
+        "trait_td_iron_bone"
+        "trait_td_translucent_skin"
+        "trait_td_lith_aerogel_skin"
+        "trait_td_deformed"
+        "trait_td_rotting_body"
+        "trait_td_boneless"
+        "trait_td_lith_weathering"
+        "trait_td_lith_holey"
+        "trait_td_hemophilia"
+        "trait_td_inside_out"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        PRESAPIENT
+        LITHOID
+    }
+    slave_cost = {
+        energy = 75
+    }
+    modifier = {
+        army_health = 0.25
+        planet_jobs_worker_produces_mult = 0.025
+        planet_livestock_alloys_produces_add = 0.125
+    }
+}

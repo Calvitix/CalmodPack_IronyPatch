@@ -1,0 +1,19 @@
+trait_td_lith_abundant = {
+    cost = 2
+    potential_crossbreeding_chance = 0.5
+    initial = no
+    randomized = no
+    advanced_trait = yes
+    opposites = {
+        "trait_td_lith_rock_salt"
+    }
+    allowed_archetypes = {
+        LITHOID
+    }
+    slave_cost = {
+        energy = 100
+    }
+    modifier = {
+        planet_livestock_minerals_produces_add = 1
+    }
+}

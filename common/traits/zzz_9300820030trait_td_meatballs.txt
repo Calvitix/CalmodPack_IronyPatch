@@ -1,0 +1,21 @@
+trait_td_meatballs = {
+    cost = 1
+    potential_crossbreeding_chance = 1
+    opposites = {
+        "trait_delicious"
+        "trait_td_toxic"
+        "trait_td_bitter"
+        "trait_td_boneless"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        PRESAPIENT
+    }
+    slave_cost = {
+        energy = 50
+    }
+    modifier = {
+        planet_livestock_food_produces_add = 1.25
+        army_health = -0.15
+    }
+}

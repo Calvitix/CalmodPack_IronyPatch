@@ -1,0 +1,31 @@
+trait_td_healing_factor = {
+    cost = 3
+    potential_crossbreeding_chance = 1
+    opposites = {
+        "trait_td_dragon_scales"
+        "trait_td_petrification"
+        "trait_td_metal_exoskeleton"
+        "trait_td_carapace"
+        "trait_td_persistent"
+        "trait_td_iron_bone"
+        "trait_td_translucent_skin"
+        "trait_td_deformed"
+        "trait_td_rotting_body"
+        "trait_td_boneless"
+        "trait_td_hemophilia"
+        "trait_td_inside_out"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        PRESAPIENT
+    }
+    slave_cost = {
+        energy = 25
+    }
+    modifier = {
+        army_health = 0.4
+        leader_age = 10
+        planet_livestock_food_produces_add = 0.5
+        planet_pops_food_upkeep_mult = 0.15
+    }
+}

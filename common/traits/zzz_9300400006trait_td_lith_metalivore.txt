@@ -1,0 +1,17 @@
+trait_td_lith_metalivore = {
+    cost = 2
+    potential_crossbreeding_chance = 1
+    opposites = {
+        "trait_td_lith_controlled_metabolism"
+        "trait_td_lith_efficient_metabolism"
+        "trait_td_lith_gluttony"
+        "trait_td_lith_sitomaniac"
+    }
+    allowed_archetypes = {
+        LITHOID
+    }
+    modifier = {
+        planet_pops_minerals_upkeep_mult = -0.225
+        planet_jobs_alloys_produces_mult = -0.05
+    }
+}

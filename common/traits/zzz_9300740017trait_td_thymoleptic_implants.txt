@@ -1,0 +1,33 @@
+trait_td_thymoleptic_implants = {
+    cost = 2
+    potential_crossbreeding_chance = 0.25
+    custom_tooltip = TRAIT_TD_THYMOLEPTIC_IMPLANTS_EFFECT
+    opposites = {
+        "trait_hive_mind"
+        "trait_decadent"
+        "trait_td_multi_hiveminded"
+        "trait_td_psychopathic"
+        "trait_td_futurespawns"
+        "trait_td_witness"
+        "trait_td_noblesse_oblige"
+        "trait_td_aristocratic"
+        "trait_td_lust_for_power"
+        "trait_td_rite_of_succession"
+        "trait_td_pseudo_cybernetics"
+        "trait_td_basic_cybernetics"
+        "trait_td_lith_basic_cybernetics"
+        "trait_td_semimechanized"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        PRESAPIENT
+        LITHOID
+    }
+    slave_cost = {
+        energy = 75
+    }
+    forced_happiness = yes
+    modifier = {
+        pop_amenities_usage_mult = -0.025
+    }
+}

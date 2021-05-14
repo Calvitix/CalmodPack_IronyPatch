@@ -1,0 +1,23 @@
+trait_td_iron_bone = {
+    cost = 1
+    potential_crossbreeding_chance = 1
+    opposites = {
+        "trait_td_translucent_skin"
+        "trait_td_deformed"
+        "trait_td_rotting_body"
+        "trait_td_boneless"
+        "trait_td_hemophilia"
+        "trait_td_inside_out"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        PRESAPIENT
+    }
+    slave_cost = {
+        energy = 25
+    }
+    modifier = {
+        army_health = 0.2
+        planet_livestock_alloys_produces_add = 0.125
+    }
+}

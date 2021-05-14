@@ -1,0 +1,22 @@
+trait_td_symbiotic = {
+    cost = 1
+    potential_crossbreeding_chance = 1
+    opposites = {
+        "trait_traditional"
+        "trait_quarrelsome"
+        "trait_td_aggressive"
+        "trait_td_bloodthirsty"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        PRESAPIENT
+        LITHOID
+    }
+    slave_cost = {
+        energy = 25
+    }
+    modifier = {
+        planet_jobs_unity_produces_mult = 0.05
+        pop_environment_tolerance = 0.025
+    }
+}

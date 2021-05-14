@@ -1,0 +1,26 @@
+trait_td_technicism = {
+    cost = 2
+    potential_crossbreeding_chance = 1
+    opposites = {
+        "trait_nerve_stapled"
+        "trait_natural_engineers"
+        "trait_natural_physicists"
+        "trait_natural_sociologists"
+        "trait_td_physicalism"
+        "trait_td_biologism"
+        "trait_td_technological_lag"
+        "trait_td_cultural_lag"
+        "trait_td_technophobes"
+        "trait_td_numerophobes"
+        "trait_td_verbophobes"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    modifier = {
+        planet_jobs_engineering_research_produces_mult = 0.275
+        planet_jobs_physics_research_produces_mult = -0.025
+        planet_jobs_society_research_produces_mult = -0.025
+    }
+}

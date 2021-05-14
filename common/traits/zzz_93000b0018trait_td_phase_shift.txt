@@ -1,0 +1,20 @@
+trait_td_phase_shift = {
+    cost = 2
+    potential_crossbreeding_chance = 1
+    icon = "gfx/interface/icons/traits/imported_icons/leader_trait_roamer.dds"
+    opposites = {
+        "trait_td_shadow_creatures"
+        "trait_td_mirror_images"
+        "trait_td_dimensional_absent"
+        "trait_td_lith_dimensional_absent"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        PRESAPIENT
+        LITHOID
+    }
+    modifier = {
+        army_health = 0.225
+        army_morale = 0.15
+    }
+}

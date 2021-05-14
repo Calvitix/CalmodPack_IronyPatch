@@ -1,0 +1,24 @@
+trait_td_rbot_quantitative_advance = {
+    cost = 4
+    opposites = {
+        "trait_robot_mass_produced"
+        "trait_robot_custom_made"
+        "trait_robot_recycled"
+        "trait_robot_luxurious"
+        "trait_td_rbot_quality_control"
+        "trait_td_rbot_printed_body"
+        "trait_td_rbot_handcrafted"
+        "trait_td_rbot_ragged"
+        "trait_td_rbot_identifying_gems"
+    }
+    allowed_archetypes = {
+        ROBOT
+        MACHINE
+    }
+    modifier = {
+        pop_assembly_speed = 0.2
+    }
+    assembling_modifier = {
+        planet_pop_assemblers_upkeep_mult = -0.225
+    }
+}

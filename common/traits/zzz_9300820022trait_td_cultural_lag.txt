@@ -1,0 +1,22 @@
+trait_td_cultural_lag = {
+    cost = 1
+    potential_crossbreeding_chance = 1
+    icon = "gfx/interface/icons/traits/imported_icons/trait_poor_sociologists.dds"
+    opposites = {
+        "trait_nerve_stapled"
+        "trait_natural_engineers"
+        "trait_natural_physicists"
+        "trait_natural_sociologists"
+        "trait_td_technophobes"
+        "trait_td_numerophobes"
+        "trait_td_verbophobes"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    modifier = {
+        planet_jobs_society_research_produces_mult = -0.15
+        planet_jobs_engineering_research_produces_mult = 0.275
+    }
+}

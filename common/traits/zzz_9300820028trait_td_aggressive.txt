@@ -1,0 +1,22 @@
+trait_td_aggressive = {
+    cost = -2
+    potential_crossbreeding_chance = 1
+    opposites = {
+        "trait_traditional"
+        "trait_quarrelsome"
+        "trait_td_bloodthirsty"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        PRESAPIENT
+        LITHOID
+    }
+    ai_weight = {
+        weight = 0
+    }
+    modifier = {
+        planet_jobs_unity_produces_mult = -0.125
+        army_morale = -0.15
+        army_damage_mult = 0.075
+    }
+}

@@ -1,0 +1,22 @@
+trait_td_force_manipulation = {
+    cost = 3
+    potential_crossbreeding_chance = 1
+    opposites = {
+        "trait_td_electromagnetic_armour"
+        "trait_td_magnetic"
+        "trait_td_monopole"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        PRESAPIENT
+        LITHOID
+    }
+    slave_cost = {
+        energy = 25
+    }
+    modifier = {
+        planet_jobs_alloys_produces_mult = 0.05
+        planet_jobs_energy_produces_mult = 0.075
+        planet_jobs_physics_research_produces_mult = 0.1
+    }
+}

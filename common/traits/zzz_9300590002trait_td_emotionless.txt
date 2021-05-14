@@ -1,0 +1,29 @@
+trait_td_emotionless = {
+    cost = 1
+    potential_crossbreeding_chance = 1
+    custom_tooltip = TRAIT_TD_EMOTIONLESS_EFFECT
+    opposites = {
+        "trait_hive_mind"
+        "trait_decadent"
+        "trait_td_multi_hiveminded"
+        "trait_td_psychopathic"
+        "trait_td_futurespawns"
+        "trait_td_witness"
+        "trait_td_noblesse_oblige"
+        "trait_td_aristocratic"
+        "trait_td_lust_for_power"
+        "trait_td_rite_of_succession"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        PRESAPIENT
+        LITHOID
+    }
+    slave_cost = {
+        energy = 25
+    }
+    forced_happiness = yes
+    modifier = {
+        planet_jobs_society_research_produces_mult = -0.1
+    }
+}

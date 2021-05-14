@@ -1,0 +1,28 @@
+trait_td_flesh_and_spirit = {
+    cost = 0
+    potential_crossbreeding_chance = 0.25
+    opposites = {
+        "trait_td_ghosts"
+        "trait_td_living_dead"
+        "trait_td_lith_living_dead"
+        "trait_td_shifting_souls"
+        "trait_td_artificial_spirits"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        PRESAPIENT
+        LITHOID
+    }
+    slave_cost = {
+        energy = 25
+    }
+    ai_weight = {
+        weight = 0
+    }
+    modifier = {
+        planet_jobs_unity_produces_mult = 0.025
+        planet_jobs_energy_produces_mult = 0.025
+        pop_happiness = 0.025
+        pop_housing_usage_mult = 0.15
+    }
+}

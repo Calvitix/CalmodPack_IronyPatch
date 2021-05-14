@@ -1,0 +1,19 @@
+trait_td_semimechanized = {
+    cost = -1
+    potential_crossbreeding_chance = 0
+    sorting_priority = 9
+    modification = no
+    opposites = {
+        "trait_hive_mind"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        PRESAPIENT
+        LITHOID
+    }
+    modifier = {
+        planet_pops_consumer_goods_upkeep_mult = 0.3
+        pop_environment_tolerance = 0.075
+        leader_age = 10
+    }
+}

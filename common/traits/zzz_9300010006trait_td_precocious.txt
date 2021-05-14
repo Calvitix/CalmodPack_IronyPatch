@@ -1,0 +1,19 @@
+trait_td_precocious = {
+    cost = 2
+    potential_crossbreeding_chance = 1
+    icon = "gfx/interface/icons/traits/imported_icons/leader_trait_maniacal.dds"
+    custom_tooltip = TRAIT_TD_PRECOCIOUS_EFFECT
+    opposites = {
+        "trait_hive_mind"
+        "trait_td_eternal_youth"
+        "trait_td_hale"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        PRESAPIENT
+    }
+    leader_age_min = 10
+    leader_age_max = 18
+    modifier = {
+    }
+}

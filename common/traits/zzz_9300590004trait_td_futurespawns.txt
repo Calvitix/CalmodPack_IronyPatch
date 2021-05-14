@@ -1,0 +1,39 @@
+trait_td_futurespawns = {
+    cost = 1
+    potential_crossbreeding_chance = 0
+    sorting_priority = 9
+    modification = no
+    opposites = {
+        "trait_td_paradise_lost"
+        "trait_td_lith_paradise_lost"
+        "trait_td_last_children"
+        "trait_td_abominations"
+        "trait_td_aura_absorption"
+        "trait_td_therianthropic"
+        "trait_td_vampiric"
+        "trait_td_eternal_youth"
+        "trait_td_parasite"
+        "trait_td_lith_parasite"
+        "trait_td_virus"
+        "trait_td_lith_virus"
+        "trait_td_swarm_that_walks"
+        "trait_td_energy_slimes"
+        "trait_td_shadow_creatures"
+        "trait_td_mirror_images"
+        "trait_td_ghosts"
+        "trait_td_shifting_souls"
+        "trait_td_artificial_spirits"
+        "trait_td_exiles_of_the_end"
+        "trait_td_semimechanized"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    modifier = {
+        pop_happiness = -0.15
+        planet_jobs_engineering_research_produces_mult = 0.125
+        planet_jobs_physics_research_produces_mult = 0.125
+        planet_jobs_society_research_produces_mult = 0.125
+    }
+}

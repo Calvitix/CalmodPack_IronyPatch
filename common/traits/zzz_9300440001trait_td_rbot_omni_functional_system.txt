@@ -1,0 +1,28 @@
+trait_td_rbot_omni_functional_system = {
+    cost = 6
+    allowed_archetypes = {
+        ROBOT
+        MACHINE
+    }
+    species_potential_add = {
+        exists = from
+        from = {
+            OR = {
+                has_authority = auth_machine_intelligence
+                has_technology = tech_synthetic_workers
+            }
+            NOT = {
+                has_policy_flag = ai_outlawed
+            }
+        }
+    }
+    modifier = {
+        planet_jobs_produces_mult = 0.05
+        planet_jobs_engineering_research_produces_mult = 0.075
+        planet_jobs_physics_research_produces_mult = 0.075
+        planet_jobs_society_research_produces_mult = 0.075
+        pop_happiness = 0.05
+        leader_skill_levels = 1
+        army_damage_mult = 0.25
+    }
+}

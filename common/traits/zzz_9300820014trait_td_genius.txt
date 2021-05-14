@@ -1,0 +1,22 @@
+trait_td_genius = {
+    cost = 4
+    potential_crossbreeding_chance = 1
+    opposites = {
+        "trait_nerve_stapled"
+        "trait_erudite"
+        "trait_intelligent"
+        "trait_td_brilliant"
+        "trait_td_vacuous"
+        "trait_td_great_excuses"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    modifier = {
+        planet_jobs_engineering_research_produces_mult = 0.175
+        planet_jobs_physics_research_produces_mult = 0.175
+        planet_jobs_society_research_produces_mult = 0.175
+        leader_skill_levels = 1
+    }
+}

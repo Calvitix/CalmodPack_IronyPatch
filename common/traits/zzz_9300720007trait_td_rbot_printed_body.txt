@@ -1,0 +1,20 @@
+trait_td_rbot_printed_body = {
+    cost = 2
+    icon = "gfx/interface/icons/traits/imported_icons/trait_robot_mass_produced.dds"
+    opposites = {
+        "trait_robot_mass_produced"
+        "trait_robot_custom_made"
+        "trait_robot_recycled"
+        "trait_robot_luxurious"
+        "trait_td_rbot_handcrafted"
+        "trait_td_rbot_ragged"
+        "trait_td_rbot_identifying_gems"
+    }
+    allowed_archetypes = {
+        ROBOT
+        MACHINE
+    }
+    modifier = {
+        pop_assembly_speed = 0.25
+    }
+}

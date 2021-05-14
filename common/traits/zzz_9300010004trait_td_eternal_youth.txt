@@ -1,0 +1,37 @@
+trait_td_eternal_youth = {
+    cost = 5
+    potential_crossbreeding_chance = 0
+    sorting_priority = 9
+    custom_tooltip = TRAIT_TD_ETERNAL_YOUTH_EFFECT
+    modification = no
+    opposites = {
+        "trait_robust"
+        "trait_venerable"
+        "trait_enduring"
+        "trait_fleeting"
+        "trait_td_parasite"
+        "trait_td_lith_parasite"
+        "trait_td_virus"
+        "trait_td_lith_virus"
+        "trait_td_swarm_that_walks"
+        "trait_td_energy_slimes"
+        "trait_td_shadow_creatures"
+        "trait_td_mirror_images"
+        "trait_td_ghosts"
+        "trait_td_shifting_souls"
+        "trait_td_artificial_spirits"
+        "trait_td_exiles_of_the_end"
+        "trait_td_semimechanized"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        PRESAPIENT
+        LITHOID
+    }
+    immortal_leaders = yes
+    modifier = {
+        species_leader_exp_gain = -0.6
+        army_damage_mult = -0.125
+        army_morale = -0.15
+    }
+}

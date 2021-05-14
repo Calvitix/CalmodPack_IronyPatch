@@ -1,0 +1,24 @@
+trait_td_lith_vestigial_psionic = {
+    cost = 0
+    potential_crossbreeding_chance = 0.25
+    icon = "gfx/interface/icons/traits/trait_td_vestigial_psionic.dds"
+    opposites = {
+        "trait_td_exiles_of_the_end"
+        "trait_td_closed_minded"
+        "trait_td_umbral_shroud"
+    }
+    allowed_archetypes = {
+        LITHOID
+    }
+    ai_weight = {
+        weight = 0
+    }
+    modifier = {
+        planet_jobs_engineering_research_produces_mult = 0.025
+        planet_jobs_physics_research_produces_mult = 0.025
+        planet_jobs_society_research_produces_mult = 0.025
+        planet_jobs_energy_produces_mult = 0.025
+        pop_happiness = 0.025
+        planet_pops_minerals_upkeep_mult = 0.15
+    }
+}

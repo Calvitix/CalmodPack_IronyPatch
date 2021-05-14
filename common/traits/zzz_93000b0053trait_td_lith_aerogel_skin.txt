@@ -1,0 +1,20 @@
+trait_td_lith_aerogel_skin = {
+    cost = 1
+    potential_crossbreeding_chance = 1
+    icon = "gfx/interface/icons/traits/trait_td_translucent_skin.dds"
+    opposites = {
+        "trait_td_deformed"
+        "trait_td_lith_weathering"
+        "trait_td_lith_holey"
+    }
+    allowed_archetypes = {
+        LITHOID
+    }
+    slave_cost = {
+        energy = 25
+    }
+    modifier = {
+        army_health = 0.075
+        pop_environment_tolerance = 0.05
+    }
+}

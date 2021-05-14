@@ -1,0 +1,23 @@
+trait_td_rbot_obedience_code = {
+    cost = 3
+    icon = "gfx/interface/icons/traits/imported_icons/trait_robot_loyalty_circuits.dds"
+    opposites = {
+        "trait_robot_loyalty_circuits"
+        "trait_td_rbot_thought_inhibitor"
+    }
+    allowed_archetypes = {
+        ROBOT
+    }
+    species_potential_add = {
+        exists = from
+        from = {
+            has_technology = tech_synthetic_workers
+            NOT = {
+                has_policy_flag = ai_outlawed
+            }
+        }
+    }
+    modifier = {
+        pop_happiness = 0.125
+    }
+}

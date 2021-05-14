@@ -1,0 +1,26 @@
+trait_td_sanguivore = {
+    cost = 2
+    potential_crossbreeding_chance = 1
+    opposites = {
+        "trait_td_aura_absorption"
+        "trait_td_lithovore"
+        "trait_td_energivore"
+        "trait_td_controlled_metabolism"
+        "trait_td_efficient_metabolism"
+        "trait_td_photosynthetic"
+        "trait_td_gluttony"
+        "trait_td_sitomaniac"
+        "trait_td_devourers"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        PRESAPIENT
+    }
+    slave_cost = {
+        energy = -25
+    }
+    modifier = {
+        planet_pops_food_upkeep_mult = -0.225
+        planet_jobs_food_produces_mult = -0.1
+    }
+}

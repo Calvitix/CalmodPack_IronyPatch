@@ -1,0 +1,15 @@
+trait_td_lith_efficient_metabolism = {
+    cost = 1
+    potential_crossbreeding_chance = 1
+    icon = "gfx/interface/icons/traits/trait_td_efficient_metabolism.dds"
+    opposites = {
+        "trait_td_lith_gluttony"
+        "trait_td_lith_sitomaniac"
+    }
+    allowed_archetypes = {
+        LITHOID
+    }
+    modifier = {
+        planet_pops_minerals_upkeep_mult = -0.1
+    }
+}

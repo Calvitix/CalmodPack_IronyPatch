@@ -1,0 +1,17 @@
+trait_td_rbot_regenerative_alloy = {
+    cost = 2
+    icon = "gfx/interface/icons/traits/trait_td_healing_factor.dds"
+    opposites = {
+        "trait_robot_durable"
+        "trait_robot_high_maintenance"
+        "trait_td_rbot_steampowered"
+        "trait_td_rbot_regular_breakdown"
+    }
+    allowed_archetypes = {
+        ROBOT
+        MACHINE
+    }
+    modifier = {
+        planet_pops_robotics_upkeep_mult = -0.175
+    }
+}

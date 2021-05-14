@@ -1,0 +1,20 @@
+trait_td_heroism = {
+    cost = 3
+    potential_crossbreeding_chance = 1
+    opposites = {
+        "trait_talented"
+        "trait_quick_learners"
+        "trait_slow_learners"
+        "trait_td_born_to_rule"
+        "trait_td_arrested_learning"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        PRESAPIENT
+        LITHOID
+    }
+    modifier = {
+        leader_skill_levels = 3
+        species_leader_exp_gain = 0.05
+    }
+}

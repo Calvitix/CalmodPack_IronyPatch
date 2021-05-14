@@ -1,0 +1,31 @@
+trait_td_rbot_quantum_algorithms = {
+    cost = 4
+    opposites = {
+        "trait_robot_logic_engines"
+        "trait_td_rbot_ternary_logic_circuits"
+        "trait_td_rbot_thought_inhibitor"
+        "trait_td_rbot_infinity_machines"
+    }
+    allowed_archetypes = {
+        ROBOT
+        MACHINE
+    }
+    species_potential_add = {
+        exists = from
+        from = {
+            OR = {
+                has_authority = auth_machine_intelligence
+                has_technology = tech_synthetic_workers
+            }
+            NOT = {
+                has_policy_flag = ai_outlawed
+            }
+        }
+    }
+    modifier = {
+        planet_jobs_engineering_research_produces_mult = 0.175
+        planet_jobs_physics_research_produces_mult = 0.175
+        planet_jobs_society_research_produces_mult = 0.175
+        leader_skill_levels = 1
+    }
+}

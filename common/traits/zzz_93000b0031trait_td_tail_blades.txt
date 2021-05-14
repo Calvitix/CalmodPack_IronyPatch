@@ -1,0 +1,12 @@
+trait_td_tail_blades = {
+    cost = 1
+    potential_crossbreeding_chance = 1
+    allowed_archetypes = {
+        BIOLOGICAL
+        PRESAPIENT
+        LITHOID
+    }
+    modifier = {
+        army_damage_mult = 0.25
+    }
+}

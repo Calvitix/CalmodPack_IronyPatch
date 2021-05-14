@@ -1,0 +1,25 @@
+trait_td_lith_healing_factor = {
+    cost = 3
+    potential_crossbreeding_chance = 1
+    icon = "gfx/interface/icons/traits/trait_td_healing_factor.dds"
+    opposites = {
+        "trait_td_metal_exoskeleton"
+        "trait_td_persistent"
+        "trait_td_lith_aerogel_skin"
+        "trait_td_deformed"
+        "trait_td_lith_weathering"
+        "trait_td_lith_holey"
+    }
+    allowed_archetypes = {
+        LITHOID
+    }
+    slave_cost = {
+        energy = 25
+    }
+    modifier = {
+        army_health = 0.4
+        leader_age = 10
+        planet_livestock_minerals_produces_add = 0.25
+        planet_pops_minerals_upkeep_mult = 0.15
+    }
+}

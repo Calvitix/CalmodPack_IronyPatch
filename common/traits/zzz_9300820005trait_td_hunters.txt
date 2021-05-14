@@ -1,0 +1,23 @@
+trait_td_hunters = {
+    cost = -2
+    potential_crossbreeding_chance = 1
+    opposites = {
+        "trait_agrarian"
+        "trait_td_gatherers"
+        "trait_td_eolithic"
+        "trait_td_abominations"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        PRESAPIENT
+    }
+    ai_weight = {
+        weight = 0
+    }
+    slave_cost = {
+        energy = -50
+    }
+    modifier = {
+        planet_jobs_food_produces_mult = -0.15
+    }
+}

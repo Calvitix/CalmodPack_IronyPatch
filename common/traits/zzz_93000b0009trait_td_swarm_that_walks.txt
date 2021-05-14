@@ -1,0 +1,28 @@
+trait_td_swarm_that_walks = {
+    cost = 2
+    potential_crossbreeding_chance = 0
+    sorting_priority = 9
+    modification = no
+    opposites = {
+        "trait_td_energy_slimes"
+        "trait_td_shadow_creatures"
+        "trait_td_mirror_images"
+        "trait_td_ghosts"
+        "trait_td_shifting_souls"
+        "trait_td_artificial_spirits"
+        "trait_td_exiles_of_the_end"
+        "trait_td_semimechanized"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        PRESAPIENT
+    }
+    slave_cost = {
+        energy = -150
+    }
+    modifier = {
+        army_health = -0.3
+        planet_jobs_worker_produces_mult = -0.05
+        leader_age = 25
+    }
+}

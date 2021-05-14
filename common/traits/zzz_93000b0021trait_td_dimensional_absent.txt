@@ -1,0 +1,22 @@
+trait_td_dimensional_absent = {
+    cost = -2
+    potential_crossbreeding_chance = 1
+    opposites = {
+        "trait_td_shadow_creatures"
+        "trait_td_mirror_images"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        PRESAPIENT
+    }
+    slave_cost = {
+        energy = -75
+    }
+    ai_weight = {
+        weight = 0
+    }
+    modifier = {
+        pop_growth_speed = -0.075
+        leader_age = -5
+    }
+}

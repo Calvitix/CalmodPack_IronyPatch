@@ -1,0 +1,14 @@
+trait_td_rbot_rocket_armaments = {
+    cost = 1
+    opposites = {
+        "trait_td_rbot_laser_blasters"
+    }
+    allowed_archetypes = {
+        ROBOT
+        MACHINE
+    }
+    modifier = {
+        army_damage_mult = 0.2
+        planet_jobs_engineering_research_produces_mult = 0.05
+    }
+}

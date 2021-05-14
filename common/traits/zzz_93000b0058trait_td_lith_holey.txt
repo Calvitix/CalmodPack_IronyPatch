@@ -1,0 +1,18 @@
+trait_td_lith_holey = {
+    cost = -1
+    potential_crossbreeding_chance = 1
+    allowed_archetypes = {
+        LITHOID
+    }
+    slave_cost = {
+        energy = -25
+    }
+    ai_weight = {
+        weight = 0
+    }
+    modifier = {
+        army_health = -0.25
+        planet_pops_minerals_upkeep_mult = -0.075
+        planet_livestock_minerals_produces_add = -0.25
+    }
+}

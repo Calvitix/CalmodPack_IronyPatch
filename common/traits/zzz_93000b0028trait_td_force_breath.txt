@@ -1,0 +1,21 @@
+trait_td_force_breath = {
+    cost = 2
+    potential_crossbreeding_chance = 1
+    opposites = {
+        "trait_td_fire_breath"
+        "trait_td_beast_howling"
+        "trait_td_tail_blades"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        PRESAPIENT
+        LITHOID
+    }
+    slave_cost = {
+        energy = 25
+    }
+    modifier = {
+        army_damage_mult = 0.3
+        planet_jobs_energy_produces_mult = 0.075
+    }
+}

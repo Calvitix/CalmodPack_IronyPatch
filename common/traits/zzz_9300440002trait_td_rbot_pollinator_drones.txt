@@ -1,0 +1,13 @@
+trait_td_rbot_pollinator_drones = {
+    cost = 3
+    opposites = {
+        "trait_robot_harvesters"
+        "trait_td_rbot_gardeners"
+    }
+    allowed_archetypes = {
+        ROBOT
+    }
+    modifier = {
+        planet_jobs_food_produces_mult = 0.2
+    }
+}

@@ -1,0 +1,22 @@
+trait_td_telescopic_sight = {
+    cost = 1
+    potential_crossbreeding_chance = 1
+    icon = "gfx/interface/icons/traits/imported_icons/trait_ruler_explorer.dds"
+    opposites = {
+        "trait_td_microscopic_sight"
+        "trait_td_third_eye"
+        "trait_td_blind"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        PRESAPIENT
+        LITHOID
+    }
+    slave_cost = {
+        energy = 25
+    }
+    modifier = {
+        planet_jobs_physics_research_produces_mult = 0.1
+        pop_environment_tolerance = 0.025
+    }
+}
