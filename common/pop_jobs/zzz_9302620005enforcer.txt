@@ -77,6 +77,9 @@ enforcer = {
             factor = 0.0001
             owner = {
                 is_ai = yes
+                not = {
+                    has_civic = civic_merchant_guilds
+                }
             }
             planet = {
                 or = {

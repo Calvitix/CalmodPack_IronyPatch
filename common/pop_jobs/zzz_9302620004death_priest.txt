@@ -12,6 +12,7 @@ death_priest = {
     }
     possible = {
         complex_specialist_job_check_trigger = yes
+        should_be_resettled = no
     }
     resources = {
         category = planet_priests

@@ -4,11 +4,13 @@ starnet_spice_melange_farmer = {
     building_icon = building_residence
     clothes_texture_index = 2
     possible_pre_triggers = {
-        is_sapient = no
-        is_sapient = yes
+        has_owner = yes
     }
     possible = {
-        always = no
+        nor = {
+            has_job = starnet_spice_melange_farmer
+            is_unemployed = yes
+        }
     }
     resources = {
         category = planet_miners
