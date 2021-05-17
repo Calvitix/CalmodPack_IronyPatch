@@ -4,7 +4,7 @@ starnet_spice_melange_farmer = {
     building_icon = building_residence
     clothes_texture_index = 2
     possible_pre_triggers = {
-        has_owner = yes
+        always = yes
     }
     possible = {
         nor = {
@@ -25,6 +25,6 @@ starnet_spice_melange_farmer = {
         }
     }
     weight = {
-        weight = 0
+        factor = 0
     }
 }
