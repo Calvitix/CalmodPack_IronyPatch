@@ -4,12 +4,19 @@ starnet_spice_melange_farmer = {
     building_icon = building_residence
     clothes_texture_index = 2
     possible_pre_triggers = {
-        always = yes
+        has_owner = yes
     }
     possible = {
+        or = {
+            is_pop_category = ruler
+            is_pop_category = complex_drone
+        }
         nor = {
             has_job = starnet_spice_melange_farmer
             is_unemployed = yes
+        }
+        planet = {
+            has_building_construction = no
         }
     }
     resources = {
