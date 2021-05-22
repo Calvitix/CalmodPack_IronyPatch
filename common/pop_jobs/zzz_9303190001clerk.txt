@@ -21,9 +21,9 @@ clerk = {
                     has_valid_civic = civic_founder_cult
                 }
             }
-            physics_research = 0.5
-            engineering_research = 0.5
-            society_research = 0.5
+            physics_research = 1
+            engineering_research = 1
+            society_research = 1
         }
     }
     planet_modifier = {

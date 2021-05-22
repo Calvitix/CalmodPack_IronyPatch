@@ -74,23 +74,6 @@ enforcer = {
             }
         }
         modifier = {
-            factor = 0.0001
-            owner = {
-                is_ai = yes
-                not = {
-                    has_civic = civic_merchant_guilds
-                }
-            }
-            planet = {
-                or = {
-                    not = {
-                        has_modifier = crime_lord_deal
-                    }
-                    planet_crime > 95
-                }
-            }
-        }
-        modifier = {
             factor = 2
             has_trait = trait_resilient
         }

@@ -12,8 +12,13 @@ district_generator = {
         }
     }
     allow = {
-        NOT = {
-            has_modifier = resort_colony
+        OR = {
+            NOT = {
+                has_modifier = resort_colony
+            }
+            NOT = {
+                has_modifier = urban_idyll_colony
+            }
         }
     }
     conversion_ratio = 1

@@ -52,9 +52,6 @@ miner = {
     weight = {
         weight = @worker_job_weight
         modifier = {
-            factor = 2
-        }
-        modifier = {
             factor = 3
             OR = {
                 has_trait = trait_industrious

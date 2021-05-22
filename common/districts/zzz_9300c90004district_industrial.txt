@@ -384,33 +384,8 @@ district_industrial = {
     ai_resource_production = {
         alloys = 5
         trigger = {
-            or = {
-                planet = {
-                    has_designation = col_foundry
-                }
-                planet = {
-                    has_designation = col_capital_hive
-                }
-                planet = {
-                    has_designation = col_capital_machine
-                }
-            }
-        }
-    }
-    ai_resource_production = {
-        alloys = 1
-        trigger = {
-            has_designation = col_capital
-        }
-    }
-    ai_resource_production = {
-        consumer_goods = 1
-        trigger = {
             planet = {
-                has_designation = col_capital
-            }
-            owner = {
-                country_uses_consumer_goods = yes
+                has_designation = col_foundry
             }
         }
     }
