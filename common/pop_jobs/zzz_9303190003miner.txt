@@ -18,6 +18,15 @@ miner = {
             is_gestalt = no
         }
     }
+    planet_modifier = {
+        planet_jobs_minerals_upkeep_mult = -0.01
+    }
+    triggered_planet_modifier = {
+        potential = {
+            is_lithoid = yes
+        }
+        planet_pops_organics_minerals_upkeep_mult = -0.01
+    }
     resources = {
         category = planet_miners
         produces = {

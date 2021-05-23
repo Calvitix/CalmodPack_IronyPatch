@@ -37,6 +37,7 @@ spawning_drone = {
         upkeep = {
             trigger = {
                 is_lithoid = no
+                is_plantoid = no
             }
             food = 5
         }
@@ -45,6 +46,12 @@ spawning_drone = {
                 is_lithoid = yes
             }
             minerals = 5
+        }
+        upkeep = {
+            trigger = {
+                is_plantoid = yes
+            }
+            energy = 5
         }
     }
     weight = {

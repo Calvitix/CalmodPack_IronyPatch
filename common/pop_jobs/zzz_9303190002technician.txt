@@ -15,6 +15,10 @@ technician = {
             is_gestalt = no
         }
     }
+    planet_modifier = {
+        planet_buildings_energy_upkeep_mult = -0.01
+        planet_pops_robotics_upkeep_mult = -0.01
+    }
     resources = {
         category = planet_technician
         produces = {

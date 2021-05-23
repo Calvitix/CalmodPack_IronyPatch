@@ -7,10 +7,6 @@ starnet_spice_melange_farmer = {
         has_owner = yes
     }
     possible = {
-        or = {
-            is_pop_category = ruler
-            is_pop_category = complex_drone
-        }
         nor = {
             has_job = starnet_spice_melange_farmer
             is_unemployed = yes
@@ -32,6 +28,6 @@ starnet_spice_melange_farmer = {
         }
     }
     weight = {
-        factor = 0
+        weight = 100
     }
 }

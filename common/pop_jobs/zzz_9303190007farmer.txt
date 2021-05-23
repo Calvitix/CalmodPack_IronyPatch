@@ -58,6 +58,9 @@ farmer = {
             energy = 0.5
         }
     }
+    planet_modifier = {
+        planet_pops_food_upkeep_mult = -0.01
+    }
     triggered_planet_modifier = {
         potential = {
             exists = owner

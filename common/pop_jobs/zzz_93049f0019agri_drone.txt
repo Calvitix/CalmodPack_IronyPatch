@@ -12,6 +12,9 @@ agri_drone = {
     possible = {
         drone_job_check_trigger = yes
     }
+    planet_modifier = {
+        planet_pops_food_upkeep_mult = -0.01
+    }
     resources = {
         category = planet_farmers
         produces = {
