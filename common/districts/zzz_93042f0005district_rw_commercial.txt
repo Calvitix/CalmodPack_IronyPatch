@@ -45,9 +45,6 @@ district_rw_commercial = {
     }
     conversion_ratio = 1
     convert_to = {
-        district_rw_city
-        district_rw_hive
-        district_rw_nexus
         district_rw_generator
     }
     resources = {

@@ -57,9 +57,11 @@ district_rw_city = {
             energy = @giga_rw_maintenance
         }
     }
-    planet_modifier = {
-        planet_housing_add = 25
-        job_enforcer_add = 2
+    triggered_planet_modifier = {
+        modifier = {
+            planet_housing_add = 25
+            job_enforcer_add = 2
+        }
     }
     triggered_planet_modifier = {
         potential = {
