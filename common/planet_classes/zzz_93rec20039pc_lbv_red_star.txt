@@ -18,8 +18,8 @@ pc_lbv_red_star = {
     extra_planet_count = 0
     chance_of_ring = 0
     planet_size = {
-        min = 450
-        max = 620
+        min = 180
+        max = 300
     }
     colonizable = no
 }

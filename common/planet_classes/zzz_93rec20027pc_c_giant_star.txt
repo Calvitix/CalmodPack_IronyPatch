@@ -18,8 +18,8 @@ pc_c_giant_star = {
     extra_planet_count = 0
     chance_of_ring = 0
     planet_size = {
-        min = 63
-        max = 91
+        min = 30
+        max = 60
     }
     production_spawn_chance = 5
     colonizable = no

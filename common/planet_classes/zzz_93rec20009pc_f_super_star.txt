@@ -18,8 +18,8 @@ pc_f_super_star = {
     extra_planet_count = 0
     chance_of_ring = 0
     planet_size = {
-        min = 115
-        max = 180
+        min = 60
+        max = 120
     }
     colonizable = no
 }
