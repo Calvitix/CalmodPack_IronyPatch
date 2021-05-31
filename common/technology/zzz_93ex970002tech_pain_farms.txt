@@ -1,0 +1,23 @@
+tech_pain_farms = {
+    cost = @tier3cost2
+    area = society
+    tier = 3
+    category = {
+        biology
+    }
+    weight = 0
+    is_rare = yes
+    icon = tech_food_processing_1
+    weight_modifier = {
+        factor = 0
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_biology"
+            }
+        }
+    }
+}

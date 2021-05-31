@@ -1,0 +1,133 @@
+eco_building_industrial_metabolism = {
+    base_buildtime = 600
+    can_build = no
+    category = amenity
+    allow = {
+        has_major_upgraded_capital = yes
+    }
+    planet_modifier = {
+        planet_waste_waste_produces_add = -10
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_waste_overseer_add = 1
+            job_waste_drone_add = 5
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_waste_overseer_add = 1
+            job_waste_drone_add = 5
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            job_waste_manager_add = 1
+            job_waste_handler_add = 5
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            trigger = {
+                from = {
+                    is_ai = no
+                }
+            }
+            alloys = 40
+            minerals = 800
+        }
+        cost = {
+            trigger = {
+                from = {
+                    is_ai = yes
+                }
+            }
+            minerals = 800
+        }
+        upkeep = {
+            waste = 60
+            energy = 6
+        }
+    }
+    upgrades = {
+        eco_building_zero_waste
+    }
+    prerequisites = {
+        eco_tech_waste_processing_2
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        text = eco_building_waste_effect
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        text = eco_building_waste_gestalt_effect
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        text = eco_building_waste_gestalt_effect
+    }
+    ai_weight = {
+        weight = 10
+        modifier = {
+            factor = 1
+            has_modifier = eco_minimal
+        }
+        modifier = {
+            factor = 10
+            has_modifier = eco_moderate
+        }
+        modifier = {
+            factor = 100
+            has_modifier = eco_heavy
+        }
+        modifier = {
+            factor = 1000
+            has_modifier = eco_extreme
+        }
+        modifier = {
+            factor = 10000
+            has_modifier = eco_catastrophic
+        }
+    }
+    on_built = {
+        set_planet_flag = eco_built_waste_building
+    }
+    on_destroy = {
+        remove_planet_flag = eco_built_waste_building
+    }
+}

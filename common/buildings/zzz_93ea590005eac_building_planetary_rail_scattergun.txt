@@ -1,0 +1,135 @@
+eac_building_planetary_rail_scattergun = {
+    base_buildtime = 360
+    can_build = no
+    category = army
+    potential = {
+        planet = {
+            NOT = {
+                is_planet_class = pc_habitat
+            }
+        }
+    }
+    allow = {
+        has_major_upgraded_capital = yes
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            job_eac_military_technician_kinetic_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_eac_military_drone_kinetic_add = 2
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 600
+            alloys = 40
+            volatile_motes = 100
+        }
+        upkeep = {
+            energy = 8
+            volatile_motes = 2
+        }
+    }
+    prerequisites = {
+        "tech_mass_drivers_4"
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = job_eac_military_drone_kinetic_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        text = job_eac_military_technician_kinetic_effect_desc
+    }
+    ai_weight = {
+        weight = 1
+        modifier = {
+            factor = 6
+            OR = {
+                is_capital = yes
+                is_planet_class = pc_city
+                is_planet_class = pc_ringworld_habitable
+            }
+        }
+        modifier = {
+            factor = 4
+            solar_system = {
+                OR = {
+                    is_bottleneck_system = yes
+                    any_bordering_country = {
+                        is_unfriendly_to = root.owner
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 1.5
+            num_pops >= 70
+        }
+        modifier = {
+            factor = 1
+            num_pops >= 60
+            num_pops < 70
+        }
+        modifier = {
+            factor = 0.5
+            num_pops >= 45
+            num_pops < 60
+        }
+        modifier = {
+            factor = 0.25
+            num_pops >= 30
+            num_pops < 45
+        }
+        modifier = {
+            factor = 0
+            num_pops < 30
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                any_owned_planet = {
+                    OR = {
+                        has_building_construction = eac_building_planetary_coil_scattergun
+                        has_building_construction = eac_building_planetary_rail_scattergun
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = volatile_motes
+                    value < 3
+                }
+            }
+        }
+    }
+}

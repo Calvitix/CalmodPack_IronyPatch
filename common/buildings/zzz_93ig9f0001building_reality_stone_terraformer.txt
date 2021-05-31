@@ -1,0 +1,60 @@
+building_reality_stone_terraformer = {
+    base_buildtime = 900
+    base_cap_amount = 1
+    can_demolish = no
+    can_be_ruined = no
+    can_be_disabled = no
+    potential = {
+        exists = planet
+        NOT = {
+            is_planet_class = pc_city
+            is_planet_class = pc_relic
+            habitable_structure = yes
+        }
+        owner = {
+            has_country_flag = reality_stone_city_allowed
+            has_relic = r_reality_stone
+            NOT = {
+                has_global_flag = menu_reality_stone_disabled
+            }
+        }
+    }
+    allow = {
+        NOT = {
+            has_modifier = planet_reality_stone_boost
+        }
+    }
+    planet_modifier = {
+    }
+    prerequisites = {
+    }
+    destroy_trigger = {
+        is_planet_class = pc_city
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            trigger = {
+                from = {
+                    is_ai = no
+                }
+            }
+            alloys = 20
+            minerals = 1000
+        }
+        cost = {
+            trigger = {
+                from = {
+                    is_ai = yes
+                }
+            }
+            minerals = 1000
+        }
+        upkeep = {
+            energy = 100
+        }
+    }
+    ai_weight = {
+        factor = 0
+    }
+}

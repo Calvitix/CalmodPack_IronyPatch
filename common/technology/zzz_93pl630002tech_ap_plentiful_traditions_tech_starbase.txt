@@ -1,0 +1,18 @@
+tech_ap_plentiful_traditions_tech_starbase = {
+    cost = 0
+    area = engineering
+    start_tech = no
+    category = {
+        voidcraft
+    }
+    tier = 0
+    weight = 0
+    weight_modifier = {
+        modifier = {
+            factor = 0
+        }
+    }
+    ai_weight = {
+        factor = 0
+    }
+}

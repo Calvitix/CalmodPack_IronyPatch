@@ -1,0 +1,59 @@
+building_lichen_mining_plant2 = {
+    prerequisites = {
+        "tech_purifying_plants2"
+    }
+    base_buildtime = 150
+    ai_weight = {
+        weight = 50
+    }
+    resources = {
+        category = resource
+        cost = {
+            minerals = 200
+            energy = 200
+        }
+        upkeep = {
+            energy = 6
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            job_lichen_worker_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_lichen_drone_add = 2
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        text = job_lichen_worker_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        text = job_lichen_drone_effect_desc
+    }
+}

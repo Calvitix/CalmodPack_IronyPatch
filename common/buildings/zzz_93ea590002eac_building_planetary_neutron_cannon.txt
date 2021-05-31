@@ -1,0 +1,121 @@
+eac_building_planetary_neutron_cannon = {
+    base_buildtime = 360
+    can_build = no
+    category = army
+    potential = {
+        planet = {
+            NOT = {
+                is_planet_class = pc_habitat
+            }
+        }
+    }
+    allow = {
+        has_major_upgraded_capital = yes
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            job_eac_military_technician_energy_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_eac_military_drone_energy_add = 2
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 600
+            alloys = 40
+            rare_crystals = 75
+        }
+        upkeep = {
+            energy = 8
+            rare_crystals = 2
+        }
+    }
+    upgrades = {
+        eac_building_planetary_tachyon_cannon
+    }
+    prerequisites = {
+        "tech_energy_torpedoes_2"
+    }
+    ai_weight = {
+        weight = 1
+        modifier = {
+            factor = 6
+            OR = {
+                is_capital = yes
+                is_planet_class = pc_city
+                is_planet_class = pc_ringworld_habitable
+            }
+        }
+        modifier = {
+            factor = 4
+            solar_system = {
+                OR = {
+                    is_bottleneck_system = yes
+                    any_bordering_country = {
+                        is_unfriendly_to = root.owner
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 1.5
+            num_pops >= 70
+        }
+        modifier = {
+            factor = 1
+            num_pops >= 60
+            num_pops < 70
+        }
+        modifier = {
+            factor = 0.5
+            num_pops >= 45
+            num_pops < 60
+        }
+        modifier = {
+            factor = 0.25
+            num_pops >= 30
+            num_pops < 45
+        }
+        modifier = {
+            factor = 0
+            num_pops < 30
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                any_owned_planet = {
+                    OR = {
+                        has_building_construction = eac_building_planetary_proton_cannon
+                        has_building_construction = eac_building_planetary_neutron_cannon
+                        has_building_construction = eac_building_planetary_tachyon_cannon
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = rare_crystals
+                    value < 3
+                }
+            }
+        }
+    }
+}

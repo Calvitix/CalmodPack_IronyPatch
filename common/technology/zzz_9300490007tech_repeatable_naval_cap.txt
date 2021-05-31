@@ -1,0 +1,80 @@
+@EarlyRepeatableTechCost = 12000
+@EarlyRepeatableTechLevelCost = 6000
+@EarlyRepatableTechFactor = 0.65
+@RepeatableCategoryFactor = 0.25
+@RepeatableDifferntFactor = 0.5
+@EarlyRepeatableWeight = 7
+@EarlyRepeatableTier = 3
+tech_repeatable_naval_cap = {
+    area = society
+    cost = @EarlyRepeatableTechCost
+    cost_per_level = @EarlyRepeatableTechLevelCost
+    tier = @EarlyRepeatableTier
+    category = {
+        military_theory
+    }
+    levels = 5
+    prerequisites = {
+        "tech_doctrine_navy_size_4"
+    }
+    weight = @EarlyRepeatableWeight
+    weight_modifier = {
+        modifier = {
+            factor = @EarlyRepatableTechFactor
+            check_variable = {
+                which = repeatable_naval_cap
+                value > 0
+            }
+        }
+        modifier = {
+            factor = @EarlyRepatableTechFactor
+            check_variable = {
+                which = repeatable_naval_cap
+                value > 1
+            }
+        }
+        modifier = {
+            factor = @EarlyRepatableTechFactor
+            check_variable = {
+                which = repeatable_naval_cap
+                value > 2
+            }
+        }
+        modifier = {
+            factor = @EarlyRepatableTechFactor
+            check_variable = {
+                which = repeatable_naval_cap
+                value > 3
+            }
+        }
+        modifier = {
+            factor = @EarlyRepatableTechFactor
+            check_variable = {
+                which = repeatable_naval_cap
+                value > 4
+            }
+        }
+        modifier = {
+            factor = @EarlyRepatableTechFactor
+            check_variable = {
+                which = repeatable_naval_cap
+                value > 5
+            }
+        }
+    }
+    ai_weight = {
+        factor = 1
+    }
+    weight_groups = {
+        ship_repeatable
+    }
+    mod_weight_if_group_picked = {
+        ship_repeatable = @RepeatableCategoryFactor
+    }
+    mod_weight_if_group_picked = {
+        production_repeatable = @RepeatableDifferntFactor
+    }
+    modifier = {
+        country_naval_cap_add = 20
+    }
+}

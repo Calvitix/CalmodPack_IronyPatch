@@ -1,0 +1,138 @@
+building_communal_housing = {
+    base_buildtime = @b1_time
+    icon = building_residence
+    category = amenity
+    potential = {
+        OR = {
+            NOT = {
+                OR = {
+                    is_planet_class = pc_habitat
+                    is_planet_class = pc_pd_barren_cold_hab
+                    is_planet_class = pc_pd_barren_hab
+                    is_planet_class = pc_pd_frozen_hab
+                    is_planet_class = pc_pd_gas_giant_hab
+                    is_planet_class = pc_pd_hothouse_hab
+                    is_planet_class = pc_pd_toxic_hab
+                    is_planet_class = pc_pd_molten_hab
+                }
+            }
+            has_planet_flag = advanced_habitat
+        }
+        NOT = {
+            has_modifier = slave_colony
+        }
+        exists = owner
+        owner = {
+            is_regular_empire = yes
+            OR = {
+                has_valid_civic = civic_shared_burden
+                has_valid_civic = civic_employee_ownership
+            }
+        }
+    }
+    allow = {
+        or = {
+            owner = {
+                is_ai = no
+            }
+            and = {
+                free_jobs > 0
+                free_amenities < -5
+                or = {
+                    free_district_slots < 3
+                    num_pops < 16
+                    num_pops > 11
+                }
+                free_amenities > -10
+            }
+        }
+    }
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            AND = {
+                owner = {
+                    is_ai = yes
+                }
+                free_building_slots = 0
+                free_jobs < -3
+                free_housing > 10
+                free_district_slots = 0
+            }
+            AND = {
+                is_planet_class = pc_habitat
+                NOT = {
+                    has_planet_flag = advanced_habitat
+                }
+            }
+            has_modifier = slave_colony
+            NOT = {
+                owner = {
+                    is_regular_empire = yes
+                    has_valid_civic = civic_shared_burden
+                }
+            }
+        }
+    }
+    convert_to = {
+        building_drone_storage
+        building_hive_warren
+        building_luxury_residence
+    }
+    planet_modifier = {
+        planet_housing_add = 5
+        planet_amenities_add = 3
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_non_swapped_tradition = tr_domination_imperious_architecture
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @b1_minerals
+        }
+        upkeep = {
+            energy = 2
+        }
+    }
+    upgrades = {
+        "ebh_communal_housing"
+    }
+    ai_resource_production = {
+        alloys = 10
+        trigger = {
+            num_pops > 15
+            free_amenities > -7
+            or = {
+                free_amenities < -4
+                num_pops > 20
+            }
+            free_housing < 25
+            free_jobs > 1
+            free_building_slots > 0
+            or = {
+                has_planet_flag = str_good_habitability
+                has_planet_flag = str_acceptable_habitability
+            }
+            owner = {
+                has_country_flag = str_has_room_to_grow
+                resource_stockpile_compare = {
+                    resource = alloys
+                    value > 1000
+                }
+                resource_income_compare = {
+                    resource = alloys
+                    value > 20
+                }
+            }
+        }
+    }
+}

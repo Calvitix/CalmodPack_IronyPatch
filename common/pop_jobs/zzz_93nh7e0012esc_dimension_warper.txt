@@ -9,7 +9,7 @@ esc_dimension_warper = {
     resources = {
         category = planet_jobs
         produces = {
-            esc_transdimensional_vortex = 2
+            esc_transdimensional_vortex = @ESC_job_primary_resource_base_production
         }
         produces = {
             trigger = {
@@ -17,16 +17,13 @@ esc_dimension_warper = {
                 owner = {
                     is_galactic_community_member = yes
                 }
-                OR = {
-                    is_active_resolution = "resolution_industry_environmental_ordinance_waivers"
-                    is_active_resolution = "resolution_industry_project_cornucopia"
-                }
+                esc_enviroment_ordinance_waivers_active = yes
             }
-            esc_transdimensional_vortex = 0.1
+            esc_transdimensional_vortex = @ESC_job_primary_resource_cornucopia_bonus
         }
         upkeep = {
-            energy = 2
-            consumer_goods = 2
+            energy = @ESC_job_upkeep_primary_resource
+            consumer_goods = @ESC_job_upkeep_secondary_resource
         }
         upkeep = {
             trigger = {
@@ -34,8 +31,8 @@ esc_dimension_warper = {
                     colony_type = col_refinery
                 }
             }
-            energy = -0.2
-            consumer_goods = -0.2
+            energy = @ESC_job_upkeep_primary_resource_discount
+            consumer_goods = @ESC_job_upkeep_secondary_resource_discount
         }
         upkeep = {
             trigger = {
@@ -43,8 +40,8 @@ esc_dimension_warper = {
                     colony_type = col_habitat_refinery
                 }
             }
-            energy = -0.4
-            consumer_goods = -0.4
+            energy = @ESC_job_upkeep_primary_resource_discount_hab
+            consumer_goods = @ESC_job_upkeep_secondary_resource_discount_hab
         }
     }
     weight = {
@@ -74,7 +71,7 @@ esc_dimension_warper = {
             has_trait = trait_enigmatic_intelligence_failed
         }
         modifier = {
-            factor = 1.5
+            factor = 5
             has_job = esc_dimension_warper
         }
     }

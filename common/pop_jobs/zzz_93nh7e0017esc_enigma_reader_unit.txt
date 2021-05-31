@@ -8,7 +8,7 @@ esc_enigma_reader_unit = {
     resources = {
         category = planet_jobs
         produces = {
-            esc_enigmatic_energy = 2
+            esc_enigmatic_energy = @ESC_job_primary_resource_base_production
         }
         produces = {
             trigger = {
@@ -16,15 +16,12 @@ esc_enigma_reader_unit = {
                 owner = {
                     is_galactic_community_member = yes
                 }
-                OR = {
-                    is_active_resolution = "resolution_industry_environmental_ordinance_waivers"
-                    is_active_resolution = "resolution_industry_project_cornucopia"
-                }
+                esc_enviroment_ordinance_waivers_active = yes
             }
-            esc_enigmatic_energy = 0.1
+            esc_enigmatic_energy = @ESC_job_primary_resource_cornucopia_bonus
         }
         upkeep = {
-            energy = 8
+            energy = @ESC_job_upkeep_single_resource
         }
         upkeep = {
             trigger = {
@@ -32,7 +29,7 @@ esc_enigma_reader_unit = {
                     colony_type = col_refinery
                 }
             }
-            energy = -0.8
+            energy = @ESC_job_upkeep_single_resource_discount
         }
         upkeep = {
             trigger = {
@@ -40,7 +37,7 @@ esc_enigma_reader_unit = {
                     colony_type = col_habitat_refinery
                 }
             }
-            energy = -1.6
+            energy = @ESC_job_upkeep_single_resource_discount_hab
         }
     }
     weight = {
@@ -52,7 +49,7 @@ esc_enigma_reader_unit = {
             }
         }
         modifier = {
-            factor = 1.5
+            factor = 5
             has_job = esc_enigma_reader_unit
         }
     }

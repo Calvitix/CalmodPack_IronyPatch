@@ -1,0 +1,30 @@
+eco_tech_waste_recycling_3 = {
+    cost = @tier5cost1
+    area = society
+    tier = 5
+    category = {
+        biology
+    }
+    prerequisites = {
+        "eco_tech_waste_recycling_2"
+    }
+    weight = @tier5weight1
+    is_rare = yes
+    modifier = {
+        pop_category_specialists_waste_produces_add = -1
+        pop_category_workers_waste_produces_add = -1
+        pop_category_slave_waste_produces_add = -1
+        pop_category_drones_waste_produces_add = -1
+        pop_category_robot_waste_produces_add = -1
+        description = eco_tech_waste_recycling_3_tooltip
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_biology"
+            }
+        }
+    }
+}

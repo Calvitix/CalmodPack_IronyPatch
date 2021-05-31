@@ -1,0 +1,63 @@
+building_spices_base = {
+    prerequisites = {
+        "tech_exotic_crops_spices"
+    }
+    base_buildtime = 150
+    category = resource
+    ai_weight = {
+        weight = 0
+    }
+    upgrades = {
+        building_spices_advanced
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 100
+            energy = 200
+        }
+        upkeep = {
+            energy = 3
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            job_spices_cultivator_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_spices_cultivator_drone_add = 2
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        text = job_spices_cultivator_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = job_spices_cultivator_drone_effect_desc
+    }
+}
