@@ -40,9 +40,9 @@ district_rw_quberine = {
                     is_ai = yes
                 }
             }
-            minerals = @giga_alderson_cost
-            volatile_motes = @giga_alderson_cost_sr
-            exotic_gases = @giga_alderson_cost_sr
+            minerals = @giga_rw_cost
+            volatile_motes = @giga_rw_cost_sr
+            exotic_gases = @giga_rw_cost_sr
         }
         upkeep = {
             energy = @giga_rw_maintenance

@@ -17,6 +17,9 @@ building_precinct_house = {
                 }
                 and = {
                     planet_crime > 25
+                    owner = {
+                        str_raw_ecocrisis_level_1 = no
+                    }
                     num_pops > 11
                     not = {
                         has_modifier = crime_lord_deal

@@ -1,6 +1,7 @@
 dependencies={
 	"Plentiful Traditions 3.x"
 	"Plentiful Traditions 3.x - Extra Perks"
+	"!Lots of Traditions - Only PT & EST"
 	"Dynamic Difficulty - Ultimate Customization"
 	"UI Overhaul Dynamic + Planetary Diversity"
 	"UI Overhaul Dynamic + Tiny Outliner v2"
@@ -12,6 +13,7 @@ dependencies={
 	"Planetary Diversity - Unique Worlds"
 	"UI Overhaul Dynamic - Extended Topbar"
 	"Planetary Diversity - Reworked Habitability"
+	"UI Overhaul Dynamic + Lots of Traditions"
 	"Planetary Diversity - Planetary Habitats"
 	"UI Overhaul Dynamic - Checksum Schism Version"
 	"Extra Ship Components 3.0 - Overwrites [Actual]"
@@ -21,6 +23,9 @@ dependencies={
 	"Diverse New Frontiers"
 	"Planetary Diversity - Ringworlds"
 	"Interstellar Incorporated: Space Corp [3.0]"
+	"Starnet Mixed Fleet"
+	"Starnet for ESC"
+	"Wild Space 3"
 }
 path="E:/Documents/Paradox Interactive/Stellaris/mod/IronyModManager_Calmodpack"
 name="IronyModManager_Calmodpack"

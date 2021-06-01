@@ -19,7 +19,12 @@ district_generator_uncapped = {
         NOT = {
             has_modifier = resort_colony
         }
-        str_energy_district_allow = yes
+        OR = {
+            owner = {
+                is_ai = no
+            }
+            str_energy_district_allow = yes
+        }
     }
     conversion_ratio = 1
     convert_to = {

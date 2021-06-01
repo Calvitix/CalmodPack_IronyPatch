@@ -20,7 +20,12 @@ district_industrial = {
         NOT = {
             has_modifier = slave_colony
         }
-        str_industrial_district_allow = yes
+        OR = {
+            owner = {
+                is_ai = no
+            }
+            str_industrial_district_allow = yes
+        }
     }
     conversion_ratio = 0.5
     convert_to = {

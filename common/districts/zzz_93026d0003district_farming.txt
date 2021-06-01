@@ -13,7 +13,12 @@ district_farming = {
         NOT = {
             has_modifier = resort_colony
         }
-        str_food_district_allow = yes
+        OR = {
+            owner = {
+                is_ai = no
+            }
+            str_food_district_allow = yes
+        }
     }
     conversion_ratio = 1
     convert_to = {
