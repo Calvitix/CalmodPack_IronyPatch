@@ -3,6 +3,12 @@ esc_dimension_warper = {
     condition_string = SPECIALIST_JOB_TRIGGER
     building_icon = nhsc_building_dimensional_breach
     clothes_texture_index = 2
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
     possible = {
         specialist_job_check_trigger = yes
     }
