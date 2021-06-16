@@ -5,16 +5,6 @@ trait_battle_bot = {
         ROBOT
         MACHINE
     }
-    species_potential_add = {
-        exists = from
-        from = {
-            has_country_flag = battle_robot_completed
-            OR = {
-                has_technology = tech_droid_workers
-                is_machine_empire = yes
-            }
-        }
-    }
     modifier = {
         army_defense_damage_mult = 0.2
         army_health = 0.2

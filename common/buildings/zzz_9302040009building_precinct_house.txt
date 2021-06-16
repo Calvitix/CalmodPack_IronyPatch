@@ -16,13 +16,16 @@ building_precinct_house = {
                     is_ai = no
                 }
                 and = {
-                    planet_crime > 25
+                    planet_crime > 40
                     owner = {
                         str_raw_ecocrisis_level_1 = no
                     }
                     num_pops > 11
                     not = {
                         has_modifier = crime_lord_deal
+                    }
+                    not = {
+                        has_planet_flag = str_just_removed_precinct
                     }
                     num_buildings = {
                         type = building_precinct_house

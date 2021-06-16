@@ -15,6 +15,10 @@ giga_tech_war_moon_2 = {
             title = "allow_war_moon"
             desc = "desc_war_moons"
         }
+        custom = {
+            title = "giga_mobile_planet_quest_chain"
+            desc = "giga_mobile_planet_quest_chain"
+        }
     }
     modifier = {
         megastructure_build_speed_mult = 0.05

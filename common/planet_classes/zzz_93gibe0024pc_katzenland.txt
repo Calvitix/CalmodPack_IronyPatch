@@ -3,6 +3,7 @@ pc_katzenland = {
     entity_scale = @planet_standard_scale
     icon_frame = 1
     picture = pc_katzenland
+    climate = "dry"
     atmosphere_color = hsv {
         0.5
         0.2
