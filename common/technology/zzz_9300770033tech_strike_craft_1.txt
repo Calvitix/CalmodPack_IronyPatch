@@ -27,7 +27,7 @@ tech_strike_craft_1 = {
             has_ethic = ethic_militarist
         }
         modifier = {
-            factor = 500
+            factor = 5000
             not = {
                 has_technology = tech_energy_torpedoes_1
             }

@@ -20,6 +20,7 @@ district_archive_housing = {
     }
     planet_modifier = {
         planet_housing_add = 8
+        planet_max_buildings_add = 2
     }
     triggered_planet_modifier = {
         potential = {

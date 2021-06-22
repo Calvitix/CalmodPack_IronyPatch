@@ -69,7 +69,7 @@ technician = {
             }
         }
         modifier = {
-            factor = 5
+            factor = 20
             is_enslaved = yes
             can_take_servant_job = no
             OR = {

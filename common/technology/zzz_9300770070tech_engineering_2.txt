@@ -38,10 +38,10 @@ tech_engineering_2 = {
         }
     }
     ai_weight = {
-        weight = 50
+        weight = 500
         factor = 5
         modifier = {
-            factor = 20
+            factor = 200
             has_technology = tech_energy_torpedoes_1
         }
         modifier = {

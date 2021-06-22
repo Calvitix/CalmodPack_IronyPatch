@@ -15,9 +15,9 @@ calculator = {
     resources = {
         category = planet_researchers
         produces = {
-            physics_research = 2
-            engineering_research = 2
-            society_research = 2
+            physics_research = 4
+            engineering_research = 4
+            society_research = 4
         }
         upkeep = {
             energy = 4

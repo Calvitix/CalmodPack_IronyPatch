@@ -36,6 +36,7 @@ district_pdarcology_housing = {
     }
     planet_modifier = {
         planet_housing_add = 15
+        planet_max_buildings_add = 4
     }
     triggered_planet_modifier = {
         potential = {

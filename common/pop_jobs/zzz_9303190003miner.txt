@@ -68,7 +68,7 @@ miner = {
             }
         }
         modifier = {
-            factor = 10
+            factor = 50
             is_enslaved = yes
             can_take_servant_job = no
         }

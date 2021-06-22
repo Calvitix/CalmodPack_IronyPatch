@@ -37,8 +37,8 @@ necromancer = {
     resources = {
         category = planet_necromancers
         produces = {
-            physics_research = 2
-            society_research = 2
+            physics_research = 4
+            society_research = 4
         }
         upkeep = {
             consumer_goods = 2

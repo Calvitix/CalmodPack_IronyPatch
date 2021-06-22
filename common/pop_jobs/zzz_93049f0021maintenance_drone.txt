@@ -75,7 +75,7 @@ maintenance_drone = {
             }
         }
         modifier = {
-            factor = 1000
+            factor = 10000
             years_passed > 2
             owner = {
                 is_ai = yes
