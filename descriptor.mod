@@ -19,7 +19,6 @@ dependencies={
 	"Extra Ship Components 3.0 - Overwrites [Actual]"
 	"Planetary Diversity - Shroud Worlds"
 	"UI Overhaul Dynamic - Dark UI"
-	"District Overhaul 2 Bugfix"
 	"Diverse New Frontiers"
 	"Planetary Diversity - Ringworlds"
 	"Interstellar Incorporated: Space Corp [3.0]"
