@@ -12,6 +12,10 @@ action_ask_to_become_protectorate = {
                 has_authority = auth_corporate
             }
         }
+        or = {
+            is_ai = no
+            years_passed > @str_years_of_twilight
+        }
     }
     possible = {
         custom_tooltip = {

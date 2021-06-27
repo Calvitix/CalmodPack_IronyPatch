@@ -12,6 +12,11 @@ action_demand_vassalization = {
         NOT = {
             has_authority = auth_corporate
         }
+        years_passed > @str_ai_will_not_declare_war_until
+        or = {
+            is_ai = no
+            years_passed > @str_years_of_twilight
+        }
     }
     possible = {
         custom_tooltip = {

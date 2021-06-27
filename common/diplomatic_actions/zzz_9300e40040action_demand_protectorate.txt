@@ -12,6 +12,10 @@ action_demand_protectorate = {
         NOT = {
             has_authority = auth_corporate
         }
+        or = {
+            is_ai = no
+            years_passed > @str_years_of_twilight
+        }
     }
     possible = {
         custom_tooltip = {

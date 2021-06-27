@@ -20,7 +20,7 @@ tech_strike_craft_1 = {
         }
     }
     ai_weight = {
-        weight = 400
+        weight = 40
         factor = 5
         modifier = {
             factor = 1.25
@@ -33,7 +33,7 @@ tech_strike_craft_1 = {
             }
         }
         modifier = {
-            factor = 40
+            factor = 4000
             has_technology = tech_cruisers
         }
         modifier = {
