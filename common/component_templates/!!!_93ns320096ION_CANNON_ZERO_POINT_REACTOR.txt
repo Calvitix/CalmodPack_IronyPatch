@@ -1,0 +1,24 @@
+@cruiser_cost_5 = 112
+@cruiser_cost_6 = 148
+
+utility_component_template = {
+    key = "ION_CANNON_ZERO_POINT_REACTOR"
+    size = small
+    icon = "GFX_ship_part_reactor_5"
+    icon_frame = 1
+    power = 8000
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = @cruiser_cost_5
+        }
+    }
+    component_set = "power_core"
+    size_restriction = {
+        ion_cannon
+    }
+    upgrades_to = "ION_CANNON_DARK_MATTER_REACTOR"
+    ai_weight = {
+        weight = 5
+    }
+}

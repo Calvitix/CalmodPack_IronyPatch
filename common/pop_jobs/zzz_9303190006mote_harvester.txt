@@ -30,7 +30,7 @@ mote_harvester = {
     weight = {
         weight = @specialist_job_weight
         modifier = {
-            factor = 10
+            factor = 20
             is_enslaved = yes
             can_take_servant_job = no
         }

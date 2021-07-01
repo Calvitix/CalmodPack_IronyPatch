@@ -226,7 +226,7 @@ farmer = {
             owner = {
                 has_monthly_income = {
                     resource = food
-                    value < 10
+                    value < 0
                 }
             }
         }
