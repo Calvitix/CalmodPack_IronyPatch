@@ -2,11 +2,7 @@ district_rw_generator = {
     base_buildtime = @giga_rw_district_buildtime
     is_capped_by_modifier = no
     show_on_uncolonized = {
-        OR = {
-            uses_district_set = ring_world
-            is_planet_class = pc_interstellar_ringworld_habitable
-            is_planet_class = pc_giga_penrose_habitable
-        }
+        uses_district_set = ring_world
         exists = from
         from = {
             OR = {
@@ -15,8 +11,6 @@ district_rw_generator = {
             }
         }
         OR = {
-            is_planet_class = pc_interstellar_ringworld_habitable
-            is_planet_class = pc_giga_penrose_habitable
             is_planet_class = pc_squareworld_habitable
             is_planet_class = pc_ringworld_habitable
             has_planet_flag = giga_rw_machine
@@ -27,18 +21,12 @@ district_rw_generator = {
         }
     }
     potential = {
-        OR = {
-            uses_district_set = ring_world
-            is_planet_class = pc_interstellar_ringworld_habitable
-            is_planet_class = pc_giga_penrose_habitable
-        }
+        uses_district_set = ring_world
         exists = owner
         owner = {
             is_gestalt = yes
         }
         OR = {
-            is_planet_class = pc_interstellar_ringworld_habitable
-            is_planet_class = pc_giga_penrose_habitable
             is_planet_class = pc_squareworld_habitable
             is_planet_class = pc_ringworld_habitable
             has_planet_flag = giga_rw_machine

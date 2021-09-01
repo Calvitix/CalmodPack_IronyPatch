@@ -161,7 +161,7 @@ technician = {
             }
         }
         modifier = {
-            factor = 250
+            factor = 30
             OR = {
                 is_unemployed = yes
                 has_job = "technician"

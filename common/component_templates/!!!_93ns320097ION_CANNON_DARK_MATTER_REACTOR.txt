@@ -1,6 +1,5 @@
-@cruiser_cost_5 = 112
+@cruiser_power_6 = 1030
 @cruiser_cost_6 = 148
-
 utility_component_template = {
     key = "ION_CANNON_DARK_MATTER_REACTOR"
     size = small

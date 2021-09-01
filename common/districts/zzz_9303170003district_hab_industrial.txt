@@ -9,6 +9,9 @@ district_hab_industrial = {
     potential = {
         uses_district_set = habitat
     }
+    allow = {
+        str_habitat_industry_allow = yes
+    }
     resources = {
         category = planet_districts_hab_industrial
         cost = {

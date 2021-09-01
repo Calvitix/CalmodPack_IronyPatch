@@ -80,9 +80,21 @@ foundry = {
     weight = {
         weight = @specialist_job_weight
         modifier = {
-            factor = 5
+            factor = 2
             is_enslaved = yes
             can_take_servant_job = no
+        }
+        modifier = {
+            factor = 5
+            has_trait = trait_necrophage
+        }
+        modifier = {
+            factor = 0.002
+            is_enslaved = yes
+            has_job = foundry
+            planet = {
+                num_unemployed > 0
+            }
         }
         modifier = {
             factor = 2
@@ -91,7 +103,7 @@ foundry = {
             }
         }
         modifier = {
-            factor = 5
+            factor = 3
             has_job = foundry
         }
         modifier = {

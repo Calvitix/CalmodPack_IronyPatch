@@ -1,5 +1,6 @@
 trait_pc_nuked_preference = {
     icon = "gfx/interface/icons/traits/trait_pc_nuked_preference.dds"
+    modification = no
     allowed_archetypes = {
         BIOLOGICAL
         PRESAPIENT
@@ -9,9 +10,7 @@ trait_pc_nuked_preference = {
     ai_weight = {
         weight = 0
     }
-    prerequisites = {
-        tech_ap_plentiful_traditions_tomb_life
-    }
+    custom_tooltip = TRAIT_NUKED_PREFERENCE_EFFECT
     modifier = {
         pc_nuked_habitability = 0.8
         pc_irradiated_habitability = 0.65
@@ -32,6 +31,7 @@ trait_pc_nuked_preference = {
         pc_desert_habitability = 0.6
         pc_arid_habitability = 0.6
         pc_outback_habitability = 0.6
+        pc_coastal_habitability = 0.6
         pc_savannah_habitability = 0.6
         pc_steppe_habitability = 0.6
         pc_sandsea_habitability = 0.6
@@ -50,6 +50,7 @@ trait_pc_nuked_preference = {
         pc_tundra_habitability = 0.6
         pc_swamp_habitability = 0.6
         pc_mud_habitability = 0.6
+        pc_basalt_habitability = 0.6
         pc_frozen_desert_habitability = 0.6
         pc_glacial_habitability = 0.6
         pc_boreal_habitability = 0.6
@@ -68,10 +69,10 @@ trait_pc_nuked_preference = {
         pc_aquifer_habitability = 0.6
         pc_coral_habitability = 0.6
         pc_storm_habitability = 0.6
+        pc_megaflora_habitability = 0.6
         pc_rogue_habitability = 0.6
         pc_lichen_habitability = 0.6
         pc_eyeball_habitability = 0.6
-        pc_megaflora_habitability = 0.6
         pc_glacio_habitability = 0.6
         pc_lanthanide_habitability = 0.6
     }

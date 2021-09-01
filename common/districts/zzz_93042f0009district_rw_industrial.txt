@@ -3,11 +3,7 @@ district_rw_industrial = {
     is_capped_by_modifier = no
     show_on_uncolonized = {
         AND = {
-            OR = {
-                uses_district_set = ring_world
-                is_planet_class = pc_interstellar_ringworld_habitable
-                is_planet_class = pc_giga_penrose_habitable
-            }
+            uses_district_set = ring_world
             NOT = {
                 is_planet_class = pc_ringworld_city
             }
@@ -15,11 +11,7 @@ district_rw_industrial = {
     }
     potential = {
         AND = {
-            OR = {
-                uses_district_set = ring_world
-                is_planet_class = pc_interstellar_ringworld_habitable
-                is_planet_class = pc_giga_penrose_habitable
-            }
+            uses_district_set = ring_world
             NOT = {
                 is_planet_class = pc_ringworld_city
             }

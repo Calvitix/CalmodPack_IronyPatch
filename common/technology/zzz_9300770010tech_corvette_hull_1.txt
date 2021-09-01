@@ -22,11 +22,12 @@ tech_corvette_hull_1 = {
         }
     }
     ai_weight = {
-        weight = 250
+        weight = 10
         modifier = {
             factor = 0
             or = {
                 has_technology = tech_energy_torpedoes_1
+                has_technology = tech_cruisers
             }
         }
         modifier = {

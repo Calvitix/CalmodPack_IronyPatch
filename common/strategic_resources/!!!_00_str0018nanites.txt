@@ -1,6 +1,9 @@
 nanites = {
     tradable = no
     max = 15000
+    prerequisites = {
+        "tech_engineering_2"
+    }
     visibility_prerequisite = {
         always = yes
     }

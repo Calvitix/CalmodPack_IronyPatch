@@ -53,19 +53,6 @@ building_stronghold = {
             energy = 1
         }
     }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_ai = yes
-            }
-            str_force_stronghold = yes
-        }
-        modifier = {
-            job_starnet_spice_melange_farmer_add = 1
-            job_starnet_spice_melange_antifarmer_add = -1
-        }
-    }
     prerequisites = {
         "tech_planetary_defenses"
     }

@@ -18,7 +18,7 @@ default = {
     ai = {
         enabled = yes
         declare_war = yes
-        min_navy_for_wars = 0.6
+        min_navy_for_wars = 0.7
         min_assault_armies_for_wars = 0
         colonizer = yes
         internal_policies = yes
@@ -126,6 +126,11 @@ default = {
                     modifier = {
                         add = -40
                         has_technology = tech_battleships
+                    }
+                    modifier = {
+                        add = 30
+                        has_technology = tech_battleships
+                        has_country_flag = str_need_to_counter_corvettes
                     }
                 }
             }

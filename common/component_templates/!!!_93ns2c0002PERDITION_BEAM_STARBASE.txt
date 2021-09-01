@@ -1,6 +1,7 @@
 weapon_component_template = {
     key = "PERDITION_BEAM_STARBASE"
     size = titanic
+    entity = "large_laser_gun_entity"
     type = instant
     prio_projectile = yes
     icon = "GFX_ship_part_perdition_beam"

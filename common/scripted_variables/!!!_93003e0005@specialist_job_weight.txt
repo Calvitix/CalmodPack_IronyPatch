@@ -1,1 +1,0 @@
-@specialist_job_weight = 100

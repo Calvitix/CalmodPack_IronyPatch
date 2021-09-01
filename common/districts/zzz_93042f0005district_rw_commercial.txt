@@ -2,42 +2,30 @@ district_rw_commercial = {
     base_buildtime = @giga_rw_district_buildtime
     is_capped_by_modifier = no
     show_on_uncolonized = {
-        OR = {
-            uses_district_set = ring_world
-            is_planet_class = pc_interstellar_ringworld_habitable
-            is_planet_class = pc_giga_penrose_habitable
-        }
+        uses_district_set = ring_world
         exists = from
         from = {
             is_gestalt = no
             is_fallen_empire = no
         }
         OR = {
-            is_planet_class = pc_interstellar_ringworld_habitable
             is_planet_class = pc_squareworld_habitable
             is_planet_class = pc_ringworld_habitable
-            is_planet_class = pc_giga_penrose_habitable
         }
         NOT = {
             has_modifier = ringworld_upgrade_timer
         }
     }
     potential = {
-        OR = {
-            uses_district_set = ring_world
-            is_planet_class = pc_interstellar_ringworld_habitable
-            is_planet_class = pc_giga_penrose_habitable
-        }
+        uses_district_set = ring_world
         exists = owner
         owner = {
             is_gestalt = no
             is_fallen_empire = no
         }
         OR = {
-            is_planet_class = pc_interstellar_ringworld_habitable
             is_planet_class = pc_squareworld_habitable
             is_planet_class = pc_ringworld_habitable
-            is_planet_class = pc_giga_penrose_habitable
         }
         NOT = {
             has_modifier = ringworld_upgrade_timer

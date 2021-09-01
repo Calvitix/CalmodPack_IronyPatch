@@ -62,7 +62,9 @@ tech_cruiser_hull_2 = {
         factor = 25
         modifier = {
             factor = 1000
-            cruisers_good = yes
+            not = {
+                has_technology = tech_battleships
+            }
         }
         modifier = {
             factor = 1.25

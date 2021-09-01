@@ -89,12 +89,24 @@ artisan = {
     weight = {
         weight = @specialist_job_weight
         modifier = {
-            factor = 5
+            factor = 2
             is_enslaved = yes
             can_take_servant_job = no
         }
         modifier = {
             factor = 5
+            has_trait = trait_necrophage
+        }
+        modifier = {
+            factor = 0.002
+            is_enslaved = yes
+            has_job = artisan
+            planet = {
+                num_unemployed > 0
+            }
+        }
+        modifier = {
+            factor = 3
             has_job = artisan
         }
         modifier = {

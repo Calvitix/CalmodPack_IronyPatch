@@ -9,6 +9,9 @@ district_hab_housing = {
     potential = {
         uses_district_set = habitat
     }
+    allow = {
+        str_habitat_housing_allow = yes
+    }
     resources = {
         category = planet_districts
         cost = {

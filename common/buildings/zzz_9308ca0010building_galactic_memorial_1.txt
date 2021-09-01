@@ -3,7 +3,6 @@ building_galactic_memorial_1 = {
     category = unity
     potential = {
         exists = owner
-        building_basic_income_check = yes
         NOT = {
             has_modifier = slave_colony
         }

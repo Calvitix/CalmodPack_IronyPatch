@@ -5,6 +5,7 @@ tech_exotic_crops_spices = {
     category = {
         biology
     }
+    weight = @tier1weight1
     potential = {
         is_ai = no
     }
