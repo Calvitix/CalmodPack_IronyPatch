@@ -42,6 +42,7 @@ trait_pc_med_preference = {
         pc_duneforest_habitability = 0.4
         pc_mangrove_habitability = 0.3
         pc_wetswamp_habitability = 0.3
+        pc_fog_habitability = 0.3
         pc_subarctic_habitability = 0.3
         pc_tundra_habitability = 0.3
         pc_frozen_desert_habitability = 0.3

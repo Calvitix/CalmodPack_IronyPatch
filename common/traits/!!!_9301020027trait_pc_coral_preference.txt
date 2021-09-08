@@ -35,6 +35,7 @@ trait_pc_coral_preference = {
         pc_subarctic_habitability = 0.4
         pc_mangrove_habitability = 0.4
         pc_wetswamp_habitability = 0.4
+        pc_fog_habitability = 0.4
         pc_hajungle_habitability = 0.4
         pc_cenote_habitability = 0.4
         pc_retinal_habitability = 0.4

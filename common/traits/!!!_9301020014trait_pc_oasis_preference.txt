@@ -34,6 +34,7 @@ trait_pc_oasis_preference = {
         pc_lake_habitability = 0.4
         pc_tepid_habitability = 0.4
         pc_wetswamp_habitability = 0.3
+        pc_fog_habitability = 0.3
         pc_forest_habitability = 0.3
         pc_retinal_habitability = 0.3
         pc_alpine_habitability = 0.2

@@ -11,6 +11,7 @@ trait_pc_wetswamp_preference = {
     }
     modifier = {
         pc_wetswamp_habitability = 0.8
+        pc_fog_habitability = 0.8
         pc_ocean_habitability = 0.8
         pc_desertislands_habitability = 0.8
         pc_lake_habitability = 0.8

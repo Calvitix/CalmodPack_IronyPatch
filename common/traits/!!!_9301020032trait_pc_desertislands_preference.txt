@@ -16,6 +16,7 @@ trait_pc_desertislands_preference = {
         pc_lake_habitability = 0.8
         pc_tepid_habitability = 0.8
         pc_wetswamp_habitability = 0.8
+        pc_fog_habitability = 0.8
         pc_ocean_habitability = 0.8
         pc_hajungle_habitability = 0.7
         pc_cenote_habitability = 0.7
