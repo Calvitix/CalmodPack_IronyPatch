@@ -12,8 +12,8 @@ trait_robot_est_industry_adopt = {
     species_potential_add = {
         from = {
             Or = {
-                has_swapped_tradition = tr_est_industry_adopt_robots
-                has_swapped_tradition = tr_est_industry_adopt_machines
+                has_active_tradition = tr_est_industry_adopt_robots
+                has_active_tradition = tr_est_industry_adopt_machines
             }
         }
     }

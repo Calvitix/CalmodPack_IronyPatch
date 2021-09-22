@@ -30,6 +30,15 @@ telepath = {
             }
             unity = 1
         }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_active_tradition = tr_domination_judgment_corps
+                }
+            }
+            unity = 1
+        }
         upkeep = {
             energy = 1
         }
@@ -45,17 +54,6 @@ telepath = {
     }
     planet_modifier = {
         planet_crime_add = -35
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                has_non_swapped_tradition = tr_domination_judgment_corps
-            }
-        }
-        modifier = {
-            planet_crime_add = -5
-        }
     }
     triggered_planet_modifier = {
         potential = {
@@ -142,6 +140,22 @@ telepath = {
             is_enslaved = yes
             has_slavery_type = {
                 type = slavery_indentured
+            }
+        }
+        modifier = {
+            factor = 1.5
+            has_trait = trait_void_dweller_1
+            exists = planet
+            planet = {
+                is_planet_class = pc_habitat
+            }
+        }
+        modifier = {
+            factor = 0.85
+            has_trait = trait_void_dweller_1
+            exists = planet
+            planet = {
+                is_artificial = no
             }
         }
         modifier = {

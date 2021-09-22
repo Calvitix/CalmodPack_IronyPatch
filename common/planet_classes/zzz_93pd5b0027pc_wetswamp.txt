@@ -1,9 +1,8 @@
 pc_wetswamp = {
     entity = "wetswamp_planet"
     entity_scale = @planet_standard_scale
-    icon_frame = 71
+    icon = GFX_planet_type_wetswamp
     picture = pc_wetswamp
-    tile_set = pc_wetswamp
     atmosphere_color = hsv {
         0.58
         0.3

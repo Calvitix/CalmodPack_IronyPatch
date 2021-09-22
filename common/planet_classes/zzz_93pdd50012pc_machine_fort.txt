@@ -2,8 +2,7 @@ pc_machine_fort = {
     entity = "machine_fort_planet"
     entity_scale = @planet_standard_scale
     picture = pc_aifort
-    tile_set = pc_ai
-    icon_frame = 15
+    icon = GFX_planet_type_machine
     atmosphere_color = hsv {
         0.09
         0.8
@@ -18,7 +17,6 @@ pc_machine_fort = {
         planet_jobs_produces_mult = 0.2
         planet_orbital_bombardment_damage = -0.75
         army_starting_experience_add = 100
-        planet_buildings_strongholds_cost_mult = -0.5
         army_defense_damage_mult = 0.5
         planet_army_build_speed_mult = 0.25
         planet_max_buildings_add = 12

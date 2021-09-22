@@ -75,20 +75,4 @@ district_mf_alloy = {
         }
         text = job_maintenance_drone_effect_desc
     }
-    ai_weight = {
-        weight = 0
-        modifier = {
-            weight = 500
-            owner = {
-                has_monthly_income = {
-                    resource = alloys
-                    value < 500
-                }
-                has_monthly_income = {
-                    resource = minerals
-                    value > 99
-                }
-            }
-        }
-    }
 }

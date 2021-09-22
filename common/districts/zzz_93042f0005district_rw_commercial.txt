@@ -17,12 +17,12 @@ district_rw_commercial = {
         }
     }
     potential = {
-        uses_district_set = ring_world
         exists = owner
         owner = {
             is_gestalt = no
             is_fallen_empire = no
         }
+        uses_district_set = ring_world
         OR = {
             is_planet_class = pc_squareworld_habitable
             is_planet_class = pc_ringworld_habitable
@@ -66,6 +66,17 @@ district_rw_commercial = {
         job_merchant_add = 2
         job_clerk_add = 6
     }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_active_tradition = tr_mercantile_commercial_enterprise
+            }
+        }
+        modifier = {
+            job_merchant_add = 2
+        }
+    }
     triggered_desc = {
         trigger = {
             planet = {
@@ -75,13 +86,13 @@ district_rw_commercial = {
                 }
             }
         }
-        text = "arcane_generator_upkeep_desc"
+        text = arcane_generator_upkeep_desc
     }
     triggered_desc = {
-        text = "job_merchant_effect_desc"
+        text = job_merchant_effect_desc
     }
     triggered_desc = {
-        text = "job_clerk_effect_desc"
+        text = job_clerk_effect_desc
     }
     ai_weight = {
         weight = 0

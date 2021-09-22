@@ -12,6 +12,9 @@ building_energy_nexus = {
             buildings_no_exotic_gases = yes
         }
     }
+    planet_modifier = {
+        planet_technician_energy_produces_add = 2
+    }
     triggered_planet_modifier = {
         potential = {
             exists = owner
@@ -92,9 +95,6 @@ building_energy_nexus = {
     }
     prerequisites = {
         tech_power_hub_2
-    }
-    triggered_desc = {
-        text = building_energy_nexus_effect_desc
     }
     triggered_desc = {
         trigger = {

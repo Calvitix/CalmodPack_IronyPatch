@@ -77,9 +77,6 @@ building_galactic_memorial_2 = {
             exotic_gases = @b2_rare_upkeep
         }
     }
-    planet_modifier = {
-        planet_stability_add = 10
-    }
     triggered_planet_modifier = {
         potential = {
             exists = owner

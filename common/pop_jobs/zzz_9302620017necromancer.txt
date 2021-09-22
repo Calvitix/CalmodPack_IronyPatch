@@ -21,7 +21,7 @@ necromancer = {
         }
     }
     pop_modifier = {
-        pop_defense_armies_add = 4
+        pop_defense_armies_add = 3
     }
     triggered_pop_modifier = {
         potential = {
@@ -35,10 +35,10 @@ necromancer = {
         }
     }
     resources = {
-        category = planet_necromancers
+        category = planet_researchers
         produces = {
-            physics_research = 4
-            society_research = 4
+            physics_research = 6
+            society_research = 6
         }
         upkeep = {
             consumer_goods = 2
@@ -120,11 +120,33 @@ necromancer = {
         }
         modifier = {
             factor = 0
-            can_be_soldier = no
+            species = {
+                can_be_soldier = no
+            }
+        }
+        modifier = {
+            factor = 1.5
+            has_trait = trait_void_dweller_1
+            exists = planet
+            planet = {
+                is_planet_class = pc_habitat
+            }
+        }
+        modifier = {
+            factor = 0.85
+            has_trait = trait_void_dweller_1
+            exists = planet
+            planet = {
+                is_artificial = no
+            }
         }
         modifier = {
             factor = 2
             has_trait = trait_lithoid
+        }
+        modifier = {
+            factor = 2
+            has_trait = trait_necrophage
         }
     }
 }

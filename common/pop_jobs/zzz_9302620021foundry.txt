@@ -22,22 +22,6 @@ foundry = {
         produces = {
             trigger = {
                 planet = {
-                    has_active_building = building_foundry_2
-                }
-            }
-            alloys = 1
-        }
-        produces = {
-            trigger = {
-                planet = {
-                    has_active_building = building_foundry_3
-                }
-            }
-            alloys = 2
-        }
-        produces = {
-            trigger = {
-                planet = {
                     OR = {
                         has_modifier = "industrialized_planet"
                         has_modifier = "industrialized_arcology"
@@ -49,33 +33,6 @@ foundry = {
         upkeep = {
             minerals = 6
         }
-        upkeep = {
-            trigger = {
-                planet = {
-                    has_active_building = building_foundry_2
-                }
-            }
-            minerals = 2
-        }
-        upkeep = {
-            trigger = {
-                planet = {
-                    has_active_building = building_foundry_3
-                }
-            }
-            minerals = 4
-        }
-        upkeep = {
-            trigger = {
-                planet = {
-                    OR = {
-                        has_modifier = "industrialized_planet"
-                        has_modifier = "industrialized_arcology"
-                    }
-                }
-            }
-            minerals = 2
-        }
     }
     weight = {
         weight = @specialist_job_weight
@@ -85,25 +42,13 @@ foundry = {
             can_take_servant_job = no
         }
         modifier = {
-            factor = 5
-            has_trait = trait_necrophage
-        }
-        modifier = {
-            factor = 0.002
-            is_enslaved = yes
-            has_job = foundry
-            planet = {
-                num_unemployed > 0
-            }
-        }
-        modifier = {
             factor = 2
             species = {
                 has_species_flag = racket_species_flag
             }
         }
         modifier = {
-            factor = 3
+            factor = 5
             has_job = foundry
         }
         modifier = {
@@ -117,6 +62,18 @@ foundry = {
         modifier = {
             factor = 1.5
             has_trait = trait_void_dweller_1
+            exists = planet
+            planet = {
+                is_planet_class = pc_habitat
+            }
+        }
+        modifier = {
+            factor = 0.85
+            has_trait = trait_void_dweller_1
+            exists = planet
+            planet = {
+                is_artificial = no
+            }
         }
     }
 }

@@ -1,7 +1,7 @@
 pc_tropical = {
     entity = "tropical_planet"
     entity_scale = @planet_standard_scale
-    icon_frame = 5
+    icon = GFX_planet_type_tropical
     climate = "wet"
     initial = yes
     atmosphere_color = hsv {

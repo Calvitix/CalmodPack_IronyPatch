@@ -2,7 +2,7 @@ pc_tt_orange_star = {
     entity = "tt_orange_star_class_star_entity"
     entity_scale = @star_standard_scale
     picture = "pc_tt_star"
-    icon_frame = 27
+    icon = GFX_planet_type_k_star
     atmosphere_color = hsv {
         0.07
         0.7

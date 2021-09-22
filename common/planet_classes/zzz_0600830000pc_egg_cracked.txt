@@ -1,7 +1,7 @@
 pc_egg_cracked = {
     entity = "shattered_infected_planet"
     entity_scale = @planet_standard_scale
-    icon_frame = 10
+    icon = GFX_planet_type_barren
     enable_tilt = no
     ringworld = yes
     atmosphere_color = hsv {

@@ -1,7 +1,7 @@
 pc_ethane_ocean = {
     entity = "ethane_ocean_planet"
     entity_scale = @planet_standard_scale
-    icon_frame = 11
+    icon = GFX_planet_type_toxic
     picture = pc_ethane_ocean
     atmosphere_color = hsv {
         0.5

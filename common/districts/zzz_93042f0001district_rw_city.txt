@@ -81,7 +81,7 @@ district_rw_city = {
         potential = {
             exists = owner
             owner = {
-                has_non_swapped_tradition = tr_prosperity_public_works
+                has_active_tradition = tr_prosperity_public_works
             }
         }
         modifier = {
@@ -117,7 +117,7 @@ district_rw_city = {
         potential = {
             exists = owner
             owner = {
-                has_non_swapped_tradition = tr_prosperity_interstellar_franchising
+                has_active_tradition = tr_prosperity_interstellar_franchising
             }
         }
         modifier = {
@@ -172,9 +172,15 @@ district_rw_city = {
                 }
             }
         }
-        text = "arcane_generator_upkeep_desc"
+        text = arcane_generator_upkeep_desc
     }
     triggered_desc = {
-        text = "job_clerk_effect_desc"
+        trigger = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        text = job_clerk_effect_desc
     }
 }

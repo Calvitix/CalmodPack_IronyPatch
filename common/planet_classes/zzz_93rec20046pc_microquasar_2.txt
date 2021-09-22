@@ -2,7 +2,7 @@ pc_microquasar_2 = {
     entity = "microquasar_2_entity"
     entity_scale = @star_dwarf_scale
     picture = "pc_microquasar"
-    icon_frame = 32
+    icon = GFX_planet_type_black_hole
     atmosphere_color = hsv {
         0.075
         0.13

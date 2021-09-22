@@ -43,7 +43,7 @@ building_sacrificial_temple_2 = {
     }
     planet_modifier = {
         job_death_priest_add = 3
-        job_mortal_initiate_add = 3
+        job_mortal_initiate_add = 2
         pop_ethic_spiritualist_attraction_mult = 0.1
     }
     resources = {

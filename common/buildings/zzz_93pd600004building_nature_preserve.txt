@@ -80,7 +80,4 @@ building_nature_preserve = {
             energy = 1
         }
     }
-    ai_weight = {
-        weight = 10
-    }
 }

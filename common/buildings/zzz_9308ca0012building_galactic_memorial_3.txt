@@ -70,9 +70,6 @@ building_galactic_memorial_3 = {
             exotic_gases = @b3_rare_upkeep
         }
     }
-    planet_modifier = {
-        planet_stability_add = 15
-    }
     triggered_planet_modifier = {
         potential = {
             exists = owner

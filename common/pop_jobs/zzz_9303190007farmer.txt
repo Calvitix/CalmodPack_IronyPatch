@@ -32,31 +32,6 @@ farmer = {
             }
             food = -1
         }
-        produces = {
-            trigger = {
-                planet = {
-                    has_active_building = building_food_processing_facility
-                }
-            }
-            food = 1
-        }
-        produces = {
-            trigger = {
-                planet = {
-                    has_active_building = building_food_processing_center
-                }
-            }
-            food = 2
-        }
-        upkeep = {
-            trigger = {
-                exists = owner
-                owner = {
-                    has_edict = farming_subsidies
-                }
-            }
-            energy = 0.5
-        }
     }
     planet_modifier = {
         planet_pops_food_upkeep_mult = -0.01
@@ -212,21 +187,31 @@ farmer = {
         modifier = {
             factor = 1.5
             has_trait = trait_void_dweller_1
+            exists = planet
+            planet = {
+                is_planet_class = pc_habitat
+            }
+        }
+        modifier = {
+            factor = 0.85
+            has_trait = trait_void_dweller_1
+            exists = planet
+            planet = {
+                is_artificial = no
+            }
         }
         modifier = {
             factor = 1.2
-            OR = {
-                is_unemployed = yes
-                has_job = farmer
-            }
             exists = planet
             planet = {
                 has_available_jobs = farmer
             }
+            exists = owner
             owner = {
+                is_ai = yes
                 has_monthly_income = {
                     resource = food
-                    value < 0
+                    value < 10
                 }
             }
         }

@@ -59,7 +59,7 @@ district_giga_alderson_mining = {
         }
         modifier = {
             planet_housing_add = 60
-            job_matter_synthesizer_drone_add = 180
+            job_matter_synthesizer_drone_add = 120
         }
     }
     triggered_planet_modifier = {

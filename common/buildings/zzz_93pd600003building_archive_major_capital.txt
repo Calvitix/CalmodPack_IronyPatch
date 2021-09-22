@@ -233,7 +233,4 @@ building_archive_major_capital = {
         }
         text = job_synapse_drone_effect_desc
     }
-    ai_weight = {
-        weight = 100
-    }
 }

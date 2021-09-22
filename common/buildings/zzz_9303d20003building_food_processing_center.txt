@@ -21,6 +21,9 @@ building_food_processing_center = {
             buildings_no_motes = yes
         }
     }
+    planet_modifier = {
+        planet_farmers_food_produces_add = 2
+    }
     triggered_planet_modifier = {
         potential = {
             exists = owner
@@ -65,9 +68,6 @@ building_food_processing_center = {
             energy = 2
             volatile_motes = @b2_rare_upkeep
         }
-    }
-    triggered_desc = {
-        text = building_food_processing_center_effect_desc
     }
     triggered_desc = {
         trigger = {

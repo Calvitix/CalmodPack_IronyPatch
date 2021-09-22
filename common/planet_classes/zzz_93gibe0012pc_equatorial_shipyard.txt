@@ -3,7 +3,7 @@ pc_equatorial_shipyard = {
     ringworld = yes
     preview_entity = "shipyard_preview_entity"
     entity = "planetary_ring_game"
-    icon_frame = 21
+    icon = GFX_ring_shipyard_icon
     atmosphere_color = hsv {
         0.5
         0.2

@@ -77,6 +77,10 @@ tech_droid_workers = {
             has_origin = origin_mechanists
         }
         modifier = {
+            factor = 1.5
+            has_valid_civic = civic_automated_workforce
+        }
+        modifier = {
             factor = 1.25
             research_leader = {
                 area = engineering

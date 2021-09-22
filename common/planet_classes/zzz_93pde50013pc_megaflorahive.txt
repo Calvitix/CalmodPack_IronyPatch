@@ -1,10 +1,9 @@
 pc_megaflorahive = {
     entity = "megaflora_planet"
     entity_scale = @planet_standard_scale
-    icon_frame = 65
+    icon = GFX_planet_type_megaflora
     climate = "wet"
     picture = pc_megaflorahive
-    tile_set = pc_megaflorahive
     atmosphere_color = hsv {
         0.58
         0.3

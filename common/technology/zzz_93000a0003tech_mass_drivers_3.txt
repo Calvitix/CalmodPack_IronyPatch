@@ -1,0 +1,107 @@
+tech_mass_drivers_3 = {
+    area = engineering
+    cost = @tier2cost2
+    tier = 2
+    category = {
+        propulsion
+    }
+    ai_update_type = military
+    prerequisites = {
+        "tech_mass_drivers_2"
+    }
+    weight = @tier2weight2
+    gateway = kinetic_weapons
+    weight_modifier = {
+        modifier = {
+            factor = 10
+            is_ai = yes
+            OR = {
+                is_preferred_weapons = weapon_type_kinetic
+            }
+            has_two_weapons_1 = no
+        }
+        modifier = {
+            factor = 0.1
+            has_two_weapons_1 = yes
+            NOR = {
+                has_technology = "tech_kinetic_artillery_1"
+                has_technology = "tech_kinetic_artillery_2"
+                has_technology = "tech_mass_accelerator_1"
+                has_technology = "tech_mass_accelerator_2"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.5
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_propulsion"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 20000
+            NOT = {
+                is_preferred_weapons = weapon_type_energy
+            }
+            has_basic_weapon_1 = no
+        }
+        modifier = {
+            factor = 20000
+            has_basic_weapon_1 = yes
+            has_two_weapons_1 = no
+            NOT = {
+                is_preferred_weapons = weapon_type_energy
+            }
+            OR = {
+                is_preferred_weapons = weapon_type_kinetic
+                has_technology = tech_plasma_1
+            }
+        }
+        modifier = {
+            factor = 0.01
+            OR = {
+                AND = {
+                    is_preferred_weapons = weapon_type_energy
+                    has_basic_weapon_1 = no
+                }
+                AND = {
+                    NOT = {
+                        is_preferred_weapons = weapon_type_kinetic
+                    }
+                    has_technology = tech_disruptors_1
+                }
+                has_two_weapons_1 = yes
+            }
+            NOR = {
+                has_technology = tech_kinetic_artillery_1
+                has_technology = tech_kinetic_artillery_2
+                has_technology = "tech_mass_accelerator_1"
+                has_technology = "tech_mass_accelerator_2"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.5
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_propulsion"
+            }
+        }
+    }
+}

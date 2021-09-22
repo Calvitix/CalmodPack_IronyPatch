@@ -62,45 +62,4 @@ district_pdbiofort_naval = {
         }
         text = job_naval_admin_hive_effect_desc
     }
-    ai_weight = {
-        weight = 0
-        modifier = {
-            weight = 10
-            owner = {
-                owner = {
-                    empire_sprawl_over_cap > 20
-                }
-            }
-        }
-        modifier = {
-            factor = 10
-            owner = {
-                empire_sprawl_over_cap > 50
-                resource_income_compare = {
-                    resource = consumer_goods
-                    value > -5
-                }
-            }
-        }
-        modifier = {
-            factor = 10
-            owner = {
-                empire_sprawl_over_cap > 100
-                resource_income_compare = {
-                    resource = consumer_goods
-                    value > 10
-                }
-            }
-        }
-        modifier = {
-            factor = 10
-            owner = {
-                empire_sprawl_over_cap > 200
-                resource_income_compare = {
-                    resource = consumer_goods
-                    value > 10
-                }
-            }
-        }
-    }
 }

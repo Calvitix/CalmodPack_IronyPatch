@@ -55,7 +55,4 @@ district_bioforge_brain = {
     triggered_desc = {
         text = job_brain_drone_effect_desc
     }
-    ai_weight = {
-        weight = 1
-    }
 }

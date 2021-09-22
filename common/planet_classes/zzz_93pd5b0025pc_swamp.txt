@@ -1,9 +1,8 @@
 pc_swamp = {
     entity = "swamp_planet"
     entity_scale = @planet_standard_scale
-    icon_frame = 35
+    icon = GFX_planet_type_bog
     picture = pc_swamp
-    tile_set = pc_swamp
     atmosphere_color = hsv {
         0.58
         0.3

@@ -1,0 +1,55 @@
+tech_pd_tracking_3 = {
+    area = physics
+    tier = 4
+    cost = @tier4cost1
+    category = {
+        computing
+    }
+    ai_update_type = military
+    prerequisites = {
+        "tech_pd_tracking_2"
+    }
+    weight = @tier4weight1
+    weight_modifier = {
+        modifier = {
+            factor = 10
+            is_preferred_weapons = weapon_type_energy
+            has_two_weapons_3 = yes
+        }
+        modifier = {
+            factor = 0.1
+            has_PD_weapon_3 = yes
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 10000
+            has_two_weapons_3 = yes
+            has_PD_weapon_3 = no
+            NOT = {
+                is_preferred_weapons = weapon_type_kinetic
+            }
+        }
+        modifier = {
+            factor = 0.01
+            OR = {
+                has_PD_weapon_3 = yes
+                is_preferred_weapons = weapon_type_kinetic
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+    }
+}

@@ -2,7 +2,7 @@ pc_lbv_green_star = {
     entity = "lbv_green_star_class_star_entity"
     entity_scale = @star_hyper_scale
     picture = "pc_lbv_star"
-    icon_frame = 29
+    icon = GFX_planet_type_a_b_star
     atmosphere_color = hsv {
         0.56
         0.4

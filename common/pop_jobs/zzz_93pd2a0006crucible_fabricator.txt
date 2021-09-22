@@ -28,7 +28,7 @@ crucible_fabricator = {
                     is_planet_class = pc_crucible
                 }
             }
-            energy = 4
+            energy = 5
         }
         produces = {
             trigger = {
@@ -36,7 +36,7 @@ crucible_fabricator = {
                     is_planet_class = pc_clean_crucible
                 }
             }
-            alloys = 5
+            alloys = 4.5
         }
         upkeep = {
             trigger = {
@@ -52,7 +52,7 @@ crucible_fabricator = {
                     is_planet_class = pc_shroud_crucible
                 }
             }
-            alloys = 6
+            alloys = 5
         }
         upkeep = {
             trigger = {
@@ -60,7 +60,7 @@ crucible_fabricator = {
                     is_planet_class = pc_shroud_crucible
                 }
             }
-            energy = 4
+            energy = 5
             sr_zro = 0.1
         }
         produces = {

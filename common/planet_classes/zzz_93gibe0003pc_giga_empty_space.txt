@@ -1,7 +1,6 @@
 pc_giga_empty_space = {
     entity = "giga_hidden"
     picture = pc_giga_empty_space
-    icon_frame = 32
     atmosphere_color = hsv {
         0
         0

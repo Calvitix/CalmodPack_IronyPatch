@@ -39,6 +39,8 @@ district_giga_alderson_industrial = {
             exists = owner
             owner = {
                 is_regular_empire = yes
+                is_catalytic_empire = no
+                is_crafter_empire = no
             }
         }
         modifier = {
@@ -50,7 +52,22 @@ district_giga_alderson_industrial = {
         potential = {
             exists = owner
             owner = {
+                is_regular_empire = yes
+                is_catalytic_empire = no
+                is_crafter_empire = yes
+            }
+        }
+        modifier = {
+            job_artificer_add = 60
+            job_foundry_add = 60
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
                 is_hive_empire = yes
+                is_catalytic_empire = no
             }
         }
         modifier = {
@@ -62,10 +79,49 @@ district_giga_alderson_industrial = {
             exists = owner
             owner = {
                 is_machine_empire = yes
+                is_catalytic_empire = no
             }
         }
         modifier = {
             job_fabricator_add = 120
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+                is_crafter_empire = yes
+            }
+        }
+        modifier = {
+            job_artificer_add = 60
+            job_foundry_add = 60
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+                is_catalytic_empire = yes
+            }
+        }
+        modifier = {
+            job_artisan_add = 60
+            job_catalytic_technician_add = 60
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+                is_catalytic_empire = yes
+            }
+        }
+        modifier = {
+            job_catalytic_drone_add = 120
         }
     }
     triggered_desc = {
@@ -92,6 +148,7 @@ district_giga_alderson_industrial = {
             exists = owner
             owner = {
                 is_regular_empire = yes
+                is_catalytic_empire = no
             }
         }
         text = job_foundry_effect_desc
@@ -101,9 +158,30 @@ district_giga_alderson_industrial = {
             exists = owner
             owner = {
                 is_machine_empire = yes
+                is_catalytic_empire = no
             }
         }
         text = job_fabricator_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+                is_catalytic_empire = yes
+            }
+        }
+        text = job_catalytic_technician_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+                is_catalytic_empire = yes
+            }
+        }
+        text = job_catalytic_drone_effect_desc
     }
     ai_weight = {
         weight = 0

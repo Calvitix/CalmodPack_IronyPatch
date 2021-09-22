@@ -1,6 +1,6 @@
 pc_SMCO_small_rogue_planet = {
     entity = "SMCO_rogue_planet"
-    icon_frame = 13
+    icon = GFX_brown_dwarf_icon
     entity_scale = @planet_standard_scale
     atmosphere_color = hsv {
         0.1

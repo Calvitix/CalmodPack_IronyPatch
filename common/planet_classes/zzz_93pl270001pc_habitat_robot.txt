@@ -1,7 +1,7 @@
 pc_habitat_robot = {
     habitat = yes
     entity = "orbital_habitat"
-    icon_frame = 22
+    icon = GFX_interstellar_hab_icon
     entity_scale = 1
     enable_tilt = yes
     fixed_entity_scale = yes

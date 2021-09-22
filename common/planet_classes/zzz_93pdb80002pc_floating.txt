@@ -1,9 +1,8 @@
 pc_floating = {
     entity = "floating_planet"
     entity_scale = @planet_standard_scale
-    icon_frame = 51
+    icon = GFX_planet_type_floating
     picture = pc_floating
-    tile_set = pc_floating
     atmosphere_color = hsv {
         0.48
         0.15

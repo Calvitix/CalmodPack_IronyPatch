@@ -1,0 +1,103 @@
+tech_lasers_3 = {
+    area = physics
+    cost = @tier2cost2
+    tier = 2
+    category = {
+        particles
+    }
+    ai_update_type = military
+    prerequisites = {
+        "tech_lasers_2"
+    }
+    weight = @tier2weight2
+    gateway = energy_weapons
+    weight_modifier = {
+        modifier = {
+            factor = 10
+            is_preferred_weapons = weapon_type_energy
+            has_two_weapons_1 = no
+        }
+        modifier = {
+            factor = 0.1
+            has_two_weapons_1 = yes
+            NOR = {
+                has_technology = tech_energy_torpedoes_1
+                has_technology = tech_energy_torpedoes_2
+                has_technology = "tech_energy_lance_1"
+                has_technology = "tech_energy_lance_2"
+                has_technology = "tech_arc_emitter_1"
+                has_technology = "tech_arc_emitter_2"
+                has_technology = "tech_extradimensional_weapon_1"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.5
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 20000
+            NOT = {
+                is_preferred_weapons = weapon_type_kinetic
+            }
+            has_basic_weapon_1 = no
+        }
+        modifier = {
+            factor = 20000
+            has_basic_weapon_1 = yes
+            has_two_weapons_1 = no
+            NOT = {
+                is_preferred_weapons = weapon_type_kinetic
+            }
+            OR = {
+                is_preferred_weapons = weapon_type_energy
+                has_technology = tech_autocannons_1
+            }
+        }
+        modifier = {
+            factor = 0.01
+            OR = {
+                is_preferred_weapons = weapon_type_kinetic
+                is_preferred_weapons = weapon_type_explosive
+                has_technology = tech_disruptors_1
+                has_two_weapons_1 = yes
+            }
+            NOR = {
+                has_technology = tech_energy_torpedoes_1
+                has_technology = tech_energy_torpedoes_2
+                has_technology = "tech_energy_lance_1"
+                has_technology = "tech_energy_lance_2"
+                has_technology = "tech_arc_emitter_1"
+                has_technology = "tech_arc_emitter_2"
+                has_technology = "tech_extradimensional_weapon_1"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.5
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+    }
+}

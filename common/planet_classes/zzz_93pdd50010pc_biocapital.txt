@@ -1,9 +1,8 @@
 pc_biocapital = {
     entity = "infested_planet"
     picture = pc_biocapital
-    tile_set = pc_infested
     entity_scale = @planet_standard_scale
-    icon_frame = 16
+    icon = 16
     atmosphere_color = hsv {
         0.75
         0.2

@@ -60,6 +60,7 @@ building_production_center = {
             exists = owner
             owner = {
                 is_hive_empire = yes
+                is_catalytic_empire = no
             }
         }
         job_alloy_drone_add = 2
@@ -68,10 +69,31 @@ building_production_center = {
         potential = {
             exists = owner
             owner = {
+                is_hive_empire = yes
+                is_catalytic_empire = yes
+            }
+        }
+        job_catalytic_drone_add = 2
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
                 is_machine_empire = yes
+                is_catalytic_empire = no
             }
         }
         job_fabricator_add = 1
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+                is_catalytic_empire = yes
+            }
+        }
+        job_catalytic_drone_add = 1
     }
     prerequisites = {
         "tech_global_production_strategy"
@@ -81,6 +103,7 @@ building_production_center = {
             exists = owner
             owner = {
                 is_hive_empire = yes
+                is_catalytic_empire = no
             }
         }
         text = job_alloy_drone_effect_desc
@@ -90,12 +113,37 @@ building_production_center = {
             exists = owner
             owner = {
                 is_machine_empire = yes
+                is_catalytic_empire = no
             }
         }
         text = job_fabricator_effect_desc
     }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+                is_catalytic_empire = yes
+            }
+        }
+        text = job_catalytic_drone_effect_desc
+    }
     show_tech_unlock_if = {
         is_gestalt = yes
+    }
+    ai_resource_production = {
+        trigger = {
+            always = yes
+        }
+        alloys = 3
+    }
+    ai_resource_production = {
+        trigger = {
+            owner = {
+                country_uses_consumer_goods = yes
+            }
+        }
+        consumer_goods = 6
     }
     ai_resource_production = {
         trigger = {

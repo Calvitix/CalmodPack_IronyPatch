@@ -37,15 +37,23 @@ action_ask_to_join_federation = {
         }
         custom_tooltip = {
             fail_text = "requires_actor_not_devouring_swarm"
-            NOT = {
-                has_valid_civic = civic_hive_devouring_swarm
+            OR = {
+                from = {
+                    has_valid_civic = civic_hive_devouring_swarm
+                }
+                NOT = {
+                    has_valid_civic = civic_hive_devouring_swarm
+                }
             }
         }
         custom_tooltip = {
             fail_text = "requires_recipient_not_devouring_swarm"
-            from = {
-                NOT = {
-                    has_valid_civic = civic_hive_devouring_swarm
+            OR = {
+                has_valid_civic = civic_hive_devouring_swarm
+                from = {
+                    NOT = {
+                        has_valid_civic = civic_hive_devouring_swarm
+                    }
                 }
             }
         }

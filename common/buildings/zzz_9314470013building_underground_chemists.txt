@@ -26,11 +26,20 @@ building_underground_chemists = {
     ai_weight = {
         weight = 50
         modifier = {
-            factor = 0
-            owner = {
-                resource_income_compare = {
+            factor = 5
+            branch_office_owner = {
+                has_monthly_income = {
                     resource = consumer_goods
-                    value > 15
+                    value < 0
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            branch_office_owner = {
+                has_monthly_income = {
+                    resource = consumer_goods
+                    value >= 10
                 }
             }
         }

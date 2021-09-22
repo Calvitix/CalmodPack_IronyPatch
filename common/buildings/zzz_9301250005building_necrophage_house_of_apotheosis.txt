@@ -4,13 +4,36 @@ building_necrophage_house_of_apotheosis = {
     can_build = no
     position_priority = 100
     category = pop_assembly
+    desc = {
+        trigger = {
+            OR = {
+                NOT = {
+                    exists = owner
+                }
+                owner = {
+                    is_hive_empire = no
+                }
+            }
+        }
+        text = building_necrophage_house_of_apotheosis_desc
+    }
+    desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        text = building_necrophage_house_of_apotheosis_desc_hive
+    }
     potential = {
         exists = owner
         owner = {
             has_origin = origin_necrophage
             has_trait = trait_necrophage
-            NOT = {
+            NOR = {
                 has_valid_civic = civic_fanatic_purifiers
+                has_valid_civic = civic_hive_devouring_swarm
             }
             is_ai = no
         }
@@ -33,8 +56,13 @@ building_necrophage_house_of_apotheosis = {
         exists = owner
         OR = {
             owner = {
-                NOT = {
-                    has_origin = origin_necrophage
+                OR = {
+                    NOT = {
+                        has_origin = origin_necrophage
+                    }
+                    NOT = {
+                        has_trait = trait_necrophage
+                    }
                 }
             }
             AND = {
@@ -53,8 +81,17 @@ building_necrophage_house_of_apotheosis = {
         }
     }
     planet_modifier = {
-        planet_stability_add = 10
         job_necro_apprentice_add = 6
+    }
+    triggered_planet_modifier = {
+        potential = {
+            is_planet_class = pc_hive
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        job_necro_apprentice_add = 4
     }
     resources = {
         category = planet_buildings
@@ -76,5 +113,48 @@ building_necrophage_house_of_apotheosis = {
     }
     triggered_desc = {
         text = job_necro_apprentice_effect_desc
+        trigger = {
+            exists = owner
+            owner = {
+                is_lithoid_empire = no
+                is_hive_empire = no
+            }
+        }
+    }
+    triggered_desc = {
+        text = job_necro_apprentice_effect_lithoid_desc
+        trigger = {
+            exists = owner
+            owner = {
+                is_lithoid_empire = yes
+                is_hive_empire = no
+            }
+        }
+    }
+    triggered_desc = {
+        text = job_necro_apprentice_effect_hive_desc
+        trigger = {
+            exists = owner
+            owner = {
+                is_lithoid_empire = no
+                is_hive_empire = yes
+            }
+        }
+    }
+    triggered_desc = {
+        text = job_necro_apprentice_effect_hive_lithoid_desc
+        trigger = {
+            exists = owner
+            owner = {
+                is_lithoid_empire = yes
+                is_hive_empire = yes
+            }
+        }
+    }
+    triggered_desc = {
+        text = necrophage_elevation_timer_tooltip
+        trigger = {
+            has_planet_flag = necrophage_elevation_timer
+        }
     }
 }

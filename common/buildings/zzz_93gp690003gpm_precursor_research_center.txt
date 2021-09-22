@@ -1,17 +1,12 @@
 gpm_precursor_research_center = {
     base_buildtime = 480
-    base_cap_amount = 1
+    empire_limit = {
+        base = 1
+    }
     category = research
     potential = {
-        custom_tooltip = {
-            text = EMPIRE_UNIQUE_BUILDING
-            exists = owner
-            owner = {
-                check_variable = {
-                    which = gpm_precursor_research_center_build_count
-                    value >= 1
-                }
-            }
+        owner = {
+            has_country_flag = gpm_artifact_research_centre_unlocked
         }
         has_ancrel = yes
     }
@@ -21,20 +16,6 @@ gpm_precursor_research_center = {
     resources = {
         category = planet_buildings
         cost = {
-            trigger = {
-                from = {
-                    is_ai = no
-                }
-            }
-            alloys = 20
-            minerals = 700
-        }
-        cost = {
-            trigger = {
-                from = {
-                    is_ai = yes
-                }
-            }
             minerals = 700
         }
         upkeep = {
@@ -74,30 +55,6 @@ gpm_precursor_research_center = {
             }
         }
         text = job_gpm_precursor_archaeologist_drone_effect_desc
-    }
-    on_queued = {
-        owner = {
-            subtract_variable = {
-                which = gpm_precursor_research_center_build_count
-                value = 1
-            }
-        }
-    }
-    on_unqueued = {
-        owner = {
-            change_variable = {
-                which = gpm_precursor_research_center_build_count
-                value = 1
-            }
-        }
-    }
-    on_destroy = {
-        owner = {
-            change_variable = {
-                which = gpm_precursor_research_center_build_count
-                value = 1
-            }
-        }
     }
     ai_weight = {
         weight = 10000

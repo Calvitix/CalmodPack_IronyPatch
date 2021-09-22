@@ -111,6 +111,22 @@ merchant = {
             has_trait = trait_robust
         }
         modifier = {
+            factor = 1.5
+            has_trait = trait_void_dweller_1
+            exists = planet
+            planet = {
+                is_planet_class = pc_habitat
+            }
+        }
+        modifier = {
+            factor = 0.85
+            has_trait = trait_void_dweller_1
+            exists = planet
+            planet = {
+                is_artificial = no
+            }
+        }
+        modifier = {
             factor = 0.01
             exists = planet
             exists = planet.controller

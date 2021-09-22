@@ -1,7 +1,7 @@
 pc_katzenland = {
     entity = "katzenland"
     entity_scale = @planet_standard_scale
-    icon_frame = 1
+    icon = GFX_katzenland_icon
     picture = pc_katzenland
     climate = "dry"
     atmosphere_color = hsv {

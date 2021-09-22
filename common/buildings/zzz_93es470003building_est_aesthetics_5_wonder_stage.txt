@@ -6,6 +6,9 @@ building_est_aesthetics_5_wonder_stage = {
     icon = "building_est_aesthetics_5_wonder_stage"
     base_buildtime = @wonder_build_time
     base_cap_amount = 1
+    empire_limit = {
+        base = 1
+    }
     resources = {
         category = planet_buildings
         cost = {
@@ -40,7 +43,7 @@ building_est_aesthetics_5_wonder_stage = {
             }
         }
         owner = {
-            has_non_swapped_tradition = tr_est_aesthetics_5
+            has_active_tradition = tr_est_aesthetics_5
             Or = {
                 Not = {
                     has_country_flag = flag_est_aesthetics_5_built_stage

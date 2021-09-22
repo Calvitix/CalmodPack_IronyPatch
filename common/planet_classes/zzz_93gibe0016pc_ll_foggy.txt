@@ -2,7 +2,7 @@ pc_ll_foggy = {
     entity = "ll_foggy_planet"
     picture = pc_ll_fog
     entity_scale = @planet_standard_scale
-    icon_frame = 17
+    icon = GFX_planet_type_nuked
     climate = "wet"
     atmosphere_color = hsv {
         0.59

@@ -1,8 +1,8 @@
 pc_ehof_black_hole = {
     entity = "ehof_blackhole_entity"
+    icon = GFX_planet_type_black_hole
     entity_scale = 20
     picture = pc_black_hole
-    icon_frame = 32
     atmosphere_color = hsv {
         0.075
         0.13

@@ -1,0 +1,17 @@
+trait_td_gifted = {
+    cost = -2
+    potential_crossbreeding_chance = 0.25
+    sorting_priority = 8
+    custom_tooltip = TRAIT_TD_GIFTED_EFFECT
+    modification = no
+    opposites = {
+        "trait_td_superior"
+        "trait_td_inferior"
+        "trait_td_incapable"
+        "trait_td_failure"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+}

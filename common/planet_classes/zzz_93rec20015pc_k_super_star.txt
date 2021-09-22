@@ -2,7 +2,7 @@ pc_k_super_star = {
     entity = "k_super_star_class_star_entity"
     entity_scale = @star_super_scale
     picture = "pc_k_star"
-    icon_frame = 28
+    icon = GFX_planet_type_k_star
     atmosphere_color = hsv {
         0.06
         0.65

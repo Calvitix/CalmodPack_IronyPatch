@@ -35,7 +35,7 @@ building_imperial_capital = {
         planet_housing_add = 18
         planet_amenities_add = 18
         planet_max_buildings_add = 11
-        planet_max_branch_office_buildings_add = 3
+        planet_max_branch_office_buildings_add = 4
     }
     triggered_planet_modifier = {
         potential = {
@@ -101,7 +101,7 @@ building_imperial_capital = {
         potential = {
             exists = owner
             owner = {
-                has_non_swapped_tradition = tr_domination_imperious_architecture
+                has_active_tradition = tr_domination_imperious_architecture
             }
         }
         modifier = {
@@ -229,8 +229,8 @@ building_imperial_capital = {
             }
         }
         modifier = {
-            job_merchant_add = 2
-            job_administrator_add = 2
+            job_merchant_add = 3
+            job_administrator_add = 3
         }
     }
     triggered_planet_modifier = {

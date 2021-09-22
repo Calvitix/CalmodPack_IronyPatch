@@ -1,6 +1,6 @@
 pc_mushroom = {
     entity = "mushroom_planet"
-    icon_frame = 54
+    icon = GFX_planet_type_mushroom
     entity_scale = @planet_standard_scale
     atmosphere_color = hsv {
         0.48

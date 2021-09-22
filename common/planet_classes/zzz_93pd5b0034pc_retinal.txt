@@ -1,7 +1,7 @@
 pc_retinal = {
     entity = "retinal_planet"
     entity_scale = @planet_standard_scale
-    icon_frame = 61
+    icon = GFX_planet_type_retinal
     atmosphere_color = hsv {
         0.5
         0.3

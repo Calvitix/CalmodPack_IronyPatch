@@ -139,7 +139,7 @@ building_resort_capital = {
         potential = {
             exists = owner
             owner = {
-                has_non_swapped_tradition = tr_domination_imperious_architecture
+                has_active_tradition = tr_domination_imperious_architecture
             }
         }
         modifier = {

@@ -1,6 +1,9 @@
 trait_necrophage = {
     cost = 0
     potential_crossbreeding_chance = 0
+    opposites = {
+        "trait_plantoid_budding"
+    }
     sorting_priority = 20
     initial = no
     randomized = no

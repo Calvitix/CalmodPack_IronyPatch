@@ -13,6 +13,22 @@ giga_interstellar_scavenger_drone = {
             engineering_research = 3
             alloys = 1
         }
+        produces = {
+            trigger = {
+                planet = {
+                    has_active_building = building_mineral_purification_plant
+                }
+            }
+            minerals = 1
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_active_building = building_mineral_purification_hub
+                }
+            }
+            minerals = 2
+        }
         upkeep = {
             energy = 4
         }

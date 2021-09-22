@@ -1,0 +1,65 @@
+tech_disruptors_2 = {
+    area = physics
+    cost = @tier3cost2
+    tier = 3
+    category = {
+        particles
+    }
+    ai_update_type = military
+    prerequisites = {
+        "tech_disruptors_1"
+    }
+    weight = @tier3weight2
+    weight_modifier = {
+        modifier = {
+            factor = 0.1
+            has_two_weapons_2 = yes
+        }
+        modifier = {
+            factor = 0.1
+            d_has_crystals = no
+        }
+        modifier = {
+            is_ai = yes
+            factor = 0
+            NOT = {
+                has_technology = "tech_space_cloud_weapon_1"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.5
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 0
+        }
+        modifier = {
+            factor = 1.25
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.5
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+    }
+}

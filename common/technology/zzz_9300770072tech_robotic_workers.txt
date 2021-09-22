@@ -45,6 +45,10 @@ tech_robotic_workers = {
                 has_trait = "leader_trait_expertise_industry"
             }
         }
+        modifier = {
+            factor = 1.5
+            has_valid_civic = civic_automated_workforce
+        }
     }
     ai_weight = {
         weight = 100
@@ -69,6 +73,10 @@ tech_robotic_workers = {
         modifier = {
             factor = 2
             has_origin = origin_mechanists
+        }
+        modifier = {
+            factor = 1.5
+            has_valid_civic = civic_automated_workforce
         }
         modifier = {
             factor = 1.25

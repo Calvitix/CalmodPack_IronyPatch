@@ -1,7 +1,7 @@
 pc_ecocity = {
     entity = "ecocity_planet"
     entity_scale = @planet_standard_scale
-    icon_frame = 53
+    icon = GFX_planet_type_ecocity
     atmosphere_color = hsv {
         0.75
         0.1

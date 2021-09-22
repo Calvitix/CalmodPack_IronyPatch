@@ -37,7 +37,7 @@ building_hab_capital = {
         upkeep = {
             trigger = {
                 owner = {
-                    has_swapped_tradition = tr_domination_adopt_void
+                    has_active_tradition = tr_domination_adopt_void
                 }
             }
             alloys = -1
@@ -52,7 +52,7 @@ building_hab_capital = {
         potential = {
             exists = owner
             owner = {
-                has_non_swapped_tradition = tr_domination_imperious_architecture
+                has_active_tradition = tr_domination_imperious_architecture
             }
         }
         modifier = {
@@ -123,7 +123,7 @@ building_hab_capital = {
         potential = {
             exists = owner
             owner = {
-                has_swapped_tradition = tr_prosperity_void_works
+                has_active_tradition = tr_prosperity_void_works
             }
         }
         modifier = {
@@ -212,7 +212,7 @@ building_hab_capital = {
         potential = {
             exists = owner
             owner = {
-                has_non_swapped_tradition = tr_domination_imperious_architecture
+                has_active_tradition = tr_domination_imperious_architecture
             }
         }
         modifier = {

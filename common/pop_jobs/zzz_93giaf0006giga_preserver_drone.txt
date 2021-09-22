@@ -5,6 +5,7 @@ giga_preserver_drone = {
     clothes_texture_index = 3
     possible = {
         complex_specialist_job_check_trigger = yes
+        is_gestalt = yes
     }
     resources = {
         category = planet_researchers
@@ -14,6 +15,15 @@ giga_preserver_drone = {
         }
         upkeep = {
             food = 1
+            trigger = {
+                is_hive_empire = yes
+            }
+        }
+        upkeep = {
+            energy = 1
+            trigger = {
+                is_machine_empire = yes
+            }
         }
     }
     weight = {

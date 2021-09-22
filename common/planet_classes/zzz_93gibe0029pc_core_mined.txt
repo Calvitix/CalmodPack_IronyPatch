@@ -2,7 +2,7 @@ pc_core_mined = {
     entity = "core_mined_planet"
     picture = pc_molten
     entity_scale = @planet_standard_scale
-    icon_frame = 12
+    icon = GFX_planet_type_molten
     atmosphere_color = hsv {
         0.05
         0.65

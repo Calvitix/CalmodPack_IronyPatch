@@ -25,20 +25,9 @@ action_invite_to_federation = {
                 has_federation = no
                 is_country_type = default
             }
-            if = {
-                limit = {
-                    has_authority = auth_machine_intelligence
-                }
-                custom_tooltip = {
-                    fail_text = requires_tradition_universal_compatibility
-                    has_swapped_tradition = tr_versatility_universal_compatibility
-                }
-            }
-            else = {
-                custom_tooltip = {
-                    fail_text = requires_tradition_the_federation
-                    has_non_swapped_tradition = tr_diplomacy_the_federation
-                }
+            custom_tooltip = {
+                fail_text = requires_tradition_the_federation
+                has_active_tradition = tr_diplomacy_the_federation
             }
         }
         custom_tooltip = {
@@ -76,16 +65,24 @@ action_invite_to_federation = {
         }
         custom_tooltip = {
             fail_text = "requires_actor_not_devouring_swarm"
-            NOT = {
-                has_valid_civic = civic_hive_devouring_swarm
+            OR = {
+                from = {
+                    has_valid_civic = civic_hive_devouring_swarm
+                }
+                NOT = {
+                    has_valid_civic = civic_hive_devouring_swarm
+                }
             }
         }
         custom_tooltip = {
             fail_text = "requires_recipient_not_devouring_swarm"
-            from = {
-                NOT = {
-                    has_valid_civic = civic_hive_devouring_swarm
+            OR = {
+                from = {
+                    NOT = {
+                        has_valid_civic = civic_hive_devouring_swarm
+                    }
                 }
+                has_valid_civic = civic_hive_devouring_swarm
             }
         }
         custom_tooltip = {

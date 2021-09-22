@@ -21,6 +21,22 @@ bore_drone = {
         produces = {
             minerals = 90
         }
+        produces = {
+            trigger = {
+                planet = {
+                    has_active_building = building_mineral_purification_plant
+                }
+            }
+            minerals = 10
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_active_building = building_mineral_purification_hub
+                }
+            }
+            minerals = 20
+        }
     }
     weight = {
         weight = @insula_worker_weight

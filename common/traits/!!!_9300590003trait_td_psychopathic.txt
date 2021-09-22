@@ -1,7 +1,6 @@
 trait_td_psychopathic = {
     cost = -2
     potential_crossbreeding_chance = 1
-    custom_tooltip = TRAIT_TD_PSYCHOPATHIC_EFFECT
     opposites = {
         "trait_hive_mind"
         "trait_decadent"
@@ -26,7 +25,7 @@ trait_td_psychopathic = {
     }
     forced_happiness = yes
     modifier = {
-        pop_growth_speed = -0.125
+        pop_growth_speed = -0.1
         army_damage_mult = 0.1
     }
 }

@@ -51,7 +51,4 @@ building_graveyard_well = {
             energy = 20
         }
     }
-    ai_weight = {
-        weight = 10
-    }
 }

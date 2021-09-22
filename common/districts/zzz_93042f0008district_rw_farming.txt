@@ -88,16 +88,6 @@ district_rw_farming = {
         }
         modifier = {
             planet_housing_add = 5
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_hive_empire = yes
-            }
-        }
-        modifier = {
             job_agri_drone_add = 15
         }
     }
@@ -183,7 +173,7 @@ district_rw_farming = {
                 }
             }
         }
-        text = "arcane_generator_upkeep_desc"
+        text = arcane_generator_upkeep_desc
     }
     triggered_desc = {
         trigger = {
@@ -192,7 +182,7 @@ district_rw_farming = {
                 is_gestalt = yes
             }
         }
-        text = "job_agri_drone_effect_desc"
+        text = job_agri_drone_effect_desc
     }
     triggered_desc = {
         trigger = {
@@ -202,7 +192,7 @@ district_rw_farming = {
                 is_fallen_empire_spiritualist = no
             }
         }
-        text = "job_farmer_effect_desc"
+        text = job_farmer_effect_desc
     }
     triggered_desc = {
         trigger = {
@@ -211,7 +201,7 @@ district_rw_farming = {
                 is_fallen_empire_spiritualist = yes
             }
         }
-        text = "job_fe_acolyte_farm_effect_desc"
+        text = job_fe_acolyte_farm_effect_desc
     }
     triggered_planet_modifier = {
         potential = {

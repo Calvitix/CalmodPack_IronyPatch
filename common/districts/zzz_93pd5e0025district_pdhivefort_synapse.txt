@@ -75,31 +75,4 @@ district_pdhivefort_synapse = {
         }
         text = job_maintenance_drone_effect_desc
     }
-    ai_weight = {
-        weight = 0
-        modifier = {
-            weight = 20
-            owner = {
-                empire_sprawl_over_cap > 0
-            }
-        }
-        modifier = {
-            weight = 50
-            owner = {
-                empire_sprawl_over_cap > 10
-            }
-        }
-        modifier = {
-            weight = 100
-            owner = {
-                empire_sprawl_over_cap > 20
-            }
-        }
-        modifier = {
-            weight = 500
-            owner = {
-                empire_sprawl_over_cap > 40
-            }
-        }
-    }
 }

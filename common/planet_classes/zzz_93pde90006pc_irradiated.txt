@@ -1,10 +1,9 @@
 pc_irradiated = {
     entity = "irradiated_planet"
     entity_scale = @planet_standard_scale
-    icon_frame = 63
+    icon = GFX_planet_type_radiotropic
     climate = "exotic"
     picture = pc_irradiated
-    tile_set = pc_irradiated
     atmosphere_color = hsv {
         0.48
         0.15

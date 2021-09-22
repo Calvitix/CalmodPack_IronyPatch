@@ -53,11 +53,14 @@ building_fortress = {
                     used_naval_capacity_percent < 0.4
                 }
             }
-            buildings_no_motes = yes
+            and = {
+                buildings_no_motes = yes
+                has_planet_flag = str_supervisor
+            }
         }
     }
     planet_modifier = {
-        planet_housing_add = 3
+        planet_housing_add = 2
     }
     triggered_planet_modifier = {
         potential = {
@@ -83,6 +86,15 @@ building_fortress = {
     }
     resources = {
         category = planet_buildings_strongholds
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_active_tradition = tr_unyielding_resistance_is_frugal
+                }
+            }
+            unity = 3
+        }
         cost = {
             trigger = {
                 from = {

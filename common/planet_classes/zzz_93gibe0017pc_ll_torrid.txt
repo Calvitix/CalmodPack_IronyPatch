@@ -2,7 +2,7 @@ pc_ll_torrid = {
     entity = "ll_torrid_planet"
     picture = pc_ll_torid
     entity_scale = @planet_standard_scale
-    icon_frame = 1
+    icon = GFX_planet_type_desert
     climate = "dry"
     atmosphere_color = hsv {
         0.59

@@ -1,5 +1,5 @@
 giga_tech_psychic_beacon = {
-    cost = 10000
+    cost = 100000
     area = society
     tier = 5
     category = {

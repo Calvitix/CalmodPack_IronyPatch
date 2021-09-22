@@ -2,7 +2,7 @@ pc_d_star = {
     entity = "d_star_class_star_entity"
     entity_scale = @star_dwarf_scale
     picture = "pc_d_star"
-    icon_frame = 29
+    icon = GFX_planet_type_a_b_star
     atmosphere_color = hsv {
         0.6
         1

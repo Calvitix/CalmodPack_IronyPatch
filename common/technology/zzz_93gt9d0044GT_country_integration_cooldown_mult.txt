@@ -13,7 +13,7 @@ GT_country_integration_cooldown_mult = {
         is_gestalt = no
     }
     modifier = {
-        country_integration_cooldown_mult = -0.2
+        country_integration_cooldown_mult = 0.2
     }
     weight_modifier = {
         modifier = {

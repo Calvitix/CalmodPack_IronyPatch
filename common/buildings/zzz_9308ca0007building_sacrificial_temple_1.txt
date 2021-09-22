@@ -1,6 +1,7 @@
 building_sacrificial_temple_1 = {
     base_buildtime = @b1_time
     position_priority = 100
+    base_cap_amount = 5
     category = unity
     potential = {
         exists = owner

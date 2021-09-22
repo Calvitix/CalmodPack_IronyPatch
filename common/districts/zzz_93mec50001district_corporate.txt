@@ -33,6 +33,7 @@ district_corporate = {
         }
         upkeep = {
             energy = 2
+            consumer_goods = 2
         }
     }
     planet_modifier = {
@@ -54,7 +55,31 @@ district_corporate = {
         potential = {
             exists = owner
             owner = {
-                has_non_swapped_tradition = tr_prosperity_public_works
+                is_regular_empire = yes
+                has_active_tradition = tr_mercantile_commercial_enterprise
+            }
+        }
+        modifier = {
+            job_merchant_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+                has_active_tradition = tr_prosperity_interstellar_franchising
+            }
+        }
+        modifier = {
+            job_clerk_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_active_tradition = tr_prosperity_public_works
             }
         }
         modifier = {

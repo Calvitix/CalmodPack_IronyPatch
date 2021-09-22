@@ -1,6 +1,6 @@
 pc_shroud_crucible = {
     entity = "shroud_crucible_planet"
-    icon_frame = 85
+    icon = GFX_planet_type_shroudcrucible
     entity_scale = @planet_standard_scale
     atmosphere_color = hsv {
         0.48

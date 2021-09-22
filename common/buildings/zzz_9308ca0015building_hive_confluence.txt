@@ -52,7 +52,7 @@ building_hive_confluence = {
         potential = {
             exists = owner
             owner = {
-                has_swapped_tradition = tr_domination_synaptic_extensions
+                has_active_tradition = tr_domination_synaptic_extensions
             }
         }
         modifier = {
@@ -96,13 +96,5 @@ building_hive_confluence = {
             }
         }
         text = job_maintenance_drone_effect_desc
-    }
-    on_queued = {
-        planet = {
-            set_timed_planet_flag = {
-                flag = recent_admin_building_built
-                days = 720
-            }
-        }
     }
 }

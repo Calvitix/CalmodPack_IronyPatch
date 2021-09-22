@@ -18,8 +18,11 @@ building_clinic = {
                 is_regular_empire = no
             }
             has_modifier = slave_colony
-            owner = {
-                is_ai = yes
+            AND = {
+                buildings_stop_pop = yes
+                owner = {
+                    is_ai = yes
+                }
             }
         }
     }

@@ -41,7 +41,7 @@ organic_battery = {
         produces = {
             trigger = {
                 owner = {
-                    has_swapped_tradition = tr_plentiful_biogenesis_machine_1
+                    has_active_tradition = tr_plentiful_biogenesis_machine_1
                 }
             }
             energy = 2

@@ -17,22 +17,6 @@ odd_factory_worker = {
         produces = {
             alloys = 4
         }
-        produces = {
-            trigger = {
-                planet = {
-                    has_active_building = building_foundry_2
-                }
-            }
-            alloys = 1
-        }
-        produces = {
-            trigger = {
-                planet = {
-                    has_active_building = building_foundry_3
-                }
-            }
-            alloys = 2
-        }
     }
     weight = {
         weight = 999

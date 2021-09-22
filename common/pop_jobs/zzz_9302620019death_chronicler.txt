@@ -21,10 +21,24 @@ death_chronicler = {
         upkeep = {
             trigger = {
                 is_organic_species = yes
+                is_phototrophic = no
                 is_lithoid = no
             }
             consumer_goods = 2
             food = @living_standard_food_normal
+        }
+        upkeep = {
+            trigger = {
+                has_phototrophic_energy_upkeep = yes
+            }
+            energy = @living_standard_phototrophic_normal
+        }
+        upkeep = {
+            trigger = {
+                is_phototrophic = yes
+            }
+            consumer_goods = 2
+            food = @living_standard_phototrophic_normal
         }
         upkeep = {
             trigger = {
@@ -33,6 +47,9 @@ death_chronicler = {
             consumer_goods = 2
             minerals = @living_standard_food_normal
         }
+    }
+    planet_modifier = {
+        planet_stability_add = 2
     }
     weight = {
         weight = @specialist_job_weight
@@ -73,6 +90,22 @@ death_chronicler = {
             OR = {
                 has_trait = trait_robot_logic_engines
                 has_trait = trait_latent_psionic
+            }
+        }
+        modifier = {
+            factor = 1.5
+            has_trait = trait_void_dweller_1
+            exists = planet
+            planet = {
+                is_planet_class = pc_habitat
+            }
+        }
+        modifier = {
+            factor = 0.85
+            has_trait = trait_void_dweller_1
+            exists = planet
+            planet = {
+                is_artificial = no
             }
         }
         modifier = {

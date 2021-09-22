@@ -1,0 +1,19 @@
+trait_td_incapable = {
+    cost = 2
+    potential_crossbreeding_chance = 0.25
+    sorting_priority = 8
+    custom_tooltip = TRAIT_TD_INCAPABLE_EFFECT
+    initial = yes
+    randomized = yes
+    advanced_trait = yes
+    opposites = {
+        "trait_td_failure"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    ai_weight = {
+        weight = 0
+    }
+}

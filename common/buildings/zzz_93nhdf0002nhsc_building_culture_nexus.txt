@@ -1,8 +1,10 @@
 nhsc_building_culture_nexus = {
     base_buildtime = 360
-    base_cap_amount = 1
     icon = nhsc_building_culture_nexus
     category = unity
+    empire_limit = {
+        base = 1
+    }
     potential = {
         NOT = {
             has_modifier = slave_colony
@@ -17,17 +19,6 @@ nhsc_building_culture_nexus = {
     }
     allow = {
         has_major_upgraded_capital = yes
-        exists = owner
-        owner = {
-            NOT = {
-                any_owned_planet = {
-                    has_building = nhsc_building_culture_nexus
-                }
-            }
-            NOT = {
-                has_country_flag = nhsc_culture_nexus_queued
-            }
-        }
     }
     convert_to = {
         nhsc_building_cerebral_node
@@ -190,21 +181,6 @@ nhsc_building_culture_nexus = {
         }
         NOT = {
             has_global_flag = ESC_cult_nexus_forbidden
-        }
-    }
-    on_queued = {
-        owner = {
-            set_country_flag = nhsc_culture_nexus_queued
-        }
-    }
-    on_unqueued = {
-        owner = {
-            remove_country_flag = nhsc_culture_nexus_queued
-        }
-    }
-    on_built = {
-        owner = {
-            remove_country_flag = nhsc_culture_nexus_queued
         }
     }
     prerequisites = {

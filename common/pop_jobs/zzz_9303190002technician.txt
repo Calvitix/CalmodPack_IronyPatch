@@ -32,31 +32,6 @@ technician = {
             }
             energy = 2
         }
-        produces = {
-            trigger = {
-                planet = {
-                    has_active_building = building_energy_grid
-                }
-            }
-            energy = 1
-        }
-        produces = {
-            trigger = {
-                planet = {
-                    has_active_building = building_energy_nexus
-                }
-            }
-            energy = 2
-        }
-        upkeep = {
-            trigger = {
-                exists = owner
-                owner = {
-                    has_edict = capacity_subsidies
-                }
-            }
-            energy = 0.5
-        }
     }
     weight = {
         weight = @worker_job_weight
@@ -149,6 +124,18 @@ technician = {
         modifier = {
             factor = 1.5
             has_trait = trait_void_dweller_1
+            exists = planet
+            planet = {
+                is_planet_class = pc_habitat
+            }
+        }
+        modifier = {
+            factor = 0.85
+            has_trait = trait_void_dweller_1
+            exists = planet
+            planet = {
+                is_artificial = no
+            }
         }
         modifier = {
             factor = 200
@@ -162,10 +149,6 @@ technician = {
         }
         modifier = {
             factor = 30
-            OR = {
-                is_unemployed = yes
-                has_job = "technician"
-            }
             exists = planet
             planet = {
                 has_available_jobs = "technician"

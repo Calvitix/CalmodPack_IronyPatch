@@ -65,7 +65,4 @@ building_crystal_carver = {
             energy = 1
         }
     }
-    ai_weight = {
-        weight = 10
-    }
 }

@@ -3,14 +3,37 @@ building_necrophage_elevation_chamber = {
     base_buildtime = @b1_time
     base_cap_amount = 1
     position_priority = 100
+    desc = {
+        trigger = {
+            OR = {
+                NOT = {
+                    exists = owner
+                }
+                owner = {
+                    is_hive_empire = no
+                }
+            }
+        }
+        text = building_necrophage_elevation_chamber_desc
+    }
+    desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        text = building_necrophage_elevation_chamber_desc_hive
+    }
     category = pop_assembly
     potential = {
         exists = owner
         owner = {
             has_origin = origin_necrophage
             has_trait = trait_necrophage
-            NOT = {
+            NOR = {
                 has_valid_civic = civic_fanatic_purifiers
+                has_valid_civic = civic_hive_devouring_swarm
             }
         }
     }
@@ -21,8 +44,17 @@ building_necrophage_elevation_chamber = {
                 has_modifier = planet_culture_shock
             }
         }
-        NOR = {
-            is_planet_class = pc_hive
+        if = {
+            limit = {
+                owner = {
+                    is_hive_empire = no
+                }
+            }
+            NOT = {
+                is_planet_class = pc_hive
+            }
+        }
+        NOT = {
             is_planet_class = pc_machine
         }
         hidden_trigger = {
@@ -78,7 +110,6 @@ building_necrophage_elevation_chamber = {
         }
     }
     planet_modifier = {
-        planet_stability_add = 5
         job_necro_apprentice_add = 1
     }
     triggered_planet_modifier = {
@@ -113,6 +144,7 @@ building_necrophage_elevation_chamber = {
             exists = owner
             owner = {
                 is_lithoid_empire = no
+                is_hive_empire = no
             }
         }
     }
@@ -122,7 +154,34 @@ building_necrophage_elevation_chamber = {
             exists = owner
             owner = {
                 is_lithoid_empire = yes
+                is_hive_empire = no
             }
+        }
+    }
+    triggered_desc = {
+        text = job_necro_apprentice_effect_hive_desc
+        trigger = {
+            exists = owner
+            owner = {
+                is_lithoid_empire = no
+                is_hive_empire = yes
+            }
+        }
+    }
+    triggered_desc = {
+        text = job_necro_apprentice_effect_hive_lithoid_desc
+        trigger = {
+            exists = owner
+            owner = {
+                is_lithoid_empire = yes
+                is_hive_empire = yes
+            }
+        }
+    }
+    triggered_desc = {
+        text = necrophage_elevation_timer_tooltip
+        trigger = {
+            has_planet_flag = necrophage_elevation_timer
         }
     }
     triggered_desc = {

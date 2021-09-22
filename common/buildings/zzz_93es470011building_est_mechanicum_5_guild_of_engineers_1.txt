@@ -14,8 +14,8 @@ building_est_mechanicum_5_guild_of_engineers_1 = {
     potential = {
         owner = {
             Or = {
-                has_non_swapped_tradition = tr_est_mechanicum_5
-                has_swapped_tradition = tr_est_mechanicum_5_robots
+                has_active_tradition = tr_est_mechanicum_5
+                has_active_tradition = tr_est_mechanicum_5_robots
             }
         }
         NOT = {

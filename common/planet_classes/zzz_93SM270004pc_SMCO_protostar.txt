@@ -2,7 +2,7 @@ pc_SMCO_protostar = {
     entity = "SMCO_protostar_star_class_star_entity"
     picture = "pc_SMCO_protostar"
     entity_scale = 20
-    icon_frame = 28
+    icon = GFX_brown_dwarf_icon
     atmosphere_color = hsv {
         0.06
         0.65

@@ -10,7 +10,7 @@ leader_trait_dpe_ruthless = {
         }
     }
     modifier = {
-        planet_stability_add = 10
+        planet_stability_add = 8
     }
     leader_trait = {
         ruler

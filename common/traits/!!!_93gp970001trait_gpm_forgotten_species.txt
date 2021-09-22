@@ -11,7 +11,7 @@ trait_gpm_forgotten_species = {
         LITHOID
     }
     modifier = {
-        leader_skill_levels = 2
-        species_leader_exp_gain = 1
+        species_leader_exp_gain = 0.5
+        pop_amenities_usage_mult = 0.25
     }
 }

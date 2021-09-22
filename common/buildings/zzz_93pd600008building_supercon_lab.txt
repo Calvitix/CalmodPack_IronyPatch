@@ -80,7 +80,4 @@ building_supercon_lab = {
             energy = 1
         }
     }
-    ai_weight = {
-        weight = 10
-    }
 }

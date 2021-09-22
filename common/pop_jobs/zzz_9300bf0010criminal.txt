@@ -5,6 +5,7 @@ criminal = {
     clothes_texture_index = 2
     building_icon = building_residence
     contributes_to_diplo_weight = no
+    ignores_favorite = yes
     possible_pre_triggers = {
         has_owner = yes
         is_sapient = yes

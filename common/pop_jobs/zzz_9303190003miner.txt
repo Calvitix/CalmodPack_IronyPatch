@@ -32,31 +32,6 @@ miner = {
         produces = {
             minerals = 4
         }
-        produces = {
-            trigger = {
-                planet = {
-                    has_active_building = building_mineral_purification_plant
-                }
-            }
-            minerals = 1
-        }
-        produces = {
-            trigger = {
-                planet = {
-                    has_active_building = building_mineral_purification_hub
-                }
-            }
-            minerals = 2
-        }
-        upkeep = {
-            trigger = {
-                exists = owner
-                owner = {
-                    has_edict = mining_subsidies
-                }
-            }
-            energy = 0.5
-        }
     }
     weight = {
         weight = @worker_job_weight
@@ -150,18 +125,28 @@ miner = {
         modifier = {
             factor = 1.5
             has_trait = trait_void_dweller_1
+            exists = planet
+            planet = {
+                is_planet_class = pc_habitat
+            }
+        }
+        modifier = {
+            factor = 0.85
+            has_trait = trait_void_dweller_1
+            exists = planet
+            planet = {
+                is_artificial = no
+            }
         }
         modifier = {
             factor = 1.1
-            OR = {
-                is_unemployed = yes
-                has_job = "miner"
-            }
             exists = planet
             planet = {
                 has_available_jobs = "miner"
             }
+            exists = owner
             owner = {
+                is_ai = yes
                 has_monthly_income = {
                     resource = minerals
                     value < 0

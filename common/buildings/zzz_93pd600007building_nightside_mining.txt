@@ -80,7 +80,4 @@ building_nightside_mining = {
             energy = 1
         }
     }
-    ai_weight = {
-        weight = 10
-    }
 }

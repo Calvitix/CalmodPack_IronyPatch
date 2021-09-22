@@ -1,0 +1,72 @@
+tech_missiles_4 = {
+    area = engineering
+    cost = @tier3cost2
+    tier = 3
+    category = {
+        propulsion
+    }
+    ai_update_type = military
+    prerequisites = {
+        "tech_missiles_3"
+    }
+    weight = @tier3weight2
+    weight_modifier = {
+        modifier = {
+            factor = 10
+            is_preferred_weapons = weapon_type_explosive
+            has_missile_2 = no
+        }
+        modifier = {
+            factor = 0.1
+            has_missile_2 = yes
+        }
+        modifier = {
+            factor = 0.1
+            d_has_motes = no
+        }
+        modifier = {
+            factor = 1.25
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.5
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_propulsion"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 20000
+            OR = {
+                is_preferred_weapons = weapon_type_explosive
+                has_two_weapons_2 = yes
+            }
+            has_missile_2 = no
+        }
+        modifier = {
+            factor = 0.01
+            has_missile_2 = yes
+        }
+        modifier = {
+            factor = 1.25
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.5
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_propulsion"
+            }
+        }
+    }
+}

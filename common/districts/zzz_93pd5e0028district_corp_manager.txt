@@ -57,20 +57,4 @@ district_corp_manager = {
         }
         text = job_manager_effect_desc
     }
-    ai_weight = {
-        weight = 0
-        modifier = {
-            weight = 250
-            owner = {
-                has_monthly_income = {
-                    resource = consumer_goods
-                    value > 200
-                }
-                has_monthly_income = {
-                    resource = alloys
-                    value > 500
-                }
-            }
-        }
-    }
 }

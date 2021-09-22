@@ -27,6 +27,7 @@ mem_vazurans = {
     }
     modules = {
         exclusive_diplomacy_module = {
+            contact_rule = on_action_only
         }
         tiered_technology_module = {
             tier = 5

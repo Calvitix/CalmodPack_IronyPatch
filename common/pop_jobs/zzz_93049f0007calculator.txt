@@ -22,15 +22,6 @@ calculator = {
         upkeep = {
             energy = 4
         }
-        upkeep = {
-            trigger = {
-                exists = owner
-                owner = {
-                    has_edict = research_subsidies
-                }
-            }
-            energy = 1
-        }
     }
     weight = {
         weight = @complex_drone_job_weight

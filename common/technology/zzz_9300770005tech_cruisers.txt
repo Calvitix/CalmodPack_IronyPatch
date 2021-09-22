@@ -18,7 +18,6 @@ tech_cruisers = {
     }
     modifier = {
         country_command_limit_add = 10
-        country_naval_cap_add = 20
     }
     weight_modifier = {
         modifier = {

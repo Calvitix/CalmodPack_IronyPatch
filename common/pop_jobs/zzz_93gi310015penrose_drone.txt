@@ -21,6 +21,22 @@ penrose_drone = {
         produces = {
             energy = 90
         }
+        produces = {
+            trigger = {
+                planet = {
+                    has_active_building = building_energy_grid
+                }
+            }
+            energy = 10
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_active_building = building_energy_nexus
+                }
+            }
+            energy = 20
+        }
     }
     weight = {
         weight = @insula_worker_weight

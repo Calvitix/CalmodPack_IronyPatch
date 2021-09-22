@@ -49,7 +49,4 @@ building_acid_maker = {
             energy = 2
         }
     }
-    ai_weight = {
-        weight = 1000
-    }
 }

@@ -131,7 +131,4 @@ building_archive_capital = {
     upgrades = {
         "building_archive_major_capital"
     }
-    ai_weight = {
-        weight = 100
-    }
 }

@@ -1,6 +1,6 @@
 pc_biolumen = {
     entity = "biolumen_planet"
-    icon_frame = 58
+    icon = GFX_planet_type_biolumen
     climate = "wet"
     entity_scale = @planet_standard_scale
     atmosphere_color = hsv {

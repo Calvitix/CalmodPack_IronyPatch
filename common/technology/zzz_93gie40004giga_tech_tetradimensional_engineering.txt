@@ -6,11 +6,6 @@ giga_tech_tetradimensional_engineering = {
         field_manipulation
     }
     is_rare = yes
-    prerequisites = {
-        "giga_tech_matrioshka_brain_1"
-        "giga_tech_hrae_mc"
-        "giga_tech_ringworld_gargantuan_1"
-    }
     weight = @gigatier7weight3
     modifier = {
         megastructure_build_speed_mult = 0.1
@@ -25,8 +20,13 @@ giga_tech_tetradimensional_engineering = {
         }
         modifier = {
             factor = 0
-            NOT = {
-                has_ascension_perk = ap_gigastructural_constructs
+            AND = {
+                NOT = {
+                    has_ascension_perk = ap_gigastructural_constructs
+                }
+                NOT = {
+                    has_country_flag = blokkat_bureau_unlocked
+                }
             }
         }
         modifier = {

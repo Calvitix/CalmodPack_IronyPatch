@@ -10,6 +10,8 @@ trait_gpm_mega_adaptive = {
     }
     allowed_archetypes = {
         BIOLOGICAL
+        ROBOT
+        MACHINE
         PRESAPIENT
         LITHOID
     }

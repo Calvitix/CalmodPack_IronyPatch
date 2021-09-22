@@ -2,7 +2,7 @@ pc_t_star_big = {
     entity = "t_star_class_star_big_entity"
     entity_scale = 20
     picture = "pc_browndwarf"
-    icon_frame = 14
+    icon = GFX_brown_dwarf_icon
     atmosphere_color = hsv {
         0.87
         0.6

@@ -1,7 +1,7 @@
 pc_protostar = {
     entity = "protostar_entity"
     entity_scale = 1
-    icon_frame = 27
+    icon = GFX_planet_type_k_star
     atmosphere_color = hsv {
         0.06
         0.65

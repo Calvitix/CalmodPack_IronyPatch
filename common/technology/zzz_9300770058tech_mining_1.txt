@@ -11,7 +11,7 @@ tech_mining_1 = {
     weight = @tier1weight1
     modifier = {
         planet_miners_minerals_produces_mult = 0.2
-        starbase_constructions_minerals_produces_mult = 0.2
+        starbase_constructions_minerals_produces_mult = 0.1
     }
     weight_modifier = {
         modifier = {

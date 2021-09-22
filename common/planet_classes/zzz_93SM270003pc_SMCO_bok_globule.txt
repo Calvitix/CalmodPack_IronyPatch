@@ -2,7 +2,7 @@ pc_SMCO_bok_globule = {
     entity = "SMCO_bok_globule_star_class_star_entity"
     picture = "pc_SMCO_bok_globule"
     entity_scale = 19
-    icon_frame = 32
+    icon = GFX_planet_type_black_hole
     atmosphere_color = hsv {
         0.87
         0.6

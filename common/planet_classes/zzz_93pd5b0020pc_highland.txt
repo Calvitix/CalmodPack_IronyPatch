@@ -1,9 +1,8 @@
 pc_highland = {
     entity = "highland_planet"
     entity_scale = @planet_standard_scale
-    icon_frame = 56
+    icon = GFX_planet_type_highland
     picture = pc_highland
-    tile_set = pc_highland
     atmosphere_color = hsv {
         0.58
         0.5

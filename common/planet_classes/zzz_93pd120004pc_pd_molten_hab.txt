@@ -1,7 +1,7 @@
 pc_pd_molten_hab = {
     entity = "mhab_planet"
     entity_scale = @planet_standard_scale
-    icon_frame = 12
+    icon = GFX_planet_type_molten
     atmosphere_color = hsv {
         0.1
         0.15

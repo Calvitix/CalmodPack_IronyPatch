@@ -8,10 +8,5 @@ random_list = {
         "pc_toxic"
         "pc_frozen"
         "pc_hothouse"
-        "pc_cold_gas_giant"
-        "pc_hot_gas_giant"
-        "pc_chthonian"
-        "pc_subglacial"
-        "pc_hydrocarbon"
     }
 }

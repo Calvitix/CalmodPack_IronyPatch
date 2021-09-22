@@ -16,8 +16,11 @@ building_hospital = {
             }
             has_modifier = slave_colony
             buildings_no_exotic_gases = yes
-            owner = {
-                is_ai = yes
+            AND = {
+                buildings_stop_pop = yes
+                owner = {
+                    is_ai = yes
+                }
             }
         }
     }

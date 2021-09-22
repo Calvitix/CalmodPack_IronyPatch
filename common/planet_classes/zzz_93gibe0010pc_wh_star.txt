@@ -1,7 +1,7 @@
 pc_wh_star = {
     entity = "wh_star_class_star_entity"
     entity_scale = 30
-    icon_frame = 32
+    icon = GFX_planet_type_black_hole
     atmosphere_color = hsv {
         1
         0

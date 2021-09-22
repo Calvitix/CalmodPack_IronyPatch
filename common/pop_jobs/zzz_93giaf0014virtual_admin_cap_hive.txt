@@ -46,7 +46,7 @@ virtual_admin_cap_hive = {
         potential = {
             exists = owner
             owner = {
-                has_swapped_tradition = tr_synchronicity_instinctive_synchronization
+                has_active_tradition = tr_synchronicity_instinctive_synchronization
             }
         }
         modifier = {

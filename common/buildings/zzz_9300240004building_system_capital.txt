@@ -38,17 +38,17 @@ building_system_capital = {
         is_regular_empire = yes
     }
     planet_modifier = {
-        job_enforcer_add = 2
+        job_enforcer_add = 3
         planet_housing_add = 12
         planet_amenities_add = 12
         planet_max_buildings_add = @buildings_t4
-        planet_max_branch_office_buildings_add = 3
+        planet_max_branch_office_buildings_add = 4
     }
     triggered_planet_modifier = {
         potential = {
             exists = owner
             owner = {
-                has_non_swapped_tradition = tr_domination_imperious_architecture
+                has_active_tradition = tr_domination_imperious_architecture
             }
         }
         modifier = {
@@ -134,6 +134,36 @@ building_system_capital = {
         }
         modifier = {
             job_executive_add = 4
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_authority = auth_corporate
+            }
+            owner = {
+                has_civic = civic_bancorp
+            }
+        }
+        modifier = {
+            job_merchant_add = 2
+            job_executive_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_authority = auth_corporate
+            }
+            owner = {
+                has_civic = civic_science_syndicate
+            }
+        }
+        modifier = {
+            job_head_researcher_add = 2
+            job_executive_add = 2
         }
     }
     triggered_planet_modifier = {

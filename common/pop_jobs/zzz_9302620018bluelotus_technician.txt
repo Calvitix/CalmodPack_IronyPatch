@@ -18,28 +18,25 @@ bluelotus_technician = {
         produces = {
             alloys = 4
         }
-        produces = {
-            trigger = {
-                planet = {
-                    has_active_building = building_foundry_2
-                }
-            }
-            alloys = 1
-        }
-        produces = {
-            trigger = {
-                planet = {
-                    has_active_building = building_foundry_3
-                }
-            }
-            alloys = 2
-        }
         upkeep = {
             trigger = {
                 is_organic_species = yes
+                is_phototrophic = no
                 is_lithoid = no
             }
             food = @living_standard_food_normal
+        }
+        upkeep = {
+            trigger = {
+                has_phototrophic_energy_upkeep = yes
+            }
+            energy = @living_standard_phototrophic_normal
+        }
+        upkeep = {
+            trigger = {
+                is_phototrophic = yes
+            }
+            food = @living_standard_phototrophic_normal
         }
         upkeep = {
             trigger = {
@@ -95,6 +92,18 @@ bluelotus_technician = {
         modifier = {
             factor = 1.5
             has_trait = trait_void_dweller_1
+            exists = planet
+            planet = {
+                is_planet_class = pc_habitat
+            }
+        }
+        modifier = {
+            factor = 0.85
+            has_trait = trait_void_dweller_1
+            exists = planet
+            planet = {
+                is_artificial = no
+            }
         }
         modifier = {
             factor = 1.5

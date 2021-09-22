@@ -27,8 +27,11 @@ tech_aec_aw_dpl_defense_platform_repeatable = {
         repeatable = 0.01
     }
     modifier = {
+        custom_tooltip = tech_aec_aw_dpl_defense_platform_repeatable_tooltip
         starbase_defense_platform_capacity_add = 4
-        shipsize_military_station_small_build_speed_mult = 0.1
         shipsize_ion_cannon_build_speed_mult = 0.1
+        shipsize_military_station_small_build_speed_mult = 0.1
+        shipsize_military_station_medium_build_speed_mult = 0.1
+        shipsize_military_station_large_build_speed_mult = 0.1
     }
 }

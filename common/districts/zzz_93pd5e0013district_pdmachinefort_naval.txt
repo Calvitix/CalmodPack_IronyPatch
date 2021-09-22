@@ -58,7 +58,4 @@ district_pdmachinefort_naval = {
         }
         text = job_naval_admin_hive_effect_desc
     }
-    ai_weight = {
-        weight = 5
-    }
 }

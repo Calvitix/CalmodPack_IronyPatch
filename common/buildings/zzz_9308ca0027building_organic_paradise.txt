@@ -24,7 +24,6 @@ building_organic_paradise = {
         job_bio_trophy_add = 20
         job_artisan_drone_add = 2
         job_maintenance_drone_add = 1
-        planet_carry_cap_add = 20
     }
     resources = {
         category = planet_buildings
@@ -36,6 +35,15 @@ building_organic_paradise = {
             energy = @b2_upkeep
             exotic_gases = @b2_rare_upkeep
         }
+    }
+    triggered_desc = {
+        text = job_bio_trophy_effect_desc
+    }
+    triggered_desc = {
+        text = job_artisan_drone_effect_desc
+    }
+    triggered_desc = {
+        text = job_maintenance_drone_effect_desc
     }
     prerequisites = {
         "tech_paradise_dome"

@@ -52,6 +52,38 @@ building_spawning_pool = {
         }
     }
     triggered_desc = {
+        trigger = {
+            NAND = {
+                exists = owner
+                owner = {
+                    has_origin = origin_necrophage
+                }
+                exists = growing_species
+                growing_species = {
+                    NOT = {
+                        has_trait = trait_hive_mind
+                    }
+                }
+            }
+        }
         text = job_spawning_drone_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                has_origin = origin_necrophage
+            }
+            exists = growing_species
+            growing_species = {
+                NOT = {
+                    has_trait = trait_hive_mind
+                }
+            }
+        }
+        text = job_spawning_drone_necrophage_effect_desc
+    }
+    triggered_desc = {
+        text = spawning_pool_tooltip
     }
 }

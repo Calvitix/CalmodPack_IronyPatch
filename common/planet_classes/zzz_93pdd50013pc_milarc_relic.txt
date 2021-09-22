@@ -1,7 +1,7 @@
 pc_milarc_relic = {
     entity = "milarc_relic_planet"
     entity_scale = @planet_standard_scale
-    icon_frame = 17
+    icon = GFX_planet_type_nuked
     climate = "dry"
     atmosphere_color = hsv {
         0.6

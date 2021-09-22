@@ -1,7 +1,7 @@
 pc_machine_necropolis = {
     entity = "machinenecropolis_planet"
     entity_scale = @planet_standard_scale
-    icon_frame = 101
+    icon = GFX_planet_type_necromachine
     atmosphere_color = hsv {
         0.75
         0.1

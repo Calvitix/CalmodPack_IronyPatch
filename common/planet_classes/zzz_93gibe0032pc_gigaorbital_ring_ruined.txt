@@ -1,7 +1,6 @@
 pc_gigaorbital_ring_ruined = {
     entity = "giga_orbital_habitat_damaged_entity"
     picture = pc_ringworld_broken
-    icon_frame = 21
     atmosphere_color = hsv {
         0
         0

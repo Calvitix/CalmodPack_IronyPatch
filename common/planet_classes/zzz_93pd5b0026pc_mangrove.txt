@@ -1,9 +1,8 @@
 pc_mangrove = {
     entity = "mangrove_planet"
     entity_scale = @planet_standard_scale
-    icon_frame = 49
+    icon = GFX_planet_type_mangrove
     picture = pc_mangrove
-    tile_set = pc_mangrove
     atmosphere_color = hsv {
         0.58
         0.3

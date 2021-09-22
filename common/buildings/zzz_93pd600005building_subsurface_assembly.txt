@@ -77,7 +77,4 @@ building_subsurface_assembly = {
             energy = 1
         }
     }
-    ai_weight = {
-        weight = 10
-    }
 }

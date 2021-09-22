@@ -3,10 +3,19 @@ district_mf_replicator = {
     base_buildtime = 600
     is_capped_by_modifier = no
     show_on_uncolonized = {
-        uses_district_set = pdmachinecapital
+        from = {
+            is_machine_empire = yes
+        }
+        OR = {
+            uses_district_set = pdmachinecapital
+            uses_district_set = pdecocity
+        }
     }
     potential = {
-        uses_district_set = pdmachinecapital
+        OR = {
+            uses_district_set = pdmachinecapital
+            uses_district_set = pdecocity
+        }
         owner = {
             exists = owner
             is_machine_empire = yes
@@ -47,8 +56,5 @@ district_mf_replicator = {
     }
     triggered_desc = {
         text = job_coordinator_effect_desc
-    }
-    ai_weight = {
-        weight = 1
     }
 }

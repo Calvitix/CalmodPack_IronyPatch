@@ -14,4 +14,13 @@ building_mem_lunar_age_elevator = {
     }
     upgrades = {
     }
+    destroy_trigger = {
+        NAND = {
+            exists = owner
+            owner = {
+                is_primitive = yes
+                has_country_flag = mem_lunar_age
+            }
+        }
+    }
 }

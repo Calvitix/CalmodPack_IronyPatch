@@ -1,7 +1,6 @@
 trait_td_emotionless = {
     cost = 1
     potential_crossbreeding_chance = 1
-    custom_tooltip = TRAIT_TD_EMOTIONLESS_EFFECT
     opposites = {
         "trait_hive_mind"
         "trait_decadent"
@@ -24,6 +23,6 @@ trait_td_emotionless = {
     }
     forced_happiness = yes
     modifier = {
-        planet_jobs_society_research_produces_mult = -0.1
+        planet_jobs_society_research_produces_mult = -0.025
     }
 }

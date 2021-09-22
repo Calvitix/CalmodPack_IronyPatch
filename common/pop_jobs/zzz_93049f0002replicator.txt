@@ -18,7 +18,7 @@ replicator = {
     triggered_planet_modifier = {
         potential = {
             owner = {
-                has_swapped_tradition = tr_plentiful_biogenesis_machine_1
+                has_active_tradition = tr_plentiful_biogenesis_machine_1
             }
         }
         modifier = {

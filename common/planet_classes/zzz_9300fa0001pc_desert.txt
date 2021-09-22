@@ -1,6 +1,6 @@
 pc_desert = {
     entity = "desert_planet"
-    icon_frame = 1
+    icon = GFX_planet_type_desert
     climate = "dry"
     initial = yes
     entity_scale = @planet_standard_scale

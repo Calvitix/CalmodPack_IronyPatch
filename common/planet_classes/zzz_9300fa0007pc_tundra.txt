@@ -1,7 +1,7 @@
 pc_tundra = {
     entity = "tundra_planet"
     entity_scale = @planet_standard_scale
-    icon_frame = 3
+    icon = GFX_planet_type_tundra
     climate = "cold"
     initial = yes
     atmosphere_color = hsv {

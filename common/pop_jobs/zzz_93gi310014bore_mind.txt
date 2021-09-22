@@ -17,7 +17,7 @@ bore_mind = {
         }
     }
     planet_modifier = {
-        job_bore_drone_add = 8
+        job_void_bore_drone_add = 8
     }
     resources = {
         category = planet_bore

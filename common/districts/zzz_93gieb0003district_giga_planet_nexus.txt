@@ -73,7 +73,7 @@ district_giga_planet_nexus = {
         potential = {
             exists = owner
             owner = {
-                has_swapped_tradition = tr_prosperity_optimized_nexus
+                has_active_tradition = tr_prosperity_optimized_nexus
             }
         }
         modifier = {

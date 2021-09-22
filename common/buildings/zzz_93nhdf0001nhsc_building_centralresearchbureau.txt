@@ -1,8 +1,10 @@
 nhsc_building_centralresearchbureau = {
     base_buildtime = 540
-    base_cap_amount = 1
     category = research
     icon = nhsc_building_centralresearchbureau
+    empire_limit = {
+        base = 1
+    }
     potential = {
         NOT = {
             has_modifier = resort_colony
@@ -15,17 +17,7 @@ nhsc_building_centralresearchbureau = {
         }
     }
     allow = {
-        exists = owner
-        owner = {
-            NOT = {
-                any_owned_planet = {
-                    has_building = nhsc_building_centralresearchbureau
-                }
-            }
-            NOT = {
-                has_country_flag = nhsc_building_centralresearchbureau_queued
-            }
-        }
+        has_major_upgraded_capital = yes
     }
     resources = {
         category = planet_buildings
@@ -141,21 +133,6 @@ nhsc_building_centralresearchbureau = {
     show_tech_unlock_if = {
         NOT = {
             has_global_flag = ESC_central_research_bureau_forbidden
-        }
-    }
-    on_queued = {
-        owner = {
-            set_country_flag = nhsc_building_centralresearchbureau_queued
-        }
-    }
-    on_unqueued = {
-        owner = {
-            remove_country_flag = nhsc_building_centralresearchbureau_queued
-        }
-    }
-    on_built = {
-        owner = {
-            remove_country_flag = nhsc_building_centralresearchbureau_queued
         }
     }
     prerequisites = {

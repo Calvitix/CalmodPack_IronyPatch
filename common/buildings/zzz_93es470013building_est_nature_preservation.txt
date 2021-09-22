@@ -4,8 +4,8 @@ building_est_nature_preservation = {
     destroy_trigger = {
         owner = {
             Nor = {
-                has_non_swapped_tradition = tr_est_natural_finish
-                has_swapped_tradition = tr_est_natural_5_GC
+                has_active_tradition = tr_est_nature_finish
+                has_active_tradition = tr_est_nature_5_GC
             }
         }
     }
@@ -14,8 +14,8 @@ building_est_nature_preservation = {
             limit = {
                 owner = {
                     Or = {
-                        has_non_swapped_tradition = tr_est_natural_finish
-                        has_swapped_tradition = tr_est_natural_5_GC
+                        has_active_tradition = tr_est_nature_finish
+                        has_active_tradition = tr_est_nature_5_GC
                     }
                 }
             }
@@ -49,8 +49,8 @@ building_est_nature_preservation = {
         has_upgraded_capital = yes
         owner = {
             Or = {
-                has_non_swapped_tradition = tr_est_natural_finish
-                has_swapped_tradition = tr_est_natural_5_GC
+                has_active_tradition = tr_est_nature_finish
+                has_active_tradition = tr_est_nature_5_GC
             }
         }
     }

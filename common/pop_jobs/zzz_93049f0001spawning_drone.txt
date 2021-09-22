@@ -14,7 +14,14 @@ spawning_drone = {
     }
     planet_modifier = {
         planet_amenities_no_happiness_add = 5
-        planet_pop_assembly_organic_add = 2
+    }
+    triggered_planet_modifier = {
+        potential = {
+            can_assemble_hive_pop = yes
+        }
+        modifier = {
+            planet_pop_assembly_organic_add = 2
+        }
     }
     triggered_planet_modifier = {
         potential = {
@@ -30,6 +37,23 @@ spawning_drone = {
         }
         modifier = {
             planet_amenities_no_happiness_add = -1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_origin = origin_necrophage
+            }
+            exists = planet.growing_species
+            planet.growing_species = {
+                NOT = {
+                    has_trait = trait_hive_mind
+                }
+            }
+        }
+        modifier = {
+            pop_growth_speed = 0.1
         }
     }
     resources = {

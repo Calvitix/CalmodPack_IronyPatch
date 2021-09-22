@@ -14,6 +14,22 @@ matter_synthesizer_drone = {
         upkeep = {
             energy = 2
         }
+        produces = {
+            trigger = {
+                planet = {
+                    has_active_building = building_mineral_purification_plant
+                }
+            }
+            minerals = 1
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_active_building = building_mineral_purification_hub
+                }
+            }
+            minerals = 2
+        }
     }
     weight = {
         weight = @simple_drone_job_weight

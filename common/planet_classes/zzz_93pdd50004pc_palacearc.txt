@@ -1,7 +1,7 @@
 pc_palacearc = {
     entity = "palacearc_planet"
     entity_scale = @planet_standard_scale
-    icon_frame = 103
+    icon = GFX_planet_type_palacearc
     atmosphere_color = hsv {
         0.75
         0.1

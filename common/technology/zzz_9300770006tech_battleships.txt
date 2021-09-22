@@ -6,7 +6,7 @@ tech_battleships = {
         voidcraft
     }
     prerequisites = {
-        "tech_Battlecruiser_1"
+        "tech_cruisers"
     }
     weight = @tier4weight1
     prereqfor_desc = {
@@ -17,7 +17,6 @@ tech_battleships = {
     }
     modifier = {
         country_command_limit_add = 10
-        country_naval_cap_add = 20
     }
     weight_modifier = {
         modifier = {

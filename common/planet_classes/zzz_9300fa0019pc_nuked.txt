@@ -1,7 +1,7 @@
 pc_nuked = {
     entity = "nuked_planet"
     entity_scale = @planet_standard_scale
-    icon_frame = 17
+    icon = GFX_planet_type_nuked
     atmosphere_color = hsv {
         0.6
         0.4

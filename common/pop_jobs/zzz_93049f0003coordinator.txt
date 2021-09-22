@@ -33,7 +33,7 @@ coordinator = {
         potential = {
             exists = owner
             owner = {
-                has_swapped_tradition = tr_synchronicity_integrated_preservation
+                has_active_tradition = tr_synchronicity_integrated_preservation
             }
         }
         modifier = {
@@ -44,7 +44,7 @@ coordinator = {
         potential = {
             exists = owner
             owner = {
-                has_swapped_tradition = tr_synchronicity_integrated_preservation
+                has_active_tradition = tr_synchronicity_integrated_preservation
             }
         }
         modifier = {

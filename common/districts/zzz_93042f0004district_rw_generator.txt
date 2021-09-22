@@ -21,11 +21,11 @@ district_rw_generator = {
         }
     }
     potential = {
-        uses_district_set = ring_world
         exists = owner
         owner = {
             is_gestalt = yes
         }
+        uses_district_set = ring_world
         OR = {
             is_planet_class = pc_squareworld_habitable
             is_planet_class = pc_ringworld_habitable
@@ -89,20 +89,8 @@ district_rw_generator = {
                 is_hive_empire = yes
             }
         }
-        modifier = {
-            planet_housing_add = 5
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_hive_empire = yes
-            }
-        }
-        modifier = {
-            job_technician_drone_add = 15
-        }
+        planet_housing_add = 5
+        job_technician_drone_add = 15
     }
     triggered_planet_modifier = {
         potential = {
@@ -200,7 +188,7 @@ district_rw_generator = {
                 }
             }
         }
-        text = "arcane_generator_upkeep_desc"
+        text = arcane_generator_upkeep_desc
     }
     triggered_desc = {
         trigger = {
@@ -209,7 +197,7 @@ district_rw_generator = {
                 is_gestalt = yes
             }
         }
-        text = "job_technician_drone_effect_desc"
+        text = job_technician_drone_effect_desc
     }
     triggered_desc = {
         trigger = {
@@ -219,7 +207,7 @@ district_rw_generator = {
                 is_fallen_empire_spiritualist = no
             }
         }
-        text = "job_technician_effect_desc"
+        text = job_technician_effect_desc
     }
     triggered_desc = {
         trigger = {
@@ -228,7 +216,7 @@ district_rw_generator = {
                 is_fallen_empire_spiritualist = yes
             }
         }
-        text = "job_fe_acolyte_generator_effect_desc"
+        text = job_fe_acolyte_generator_effect_desc
     }
     triggered_planet_modifier = {
         potential = {

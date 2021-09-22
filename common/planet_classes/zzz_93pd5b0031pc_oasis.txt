@@ -1,9 +1,8 @@
 pc_oasis = {
     entity = "oasis_planet"
     entity_scale = @planet_standard_scale
-    icon_frame = 33
+    icon = GFX_planet_type_oasis
     picture = pc_oasis
-    tile_set = pc_oasis
     atmosphere_color = hsv {
         0.5
         0.3

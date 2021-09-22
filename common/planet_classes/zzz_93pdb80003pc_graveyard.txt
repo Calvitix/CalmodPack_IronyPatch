@@ -1,6 +1,6 @@
 pc_graveyard = {
     entity = "graveyard_planet"
-    icon_frame = 55
+    icon = GFX_planet_type_graveyard
     entity_scale = @planet_standard_scale
     atmosphere_color = hsv {
         0.48

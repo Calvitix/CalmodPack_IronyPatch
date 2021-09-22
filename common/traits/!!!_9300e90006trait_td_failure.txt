@@ -1,0 +1,11 @@
+trait_td_failure = {
+    cost = 4
+    potential_crossbreeding_chance = 0
+    sorting_priority = 8
+    custom_tooltip = TRAIT_TD_FAILURE_EFFECT
+    modification = no
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+}

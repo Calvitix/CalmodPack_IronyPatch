@@ -57,9 +57,6 @@ building_eludium_mine = {
             energy = 20
         }
     }
-    ai_weight = {
-        weight = 10000
-    }
     prerequisites = {
         "tech_eludium_mine"
     }

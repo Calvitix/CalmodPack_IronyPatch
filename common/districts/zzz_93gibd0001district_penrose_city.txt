@@ -68,7 +68,7 @@ district_penrose_city = {
         potential = {
             exists = owner
             owner = {
-                has_non_swapped_tradition = tr_prosperity_public_works
+                has_active_tradition = tr_prosperity_public_works
             }
         }
         modifier = {
@@ -104,7 +104,7 @@ district_penrose_city = {
         potential = {
             exists = owner
             owner = {
-                has_non_swapped_tradition = tr_prosperity_interstellar_franchising
+                has_active_tradition = tr_prosperity_interstellar_franchising
             }
         }
         modifier = {

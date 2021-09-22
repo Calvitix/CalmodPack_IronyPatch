@@ -2,7 +2,7 @@ pc_nova_1 = {
     entity = "nova_1_entity"
     entity_scale = 8
     picture = "pc_nova"
-    icon_frame = 30
+    icon = GFX_planet_type_pulsar
     atmosphere_color = hsv {
         0.6
         0.3

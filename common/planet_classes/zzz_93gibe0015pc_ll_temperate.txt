@@ -2,7 +2,7 @@ pc_ll_temperate = {
     entity = "ll_temperate_planet"
     entity_scale = @planet_standard_scale
     picture = pc_ll_temperate
-    icon_frame = 3
+    icon = GFX_planet_type_tundra
     climate = "wet"
     atmosphere_color = hsv {
         0.59

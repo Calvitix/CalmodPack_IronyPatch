@@ -2,24 +2,15 @@ nhsc_building_dragon_hatchery = {
     base_buildtime = 720
     icon = nhsc_building_dragon_hatchery
     category = army
-    base_cap_amount = 1
+    empire_limit = {
+        base = 1
+    }
     potential = {
         NOT = {
             has_global_flag = ESC_ether_dragon_tech_forbidden
         }
     }
     allow = {
-        exists = owner
-        owner = {
-            NOT = {
-                any_owned_planet = {
-                    has_building = nhsc_building_dragon_hatchery
-                }
-            }
-            NOT = {
-                has_country_flag = nhsc_building_dragon_hatchery_queued
-            }
-        }
         has_upgraded_capital = yes
     }
     resources = {
@@ -140,21 +131,6 @@ nhsc_building_dragon_hatchery = {
     show_tech_unlock_if = {
         NOT = {
             has_global_flag = ESC_ether_dragon_tech_forbidden
-        }
-    }
-    on_queued = {
-        owner = {
-            set_country_flag = nhsc_building_dragon_hatchery_queued
-        }
-    }
-    on_unqueued = {
-        owner = {
-            remove_country_flag = nhsc_building_dragon_hatchery_queued
-        }
-    }
-    on_built = {
-        owner = {
-            remove_country_flag = nhsc_building_dragon_hatchery_queued
         }
     }
     prerequisites = {

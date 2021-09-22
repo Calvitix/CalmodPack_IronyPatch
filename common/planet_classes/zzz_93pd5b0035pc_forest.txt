@@ -1,7 +1,7 @@
 pc_forest = {
     entity = "forest_planet"
     entity_scale = @planet_standard_scale
-    icon_frame = 65
+    icon = GFX_planet_type_forest
     atmosphere_color = hsv {
         0.5
         0.3

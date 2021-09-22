@@ -17,22 +17,6 @@ fe_acolyte_generator = {
         produces = {
             energy = 6
         }
-        produces = {
-            trigger = {
-                planet = {
-                    has_active_building = building_energy_grid
-                }
-            }
-            energy = 1
-        }
-        produces = {
-            trigger = {
-                planet = {
-                    has_active_building = building_energy_nexus
-                }
-            }
-            energy = 2
-        }
     }
     weight = {
         weight = 15000

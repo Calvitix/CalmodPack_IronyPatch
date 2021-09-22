@@ -5,6 +5,7 @@ deviant_drone = {
     clothes_texture_index = 2
     icon = criminal
     contributes_to_diplo_weight = no
+    ignores_favorite = yes
     possible_pre_triggers = {
         has_planet = yes
         is_sapient = yes

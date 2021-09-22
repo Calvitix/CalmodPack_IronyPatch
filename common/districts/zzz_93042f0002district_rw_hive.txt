@@ -82,7 +82,7 @@ district_rw_hive = {
         potential = {
             exists = owner
             owner = {
-                has_swapped_tradition = tr_prosperity_extended_hives
+                has_active_tradition = tr_prosperity_extended_hives
             }
         }
         modifier = {
@@ -115,9 +115,6 @@ district_rw_hive = {
                 }
             }
         }
-        text = "arcane_generator_upkeep_desc"
-    }
-    triggered_desc = {
-        text = "job_maintenance_drone_effect_desc"
+        text = arcane_generator_upkeep_desc
     }
 }

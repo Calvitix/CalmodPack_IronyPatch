@@ -3,7 +3,7 @@ pc_giga_planetary_computer = {
     entity = "giga_planetary_computer"
     entity_scale = @planet_standard_scale
     picture = pc_giga_planetary_computer
-    icon_frame = 15
+    icon = GFX_planetary_computer_icon
     atmosphere_color = hsv {
         0.55
         0.15

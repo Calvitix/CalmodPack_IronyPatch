@@ -2,7 +2,7 @@ pc_gigabrown_dwarf = {
     entity = "gigabrown_dwarf_planet"
     entity_scale = 14
     picture = pc_gigabrown_dwarf
-    icon_frame = 14
+    icon = GFX_brown_dwarf_icon
     atmosphere_color = hsv {
         0.93
         0.85

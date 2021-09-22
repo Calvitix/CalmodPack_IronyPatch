@@ -9,6 +9,9 @@ building_foundry_1 = {
         NOT = {
             has_modifier = slave_colony
         }
+        OR = {
+            building_relaxed_basic_income_check = yes
+        }
     }
     allow = {
         str_foundry_allow = yes
@@ -48,6 +51,7 @@ building_foundry_1 = {
             exists = owner
             owner = {
                 is_hive_empire = yes
+                is_catalytic_empire = no
             }
         }
         modifier = {
@@ -59,6 +63,7 @@ building_foundry_1 = {
             exists = owner
             owner = {
                 is_machine_empire = yes
+                is_catalytic_empire = no
             }
         }
         modifier = {
@@ -69,11 +74,36 @@ building_foundry_1 = {
         potential = {
             exists = owner
             owner = {
+                is_gestalt = yes
+                is_catalytic_empire = yes
+            }
+        }
+        modifier = {
+            job_catalytic_drone_add = @b1_jobs
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
                 is_regular_empire = yes
+                is_catalytic_empire = no
             }
         }
         modifier = {
             job_foundry_add = @b1_jobs
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+                is_catalytic_empire = yes
+            }
+        }
+        modifier = {
+            job_catalytic_technician_add = @b1_jobs
         }
     }
     resources = {
@@ -109,6 +139,7 @@ building_foundry_1 = {
             exists = owner
             owner = {
                 is_regular_empire = yes
+                is_catalytic_empire = no
             }
         }
         text = job_foundry_effect_desc
@@ -117,7 +148,18 @@ building_foundry_1 = {
         trigger = {
             exists = owner
             owner = {
+                is_regular_empire = yes
+                is_catalytic_empire = yes
+            }
+        }
+        text = job_catalytic_technician_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
                 is_hive_empire = yes
+                is_catalytic_empire = no
             }
         }
         text = job_alloy_drone_effect_desc
@@ -127,12 +169,23 @@ building_foundry_1 = {
             exists = owner
             owner = {
                 is_machine_empire = yes
+                is_catalytic_empire = no
             }
         }
         text = job_fabricator_effect_desc
     }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+                is_catalytic_empire = yes
+            }
+        }
+        text = job_catalytic_drone_effect_desc
+    }
     ai_resource_production = {
-        alloys = 3
+        alloys = 4
         trigger = {
             always = yes
         }

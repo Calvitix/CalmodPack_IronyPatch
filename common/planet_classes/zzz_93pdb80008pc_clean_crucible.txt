@@ -1,6 +1,6 @@
 pc_clean_crucible = {
     entity = "crucible_planet"
-    icon_frame = 84
+    icon = GFX_planet_type_crucible
     entity_scale = @planet_standard_scale
     atmosphere_color = hsv {
         0.48

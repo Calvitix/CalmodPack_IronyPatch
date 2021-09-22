@@ -52,7 +52,4 @@ building_graveyard_recycler = {
             }
         }
     }
-    ai_weight = {
-        weight = 10
-    }
 }

@@ -109,20 +109,20 @@ dimensional_portal_researcher = {
         }
         upkeep = {
             trigger = {
+                exists = owner
+                owner = {
+                    has_valid_civic = civic_technocracy
+                }
+            }
+            consumer_goods = 1
+        }
+        upkeep = {
+            trigger = {
                 planet = {
                     has_planet_flag = dportal_hell
                 }
             }
             consumer_goods = 3
-        }
-        upkeep = {
-            trigger = {
-                exists = owner
-                owner = {
-                    has_edict = research_subsidies
-                }
-            }
-            energy = 1
         }
     }
     weight = {

@@ -1,0 +1,95 @@
+tech_autocannons_1 = {
+    area = engineering
+    cost = @tier2cost2
+    tier = 2
+    category = {
+        propulsion
+    }
+    ai_update_type = military
+    prerequisites = {
+        tech_mass_drivers_2
+    }
+    weight = @tier2weight2
+    weight_modifier = {
+        modifier = {
+            factor = 10
+            is_ai = yes
+            has_technology = tech_lasers_3
+            has_two_weapons_1 = no
+        }
+        modifier = {
+            factor = 0.1
+            has_two_weapons_1 = yes
+        }
+        modifier = {
+            factor = 1.25
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.5
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 0.5
+            NOT = {
+                has_technology = "tech_mass_drivers_1"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_propulsion"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 20000
+            OR = {
+                AND = {
+                    is_preferred_weapons = weapon_type_kinetic
+                    NOT = {
+                        has_tech_option = tech_mass_drivers_3
+                    }
+                    has_basic_weapon_1 = no
+                }
+                AND = {
+                    is_preferred_weapons = weapon_type_kinetic
+                    has_technology = tech_mass_drivers_3
+                    has_two_weapons_1 = no
+                }
+                AND = {
+                    is_preferred_weapons = weapon_type_explosive
+                    has_basic_weapon_1 = no
+                }
+                AND = {
+                    has_technology = tech_lasers_3
+                    has_two_weapons_1 = no
+                }
+            }
+        }
+        modifier = {
+            factor = 0.01
+            OR = {
+                has_technology = tech_disruptors_1
+                has_two_weapons_1 = yes
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.5
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_propulsion"
+            }
+        }
+    }
+}

@@ -36,7 +36,7 @@ slave_overseer = {
         potential = {
             exists = owner
             owner = {
-                has_non_swapped_tradition = tr_domination_judgment_corps
+                has_active_tradition = tr_domination_judgment_corps
             }
         }
         modifier = {
@@ -51,6 +51,17 @@ slave_overseer = {
         }
         modifier = {
             planet_crime_add = -10
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_pleasure_seeker = yes
+            }
+        }
+        modifier = {
+            planet_amenities_add = 5
         }
     }
     weight = {

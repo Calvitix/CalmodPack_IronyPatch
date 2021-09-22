@@ -1,8 +1,10 @@
 nhsc_building_watcher = {
     base_buildtime = 540
-    base_cap_amount = 1
     icon = nhsc_building_watcher
     category = research
+    empire_limit = {
+        base = 1
+    }
     potential = {
         NOT = {
             has_modifier = resort_colony
@@ -16,17 +18,6 @@ nhsc_building_watcher = {
     }
     allow = {
         has_major_upgraded_capital = yes
-        exists = owner
-        owner = {
-            NOT = {
-                any_owned_planet = {
-                    has_building = nhsc_building_watcher
-                }
-            }
-            NOT = {
-                has_country_flag = nhsc_watcher_of_eternity_queued
-            }
-        }
     }
     resources = {
         category = planet_buildings
@@ -114,21 +105,6 @@ nhsc_building_watcher = {
     show_tech_unlock_if = {
         NOT = {
             has_global_flag = ESC_watcher_forbidden
-        }
-    }
-    on_queued = {
-        owner = {
-            set_country_flag = nhsc_watcher_of_eternity_queued
-        }
-    }
-    on_unqueued = {
-        owner = {
-            remove_country_flag = nhsc_watcher_of_eternity_queued
-        }
-    }
-    on_built = {
-        owner = {
-            remove_country_flag = nhsc_watcher_of_eternity_queued
         }
     }
     prerequisites = {

@@ -1,7 +1,7 @@
 pc_hydrocarbon = {
     entity = "hydrocarbon_planet"
     entity_scale = @planet_standard_scale
-    icon_frame = 13
+    icon = GFX_planet_type_toxic
     picture = pc_hydrocarbon
     atmosphere_color = hsv {
         0.5

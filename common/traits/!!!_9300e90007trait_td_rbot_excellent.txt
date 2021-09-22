@@ -1,0 +1,12 @@
+trait_td_rbot_excellent = {
+    cost = -2
+    sorting_priority = 8
+    custom_tooltip = TRAIT_TD_RBOT_EXCELLENT_EFFECT
+    modification = no
+    opposites = {
+        "trait_td_rbot_scrap"
+    }
+    allowed_archetypes = {
+        MACHINE
+    }
+}

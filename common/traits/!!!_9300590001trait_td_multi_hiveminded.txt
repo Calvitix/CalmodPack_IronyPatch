@@ -2,7 +2,6 @@ trait_td_multi_hiveminded = {
     cost = 0
     potential_crossbreeding_chance = 0
     sorting_priority = 9
-    custom_tooltip = TRAIT_TD_MULTI_HIVEMINDED_EFFECT
     modification = no
     opposites = {
         "trait_hive_mind"
@@ -40,6 +39,6 @@ trait_td_multi_hiveminded = {
     modifier = {
         planet_jobs_worker_produces_mult = 0.075
         planet_jobs_unity_produces_mult = 0.125
-        leader_skill_levels = -2
+        leader_skill_levels = -1
     }
 }

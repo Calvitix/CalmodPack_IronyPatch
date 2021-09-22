@@ -1,0 +1,96 @@
+tech_plasma_3 = {
+    area = physics
+    cost = @tier4cost2
+    tier = 4
+    category = {
+        particles
+    }
+    ai_update_type = military
+    prerequisites = {
+        "tech_plasma_2"
+    }
+    weight = @tier4weight2
+    weight_modifier = {
+        modifier = {
+            factor = 10
+            is_ai = yes
+            is_preferred_weapons = weapon_type_kinetic
+            has_two_weapons_3 = no
+        }
+        modifier = {
+            factor = 0.1
+            is_ai = yes
+            is_preferred_weapons = weapon_type_explosive
+        }
+        modifier = {
+            factor = 0.1
+            has_two_weapons_3 = yes
+        }
+        modifier = {
+            factor = 0.1
+            d_has_gases = no
+        }
+        modifier = {
+            factor = 1.25
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.5
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 20000
+            OR = {
+                AND = {
+                    is_preferred_weapons = weapon_type_energy
+                    NOT = {
+                        has_tech_option = tech_lasers_5
+                    }
+                    has_basic_weapon_3 = no
+                }
+                AND = {
+                    is_preferred_weapons = weapon_type_energy
+                    has_technology = tech_lasers_5
+                    has_two_weapons_3 = no
+                }
+                AND = {
+                    has_technology = tech_mass_drivers_5
+                    has_two_weapons_3 = no
+                }
+            }
+        }
+        modifier = {
+            factor = 0.01
+            OR = {
+                is_preferred_weapons = weapon_type_explosive
+                is_preferred_weapons = weapon_type_strike_craft
+                has_technology = tech_disruptors_3
+                has_two_weapons_3 = yes
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.5
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+    }
+}

@@ -89,30 +89,4 @@ district_arcology_research_complex = {
         }
         text = job_brain_drone_effect_desc
     }
-    ai_weight = {
-        weight = 0
-        modifier = {
-            weight = 250
-            owner = {
-                has_monthly_income = {
-                    resource = consumer_goods
-                    value > 50
-                }
-            }
-        }
-        modifier = {
-            factor = 0.01
-            OR = {
-                planet = {
-                    has_district = district_rw_farming
-                }
-                planet = {
-                    has_district = district_rw_commercial
-                }
-                planet = {
-                    has_district = district_rw_generator
-                }
-            }
-        }
-    }
 }

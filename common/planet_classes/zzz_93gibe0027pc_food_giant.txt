@@ -2,7 +2,7 @@ pc_food_giant = {
     entity = "food_giant_planet"
     entity_scale = 14
     picture = pc_food_giant
-    icon_frame = 14
+    icon = GFX_planet_type_gas_giant
     atmosphere_color = hsv {
         0.73
         0.33

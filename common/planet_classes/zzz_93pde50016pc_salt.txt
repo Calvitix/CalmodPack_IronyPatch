@@ -1,10 +1,9 @@
 pc_salt = {
     entity = "salt_planet"
     entity_scale = @planet_standard_scale
-    icon_frame = 70
+    icon = GFX_planet_type_salt
     climate = "dry"
     picture = pc_salt
-    tile_set = pc_salt
     atmosphere_color = hsv {
         0.58
         0.3

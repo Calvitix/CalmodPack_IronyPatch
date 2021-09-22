@@ -7,28 +7,44 @@ district_generator_uncapped = {
         OR = {
             uses_district_set = hive_world
             uses_district_set = machine_world
+            AND = {
+                exists = from
+                from = {
+                    OR = {
+                        is_gestalt = yes
+                        is_fallen_empire = yes
+                    }
+                }
+                uses_district_set = shattered_ring_world
+            }
         }
     }
     potential = {
         OR = {
             uses_district_set = hive_world
             uses_district_set = machine_world
+            AND = {
+                exists = owner
+                owner = {
+                    OR = {
+                        is_gestalt = yes
+                        is_fallen_empire = yes
+                    }
+                }
+                uses_district_set = shattered_ring_world
+            }
         }
     }
     allow = {
         NOT = {
             has_modifier = resort_colony
         }
-        OR = {
-            owner = {
-                is_ai = no
-            }
-            str_energy_district_allow = yes
-        }
     }
     conversion_ratio = 1
     convert_to = {
         district_generator
+        district_rw_generator
+        district_srw_commercial
     }
     resources = {
         category = planet_districts

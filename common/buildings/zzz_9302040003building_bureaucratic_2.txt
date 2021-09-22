@@ -8,15 +8,6 @@ building_bureaucratic_2 = {
             is_regular_empire = yes
         }
     }
-    destroy_trigger = {
-        exists = owner
-        or = {
-            owner = {
-                is_regular_empire = no
-            }
-            str_bureaucratic_destroy = yes
-        }
-    }
     allow = {
         has_upgraded_capital = yes
         or = {
@@ -42,6 +33,15 @@ building_bureaucratic_2 = {
                     free_housing > 5
                 }
             }
+        }
+    }
+    destroy_trigger = {
+        exists = owner
+        or = {
+            owner = {
+                is_regular_empire = no
+            }
+            str_bureaucratic_destroy = yes
         }
     }
     resources = {

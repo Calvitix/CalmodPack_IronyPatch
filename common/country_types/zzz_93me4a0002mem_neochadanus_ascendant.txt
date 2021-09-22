@@ -346,7 +346,7 @@ mem_neochadanus_ascendant = {
         standard_leader_module = {
         }
         standard_diplomacy_module = {
-            contact_rule = does_first_contact_sites
+            contact_rule = on_action_only
         }
         standard_technology_module = {
         }

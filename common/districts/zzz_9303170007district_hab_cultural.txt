@@ -39,8 +39,19 @@ district_hab_cultural = {
             energy = @hab_maintenance
         }
     }
-    planet_modifier = {
-        planet_housing_add = 3
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                NOT = {
+                    is_machine_empire = yes
+                    has_valid_civic = civic_machine_servitor
+                }
+            }
+        }
+        modifier = {
+            planet_housing_add = 3
+        }
     }
     triggered_planet_modifier = {
         potential = {
@@ -81,7 +92,6 @@ district_hab_cultural = {
         modifier = {
             job_bio_trophy_add = 5
             job_maintenance_drone_add = 1
-            planet_carry_cap_add = 5
         }
     }
     triggered_desc = {
@@ -114,6 +124,16 @@ district_hab_cultural = {
             }
         }
         text = job_entertainer_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+                has_valid_civic = civic_machine_servitor
+            }
+        }
+        text = job_bio_trophy_effect_desc
     }
     triggered_desc = {
         trigger = {

@@ -151,7 +151,9 @@ soldier = {
         }
         modifier = {
             factor = 0
-            can_be_soldier = no
+            species = {
+                can_be_soldier = no
+            }
         }
         modifier = {
             factor = 2

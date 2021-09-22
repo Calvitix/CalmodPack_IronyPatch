@@ -31,7 +31,7 @@ building_est_cybernetics_finish_automated_mine = {
             }
         }
         owner = {
-            has_non_swapped_tradition = tr_est_cybernetics_finish
+            has_active_tradition = tr_est_cybernetics_finish
         }
     }
     ai_weight = {

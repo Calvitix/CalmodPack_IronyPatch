@@ -1,7 +1,7 @@
 pc_pdshroud = {
     entity = "pdshroud_planet"
     entity_scale = @planet_standard_scale
-    icon_frame = 23
+    icon = 23
     atmosphere_color = hsv {
         0.58
         0.3

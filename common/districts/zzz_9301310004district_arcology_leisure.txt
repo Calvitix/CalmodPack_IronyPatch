@@ -16,6 +16,7 @@ district_arcology_leisure = {
     }
     conversion_ratio = 1
     convert_to = {
+        district_arcology_organic_housing
         district_city
         district_nexus
         district_hive

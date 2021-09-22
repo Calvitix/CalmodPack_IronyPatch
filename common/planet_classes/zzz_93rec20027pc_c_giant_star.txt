@@ -2,7 +2,7 @@ pc_c_giant_star = {
     entity = "c_giant_star_class_star_entity"
     entity_scale = @star_giant_scale
     picture = "pc_c_star"
-    icon_frame = 26
+    icon = GFX_planet_type_m_star
     atmosphere_color = hsv {
         0.97
         0.9

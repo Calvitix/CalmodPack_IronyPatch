@@ -34,6 +34,7 @@ district_giga_birch_ktisma = {
             owner = {
                 is_regular_birch_empire = yes
                 has_valid_civic = civic_aristocratic_elite
+                is_crafter_empire = no
             }
         }
         modifier = {
@@ -47,6 +48,7 @@ district_giga_birch_ktisma = {
             owner = {
                 is_regular_birch_empire = yes
                 has_valid_civic = civic_byzantine_bureaucracy
+                is_crafter_empire = no
             }
         }
         modifier = {
@@ -60,6 +62,7 @@ district_giga_birch_ktisma = {
             owner = {
                 is_regular_birch_empire = yes
                 has_valid_civic = civic_merchant_guilds
+                is_crafter_empire = no
             }
         }
         modifier = {
@@ -71,7 +74,50 @@ district_giga_birch_ktisma = {
         potential = {
             exists = owner
             owner = {
+                is_regular_birch_empire = yes
+                has_valid_civic = civic_aristocratic_elite
+                is_crafter_empire = yes
+            }
+        }
+        modifier = {
+            job_noble_add = 1
+            job_artificer_add = -1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_birch_empire = yes
+                has_valid_civic = civic_byzantine_bureaucracy
+                is_crafter_empire = yes
+            }
+        }
+        modifier = {
+            job_administrator_add = 5
+            job_artificer_add = -5
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_birch_empire = yes
+                has_valid_civic = civic_merchant_guilds
+                is_crafter_empire = yes
+            }
+        }
+        modifier = {
+            job_merchant_add = 5
+            job_artificer_add = -5
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
                 is_machine_empire = yes
+                is_catalytic_empire = no
                 has_valid_civic = civic_machine_servitor
             }
         }
@@ -84,7 +130,23 @@ district_giga_birch_ktisma = {
         potential = {
             exists = owner
             owner = {
+                is_machine_empire = yes
+                is_catalytic_empire = yes
+                has_valid_civic = civic_machine_servitor
+            }
+        }
+        modifier = {
+            job_artisan_drone_add = 15
+            job_catalytic_drone_add = -15
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
                 is_regular_empire = yes
+                is_catalytic_empire = no
+                is_crafter_empire = no
             }
         }
         modifier = {
@@ -100,7 +162,26 @@ district_giga_birch_ktisma = {
         potential = {
             exists = owner
             owner = {
+                is_regular_empire = yes
+                is_catalytic_empire = no
+                is_crafter_empire = yes
+            }
+        }
+        modifier = {
+            job_enforcer_add = 15
+            job_artificer_add = 22
+            job_foundry_add = 20
+            job_chemist_add = 6
+            job_translucer_add = 6
+            job_gas_refiner_add = 6
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
                 is_hive_empire = yes
+                is_catalytic_empire = no
             }
         }
         modifier = {
@@ -116,11 +197,62 @@ district_giga_birch_ktisma = {
             exists = owner
             owner = {
                 is_machine_empire = yes
+                is_catalytic_empire = no
             }
         }
         modifier = {
             job_patrol_drone_add = 15
             job_fabricator_add = 42
+            job_chemist_drone_add = 6
+            job_translucer_drone_add = 6
+            job_gas_refiner_drone_add = 6
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+                is_catalytic_empire = yes
+                is_crafter_empire = yes
+            }
+        }
+        modifier = {
+            job_enforcer_add = 15
+            job_artificer_add = 22
+            job_catalytic_technician_add = 20
+            job_chemist_add = 6
+            job_translucer_add = 6
+            job_gas_refiner_add = 6
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+                is_catalytic_empire = yes
+            }
+        }
+        modifier = {
+            job_patrol_drone_add = 15
+            job_catalytic_drone_add = 42
+            job_chemist_drone_add = 6
+            job_translucer_drone_add = 6
+            job_gas_refiner_drone_add = 6
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+                is_catalytic_empire = yes
+            }
+        }
+        modifier = {
+            job_patrol_drone_add = 15
+            job_catalytic_drone_add = 42
             job_chemist_drone_add = 6
             job_translucer_drone_add = 6
             job_gas_refiner_drone_add = 6

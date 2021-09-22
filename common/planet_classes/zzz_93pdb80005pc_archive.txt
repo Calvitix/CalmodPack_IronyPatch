@@ -1,6 +1,6 @@
 pc_archive = {
     entity = "archive_planet"
-    icon_frame = 57
+    icon = GFX_planet_type_archive
     entity_scale = @planet_standard_scale
     atmosphere_color = hsv {
         0.48

@@ -17,7 +17,7 @@ bore_manager = {
         }
     }
     planet_modifier = {
-        job_bore_engineer_add = 8
+        job_void_bore_engineer_add = 8
     }
     resources = {
         category = planet_bore

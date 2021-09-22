@@ -5,6 +5,7 @@ giga_preserver = {
     clothes_texture_index = 3
     possible = {
         complex_specialist_job_check_trigger = yes
+        is_gestalt = no
     }
     resources = {
         category = planet_researchers

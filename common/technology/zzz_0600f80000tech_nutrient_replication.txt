@@ -12,7 +12,7 @@ tech_nutrient_replication = {
     weight = @tier4weight3
     modifier = {
         planet_jobs_food_produces_mult = 0.15
-        starbase_constructions_food_produces_mult = 0.2
+        starbase_constructions_food_produces_mult = 0.1
     }
     potential = {
         NOT = {

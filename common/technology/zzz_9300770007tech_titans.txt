@@ -6,13 +6,12 @@ tech_titans = {
         voidcraft
     }
     prerequisites = {
-        "tech_Dreadnought_1"
+        "tech_battleships"
     }
     weight = @tier5weight1
     ai_update_type = military
     modifier = {
-        country_command_limit_add = 25
-        country_naval_cap_add = 50
+        country_command_limit_add = 10
     }
     potential = {
         host_has_dlc = "Apocalypse"
@@ -32,7 +31,7 @@ tech_titans = {
         modifier = {
             factor = 0.1
             NOT = {
-                years_passed > 120
+                years_passed > 100
             }
         }
         modifier = {

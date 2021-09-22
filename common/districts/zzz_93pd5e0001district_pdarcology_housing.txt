@@ -53,11 +53,11 @@ district_pdarcology_housing = {
         potential = {
             exists = owner
             owner = {
-                has_non_swapped_tradition = tr_prosperity_public_works
+                has_active_tradition = tr_prosperity_public_works
             }
         }
         modifier = {
-            planet_housing_add = 3
+            planet_housing_add = 1
         }
     }
     triggered_planet_modifier = {
@@ -112,7 +112,7 @@ district_pdarcology_housing = {
         potential = {
             exists = owner
             owner = {
-                has_non_swapped_tradition = tr_prosperity_interstellar_franchising
+                has_active_tradition = tr_prosperity_interstellar_franchising
             }
         }
         modifier = {
@@ -136,12 +136,5 @@ district_pdarcology_housing = {
             }
         }
         text = job_maintenance_drone_effect_desc
-    }
-    ai_weight = {
-        weight = 0
-        modifier = {
-            weight = 5
-            free_housing < 10
-        }
     }
 }

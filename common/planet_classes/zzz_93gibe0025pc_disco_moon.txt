@@ -1,7 +1,6 @@
 pc_disco_moon = {
     entity = "giga_disco_moon"
     entity_scale = @planet_standard_scale
-    icon_frame = 15
     picture = pc_disco_moon
     spawn_odds = 0
     atmosphere_color = hsv {

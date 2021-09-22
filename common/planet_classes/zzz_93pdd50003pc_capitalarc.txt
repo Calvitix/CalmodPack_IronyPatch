@@ -1,7 +1,7 @@
 pc_capitalarc = {
     entity = "capitalarc_planet"
     entity_scale = @planet_standard_scale
-    icon_frame = 104
+    icon = GFX_planet_type_capitalarc
     atmosphere_color = hsv {
         0.75
         0.1

@@ -49,6 +49,8 @@ district_corp_industrial = {
             exists = owner
             owner = {
                 is_regular_empire = yes
+                is_crafter_empire = no
+                is_catalytic_empire = no
             }
         }
         modifier = {
@@ -60,7 +62,50 @@ district_corp_industrial = {
         potential = {
             exists = owner
             owner = {
+                is_regular_empire = yes
+                is_crafter_empire = yes
+                is_catalytic_empire = no
+            }
+        }
+        modifier = {
+            job_artificer_add = 3
+            job_foundry_add = 3
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+                is_crafter_empire = no
+                is_catalytic_empire = yes
+            }
+        }
+        modifier = {
+            job_artisan_add = 3
+            job_catalytic_technician_add = 3
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+                is_crafter_empire = yes
+                is_catalytic_empire = yes
+            }
+        }
+        modifier = {
+            job_artificer_add = 3
+            job_catalytic_technician_add = 3
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
                 is_hive_empire = yes
+                is_catalytic_empire = no
             }
         }
         modifier = {
@@ -72,6 +117,7 @@ district_corp_industrial = {
             exists = owner
             owner = {
                 is_machine_empire = yes
+                is_catalytic_empire = no
             }
         }
         modifier = {
@@ -80,15 +126,104 @@ district_corp_industrial = {
     }
     triggered_planet_modifier = {
         potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+                is_catalytic_empire = yes
+            }
+        }
+        modifier = {
+            job_catalytic_drone_add = @pdarcjobs
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
             has_designation = col_ecu_foundry
             exists = owner
             owner = {
                 is_regular_empire = yes
+                is_crafter_empire = no
+                is_catalytic_empire = no
             }
         }
         modifier = {
-            job_artisan_add = -3
-            job_foundry_add = 3
+            job_artisan_add = -1
+            job_foundry_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_designation = col_ecu_foundry
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+                is_crafter_empire = yes
+                is_catalytic_empire = no
+            }
+        }
+        modifier = {
+            job_artificer_add = -1
+            job_foundry_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_designation = col_ecu_foundry
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+                is_crafter_empire = no
+                is_catalytic_empire = no
+            }
+        }
+        modifier = {
+            job_artisan_add = 1
+            job_foundry_add = -1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_designation = col_ecu_foundry
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+                is_crafter_empire = yes
+                is_catalytic_empire = no
+            }
+        }
+        modifier = {
+            job_artificer_add = 1
+            job_foundry_add = -1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_designation = col_ecu_foundry
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+                is_crafter_empire = yes
+                is_catalytic_empire = yes
+            }
+        }
+        modifier = {
+            job_artisan_add = -1
+            job_catalytic_technician_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_designation = col_ecu_foundry
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+                is_crafter_empire = yes
+                is_catalytic_empire = yes
+            }
+        }
+        modifier = {
+            job_artificer_add = -1
+            job_catalytic_technician_add = 1
         }
     }
     triggered_planet_modifier = {
@@ -97,63 +232,58 @@ district_corp_industrial = {
             exists = owner
             owner = {
                 is_regular_empire = yes
+                is_crafter_empire = no
+                is_catalytic_empire = yes
             }
         }
         modifier = {
-            job_artisan_add = 3
-            job_foundry_add = -3
-        }
-    }
-    triggered_desc = {
-        trigger = {
-            exists = owner
-            owner = {
-                is_regular_empire = yes
-            }
-        }
-        text = job_artisan_effect_desc
-    }
-    triggered_planet_modifier = {
-        potential = {
-            has_designation = col_foundry
-            exists = owner
-            owner = {
-                is_regular_empire = yes
-            }
-        }
-        modifier = {
-            job_artisan_add = -3
-            job_foundry_add = 3
+            job_artisan_add = 1
+            job_catalytic_technician_add = -1
         }
     }
     triggered_planet_modifier = {
         potential = {
-            has_designation = col_factory
+            has_designation = col_ecu_factory
             exists = owner
             owner = {
                 is_regular_empire = yes
+                is_crafter_empire = yes
+                is_catalytic_empire = yes
             }
         }
         modifier = {
-            job_artisan_add = 3
-            job_foundry_add = -3
+            job_artificer_add = 1
+            job_catalytic_technician_add = -1
         }
     }
     triggered_planet_modifier = {
         potential = {
-            OR = {
-                has_designation = col_factory
-                has_designation = col_mac_factory
-            }
+            has_designation = col_ecu_factory
             exists = owner
             owner = {
                 is_machine_empire = yes
                 country_uses_consumer_goods = yes
+                is_catalytic_empire = no
             }
         }
         modifier = {
-            job_artisan_drone_add = 3
-            job_alloy_drone_add = -3
+            job_artisan_drone_add = 2
+            job_fabricator_add = -2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_designation = col_ecu_factory
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+                country_uses_consumer_goods = yes
+                is_catalytic_empire = yes
+            }
+        }
+        modifier = {
+            job_artisan_drone_add = 2
+            job_catalytic_drone_add = -2
         }
     }
     triggered_desc = {
@@ -170,7 +300,17 @@ district_corp_industrial = {
         trigger = {
             exists = owner
             owner = {
+                is_crafter_empire = yes
+            }
+        }
+        text = job_artificer_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
                 is_regular_empire = yes
+                is_catalytic_empire = no
             }
         }
         text = job_foundry_effect_desc
@@ -179,7 +319,18 @@ district_corp_industrial = {
         trigger = {
             exists = owner
             owner = {
+                is_regular_empire = yes
+                is_catalytic_empire = yes
+            }
+        }
+        text = job_catalytic_technician_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
                 is_machine_empire = yes
+                is_catalytic_empire = no
             }
         }
         text = job_fabricator_effect_desc
@@ -189,9 +340,20 @@ district_corp_industrial = {
             exists = owner
             owner = {
                 is_hive_empire = yes
+                is_catalytic_empire = no
             }
         }
         text = job_alloy_drone_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+                is_catalytic_empire = yes
+            }
+        }
+        text = job_catalytic_drone_effect_desc
     }
     triggered_planet_modifier = {
         potential = {

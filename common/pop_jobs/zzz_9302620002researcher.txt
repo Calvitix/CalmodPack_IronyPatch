@@ -35,10 +35,10 @@ researcher = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_edict = research_subsidies
+                    has_valid_civic = civic_technocracy
                 }
             }
-            energy = 1
+            consumer_goods = 1
         }
     }
     weight = {
@@ -131,6 +131,18 @@ researcher = {
         modifier = {
             factor = 1.5
             has_trait = trait_void_dweller_1
+            exists = planet
+            planet = {
+                is_planet_class = pc_habitat
+            }
+        }
+        modifier = {
+            factor = 0.85
+            has_trait = trait_void_dweller_1
+            exists = planet
+            planet = {
+                is_artificial = no
+            }
         }
         modifier = {
             factor = 1.5

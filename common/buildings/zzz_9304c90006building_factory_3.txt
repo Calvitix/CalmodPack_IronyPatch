@@ -33,6 +33,10 @@ building_factory_3 = {
             buildings_no_crystals = yes
         }
     }
+    planet_modifier = {
+        planet_artisans_consumer_goods_produces_add = 2
+        planet_artisans_minerals_upkeep_add = 2
+    }
     triggered_planet_modifier = {
         potential = {
             exists = owner
@@ -55,10 +59,23 @@ building_factory_3 = {
             exists = owner
             owner = {
                 is_regular_empire = yes
+                is_crafter_empire = no
             }
         }
         modifier = {
             job_artisan_add = @b1_jobs
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+                is_crafter_empire = yes
+            }
+        }
+        modifier = {
+            job_artificer_add = @b1_jobs
         }
     }
     triggered_planet_modifier = {
@@ -87,7 +104,33 @@ building_factory_3 = {
         tech_luxuries_2
     }
     triggered_desc = {
-        text = building_factory_3_effect_desc
+        trigger = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+                is_crafter_empire = no
+            }
+        }
+        text = job_artisan_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+                is_crafter_empire = yes
+            }
+        }
+        text = job_artificer_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        text = job_artisan_drone_effect_desc
     }
     ai_resource_production = {
         consumer_goods = 24

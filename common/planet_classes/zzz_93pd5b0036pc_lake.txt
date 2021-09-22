@@ -1,7 +1,7 @@
 pc_lake = {
     entity = "lake_planet"
     entity_scale = @planet_standard_scale
-    icon_frame = 74
+    icon = GFX_planet_type_lake
     atmosphere_color = hsv {
         0.5
         0.3

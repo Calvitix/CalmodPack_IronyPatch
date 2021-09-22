@@ -29,7 +29,7 @@ district_pdhab_commercial = {
         potential = {
             exists = owner
             owner = {
-                has_non_swapped_tradition = tr_prosperity_interstellar_franchising
+                has_active_tradition = tr_prosperity_interstellar_franchising
             }
         }
         modifier = {
@@ -58,8 +58,28 @@ district_pdhab_commercial = {
             job_manager_add = 3
         }
     }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_active_tradition = tr_mercantile_commercial_enterprise
+            }
+        }
+        modifier = {
+            job_merchant_add = 1
+        }
+    }
     triggered_desc = {
         text = job_clerk_effect_desc
+    }
+    triggered_desc = {
+        text = job_merchant_effect_desc
+        trigger = {
+            exists = owner
+            owner = {
+                has_active_tradition = tr_mercantile_commercial_enterprise
+            }
+        }
     }
     ai_resource_production = {
         consumer_goods = 1

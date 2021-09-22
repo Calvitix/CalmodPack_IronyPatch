@@ -2,7 +2,6 @@ pc_ehof_unhabitat = {
     entity = "ehof_habitat_shielded"
     habitat = yes
     picture = pc_habitat
-    icon_frame = 22
     entity_scale = 1.5
     enable_tilt = no
     fixed_entity_scale = yes

@@ -32,7 +32,7 @@ virtual_admin_cap_machine = {
         potential = {
             exists = owner
             owner = {
-                has_swapped_tradition = tr_synchronicity_integrated_preservation
+                has_active_tradition = tr_synchronicity_integrated_preservation
             }
         }
         modifier = {
@@ -43,7 +43,7 @@ virtual_admin_cap_machine = {
         potential = {
             exists = owner
             owner = {
-                has_swapped_tradition = tr_synchronicity_integrated_preservation
+                has_active_tradition = tr_synchronicity_integrated_preservation
             }
         }
         modifier = {

@@ -47,7 +47,7 @@ synapse_drone = {
         potential = {
             exists = owner
             owner = {
-                has_swapped_tradition = tr_synchronicity_instinctive_synchronization
+                has_active_tradition = tr_synchronicity_instinctive_synchronization
             }
         }
         modifier = {
@@ -82,6 +82,10 @@ synapse_drone = {
                 has_trait = trait_traditional
                 has_trait = trait_robot_propaganda_machines
             }
+        }
+        modifier = {
+            factor = 1.5
+            has_trait = trait_necrophage
         }
     }
 }

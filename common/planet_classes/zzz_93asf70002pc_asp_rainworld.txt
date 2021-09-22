@@ -1,7 +1,7 @@
 pc_asp_rainworld = {
     entity = "asp_rainworld_planet"
     entity_scale = @planet_standard_scale
-    icon_frame = 6
+    icon = GFX_planet_type_ocean
     picture = pc_ocean
     climate = "wet"
     atmosphere_color = hsv {

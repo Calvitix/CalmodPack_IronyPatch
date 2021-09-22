@@ -25,6 +25,9 @@ building_food_processing_facility = {
         buildings_simple_allow = yes
         str_food_processing_allow = yes
     }
+    planet_modifier = {
+        planet_farmers_food_produces_add = 1
+    }
     triggered_planet_modifier = {
         potential = {
             exists = owner
@@ -80,9 +83,6 @@ building_food_processing_facility = {
             job_starnet_spice_melange_farmer_add = 1
             job_starnet_spice_melange_antifarmer_add = -1
         }
-    }
-    triggered_desc = {
-        text = building_food_processing_facility_effect_desc
     }
     triggered_desc = {
         trigger = {

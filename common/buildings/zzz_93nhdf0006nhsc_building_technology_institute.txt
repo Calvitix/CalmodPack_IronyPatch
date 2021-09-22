@@ -1,8 +1,10 @@
 nhsc_building_technology_institute = {
     base_buildtime = 360
-    base_cap_amount = 1
     icon = nhsc_building_technology_institute
     category = research
+    empire_limit = {
+        base = 1
+    }
     potential = {
         NOT = {
             has_modifier = slave_colony
@@ -13,17 +15,6 @@ nhsc_building_technology_institute = {
     }
     allow = {
         has_major_upgraded_capital = yes
-        exists = owner
-        owner = {
-            NOT = {
-                any_owned_planet = {
-                    has_building = nhsc_building_technology_institute
-                }
-            }
-            NOT = {
-                has_country_flag = nhsc_technology_institute_queued
-            }
-        }
     }
     resources = {
         category = planet_buildings
@@ -134,21 +125,6 @@ nhsc_building_technology_institute = {
     show_tech_unlock_if = {
         NOT = {
             has_global_flag = ESC_tech_institute_forbidden
-        }
-    }
-    on_queued = {
-        owner = {
-            set_country_flag = nhsc_technology_institute_queued
-        }
-    }
-    on_unqueued = {
-        owner = {
-            remove_country_flag = nhsc_technology_institute_queued
-        }
-    }
-    on_built = {
-        owner = {
-            remove_country_flag = nhsc_technology_institute_queued
         }
     }
     prerequisites = {

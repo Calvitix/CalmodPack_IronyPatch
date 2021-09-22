@@ -1,7 +1,7 @@
 pc_red_toxic = {
     entity = "red_toxic_planet"
     entity_scale = @planet_standard_scale
-    icon_frame = 12
+    icon = GFX_red_toxic_icon
     atmosphere_color = hsv {
         0.99
         0.45

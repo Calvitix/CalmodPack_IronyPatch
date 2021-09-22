@@ -43,10 +43,4 @@ district_mf_chem = {
             job_translucer_drone_add = 1
         }
     }
-    triggered_desc = {
-        text = chem_distict_desc
-    }
-    ai_weight = {
-        weight = 1
-    }
 }

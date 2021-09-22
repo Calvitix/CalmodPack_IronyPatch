@@ -1,4 +1,18 @@
 building_mineral_purification_plant = {
+    desc = {
+        trigger = {
+            NOT = {
+                is_planet_class = pc_shattered_ring_habitable
+            }
+        }
+        text = building_mineral_purification_plant_desc
+    }
+    desc = {
+        trigger = {
+            is_planet_class = pc_shattered_ring_habitable
+        }
+        text = building_scrap_processing_plant_desc
+    }
     base_buildtime = @b1_time
     base_cap_amount = 1
     category = resource
@@ -45,7 +59,7 @@ building_mineral_purification_plant = {
         str_mineral_purification_allow = yes
     }
     planet_modifier = {
-        planet_miners_minerals_produces_mult = 0.15
+        planet_miners_minerals_produces_add = 1
     }
     triggered_planet_modifier = {
         potential = {
@@ -62,6 +76,9 @@ building_mineral_purification_plant = {
     }
     triggered_planet_modifier = {
         potential = {
+            NOT = {
+                is_planet_class = pc_shattered_ring_habitable
+            }
             exists = owner
             owner = {
                 is_regular_empire = yes
@@ -74,6 +91,9 @@ building_mineral_purification_plant = {
     }
     triggered_planet_modifier = {
         potential = {
+            NOT = {
+                is_planet_class = pc_shattered_ring_habitable
+            }
             exists = owner
             owner = {
                 is_fallen_empire_spiritualist = yes
@@ -85,6 +105,9 @@ building_mineral_purification_plant = {
     }
     triggered_planet_modifier = {
         potential = {
+            NOT = {
+                is_planet_class = pc_shattered_ring_habitable
+            }
             exists = owner
             owner = {
                 is_gestalt = yes
@@ -92,6 +115,30 @@ building_mineral_purification_plant = {
         }
         modifier = {
             job_mining_drone_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            is_planet_class = pc_shattered_ring_habitable
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            job_scrap_miner_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            is_planet_class = pc_shattered_ring_habitable
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_scrap_miner_drone_add = 1
         }
     }
     triggered_planet_modifier = {
@@ -112,6 +159,7 @@ building_mineral_purification_plant = {
                 is_planet_class = pc_machine
                 is_planet_class = pc_hive
                 is_planet_class = pc_city
+                is_planet_class = pc_shattered_ring_habitable
             }
         }
         modifier = {
@@ -143,10 +191,10 @@ building_mineral_purification_plant = {
         building_mineral_purification_hub
     }
     triggered_desc = {
-        text = building_mineral_purification_plant_effect_desc
-    }
-    triggered_desc = {
         trigger = {
+            NOT = {
+                is_planet_class = pc_shattered_ring_habitable
+            }
             exists = owner
             owner = {
                 is_gestalt = yes
@@ -156,6 +204,9 @@ building_mineral_purification_plant = {
     }
     triggered_desc = {
         trigger = {
+            NOT = {
+                is_planet_class = pc_shattered_ring_habitable
+            }
             exists = owner
             owner = {
                 is_gestalt = no
@@ -166,12 +217,35 @@ building_mineral_purification_plant = {
     }
     triggered_desc = {
         trigger = {
+            NOT = {
+                is_planet_class = pc_shattered_ring_habitable
+            }
             exists = owner
             owner = {
                 is_fallen_empire_spiritualist = yes
             }
         }
         text = job_fe_acolyte_mine_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            is_planet_class = pc_shattered_ring_habitable
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = job_scrap_miner_drone_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            is_planet_class = pc_shattered_ring_habitable
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        text = job_scrap_miner_effect_desc
     }
     ai_resource_production = {
         minerals = 3

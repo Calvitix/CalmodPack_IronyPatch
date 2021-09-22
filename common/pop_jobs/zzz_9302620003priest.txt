@@ -168,6 +168,22 @@ priest = {
         }
         modifier = {
             factor = 1.5
+            has_trait = trait_void_dweller_1
+            exists = planet
+            planet = {
+                is_planet_class = pc_habitat
+            }
+        }
+        modifier = {
+            factor = 0.85
+            has_trait = trait_void_dweller_1
+            exists = planet
+            planet = {
+                is_artificial = no
+            }
+        }
+        modifier = {
+            factor = 1.5
             has_trait = trait_necrophage
         }
     }

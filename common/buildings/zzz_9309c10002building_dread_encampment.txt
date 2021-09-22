@@ -16,10 +16,10 @@ building_dread_encampment = {
         has_upgraded_capital = yes
     }
     army_modifier = {
-        army_starting_experience_add = 110
+        army_starting_experience_add = 100
     }
     planet_modifier = {
-        job_necromancer_add = 1
+        job_necromancer_add = 2
     }
     resources = {
         category = planet_buildings
@@ -29,12 +29,6 @@ building_dread_encampment = {
         upkeep = {
             energy = @b1_upkeep
         }
-    }
-    prerequisites = {
-        "tech_centralized_command"
-    }
-    show_tech_unlock_if = {
-        has_valid_civic = civic_reanimated_armies
     }
     triggered_desc = {
         trigger = {

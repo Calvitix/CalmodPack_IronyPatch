@@ -2,7 +2,7 @@ pc_melted_frozen = {
     entity = "melted_frozen_planet"
     picture = pc_melted_frozen
     entity_scale = @planet_standard_scale
-    icon_frame = 6
+    icon = GFX_melted_frozen_icon
     atmosphere_color = hsv {
         0.58
         0.5

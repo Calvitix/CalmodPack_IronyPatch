@@ -182,15 +182,6 @@ dimensional_portal_researcher_gestalt = {
             }
             consumer_goods = 3
         }
-        upkeep = {
-            trigger = {
-                exists = owner
-                owner = {
-                    has_edict = research_subsidies
-                }
-            }
-            energy = 1
-        }
     }
     weight = {
         weight = @complex_drone_job_weight

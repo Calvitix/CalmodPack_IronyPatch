@@ -1,7 +1,7 @@
 pc_ehof_cplanet = {
     entity = "ehof_cplanet_real_entity"
     entity_scale = @planet_standard_scale
-    icon_frame = 23
+    icon = GFX_planet_type_black_hole
     atmosphere_color = hsv {
         0
         0

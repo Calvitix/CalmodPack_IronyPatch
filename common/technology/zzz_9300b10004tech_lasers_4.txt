@@ -1,0 +1,89 @@
+tech_lasers_4 = {
+    area = physics
+    cost = @tier3cost2
+    tier = 3
+    category = {
+        particles
+    }
+    ai_update_type = military
+    prerequisites = {
+        "tech_lasers_3"
+    }
+    weight = @tier3weight2
+    gateway = energy_weapons
+    weight_modifier = {
+        modifier = {
+            factor = 10
+            is_preferred_weapons = weapon_type_energy
+            has_two_weapons_2 = no
+        }
+        modifier = {
+            factor = 0.1
+            has_two_weapons_2 = yes
+        }
+        modifier = {
+            factor = 0.1
+            d_has_crystals = no
+        }
+        modifier = {
+            factor = 1.25
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.5
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 20000
+            NOT = {
+                is_preferred_weapons = weapon_type_kinetic
+            }
+            has_basic_weapon_2 = no
+        }
+        modifier = {
+            factor = 20000
+            has_basic_weapon_2 = yes
+            has_two_weapons_2 = no
+            NOT = {
+                is_preferred_weapons = weapon_type_kinetic
+            }
+            OR = {
+                is_preferred_weapons = weapon_type_energy
+                has_technology = tech_autocannons_2
+            }
+        }
+        modifier = {
+            factor = 0.01
+            OR = {
+                is_preferred_weapons = weapon_type_kinetic
+                is_preferred_weapons = weapon_type_explosive
+                has_technology = tech_disruptors_2
+                has_two_weapons_2 = yes
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.5
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+    }
+}

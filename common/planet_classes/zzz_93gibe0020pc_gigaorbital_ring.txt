@@ -4,8 +4,7 @@ pc_gigaorbital_ring = {
     ringworld = yes
     preview_entity = "ringworld_01_damaged_full_entity"
     picture = pc_orbital_elysium
-    tile_set = pc_continental
-    icon_frame = 21
+    icon = GFX_elysium_icon
     habitat = yes
     atmosphere_color = hsv {
         0

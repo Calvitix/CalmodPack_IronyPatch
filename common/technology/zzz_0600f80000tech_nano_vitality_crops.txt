@@ -11,7 +11,7 @@ tech_nano_vitality_crops = {
     weight = @tier3weight1
     modifier = {
         planet_farmers_food_produces_mult = 0.2
-        starbase_constructions_food_produces_mult = 0.2
+        starbase_constructions_food_produces_mult = 0.1
     }
     weight_modifier = {
         modifier = {

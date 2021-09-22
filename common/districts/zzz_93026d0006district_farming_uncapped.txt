@@ -4,10 +4,16 @@ district_farming_uncapped = {
     icon = district_farming
     is_capped_by_modifier = no
     show_on_uncolonized = {
-        uses_district_set = hive_world
+        OR = {
+            uses_district_set = hive_world
+            uses_district_set = shattered_ring_world
+        }
     }
     potential = {
-        uses_district_set = hive_world
+        OR = {
+            uses_district_set = hive_world
+            uses_district_set = shattered_ring_world
+        }
     }
     allow = {
         NOT = {
@@ -23,6 +29,7 @@ district_farming_uncapped = {
     conversion_ratio = 1
     convert_to = {
         district_farming
+        district_rw_farming
     }
     resources = {
         category = planet_districts

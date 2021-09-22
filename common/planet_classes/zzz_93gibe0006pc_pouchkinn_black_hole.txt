@@ -1,5 +1,6 @@
 pc_pouchkinn_black_hole = {
     entity = "pouchhole_giga_entity"
+    icon = GFX_planet_type_black_hole
     entity_scale = 5
     picture = pc_black_hole
     atmosphere_color = hsv {

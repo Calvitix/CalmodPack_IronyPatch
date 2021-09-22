@@ -1,9 +1,8 @@
 pc_necrohive = {
     entity = "necrohive_planet"
     picture = pc_necrohive
-    tile_set = pc_infested
     entity_scale = @planet_standard_scale
-    icon_frame = 16
+    icon = GFX_planet_type_necrohive
     atmosphere_color = hsv {
         0.75
         0.2
