@@ -14,11 +14,8 @@ building_temple = {
         NOT = {
             has_modifier = slave_colony
         }
-        OR = {
-            owner = {
-                is_ai = no
-            }
-            free_building_slots > 0
+        owner = {
+            is_ai = no
         }
     }
     destroy_trigger = {

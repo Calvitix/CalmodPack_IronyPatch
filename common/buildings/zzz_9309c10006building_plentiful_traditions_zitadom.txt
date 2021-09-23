@@ -54,6 +54,15 @@ building_plentiful_traditions_zitadom = {
     }
     resources = {
         category = planet_buildings
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_active_tradition = tr_unyielding_resistance_is_frugal
+                }
+            }
+            unity = 3
+        }
         cost = {
             minerals = 600
             volatile_motes = 75
