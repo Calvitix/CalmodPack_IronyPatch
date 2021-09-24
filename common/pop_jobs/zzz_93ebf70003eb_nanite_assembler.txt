@@ -15,6 +15,7 @@ eb_nanite_assembler = {
         category = planet_eb_nanite
         produces = {
             nanites = 2
+            waste = 1
         }
         upkeep = {
             minerals = 25

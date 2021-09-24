@@ -1,6 +1,5 @@
 eco_building_waste_recovery = {
-    base_buildtime = 360
-    base_cap_amount = 1
+    base_buildtime = @b1_time
     category = amenity
     triggered_planet_modifier = {
         potential = {
@@ -10,7 +9,7 @@ eco_building_waste_recovery = {
             }
         }
         modifier = {
-            job_waste_drone_add = 2
+            job_waste_drone_add = 3
         }
     }
     triggered_planet_modifier = {
@@ -21,7 +20,7 @@ eco_building_waste_recovery = {
             }
         }
         modifier = {
-            job_waste_drone_add = 2
+            job_waste_drone_add = 3
         }
     }
     triggered_planet_modifier = {
@@ -32,7 +31,7 @@ eco_building_waste_recovery = {
             }
         }
         modifier = {
-            job_waste_handler_add = 2
+            job_waste_handler_add = 3
         }
     }
     resources = {
@@ -55,8 +54,7 @@ eco_building_waste_recovery = {
             minerals = 400
         }
         upkeep = {
-            waste = 20
-            energy = 1
+            energy = @b1_upkeep
         }
     }
     upgrades = {

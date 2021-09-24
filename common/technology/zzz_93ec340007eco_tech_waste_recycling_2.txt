@@ -11,8 +11,7 @@ eco_tech_waste_recycling_2 = {
     }
     weight = @tier4weight2
     modifier = {
-        planet_waste_produces_mult = 0.2
-        description = eco_tech_waste_recycling_tooltip
+        description = eco_tech_waste_recycling_2_tooltip
     }
     weight_modifier = {
         modifier = {

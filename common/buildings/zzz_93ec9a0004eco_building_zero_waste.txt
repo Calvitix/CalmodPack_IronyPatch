@@ -5,9 +5,6 @@ eco_building_zero_waste = {
     allow = {
         has_fully_upgraded_capital = yes
     }
-    planet_modifier = {
-        planet_waste_waste_produces_add = -15
-    }
     triggered_planet_modifier = {
         potential = {
             exists = owner
@@ -16,8 +13,8 @@ eco_building_zero_waste = {
             }
         }
         modifier = {
-            job_waste_overseer_add = 2
-            job_waste_drone_add = 6
+            job_waste_overseer_add = 1
+            job_waste_drone_add = 12
         }
     }
     triggered_planet_modifier = {
@@ -28,8 +25,8 @@ eco_building_zero_waste = {
             }
         }
         modifier = {
-            job_waste_overseer_add = 2
-            job_waste_drone_add = 6
+            job_waste_overseer_add = 1
+            job_waste_drone_add = 12
         }
     }
     triggered_planet_modifier = {
@@ -40,8 +37,8 @@ eco_building_zero_waste = {
             }
         }
         modifier = {
-            job_waste_manager_add = 2
-            job_waste_handler_add = 6
+            job_waste_manager_add = 1
+            job_waste_handler_add = 12
         }
     }
     resources = {
@@ -54,7 +51,7 @@ eco_building_zero_waste = {
             }
             alloys = 80
             minerals = 1000
-            sr_dark_matter = 100
+            exotic_gases = @b2_rare_cost
         }
         cost = {
             trigger = {
@@ -66,9 +63,10 @@ eco_building_zero_waste = {
             sr_dark_matter = 100
         }
         upkeep = {
-            waste = 100
             energy = 8
-            sr_dark_matter = 1
+            rare_crystals = @b2_rare_upkeep
+            volatile_motes = @b2_rare_upkeep
+            exotic_gases = @b2_rare_upkeep
         }
     }
     prerequisites = {
@@ -81,7 +79,7 @@ eco_building_zero_waste = {
                 is_regular_empire = yes
             }
         }
-        text = eco_building_waste_effect
+        text = eco_building_waste_2_effect
     }
     triggered_desc = {
         trigger = {
@@ -90,7 +88,7 @@ eco_building_zero_waste = {
                 is_hive_empire = yes
             }
         }
-        text = eco_building_waste_gestalt_effect
+        text = eco_building_waste_2_gestalt_effect
     }
     triggered_desc = {
         trigger = {
@@ -99,7 +97,7 @@ eco_building_zero_waste = {
                 is_machine_empire = yes
             }
         }
-        text = eco_building_waste_gestalt_effect
+        text = eco_building_waste_2_gestalt_effect
     }
     ai_weight = {
         weight = 0.5

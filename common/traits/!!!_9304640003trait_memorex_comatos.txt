@@ -6,6 +6,7 @@ trait_memorex_comatos = {
     randomized = no
     modification = no
     forced_happiness = yes
+    infertile = yes
     allowed_archetypes = {
         BIOLOGICAL
         LITHOID

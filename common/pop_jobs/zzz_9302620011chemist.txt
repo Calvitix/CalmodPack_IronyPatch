@@ -16,6 +16,7 @@ chemist = {
         category = planet_chemists
         produces = {
             volatile_motes = 2
+            waste = 1
         }
         produces = {
             trigger = {

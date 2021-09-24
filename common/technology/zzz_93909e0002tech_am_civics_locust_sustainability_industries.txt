@@ -11,7 +11,7 @@ tech_am_civics_locust_sustainability_industries = {
     is_rare = yes
     icon = "tech_atmospheric_manipulation"
     potential = {
-        has_valid_civic = civic_am_civics_locust_capitalism
+        has_origin = origin_am_civics_locust_capitalism
     }
     modifier = {
         description = tech_am_civics_locust_sustainability_industries_effect

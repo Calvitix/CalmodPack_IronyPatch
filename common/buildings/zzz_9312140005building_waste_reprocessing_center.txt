@@ -4,12 +4,10 @@ building_waste_reprocessing_center = {
     base_cap_amount = 1
     can_build = yes
     can_demolish = yes
+    category = amenity
     potential = {
         owner = {
             has_country_flag = bought_waste_reprocessing_center
-        }
-        NOT = {
-            has_modifier = slave_colony
         }
     }
     planet_modifier = {

@@ -16,6 +16,7 @@ translucer = {
         category = planet_translucers
         produces = {
             rare_crystals = 2
+            waste = 1
         }
         produces = {
             trigger = {

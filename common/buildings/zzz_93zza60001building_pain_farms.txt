@@ -46,7 +46,7 @@ building_pain_farms = {
                 NOT = {
                     any_owned_pop = {
                         has_slavery_type = {
-                            country = prev
+                            country = prev.owner
                             type = slavery_livestock
                         }
                     }
@@ -65,7 +65,7 @@ building_pain_farms = {
             planet = {
                 any_owned_pop = {
                     has_slavery_type = {
-                        country = prev
+                        country = prev.owner
                         type = slavery_livestock
                     }
                 }
@@ -141,6 +141,17 @@ building_pain_farms = {
         }
         upkeep = {
             energy = 2
+        }
+    }
+    ai_resource_production = {
+        food = 10
+        trigger = {
+            any_owned_pop = {
+                has_slavery_type = {
+                    country = prev.owner
+                    type = slavery_livestock
+                }
+            }
         }
     }
     prerequisites = {

@@ -12,8 +12,8 @@ ranger_drone = {
         category = planet_ranger
         produces = {
             waste = -30
-            society_research = 1
             food = 1
+            society_research = 1
         }
     }
     planet_modifier = {

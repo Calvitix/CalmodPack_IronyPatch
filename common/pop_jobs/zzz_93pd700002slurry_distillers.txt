@@ -17,6 +17,7 @@ slurry_distillers = {
         produces = {
             alloys = 1.5
             engineering_research = 6
+            waste = 1
         }
         upkeep = {
             consumer_goods = 2

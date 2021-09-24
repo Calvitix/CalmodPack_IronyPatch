@@ -16,6 +16,7 @@ gas_refiner = {
         category = planet_refiners
         produces = {
             exotic_gases = 2
+            waste = 1
         }
         produces = {
             trigger = {

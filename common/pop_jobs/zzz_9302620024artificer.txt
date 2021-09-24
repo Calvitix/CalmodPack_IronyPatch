@@ -22,6 +22,7 @@ artificer = {
         produces = {
             consumer_goods = 7
             engineering_research = 1.1
+            waste = 1
         }
         upkeep = {
             minerals = 6

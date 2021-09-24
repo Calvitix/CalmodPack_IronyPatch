@@ -17,6 +17,7 @@ electrodepositionist = {
         produces = {
             alloys = 1.5
             minerals = 4
+            waste = 1
         }
         upkeep = {
             consumer_goods = 1

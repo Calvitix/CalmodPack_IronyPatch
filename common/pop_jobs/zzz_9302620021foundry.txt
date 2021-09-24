@@ -18,6 +18,7 @@ foundry = {
         category = planet_metallurgists
         produces = {
             alloys = 3
+            waste = 1
         }
         produces = {
             trigger = {

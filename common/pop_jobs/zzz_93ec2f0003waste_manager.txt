@@ -14,7 +14,7 @@ waste_manager = {
                     has_valid_civic = civic_environmentalist
                 }
             }
-            unity = 2
+            unity = 1
         }
         produces = {
             waste = -80
@@ -32,7 +32,7 @@ waste_manager = {
             }
         }
         modifier = {
-            trade_value_add = 2
+            trade_value_add = 1
         }
     }
     triggered_planet_modifier = {

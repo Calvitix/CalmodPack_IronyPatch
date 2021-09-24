@@ -9,14 +9,6 @@ park_ranger = {
     resources = {
         category = planet_ranger
         produces = {
-            trigger = {
-                owner = {
-                    has_valid_civic = civic_environmentalist
-                }
-            }
-            unity = 1
-        }
-        produces = {
             waste = -30
             unity = 1
             society_research = 1
@@ -28,6 +20,17 @@ park_ranger = {
     planet_modifier = {
         planet_amenities_add = 2
         planet_crime_add = -5
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_valid_civic = civic_environmentalist
+            }
+        }
+        modifier = {
+            planet_stability_add = 1
+        }
     }
     triggered_planet_modifier = {
         potential = {

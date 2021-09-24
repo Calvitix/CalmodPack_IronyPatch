@@ -17,6 +17,7 @@ bluelotus_technician = {
         category = planet_metallurgists
         produces = {
             alloys = 4
+            waste = 1
         }
         upkeep = {
             trigger = {

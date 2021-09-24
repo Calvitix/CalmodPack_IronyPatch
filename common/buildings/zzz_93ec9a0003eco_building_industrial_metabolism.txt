@@ -1,12 +1,9 @@
 eco_building_industrial_metabolism = {
-    base_buildtime = 600
+    base_buildtime = @b3_time
     can_build = no
     category = amenity
     allow = {
         has_major_upgraded_capital = yes
-    }
-    planet_modifier = {
-        planet_waste_waste_produces_add = -10
     }
     triggered_planet_modifier = {
         potential = {
@@ -16,8 +13,7 @@ eco_building_industrial_metabolism = {
             }
         }
         modifier = {
-            job_waste_overseer_add = 1
-            job_waste_drone_add = 5
+            job_waste_drone_add = 9
         }
     }
     triggered_planet_modifier = {
@@ -28,8 +24,7 @@ eco_building_industrial_metabolism = {
             }
         }
         modifier = {
-            job_waste_overseer_add = 1
-            job_waste_drone_add = 5
+            job_waste_drone_add = 9
         }
     }
     triggered_planet_modifier = {
@@ -40,8 +35,7 @@ eco_building_industrial_metabolism = {
             }
         }
         modifier = {
-            job_waste_manager_add = 1
-            job_waste_handler_add = 5
+            job_waste_handler_add = 9
         }
     }
     resources = {
@@ -54,6 +48,7 @@ eco_building_industrial_metabolism = {
             }
             alloys = 40
             minerals = 800
+            rare_crystals = @b2_rare_cost
         }
         cost = {
             trigger = {
@@ -62,10 +57,12 @@ eco_building_industrial_metabolism = {
                 }
             }
             minerals = 800
+            rare_crystals = @b2_rare_cost
         }
         upkeep = {
-            waste = 60
             energy = 6
+            volatile_motes = @b2_rare_upkeep
+            rare_crystals = @b2_rare_upkeep
         }
     }
     upgrades = {

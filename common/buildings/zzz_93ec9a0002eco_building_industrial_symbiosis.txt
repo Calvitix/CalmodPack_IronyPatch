@@ -5,9 +5,6 @@ eco_building_industrial_symbiosis = {
     allow = {
         has_upgraded_capital = yes
     }
-    planet_modifier = {
-        planet_waste_waste_produces_add = -5
-    }
     triggered_planet_modifier = {
         potential = {
             exists = owner
@@ -16,8 +13,7 @@ eco_building_industrial_symbiosis = {
             }
         }
         modifier = {
-            job_waste_overseer_add = 1
-            job_waste_drone_add = 3
+            job_waste_drone_add = 6
         }
     }
     triggered_planet_modifier = {
@@ -28,8 +24,7 @@ eco_building_industrial_symbiosis = {
             }
         }
         modifier = {
-            job_waste_overseer_add = 1
-            job_waste_drone_add = 3
+            job_waste_drone_add = 6
         }
     }
     triggered_planet_modifier = {
@@ -40,8 +35,7 @@ eco_building_industrial_symbiosis = {
             }
         }
         modifier = {
-            job_waste_manager_add = 1
-            job_waste_handler_add = 3
+            job_waste_handler_add = 6
         }
     }
     resources = {
@@ -54,6 +48,7 @@ eco_building_industrial_symbiosis = {
             }
             alloys = 20
             minerals = 600
+            volatile_motes = @b2_rare_cost
         }
         cost = {
             trigger = {
@@ -62,10 +57,11 @@ eco_building_industrial_symbiosis = {
                 }
             }
             minerals = 600
+            volatile_motes = @b2_rare_cost
         }
         upkeep = {
-            waste = 40
             energy = 4
+            volatile_motes = @b2_rare_upkeep
         }
     }
     upgrades = {
