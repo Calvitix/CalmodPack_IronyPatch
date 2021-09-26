@@ -13,7 +13,7 @@ eco_building_industrial_metabolism = {
             }
         }
         modifier = {
-            job_waste_drone_add = 9
+            job_waste_drone_add = 6
         }
     }
     triggered_planet_modifier = {
@@ -24,7 +24,7 @@ eco_building_industrial_metabolism = {
             }
         }
         modifier = {
-            job_waste_drone_add = 9
+            job_waste_drone_add = 6
         }
     }
     triggered_planet_modifier = {
@@ -35,7 +35,7 @@ eco_building_industrial_metabolism = {
             }
         }
         modifier = {
-            job_waste_handler_add = 9
+            job_waste_handler_add = 6
         }
     }
     resources = {

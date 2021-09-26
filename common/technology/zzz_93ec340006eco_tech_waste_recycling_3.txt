@@ -6,7 +6,7 @@ eco_tech_waste_recycling_3 = {
         biology
     }
     prerequisites = {
-        "eco_tech_waste_recycling_2"
+        "eco_tech_waste_processing_3"
     }
     weight = @tier5weight1
     is_rare = yes

@@ -9,9 +9,9 @@ gpm_orbital_researcher = {
     resources = {
         category = planet_researchers
         produces = {
-            physics_research = 4
-            engineering_research = 4
-            society_research = 4
+            physics_research = 5
+            engineering_research = 5
+            society_research = 5
         }
         upkeep = {
             consumer_goods = 2

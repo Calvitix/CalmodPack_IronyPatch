@@ -13,7 +13,7 @@ eco_building_industrial_symbiosis = {
             }
         }
         modifier = {
-            job_waste_drone_add = 6
+            job_waste_drone_add = 4
         }
     }
     triggered_planet_modifier = {
@@ -24,7 +24,7 @@ eco_building_industrial_symbiosis = {
             }
         }
         modifier = {
-            job_waste_drone_add = 6
+            job_waste_drone_add = 4
         }
     }
     triggered_planet_modifier = {
@@ -35,7 +35,7 @@ eco_building_industrial_symbiosis = {
             }
         }
         modifier = {
-            job_waste_handler_add = 6
+            job_waste_handler_add = 4
         }
     }
     resources = {
@@ -60,7 +60,7 @@ eco_building_industrial_symbiosis = {
             volatile_motes = @b2_rare_cost
         }
         upkeep = {
-            energy = 4
+            energy = @b2_upkeep
             volatile_motes = @b2_rare_upkeep
         }
     }

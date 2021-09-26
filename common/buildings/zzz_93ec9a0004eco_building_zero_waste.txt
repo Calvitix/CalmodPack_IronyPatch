@@ -14,7 +14,7 @@ eco_building_zero_waste = {
         }
         modifier = {
             job_waste_overseer_add = 1
-            job_waste_drone_add = 12
+            job_waste_drone_add = 7
         }
     }
     triggered_planet_modifier = {
@@ -26,7 +26,7 @@ eco_building_zero_waste = {
         }
         modifier = {
             job_waste_overseer_add = 1
-            job_waste_drone_add = 12
+            job_waste_drone_add = 7
         }
     }
     triggered_planet_modifier = {
@@ -38,7 +38,7 @@ eco_building_zero_waste = {
         }
         modifier = {
             job_waste_manager_add = 1
-            job_waste_handler_add = 12
+            job_waste_handler_add = 7
         }
     }
     resources = {

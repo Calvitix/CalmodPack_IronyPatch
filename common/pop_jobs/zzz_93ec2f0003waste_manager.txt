@@ -9,6 +9,17 @@ waste_manager = {
     resources = {
         category = planet_waste
         produces = {
+            waste = -62
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_tradition = tr_environmentalism_waste_management
+                }
+            }
+            waste = -10
+        }
+        produces = {
             trigger = {
                 owner = {
                     has_valid_civic = civic_environmentalist
@@ -16,13 +27,9 @@ waste_manager = {
             }
             unity = 1
         }
-        produces = {
-            waste = -80
-            alloys = 1
-            consumer_goods = 2
-        }
     }
     planet_modifier = {
+        planet_stability_add = 1
         planet_amenities_add = 2
     }
     triggered_planet_modifier = {

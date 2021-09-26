@@ -9,9 +9,9 @@ gpm_archaeologist = {
     resources = {
         category = planet_researchers
         produces = {
-            physics_research = 2
-            engineering_research = 2
-            society_research = 5
+            physics_research = 5
+            engineering_research = 5
+            society_research = 10
         }
         upkeep = {
             consumer_goods = 1.5

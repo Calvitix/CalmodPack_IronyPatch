@@ -9,9 +9,17 @@ park_ranger = {
     resources = {
         category = planet_ranger
         produces = {
-            waste = -30
+            waste = -22
             unity = 1
             society_research = 1
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_tradition = tr_environmentalism_conservation
+                }
+            }
+            waste = -10
         }
     }
     pop_modifier = {

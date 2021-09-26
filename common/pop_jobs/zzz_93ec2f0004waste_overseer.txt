@@ -8,8 +8,15 @@ waste_overseer = {
     resources = {
         category = planet_waste
         produces = {
-            waste = -60
-            alloys = 2
+            waste = -62
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_tradition = tr_environmentalism_waste_management
+                }
+            }
+            waste = -10
         }
         produces = {
             trigger = {
@@ -29,6 +36,7 @@ waste_overseer = {
         }
     }
     planet_modifier = {
+        planet_stability_add = 1
         planet_amenities_no_happiness_add = 2
     }
     triggered_planet_modifier = {

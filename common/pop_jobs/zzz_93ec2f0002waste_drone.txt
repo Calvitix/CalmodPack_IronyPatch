@@ -8,7 +8,15 @@ waste_drone = {
     resources = {
         category = planet_waste
         produces = {
-            waste = -40
+            waste = -42
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_tradition = tr_environmentalism_waste_management
+                }
+            }
+            waste = -10
         }
         produces = {
             trigger = {

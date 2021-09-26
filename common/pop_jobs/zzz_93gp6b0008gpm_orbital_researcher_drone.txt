@@ -9,9 +9,9 @@ gpm_orbital_researcher_drone = {
     resources = {
         category = planet_researchers
         produces = {
-            physics_research = 4
-            engineering_research = 4
-            society_research = 4
+            physics_research = 5
+            engineering_research = 5
+            society_research = 5
         }
         upkeep = {
             energy = 2

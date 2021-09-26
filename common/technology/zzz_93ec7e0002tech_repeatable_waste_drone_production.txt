@@ -15,7 +15,7 @@ tech_repeatable_waste_drone_production = {
     }
     levels = -1
     prerequisites = {
-        "eco_tech_waste_recycling_2"
+        "eco_tech_waste_processing_3"
     }
     weight = @EarlyRepeatableWeight
     weight_modifier = {
