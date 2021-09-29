@@ -80,28 +80,6 @@ district_pdhab_mil = {
         }
         text = job_soldier_effect_desc
     }
-    ai_weight = {
-        weight = 0
-        modifier = {
-            weight = 20000
-            OR = {
-                owner = {
-                    has_monthly_income = {
-                        resource = minerals
-                        value < 200
-                    }
-                }
-                planet = {
-                    has_district = district_pdhab_mil
-                }
-            }
-            NOT = {
-                planet = {
-                    has_district = district_pdhab_science
-                }
-            }
-        }
-    }
     ai_resource_production = {
         minerals = 1
         trigger = {

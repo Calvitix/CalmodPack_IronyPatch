@@ -363,24 +363,4 @@ district_archive_industrial = {
         }
         text = job_maintenance_drone_effect_desc
     }
-    ai_weight = {
-        weight = 0
-        modifier = {
-            weight = 100
-            owner = {
-                has_monthly_income = {
-                    resource = minerals
-                    value > 50
-                }
-            }
-        }
-        modifier = {
-            factor = 3
-            NOR = {
-                has_planet_flag = research_habitat
-                has_planet_flag = mining_habitat
-                has_planet_flag = energy_habitat
-            }
-        }
-    }
 }

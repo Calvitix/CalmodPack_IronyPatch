@@ -82,7 +82,7 @@ district_industrial = {
             }
         }
         modifier = {
-            planet_max_buildings_add = 0.34
+            planet_max_buildings_add = 0.68
         }
     }
     triggered_planet_modifier = {

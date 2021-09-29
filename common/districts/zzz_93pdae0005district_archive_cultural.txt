@@ -96,20 +96,6 @@ district_archive_cultural = {
         }
         text = job_culture_worker_effect_desc
     }
-    ai_weight = {
-        weight = 0
-        modifier = {
-            weight = 200
-            owner = {
-                has_valid_civic = civic_machine_servitor
-            }
-            NOT = {
-                planet = {
-                    has_district = district_hab_cultural
-                }
-            }
-        }
-    }
     ai_resource_production = {
         unity = 1
         trigger = {

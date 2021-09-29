@@ -90,32 +90,4 @@ district_archive_energy = {
         }
         text = job_fe_acolyte_generator_effect_desc
     }
-    ai_weight = {
-        weight = 0
-        modifier = {
-            weight = 250
-            OR = {
-                owner = {
-                    has_monthly_income = {
-                        resource = energy
-                        value < 200
-                    }
-                }
-                planet = {
-                    has_district = district_hab_energy
-                }
-            }
-            NOT = {
-                planet = {
-                    has_district = district_hab_science
-                }
-            }
-        }
-    }
-    ai_resource_production = {
-        energy = 1
-        trigger = {
-            always = yes
-        }
-    }
 }

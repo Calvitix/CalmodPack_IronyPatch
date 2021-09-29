@@ -35,6 +35,7 @@ district_arcology_organic_housing = {
     }
     planet_modifier = {
         job_bio_trophy_add = 15
+        planet_max_buildings_add = 4
     }
     triggered_desc = {
         trigger = {
