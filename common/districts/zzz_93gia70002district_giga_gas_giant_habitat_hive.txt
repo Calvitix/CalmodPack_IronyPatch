@@ -66,7 +66,7 @@ district_giga_gas_giant_habitat_hive = {
         potential = {
             exists = owner
             owner = {
-                has_swapped_tradition = tr_prosperity_extended_hives
+                has_active_tradition = tr_prosperity_extended_hives
             }
         }
         modifier = {
