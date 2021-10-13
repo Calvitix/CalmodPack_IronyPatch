@@ -4,11 +4,65 @@ building_mem_planetary_shield_generator_orila = {
     can_demolish = yes
     position_priority = 100
     category = army
-    allow = {
+    potential = {
         has_global_flag = mem_more_events_mod
     }
     resources = {
         category = planet_buildings
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            job_soldier_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_warrior_drone_add = 1
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = job_warrior_drone_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        text = job_soldier_effect_desc
+    }
+    planet_modifier = {
+        planet_orbital_bombardment_damage = -0.7
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_country_flag = moon_bump_shield_completed
+            }
+        }
+        modifier = {
+            planet_orbital_bombardment_damage = -0.25
+        }
     }
     triggered_planet_modifier = {
         potential = {
@@ -69,20 +123,6 @@ building_mem_planetary_shield_generator_orila = {
             }
         }
         text = job_calculator_effect_desc
-    }
-    planet_modifier = {
-        planet_orbital_bombardment_damage = -0.7
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                has_country_flag = moon_bump_shield_completed
-            }
-        }
-        modifier = {
-            planet_orbital_bombardment_damage = -0.25
-        }
     }
     ai_resource_production = {
         trigger = {

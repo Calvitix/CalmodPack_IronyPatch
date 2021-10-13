@@ -8,7 +8,7 @@ building_crystal_carver = {
         }
     }
     prerequisites = {
-        "tech_mine_rare_crystals"
+        "tech_acean_mine"
     }
     allow = {
         has_upgraded_capital = yes
@@ -28,8 +28,7 @@ building_crystal_carver = {
             }
         }
         modifier = {
-            job_crystal_carver_add = 2
-            job_crystal_carver_per_pop = 0.05
+            job_crystal_carver_add = 1
         }
     }
     triggered_planet_modifier = {
@@ -40,8 +39,7 @@ building_crystal_carver = {
             }
         }
         modifier = {
-            job_crystal_hive_add = 2
-            job_crystal_hive_per_pop = 0.05
+            job_crystal_hive_add = 1
         }
     }
     triggered_planet_modifier = {
@@ -52,8 +50,7 @@ building_crystal_carver = {
             }
         }
         modifier = {
-            job_crystal_robot_add = 2
-            job_crystal_robot_per_pop = 0.05
+            job_crystal_robot_add = 1
         }
     }
     resources = {

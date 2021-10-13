@@ -44,14 +44,44 @@ district_mf_alloy = {
             exists = owner
             owner = {
                 is_machine_empire = yes
+                is_catalytic_empire = no
             }
         }
         modifier = {
             job_fabricator_add = @pdarcjobs
         }
     }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+                is_catalytic_empire = yes
+            }
+        }
+        modifier = {
+            job_catalytic_drone_add = @pdarcjobs
+        }
+    }
     triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+                is_catalytic_empire = no
+            }
+        }
         text = job_fabricator_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+                is_catalytic_empire = yes
+            }
+        }
+        text = job_catalytic_drone_effect_desc
     }
     triggered_planet_modifier = {
         potential = {

@@ -4,7 +4,6 @@ district_rw_farming = {
     show_on_uncolonized = {
         OR = {
             uses_district_set = ring_world
-            is_planet_class = pc_giga_penrose_habitable
         }
         exists = from
         from = {

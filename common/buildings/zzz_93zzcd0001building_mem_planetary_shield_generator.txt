@@ -18,32 +18,6 @@ building_mem_planetary_shield_generator = {
             planet_orbital_bombardment_damage = -0.25
         }
     }
-    resources = {
-        category = planet_buildings
-        cost = {
-            trigger = {
-                from = {
-                    is_ai = no
-                }
-            }
-            alloys = 50
-            minerals = 500
-        }
-        cost = {
-            trigger = {
-                from = {
-                    is_ai = yes
-                }
-            }
-            minerals = 500
-        }
-        upkeep = {
-            energy = 5
-        }
-    }
-    upgrades = {
-        building_mem_planetary_shield_generator_heavy
-    }
     triggered_planet_modifier = {
         potential = {
             exists = owner
@@ -104,7 +78,74 @@ building_mem_planetary_shield_generator = {
         }
         text = job_calculator_effect_desc
     }
+    resources = {
+        category = planet_buildings
+        cost = {
+            trigger = {
+                from = {
+                    is_ai = no
+                }
+            }
+            alloys = 50
+            minerals = 500
+        }
+        cost = {
+            trigger = {
+                from = {
+                    is_ai = yes
+                }
+            }
+            minerals = 500
+        }
+        upkeep = {
+            energy = 5
+        }
+    }
+    upgrades = {
+        building_mem_planetary_shield_generator_heavy
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            job_soldier_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_warrior_drone_add = 1
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = job_warrior_drone_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        text = job_soldier_effect_desc
+    }
     potential = {
+        has_global_flag = mem_more_events_mod
         planet = {
             NOT = {
                 is_planet_class = pc_asteroid
@@ -117,7 +158,6 @@ building_mem_planetary_shield_generator = {
     }
     allow = {
         has_upgraded_capital = yes
-        has_global_flag = mem_more_events_mod
     }
     prerequisites = {
         "tech_planetary_shield_generator"

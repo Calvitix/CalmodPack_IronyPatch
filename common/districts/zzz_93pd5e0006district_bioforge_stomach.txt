@@ -46,11 +46,44 @@ district_bioforge_stomach = {
             exists = owner
             owner = {
                 is_hive_empire = yes
+                is_catalytic_empire = no
             }
         }
         modifier = {
             job_alloy_drone_add = @pdarcjobs
         }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+                is_catalytic_empire = yes
+            }
+        }
+        modifier = {
+            job_catalytic_drone_add = @pdarcjobs
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+                is_catalytic_empire = no
+            }
+        }
+        text = job_alloy_drone_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+                is_catalytic_empire = yes
+            }
+        }
+        text = job_catalytic_drone_effect_desc
     }
     triggered_planet_modifier = {
         potential = {
@@ -73,8 +106,5 @@ district_bioforge_stomach = {
             }
         }
         text = job_maintenance_drone_effect_desc
-    }
-    triggered_desc = {
-        text = job_alloy_drone_effect_desc
     }
 }

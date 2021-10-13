@@ -2,7 +2,7 @@ pc_carbon = {
     entity = "carbon_planet"
     entity_scale = @planet_standard_scale
     icon = GFX_planet_type_barren
-    picture = pc_iron
+    picture = pc_carbon
     atmosphere_color = hsv {
         0.5
         0.2

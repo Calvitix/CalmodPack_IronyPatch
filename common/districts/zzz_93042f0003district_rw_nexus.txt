@@ -114,6 +114,9 @@ district_rw_nexus = {
                 }
             }
         }
-        text = arcane_generator_upkeep_desc
+        text = "arcane_generator_upkeep_desc"
+    }
+    triggered_desc = {
+        text = "job_maintenance_drone_effect_desc"
     }
 }

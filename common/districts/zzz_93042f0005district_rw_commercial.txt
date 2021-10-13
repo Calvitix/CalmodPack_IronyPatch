@@ -17,12 +17,12 @@ district_rw_commercial = {
         }
     }
     potential = {
+        uses_district_set = ring_world
         exists = owner
         owner = {
             is_gestalt = no
             is_fallen_empire = no
         }
-        uses_district_set = ring_world
         OR = {
             is_planet_class = pc_squareworld_habitable
             is_planet_class = pc_ringworld_habitable

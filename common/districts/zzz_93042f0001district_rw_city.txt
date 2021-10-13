@@ -172,7 +172,7 @@ district_rw_city = {
                 }
             }
         }
-        text = arcane_generator_upkeep_desc
+        text = "arcane_generator_upkeep_desc"
     }
     triggered_desc = {
         trigger = {
