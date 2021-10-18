@@ -1,6 +1,6 @@
 building_spawning_pool = {
     base_buildtime = @b1_time
-    base_cap_amount = 1
+    base_cap_amount = 5
     category = amenity
     potential = {
         owner = {
@@ -25,7 +25,7 @@ building_spawning_pool = {
             }
             num_buildings = {
                 type = building_spawning_pool
-                value = 0
+                value < 3
             }
         }
         modifier = {

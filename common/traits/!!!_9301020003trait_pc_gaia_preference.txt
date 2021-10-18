@@ -12,5 +12,6 @@ trait_pc_gaia_preference = {
     }
     modifier = {
         pc_gaia_habitability = 1
+        pc_ancient_habitability = 1
     }
 }

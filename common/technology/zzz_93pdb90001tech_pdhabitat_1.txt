@@ -8,6 +8,7 @@ tech_pdhabitat_1 = {
     }
     tier = 1
     prerequisites = {
+        "tech_habitat_1"
         "tech_starbase_2"
     }
     weight = @tier2weight3

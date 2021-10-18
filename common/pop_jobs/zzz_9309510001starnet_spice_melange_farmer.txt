@@ -25,6 +25,7 @@ starnet_spice_melange_farmer = {
                 }
             }
             starnet_spice_melange = 1000
+            waste = -4
         }
     }
     weight = {

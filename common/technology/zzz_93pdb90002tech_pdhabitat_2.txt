@@ -1,15 +1,16 @@
-@tier3cost1 = 4000
+@tier3cost3 = 6000
 @tier3weight1 = 65
 tech_pdhabitat_2 = {
-    cost = @tier3cost1
+    cost = @tier3cost3
     area = engineering
     category = {
         voidcraft
     }
-    tier = 2
+    tier = 3
     prerequisites = {
         "tech_pdhabitat_1"
         "tech_habitat_1"
+        tech_starbase_3
     }
     weight = @tier3weight1
     weight_modifier = {

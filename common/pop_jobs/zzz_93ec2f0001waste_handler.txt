@@ -5,6 +5,7 @@ waste_handler = {
     clothes_texture_index = 2
     possible = {
         worker_job_check_trigger = yes
+        exists = owner
         owner = {
             is_fallen_empire = no
         }
@@ -16,6 +17,7 @@ waste_handler = {
         }
         produces = {
             trigger = {
+                exists = owner
                 owner = {
                     has_tradition = tr_environmentalism_waste_management
                 }
@@ -24,6 +26,7 @@ waste_handler = {
         }
         produces = {
             trigger = {
+                exists = owner
                 owner = {
                     has_policy_flag = eco_policy_disposal
                 }
@@ -32,6 +35,7 @@ waste_handler = {
         }
         produces = {
             trigger = {
+                exists = owner
                 owner = {
                     has_policy_flag = eco_policy_material
                 }
@@ -40,6 +44,7 @@ waste_handler = {
         }
         produces = {
             trigger = {
+                exists = owner
                 owner = {
                     has_policy_flag = eco_policy_material_advanced
                 }
@@ -48,6 +53,7 @@ waste_handler = {
         }
         produces = {
             trigger = {
+                exists = owner
                 owner = {
                     has_policy_flag = eco_policy_default
                 }
@@ -56,6 +62,7 @@ waste_handler = {
         }
         produces = {
             trigger = {
+                exists = owner
                 owner = {
                     has_policy_flag = eco_policy_default_advanced
                 }
@@ -73,6 +80,7 @@ waste_handler = {
         }
         produces = {
             trigger = {
+                exists = owner
                 owner = {
                     has_valid_civic = civic_environmentalist
                 }
@@ -85,6 +93,7 @@ waste_handler = {
     }
     triggered_planet_modifier = {
         potential = {
+            exists = owner
             owner = {
                 has_policy_flag = eco_policy_reuse
             }
@@ -95,6 +104,7 @@ waste_handler = {
     }
     triggered_planet_modifier = {
         potential = {
+            exists = owner
             owner = {
                 has_valid_civic = eco_civic_scrapper
             }
@@ -128,6 +138,7 @@ waste_handler = {
                 has_trait = trait_robot_domestic_protocols
                 has_trait = trait_charismatic
             }
+            exists = owner
             owner = {
                 OR = {
                     has_policy_flag = eco_policy_reuse
@@ -142,6 +153,7 @@ waste_handler = {
     triggered_planet_modifier = {
         potential = {
             has_trait = trait_repugnant
+            exists = owner
             owner = {
                 OR = {
                     has_policy_flag = eco_policy_reuse
@@ -167,6 +179,7 @@ waste_handler = {
                 is_shackled_robot = yes
             }
             can_take_servant_job = no
+            exists = owner
             owner = {
                 has_technology = tech_droid_workers
             }
@@ -178,6 +191,7 @@ waste_handler = {
                 is_shackled_robot = yes
             }
             can_take_servant_job = no
+            exists = owner
             owner = {
                 NOT = {
                     has_technology = tech_droid_workers

@@ -1,5 +1,5 @@
 GT_shipsize_constructor_build_speed_mult = {
-    cost = 50
+    cost = 500
     area = engineering
     tier = 0
     is_rare = yes

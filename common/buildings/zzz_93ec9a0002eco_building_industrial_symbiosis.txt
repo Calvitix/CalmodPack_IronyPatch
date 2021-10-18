@@ -97,33 +97,16 @@ eco_building_industrial_symbiosis = {
         }
         text = eco_building_waste_gestalt_effect
     }
-    ai_weight = {
-        weight = 20
-        modifier = {
-            factor = 1
-            has_modifier = eco_minimal
-        }
-        modifier = {
-            factor = 10
-            has_modifier = eco_moderate
-        }
-        modifier = {
-            factor = 100
-            has_modifier = eco_heavy
-        }
-        modifier = {
-            factor = 1000
-            has_modifier = eco_extreme
-        }
-        modifier = {
-            factor = 10000
-            has_modifier = eco_catastrophic
-        }
-    }
     on_built = {
         set_planet_flag = eco_built_waste_building
     }
     on_destroy = {
         remove_planet_flag = eco_built_waste_building
+    }
+    ai_resource_production = {
+        energy = 3
+        trigger = {
+            always = yes
+        }
     }
 }

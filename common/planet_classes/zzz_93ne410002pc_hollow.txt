@@ -26,7 +26,7 @@ pc_hollow = {
     district_set = standard
     uses_alternative_skies_for_moons = no
     modifier = {
-        planet_max_districts_mult = -0.7
+        planet_max_districts_mult = -0.6
     }
     carry_cap_per_free_district = @carry_cap_normal
 }

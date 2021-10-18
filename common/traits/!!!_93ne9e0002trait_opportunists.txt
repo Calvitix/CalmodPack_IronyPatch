@@ -1,0 +1,15 @@
+trait_opportunists = {
+    cost = 0
+    potential_crossbreeding_chance = 0.33
+    initial = no
+    randomized = no
+    modification = no
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    modifier = {
+        pop_environment_tolerance = 0.3
+        pop_growth_from_immigration = 0.25
+    }
+}

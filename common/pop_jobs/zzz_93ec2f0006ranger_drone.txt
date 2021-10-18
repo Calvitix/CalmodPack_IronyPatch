@@ -30,6 +30,7 @@ ranger_drone = {
     }
     triggered_planet_modifier = {
         potential = {
+            exists = owner
             owner = {
                 has_ascension_perk = eco_ap_land_ethic_gestalt
             }

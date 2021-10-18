@@ -14,7 +14,7 @@
 @hiverobot_cumulative_penalty = 0.55
 @cumulative_penalty = 0.85
 tech_military_theory_breakthrough = {
-    cost = @tier3cost3
+    cost = @tier4cost3
     area = society
     tier = 2
     category = {

@@ -13,6 +13,7 @@ waste_manager = {
         }
         produces = {
             trigger = {
+                exists = owner
                 owner = {
                     has_tradition = tr_environmentalism_waste_management
                 }
@@ -34,6 +35,7 @@ waste_manager = {
     }
     triggered_planet_modifier = {
         potential = {
+            exists = owner
             owner = {
                 has_valid_civic = eco_civic_scrapper
             }
