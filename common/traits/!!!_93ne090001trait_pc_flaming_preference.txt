@@ -1,5 +1,5 @@
 @primary = 0.8
-@secondary = 0.6
+@secondary = 0.5
 trait_pc_flaming_preference = {
     icon = "gfx/interface/icons/traits/trait_pc_ai_preference.dds"
     modification = no

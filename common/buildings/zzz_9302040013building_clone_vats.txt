@@ -73,6 +73,10 @@ building_clone_vats = {
         category = planet_buildings
         cost = {
             trigger = {
+                exists = owner
+                owner = {
+                    is_lithoid_empire = no
+                }
                 NOR = {
                     owner = {
                         has_ascension_perk = ap_plentiful_traditions_vast_slave_procreation
@@ -87,11 +91,36 @@ building_clone_vats = {
                     }
                 }
             }
-            minerals = 500
             food = 500
         }
         cost = {
             trigger = {
+                exists = owner
+                owner = {
+                    is_lithoid_empire = yes
+                }
+                NOR = {
+                    owner = {
+                        has_ascension_perk = ap_plentiful_traditions_vast_slave_procreation
+                    }
+                    OR = {
+                        planet = {
+                            has_building = building_plentiful_traditions_advanced_slave_processing
+                        }
+                        planet = {
+                            has_building = building_slave_processing
+                        }
+                    }
+                }
+            }
+            food = 500
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_lithoid_empire = no
+                }
                 owner = {
                     has_ascension_perk = ap_plentiful_traditions_vast_slave_procreation
                 }
@@ -104,11 +133,37 @@ building_clone_vats = {
                     }
                 }
             }
-            minerals = 100
-            food = 100
+            food = 250
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_lithoid_empire = no
+                }
+                owner = {
+                    has_ascension_perk = ap_plentiful_traditions_vast_slave_procreation
+                }
+                OR = {
+                    planet = {
+                        has_building = building_plentiful_traditions_advanced_slave_processing
+                    }
+                    planet = {
+                        has_building = building_slave_processing
+                    }
+                }
+            }
+            energy = 250
+        }
+        upkeep = {
+            energy = 2
         }
         upkeep = {
             trigger = {
+                exists = owner
+                owner = {
+                    is_lithoid_empire = no
+                }
                 NOT = {
                     owner = {
                         has_ascension_perk = ap_plentiful_traditions_vast_slave_procreation
@@ -123,11 +178,36 @@ building_clone_vats = {
                     }
                 }
             }
-            energy = 2
             food = 30
         }
         upkeep = {
             trigger = {
+                exists = owner
+                owner = {
+                    is_lithoid_empire = yes
+                }
+                NOT = {
+                    owner = {
+                        has_ascension_perk = ap_plentiful_traditions_vast_slave_procreation
+                    }
+                    OR = {
+                        planet = {
+                            has_building = building_plentiful_traditions_advanced_slave_processing
+                        }
+                        planet = {
+                            has_building = building_slave_processing
+                        }
+                    }
+                }
+            }
+            minerals = 30
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_lithoid_empire = no
+                }
                 owner = {
                     has_ascension_perk = ap_plentiful_traditions_vast_slave_procreation
                 }
@@ -140,8 +220,27 @@ building_clone_vats = {
                     }
                 }
             }
-            energy = 2
             food = 15
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_lithoid_empire = yes
+                }
+                owner = {
+                    has_ascension_perk = ap_plentiful_traditions_vast_slave_procreation
+                }
+                OR = {
+                    planet = {
+                        has_building = building_plentiful_traditions_advanced_slave_processing
+                    }
+                    planet = {
+                        has_building = building_slave_processing
+                    }
+                }
+            }
+            minerals = 15
         }
     }
     triggered_desc = {
