@@ -10,7 +10,7 @@ GT_starbase_buildings_alloys_cost_add = {
     }
     weight = @tier5weight2
     modifier = {
-        starbase_buildings_alloys_cost_add = -25
+        starbase_buildings_alloys_cost_add = -20
     }
     weight_modifier = {
         modifier = {

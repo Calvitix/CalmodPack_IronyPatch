@@ -145,47 +145,6 @@ district_giga_alderson_mining = {
             job_matter_synthesizer_drone_add = 240
         }
     }
-    ai_weight = {
-        weight = 0
-        modifier = {
-            weight = 250
-            owner = {
-                has_monthly_income = {
-                    resource = minerals
-                    value < 200
-                }
-            }
-        }
-        modifier = {
-            factor = 0.01
-            OR = {
-                planet = {
-                    has_district = district_giga_alderson_generator
-                }
-                planet = {
-                    has_district = district_giga_alderson_commercial
-                }
-                planet = {
-                    has_district = district_giga_alderson_science
-                }
-                planet = {
-                    has_district = district_giga_alderson_farming
-                }
-                planet = {
-                    has_district = district_giga_alderson_admin
-                }
-                planet = {
-                    has_district = district_giga_alderson_consumer
-                }
-                planet = {
-                    has_district = district_giga_alderson_alloys
-                }
-                planet = {
-                    has_district = district_giga_alderson_leisure
-                }
-            }
-        }
-    }
     ai_resource_production = {
         minerals = 10
         trigger = {

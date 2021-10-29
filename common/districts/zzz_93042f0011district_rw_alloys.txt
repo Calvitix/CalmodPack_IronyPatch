@@ -25,6 +25,7 @@ district_rw_alloys = {
         category = planet_districts
         cost = {
             trigger = {
+                exists = from
                 from = {
                     is_ai = no
                 }
@@ -35,6 +36,7 @@ district_rw_alloys = {
         }
         cost = {
             trigger = {
+                exists = from
                 from = {
                     is_ai = yes
                 }
@@ -57,6 +59,7 @@ district_rw_alloys = {
             exists = owner
             owner = {
                 is_machine_empire = yes
+                is_catalytic_empire = no
             }
         }
         modifier = {
@@ -68,6 +71,7 @@ district_rw_alloys = {
             exists = owner
             owner = {
                 is_hive_empire = yes
+                is_catalytic_empire = no
             }
         }
         modifier = {
@@ -78,11 +82,36 @@ district_rw_alloys = {
         potential = {
             exists = owner
             owner = {
+                is_gestalt = yes
+                is_catalytic_empire = yes
+            }
+        }
+        modifier = {
+            job_catalytic_drone_add = 15
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
                 is_regular_empire = yes
+                is_catalytic_empire = no
             }
         }
         modifier = {
             job_foundry_add = 15
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+                is_catalytic_empire = yes
+            }
+        }
+        modifier = {
+            job_catalytic_technician_add = 15
         }
     }
     triggered_desc = {
@@ -100,7 +129,28 @@ district_rw_alloys = {
         trigger = {
             exists = owner
             owner = {
+                is_regular_empire = yes
+                is_catalytic_empire = no
+            }
+        }
+        text = "job_foundry_effect_desc"
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+                is_catalytic_empire = yes
+            }
+        }
+        text = "job_catalytic_technician_effect_desc"
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
                 is_machine_empire = yes
+                is_catalytic_empire = no
             }
         }
         text = "job_fabricator_effect_desc"
@@ -110,6 +160,7 @@ district_rw_alloys = {
             exists = owner
             owner = {
                 is_hive_empire = yes
+                is_catalytic_empire = no
             }
         }
         text = "job_alloy_drone_effect_desc"
@@ -118,51 +169,11 @@ district_rw_alloys = {
         trigger = {
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = yes
+                is_catalytic_empire = yes
             }
         }
-        text = "job_foundry_effect_desc"
-    }
-    ai_weight = {
-        weight = 0
-        modifier = {
-            weight = 250
-            owner = {
-                has_monthly_income = {
-                    resource = alloys
-                    value < 200
-                }
-            }
-        }
-        modifier = {
-            factor = 0.01
-            OR = {
-                planet = {
-                    has_district = district_rw_generator
-                }
-                planet = {
-                    has_district = district_rw_commercial
-                }
-                planet = {
-                    has_district = district_rw_mining
-                }
-                planet = {
-                    has_district = district_rw_science
-                }
-                planet = {
-                    has_district = district_rw_farming
-                }
-                planet = {
-                    has_district = district_rw_consumer
-                }
-                planet = {
-                    has_district = district_rw_leisure
-                }
-                planet = {
-                    has_district = district_rw_quberine
-                }
-            }
-        }
+        text = "job_catalytic_drone_effect_desc"
     }
     ai_resource_production = {
         alloys = 10

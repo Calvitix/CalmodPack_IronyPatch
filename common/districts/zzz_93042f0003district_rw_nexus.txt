@@ -30,6 +30,7 @@ district_rw_nexus = {
         category = planet_districts
         cost = {
             trigger = {
+                exists = from
                 from = {
                     is_ai = no
                 }
@@ -39,6 +40,7 @@ district_rw_nexus = {
         }
         cost = {
             trigger = {
+                exists = from
                 from = {
                     is_ai = yes
                 }
@@ -115,8 +117,5 @@ district_rw_nexus = {
             }
         }
         text = "arcane_generator_upkeep_desc"
-    }
-    triggered_desc = {
-        text = "job_maintenance_drone_effect_desc"
     }
 }

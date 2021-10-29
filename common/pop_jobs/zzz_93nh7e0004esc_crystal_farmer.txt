@@ -91,8 +91,10 @@ esc_crystal_farmer = {
         }
         modifier = {
             factor = 0.75
-            has_trait = trait_nerve_stapled
-            has_trait = trait_weak
+            OR = {
+                has_trait = trait_nerve_stapled
+                has_trait = trait_weak
+            }
         }
         modifier = {
             factor = 5

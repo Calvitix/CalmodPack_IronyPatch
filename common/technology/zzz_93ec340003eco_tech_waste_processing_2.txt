@@ -7,6 +7,8 @@ eco_tech_waste_processing_2 = {
     }
     prerequisites = {
         "eco_tech_waste_processing_1"
+        "tech_eco_simulation"
+        "tech_robotic_workers"
     }
     weight = @tier2weight3
     weight_modifier = {

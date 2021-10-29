@@ -20,7 +20,7 @@ building_am_civics_omni_police_station = {
             minerals = 800
         }
         produces = {
-            energy = 10
+            energy = 20
         }
         produces = {
             trigger = {
@@ -28,7 +28,7 @@ building_am_civics_omni_police_station = {
                     planet_crime < 20
                 }
             }
-            energy = 10
+            energy = 20
         }
     }
     triggered_desc = {

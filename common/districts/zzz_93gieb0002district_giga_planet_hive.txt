@@ -38,12 +38,10 @@ district_giga_planet_hive = {
             energy = 1
         }
     }
-    triggered_planet_modifier = {
-        modifier = {
-            planet_housing_add = 8
-            job_maintenance_drone_add = 2
-            planet_max_buildings_add = 1
-        }
+    planet_modifier = {
+        planet_housing_add = 6
+        job_maintenance_drone_add = 3
+        planet_max_buildings_add = 1
     }
     triggered_planet_modifier = {
         potential = {
@@ -104,9 +102,6 @@ district_giga_planet_hive = {
         }
     }
     triggered_desc = {
-        text = "job_maintenance_drone_effect_desc"
-    }
-    triggered_desc = {
         trigger = {
             has_planet_flag = giga_elysium
             exists = owner
@@ -125,12 +120,5 @@ district_giga_planet_hive = {
             }
         }
         text = "job_giga_preserver_drone_effect_desc"
-    }
-    ai_weight = {
-        weight = 0
-        modifier = {
-            weight = 300
-            free_housing < 1
-        }
     }
 }

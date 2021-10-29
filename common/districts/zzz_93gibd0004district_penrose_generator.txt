@@ -203,44 +203,6 @@ district_penrose_generator = {
         }
         text = "job_fe_acolyte_generator_effect_desc"
     }
-    ai_weight = {
-        weight = 0
-        modifier = {
-            weight = 250
-            owner = {
-                has_monthly_income = {
-                    resource = energy
-                    value < 200
-                }
-            }
-        }
-        modifier = {
-            factor = 0.01
-            OR = {
-                planet = {
-                    has_district = district_rw_mining
-                }
-                planet = {
-                    has_district = district_rw_science
-                }
-                planet = {
-                    has_district = district_rw_farming
-                }
-                planet = {
-                    has_district = district_rw_consumer
-                }
-                planet = {
-                    has_district = district_rw_alloys
-                }
-                planet = {
-                    has_district = district_rw_leisure
-                }
-                planet = {
-                    has_district = district_rw_quberine
-                }
-            }
-        }
-    }
     ai_resource_production = {
         energy = 10
         trigger = {

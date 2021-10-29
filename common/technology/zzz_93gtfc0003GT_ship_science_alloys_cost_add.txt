@@ -1,5 +1,5 @@
 GT_ship_science_alloys_cost_add = {
-    cost = 500
+    cost = 1000
     area = engineering
     tier = 0
     is_rare = yes
@@ -8,13 +8,14 @@ GT_ship_science_alloys_cost_add = {
     }
     prerequisites = {
         "tech_basic_science_lab_1"
+        "tech_robotic_workers"
     }
     weight = @tier4weight3
     potential = {
         is_ai = no
     }
     modifier = {
-        ship_science_alloys_cost_add = -50
+        ship_science_alloys_cost_add = -25
     }
     weight_modifier = {
         modifier = {

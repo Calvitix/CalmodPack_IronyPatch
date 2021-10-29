@@ -16,6 +16,7 @@ district_hab_housing = {
         category = planet_districts
         cost = {
             trigger = {
+                exists = from
                 from = {
                     is_ai = no
                 }
@@ -25,6 +26,7 @@ district_hab_housing = {
         }
         cost = {
             trigger = {
+                exists = from
                 from = {
                     is_ai = yes
                 }

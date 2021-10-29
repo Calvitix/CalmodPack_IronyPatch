@@ -17,6 +17,7 @@ district_arcology_housing = {
         category = planet_districts
         cost = {
             trigger = {
+                exists = from
                 from = {
                     is_ai = no
                 }
@@ -26,6 +27,7 @@ district_arcology_housing = {
         }
         cost = {
             trigger = {
+                exists = from
                 from = {
                     is_ai = yes
                 }

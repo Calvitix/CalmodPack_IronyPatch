@@ -142,53 +142,6 @@ district_giga_alderson_farming = {
         }
         text = "job_fe_acolyte_farm_effect_desc"
     }
-    ai_weight = {
-        weight = 0
-        modifier = {
-            weight = 250
-            owner = {
-                has_monthly_income = {
-                    resource = food
-                    value < 200
-                }
-            }
-        }
-        modifier = {
-            factor = 0.01
-            OR = {
-                planet = {
-                    has_district = district_giga_alderson_generator
-                }
-                planet = {
-                    has_district = district_giga_alderson_commercial
-                }
-                planet = {
-                    has_district = district_giga_alderson_mining
-                }
-                planet = {
-                    has_district = district_giga_alderson_science
-                }
-                planet = {
-                    has_district = district_giga_alderson_admin
-                }
-                planet = {
-                    has_district = district_giga_alderson_consumer
-                }
-                planet = {
-                    has_district = district_giga_alderson_alloys
-                }
-                planet = {
-                    has_district = district_giga_alderson_leisure
-                }
-            }
-        }
-        modifier = {
-            factor = 0
-            owner = {
-                country_uses_food = no
-            }
-        }
-    }
     ai_resource_production = {
         food = 10
         trigger = {

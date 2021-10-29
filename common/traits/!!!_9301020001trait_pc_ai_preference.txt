@@ -85,15 +85,16 @@ trait_pc_ai_preference = {
         pc_supercon_habitability = 0.01
         pc_biolumen_habitability = 0.01
         pc_karst_habitability = 0.01
+        pc_reef_habitability = 0.01
         pc_primal_habitability = 0.01
         pc_salt_habitability = 0.01
         pc_aquifer_habitability = 0.01
         pc_coral_habitability = 0.01
         pc_storm_habitability = 0.01
+        pc_megaflora_habitability = 0.01
         pc_rogue_habitability = 0.01
         pc_lichen_habitability = 0.01
         pc_eyeball_habitability = 0.01
-        pc_megaflora_habitability = 0.01
         pc_glacio_habitability = 0.01
         pc_lanthanide_habitability = 0.01
     }

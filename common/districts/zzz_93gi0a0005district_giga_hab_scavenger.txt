@@ -73,7 +73,4 @@ district_giga_hab_scavenger = {
         }
         text = "job_giga_interstellar_scavenger_effect_desc"
     }
-    ai_weight = {
-        weight = 250
-    }
 }

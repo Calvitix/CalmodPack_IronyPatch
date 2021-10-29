@@ -38,6 +38,7 @@ district_hab_energy = {
         category = planet_districts_hab_energy
         cost = {
             trigger = {
+                exists = from
                 from = {
                     is_ai = no
                 }
@@ -47,6 +48,7 @@ district_hab_energy = {
         }
         cost = {
             trigger = {
+                exists = from
                 from = {
                     is_ai = yes
                 }

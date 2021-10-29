@@ -143,16 +143,4 @@ district_giga_planet_science = {
         }
         text = "job_calculator_effect_desc"
     }
-    ai_weight = {
-        weight = 0
-        modifier = {
-            weight = 250
-            owner = {
-                has_monthly_income = {
-                    resource = consumer_goods
-                    value > 40
-                }
-            }
-        }
-    }
 }

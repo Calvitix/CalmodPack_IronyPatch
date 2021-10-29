@@ -104,49 +104,4 @@ district_rw_leisure = {
         }
         text = "job_duelist_effect_desc"
     }
-    ai_weight = {
-        weight = 0
-        modifier = {
-            weight = 250
-            owner = {
-                has_monthly_income = {
-                    resource = consumer_goods
-                    value > 200
-                }
-                has_monthly_income = {
-                    resource = alloys
-                    value > 500
-                }
-            }
-        }
-        modifier = {
-            factor = 0.01
-            OR = {
-                planet = {
-                    has_district = district_rw_generator
-                }
-                planet = {
-                    has_district = district_rw_commercial
-                }
-                planet = {
-                    has_district = district_rw_mining
-                }
-                planet = {
-                    has_district = district_rw_science
-                }
-                planet = {
-                    has_district = district_rw_farming
-                }
-                planet = {
-                    has_district = district_rw_consumer
-                }
-                planet = {
-                    has_district = district_rw_alloys
-                }
-                planet = {
-                    has_district = district_rw_quberine
-                }
-            }
-        }
-    }
 }

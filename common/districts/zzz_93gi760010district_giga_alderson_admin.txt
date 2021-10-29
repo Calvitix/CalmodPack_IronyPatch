@@ -80,49 +80,4 @@ district_giga_alderson_admin = {
         }
         text = "job_coordinator_effect_desc"
     }
-    ai_weight = {
-        weight = 0
-        modifier = {
-            weight = 250
-            owner = {
-                has_monthly_income = {
-                    resource = consumer_goods
-                    value > 20
-                }
-                has_monthly_income = {
-                    resource = alloys
-                    value > 50
-                }
-            }
-        }
-        modifier = {
-            factor = 0.01
-            OR = {
-                planet = {
-                    has_district = district_giga_alderson_generator
-                }
-                planet = {
-                    has_district = district_giga_alderson_commercial
-                }
-                planet = {
-                    has_district = district_giga_alderson_mining
-                }
-                planet = {
-                    has_district = district_giga_alderson_science
-                }
-                planet = {
-                    has_district = district_giga_alderson_farming
-                }
-                planet = {
-                    has_district = district_giga_alderson_consumer
-                }
-                planet = {
-                    has_district = district_giga_alderson_alloys
-                }
-                planet = {
-                    has_district = district_giga_alderson_leisure
-                }
-            }
-        }
-    }
 }

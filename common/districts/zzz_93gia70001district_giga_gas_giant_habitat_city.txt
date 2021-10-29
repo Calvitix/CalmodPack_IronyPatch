@@ -126,11 +126,4 @@ district_giga_gas_giant_habitat_city = {
         }
         text = "job_farmer_effect_desc"
     }
-    ai_weight = {
-        weight = 0
-        modifier = {
-            weight = 300
-            free_housing < 2
-        }
-    }
 }

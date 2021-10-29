@@ -34,10 +34,6 @@ tech_ash_terraform = {
                 has_trait = "leader_trait_expertise_new_worlds"
             }
         }
-        modifier = {
-            factor = 0
-            num_owned_planets < 2
-        }
     }
     ai_weight = {
         modifier = {
@@ -49,10 +45,6 @@ tech_ash_terraform = {
                 area = society
                 has_trait = "leader_trait_expertise_new_worlds"
             }
-        }
-        modifier = {
-            factor = 0
-            num_owned_planets < 2
         }
     }
 }

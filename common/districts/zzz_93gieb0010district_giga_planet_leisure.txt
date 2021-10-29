@@ -217,21 +217,4 @@ district_giga_planet_leisure = {
         }
         text = "job_duelist_effect_desc"
     }
-    ai_weight = {
-        weight = 0
-        modifier = {
-            weight = 250
-            free_amenities < 5
-            owner = {
-                has_monthly_income = {
-                    resource = consumer_goods
-                    value > 20
-                }
-                has_monthly_income = {
-                    resource = alloys
-                    value > 20
-                }
-            }
-        }
-    }
 }

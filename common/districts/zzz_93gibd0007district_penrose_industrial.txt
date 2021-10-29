@@ -108,19 +108,7 @@ district_penrose_industrial = {
         potential = {
             exists = owner
             owner = {
-                is_hive_empire = yes
-                is_catalytic_empire = yes
-            }
-        }
-        modifier = {
-            job_catalytic_drone_add = 10
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_machine_empire = yes
+                is_gestalt = yes
                 is_catalytic_empire = yes
             }
         }
@@ -207,6 +195,16 @@ district_penrose_industrial = {
         trigger = {
             exists = owner
             owner = {
+                is_hive_empire = yes
+                is_catalytic_empire = no
+            }
+        }
+        text = "job_alloy_drone_effect_desc"
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
                 is_regular_empire = yes
                 is_catalytic_empire = yes
             }
@@ -217,7 +215,7 @@ district_penrose_industrial = {
         trigger = {
             exists = owner
             owner = {
-                is_machine_empire = yes
+                is_gestalt = yes
                 is_catalytic_empire = yes
             }
         }
@@ -232,59 +230,6 @@ district_penrose_industrial = {
             }
         }
         text = "job_maintenance_drone_effect_desc"
-    }
-    ai_weight = {
-        weight = 0
-        modifier = {
-            weight = 250
-            owner = {
-                OR = {
-                    has_monthly_income = {
-                        resource = consumer_goods
-                        value < 200
-                    }
-                    has_monthly_income = {
-                        resource = alloys
-                        value < 200
-                    }
-                }
-            }
-        }
-        modifier = {
-            factor = 0.01
-            OR = {
-                planet = {
-                    has_district = district_rw_generator
-                }
-                planet = {
-                    has_district = district_rw_commercial
-                }
-                planet = {
-                    has_district = district_rw_mining
-                }
-                planet = {
-                    has_district = district_rw_science
-                }
-                planet = {
-                    has_district = district_rw_farming
-                }
-                planet = {
-                    has_district = district_rw_alloys
-                }
-                planet = {
-                    has_district = district_rw_consumer
-                }
-                planet = {
-                    has_district = district_rw_leisure
-                }
-                planet = {
-                    has_district = district_rw_quberine
-                }
-                planet = {
-                    has_district = district_rw_consumer
-                }
-            }
-        }
     }
     ai_resource_production = {
         alloys = 10

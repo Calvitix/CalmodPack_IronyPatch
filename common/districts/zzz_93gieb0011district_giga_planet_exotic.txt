@@ -73,18 +73,6 @@ district_giga_planet_exotic = {
         }
         text = "job_giga_gas_harvester_drone_effect_desc"
     }
-    ai_weight = {
-        weight = 0
-        modifier = {
-            weight = 250
-            owner = {
-                has_monthly_income = {
-                    resource = exotic_gases
-                    value < 20
-                }
-            }
-        }
-    }
     ai_resource_production = {
         exotic_gases = 10
         trigger = {

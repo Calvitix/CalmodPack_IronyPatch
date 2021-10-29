@@ -45,6 +45,7 @@ district_rw_farming = {
         category = planet_districts
         cost = {
             trigger = {
+                exists = from
                 from = {
                     is_ai = no
                 }
@@ -55,6 +56,7 @@ district_rw_farming = {
         }
         cost = {
             trigger = {
+                exists = from
                 from = {
                     is_ai = yes
                 }
@@ -261,53 +263,6 @@ district_rw_farming = {
         modifier = {
             planet_housing_add = 1
             job_fe_acolyte_farm_add = 1
-        }
-    }
-    ai_weight = {
-        weight = 0
-        modifier = {
-            weight = 250
-            owner = {
-                has_monthly_income = {
-                    resource = food
-                    value < 200
-                }
-            }
-        }
-        modifier = {
-            factor = 0.01
-            OR = {
-                planet = {
-                    has_district = district_rw_generator
-                }
-                planet = {
-                    has_district = district_rw_commercial
-                }
-                planet = {
-                    has_district = district_rw_mining
-                }
-                planet = {
-                    has_district = district_rw_science
-                }
-                planet = {
-                    has_district = district_rw_consumer
-                }
-                planet = {
-                    has_district = district_rw_alloys
-                }
-                planet = {
-                    has_district = district_rw_leisure
-                }
-                planet = {
-                    has_district = district_rw_quberine
-                }
-            }
-        }
-        modifier = {
-            factor = 0
-            owner = {
-                country_uses_food = no
-            }
         }
     }
     ai_resource_production = {

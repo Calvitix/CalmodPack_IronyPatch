@@ -90,18 +90,6 @@ district_giga_gas_giant_habitat_science = {
         }
         text = "job_calculator_effect_desc"
     }
-    ai_weight = {
-        weight = 0
-        modifier = {
-            weight = 250
-            owner = {
-                has_monthly_income = {
-                    resource = consumer_goods
-                    value > 5
-                }
-            }
-        }
-    }
     ai_resource_production = {
         physics_research = 12
         society_research = 12

@@ -53,10 +53,23 @@ district_rw_consumer = {
             exists = owner
             owner = {
                 is_regular_empire = yes
+                is_crafter_empire = no
             }
         }
         modifier = {
             job_artisan_add = 15
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+                is_crafter_empire = yes
+            }
+        }
+        modifier = {
+            job_artificer_add = 15
         }
     }
     triggered_desc = {
@@ -84,50 +97,20 @@ district_rw_consumer = {
             exists = owner
             owner = {
                 is_regular_empire = yes
+                is_crafter_empire = no
             }
         }
         text = "job_artisan_effect_desc"
     }
-    ai_weight = {
-        weight = 0
-        modifier = {
-            weight = 250
+    triggered_desc = {
+        trigger = {
+            exists = owner
             owner = {
-                has_monthly_income = {
-                    resource = consumer_goods
-                    value < 200
-                }
+                is_regular_empire = yes
+                has_civic = civic_crafters
             }
         }
-        modifier = {
-            factor = 0.01
-            OR = {
-                planet = {
-                    has_district = district_rw_generator
-                }
-                planet = {
-                    has_district = district_rw_commercial
-                }
-                planet = {
-                    has_district = district_rw_mining
-                }
-                planet = {
-                    has_district = district_rw_science
-                }
-                planet = {
-                    has_district = district_rw_farming
-                }
-                planet = {
-                    has_district = district_rw_alloys
-                }
-                planet = {
-                    has_district = district_rw_leisure
-                }
-                planet = {
-                    has_district = district_rw_quberine
-                }
-            }
-        }
+        text = "job_artificer_effect_desc"
     }
     ai_resource_production = {
         consumer_goods = 10
