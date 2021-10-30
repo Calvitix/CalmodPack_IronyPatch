@@ -14,9 +14,9 @@ building_robot_assembly_plant = {
                     num_pops < 1000
                 }
                 or = {
-                    nor = {
-                        has_designation = col_factory
-                        has_designation = col_foundry
+                    AND = {
+                        str_is_col_factory = no
+                        str_is_col_foundry = no
                     }
                     owner = {
                         has_technology = tech_droid_workers
@@ -135,7 +135,7 @@ building_robot_assembly_plant = {
             }
             owner = {
                 is_ai = yes
-                num_pops > 950
+                num_pops > 1500
             }
         }
     }
@@ -146,6 +146,7 @@ building_robot_assembly_plant = {
         category = planet_buildings
         cost = {
             trigger = {
+                exists = from
                 from = {
                     is_ai = no
                 }
@@ -155,6 +156,7 @@ building_robot_assembly_plant = {
         }
         cost = {
             trigger = {
+                exists = from
                 from = {
                     is_ai = yes
                 }

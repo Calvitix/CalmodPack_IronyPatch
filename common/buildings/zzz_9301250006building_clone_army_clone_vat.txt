@@ -35,7 +35,6 @@ building_clone_army_clone_vat = {
             owner = {
                 is_ai = yes
             }
-            can_assemble_clone_soldier_pop = yes
         }
         planet_pop_assembly_organic_add = 2
     }

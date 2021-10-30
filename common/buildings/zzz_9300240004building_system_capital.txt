@@ -29,7 +29,7 @@ building_system_capital = {
         building_ancient_palace
     }
     allow = {
-        num_pops >= 40
+        num_pops >= 50
     }
     prerequisites = {
         "tech_galactic_administration"
@@ -165,6 +165,66 @@ building_system_capital = {
             job_head_researcher_add = 2
             job_executive_add = 2
         }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_ai = yes
+            }
+            num_districts = {
+                type = district_mining
+                value > 0
+            }
+            str_force_district_mining = yes
+        }
+        job_starnet_spice_melange_farmer_add = -2
+        job_starnet_spice_melange_antifarmer_add = 2
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_ai = yes
+            }
+            num_districts = {
+                type = district_mining
+                value > 2
+            }
+            str_force_district_mining = yes
+        }
+        job_starnet_spice_melange_farmer_add = -2
+        job_starnet_spice_melange_antifarmer_add = 2
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_ai = yes
+            }
+            num_districts = {
+                type = district_mining
+                value > 4
+            }
+            str_force_district_mining = yes
+        }
+        job_starnet_spice_melange_farmer_add = -2
+        job_starnet_spice_melange_antifarmer_add = 2
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_ai = yes
+            }
+            num_districts = {
+                type = district_mining
+                value > 6
+            }
+            str_force_district_mining = yes
+        }
+        job_starnet_spice_melange_farmer_add = -2
+        job_starnet_spice_melange_antifarmer_add = 2
     }
     triggered_planet_modifier = {
         potential = {

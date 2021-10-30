@@ -31,6 +31,7 @@ building_nanite_transmuter = {
         category = planet_buildings
         cost = {
             trigger = {
+                exists = from
                 from = {
                     is_ai = no
                 }
@@ -40,6 +41,7 @@ building_nanite_transmuter = {
         }
         cost = {
             trigger = {
+                exists = from
                 from = {
                     is_ai = yes
                 }

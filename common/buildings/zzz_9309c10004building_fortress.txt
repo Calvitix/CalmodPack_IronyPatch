@@ -97,6 +97,7 @@ building_fortress = {
         }
         cost = {
             trigger = {
+                exists = from
                 from = {
                     is_ai = no
                 }
@@ -107,6 +108,7 @@ building_fortress = {
         }
         cost = {
             trigger = {
+                exists = from
                 from = {
                     is_ai = yes
                 }

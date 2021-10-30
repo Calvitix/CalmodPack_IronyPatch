@@ -23,7 +23,7 @@ building_supercomputer = {
                 resource = physics_research
                 value > 60
             }
-            has_designation = col_research
+            str_is_col_research = yes
         }
     }
     destroy_trigger = {
@@ -45,6 +45,7 @@ building_supercomputer = {
         category = planet_buildings
         cost = {
             trigger = {
+                exists = from
                 from = {
                     is_ai = no
                 }
@@ -54,6 +55,7 @@ building_supercomputer = {
         }
         cost = {
             trigger = {
+                exists = from
                 from = {
                     is_ai = yes
                 }

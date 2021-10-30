@@ -57,6 +57,7 @@ building_research_lab_1 = {
         category = planet_buildings
         cost = {
             trigger = {
+                exists = from
                 from = {
                     is_ai = no
                 }
@@ -66,6 +67,7 @@ building_research_lab_1 = {
         }
         cost = {
             trigger = {
+                exists = from
                 from = {
                     is_ai = yes
                 }

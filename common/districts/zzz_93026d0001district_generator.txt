@@ -29,6 +29,7 @@ district_generator = {
         category = planet_districts
         cost = {
             trigger = {
+                exists = from
                 from = {
                     is_ai = no
                 }
@@ -38,6 +39,7 @@ district_generator = {
         }
         cost = {
             trigger = {
+                exists = from
                 from = {
                     is_ai = yes
                 }

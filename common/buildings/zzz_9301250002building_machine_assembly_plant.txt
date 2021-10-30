@@ -100,6 +100,7 @@ building_machine_assembly_plant = {
         category = planet_buildings
         cost = {
             trigger = {
+                exists = from
                 from = {
                     is_ai = no
                 }
@@ -109,6 +110,7 @@ building_machine_assembly_plant = {
         }
         cost = {
             trigger = {
+                exists = from
                 from = {
                     is_ai = yes
                 }

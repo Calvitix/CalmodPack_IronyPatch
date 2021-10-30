@@ -41,20 +41,6 @@ building_foundry_2 = {
         potential = {
             exists = owner
             owner = {
-                is_catalytic_empire = no
-            }
-            NOT = {
-                is_planet_class = pc_crucible
-            }
-        }
-        modifier = {
-            planet_metallurgists_minerals_upkeep_add = 2
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
                 is_ai = yes
             }
             str_force_building_foundry_upgrade = yes
@@ -66,6 +52,20 @@ building_foundry_2 = {
         modifier = {
             job_starnet_spice_melange_farmer_add = 1
             job_starnet_spice_melange_antifarmer_add = -1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_catalytic_empire = no
+            }
+            NOT = {
+                is_planet_class = pc_crucible
+            }
+        }
+        modifier = {
+            planet_metallurgists_minerals_upkeep_add = 2
         }
     }
     triggered_planet_modifier = {

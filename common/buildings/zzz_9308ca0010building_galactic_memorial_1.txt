@@ -67,6 +67,7 @@ building_galactic_memorial_1 = {
             exists = owner
             owner = {
                 is_gestalt = no
+                is_ai = no
             }
         }
         job_death_chronicler_add = @b1_jobs
@@ -76,6 +77,7 @@ building_galactic_memorial_1 = {
             exists = owner
             owner = {
                 is_gestalt = yes
+                is_ai = no
             }
         }
         job_chronicle_drone_add = @b1_jobs

@@ -33,10 +33,6 @@ building_str_ai_research_lab = {
             owner = {
                 is_ai = yes
             }
-            num_buildings = {
-                type = building_robot_assembly_plant
-                value = 0
-            }
         }
         job_starnet_spice_melange_farmer_add = 2
         job_starnet_spice_melange_antifarmer_add = -2

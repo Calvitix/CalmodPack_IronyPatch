@@ -29,8 +29,8 @@ building_simulation_1 = {
                         value > 50
                     }
                 }
-                has_designation = col_research
-                has_designation = col_bureau
+                str_is_col_research = yes
+                str_is_col_bureau = yes
             }
         }
     }
@@ -45,8 +45,8 @@ building_simulation_1 = {
                     num_ascension_perks > 2
                     from = {
                         or = {
-                            has_designation = col_bureau
-                            has_designation = col_research
+                            str_is_col_bureau = yes
+                            str_is_col_research = yes
                             is_capital = yes
                         }
                     }

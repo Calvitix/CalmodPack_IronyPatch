@@ -98,6 +98,7 @@ building_planetary_shield_generator = {
         category = planet_buildings
         cost = {
             trigger = {
+                exists = from
                 from = {
                     is_ai = no
                 }
@@ -107,6 +108,7 @@ building_planetary_shield_generator = {
         }
         cost = {
             trigger = {
+                exists = from
                 from = {
                     is_ai = yes
                 }
