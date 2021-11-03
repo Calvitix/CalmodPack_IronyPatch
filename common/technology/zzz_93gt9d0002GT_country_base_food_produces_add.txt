@@ -8,6 +8,7 @@ GT_country_base_food_produces_add = {
     }
     prerequisites = {
         "tech_planetary_unification"
+        "tech_hydroponics"
     }
     weight = @tier2weight3
     potential = {

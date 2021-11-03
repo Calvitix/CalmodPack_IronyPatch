@@ -12,6 +12,7 @@ trait_pc_desert_preference = {
     ai_weight = {
         weight = 0
     }
+    custom_tooltip = TRAIT_DESERT_PREFERENCE_EFFECT
     modifier = {
         pc_dune_habitability = @primary
         pc_adiabatic_habitability = @primary

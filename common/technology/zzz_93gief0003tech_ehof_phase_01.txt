@@ -10,6 +10,8 @@ tech_ehof_phase_01 = {
     prerequisites = {
         "tech_condensed_qe"
         "tech_abstract_1"
+        "tech_habitat_1"
+        "tech_starbase_4"
     }
     modifier = {
         country_influence_produces_mult = 0.1

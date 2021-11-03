@@ -1,7 +1,7 @@
 pc_monsoon = {
     entity = "monsoon_planet"
     entity_scale = @planet_standard_scale
-    icon = GFX_planet_type_savannah
+    icon = GFX_planet_type_tropical
     climate = "wet"
     atmosphere_color = hsv {
         0.58
