@@ -1,6 +1,6 @@
 tech_abstract_2 = {
     area = physics
-    cost = @tier3cost1
+    cost = @tier3cost3
     weight = @tier3weight1
     tier = 2
     is_rare = yes

@@ -27,4 +27,7 @@ leader_trait_bureaucrat_alpha = {
         "leader_trait_iron_fist"
         "leader_trait_diplomat_alpha"
     }
+    ai_weight = {
+        weight = 1
+    }
 }

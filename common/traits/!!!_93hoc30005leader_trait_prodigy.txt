@@ -22,4 +22,7 @@ leader_trait_prodigy = {
     leader_trait = {
         governor
     }
+    ai_weight = {
+        weight = 100
+    }
 }

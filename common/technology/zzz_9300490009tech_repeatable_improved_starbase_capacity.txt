@@ -75,6 +75,6 @@ tech_repeatable_improved_starbase_capacity = {
         production_repeatable = @RepeatableDifferntFactor
     }
     modifier = {
-        country_starbase_capacity_add = 1
+        country_starbase_capacity_add = 2
     }
 }

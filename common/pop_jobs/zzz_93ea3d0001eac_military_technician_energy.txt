@@ -9,10 +9,16 @@ eac_military_technician_energy = {
     pop_modifier = {
         pop_defense_armies_add = 1
     }
+    triggered_country_modifier = {
+        modifier = {
+            country_admin_cap_add = 5
+            country_naval_cap_add = 8
+        }
+    }
     resources = {
         category = planet_technician
         produces = {
-            physics_research = 2
+            physics_research = 1
         }
     }
     weight = {

@@ -7,7 +7,7 @@ tech_galactic_ambitions = {
     tier = 2
     weight = @tier2weight2
     modifier = {
-        country_starbase_capacity_add = 2
+        country_starbase_capacity_add = 3
     }
     weight_modifier = {
         modifier = {

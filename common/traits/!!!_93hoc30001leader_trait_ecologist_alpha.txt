@@ -4,7 +4,8 @@ leader_trait_ecologist_alpha = {
     icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ecologist_alpha.dds"
     modifier = {
         pop_environment_tolerance = 0.1
-        planet_jobs_minerals_produces_mult = -0.1
+        planet_building_build_speed_mult = -0.1
+        deposit_blockers_cost_mult = 0.5
     }
     leader_potential_add = {
         NOT = {
@@ -24,5 +25,10 @@ leader_trait_ecologist_alpha = {
     }
     opposites = {
         "leader_trait_pioneer_alpha"
+        "leader_trait_architectural_interest"
+        "leader_trait_environmental_engineer"
+    }
+    ai_weight = {
+        weight = 1
     }
 }

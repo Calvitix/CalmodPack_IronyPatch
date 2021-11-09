@@ -1,6 +1,6 @@
 tech_dm_injection = {
     area = physics
-    cost = @tier6cost1
+    cost = @tier6cost3
     weight = @tier6weight1
     tier = 4
     category = {

@@ -1,6 +1,6 @@
 tech_ehof_phase_02 = {
     area = engineering
-    cost = @tier3cost1
+    cost = @tier3cost3
     weight = @tier3weight1
     tier = 2
     is_dangerous = yes

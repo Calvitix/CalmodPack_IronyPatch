@@ -1,6 +1,6 @@
 tech_condensed_qe = {
     area = physics
-    cost = @tier2cost1
+    cost = @tier2cost2
     weight = @tier2weight1
     tier = 1
     category = {

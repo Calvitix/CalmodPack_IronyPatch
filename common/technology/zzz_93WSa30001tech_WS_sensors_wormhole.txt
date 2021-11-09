@@ -10,6 +10,7 @@ tech_WS_sensors_wormhole = {
     weight = @tier4weight2
     prerequisites = {
         "tech_wormhole_stabilization"
+        tech_ariphaos_sensors_wormhole
     }
     modifier = {
         custom_tooltip = tech_WS_sensors_wormhole_small
