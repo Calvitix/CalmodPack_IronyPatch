@@ -1,0 +1,5 @@
+opinion_ark = {
+    opinion = {
+        base = 25
+    }
+}

@@ -1,0 +1,9 @@
+nsc_freebooter_opinion_desperate_offer_rejected_admiral_market = {
+    opinion = {
+        base = -40
+    }
+    decay = {
+        base = 4
+    }
+    monthly = yes
+}

@@ -1,0 +1,19 @@
+nsc_freebooter_opinion_origin_default = {
+    trigger = {
+        from = {
+            has_origin = origin_nsc_freebooter
+        }
+        NOR = {
+            is_country_type = fallen_empire
+            is_country_type = awakened_fallen_empire
+            has_origin = origin_nsc_freebooter
+            is_country_type = marauder_raiders
+            is_country_type = awakened_marauders
+            is_country_type = dormant_marauders
+            is_country_type = ruined_marauders
+        }
+    }
+    opinion = {
+        base = -50
+    }
+}

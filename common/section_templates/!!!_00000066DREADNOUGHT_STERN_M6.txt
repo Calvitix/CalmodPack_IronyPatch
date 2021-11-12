@@ -1,0 +1,61 @@
+@cost1 = 350
+ship_section_template = {
+    key = "DREADNOUGHT_STERN_M6"
+    ship_size = Dreadnought
+    fits_on_slot = stern
+    entity = "Dreadnought_stern_M2_entity"
+    icon = "GFX_ship_part_core_stern"
+    icon_frame = 1
+    component_slot = {
+        name = "MEDIUM_GUN_01"
+        template = "medium_turret"
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_02"
+        template = "medium_turret"
+        locatorname = "medium_gun_02"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_03"
+        template = "invisible_medium_turret"
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_04"
+        template = "invisible_medium_turret"
+        locatorname = "medium_gun_02"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_05"
+        template = "invisible_medium_turret"
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_06"
+        template = "invisible_medium_turret"
+        locatorname = "medium_gun_02"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_07"
+        template = "invisible_medium_turret"
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_08"
+        template = "invisible_medium_turret"
+        locatorname = "medium_gun_02"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_09"
+        template = "invisible_medium_turret"
+        locatorname = "medium_gun_01"
+    }
+    aux_utility_slots = 4
+    resources = {
+        category = ship_sections
+        cost = {
+            alloys = @cost1
+        }
+    }
+}

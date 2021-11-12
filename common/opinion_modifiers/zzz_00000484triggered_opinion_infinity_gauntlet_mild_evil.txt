@@ -1,0 +1,10 @@
+triggered_opinion_infinity_gauntlet_mild_evil = {
+    trigger = {
+        FROM = {
+            has_country_flag = gauntlet_used_for_mild_evil
+        }
+    }
+    opinion = {
+        base = -250
+    }
+}

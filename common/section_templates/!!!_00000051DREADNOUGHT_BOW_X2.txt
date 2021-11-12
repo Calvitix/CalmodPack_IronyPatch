@@ -1,0 +1,34 @@
+@cost4 = 450
+ship_section_template = {
+    key = "DREADNOUGHT_BOW_X2"
+    ship_size = Dreadnought
+    fits_on_slot = bow
+    entity = "Dreadnought_bow_XL1_entity"
+    icon = "GFX_ship_part_core_bow"
+    icon_frame = 1
+    component_slot = {
+        name = "EXTRA_LARGE_01"
+        template = "invisible_extra_large_fixed"
+        locatorname = "xl_gun_01"
+    }
+    component_slot = {
+        name = "EXTRA_LARGE_02"
+        template = "invisible_extra_large_fixed"
+        locatorname = "xl_gun_01"
+    }
+    component_slot = {
+        name = "EXTRA_LARGE_03"
+        template = "invisible_extra_large_fixed"
+        locatorname = "xl_gun_01"
+    }
+    large_utility_slots = 7
+    ai_weight = {
+        factor = 500
+    }
+    resources = {
+        category = ship_sections
+        cost = {
+            alloys = @cost4
+        }
+    }
+}

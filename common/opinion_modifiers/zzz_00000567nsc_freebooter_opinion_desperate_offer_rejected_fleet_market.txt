@@ -1,0 +1,9 @@
+nsc_freebooter_opinion_desperate_offer_rejected_fleet_market = {
+    opinion = {
+        base = -60
+    }
+    decay = {
+        base = 4
+    }
+    monthly = yes
+}

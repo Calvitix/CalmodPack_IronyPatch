@@ -1,0 +1,10 @@
+nsc_freebooter_opinion_they_raided_one_of_our_colony = {
+    opinion = {
+        base = -10
+    }
+    decay = {
+        base = 1
+    }
+    monthly = yes
+    accumulative = yes
+}

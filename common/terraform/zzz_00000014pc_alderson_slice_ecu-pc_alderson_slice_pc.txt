@@ -1,0 +1,35 @@
+terraform_link = {
+    from = "pc_alderson_slice_ecu"
+    to = "pc_alderson_slice_pc"
+    energy = 50000
+    duration = 3600
+    ai_weight = {
+        weight = 0
+        modifier = {
+            weight = 10
+            has_country_flag = gai_likes_
+            NOT = {
+                has_country_flag = m_has__species
+            }
+            NOR = {
+                has_ascension_perk = ap_hive_worlds
+                has_ascension_perk = ap_machine_worlds
+                has_ascension_perk = ap_world_shaper
+            }
+        }
+    }
+    effect = {
+        from = {
+            add_modifier = {
+                modifier = "giga_planetary_computer"
+                days = -1
+            }
+            remove_planet_flag = giga_alderson_ecu
+            set_planet_flag = giga_alderson_pc
+        }
+    }
+    condition = {
+        has_technology = giga_tech_alderson_disk
+        has_technology = giga_tech_planetary_computer
+    }
+}

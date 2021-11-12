@@ -1,0 +1,34 @@
+@cost5 = 300
+ship_section_template = {
+    key = "BATTLESHIP_BOW_XL1PD1"
+    ship_size = battleship
+    fits_on_slot = bow
+    should_draw_components = yes
+    entity = "battleship_bow_L2_entity"
+    icon = "GFX_ship_part_core_bow"
+    prerequisites = {
+        tech_energy_lance_1
+        tech_energy_lance_2
+        tech_arc_emitter_1
+        tech_arc_emitter_2
+        tech_mass_accelerator_1
+        tech_mass_accelerator_2
+    }
+    component_slot = {
+        name = "EXTRA_LARGE_01"
+        template = "extra_large_turret"
+        locatorname = "large_gun_02"
+    }
+    component_slot = {
+        name = "PD_GUN_01"
+        template = "point_defence_turret"
+        locatorname = "large_gun_01"
+    }
+    large_utility_slots = 6
+    resources = {
+        category = ship_sections
+        cost = {
+            alloys = @cost5
+        }
+    }
+}

@@ -1,0 +1,67 @@
+"Merchants of Mtgre" = {
+    key = "Merchants of Mtgre"
+    ship_prefix = "MTGRE"
+    species = {
+        class = "REP"
+        portrait = "rep12"
+        name = "Angelon"
+        plural = "Angelons"
+        adjective = "Angelon"
+        species_bio = "The Merchants of Mtgre are a subsection of the Peoples Republic of Kontha who's citizens were send into exile after a bloody war with their neighbours. After this defeat many started working in the trade industry and over centuries nearly all trade on the planet was covertly brought under their control. -Uskazd"
+        name_list = "HUMAN2"
+        trait = "trait_thrifty"
+        trait = "trait_charismatic"
+        trait = "trait_wasteful"
+        trait = "trait_resilient"
+        trait = "trait_slow_breeders"
+    }
+    name = "Marchands de Migre"
+    adjective = "Konthan"
+    authority = "auth_corporate"
+    government = "gov_trade_league"
+    advisor_voice_type = "l_evil_corp"
+    planet_name = "Acrylicid"
+    planet_class = "pc_ocean"
+    system_name = "Kontha"
+    initializer = ""
+    graphical_culture = "avian_01"
+    city_graphical_culture = "avian_01"
+    empire_flag = {
+        icon = {
+            category = "corporate"
+            file = "corporate_05.dds"
+        }
+        background = {
+            category = "backgrounds"
+            file = "circle.dds"
+        }
+        colors = {
+            "black"
+            "turquoise"
+            "null"
+            "null"
+        }
+    }
+    ruler = {
+        gender = male
+        name = "Tyrone"
+        portrait = "rep12"
+        texture = 0
+        hair = 0
+        clothes = 0
+        ruler_title = "Guild Master"
+        leader_class = "ruler"
+    }
+    spawn_as_fallen = no
+    ignore_portrait_duplication = no
+    room = "default_room"
+    spawn_enabled = yes
+    ethic = "ethic_authoritarian"
+    ethic = "ethic_militarist"
+    ethic = "ethic_spiritualist"
+    civics = {
+        "civic_free_traders"
+        "civic_ruthless_competition"
+    }
+    origin = "origin_default"
+}

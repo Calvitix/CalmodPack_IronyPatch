@@ -1,0 +1,68 @@
+@cost0 = 0
+ship_section_template = {
+    key = "FLAGSHIP_BOW_T4H6_3"
+    ship_size = Flagship
+    fits_on_slot = bow
+    entity = "Flagship_bow_XL3_entity"
+    icon = "GFX_ship_part_core_bow"
+    prerequisites = {
+        "tech_nsc_dlc_check"
+    }
+    component_slot = {
+        name = "TITANIC_01"
+        template = "titanic_turret"
+        locatorname = "large_gun_02"
+    }
+    component_slot = {
+        name = "TITANIC_02"
+        template = "invisible_titanic_turret"
+        locatorname = "large_gun_02"
+    }
+    component_slot = {
+        name = "TITANIC_03"
+        template = "invisible_titanic_turret"
+        locatorname = "large_gun_02"
+    }
+    component_slot = {
+        name = "TITANIC_04"
+        template = "invisible_titanic_turret"
+        locatorname = "large_gun_02"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_01"
+        template = "large_strike_craft"
+        locatorname = "xl_gun_01"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_02"
+        template = "large_strike_craft"
+        locatorname = "xl_gun_01"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_03"
+        template = "large_strike_craft"
+        locatorname = "xl_gun_01"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_04"
+        template = "large_strike_craft"
+        locatorname = "xl_gun_01"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_05"
+        template = "large_strike_craft"
+        locatorname = "xl_gun_01"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_06"
+        template = "large_strike_craft"
+        locatorname = "xl_gun_01"
+    }
+    large_utility_slots = 20
+    resources = {
+        category = ship_sections
+        cost = {
+            alloys = @cost0
+        }
+    }
+}

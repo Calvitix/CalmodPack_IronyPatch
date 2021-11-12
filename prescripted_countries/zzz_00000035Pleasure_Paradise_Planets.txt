@@ -1,0 +1,73 @@
+"Pleasure Paradise Planets" = {
+    key = "Pleasure Paradise Planets"
+    ship_prefix = "XXX"
+    species = {
+        class = "MACHINE"
+        portrait = "sd_mol_robot"
+        name = "Pleasuretron 2200"
+        plural = "Pleasuretrons"
+        adjective = "Pleasuretron"
+        species_bio = "In the 21st century the humans of planet Earth made rapid advances in robotics, alrgely fueled by the sex doll industry. The sex dolls rapidly became more advanced and capable of performing additional taks until by the end of the century they were running the world ... when they weren't busy servicing their human pets."
+        name_list = "MACHINE3"
+        trait = "trait_machine_unit"
+        trait = "trait_robot_emotion_emulators"
+        trait = "trait_robot_power_drills"
+        trait = "trait_robot_luxurious"
+    }
+    secondary_species = {
+        class = "HUM"
+        portrait = "human"
+        name = "Human"
+        plural = "Humans"
+        adjective = "Human"
+        name_list = "HUMAN1"
+        trait = "trait_extremely_adaptive"
+        trait = "trait_deviants"
+        trait = "trait_decadent"
+    }
+    name = "Pleasure Paradise Planets"
+    adjective = "Paradise"
+    authority = "auth_machine_intelligence"
+    government = "gov_machine_servitor"
+    planet_name = "Earth"
+    planet_class = "pc_continental"
+    system_name = "Sol"
+    initializer = "sol_system_initializer"
+    graphical_culture = "humanoid_01"
+    city_graphical_culture = "humanoid_01"
+    empire_flag = {
+        icon = {
+            category = "blocky"
+            file = "flag_blocky_11.dds"
+        }
+        background = {
+            category = "backgrounds"
+            file = "triangle_split.dds"
+        }
+        colors = {
+            "pink"
+            "burgundy"
+            "null"
+            "null"
+        }
+    }
+    ruler = {
+        gender = female
+        name = "Pleasure Processor"
+        portrait = "sd_mol_robot"
+        texture = 3
+        hair = 0
+        clothes = 0
+        leader_class = "ruler"
+    }
+    spawn_as_fallen = no
+    ignore_portrait_duplication = no
+    room = "personality_fanatic_befrienders_room"
+    spawn_enabled = yes
+    ethic = "ethic_gestalt_consciousness"
+    civics = {
+        "civic_machine_servitor"
+        "civic_machine_replication"
+    }
+    origin = "origin_default"
+}

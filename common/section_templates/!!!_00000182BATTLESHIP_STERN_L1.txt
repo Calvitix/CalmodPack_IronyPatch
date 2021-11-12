@@ -1,0 +1,24 @@
+@cost1 = 150
+ship_section_template = {
+    key = "BATTLESHIP_STERN_L1"
+    ship_size = battleship
+    fits_on_slot = stern
+    should_draw_components = yes
+    entity = "battleship_stern_L1_entity"
+    icon = "GFX_ship_part_core_stern"
+    prerequisites = {
+        "tech_nsc_disabled_sections"
+    }
+    component_slot = {
+        name = "LARGE_GUN_01"
+        template = "large_turret"
+        locatorname = "large_gun_01"
+    }
+    aux_utility_slots = 2
+    resources = {
+        category = ship_sections
+        cost = {
+            alloys = @cost1
+        }
+    }
+}

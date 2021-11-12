@@ -1,0 +1,16 @@
+m_opinion_dc_vs_oligarchic = {
+    opinion = {
+        modifier = {
+            add = -50
+            mt_has_ai_personality_democratic_crusaders = yes
+            OR = {
+                FROM = {
+                    has_authority = auth_oligarchic
+                }
+                FROM = {
+                    has_authority = auth_corporate
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,10 @@
+triggered_opinion_infinity_gauntlet_used_to_end_hunger = {
+    trigger = {
+        FROM = {
+            has_country_flag = gauntlet_used_to_end_hunger
+        }
+    }
+    opinion = {
+        base = 300
+    }
+}

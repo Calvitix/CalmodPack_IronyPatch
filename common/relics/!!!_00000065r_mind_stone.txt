@@ -1,0 +1,61 @@
+r_mind_stone = {
+    activation_duration = 3600
+    portrait = "GFX_relic_mind_stone"
+    sound = "relic_activation_mind_stone"
+    resources = {
+        category = relics
+        cost = {
+            influence = 100
+        }
+    }
+    ai_weight = {
+        weight = 200
+    }
+    triggered_country_modifier = {
+        potential = {
+            always = yes
+        }
+        country_base_influence_produces_add = 1
+        country_trust_cap_add = 50
+        country_trust_growth = 1
+        envoys_add = 3
+        custom_tooltip = relic_mind_stone_passive
+    }
+    score = 5000
+    active_effect = {
+        add_modifier = {
+            modifier = "mind_stone"
+            days = 3600
+        }
+        custom_tooltip = relic_triumph_cooldown
+        hidden_effect = {
+            add_modifier = {
+                modifier = "infinity_stone_relic_activation_cooldown"
+                days = 3600
+            }
+            add_modifier = {
+                modifier = "relic_activation_cooldown"
+                days = 1
+            }
+            country_event = {
+                id = infinity_stones_new_gauntlet.5
+                days = 3600
+            }
+            infinity_circuit_apply_modifier = yes
+        }
+    }
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_infinty_stone_no_cooldown"
+            NOT = {
+                has_modifier = infinity_stone_relic_activation_cooldown
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_relic_mind_stone"
+            NOT = {
+                has_modifier = mind_stone
+            }
+        }
+    }
+}

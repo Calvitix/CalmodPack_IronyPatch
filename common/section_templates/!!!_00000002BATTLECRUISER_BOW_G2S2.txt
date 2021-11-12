@@ -1,0 +1,55 @@
+@cost2 = 100
+ship_section_template = {
+    key = "BATTLECRUISER_BOW_G2S2"
+    ship_size = Battlecruiser
+    fits_on_slot = bow
+    entity = "Battlecruiser_bow_M1S2_entity"
+    icon = "GFX_ship_part_core_bow"
+    component_slot = {
+        name = "TORPEDO_01"
+        template = "medium_missile_turret"
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "TORPEDO_02"
+        template = "invisible_missile_turret"
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "TORPEDO_03"
+        template = "invisible_missile_turret"
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "TORPEDO_04"
+        template = "invisible_missile_turret"
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "SMALL_GUN_01"
+        template = "small_turret"
+        locatorname = "small_gun_01"
+    }
+    component_slot = {
+        name = "SMALL_GUN_02"
+        template = "small_turret"
+        locatorname = "small_gun_02"
+    }
+    component_slot = {
+        name = "SMALL_GUN_03"
+        template = "invisible_small_turret"
+        locatorname = "small_gun_01"
+    }
+    component_slot = {
+        name = "SMALL_GUN_04"
+        template = "invisible_small_turret"
+        locatorname = "small_gun_02"
+    }
+    medium_utility_slots = 5
+    resources = {
+        category = ship_sections
+        cost = {
+            alloys = @cost2
+        }
+    }
+}

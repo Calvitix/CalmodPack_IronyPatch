@@ -1,0 +1,18 @@
+m_opinion_hw_vs_pacifist = {
+    opinion = {
+        modifier = {
+            add = -100
+            mt_has_ai_personality_honorbound_warriors = yes
+            FROM = {
+                has_ethic = "ethic_fanatic_pacifist"
+            }
+        }
+        modifier = {
+            add = -50
+            mt_has_ai_personality_honorbound_warriors = yes
+            FROM = {
+                has_ethic = "ethic_pacifist"
+            }
+        }
+    }
+}

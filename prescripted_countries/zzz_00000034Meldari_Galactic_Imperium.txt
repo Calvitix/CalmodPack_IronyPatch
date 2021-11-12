@@ -1,0 +1,62 @@
+"Meldari Galactic Imperium" = {
+    key = "Meldari Galactic Imperium"
+    ship_prefix = "Nave"
+    species = {
+        class = "AVI"
+        portrait = "avi15"
+        name = "Miidari"
+        plural = "Miidari"
+        adjective = "Miidario"
+        species_bio = "<[ *_* ]>"
+        name_list = "HUMAN2"
+        trait = "trait_rapid_breeders"
+        trait = "trait_intelligent"
+        trait = "trait_weak"
+        trait = "trait_deviants"
+    }
+    name = "Impérium galactique Meldari"
+    adjective = "Miidario"
+    authority = "auth_imperial"
+    government = "gov_illuminated_autocracy"
+    planet_name = "Navarill Prime"
+    planet_class = "pc_arctic"
+    system_name = "Genox"
+    initializer = ""
+    graphical_culture = "arthropoid_01"
+    city_graphical_culture = "avian_01"
+    empire_flag = {
+        icon = {
+            category = "legion"
+            file = "flag_mp_beta_05.dds"
+        }
+        background = {
+            category = "backgrounds"
+            file = "circle.dds"
+        }
+        colors = {
+            "dark_blue"
+            "grey"
+            "null"
+            "null"
+        }
+    }
+    ruler = {
+        gender = male
+        name = "Nazsgull"
+        portrait = "avi15"
+        texture = 4
+        hair = 0
+        clothes = 0
+        leader_class = "ruler"
+    }
+    spawn_as_fallen = no
+    ignore_portrait_duplication = no
+    room = "personality_peaceful_traders_room"
+    spawn_enabled = yes
+    ethic = "ethic_pacifist"
+    ethic = "ethic_fanatic_materialist"
+    civics = {
+        "civic_technocracy"
+    }
+    origin = "origin_mechanists"
+}

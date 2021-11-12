@@ -1,0 +1,57 @@
+@Battleship_cost_food = 160
+@Battleship_food_upkeep = 0.8
+@Battleship_alloy_reduction = -0.33
+ship_section_template = {
+    key = "$ORGANIC$ $BATTLESHIP_BOW_M2S4$"
+    ship_size = battleship
+    fits_on_slot = bow
+    should_draw_components = yes
+    entity = "battleship_bow_XL1_entity"
+    icon = "GFX_ship_part_core_bow"
+    prerequisites = {
+        tech_voidcraft_breakthrough
+    }
+    ai_weight = {
+        modifier = {
+            factor = 20
+            NOT = {
+                is_preferred_weapons = weapon_type_explosive
+            }
+        }
+        modifier = {
+            factor = 0.1
+            is_preferred_weapons = weapon_type_explosive
+        }
+        modifier = {
+            factor = 0
+            has_authority = auth_machine_intelligence
+        }
+        modifier = {
+            factor = 0
+            NOR = {
+                has_technology = tech_energy_lance_1
+                has_technology = tech_energy_lance_2
+                has_technology = tech_arc_emitter_1
+                has_technology = tech_arc_emitter_2
+                has_technology = tech_mass_accelerator_1
+                has_technology = tech_mass_accelerator_2
+            }
+        }
+    }
+    component_slot = {
+        name = "EXTRA_LARGE_01"
+        template = "invisible_extra_large_fixed"
+        locatorname = "xl_gun_01"
+    }
+    large_utility_slots = 3
+    resources = {
+        category = ship_sections
+        cost = {
+            food = @Battleship_cost_food
+        }
+        upkeep = {
+            food = @Battleship_food_upkeep
+            alloys = @Battleship_alloy_reduction
+        }
+    }
+}

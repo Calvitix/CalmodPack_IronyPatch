@@ -1,0 +1,76 @@
+@cost3 = 200
+ship_section_template = {
+    key = "BATTLESHIP_MID_L2M6"
+    ship_size = battleship
+    fits_on_slot = mid
+    entity = "battleship_mid_L1M4_entity"
+    icon = "GFX_ship_part_core_mid"
+    icon_frame = 1
+    component_slot = {
+        name = "LARGE_GUN_01"
+        template = "large_turret"
+        locatorname = "large_gun_01"
+    }
+    component_slot = {
+        name = "LARGE_GUN_02"
+        template = "invisible_large_turret"
+        locatorname = "large_gun_01"
+    }
+    component_slot = {
+        name = "LARGE_GUN_03"
+        template = "invisible_large_turret"
+        locatorname = "large_gun_01"
+    }
+    component_slot = {
+        name = "LARGE_GUN_04"
+        template = "invisible_large_turret"
+        locatorname = "large_gun_01"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_01"
+        template = "medium_turret"
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_02"
+        template = "medium_turret"
+        locatorname = "medium_gun_02"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_03"
+        template = "medium_turret"
+        locatorname = "medium_gun_03"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_04"
+        template = "medium_turret"
+        locatorname = "medium_gun_04"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_05"
+        template = "invisible_medium_turret"
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_06"
+        template = "invisible_medium_turret"
+        locatorname = "medium_gun_02"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_07"
+        template = "invisible_medium_turret"
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_08"
+        template = "invisible_medium_turret"
+        locatorname = "medium_gun_02"
+    }
+    large_utility_slots = 8
+    resources = {
+        category = ship_sections
+        cost = {
+            alloys = @cost3
+        }
+    }
+}

@@ -1,0 +1,12 @@
+terraform_link = {
+    from = "pc_flaming"
+    to = "pc_savannah"
+    energy = 5000
+    duration = 3600
+    condition = {
+        has_technology = "tech_terrestrial_sculpting"
+    }
+    ai_weight = {
+        weight = 0
+    }
+}

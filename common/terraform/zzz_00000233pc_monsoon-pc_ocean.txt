@@ -1,0 +1,12 @@
+terraform_link = {
+    from = "pc_monsoon"
+    to = "pc_ocean"
+    energy = 2000
+    duration = 1800
+    condition = {
+        has_technology = "tech_terrestrial_sculpting"
+    }
+    ai_weight = {
+        weight = 0
+    }
+}

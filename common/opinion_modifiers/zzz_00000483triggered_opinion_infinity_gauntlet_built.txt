@@ -1,0 +1,10 @@
+triggered_opinion_infinity_gauntlet_built = {
+    trigger = {
+        FROM = {
+            has_country_flag = gauntlet_used_for_evil
+        }
+    }
+    opinion = {
+        base = -5000
+    }
+}

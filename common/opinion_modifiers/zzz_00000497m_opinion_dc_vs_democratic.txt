@@ -1,0 +1,11 @@
+m_opinion_dc_vs_democratic = {
+    opinion = {
+        modifier = {
+            add = 25
+            mt_has_ai_personality_democratic_crusaders = yes
+            FROM = {
+                has_authority = auth_democratic
+            }
+        }
+    }
+}

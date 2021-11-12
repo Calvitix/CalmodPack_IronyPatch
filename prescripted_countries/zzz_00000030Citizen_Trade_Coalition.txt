@@ -1,0 +1,63 @@
+"Citizen Trade Coalition" = {
+    key = "Citizen Trade Coalition"
+    ship_prefix = "ISS"
+    species = {
+        class = "REP"
+        portrait = "rep12"
+        name = "Suramo"
+        plural = "Suramos"
+        adjective = "Suramo"
+        name_list = "HUMAN2"
+        trait = "trait_ingenious"
+        trait = "trait_agrarian"
+        trait = "trait_fleeting"
+        trait = "trait_deviants"
+    }
+    name = "Coalition du commerce"
+    adjective = "Suramo"
+    authority = "auth_oligarchic"
+    government = "gov_citizen_stratocracy"
+    advisor_voice_type = "l_spiritualist"
+    planet_name = "Athanebia"
+    planet_class = "pc_ocean"
+    system_name = "Athas"
+    initializer = "deneb_system"
+    graphical_culture = "reptilian_01"
+    city_graphical_culture = "reptilian_01"
+    empire_flag = {
+        icon = {
+            category = "corporate"
+            file = "corporate_06.dds"
+        }
+        background = {
+            category = "backgrounds"
+            file = "pattern_01.dds"
+        }
+        colors = {
+            "indigo"
+            "black"
+            "null"
+            "null"
+        }
+    }
+    ruler = {
+        gender = male
+        name = "Gene Walker"
+        portrait = "rep12"
+        texture = 4
+        hair = 0
+        clothes = 0
+        leader_class = "ruler"
+    }
+    spawn_as_fallen = no
+    ignore_portrait_duplication = no
+    room = "lithoid_room"
+    spawn_enabled = yes
+    ethic = "ethic_authoritarian"
+    ethic = "ethic_fanatic_militarist"
+    civics = {
+        "civic_citizen_service"
+        "civic_merchant_guilds"
+    }
+    origin = "origin_default"
+}

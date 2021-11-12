@@ -1,0 +1,12 @@
+triggered_opinion_of_nsc_hopsital_2 = {
+    trigger = {
+        from = {
+            any_owned_megastructure = {
+                is_megastructure_type = nsc_hospital_2
+            }
+        }
+    }
+    opinion = {
+        base = 20
+    }
+}

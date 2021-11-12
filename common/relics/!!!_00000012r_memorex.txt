@@ -1,0 +1,63 @@
+@triumph_duration = 3600
+r_memorex = {
+    activation_duration = @triumph_duration
+    portrait = "GFX_relic_orb_insight"
+    sound = "relic_activation_the_omnicodex"
+    resources = {
+        category = relics
+        cost = {
+            influence = 300
+        }
+    }
+    ai_weight = {
+        weight = 100
+        modifier = {
+            factor = 0
+            NOT = {
+                any_owned_planet = {
+                    num_pops > 19
+                    NOT = {
+                        has_modifier = the_memorex
+                    }
+                }
+            }
+        }
+    }
+    triggered_country_modifier = {
+        potential = {
+            always = yes
+        }
+        species_leader_exp_gain = 0.5
+        leader_skill_levels = 1
+    }
+    score = 7500
+    active_effect = {
+        custom_tooltip = relic_memorex
+        custom_tooltip = relic_triumph_cooldown
+        hidden_effect = {
+            add_modifier = {
+                modifier = "relic_activation_cooldown"
+                days = @triumph_duration
+            }
+            if = {
+                limit = {
+                    NOT = {
+                        has_country_flag = relic_memorex_activated
+                    }
+                }
+                set_timed_country_flag = {
+                    flag = relic_memorex_activated
+                    days = @triumph_duration
+                }
+            }
+        }
+    }
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_relic_no_cooldown"
+            NOT = {
+                has_modifier = relic_activation_cooldown
+            }
+        }
+    }
+}

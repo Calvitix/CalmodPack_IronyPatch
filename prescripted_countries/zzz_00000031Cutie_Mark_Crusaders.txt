@@ -1,0 +1,79 @@
+"Cutie Mark Crusaders" = {
+    key = "Cutie Mark Crusaders"
+    ship_prefix = "MLP"
+    species = {
+        class = "REP"
+        portrait = "rep14"
+        name = "Sparkletins"
+        plural = "Les Sparkle"
+        adjective = "Sparkletins"
+        species_bio = "The Sparkletin people came about in a huge fucking pond, and it's only going to get bigger mother fuckers."
+        name_list = "MAM1"
+        trait = "trait_traditional"
+        trait = "trait_deviants"
+        trait = "trait_quick_learners"
+        trait = "trait_decadent"
+        trait = "trait_intelligent"
+    }
+    secondary_species = {
+        class = "LITHOID"
+        portrait = "lith9"
+        name = "Tavurite"
+        plural = "Tavurites"
+        adjective = "Tavuritan"
+        name_list = "LITHOID4"
+        trait = "trait_lithoid"
+        trait = "trait_syncretic_proles"
+        trait = "trait_slow_learners"
+        trait = "trait_fleeting_lithoid"
+        trait = "trait_docile"
+        trait = "trait_strong"
+    }
+    name = "Croisés de la marque"
+    adjective = "Croisés de la marque"
+    authority = "auth_oligarchic"
+    government = "gov_war_council"
+    advisor_voice_type = "l_authoritarian"
+    planet_name = "Huuuge fuckin' pond"
+    planet_class = "pc_ocean"
+    system_name = "Spike"
+    initializer = "custom_starting_init_01"
+    graphical_culture = "reptilian_01"
+    city_graphical_culture = "arthropoid_01"
+    empire_flag = {
+        icon = {
+            category = "pirate"
+            file = "flag_pirate_8.dds"
+        }
+        background = {
+            category = "backgrounds"
+            file = "triangle_split.dds"
+        }
+        colors = {
+            "dark_purple"
+            "light_green"
+            "null"
+            "null"
+        }
+    }
+    ruler = {
+        gender = female
+        name = "Tank the Turtle"
+        portrait = "rep14"
+        texture = 5
+        hair = 0
+        clothes = 0
+        leader_class = "ruler"
+    }
+    spawn_as_fallen = no
+    ignore_portrait_duplication = no
+    room = "personality_spiritual_seekers_room"
+    spawn_enabled = yes
+    ethic = "ethic_authoritarian"
+    ethic = "ethic_fanatic_militarist"
+    civics = {
+        "civic_warrior_culture"
+        "civic_slaver_guilds"
+    }
+    origin = "origin_syncretic_evolution"
+}

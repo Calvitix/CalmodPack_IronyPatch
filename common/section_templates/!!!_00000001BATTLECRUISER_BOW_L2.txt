@@ -1,0 +1,38 @@
+@cost4 = 150
+ship_section_template = {
+    key = "BATTLECRUISER_BOW_L2"
+    ship_size = Battlecruiser
+    fits_on_slot = bow
+    entity = "Battlecruiser_bow_L1_entity"
+    icon = "GFX_ship_part_core_bow"
+    component_slot = {
+        name = "LARGE_GUN_01"
+        template = "large_turret"
+        locatorname = "large_gun_01"
+    }
+    component_slot = {
+        name = "LARGE_GUN_02"
+        template = "invisible_large_turret"
+        locatorname = "large_gun_01"
+    }
+    component_slot = {
+        name = "LARGE_GUN_03"
+        template = "invisible_large_turret"
+        locatorname = "large_gun_01"
+    }
+    component_slot = {
+        name = "LARGE_GUN_04"
+        template = "invisible_large_turret"
+        locatorname = "large_gun_01"
+    }
+    medium_utility_slots = 4
+    ai_weight = {
+        factor = 50
+    }
+    resources = {
+        category = ship_sections
+        cost = {
+            alloys = @cost4
+        }
+    }
+}

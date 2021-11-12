@@ -1,0 +1,5 @@
+opinion_homeland = {
+    opinion = {
+        base = 50
+    }
+}

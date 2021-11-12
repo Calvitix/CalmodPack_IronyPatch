@@ -1,0 +1,11 @@
+m_triggered_dc_opinion_of_servitors = {
+    trigger = {
+        mt_has_ai_personality_democratic_crusaders = yes
+        FROM = {
+            has_civic = civic_machine_servitor
+        }
+    }
+    opinion = {
+        base = -100
+    }
+}

@@ -1,0 +1,14 @@
+tech_starbase_lance_II = {
+    cost = 15000
+    area = physics
+    tier = 4
+    category = {
+        particles
+    }
+    weight = 50
+    is_rare = yes
+    is_reverse_engineerable = no
+    potential = {
+        has_ascension_perk = ap_eternal_vigilance
+    }
+}

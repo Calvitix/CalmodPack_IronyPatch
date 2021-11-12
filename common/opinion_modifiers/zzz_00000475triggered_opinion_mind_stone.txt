@@ -1,0 +1,16 @@
+triggered_opinion_mind_stone = {
+    trigger = {
+        NOT = {
+            is_country_type = fallen_empire
+            is_subject = yes
+            has_global_flag = menu_normal_empire_opinion_disabled
+        }
+        FROM = {
+            has_relic = r_mind_stone
+            zero_can_see_what_relic_empire_has = yes
+        }
+    }
+    opinion = {
+        base = -50
+    }
+}

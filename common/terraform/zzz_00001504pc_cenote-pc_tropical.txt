@@ -1,0 +1,14 @@
+@terraforming_cost_level_1 = 5000
+@terraforming_duration_level_1 = 7200
+terraform_link = {
+    from = pc_cenote
+    to = pc_tropical
+    energy = @terraforming_cost_level_1
+    duration = @terraforming_duration_level_1
+    condition = {
+        has_technology = tech_terrestrial_sculpting
+    }
+    ai_weight = {
+        weight = 0
+    }
+}

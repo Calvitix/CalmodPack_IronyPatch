@@ -1,0 +1,83 @@
+@cost4 = 300
+ship_section_template = {
+    key = "CARRIER_MID2_G2HB"
+    ship_size = Carrier
+    fits_on_slot = mid2
+    entity = "Carrier_mid2_M4SHB_entity"
+    icon = "GFX_ship_part_core_mid"
+    component_slot = {
+        name = "TORPEDO_01"
+        template = "medium_missile_turret"
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "TORPEDO_02"
+        template = "medium_missile_turret"
+        locatorname = "medium_gun_02"
+    }
+    component_slot = {
+        name = "TORPEDO_03"
+        template = "medium_missile_turret"
+        locatorname = "medium_gun_03"
+    }
+    component_slot = {
+        name = "TORPEDO_04"
+        template = "medium_missile_turret"
+        locatorname = "medium_gun_04"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_01"
+        template = "large_strike_craft"
+        rotation = 90
+        locatorname = "strike_craft_locator_01"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_02"
+        template = "large_strike_craft"
+        rotation = 90
+        locatorname = "strike_craft_locator_01"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_03"
+        template = "large_strike_craft"
+        rotation = -90
+        locatorname = "strike_craft_locator_01"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_04"
+        template = "large_strike_craft"
+        rotation = -90
+        locatorname = "strike_craft_locator_01"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_05"
+        template = "large_strike_craft"
+        rotation = -90
+        locatorname = "strike_craft_locator_01"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_06"
+        template = "large_strike_craft"
+        rotation = -90
+        locatorname = "strike_craft_locator_01"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_07"
+        template = "large_strike_craft"
+        rotation = -90
+        locatorname = "strike_craft_locator_01"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_08"
+        template = "large_strike_craft"
+        rotation = -90
+        locatorname = "strike_craft_locator_01"
+    }
+    large_utility_slots = 4
+    resources = {
+        category = ship_sections
+        cost = {
+            alloys = @cost4
+        }
+    }
+}

@@ -1,0 +1,67 @@
+"Summa Imperii" = {
+    key = "Summa Imperii"
+    ship_prefix = "Vacuus"
+    species = {
+        class = "MAM"
+        portrait = "mam3"
+        name = "Vulpes Lagopus"
+        plural = "Vulpes Lagopodes"
+        adjective = "Vulpes'"
+        species_bio = "Glacialis is a harsh planet of perpetual winter and even colder nights. But the life that has the misfortune of calling it home is hardy indeed. First amongst them are the Vulpes Lagopodes. From humble beginnings as solitary hunters of the tundra, they forged an enduring civilization that slowly spread to the entire planet. After centuries of petty kingdom squabbling over the land, the Ascendens family imposed order upon the planet under Their divine and absolute rule. Finally united and with a common purpose, it wasn't long until the Summa Imperii turned its attention towards the stars, longing to bring all under the rule of their Divine Rulers."
+        name_list = "HUMAN3"
+        trait = "trait_enduring"
+        trait = "trait_adaptive"
+        trait = "trait_quick_learners"
+        trait = "trait_deviants"
+        trait = "trait_solitary"
+    }
+    name = "Summa Imperii"
+    adjective = "Summa Imperii"
+    authority = "auth_imperial"
+    government = "gov_divine_empire"
+    advisor_voice_type = "l_spiritualist"
+    planet_name = "Glacialis"
+    planet_class = "pc_arctic"
+    system_name = "Glacialis"
+    initializer = ""
+    graphical_culture = "avian_01"
+    city_graphical_culture = "reptilian_01"
+    empire_flag = {
+        icon = {
+            category = "domination"
+            file = "domination_8.dds"
+        }
+        background = {
+            category = "backgrounds"
+            file = "stripes.dds"
+        }
+        colors = {
+            "dark_blue"
+            "red"
+            "null"
+            "null"
+        }
+    }
+    ruler = {
+        gender = female
+        name = "Borealis Ascendens"
+        portrait = "mam3"
+        texture = 3
+        hair = 0
+        clothes = 4
+        heir_title = "Prince"
+        heir_title_female = "Princess"
+        leader_class = "ruler"
+    }
+    spawn_as_fallen = no
+    ignore_portrait_duplication = no
+    room = "personality_spiritual_seekers_room"
+    spawn_enabled = yes
+    ethic = "ethic_authoritarian"
+    ethic = "ethic_fanatic_spiritualist"
+    civics = {
+        "civic_imperial_cult"
+        "civic_aristocratic_elite"
+    }
+    origin = "origin_default"
+}

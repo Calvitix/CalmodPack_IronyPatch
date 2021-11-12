@@ -1,0 +1,45 @@
+@cost2 = 100
+ship_section_template = {
+    key = "BATTLECRUISER_BOW_M3"
+    ship_size = Battlecruiser
+    fits_on_slot = bow
+    entity = "Battlecruiser_bow_M2_entity"
+    icon = "GFX_ship_part_core_bow"
+    component_slot = {
+        name = "MEDIUM_GUN_01"
+        template = "medium_turret"
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_02"
+        template = "medium_turret"
+        locatorname = "medium_gun_02"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_03"
+        template = "invisible_medium_turret"
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_04"
+        template = "invisible_medium_turret"
+        locatorname = "medium_gun_02"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_05"
+        template = "invisible_medium_turret"
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_06"
+        template = "invisible_medium_turret"
+        locatorname = "medium_gun_02"
+    }
+    medium_utility_slots = 5
+    resources = {
+        category = ship_sections
+        cost = {
+            alloys = @cost2
+        }
+    }
+}

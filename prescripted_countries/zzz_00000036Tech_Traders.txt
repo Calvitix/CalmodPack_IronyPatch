@@ -1,0 +1,63 @@
+"Tech Traders" = {
+    key = "Tech Traders"
+    ship_prefix = "ISS"
+    species = {
+        class = "REP"
+        portrait = "rep16"
+        name = "Tech Broker"
+        plural = "Tech Brokers"
+        adjective = "Patented"
+        name_list = "HUM1"
+        trait = "trait_nonadaptive"
+        trait = "trait_rapid_breeders"
+        trait = "trait_wasteful"
+        trait = "trait_intelligent"
+        trait = "trait_natural_physicists"
+    }
+    name = "Marchands de Tech"
+    adjective = "Techie"
+    authority = "auth_dictatorial"
+    government = "gov_technocratic_dictatorship"
+    planet_name = "Techbase One"
+    planet_class = "pc_continental"
+    system_name = "Central Fusion Source"
+    initializer = ""
+    graphical_culture = "reptilian_01"
+    city_graphical_culture = "reptilian_01"
+    empire_flag = {
+        icon = {
+            category = "blocky"
+            file = "flag_blocky_13.dds"
+        }
+        background = {
+            category = "backgrounds"
+            file = "horizontal.dds"
+        }
+        colors = {
+            "red"
+            "black"
+            "null"
+            "null"
+        }
+    }
+    ruler = {
+        gender = female
+        name = "Newton"
+        portrait = "rep16_f"
+        texture = 0
+        hair = 0
+        clothes = 0
+        ruler_title_female = "Cheif Patent Officer"
+        leader_class = "ruler"
+    }
+    spawn_as_fallen = no
+    ignore_portrait_duplication = no
+    room = "personality_hegemonic_imperialists_room"
+    spawn_enabled = yes
+    ethic = "ethic_xenophile"
+    ethic = "ethic_fanatic_materialist"
+    civics = {
+        "civic_technocracy"
+    }
+    origin = "origin_remnants"
+}

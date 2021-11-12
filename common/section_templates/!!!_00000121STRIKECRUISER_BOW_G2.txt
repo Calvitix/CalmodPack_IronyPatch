@@ -1,0 +1,33 @@
+@cost2 = 200
+ship_section_template = {
+    key = "STRIKECRUISER_BOW_G2"
+    ship_size = StrikeCruiser
+    fits_on_slot = bow
+    entity = "StrikeCruiser_bow_M2_entity"
+    icon = "GFX_ship_part_core_bow"
+    component_slot = {
+        name = "TORPEDO_01"
+        template = "medium_missile_turret"
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "TORPEDO_02"
+        template = "medium_missile_turret"
+        locatorname = "medium_gun_02"
+    }
+    component_slot = {
+        name = "TORPEDO_03"
+        template = "invisible_missile_turret"
+        locatorname = "medium_gun_01"
+    }
+    medium_utility_slots = 4
+    ai_weight = {
+        factor = 500
+    }
+    resources = {
+        category = ship_sections
+        cost = {
+            alloys = @cost2
+        }
+    }
+}

@@ -1,0 +1,61 @@
+"Foxia" = {
+    key = "Foxia"
+    ship_prefix = "CNF"
+    species = {
+        class = "MAM"
+        portrait = "mam3"
+        name = "Foxian"
+        plural = "Foxian"
+        adjective = "Foxian"
+        name_list = "HUM4"
+        trait = "trait_void_dweller_1"
+        trait = "trait_venerable"
+        trait = "trait_deviants"
+        trait = "trait_weak"
+    }
+    name = "Foxia"
+    adjective = "Foxian"
+    authority = "auth_oligarchic"
+    government = "gov_military_junta"
+    planet_name = "Foxia"
+    planet_class = "pc_continental"
+    system_name = "Orb"
+    initializer = "void_dweller_system"
+    graphical_culture = "humanoid_01"
+    city_graphical_culture = "mammalian_01"
+    empire_flag = {
+        icon = {
+            category = "spherical"
+            file = "flag_spherical_2.dds"
+        }
+        background = {
+            category = "backgrounds"
+            file = "circle.dds"
+        }
+        colors = {
+            "dark_green"
+            "black"
+            "null"
+            "null"
+        }
+    }
+    ruler = {
+        gender = male
+        name = "Yip Yip"
+        portrait = "mam3"
+        texture = 1
+        hair = 0
+        clothes = 5
+        leader_class = "ruler"
+    }
+    spawn_as_fallen = no
+    ignore_portrait_duplication = no
+    room = "personality_hegemonic_imperialists_room"
+    spawn_enabled = yes
+    ethic = "ethic_egalitarian"
+    ethic = "ethic_fanatic_militarist"
+    civics = {
+        "civic_meritocracy"
+    }
+    origin = "origin_void_dwellers"
+}

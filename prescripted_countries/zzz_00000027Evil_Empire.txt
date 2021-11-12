@@ -1,0 +1,68 @@
+"Evil Empire" = {
+    key = "Evil Empire"
+    ship_prefix = "EES"
+    species = {
+        class = "MOL"
+        portrait = "mol15"
+        name = "Jeluun"
+        plural = "Jeluuns"
+        adjective = "Jeluunish"
+        species_bio = "Depuis l'aube des temps, Ghobav a été le théâtre d'innombrables batailles entre le Bien et le Mal. De puissants héros et des méchants dépravés se sont battus pour la maîtrise des Jeluuns. À l'aube de l'ère industrielle, la guerre finale a commencé. Plus de cent ans plus tard, elle s'est terminée par une pluie de feu nucléaire. Les forces du mal avaient triomphé. Bientôt, le monde entier se prosterne devant l'Empire du Mal. Au fur et à mesure que la technologie avançait, l'Empire du Mal a étendu sa portée à travers le système Thari. Maintenant, l'invention de l'hyperdrive a mis toute la galaxie à la portée de l'Empire."
+        name_list = "MAM4"
+        trait = "trait_survivor"
+        trait = "trait_rapid_breeders"
+        trait = "trait_enduring"
+        trait = "trait_quick_learners"
+        trait = "trait_quarrelsome"
+        trait = "trait_deviants"
+    }
+    name = "Empire du Mal Absolu"
+    adjective = "Malin"
+    authority = "auth_imperial"
+    government = "gov_star_empire"
+    advisor_voice_type = "l_militarist"
+    planet_name = "Ghobav"
+    planet_class = "pc_continental"
+    system_name = "Thari"
+    initializer = ""
+    graphical_culture = "avian_01"
+    city_graphical_culture = "reptilian_01"
+    empire_flag = {
+        icon = {
+            category = "domination"
+            file = "domination_18.dds"
+        }
+        background = {
+            category = "backgrounds"
+            file = "stripe.dds"
+        }
+        colors = {
+            "dark_grey"
+            "black"
+            "null"
+            "null"
+        }
+    }
+    ruler = {
+        gender = male
+        name = "Thub scion of Urug"
+        portrait = "mol15"
+        texture = 3
+        hair = 0
+        clothes = 0
+        ruler_title = "Evil Emperor"
+        ruler_title_female = "Evil Empress"
+        leader_class = "ruler"
+    }
+    spawn_as_fallen = no
+    ignore_portrait_duplication = no
+    room = "personality_fanatic_purifier_room"
+    spawn_enabled = yes
+    ethic = "ethic_fanatic_authoritarian"
+    ethic = "ethic_militarist"
+    civics = {
+        "civic_byzantine_bureaucracy"
+        "civic_cutthroat_politics"
+    }
+    origin = "origin_post_apocalyptic"
+}

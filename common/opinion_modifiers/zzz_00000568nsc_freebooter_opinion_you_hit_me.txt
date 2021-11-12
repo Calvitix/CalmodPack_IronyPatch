@@ -1,0 +1,9 @@
+nsc_freebooter_opinion_you_hit_me = {
+    opinion = {
+        base = -20
+    }
+    decay = {
+        base = 4
+    }
+    monthly = yes
+}

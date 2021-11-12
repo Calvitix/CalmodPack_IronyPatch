@@ -1,0 +1,79 @@
+ship_design = {
+    name = "NAME_Polaris_ship"
+    ship_size = cruiser
+    is_event_design = yes
+    is_special_buildable = yes
+    section = {
+        template = "CRUISER_BOW_G1S2"
+        slot = "bow"
+        component = {
+            slot = "TORPEDO_01"
+            template = "MISSILE_3"
+        }
+        component = {
+            slot = "SMALL_GUN_01"
+            template = "SMALL_DISRUPTOR_3"
+        }
+        component = {
+            slot = "SMALL_GUN_02"
+            template = "SMALL_DISRUPTOR_3"
+        }
+        component = {
+            slot = "MEDIUM_UTILITY_1"
+            template = "MEDIUM_SHIELD_4"
+        }
+        component = {
+            slot = "MEDIUM_UTILITY_2"
+            template = "MEDIUM_SHIELD_4"
+        }
+        component = {
+            slot = "MEDIUM_UTILITY_3"
+            template = "MEDIUM_SHIELD_4"
+        }
+    }
+    section = {
+        template = "CRUISER_MID_M3"
+        slot = "mid"
+        component = {
+            slot = "TORPEDO_01"
+            template = "MISSILE_3"
+        }
+        component = {
+            slot = "TORPEDO_02"
+            template = "MISSILE_3"
+        }
+        component = {
+            slot = "TORPEDO_03"
+            template = "MISSILE_3"
+        }
+        component = {
+            slot = "MEDIUM_UTILITY_1"
+            template = "MEDIUM_ARMOR_4"
+        }
+        component = {
+            slot = "MEDIUM_UTILITY_2"
+            template = "MEDIUM_ARMOR_4"
+        }
+        component = {
+            slot = "MEDIUM_UTILITY_3"
+            template = "MEDIUM_ARMOR_4"
+        }
+        component = {
+            slot = "MEDIUM_UTILITY_4"
+            template = "MEDIUM_ARMOR_4"
+        }
+    }
+    section = {
+        template = "CRUISER_STERN_M1"
+        slot = "stern"
+        component = {
+            slot = "MEDIUM_GUN_01"
+            template = "MEDIUM_PLASMA_2"
+        }
+    }
+    required_component = "HYPER_DRIVE_2"
+    required_component = "COMBAT_COMPUTER_LINE_ADVANCED"
+    required_component = "SHIP_THRUSTER_3"
+    required_component = "SENSOR_3"
+    required_component = "CRUISER_ANTIMATTER_REACTOR"
+}

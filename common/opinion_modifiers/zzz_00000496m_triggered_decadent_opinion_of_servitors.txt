@@ -1,0 +1,18 @@
+m_triggered_decadent_opinion_of_servitors = {
+    trigger = {
+        nhsc_is_playable_empire = yes
+        OR = {
+            owner_species = {
+                has_trait = trait_decadent
+            }
+            mt_has_ai_personality_decadent_hierarchy = yes
+            mt_has_ai_personality_slaving_despots = yes
+        }
+        FROM = {
+            has_civic = civic_machine_servitor
+        }
+    }
+    opinion = {
+        base = 20
+    }
+}
