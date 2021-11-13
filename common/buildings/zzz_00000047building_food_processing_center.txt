@@ -109,20 +109,18 @@ building_food_processing_center = {
     ai_resource_production = {
         food = 15
         trigger = {
-            planet_resource_compare = {
-                resource = food
-                value >= 24
-                type = produces
+            str_num_districts_farming = {
+                operator = > num
+                 = 3
             }
         }
     }
     ai_resource_production = {
         food = 30
         trigger = {
-            planet_resource_compare = {
-                resource = food
-                value >= 48
-                type = produces
+            str_num_districts_farming = {
+                operator = > num
+                 = 5
             }
         }
     }

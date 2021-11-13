@@ -7,7 +7,7 @@
         name = "Vulpes Lagopus"
         plural = "Vulpes Lagopodes"
         adjective = "Vulpes'"
-        species_bio = "Glacialis is a harsh planet of perpetual winter and even colder nights. But the life that has the misfortune of calling it home is hardy indeed. First amongst them are the Vulpes Lagopodes. From humble beginnings as solitary hunters of the tundra, they forged an enduring civilization that slowly spread to the entire planet. After centuries of petty kingdom squabbling over the land, the Ascendens family imposed order upon the planet under Their divine and absolute rule. Finally united and with a common purpose, it wasn't long until the Summa Imperii turned its attention towards the stars, longing to bring all under the rule of their Divine Rulers."
+        species_bio = "Glacialis est une planète rude avec un hiver perpétuel et des nuits encore plus froides. Mais la vie qui a le malheur d'y habiter est vraiment robuste. Le premier d'entre eux est le Vulpes Lagopodes. Après d'humbles débuts en tant que chasseurs solitaires dans la toundra, ils ont forgé une civilisation durable qui s'est lentement étendue à toute la planète. Après des siècles de petites querelles entre royaumes pour le territoire, la famille Ascendens a imposé l'ordre sur la planète sous son règne divin et absolu. Enfin unis et animés d'un objectif commun, les Summa Imperii ne tardèrent pas à tourner leur attention vers les étoiles, désireux de tout soumettre à leurs souverains divins."
         name_list = "HUMAN3"
         trait = "trait_enduring"
         trait = "trait_adaptive"

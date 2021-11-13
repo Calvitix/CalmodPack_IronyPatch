@@ -22,7 +22,6 @@ building_food_processing_facility = {
         }
     }
     allow = {
-        buildings_simple_allow = yes
         str_food_processing_allow = yes
     }
     planet_modifier = {
@@ -127,20 +126,18 @@ building_food_processing_facility = {
     ai_resource_production = {
         food = 10
         trigger = {
-            planet_resource_compare = {
-                resource = food
-                value >= 20
-                type = produces
+            str_num_districts_farming = {
+                operator = > num
+                 = 3
             }
         }
     }
     ai_resource_production = {
         food = 20
         trigger = {
-            planet_resource_compare = {
-                resource = food
-                value >= 40
-                type = produces
+            str_num_districts_farming = {
+                operator = > num
+                 = 5
             }
         }
     }

@@ -1,6 +1,7 @@
 building_drone_storage = {
     base_buildtime = @b1_time
     category = amenity
+    position_priority = 250
     potential = {
         exists = owner
         owner = {
@@ -11,9 +12,9 @@ building_drone_storage = {
         exists = owner
         OR = {
             AND = {
-                free_building_slots = 0
+                free_building_slots <= 2
                 free_jobs < -2
-                free_housing > 10
+                free_housing > 20
                 owner = {
                     is_ai = yes
                 }

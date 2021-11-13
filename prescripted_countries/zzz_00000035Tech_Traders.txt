@@ -14,7 +14,7 @@
         trait = "trait_intelligent"
         trait = "trait_natural_physicists"
     }
-    name = "Marchands de Tech"
+    name = "Recelleurs de Tech."
     adjective = "Techie"
     authority = "auth_dictatorial"
     government = "gov_technocratic_dictatorship"

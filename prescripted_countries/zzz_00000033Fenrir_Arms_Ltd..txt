@@ -7,7 +7,7 @@
         name = "Vulpak"
         plural = "Vulpak"
         adjective = "Vulpak"
-        species_bio = "Since dawn of civilization, Vulpak were all about making deals. At first, those deals often skirt boundries of the law in order to mazximize profits, but those ways were along since bandoned, for all of Vulpak have learned a univarsal thruth: nothing beats an honest showcase of your merchandise, and nothing makes a more convincing showcase than minitary power!"
+        species_bio = "Depuis l'aube de la civilisation, les Vulpak ont toujours su faire des affaires. Au début, ces accords contournaient souvent les limites de la loi afin de maximiser les profits, mais ces méthodes ont été abandonnées depuis, car tous les Vulpak ont appris une vérité universelle : rien ne vaut une présentation honnête de votre marchandise, et rien ne fait une présentation plus convaincante que le pouvoir militaire !"
         name_list = "MAM4"
         trait = "trait_communal"
         trait = "trait_charismatic"

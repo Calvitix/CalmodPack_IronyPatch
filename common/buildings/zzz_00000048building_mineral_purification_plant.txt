@@ -248,28 +248,20 @@ building_mineral_purification_plant = {
         text = job_scrap_miner_effect_desc
     }
     ai_resource_production = {
-        minerals = 3
-        trigger = {
-            always = yes
-        }
-    }
-    ai_resource_production = {
         minerals = 10
         trigger = {
-            planet_resource_compare = {
-                resource = minerals
-                value >= 20
-                type = produces
+            str_num_districts_mining = {
+                operator = > num
+                 = 2
             }
         }
     }
     ai_resource_production = {
         minerals = 20
         trigger = {
-            planet_resource_compare = {
-                resource = minerals
-                value >= 40
-                type = produces
+            str_num_districts_mining = {
+                operator = > num
+                 = 4
             }
         }
     }

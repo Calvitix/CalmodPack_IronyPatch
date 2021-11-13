@@ -7,7 +7,7 @@
         name = "Angelon"
         plural = "Angelons"
         adjective = "Angelon"
-        species_bio = "The Merchants of Mtgre are a subsection of the Peoples Republic of Kontha who's citizens were send into exile after a bloody war with their neighbours. After this defeat many started working in the trade industry and over centuries nearly all trade on the planet was covertly brought under their control. -Uskazd"
+        species_bio = "Les marchands de Mtgre sont une sous-section de la République Populaire de Kontha dont les citoyens ont été envoyés en exil après une guerre sanglante avec leurs voisins. Après cette défaite, beaucoup ont commencé à travailler dans l'industrie du commerce et, au fil des siècles, la quasi-totalité du commerce de la planète est passée secrètement sous leur contrôle. -Uskazd"
         name_list = "HUMAN2"
         trait = "trait_thrifty"
         trait = "trait_charismatic"

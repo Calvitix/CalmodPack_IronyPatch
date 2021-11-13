@@ -7,7 +7,7 @@
         name = "Estwani"
         plural = "Estwani"
         adjective = "Estwanian"
-        species_bio = "In the near future of the 23rd century, there are no more political quarrels or exhaustive debates in halls of Genadia, but just the two currencies that determine every aspect of everyday life: Gold and Iron. -FonVegen"
+        species_bio = "Dans le futur proche du 23ème siècle, il n'y a plus de querelles politiques ou de débats exhaustifs dans les salles de la Génadia, mais seulement les deux monnaies qui déterminent chaque aspect de la vie quotidienne : L'or et le fer. -FonVegen"
         name_list = "HUM2"
         trait = "trait_void_dweller_1"
         trait = "trait_resilient"
@@ -15,7 +15,7 @@
         trait = "trait_communal"
         trait = "trait_strong"
     }
-    name = "Military-Industrial Complex"
+    name = "Complexe Militair-industriel"
     adjective = "Complex"
     authority = "auth_corporate"
     government = "gov_megacorporation"

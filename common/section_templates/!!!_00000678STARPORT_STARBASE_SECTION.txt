@@ -7,7 +7,7 @@ ship_section_template = {
     icon = "GFX_ship_part_core_mid"
     component_slot = {
         name = "MEDIUM_GUN_01"
-        template = "medium_turret"
+        template = "medium_missile_turret"
         locatorname = "medium_gun_01"
     }
     component_slot = {

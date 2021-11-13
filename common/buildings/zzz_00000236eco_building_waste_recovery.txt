@@ -1,6 +1,8 @@
 eco_building_waste_recovery = {
     base_cap_amount = 4
     base_buildtime = @b1_time
+    can_be_ruined = no
+    position_priority = 150
     category = amenity
     potential = {
         exists = owner

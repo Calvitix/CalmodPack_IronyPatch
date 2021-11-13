@@ -9,9 +9,6 @@ building_foundry_1 = {
         NOT = {
             has_modifier = slave_colony
         }
-        OR = {
-            building_relaxed_basic_income_check = yes
-        }
     }
     allow = {
         str_foundry_allow = yes
@@ -296,10 +293,9 @@ building_foundry_1 = {
         alloys = 3
         trigger = {
             str_is_col_foundry = yes
-            planet_resource_compare = {
-                resource = alloys
-                value >= 20
-                type = produces
+            str_num_districts_milindustry = {
+                operator = > num
+                 = 2
             }
         }
     }
@@ -307,10 +303,9 @@ building_foundry_1 = {
         alloys = 3
         trigger = {
             str_is_col_foundry = yes
-            planet_resource_compare = {
-                resource = alloys
-                value >= 40
-                type = produces
+            str_num_districts_milindustry = {
+                operator = > num
+                 = 3
             }
         }
     }
@@ -318,10 +313,9 @@ building_foundry_1 = {
         alloys = 3
         trigger = {
             str_is_col_foundry = yes
-            planet_resource_compare = {
-                resource = alloys
-                value >= 50
-                type = produces
+            str_num_districts_milindustry = {
+                operator = > num
+                 = 4
             }
         }
     }
