@@ -2,6 +2,7 @@ building_ministry_production = {
     base_buildtime = @b2_time
     base_cap_amount = 1
     icon = building_production_center
+    position_priority = 160
     category = manufacturing
     potential = {
         exists = owner

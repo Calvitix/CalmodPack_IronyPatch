@@ -1448,9 +1448,9 @@ orbital_lab = {
             alloys = 50
         }
         produces = {
-            physics_research = 2
-            society_research = 2
-            engineering_research = 2
+            physics_research = 4
+            society_research = 4
+            engineering_research = 4
         }
         produces = {
             trigger = {
@@ -1471,7 +1471,8 @@ orbital_lab = {
             engineering_research = 2
         }
         upkeep = {
-            energy = 2
+            energy = 4
+            alloys = 1
         }
     }
     ai_build_at_chokepoint = no

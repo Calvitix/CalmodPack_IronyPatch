@@ -2,6 +2,7 @@ building_factory_2 = {
     base_buildtime = @b2_time
     can_build = no
     category = manufacturing
+    position_priority = 150
     allow = {
         has_upgraded_capital = yes
         buildings_upgrade_allow = yes

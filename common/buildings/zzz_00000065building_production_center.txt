@@ -1,6 +1,7 @@
 building_production_center = {
     base_buildtime = @b2_time
     base_cap_amount = 1
+    position_priority = 160
     category = manufacturing
     potential = {
         exists = owner
