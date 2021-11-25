@@ -39,6 +39,10 @@ tech_effective_bureaucracy = {
     }
     ai_weight = {
         modifier = {
+            factor = 1500
+            reroll_society = yes
+        }
+        modifier = {
             factor = 1.25
             research_leader = {
                 area = society

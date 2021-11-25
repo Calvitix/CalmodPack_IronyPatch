@@ -3,7 +3,7 @@ eco_building_zero_waste = {
     can_build = no
     category = amenity
     allow = {
-        has_fully_upgraded_capital = yes
+        has_major_upgraded_capital = yes
     }
     triggered_planet_modifier = {
         potential = {
@@ -100,7 +100,7 @@ eco_building_zero_waste = {
         text = eco_building_waste_2_gestalt_effect
     }
     ai_weight = {
-        weight = 0.5
+        weight = 1.5
         modifier = {
             factor = 1
             has_modifier = eco_minimal
@@ -120,6 +120,14 @@ eco_building_zero_waste = {
         modifier = {
             factor = 5
             has_modifier = eco_catastrophic
+        }
+        modifier = {
+            factor = 4
+            has_modifier = eco_waste_mod
+        }
+        modifier = {
+            factor = 5
+            has_modifier = eco_waste_high
         }
     }
 }

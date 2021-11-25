@@ -47,6 +47,16 @@ tech_interstellar_campaigns = {
         }
     }
     ai_weight = {
+        weight = 20
+        modifier = {
+            factor = 500
+            has_technology = tech_energy_torpedoes_2
+        }
+        factor = 5
+        modifier = {
+            factor = 500
+            reroll_society = yes
+        }
         modifier = {
             factor = 2
             is_militarist = yes

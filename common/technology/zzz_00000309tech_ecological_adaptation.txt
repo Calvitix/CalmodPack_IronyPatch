@@ -30,6 +30,8 @@ tech_ecological_adaptation = {
         }
     }
     ai_weight = {
+        factor = 10000
+        factor = 25
         modifier = {
             factor = 1.25
             research_leader = {
@@ -40,6 +42,22 @@ tech_ecological_adaptation = {
         modifier = {
             factor = 2
             is_xenophobe = yes
+        }
+        modifier = {
+            factor = 5
+            OR = {
+                any_owned_planet = {
+                    habitability = {
+                        who = root
+                        value < 0.5
+                    }
+                }
+                any_system_within_border = {
+                    any_system_planet = {
+                        is_planet_class = pc_nuked
+                    }
+                }
+            }
         }
         modifier = {
             factor = 2

@@ -134,13 +134,13 @@ building_factory_3 = {
         text = job_artisan_drone_effect_desc
     }
     ai_resource_production = {
-        consumer_goods = 24
+        consumer_goods = 20
         trigger = {
             always = yes
         }
     }
     ai_resource_production = {
-        consumer_goods = 24
+        consumer_goods = 20
         trigger = {
             str_num_districts_civindustry = {
                 operator = > num

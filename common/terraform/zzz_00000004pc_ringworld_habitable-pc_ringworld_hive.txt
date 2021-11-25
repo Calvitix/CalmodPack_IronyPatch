@@ -1,7 +1,13 @@
 terraform_link = {
     from = "pc_ringworld_habitable"
     to = "pc_ringworld_hive"
-    energy = 10000
+    resources = {
+        category = terraforming
+        cost = {
+            energy = 10000
+            food = 5000
+        }
+    }
     duration = 1800
     condition = {
         has_ascension_perk = "ap_hive_worlds"

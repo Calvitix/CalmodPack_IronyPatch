@@ -26,6 +26,8 @@ tech_synthetic_thought_patterns = {
         }
     }
     ai_weight = {
+        weight = 300
+        factor = 25
         modifier = {
             factor = 1.25
             research_leader = {

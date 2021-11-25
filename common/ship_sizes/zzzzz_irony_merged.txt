@@ -324,6 +324,7 @@
 @speed_very_fast_20 = 160
 @speed_very_fast_21 = 160
 @speed_very_fast_22 = 160
+@speed_very_fast_23 = 160
 @speed_very_fast_3 = 160
 @speed_very_fast_4 = 160
 @speed_very_fast_5 = 160
@@ -1130,6 +1131,10 @@ titan = {
         base = 1
         max = 999
         naval_cap_div = 100
+        show = {
+            is_scope_valid = yes
+            has_technology = tech_titans
+        }
     }
     resources = {
         category = ships
@@ -2281,6 +2286,7 @@ starbase_outpost = {
     modifier = {
         ship_evasion_mult = -1
         ship_armor_add = 1000
+        ship_shield_add = 1000
         starbase_defense_platform_capacity_add = 15
     }
     ship_modifier = {
@@ -2370,6 +2376,7 @@ starbase_starport = {
     modifier = {
         ship_evasion_mult = -1
         ship_armor_add = 2000
+        ship_shield_add = 2000
         starbase_module_capacity_add = 4
         starbase_building_capacity_add = 4
         starbase_defense_platform_capacity_add = 30
@@ -2380,7 +2387,7 @@ starbase_starport = {
     ship_modifier = {
         ship_fire_rate_mult = 0.5
     }
-    max_hitpoints = 15000
+    max_hitpoints = 10000
     combat_size_multiplier = 20
     size_multiplier = 4
     fleet_slot_size = 2
@@ -2506,6 +2513,7 @@ starbase_starhold = {
     modifier = {
         ship_evasion_mult = -1
         ship_armor_add = 5000
+        ship_shield_add = 5000
         starbase_module_capacity_add = 7
         starbase_building_capacity_add = 7
         starbase_defense_platform_capacity_add = 45
@@ -2516,7 +2524,7 @@ starbase_starhold = {
     ship_modifier = {
         ship_fire_rate_mult = 0.5
     }
-    max_hitpoints = 30000
+    max_hitpoints = 20000
     combat_size_multiplier = 30
     size_multiplier = 4
     fleet_slot_size = 2
@@ -3664,9 +3672,12 @@ ion_cannon = {
                     is_ai = yes
                 }
             }
-            alloys = 1000
+            alloys = 2000
         }
         cost = {
+        }
+        upkeep = {
+            energy = 8
         }
     }
     prerequisites = {
@@ -3758,6 +3769,10 @@ colossus = {
     construction_type = starbase_shipyard
     empire_limit = {
         base = 1
+        show = {
+            is_scope_valid = yes
+            has_technology = tech_colossus
+        }
     }
     resources = {
         category = ships
@@ -3839,7 +3854,7 @@ ark_ship = {
     is_designable = no
 }
 probe = {
-    max_speed = @speed_very_fast_22
+    max_speed = @speed_very_fast_23
     rotation_speed = 0.15
     acceleration = 0.35
     modifier = {
@@ -3966,7 +3981,7 @@ eventship_01 = {
 }
 eventship_02 = {
     graphical_culture = no
-    max_speed = @speed_very_fast_21
+    max_speed = @speed_very_fast_22
     acceleration = 0.35
     rotation_speed = 0.1
     collision_radius = 2
@@ -4869,7 +4884,7 @@ crystal_ship_small_blue = {
     entity = crystal_ship_small_blue_entity
     graphical_culture = no
     is_space_object = yes
-    max_speed = @speed_very_fast_20
+    max_speed = @speed_very_fast_21
     rotation_speed = 0.15
     acceleration = 0.35
     modifier = {
@@ -4938,7 +4953,7 @@ crystal_ship_small_green = {
     entity = crystal_ship_small_green_entity
     graphical_culture = no
     is_space_object = yes
-    max_speed = @speed_very_fast_19
+    max_speed = @speed_very_fast_20
     rotation_speed = 0.15
     acceleration = 0.35
     modifier = {
@@ -5007,7 +5022,7 @@ crystal_ship_small_yellow = {
     entity = crystal_ship_small_yellow_entity
     graphical_culture = no
     is_space_object = yes
-    max_speed = @speed_very_fast_18
+    max_speed = @speed_very_fast_19
     rotation_speed = 0.15
     acceleration = 0.35
     modifier = {
@@ -5076,7 +5091,7 @@ crystal_ship_small_red = {
     entity = crystal_ship_small_red_entity
     graphical_culture = no
     is_space_object = yes
-    max_speed = @speed_very_fast_17
+    max_speed = @speed_very_fast_18
     rotation_speed = 0.15
     acceleration = 0.35
     modifier = {
@@ -5145,7 +5160,7 @@ crystal_ship_small_blue_elite = {
     entity = crystal_ship_small_blue_elite_entity
     graphical_culture = no
     is_space_object = yes
-    max_speed = @speed_very_fast_16
+    max_speed = @speed_very_fast_17
     rotation_speed = 0.15
     acceleration = 0.35
     modifier = {
@@ -5214,7 +5229,7 @@ crystal_ship_small_green_elite = {
     entity = crystal_ship_small_green_elite_entity
     graphical_culture = no
     is_space_object = yes
-    max_speed = @speed_very_fast_15
+    max_speed = @speed_very_fast_16
     rotation_speed = 0.15
     acceleration = 0.35
     modifier = {
@@ -5283,7 +5298,7 @@ crystal_ship_small_yellow_elite = {
     entity = crystal_ship_small_yellow_elite_entity
     graphical_culture = no
     is_space_object = yes
-    max_speed = @speed_very_fast_14
+    max_speed = @speed_very_fast_15
     rotation_speed = 0.15
     acceleration = 0.35
     modifier = {
@@ -5352,7 +5367,7 @@ crystal_ship_small_red_elite = {
     entity = crystal_ship_small_red_elite_entity
     graphical_culture = no
     is_space_object = yes
-    max_speed = @speed_very_fast_13
+    max_speed = @speed_very_fast_14
     rotation_speed = 0.15
     acceleration = 0.35
     modifier = {
@@ -5612,7 +5627,7 @@ space_whale_4 = {
     is_designable = no
 }
 ancient_mining_drone = {
-    max_speed = @speed_very_fast_12
+    max_speed = @speed_very_fast_13
     rotation_speed = 0.5
     acceleration = 0.5
     modifier = {
@@ -5634,7 +5649,7 @@ ancient_mining_drone = {
     graphical_culture = no
 }
 ancient_corvette = {
-    max_speed = @speed_very_fast_11
+    max_speed = @speed_very_fast_12
     rotation_speed = 0.15
     acceleration = 0.35
     modifier = {
@@ -5656,7 +5671,7 @@ ancient_corvette = {
     graphical_culture = no
 }
 ancient_destroyer = {
-    max_speed = @speed_very_fast_10
+    max_speed = @speed_very_fast_11
     rotation_speed = 0.3
     acceleration = 1
     modifier = {
@@ -5891,7 +5906,7 @@ pirate_corvette = {
     graphical_culture = {
         "pirate_01"
     }
-    max_speed = @speed_very_fast_9
+    max_speed = @speed_very_fast_10
     acceleration = 0.35
     rotation_speed = 0.1
     collision_radius = @corvette_collision_radius_9
@@ -6011,7 +6026,7 @@ bemat_corvette = {
     graphical_culture = {
         "pirate_01"
     }
-    max_speed = @speed_very_fast_8
+    max_speed = @speed_very_fast_9
     acceleration = 0.35
     rotation_speed = 0.1
     collision_radius = @corvette_collision_radius_8
@@ -6482,7 +6497,7 @@ space_dragon_red = {
     is_space_object = yes
     graphical_culture = no
     can_be_inspected = no
-    max_speed = @speed_very_fast_7
+    max_speed = @speed_very_fast_8
     acceleration = 0.4
     rotation_speed = 0.5
     collision_radius = 7
@@ -6986,6 +7001,45 @@ space_dragon_blue = {
     is_space_object = yes
     graphical_culture = no
     can_be_inspected = no
+    max_speed = @speed_very_fast_7
+    acceleration = 0.4
+    rotation_speed = 0.5
+    collision_radius = 7
+    modifier = {
+        ship_evasion_add = 25
+        ship_armor_add = 100000
+    }
+    max_hitpoints = 150000
+    combat_size_multiplier = 50
+    size_multiplier = 32
+    fleet_slot_size = 8
+    section_slots = {
+        "mid" = {
+            locator = "part1"
+        }
+    }
+    num_target_locators = 0
+    is_space_station = no
+    icon = ship_size_space_monster
+    class = shipclass_military
+    is_designable = no
+    resources = {
+        category = ships
+        upkeep = {
+            trigger = {
+                from = {
+                    is_country_type = default
+                }
+            }
+            food = 100
+        }
+    }
+}
+space_dragon_origin = {
+    entity = aquatic_dragon_entity
+    is_space_object = yes
+    graphical_culture = no
+    can_be_inspected = no
     max_speed = @speed_very_fast_6
     acceleration = 0.4
     rotation_speed = 0.5
@@ -7017,6 +7071,71 @@ space_dragon_blue = {
                 }
             }
             food = 100
+        }
+    }
+}
+space_dragon_origin_baby = {
+    entity = aquatic_dragon_baby_entity
+    is_space_object = yes
+    base_buildtime = @titan_build_time
+    construction_type = starbase_shipyard
+    is_listed = yes
+    graphical_culture = no
+    can_be_inspected = no
+    max_speed = 200
+    acceleration = 0.8
+    rotation_speed = 0.8
+    collision_radius = 15
+    modifier = {
+        ship_evasion_add = 25
+        ships_upkeep_mult = -1
+    }
+    max_hitpoints = 10000
+    size_multiplier = 8
+    fleet_slot_size = 8
+    section_slots = {
+        "mid" = {
+            locator = "part1"
+        }
+    }
+    num_target_locators = 0
+    is_space_station = no
+    icon = ship_size_space_monster
+    class = shipclass_military
+    is_designable = no
+    required_component_set = "ftl_components"
+    required_component_set = "sensor_components"
+    required_component_set = "thruster_components"
+    required_component_set = "combat_computers"
+    potential_country = {
+        is_dragon_breeder_country = yes
+    }
+    potential_construction = {
+        is_scope_type = starbase
+    }
+    possible_construction = {
+        custom_tooltip = {
+            fail_text = requires_dragon_hatchery
+            has_starbase_building = dragon_hatchery
+        }
+    }
+    empire_limit = {
+        base = 10
+        show = {
+            is_scope_valid = yes
+            is_dragon_breeder_country = yes
+        }
+    }
+    components_add_to_cost = no
+    resources = {
+        category = ships
+        cost = {
+            rare_crystals = 500
+            exotic_gases = 500
+            sr_living_metal = 100
+        }
+        upkeep = {
+            food = 10
         }
     }
 }
@@ -7738,6 +7857,10 @@ juggernaut = {
         base = 1
         max = 4
         naval_cap_div = 750
+        show = {
+            is_scope_valid = yes
+            has_technology = tech_juggernaut
+        }
     }
     resources = {
         category = ships
@@ -8334,6 +8457,7 @@ esc_dummy_strike_cruiser = {
     is_designable = no
     components_add_to_cost = no
     enable_default_design = no
+    enable_3dview_in_ship_browser = no
     class = shipclass_military
     required_component_set = "power_core"
     required_component_set = "ftl_components"
@@ -8359,6 +8483,7 @@ esc_dummy_battle_cruiser = {
     is_designable = no
     components_add_to_cost = no
     enable_default_design = no
+    enable_3dview_in_ship_browser = no
     class = shipclass_military
     required_component_set = "power_core"
     required_component_set = "ftl_components"
@@ -8384,6 +8509,7 @@ esc_dummy_carrier = {
     is_designable = no
     components_add_to_cost = no
     enable_default_design = no
+    enable_3dview_in_ship_browser = no
     class = shipclass_military
     required_component_set = "power_core"
     required_component_set = "ftl_components"
@@ -8409,6 +8535,7 @@ esc_dummy_dreadnought = {
     is_designable = no
     components_add_to_cost = no
     enable_default_design = no
+    enable_3dview_in_ship_browser = no
     class = shipclass_military
     required_component_set = "power_core"
     required_component_set = "ftl_components"
@@ -8434,6 +8561,7 @@ esc_dummy_flagship = {
     is_designable = no
     components_add_to_cost = no
     enable_default_design = no
+    enable_3dview_in_ship_browser = no
     class = shipclass_military
     required_component_set = "power_core"
     required_component_set = "ftl_components"
@@ -8459,6 +8587,7 @@ esc_dummy_scx_dreadnought = {
     is_designable = no
     components_add_to_cost = no
     enable_default_design = no
+    enable_3dview_in_ship_browser = no
     class = shipclass_military
     required_component_set = "power_core"
     required_component_set = "ftl_components"
@@ -8481,6 +8610,7 @@ esc_dummy_military_platform = {
     is_listed = no
     is_designable = no
     enable_default_design = no
+    enable_3dview_in_ship_browser = no
     prerequisites = {
         "tech_space_defense_station_1"
     }
@@ -8509,6 +8639,7 @@ esc_dummy_starbase = {
     components_add_to_cost = no
     can_have_federation_design = no
     enable_default_design = no
+    enable_3dview_in_ship_browser = no
     class = shipclass_starbase
     required_component_set = "power_core"
     required_component_set = "sensor_components"
@@ -8533,6 +8664,7 @@ esc_dummy_juggernaut = {
     can_disable = no
     can_have_federation_design = no
     enable_default_design = no
+    enable_3dview_in_ship_browser = no
     icon_frame = 7
     ship_class_icon_frame = 35
     default_behavior = carrier
@@ -10967,7 +11099,7 @@ strategic_defence_command_platform = {
     class = shipclass_military_station
     is_designable = yes
     enable_default_design = yes
-    enable_3dview_in_ship_browser = yes
+    enable_3dview_in_ship_browser = no
     required_component_set = "power_core"
     prerequisites = {
         "giga_tech_maginot_world"

@@ -311,6 +311,24 @@ minerals = {
         }
         modifier = {
             add = 25000
+            or = {
+                has_ascension_perk = ap_arcology_project
+                and = {
+                    has_origin = origin_remnants
+                    has_technology = tech_housing_2
+                }
+            }
+            resource_stockpile_compare = {
+                resource = minerals
+                value < 20000
+            }
+            resource_stockpile_compare = {
+                resource = energy
+                value > 1000
+            }
+        }
+        modifier = {
+            add = 25000
             str_menacing_crisis = yes
             resource_stockpile_compare = {
                 resource = minerals

@@ -1,0 +1,33 @@
+@terraforming_cost_gaia = 20000
+@terraforming_duration_gaia = 18000
+terraform_link = {
+    from = pc_arid
+    to = pc_aquatic
+    resources = {
+        category = terraforming
+        cost = {
+            energy = @terraforming_cost_gaia
+        }
+    }
+    duration = @terraforming_duration_gaia
+    potential = {
+        has_ascension_perk = ap_hydrocentric
+        has_ascension_perk = ap_world_shaper
+    }
+    condition = {
+        has_ascension_perk = ap_hydrocentric
+        has_ascension_perk = ap_world_shaper
+    }
+    effect = {
+        from = {
+            set_planet_flag = hotaquatic
+            set_planet_entity = {
+                entity = "aquatichot_planet_01_entity"
+                picture = pc_aquatichot
+            }
+        }
+    }
+    ai_weight = {
+        weight = 0
+    }
+}

@@ -40,6 +40,10 @@ tech_vitality_boosters = {
     }
     ai_weight = {
         modifier = {
+            factor = 500
+            reroll_society = yes
+        }
+        modifier = {
             factor = 1.25
             research_leader = {
                 area = society

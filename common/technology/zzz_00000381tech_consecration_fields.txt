@@ -26,6 +26,7 @@ tech_consecration_fields = {
         }
     }
     ai_weight = {
+        factor = 15
         modifier = {
             factor = 1.25
             research_leader = {

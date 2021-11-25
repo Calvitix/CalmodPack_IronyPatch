@@ -19,6 +19,10 @@ tech_thought_enforcement = {
     weight_modifier = {
         factor = 0.5
         modifier = {
+            factor = 0
+            host_has_dlc = "Utopia"
+        }
+        modifier = {
             factor = 0.5
             NOT = {
                 research_leader = {
@@ -72,6 +76,7 @@ tech_thought_enforcement = {
     }
     ai_weight = {
         factor = 5
+        factor = 25
         modifier = {
             factor = 2
             is_authoritarian = yes

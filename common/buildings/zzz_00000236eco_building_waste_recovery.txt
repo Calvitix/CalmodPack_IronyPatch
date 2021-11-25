@@ -19,6 +19,8 @@ eco_building_waste_recovery = {
                     has_modifier = eco_heavy
                     has_modifier = eco_extreme
                     has_modifier = eco_catastrophic
+                    has_modifier = eco_waste_mod
+                    has_modifier = eco_waste_high
                 }
             }
         }
@@ -38,6 +40,8 @@ eco_building_waste_recovery = {
                 has_modifier = eco_heavy
                 has_modifier = eco_extreme
                 has_modifier = eco_catastrophic
+                has_modifier = eco_waste_mod
+                has_modifier = eco_waste_high
             }
         }
         modifier = {

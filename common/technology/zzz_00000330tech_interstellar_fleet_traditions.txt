@@ -23,7 +23,12 @@ tech_interstellar_fleet_traditions = {
         }
     }
     ai_weight = {
-        factor = 3
+        weight = 300
+        factor = 5
+        modifier = {
+            factor = 500
+            has_technology = tech_energy_torpedoes_2
+        }
         modifier = {
             factor = 2
             is_militarist = yes

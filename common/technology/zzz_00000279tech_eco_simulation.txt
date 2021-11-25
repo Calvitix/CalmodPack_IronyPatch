@@ -62,7 +62,11 @@ tech_eco_simulation = {
         }
     }
     ai_weight = {
-        factor = 1.5
+        factor = 150
+        modifier = {
+            factor = 1000
+            reroll_society = yes
+        }
         modifier = {
             factor = 1.25
             has_ethic = ethic_pacifist

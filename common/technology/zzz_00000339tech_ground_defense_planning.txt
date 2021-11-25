@@ -29,6 +29,10 @@ tech_ground_defense_planning = {
         }
     }
     ai_weight = {
+        modifier = {
+            factor = 3000
+            reroll_society = yes
+        }
         factor = 2
         modifier = {
             factor = 2

@@ -34,7 +34,7 @@ building_est_mechanicum_5_guild_of_engineers_2 = {
         planet_jobs_engineering_research_produces_mult = 0.15
     }
     allow = {
-        has_fully_upgraded_capital = yes
+        has_major_upgraded_capital = yes
     }
     triggered_planet_modifier = {
         potential = {

@@ -38,6 +38,12 @@ tech_manifest_destiny = {
         }
     }
     ai_weight = {
+        weight = 30
+        factor = 125
+        modifier = {
+            factor = 500
+            has_technology = tech_energy_torpedoes_2
+        }
         modifier = {
             factor = 1.5
             has_ethic = ethic_militarist

@@ -1,0 +1,69 @@
+park_ranger = {
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = building_executive_retreat
+    clothes_texture_index = 3
+    possible_precalc = can_fill_specialist_job
+    resources = {
+        category = planet_ranger
+        produces = {
+            waste = -22
+            unity = 1
+            society_research = 1
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_tradition = tr_environmentalism_conservation
+                }
+            }
+            waste = -10
+        }
+    }
+    pop_modifier = {
+        pop_defense_armies_add = 1
+    }
+    planet_modifier = {
+        planet_amenities_add = 2
+        planet_crime_add = -5
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_valid_civic = civic_environmentalist
+            }
+        }
+        modifier = {
+            planet_stability_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_ascension_perk = eco_ap_land_ethic
+            }
+        }
+        modifier = {
+            planet_amenities_add = 2
+        }
+    }
+    weight = {
+        weight = @specialist_job_weight
+        modifier = {
+            factor = 0.1
+            has_citizenship_rights = no
+            NOT = {
+                has_trait = trait_mechanical
+            }
+        }
+        modifier = {
+            factor = 1.5
+            OR = {
+                has_trait = trait_robot_domestic_protocols
+                has_trait = trait_charismatic
+            }
+        }
+    }
+}

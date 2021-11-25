@@ -49,7 +49,15 @@ tech_dense_jungle = {
     }
     ai_weight = {
         modifier = {
-            factor = 3
+            factor = 50
+        }
+        modifier = {
+            factor = 500
+            has_technology = tech_energy_torpedoes_2
+        }
+        modifier = {
+            factor = 3000
+            reroll_society = yes
         }
         modifier = {
             factor = 0

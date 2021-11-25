@@ -11,6 +11,7 @@ maweer = {
         plural = "PRESCRIPTED_species_plural_maweer"
         adjective = "PRESCRIPTED_species_adjective_maweer"
         name_list = "PLANT"
+        gender = indeterminable
         trait = "trait_agrarian"
         trait = "trait_enduring"
         trait = "trait_conservational"

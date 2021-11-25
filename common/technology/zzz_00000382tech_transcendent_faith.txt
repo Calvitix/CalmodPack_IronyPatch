@@ -26,6 +26,7 @@ tech_transcendent_faith = {
         }
     }
     ai_weight = {
+        factor = 125
         modifier = {
             factor = 1.25
             research_leader = {

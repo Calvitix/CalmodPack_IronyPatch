@@ -33,6 +33,32 @@ district_city = {
         NOT = {
             has_modifier = slave_colony
         }
+        OR = {
+            NOT = {
+                exists = owner
+            }
+            AND = {
+                exists = owner
+                OR = {
+                    owner = {
+                        is_ai = no
+                    }
+                    AND = {
+                        num_districts = {
+                            type = district_city
+                            value < 3
+                        }
+                    }
+                    AND = {
+                        num_districts = {
+                            type = district_city
+                            value < 6
+                        }
+                        is_capital = yes
+                    }
+                }
+            }
+        }
     }
     conversion_ratio = 1
     convert_to = {
@@ -68,6 +94,9 @@ district_city = {
     triggered_planet_modifier = {
         potential = {
             exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
             str_enable_clerks = yes
         }
         modifier = {

@@ -19,6 +19,11 @@ tech_hive_cluster = {
         }
     }
     ai_weight = {
+        factor = 5
+        modifier = {
+            factor = 500
+            reroll_society = yes
+        }
         modifier = {
             factor = 1.25
             research_leader = {

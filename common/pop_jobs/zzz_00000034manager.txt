@@ -9,9 +9,7 @@ manager = {
         is_being_assimilated = no
         is_sapient = yes
     }
-    possible = {
-        specialist_job_check_trigger = yes
-    }
+    possible_precalc = can_fill_specialist_job
     planet_modifier = {
         trade_value_add = 3
     }

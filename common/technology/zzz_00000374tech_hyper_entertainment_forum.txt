@@ -31,6 +31,14 @@ tech_hyper_entertainment_forum = {
     }
     ai_weight = {
         modifier = {
+            factor = 3000
+            reroll_society = yes
+        }
+        modifier = {
+            factor = 500
+            has_technology = tech_energy_torpedoes_2
+        }
+        modifier = {
             factor = 1.25
             research_leader = {
                 area = society

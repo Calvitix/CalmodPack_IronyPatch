@@ -6,6 +6,12 @@ building_bureaucratic_1 = {
         owner = {
             is_regular_empire = yes
         }
+        NOT = {
+            has_modifier = resort_colony
+        }
+        NOT = {
+            has_modifier = slave_colony
+        }
     }
     allow = {
         or = {

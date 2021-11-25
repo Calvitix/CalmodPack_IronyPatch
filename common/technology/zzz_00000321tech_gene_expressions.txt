@@ -72,7 +72,8 @@ tech_gene_expressions = {
         }
     }
     ai_weight = {
-        factor = 3
+        weight = 3
+        factor = 25
         modifier = {
             factor = 1.25
             research_leader = {

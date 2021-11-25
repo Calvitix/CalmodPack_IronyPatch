@@ -59,11 +59,7 @@ district_arcology_civilian_industry = {
             exists = owner
             owner = {
                 is_regular_empire = yes
-            }
-            NOT = {
-                owner = {
-                    has_civic = civic_crafters
-                }
+                is_crafter_empire = no
             }
         }
         modifier = {
@@ -75,9 +71,7 @@ district_arcology_civilian_industry = {
             exists = owner
             owner = {
                 is_regular_empire = yes
-            }
-            owner = {
-                has_civic = civic_crafters
+                is_crafter_empire = yes
             }
         }
         modifier = {
@@ -89,11 +83,7 @@ district_arcology_civilian_industry = {
             exists = owner
             owner = {
                 is_regular_empire = yes
-            }
-            NOT = {
-                owner = {
-                    has_civic = civic_crafters
-                }
+                is_crafter_empire = no
             }
         }
         text = job_artisan_effect_desc
@@ -103,9 +93,7 @@ district_arcology_civilian_industry = {
             exists = owner
             owner = {
                 is_regular_empire = yes
-            }
-            owner = {
-                has_civic = civic_crafters
+                is_crafter_empire = yes
             }
         }
         text = job_artificer_effect_desc

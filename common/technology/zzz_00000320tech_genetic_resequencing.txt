@@ -13,6 +13,7 @@ tech_genetic_resequencing = {
         add_advanced_traits
     }
     ai_weight = {
+        weight = 125
         modifier = {
             factor = 1.25
             research_leader = {

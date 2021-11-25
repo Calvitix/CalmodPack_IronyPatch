@@ -26,6 +26,7 @@ tech_housing_agrarian_idyll = {
         }
     }
     ai_weight = {
+        weight = 25
         factor = 2
         modifier = {
             factor = 1.25

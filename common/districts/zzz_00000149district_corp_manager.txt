@@ -45,7 +45,7 @@ district_corp_manager = {
             }
         }
         modifier = {
-            job_manager_add = 8
+            job_manager_add = 6
         }
     }
     triggered_desc = {

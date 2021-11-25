@@ -335,8 +335,8 @@ building_hab_major_capital = {
             }
         }
         modifier = {
-            planet_jobs_upkeep_mult = 0.1
-            planet_jobs_produces_mult = 0.1
+            planet_jobs_productive_upkeep_mult = 0.1
+            planet_jobs_productive_produces_mult = 0.1
         }
     }
     triggered_desc = {

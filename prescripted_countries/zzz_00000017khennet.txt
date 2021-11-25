@@ -11,6 +11,7 @@ khennet = {
         plural = "PRESCRIPTED_species_plural_khennet"
         adjective = "PRESCRIPTED_species_adjective_khennet"
         name_list = "LITHOID3"
+        gender = indeterminable
         trait = "trait_lithoid"
         trait = "trait_communal"
         trait = "trait_industrious"

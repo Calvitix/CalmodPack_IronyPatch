@@ -26,6 +26,7 @@ tech_planetary_infrastructure_1 = {
         }
     }
     ai_weight = {
+        factor = 500
         factor = 5
         modifier = {
             factor = 1.25

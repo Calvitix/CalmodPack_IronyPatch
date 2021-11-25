@@ -70,6 +70,19 @@ building_hydroponics_farm = {
             owner = {
                 is_regular_empire = yes
                 is_fallen_empire_spiritualist = no
+                OR = {
+                    is_anglers_empire = no
+                    AND = {
+                        is_anglers_empire = yes
+                        NOT = {
+                            PREV = {
+                                planet = {
+                                    is_wet = yes
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
         modifier = {
@@ -107,6 +120,24 @@ building_hydroponics_farm = {
         }
         modifier = {
             job_agri_drone_add = @b1_jobs
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+                is_fallen_empire_spiritualist = no
+                is_anglers_empire = yes
+                PREV = {
+                    planet = {
+                        is_wet = yes
+                    }
+                }
+            }
+        }
+        modifier = {
+            job_angler_add = 1
         }
     }
     resources = {
@@ -147,6 +178,19 @@ building_hydroponics_farm = {
             owner = {
                 is_gestalt = no
                 is_fallen_empire_spiritualist = no
+                OR = {
+                    is_anglers_empire = no
+                    AND = {
+                        is_anglers_empire = yes
+                        NOT = {
+                            PREV = {
+                                planet = {
+                                    is_wet = yes
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
         text = job_farmer_effect_desc
@@ -159,6 +203,21 @@ building_hydroponics_farm = {
             }
         }
         text = job_fe_acolyte_farm_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_fallen_empire_spiritualist = no
+                is_anglers_empire = yes
+                PREV = {
+                    planet = {
+                        is_wet = yes
+                    }
+                }
+            }
+        }
+        text = job_aqu_angler_effect_desc
     }
     prerequisites = {
         "tech_hydroponics"

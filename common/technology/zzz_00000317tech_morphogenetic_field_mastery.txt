@@ -97,7 +97,8 @@ tech_morphogenetic_field_mastery = {
         }
     }
     ai_weight = {
-        factor = 3
+        weight = 14
+        factor = 125
         modifier = {
             factor = 1.25
             has_ethic = ethic_militarist

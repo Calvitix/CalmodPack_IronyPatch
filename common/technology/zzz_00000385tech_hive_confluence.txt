@@ -20,6 +20,7 @@ tech_hive_confluence = {
         }
     }
     ai_weight = {
+        factor = 25
         modifier = {
             factor = 1.25
             research_leader = {

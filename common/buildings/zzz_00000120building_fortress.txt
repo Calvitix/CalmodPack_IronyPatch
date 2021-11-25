@@ -5,13 +5,15 @@ building_fortress = {
     position_priority = 100
     category = army
     allow = {
-        exists = owner
         has_upgraded_capital = yes
-        buildings_upgrade_allow = yes
-        buildings_has_motes = yes
-        or = {
+        exists = owner
+        OR = {
             owner = {
                 is_ai = no
+            }
+            AND = {
+       			buildings_upgrade_allow = yes
+        		buildings_has_motes = yes
             }
             has_planet_flag = str_supervisor
         }

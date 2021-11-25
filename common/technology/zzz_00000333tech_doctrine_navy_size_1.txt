@@ -26,7 +26,16 @@ tech_doctrine_navy_size_1 = {
         }
     }
     ai_weight = {
-        factor = 10
+        weight = 50
+        factor = 5
+        modifier = {
+            factor = 500
+            has_technology = tech_energy_torpedoes_2
+        }
+        modifier = {
+            factor = 3000
+            reroll_society = yes
+        }
         modifier = {
             factor = 2
             is_militarist = yes

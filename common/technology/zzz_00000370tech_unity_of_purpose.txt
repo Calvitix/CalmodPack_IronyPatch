@@ -24,6 +24,11 @@ tech_unity_of_purpose = {
         }
     }
     ai_weight = {
+        weight = 5
+        modifier = {
+            factor = 500
+            reroll_society = yes
+        }
         modifier = {
             factor = 1.25
             research_leader = {

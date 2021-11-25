@@ -1,0 +1,36 @@
+@terraforming_cost_level_4 = 20000
+@terraforming_duration_level_3 = 28800
+terraform_link = {
+    from = pc_pd_barren_cold_hab
+    to = pc_karst
+    resources = {
+        category = terraforming
+        cost = {
+            energy = @terraforming_cost_level_4
+        }
+    }
+    duration = @terraforming_duration_level_3
+    potential = {
+        from = {
+            has_modifier = pdterra_karst
+        }
+    }
+    condition = {
+        has_technology = "tech_climate_restoration"
+    }
+    effect = {
+        from = {
+            remove_modifier = pdterra_karst
+            remove_deposit = d_minerals_5
+            reroll_deposits = yes
+            add_modifier = {
+                modifier = karst
+                days = -1
+            }
+            add_deposit = d_karst_cave
+        }
+    }
+    ai_weight = {
+        weight = 1
+    }
+}

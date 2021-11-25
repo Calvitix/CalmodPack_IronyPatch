@@ -43,6 +43,7 @@ tech_embodied_dynamism = {
         }
     }
     ai_weight = {
+        weight = 25
         modifier = {
             factor = 1.25
             research_leader = {

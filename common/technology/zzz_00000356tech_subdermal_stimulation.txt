@@ -50,6 +50,11 @@ tech_subdermal_stimulation = {
         }
     }
     ai_weight = {
+        weight = 5
+        modifier = {
+            factor = 500
+            reroll_society = yes
+        }
         modifier = {
             factor = 3
             NOR = {

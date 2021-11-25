@@ -8,9 +8,7 @@ building_executive_retreat = {
     potential = {
         has_branch_office = yes
         branch_office_owner = {
-            NOT = {
-                is_ai = yes
-            }
+            is_ai = no
         }
     }
     allow = {

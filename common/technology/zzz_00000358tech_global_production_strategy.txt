@@ -32,6 +32,12 @@ tech_global_production_strategy = {
         }
     }
     ai_weight = {
+        weight = 40
+        factor = 25
+        modifier = {
+            factor = 500
+            has_technology = tech_energy_torpedoes_2
+        }
         factor = 1.5
         modifier = {
             factor = 1.25

@@ -35,6 +35,16 @@ tech_galactic_ambitions = {
         }
     }
     ai_weight = {
+        weight = 30
+        factor = 5
+        modifier = {
+            factor = 500
+            has_technology = tech_energy_torpedoes_2
+        }
+        modifier = {
+            factor = 500
+            reroll_society = yes
+        }
         modifier = {
             factor = 2
             is_militarist = yes

@@ -1,7 +1,12 @@
 terraform_link = {
     from = "pc_katzenland"
     to = "pc_arid"
-    energy = 25000
+    resources = {
+        category = terraforming
+        cost = {
+            energy = 25000
+        }
+    }
     duration = 9000
     ai_weight = {
         weight = 5

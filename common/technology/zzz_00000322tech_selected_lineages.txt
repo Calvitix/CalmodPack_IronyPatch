@@ -70,6 +70,7 @@ tech_selected_lineages = {
     }
     ai_weight = {
         factor = 3
+        factor = 25
         modifier = {
             factor = 0
             has_ethic = ethic_fanatic_egalitarian

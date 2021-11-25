@@ -41,6 +41,7 @@ tech_glandular_acclimation = {
         }
     }
     ai_weight = {
+        weight = 25
         modifier = {
             factor = 1.25
             research_leader = {

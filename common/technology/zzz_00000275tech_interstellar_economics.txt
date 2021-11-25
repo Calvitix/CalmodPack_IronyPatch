@@ -39,7 +39,8 @@ tech_interstellar_economics = {
         }
     }
     ai_weight = {
-        factor = 2
+        weight = 2
+        factor = 25
         modifier = {
             factor = 1.25
             research_leader = {

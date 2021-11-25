@@ -27,6 +27,7 @@ tech_combat_training = {
         }
     }
     ai_weight = {
+        weight = 25
         modifier = {
             factor = 2
             is_militarist = yes

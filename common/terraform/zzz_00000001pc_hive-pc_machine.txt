@@ -3,7 +3,12 @@
 terraform_link = {
     to = "pc_machine"
     from = "pc_hive"
-    energy = @machineCost
+    resources = {
+        category = terraforming
+        cost = {
+            energy = @machineCost
+        }
+    }
     duration = @machineTime
     potential = {
         has_ascension_perk = ap_machine_worlds
@@ -13,11 +18,12 @@ terraform_link = {
         modifier = {
             factor = 0
             from = {
-                any_owned_pop = {
+                any_owned_species = {
                     NOR = {
                         has_trait = trait_machine_unit
                         has_trait = trait_mechanical
                     }
+                    is_sapient = yes
                 }
             }
         }

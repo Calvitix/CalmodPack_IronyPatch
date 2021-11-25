@@ -62,6 +62,10 @@ tech_epigenetic_triggers = {
     }
     ai_weight = {
         modifier = {
+            factor = 500
+            reroll_society = yes
+        }
+        modifier = {
             factor = 0.5
             has_ethic = ethic_fanatic_xenophobe
         }

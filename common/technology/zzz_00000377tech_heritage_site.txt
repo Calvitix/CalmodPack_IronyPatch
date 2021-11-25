@@ -34,6 +34,11 @@ tech_heritage_site = {
         }
     }
     ai_weight = {
+        factor = 5
+        modifier = {
+            factor = 3000
+            reroll_society = yes
+        }
         modifier = {
             factor = 1.25
             research_leader = {

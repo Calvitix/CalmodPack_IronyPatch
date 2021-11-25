@@ -29,6 +29,32 @@ district_hive = {
         NOT = {
             has_modifier = resort_colony
         }
+        OR = {
+            NOT = {
+                exists = owner
+            }
+            AND = {
+                exists = owner
+                OR = {
+                    owner = {
+                        is_ai = no
+                    }
+                    AND = {
+                        num_districts = {
+                            type = district_hive
+                            value < 3
+                        }
+                    }
+                    AND = {
+                        num_districts = {
+                            type = district_hive
+                            value < 6
+                        }
+                        is_capital = yes
+                    }
+                }
+            }
+        }
     }
     conversion_ratio = 1
     convert_to = {

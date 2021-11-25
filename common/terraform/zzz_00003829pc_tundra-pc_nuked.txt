@@ -1,0 +1,18 @@
+terraform_link = {
+    from = "pc_tundra"
+    to = "pc_nuked"
+    resources = {
+        category = terraforming
+        cost = {
+            energy = 5000
+        }
+    }
+    duration = 2400
+    condition = {
+        has_technology = "tech_climate_restoration"
+        has_tradition = tr_plentiful_transformation_5
+    }
+    ai_weight = {
+        weight = 0
+    }
+}

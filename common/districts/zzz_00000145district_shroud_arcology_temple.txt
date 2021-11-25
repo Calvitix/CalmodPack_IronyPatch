@@ -1,3 +1,4 @@
+@pdarcsplit = 3
 district_shroud_arcology_temple = {
     base_buildtime = 600
     is_capped_by_modifier = no
@@ -74,7 +75,7 @@ district_shroud_arcology_temple = {
             }
         }
         modifier = {
-            job_entertainer_add = 4
+            job_entertainer_add = @pdarcsplit
         }
     }
     triggered_planet_modifier = {
@@ -94,7 +95,7 @@ district_shroud_arcology_temple = {
             }
         }
         modifier = {
-            job_duelist_add = 4
+            job_duelist_add = @pdarcsplit
         }
     }
     triggered_planet_modifier = {
@@ -108,7 +109,7 @@ district_shroud_arcology_temple = {
             }
         }
         modifier = {
-            job_manager_add = 4
+            job_manager_add = @pdarcsplit
         }
     }
     triggered_planet_modifier = {
@@ -127,7 +128,7 @@ district_shroud_arcology_temple = {
             }
         }
         modifier = {
-            job_priest_add = 4
+            job_priest_add = @pdarcsplit
         }
     }
     triggered_planet_modifier = {
@@ -141,8 +142,7 @@ district_shroud_arcology_temple = {
             }
         }
         modifier = {
-            job_priest_add = 2
-            job_desirepriest_add = 2
+            job_desirepriest_add = @pdarcsplit
         }
     }
     triggered_planet_modifier = {
@@ -156,8 +156,7 @@ district_shroud_arcology_temple = {
             }
         }
         modifier = {
-            job_priest_add = 2
-            job_warriorpriest_add = 2
+            job_warriorpriest_add = @pdarcsplit
         }
     }
     triggered_planet_modifier = {
@@ -171,8 +170,7 @@ district_shroud_arcology_temple = {
             }
         }
         modifier = {
-            job_priest_add = 2
-            job_medicalpriest_add = 2
+            job_medicalpriest_add = @pdarcsplit
         }
     }
     triggered_planet_modifier = {
@@ -186,8 +184,7 @@ district_shroud_arcology_temple = {
             }
         }
         modifier = {
-            job_priest_add = 2
-            job_technopriest_add = 2
+            job_technopriest_add = @pdarcsplit
         }
     }
     triggered_desc = {

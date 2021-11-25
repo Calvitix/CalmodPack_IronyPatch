@@ -97,4 +97,12 @@ building_hive_confluence = {
         }
         text = job_maintenance_drone_effect_desc
     }
+    on_queued = {
+        planet = {
+            set_timed_planet_flag = {
+                flag = recent_admin_building_built
+                days = 720
+            }
+        }
+    }
 }

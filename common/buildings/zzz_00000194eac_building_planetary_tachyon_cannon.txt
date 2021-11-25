@@ -10,7 +10,7 @@ eac_building_planetary_tachyon_cannon = {
         }
     }
     allow = {
-        has_fully_upgraded_capital = yes
+        has_major_upgraded_capital = yes
     }
     triggered_planet_modifier = {
         potential = {

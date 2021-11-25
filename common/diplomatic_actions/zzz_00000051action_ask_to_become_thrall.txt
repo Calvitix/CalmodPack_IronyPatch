@@ -27,6 +27,12 @@ action_ask_to_become_thrall = {
             has_been_declared_crisis = no
         }
         custom_tooltip = {
+            fail_text = "requires_actor_not_pompous"
+            NOT = {
+                has_valid_civic = civic_pompous_purists
+            }
+        }
+        custom_tooltip = {
             fail_text = "no_shared_borders"
             OR = {
                 any_system_within_border = {

@@ -85,6 +85,7 @@ tech_gene_seed_purification = {
     }
     ai_weight = {
         factor = 3
+        factor = 125
         modifier = {
             factor = 1.25
             has_ethic = ethic_militarist

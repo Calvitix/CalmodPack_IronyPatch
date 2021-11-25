@@ -1,7 +1,13 @@
 terraform_link = {
     from = "pc_gigaorbital_ring_ruined"
     to = "pc_gigaorbital_ring"
-    energy = 10000
+    resources = {
+        category = terraforming
+        cost = {
+            energy = 7500
+            alloys = 5000
+        }
+    }
     duration = 3600
     condition = {
         has_technology = "tech_mega_engineering"

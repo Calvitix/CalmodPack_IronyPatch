@@ -66,6 +66,7 @@ tech_capacity_boosters = {
     }
     ai_weight = {
         factor = 3
+        factor = 125
         modifier = {
             factor = 1.25
             research_leader = {

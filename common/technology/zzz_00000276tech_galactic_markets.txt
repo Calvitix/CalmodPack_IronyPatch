@@ -60,6 +60,8 @@ tech_galactic_markets = {
         }
     }
     ai_weight = {
+        weight = 40
+        factor = 125
         modifier = {
             factor = 1.25
             research_leader = {

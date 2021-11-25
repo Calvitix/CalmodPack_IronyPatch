@@ -47,6 +47,12 @@ tech_galactic_campaigns = {
         }
     }
     ai_weight = {
+        weight = 30
+        modifier = {
+            factor = 500
+            has_technology = tech_energy_torpedoes_2
+        }
+        factor = 125
         modifier = {
             factor = 1.5
             has_ethic = ethic_militarist

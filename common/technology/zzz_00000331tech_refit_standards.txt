@@ -27,6 +27,12 @@ tech_refit_standards = {
         }
     }
     ai_weight = {
+        weight = 30
+        factor = 25
+        modifier = {
+            factor = 500
+            has_technology = tech_energy_torpedoes_2
+        }
         modifier = {
             factor = 2
             is_militarist = yes

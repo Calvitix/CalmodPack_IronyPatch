@@ -55,6 +55,7 @@ tech_hydroponics = {
         }
     }
     ai_weight = {
+        weight = 50000
         modifier = {
             factor = 1.25
             research_leader = {

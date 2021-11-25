@@ -279,7 +279,7 @@ building_foundry_1 = {
         text = job_crucible_fabricator_effect_desc
     }
     ai_resource_production = {
-        alloys = 3
+        alloys = 1
         trigger = {
             always = yes
         }

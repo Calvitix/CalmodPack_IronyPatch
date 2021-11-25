@@ -24,7 +24,8 @@ tech_galactic_administration = {
         }
     }
     ai_weight = {
-        factor = 10
+        weight = 1000
+        factor = 25
         modifier = {
             factor = 1.25
             research_leader = {

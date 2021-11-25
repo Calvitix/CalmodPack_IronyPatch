@@ -1,7 +1,12 @@
 terraform_link = {
     from = "pc_melted_frozen"
     to = "pc_ocean"
-    energy = 12500
+    resources = {
+        category = terraforming
+        cost = {
+            energy = 12500
+        }
+    }
     duration = 5000
     ai_weight = {
         weight = 5

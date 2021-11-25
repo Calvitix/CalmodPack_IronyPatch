@@ -1,7 +1,12 @@
 terraform_link = {
     from = pc_ll_temperate
     to = pc_tundra
-    energy = 5000
+    resources = {
+        category = terraforming
+        cost = {
+            energy = 5000
+        }
+    }
     duration = 3600
     ai_weight = {
         weight = 5

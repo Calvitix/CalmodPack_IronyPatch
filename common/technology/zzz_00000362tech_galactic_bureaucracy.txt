@@ -39,6 +39,12 @@ tech_galactic_bureaucracy = {
         }
     }
     ai_weight = {
+        weight = 1000
+        modifier = {
+            factor = 500
+            has_technology = tech_energy_torpedoes_2
+        }
+        factor = 25
         modifier = {
             factor = 1.25
             research_leader = {

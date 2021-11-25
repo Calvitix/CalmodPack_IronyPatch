@@ -1,3 +1,4 @@
+@pdarcsplit = 3
 district_arcology_vertical_farms = {
     base_buildtime = 600
     is_capped_by_modifier = no
@@ -62,7 +63,7 @@ district_arcology_vertical_farms = {
             }
         }
         modifier = {
-            job_entertainer_add = 4
+            job_entertainer_add = @pdarcsplit
         }
     }
     triggered_planet_modifier = {
@@ -74,7 +75,7 @@ district_arcology_vertical_farms = {
             }
         }
         modifier = {
-            job_duelist_add = 4
+            job_duelist_add = 3
         }
     }
     triggered_planet_modifier = {
@@ -88,7 +89,7 @@ district_arcology_vertical_farms = {
             }
         }
         modifier = {
-            job_culture_worker_add = 4
+            job_culture_worker_add = @pdarcsplit
         }
     }
     triggered_planet_modifier = {

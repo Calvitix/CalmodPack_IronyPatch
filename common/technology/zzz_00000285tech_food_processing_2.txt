@@ -59,6 +59,8 @@ tech_food_processing_2 = {
         }
     }
     ai_weight = {
+        weight = 300
+        factor = 25
         modifier = {
             factor = 1.25
             research_leader = {

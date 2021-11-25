@@ -53,7 +53,7 @@ district_pdhivefort_synapse = {
             }
         }
         modifier = {
-            job_maintenance_drone_add = 6
+            job_maintenance_drone_add = 4
             job_patrol_drone_add = 2
         }
     }

@@ -1,0 +1,47 @@
+eac_military_technician_energy = {
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = eac_building_planetary_proton_cannon
+    clothes_texture_index = 4
+    possible_precalc = can_fill_specialist_job
+    possible = {
+        complex_specialist_job_check_trigger = yes
+    }
+    pop_modifier = {
+        pop_defense_armies_add = 1
+    }
+    triggered_country_modifier = {
+        modifier = {
+            country_admin_cap_add = 5
+            country_naval_cap_add = 8
+        }
+    }
+    resources = {
+        category = planet_technician
+        produces = {
+            physics_research = 1
+        }
+    }
+    weight = {
+        weight = @specialist_job_weight
+        modifier = {
+            factor = 0.2
+            has_citizenship_rights = no
+            NOT = {
+                has_trait = trait_mechanical
+            }
+        }
+        modifier = {
+            factor = 1.5
+            has_trait = trait_natural_physicists
+        }
+        modifier = {
+            factor = 0.1
+            can_take_servant_job = yes
+        }
+        modifier = {
+            factor = 1.5
+            has_job = eac_military_technician_energy
+        }
+    }
+}

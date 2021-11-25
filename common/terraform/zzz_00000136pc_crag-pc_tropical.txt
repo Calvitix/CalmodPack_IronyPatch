@@ -1,0 +1,20 @@
+terraform_link = {
+    from = "pc_crag"
+    to = "pc_tropical"
+    resources = {
+        category = terraforming
+        cost = {
+            energy = 5000
+        }
+    }
+    duration = 1800
+    condition = {
+        has_technology = "tech_terrestrial_sculpting"
+    }
+    ai_weight = {
+        weight = 0
+    }
+    ai_weight = {
+        weight = 0
+    }
+}
