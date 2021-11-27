@@ -43,6 +43,19 @@ building_communal_housing = {
             owner = {
                 is_ai = no
             }
+            nor = {
+                is_capital = yes
+                num_buildings = {
+                    type = building_research_lab_1
+                    value > 0
+                }
+                num_pops < 13
+            }
+        }
+        or = {
+            owner = {
+                is_ai = no
+            }
             and = {
                 free_jobs > 0
                 free_amenities < -4

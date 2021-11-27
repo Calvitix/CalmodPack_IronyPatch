@@ -1,0 +1,158 @@
+@ebh_min2 = 600
+@ebh_sr1 = 50
+@ebh_upkeep1 = 1
+@ebh_upkeep3 = 3
+ebh_luxury_residence = {
+    base_buildtime = @b1_time
+    can_build = no
+    category = amenity
+    potential = {
+        OR = {
+            NOT = {
+                is_planet_class = pc_habitat
+            }
+            has_planet_flag = advanced_habitat
+        }
+        NOT = {
+            has_modifier = slave_colony
+        }
+        exists = owner
+        owner = {
+            is_regular_empire = yes
+            NOT = {
+                has_valid_civic = civic_shared_burden
+            }
+        }
+    }
+    allow = {
+        or = {
+            owner = {
+                is_ai = no
+            }
+            not = {
+                has_building = ebh_luxury_residence
+            }
+        }
+        or = {
+            owner = {
+                is_ai = no
+            }
+            nor = {
+                is_capital = yes
+                num_buildings = {
+                    type = building_research_lab_1
+                    value > 0
+                }
+                num_pops < 13
+            }
+        }
+        or = {
+            owner = {
+                is_ai = no
+            }
+            and = {
+                free_jobs > 0
+                free_amenities < -4
+                or = {
+                    free_district_slots < 3
+                    num_pops < 16
+                    num_pops > 11
+                }
+                free_amenities > -9
+            }
+            and = {
+                free_jobs > 4
+                free_building_slots > 1
+                free_amenities < -10
+                num_pops > 11
+            }
+            and = {
+                free_building_slots > 1
+                free_jobs > 1
+                free_amenities < -2
+                free_amenities > -6
+                free_district_slots = 0
+                has_building = building_holo_theatres
+            }
+        }
+    }
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            AND = {
+                free_building_slots = 0
+                free_jobs < 1
+                free_housing > 10
+                owner = {
+                    is_ai = yes
+                }
+            }
+            and = {
+                num_buildings = {
+                    type = building_research_lab_1
+                    value > 1
+                }
+                free_amenities > 4
+                free_building_slots = 0
+                owner = {
+                    is_ai = yes
+                }
+            }
+            owner = {
+                is_regular_empire = no
+            }
+            owner = {
+                OR = {
+                    has_valid_civic = civic_shared_burden
+                    has_valid_civic = civic_employee_ownership
+                }
+            }
+            has_modifier = slave_colony
+        }
+    }
+    convert_to = {
+        ebh_drone_storage
+        ebh_hive_warren
+        ebh_communal_housing
+    }
+    planet_modifier = {
+        planet_housing_add = 6
+        planet_amenities_add = 10
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_active_tradition = tr_domination_imperious_architecture
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @ebh_min2
+            rare_crystals = @ebh_sr1
+        }
+        upkeep = {
+            energy = @ebh_upkeep3
+            rare_crystals = @ebh_upkeep1
+        }
+    }
+    prerequisites = {
+        "tech_housing_1"
+    }
+    upgrades = {
+        "ebh_luxury_residence2"
+    }
+    show_tech_unlock_if = {
+        owner = {
+            is_regular_empire = yes
+            NOT = {
+                has_valid_civic = civic_shared_burden
+            }
+        }
+    }
+}

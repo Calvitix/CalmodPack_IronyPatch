@@ -3,6 +3,13 @@ waste_manager = {
     condition_string = RULER_JOB_TRIGGER
     building_icon = eco_building_waste_recovery
     clothes_texture_index = 3
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
     possible_precalc = can_fill_ruler_job
     resources = {
         category = planet_waste

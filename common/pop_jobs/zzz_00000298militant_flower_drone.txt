@@ -9,7 +9,7 @@ militant_flower_drone = {
         is_being_purged = no
         is_being_assimilated = no
     }
-    possible_precalc = can_fill_drone_job
+    possible_precalc = can_fill_specialist_job
     resources = {
         category = planet_botanists
         upkeep = {

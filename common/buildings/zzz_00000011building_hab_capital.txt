@@ -47,6 +47,7 @@ building_hab_capital = {
         planet_housing_add = 3
         planet_amenities_add = 3
         planet_max_buildings_add = @buildings_t1
+        planet_max_branch_office_buildings_add = 1
     }
     triggered_planet_modifier = {
         potential = {

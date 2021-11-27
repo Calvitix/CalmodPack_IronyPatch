@@ -1,7 +1,7 @@
 @cost1 = 150
 ship_section_template = {
     key = "STRIKECRUISER_STERN_S2PD2"
-    ship_size = StrikeCruiser
+    ship_size = strikecruiser
     fits_on_slot = stern
     entity = "StrikeCruiser_stern_S2_entity"
     icon = "GFX_ship_part_core_stern"

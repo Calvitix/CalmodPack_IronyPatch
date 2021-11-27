@@ -3,7 +3,21 @@ park_ranger = {
     condition_string = SPECIALIST_JOB_TRIGGER
     building_icon = building_executive_retreat
     clothes_texture_index = 3
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
     possible_precalc = can_fill_specialist_job
+    possible = {
+        hidden_trigger = {
+            exists = owner
+        }
+        owner = {
+            is_gestalt = no
+        }
+    }
     resources = {
         category = planet_ranger
         produces = {

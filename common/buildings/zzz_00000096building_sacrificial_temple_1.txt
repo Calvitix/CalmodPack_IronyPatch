@@ -27,7 +27,6 @@ building_sacrificial_temple_1 = {
                     has_building = building_sacrificial_temple_2
                     has_building = building_sacrificial_temple_3
                 }
-                free_district_slots = 0
             }
         }
     }

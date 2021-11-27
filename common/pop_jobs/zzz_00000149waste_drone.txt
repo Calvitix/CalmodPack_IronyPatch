@@ -2,6 +2,13 @@ waste_drone = {
     category = simple_drone
     condition_string = DRONE_JOB_TRIGGER
     building_icon = eco_building_waste_recovery
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
     possible_precalc = can_fill_drone_job
     resources = {
         category = planet_waste
@@ -99,6 +106,7 @@ waste_drone = {
             owner = {
                 OR = {
                     has_policy_flag = eco_policy_reuse
+                    has_policy_flag = eco_policy_food_advanced
                     has_policy_flag = eco_policy_reuse_advanced
                 }
             }

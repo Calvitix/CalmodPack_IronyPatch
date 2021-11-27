@@ -263,6 +263,18 @@ district_rw_industrial = {
         }
         text = job_catalytic_drone_effect_desc
     }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+                has_edict = industrial_maintenance
+            }
+        }
+        modifier = {
+            job_maintenance_drone_add = 2
+        }
+    }
     triggered_desc = {
         trigger = {
             exists = owner

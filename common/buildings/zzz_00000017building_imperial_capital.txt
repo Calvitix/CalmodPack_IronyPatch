@@ -35,7 +35,7 @@ building_imperial_capital = {
         planet_housing_add = 18
         planet_amenities_add = 18
         planet_max_buildings_add = 11
-        planet_max_branch_office_buildings_add = 4
+        planet_max_branch_office_buildings_add = 8
     }
     triggered_planet_modifier = {
         potential = {

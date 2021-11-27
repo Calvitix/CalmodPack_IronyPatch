@@ -50,6 +50,7 @@ building_luxury_residence = {
                     type = building_research_lab_1
                     value > 0
                 }
+                num_pops < 13
             }
         }
         or = {

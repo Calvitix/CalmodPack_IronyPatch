@@ -1,6 +1,6 @@
 building_spawning_pool = {
     base_buildtime = @b1_time
-    base_cap_amount = 5
+    base_cap_amount = 4
     category = amenity
     potential = {
         owner = {

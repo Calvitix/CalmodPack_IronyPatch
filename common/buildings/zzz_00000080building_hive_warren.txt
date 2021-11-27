@@ -35,12 +35,6 @@ building_hive_warren = {
         exists = owner
         OR = {
             AND = {
-                owner = {
-                    is_ai = yes
-                }
-                years_passed < 3
-            }
-            AND = {
                 planet = {
                     free_building_slots = 0
                     free_jobs < -3

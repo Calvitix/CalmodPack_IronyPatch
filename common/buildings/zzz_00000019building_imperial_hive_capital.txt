@@ -40,7 +40,7 @@ building_imperial_hive_capital = {
         job_maintenance_drone_add = 7
         job_patrol_drone_add = 4
         planet_max_buildings_add = 11
-        planet_max_branch_office_buildings_add = 3
+        planet_max_branch_office_buildings_add = 6
     }
     triggered_planet_modifier = {
         potential = {

@@ -95,7 +95,4 @@ trait_pc_mediterranean_preference = {
         pc_glacio_habitability = 0.2
         pc_lanthanide_habitability = 0.2
     }
-    ai_weight = {
-        weight = 0
-    }
 }
