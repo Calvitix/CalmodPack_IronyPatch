@@ -1,7 +1,7 @@
 @cost0 = 50
 ship_section_template = {
     key = "BATTLECRUISER_STERN_PD3"
-    ship_size = battlecruiser
+    ship_size = Battlecruiser
     fits_on_slot = stern
     entity = "Battlecruiser_stern_S2_entity"
     icon = "GFX_ship_part_core_stern"

@@ -1,0 +1,39 @@
+tech_cloud_platform = {
+    area = engineering
+    cost = 6000
+    tier = 2
+    category = {
+        industry
+    }
+    prerequisites = {
+        "tech_mine_exotic_gases"
+    }
+    weight = 80
+    potential = {
+        any_galaxy_planet = {
+            has_modifier = noxious_world
+            is_surveyed = {
+                who = ROOT
+                status = yes
+            }
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+    }
+}

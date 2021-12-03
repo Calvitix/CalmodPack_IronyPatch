@@ -25,6 +25,17 @@ eco_building_waste_recovery = {
             }
         }
     }
+    destroy_trigger = {
+        free_building_slots < 2
+        or = {
+            has_modifier = eco_pristine
+            has_modifier = eco_clean
+            has_modifier = eco_waste_clean
+        }
+        not = {
+            has_planet_flag = just_destroyed_building
+        }
+    }
     triggered_planet_modifier = {
         potential = {
             exists = owner

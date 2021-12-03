@@ -54,11 +54,7 @@ tech_corvette_hull_2 = {
         }
     }
     ai_weight = {
-        weight = 250
-        modifier = {
-            factor = 0
-            has_technology = tech_energy_torpedoes_1
-        }
+        factor = 3
         modifier = {
             factor = 1.25
             research_leader = {

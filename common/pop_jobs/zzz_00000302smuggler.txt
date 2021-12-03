@@ -10,12 +10,10 @@ smuggler = {
         is_being_assimilated = no
         is_sapient = yes
     }
+    possible_precalc = can_fill_worker_job
     possible = {
-        NOT = {
-            has_citizenship_type = {
-                country = owner
-                type = citizenship_robot_servitude
-            }
+        hidden_trigger = {
+            exists = owner
         }
         owner = {
             is_gestalt = no

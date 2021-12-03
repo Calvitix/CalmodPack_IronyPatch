@@ -9,6 +9,11 @@ opportunist_drone = {
         is_sapient = yes
     }
     possible_precalc = can_fill_drone_job
+    possible = {
+        NOT = {
+            has_trait = trait_nerve_stapled
+        }
+    }
     planet_modifier = {
         pop_environment_tolerance = 0.02
     }

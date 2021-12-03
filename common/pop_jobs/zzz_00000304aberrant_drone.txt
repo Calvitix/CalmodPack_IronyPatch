@@ -12,6 +12,11 @@ aberrant_drone = {
         is_sapient = yes
     }
     possible_precalc = can_fill_drone_job
+    possible = {
+        NOT = {
+            has_trait = trait_nerve_stapled
+        }
+    }
     planet_modifier = {
         planet_jobs_unity_produces_mult = -0.1
         planet_stability_add = -10

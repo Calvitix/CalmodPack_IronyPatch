@@ -17,12 +17,11 @@ terraform_link = {
         from = {
             set_planet_entity = {
                 entity = "shadow_world_01_entity"
-                picture = "pc_mzilli_shadow"
             }
         }
     }
     ai_weight = {
-        weight = 20
+        weight = 10
         modifier = {
             factor = 0
             from = {

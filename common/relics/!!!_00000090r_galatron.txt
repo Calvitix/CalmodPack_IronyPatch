@@ -22,11 +22,6 @@ r_galatron = {
         }
         diplo_weight_mult = 1
     }
-    triggered_country_modifier = {
-        potential = {
-            always = yes
-        }
-    }
     score = 20000
     active_effect = {
         custom_tooltip = relic_galatron_active

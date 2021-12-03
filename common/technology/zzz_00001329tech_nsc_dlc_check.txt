@@ -6,7 +6,6 @@ tech_nsc_dlc_check = {
     category = {
         particles
     }
-    weight = 0
     potential = {
         host_has_dlc = "Apocalypse"
     }

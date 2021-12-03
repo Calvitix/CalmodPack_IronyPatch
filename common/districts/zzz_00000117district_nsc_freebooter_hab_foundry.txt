@@ -28,11 +28,24 @@ district_nsc_freebooter_hab_foundry = {
         potential = {
             exists = owner
             owner = {
-                is_machine_empire = yes
+                is_regular_empire = yes
+                is_catalytic_empire = no
             }
         }
         modifier = {
-            job_fabricator_add = 4
+            job_foundry_add = 3
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+                is_catalytic_empire = yes
+            }
+        }
+        modifier = {
+            job_catalytic_technician_add = 3
         }
     }
     triggered_planet_modifier = {
@@ -40,6 +53,7 @@ district_nsc_freebooter_hab_foundry = {
             exists = owner
             owner = {
                 is_hive_empire = yes
+                is_catalytic_empire = no
             }
         }
         modifier = {
@@ -50,11 +64,24 @@ district_nsc_freebooter_hab_foundry = {
         potential = {
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_machine_empire = yes
+                is_catalytic_empire = no
             }
         }
         modifier = {
-            job_foundry_add = 3
+            job_fabricator_add = 3
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+                is_catalytic_empire = yes
+            }
+        }
+        modifier = {
+            job_catalytic_drone_add = 3
         }
     }
     triggered_desc = {
@@ -62,6 +89,7 @@ district_nsc_freebooter_hab_foundry = {
             exists = owner
             owner = {
                 is_regular_empire = yes
+                is_catalytic_empire = no
             }
         }
         text = job_foundry_effect_desc
@@ -70,7 +98,28 @@ district_nsc_freebooter_hab_foundry = {
         trigger = {
             exists = owner
             owner = {
+                is_regular_empire = yes
+                is_catalytic_empire = yes
+            }
+        }
+        text = job_catalytic_technician_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+                is_catalytic_empire = no
+            }
+        }
+        text = job_fabricator_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
                 is_hive_empire = yes
+                is_catalytic_empire = no
             }
         }
         text = job_alloy_drone_effect_desc
@@ -79,10 +128,11 @@ district_nsc_freebooter_hab_foundry = {
         trigger = {
             exists = owner
             owner = {
-                is_machine_empire = yes
+                is_gestalt = yes
+                is_catalytic_empire = yes
             }
         }
-        text = job_fabricator_effect_desc
+        text = job_catalytic_drone_effect_desc
     }
     ai_resource_production = {
         alloys = 10

@@ -13,7 +13,7 @@ fe_maintenance_worker = {
         }
     }
     planet_modifier = {
-        planet_amenities_add = 5
+        planet_amenities_add = 7
     }
     resources = {
         category = planet_jobs

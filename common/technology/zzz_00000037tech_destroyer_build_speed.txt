@@ -23,8 +23,6 @@ tech_destroyer_build_speed = {
         }
     }
     ai_weight = {
-        weight = 25
-        factor = 25
         modifier = {
             factor = 1.25
             research_leader = {

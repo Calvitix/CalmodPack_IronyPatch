@@ -225,7 +225,7 @@ anchorage = {
         modifier = {
             factor = 0
             owner = {
-                used_naval_capacity_percent < 0.9
+                used_naval_capacity_percent < 0.7
             }
         }
         modifier = {
@@ -269,7 +269,9 @@ gun_battery = {
         }
     }
     station_modifier = {
-        starbase_trade_protection_add = 3
+        ship_hull_mult = 0.1
+        ship_armor_mult = 0.1
+        starbase_trade_protection_add = 5
     }
     ai_build_at_chokepoint = yes
     ai_build_outside_chokepoint = yes
@@ -376,7 +378,9 @@ missile_battery = {
         }
     }
     station_modifier = {
-        starbase_trade_protection_add = 3
+        ship_hull_mult = 0.1
+        ship_armor_mult = 0.1
+        starbase_trade_protection_add = 5
     }
     ai_build_at_chokepoint = yes
     ai_build_outside_chokepoint = yes
@@ -590,7 +594,10 @@ large_battery = {
         }
     }
     station_modifier = {
-        starbase_trade_protection_add = 3
+        ship_hull_mult = 0.1
+        ship_armor_mult = 0.1
+        starbase_trade_protection_range_add = 1
+        starbase_trade_protection_add = 5
     }
     ai_build_at_chokepoint = yes
     ai_build_outside_chokepoint = yes
@@ -610,14 +617,14 @@ large_battery = {
             factor = 0.6
             count_starbase_modules = {
                 type = large_battery
-                count > 4
+                count > 3
             }
         }
         modifier = {
             factor = 0.5
             count_starbase_modules = {
                 type = large_battery
-                count > 6
+                count > 4
             }
         }
         modifier = {
@@ -628,7 +635,7 @@ large_battery = {
             factor = 0
             count_starbase_modules = {
                 type = large_battery
-                count > 3
+                count > 5
             }
         }
     }
@@ -679,12 +686,12 @@ hangar_bay = {
         }
     }
     station_modifier = {
-        starbase_trade_protection_add = 5
+        starbase_trade_protection_add = 10
     }
     ai_build_at_chokepoint = no
     ai_build_outside_chokepoint = yes
     ai_weight = {
-        weight = 40
+        weight = 150
         modifier = {
             factor = 3
             exists = owner
@@ -696,6 +703,13 @@ hangar_bay = {
             factor = 0.6
             count_starbase_modules = {
                 type = hangar_bay
+                count > 1
+            }
+        }
+        modifier = {
+            factor = 0.5
+            count_starbase_modules = {
+                type = hangar_bay
                 count > 2
             }
         }
@@ -703,14 +717,7 @@ hangar_bay = {
             factor = 0.5
             count_starbase_modules = {
                 type = hangar_bay
-                count > 4
-            }
-        }
-        modifier = {
-            factor = 0.5
-            count_starbase_modules = {
-                type = hangar_bay
-                count > 6
+                count > 3
             }
         }
         modifier = {
@@ -787,6 +794,13 @@ xl_battery = {
             factor = 0.6
             count_starbase_modules = {
                 type = xl_battery
+                count > 1
+            }
+        }
+        modifier = {
+            factor = 0.5
+            count_starbase_modules = {
+                type = xl_battery
                 count > 2
             }
         }
@@ -794,14 +808,7 @@ xl_battery = {
             factor = 0.5
             count_starbase_modules = {
                 type = xl_battery
-                count > 4
-            }
-        }
-        modifier = {
-            factor = 0.5
-            count_starbase_modules = {
-                type = xl_battery
-                count > 6
+                count > 3
             }
         }
     }
@@ -863,6 +870,13 @@ titanic_battery = {
             factor = 0.6
             count_starbase_modules = {
                 type = titanic_battery
+                count > 1
+            }
+        }
+        modifier = {
+            factor = 0.5
+            count_starbase_modules = {
+                type = titanic_battery
                 count > 2
             }
         }
@@ -870,14 +884,7 @@ titanic_battery = {
             factor = 0.5
             count_starbase_modules = {
                 type = titanic_battery
-                count > 4
-            }
-        }
-        modifier = {
-            factor = 0.5
-            count_starbase_modules = {
-                type = titanic_battery
-                count > 6
+                count > 3
             }
         }
     }
@@ -913,14 +920,20 @@ shield_module = {
     }
     station_modifier = {
         ship_shield_add = 3000
+        ship_shield_regen_add_perc = 1
     }
     ai_build_at_chokepoint = yes
     ai_build_outside_chokepoint = yes
     potential = {
         has_starbase_size >= starbase_starport
+        solar_system = {
+            NOT = {
+                is_star_class = sc_pulsar
+            }
+        }
     }
     ai_weight = {
-        weight = 100
+        weight = 125
         modifier = {
             factor = 0.75
             count_starbase_modules = {
@@ -1013,6 +1026,7 @@ armor_module = {
     }
     station_modifier = {
         ship_armor_add = 3000
+        ship_armor_regen_add_perc = 1
     }
     ai_build_at_chokepoint = yes
     ai_build_outside_chokepoint = yes
@@ -1020,7 +1034,7 @@ armor_module = {
         has_starbase_size >= starbase_starport
     }
     ai_weight = {
-        weight = 105
+        weight = 130
         modifier = {
             factor = 0.75
             count_starbase_modules = {
@@ -1146,7 +1160,7 @@ solar_panel_network = {
     }
     ai_build_at_chokepoint = no
     ai_weight = {
-        weight = 40
+        weight = 100
         modifier = {
             factor = 0.9
             count_starbase_modules = {
@@ -1214,7 +1228,7 @@ trading_hub = {
     }
     ai_build_at_chokepoint = no
     ai_weight = {
-        weight = 20
+        weight = 100
         modifier = {
             factor = 5
             NOT = {
@@ -1302,6 +1316,37 @@ space_power_plant = {
                 count > 5
             }
         }
+        modifier = {
+            factor = 0
+            not = {
+                has_starbase_module = orbital_lab
+            }
+            owner = {
+                needs_shipyard = yes
+            }
+        }
+        modifier = {
+            factor = 0
+            has_starbase_module = shipyard
+            count_starbase_modules = {
+                type = shipyard
+                count < 2
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                used_naval_capacity_percent > 0.65
+            }
+            not = {
+                has_starbase_module = space_power_plant
+            }
+        }
+        modifier = {
+            factor = 0
+            has_starbase_module = asteroid_mining
+            years_passed < 70
+        }
     }
 }
 asteroid_mining = {
@@ -1363,10 +1408,25 @@ asteroid_mining = {
     ai_build_at_chokepoint = yes
     ai_build_outside_chokepoint = yes
     ai_weight = {
-        weight = 50
+        weight = 75
         modifier = {
             factor = 5
             has_starbase_size < starbase_starport
+        }
+        modifier = {
+            factor = 500
+            owner = {
+                resource_income_compare = {
+                    resource = minerals
+                    value < 30
+                }
+            }
+            owner = {
+                resource_stockpile_compare = {
+                    resource = minerals
+                    value < 1000
+                }
+            }
         }
         modifier = {
             factor = 4
@@ -1475,10 +1535,19 @@ orbital_lab = {
             alloys = 1
         }
     }
-    ai_build_at_chokepoint = no
+    ai_build_at_chokepoint = yes
     ai_build_outside_chokepoint = yes
     ai_weight = {
-        weight = 120
+        weight = 300
+        modifier = {
+            factor = 4
+            owner = {
+                has_monthly_income = {
+                    resource = physics_research
+                    value < 35
+                }
+            }
+        }
         modifier = {
             factor = 0.75
             count_starbase_modules = {
@@ -1615,10 +1684,10 @@ space_foundry = {
         }
     }
     ai_weight = {
-        weight = 250
+        weight = 80
         modifier = {
             factor = 5
-            has_starbase_size < starbase_starport
+            has_starbase_size <= starbase_starfortress
         }
         modifier = {
             factor = 4
@@ -1733,10 +1802,10 @@ space_factory = {
         }
     }
     ai_weight = {
-        weight = 150
+        weight = 70
         modifier = {
             factor = 5
-            has_starbase_size < starbase_starport
+            has_starbase_size < starbase_starfortress
         }
         modifier = {
             factor = 4

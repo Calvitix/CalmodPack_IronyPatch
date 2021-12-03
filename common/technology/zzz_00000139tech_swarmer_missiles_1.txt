@@ -43,7 +43,7 @@ tech_swarmer_missiles_1 = {
     }
     ai_weight = {
         modifier = {
-            factor = 20000
+            factor = 200
             OR = {
                 is_preferred_weapons = weapon_type_explosive
                 has_two_weapons_1 = yes

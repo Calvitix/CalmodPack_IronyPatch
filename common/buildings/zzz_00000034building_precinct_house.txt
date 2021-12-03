@@ -48,6 +48,10 @@ building_precinct_house = {
                     is_ai = yes
                 }
                 has_modifier = crime_lord_deal
+                num_buildings = {
+                    type = ebh_slums_1
+                    value = 0
+                }
             }
         }
     }

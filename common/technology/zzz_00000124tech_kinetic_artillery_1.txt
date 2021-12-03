@@ -30,6 +30,14 @@ tech_kinetic_artillery_1 = {
                 has_trait = "leader_trait_expertise_propulsion"
             }
         }
+        modifier = {
+            factor = 0.5
+            has_ethic = ethic_pacifist
+        }
+        modifier = {
+            factor = 0.25
+            has_ethic = ethic_fanatic_pacifist
+        }
     }
     ai_weight = {
         modifier = {
@@ -54,6 +62,14 @@ tech_kinetic_artillery_1 = {
                 area = engineering
                 has_trait = "leader_trait_expertise_propulsion"
             }
+        }
+        modifier = {
+            factor = 0.5
+            has_ethic = ethic_pacifist
+        }
+        modifier = {
+            factor = 0.25
+            has_ethic = ethic_fanatic_pacifist
         }
     }
 }

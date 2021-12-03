@@ -17,7 +17,7 @@ r_dragon_trophy = {
         potential = {
             always = yes
         }
-        country_unity_produces_mult = 0.15
+        country_unity_produces_mult = 0.1
     }
     score = 1000
     active_effect = {

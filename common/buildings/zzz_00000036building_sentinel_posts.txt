@@ -1,5 +1,6 @@
 building_sentinel_posts = {
     base_buildtime = @b1_time
+    base_cap_amount = 3
     category = government
     potential = {
         exists = owner

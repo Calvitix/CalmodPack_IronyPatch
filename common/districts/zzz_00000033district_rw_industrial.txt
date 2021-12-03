@@ -55,6 +55,9 @@ district_rw_industrial = {
         }
     }
     triggered_planet_modifier = {
+        potential = {
+            always = yes
+        }
         modifier = {
             planet_housing_add = 10
         }

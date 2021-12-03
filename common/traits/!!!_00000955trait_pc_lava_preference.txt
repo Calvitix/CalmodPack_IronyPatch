@@ -1,6 +1,7 @@
 @primary = 0.8
-trait_pc_sterile_preference = {
+trait_pc_lava_preference = {
     icon = "gfx/interface/icons/traits/trait_pc_sterile_preference.dds"
+    modification = no
     allowed_archetypes = {
         BIOLOGICAL
         PRESAPIENT
@@ -12,6 +13,7 @@ trait_pc_sterile_preference = {
         pc_sterile_habitability = @primary
         pc_lava_habitability = @primary
         pc_ash_habitability = @primary
+        pc_archean_habitability = @primary
     }
     ai_weight = {
         weight = 0

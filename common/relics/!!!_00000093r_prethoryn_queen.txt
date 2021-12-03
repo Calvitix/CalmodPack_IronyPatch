@@ -8,6 +8,9 @@ r_prethoryn_queen = {
         cost = {
             food = 10000
         }
+        produces = {
+            society_research = 15
+        }
     }
     ai_weight = {
         weight = 100

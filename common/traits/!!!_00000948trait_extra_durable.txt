@@ -9,6 +9,6 @@ trait_extra_durable = {
     }
     modifier = {
         pop_environment_tolerance = 0.25
-        army_damage_mult = 0.3
+        army_health = 0.3
     }
 }

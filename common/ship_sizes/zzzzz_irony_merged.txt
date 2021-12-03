@@ -562,6 +562,10 @@ corvette = {
                 has_country_flag = str_need_to_defend_against_rush
             }
             scared_of_neighbour = no
+            resource_stockpile_compare = {
+                resource = alloys
+                value < 5000
+            }
         }
     }
 }
@@ -625,6 +629,10 @@ destroyer = {
             not = {
                 has_country_flag = str_need_to_defend_against_rush
             }
+            resource_stockpile_compare = {
+                resource = alloys
+                value < 12000
+            }
         }
     }
 }
@@ -685,7 +693,7 @@ cruiser = {
     required_component_set = "special_ship_slot"
     required_component_set = "nsc_supportship_aura"
 }
-strikecruiser = {
+StrikeCruiser = {
     formation_priority = @strikecruiser_formation_1
     max_speed = @speed10_1
     acceleration = @acceleration2_2
@@ -801,7 +809,7 @@ escortcarrier = {
     required_component_set = "ai_behaviour"
     required_component_set = "special_ship_slot"
 }
-battlecruiser = {
+Battlecruiser = {
     formation_priority = @battlecruiser_formation_1
     max_speed = @speed7_1
     acceleration = @acceleration2_1
@@ -927,6 +935,7 @@ Carrier = {
     rotation_speed = @rotation2_4
     collision_radius = @carrier_collision_1
     modifier = {
+        ship_evasion_add = -50
         ship_evasion_add = 4
         ship_piracy_suppression_add = 8
     }
@@ -987,6 +996,7 @@ Dreadnought = {
     rotation_speed = @rotation2_3
     collision_radius = @dreadnought_collision_1
     modifier = {
+        ship_evasion_add = -50
         ship_evasion_add = -100
         ship_piracy_suppression_add = 4
     }
@@ -1050,6 +1060,7 @@ titan = {
     rotation_speed = @rotation2_2
     collision_radius = @titan_collision_1
     modifier = {
+        ship_evasion_add = -50
         ship_evasion_add = -100
         ship_piracy_suppression_add = 2
     }
@@ -1164,6 +1175,7 @@ Flagship = {
     rotation_speed = @rotation2_1
     collision_radius = @flagship_collision_1
     modifier = {
+        ship_evasion_add = -50
         ship_evasion_add = -100
         ship_piracy_suppression_add = 20
     }
@@ -1721,7 +1733,7 @@ military_station_small = {
             has_starbase_size > starbase_starport
             and = {
                 owner = {
-                    used_naval_capacity_percent > 0.95
+                    used_naval_capacity_percent > 0.6
                 }
                 owner = {
                     has_technology = tech_energy_torpedoes_1
@@ -1794,7 +1806,7 @@ military_station_small = {
         or = {
             is_ai = no
             and = {
-                used_naval_capacity_percent > 0.95
+                used_naval_capacity_percent > 0.6
                 has_technology = tech_energy_torpedoes_1
                 resource_stockpile_compare = {
                     resource = alloys
@@ -1870,7 +1882,7 @@ military_station_medium = {
         or = {
             is_ai = no
             and = {
-                used_naval_capacity_percent > 0.95
+                used_naval_capacity_percent > 0.6
                 has_technology = tech_energy_torpedoes_1
                 resource_stockpile_compare = {
                     resource = alloys
@@ -1898,7 +1910,7 @@ military_station_medium = {
             has_starbase_size > starbase_starport
             and = {
                 owner = {
-                    used_naval_capacity_percent > 0.95
+                    used_naval_capacity_percent > 0.6
                 }
                 owner = {
                     has_technology = tech_energy_torpedoes_1
@@ -2030,7 +2042,7 @@ military_station_large = {
         or = {
             is_ai = no
             and = {
-                used_naval_capacity_percent > 0.95
+                used_naval_capacity_percent > 0.6
                 has_technology = tech_energy_torpedoes_1
                 resource_stockpile_compare = {
                     resource = alloys
@@ -2058,7 +2070,7 @@ military_station_large = {
             has_starbase_size > starbase_starport
             and = {
                 owner = {
-                    used_naval_capacity_percent > 0.95
+                    used_naval_capacity_percent > 0.6
                 }
                 owner = {
                     has_technology = tech_energy_torpedoes_1
@@ -2290,10 +2302,28 @@ starbase_outpost = {
         starbase_defense_platform_capacity_add = 15
     }
     ship_modifier = {
-        ship_fire_rate_mult = 0.5
-        ship_weapon_range_mult = 0.5
+        ship_fire_rate_mult = 0.1
+        ship_weapon_range_mult = 0.25
     }
     max_hitpoints = 7500
+    combat_size_multiplier = 5
+    size_multiplier = 4
+    fleet_slot_size = 2
+    section_slots = {
+        "core" = {
+            locator = "part1"
+        }
+    }
+    num_target_locators = 0
+    base_buildtime = 360
+    is_space_station = no
+    can_have_federation_design = no
+    enable_default_design = yes
+    is_designable = no
+    is_civilian = no
+    components_add_to_cost = no
+    can_disable = yes
+    flip_control_on_disable = yes
     resources = {
         category = starbase_stations
         cost = {
@@ -2338,24 +2368,10 @@ starbase_outpost = {
             energy = 1
         }
     }
-    combat_size_multiplier = 5
-    size_multiplier = 4
-    fleet_slot_size = 2
-    section_slots = {
-        "core" = {
-            locator = "part1"
-        }
-    }
-    num_target_locators = 0
-    base_buildtime = 360
-    is_space_station = no
-    can_have_federation_design = no
-    enable_default_design = yes
-    is_designable = no
-    is_civilian = no
-    components_add_to_cost = no
-    can_disable = yes
-    flip_control_on_disable = yes
+    build_block_radius = @build_block_radius_starbase_15
+    formation_priority = @starbase_formation_priority_35
+    icon_frame = 1
+    icon = ship_size_military_station
     prerequisites = {
         "tech_starbase_1"
     }
@@ -2363,10 +2379,6 @@ starbase_outpost = {
     required_component_set = "power_core"
     required_component_set = "sensor_components"
     required_component_set = "combat_computers"
-    build_block_radius = @build_block_radius_starbase_15
-    formation_priority = @starbase_formation_priority_35
-    icon_frame = 1
-    icon = ship_size_military_station
 }
 starbase_starport = {
     formation_priority = @starbase_formation_priority_33
@@ -2385,8 +2397,8 @@ starbase_starport = {
         starbase_trade_protection_add = 8
     }
     ship_modifier = {
-        ship_fire_rate_mult = 0.5
-        ship_weapon_range_mult = 0.1
+        ship_fire_rate_mult = 0.2
+        ship_weapon_range_mult = 0.3
     }
     max_hitpoints = 10000
     combat_size_multiplier = 20
@@ -2523,8 +2535,8 @@ starbase_starhold = {
         starbase_trade_protection_add = 16
     }
     ship_modifier = {
-        ship_fire_rate_mult = 0.5
-        ship_weapon_range_mult = 0.1
+        ship_fire_rate_mult = 0.1
+        ship_weapon_range_mult = 0.2
     }
     max_hitpoints = 20000
     combat_size_multiplier = 30
@@ -2660,7 +2672,7 @@ starbase_starfortress = {
         starbase_trade_protection_add = 24
     }
     ship_modifier = {
-        ship_fire_rate_mult = 0.5
+        ship_fire_rate_mult = 0.1
         ship_weapon_range_mult = 0.1
     }
     max_hitpoints = 120000
@@ -2797,7 +2809,7 @@ starbase_citadel = {
         starbase_trade_protection_add = 32
     }
     ship_modifier = {
-        ship_fire_rate_mult = 0.5
+        ship_fire_rate_mult = 0.1
         ship_weapon_range_mult = 0.1
     }
     max_hitpoints = 240000
@@ -2934,7 +2946,7 @@ starbase_stronghold = {
         starbase_trade_protection_add = 40
     }
     ship_modifier = {
-        ship_fire_rate_mult = 0.6
+        ship_fire_rate_mult = 0.1
     }
     max_hitpoints = 300000
     combat_size_multiplier = 50
@@ -3067,7 +3079,7 @@ starbase_headquarters = {
         starbase_trade_protection_add = 60
     }
     ship_modifier = {
-        ship_fire_rate_mult = 0.8
+        ship_fire_rate_mult = 0.25
     }
     max_hitpoints = 250000
     combat_size_multiplier = 50
@@ -3335,7 +3347,7 @@ starbase_exd = {
     }
     ship_modifier = {
         ship_weapon_range_mult = 0.2
-        ship_fire_rate_mult = 0.5
+        ship_fire_rate_mult = 0.2
     }
     max_hitpoints = 120000
     combat_size_multiplier = 50
@@ -7781,6 +7793,7 @@ juggernaut = {
         ship_armor_add = 50000
         ship_evasion_add = @juggernaut_evasion
         starbase_shipyard_capacity_add = 6
+        ship_evasion_add = -75
     }
     max_hitpoints = @juggernaut_hp
     combat_size_multiplier = 5
@@ -7894,6 +7907,7 @@ headquarters = {
         ship_shield_add = 50000
         ship_accuracy_mult = 2
         ship_piracy_suppression_add = 20
+        ship_evasion_add = -75
     }
     max_hitpoints = 200000
     combat_size_multiplier = 5
@@ -7978,6 +7992,10 @@ headquarters = {
     empire_limit = {
         base = 1
         max = 1
+        show = {
+            is_scope_valid = yes
+            has_technology = tech_starbase_6
+        }
     }
     resources = {
         category = ships

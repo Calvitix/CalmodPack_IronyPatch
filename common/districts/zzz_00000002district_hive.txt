@@ -54,6 +54,7 @@ district_hive = {
                     }
                 }
             }
+            str_city_district_allow = yes
         }
     }
     conversion_ratio = 1

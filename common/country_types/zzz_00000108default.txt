@@ -228,7 +228,7 @@ default = {
                     }
                 }
             }
-            strikecruiser = {
+            StrikeCruiser = {
                 fraction = {
                     base = 0
                     modifier = {
@@ -264,7 +264,7 @@ default = {
                     }
                 }
             }
-            battlecruiser = {
+            Battlecruiser = {
                 fraction = {
                     base = 0
                     modifier = {
@@ -289,6 +289,10 @@ default = {
                 fraction = {
                     base = 0
                     modifier = {
+                        add = 20
+                        has_technology = tech_Carrier_1
+                    }
+                    modifier = {
                         add = 30
                         uses_carriers = yes
                         has_technology = tech_Carrier_1
@@ -303,7 +307,7 @@ default = {
                 fraction = {
                     base = 0
                     modifier = {
-                        add = 85
+                        add = 40
                         has_technology = tech_Dreadnought_1
                     }
                     modifier = {
@@ -315,7 +319,7 @@ default = {
             }
             titan = {
                 min = 1
-                max = 3
+                max = 99
                 fraction = {
                     base = 0
                     modifier = {
@@ -591,7 +595,7 @@ default = {
         category = planet_branch_offices
         cost = {
             energy = 1000
-            influence = 25
+            influence = 50
         }
         upkeep = {
         }
