@@ -1,0 +1,513 @@
+scrap_miner_event = {
+    category = worker
+    condition_string = WORKER_JOB_TRIGGER
+    building_icon = building_mineral_purification_plant
+    icon = miner
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+    possible_precalc = can_fill_worker_job
+    resources = {
+        category = planet_miners
+        produces = {
+            minerals = 2
+            alloys = 2
+        }
+        produces = {
+            trigger = {
+                exists = planet
+                planet = {
+                    has_planet_flag = pirate_graveyard
+                }
+                exists = owner
+                owner = {
+                    is_gestalt = no
+                }
+            }
+            consumer_goods = 1
+            volatile_motes = 0.5
+            exotic_gases = 0.5
+            rare_crystals = 0.5
+        }
+        produces = {
+            trigger = {
+                is_lithoid = yes
+            }
+            minerals = 1
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_active_building = building_mineral_purification_plant
+                }
+            }
+            minerals = 1
+            alloys = 0.1
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_active_building = building_mineral_purification_hub
+                }
+            }
+            minerals = 2
+            alloys = 0.2
+        }
+        produces = {
+            trigger = {
+                has_global_flag = EcologyMod_active
+                planet = {
+                    has_active_building = building_mineral_purification_plant
+                }
+            }
+            waste = 1
+        }
+        produces = {
+            trigger = {
+                has_global_flag = EcologyMod_active
+                planet = {
+                    has_active_building = building_mineral_purification_hub
+                }
+            }
+            waste = 2
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    is_lithoid_empire = yes
+                    has_technology = tech_agrarian_goods_lithoid
+                    has_valid_civic = civic_agrarian_idyll
+                }
+            }
+            consumer_goods = 1
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    is_lithoid_empire = yes
+                    has_technology = tech_agrarian_goods_lithoid
+                    has_valid_civic = civic_agrarian_idyll
+                }
+                planet = {
+                    has_active_building = building_factory_2
+                }
+            }
+            consumer_goods = 0.5
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    is_lithoid_empire = yes
+                    has_technology = tech_agrarian_goods_lithoid
+                    has_valid_civic = civic_agrarian_idyll
+                }
+                planet = {
+                    has_active_building = building_factory_3
+                }
+            }
+            consumer_goods = 1
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_agrarian_alloys
+                    has_valid_civic = civic_agrarian_idyll
+                }
+            }
+            alloys = 0.5
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_agrarian_alloys
+                    has_valid_civic = civic_agrarian_idyll
+                }
+                planet = {
+                    has_active_building = building_foundry_2
+                }
+            }
+            alloys = 0.5
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_agrarian_alloys
+                    has_valid_civic = civic_agrarian_idyll
+                }
+                planet = {
+                    has_active_building = building_foundry_3
+                }
+            }
+            alloys = 1
+        }
+        produces = {
+            trigger = {
+                has_global_flag = EcologyMod_active
+            }
+            waste = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                has_global_flag = EcologyMod_active
+                owner = {
+                    has_technology = tech_capital_productivity_1
+                }
+            }
+            waste = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                has_global_flag = EcologyMod_active
+                owner = {
+                    has_technology = tech_capital_productivity_2
+                }
+            }
+            waste = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                has_global_flag = EcologyMod_active
+                owner = {
+                    has_technology = tech_capital_productivity_3
+                }
+            }
+            waste = 1
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_edict = mining_subsidies
+                }
+            }
+            energy = 0.5
+        }
+    }
+    triggered_pop_modifier = {
+        potential = {
+            is_enslaved = no
+            owner = {
+                has_edict = mining_subsidies
+            }
+        }
+        modifier = {
+            pop_political_power = 1
+            pop_happiness = 0.05
+        }
+    }
+    triggered_pop_modifier = {
+        potential = {
+            is_enslaved = no
+            owner = {
+                has_valid_civic = civic_mining_guilds
+            }
+        }
+        modifier = {
+            pop_political_power = 1
+            pop_happiness = 0.05
+        }
+    }
+    triggered_pop_modifier = {
+        potential = {
+            is_enslaved = no
+            owner = {
+                has_valid_civic = civic_agrarian_idyll
+                is_lithoid_empire = yes
+            }
+        }
+        modifier = {
+            pop_political_power = 1
+            pop_happiness = 0.05
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            owner = {
+                has_valid_civic = civic_agrarian_idyll
+                is_lithoid_empire = yes
+            }
+        }
+        modifier = {
+            planet_amenities_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_valid_civic = civic_agrarian_idyll
+                is_lithoid_empire = yes
+                has_technology = tech_housing_agrarian_idyll
+            }
+        }
+        modifier = {
+            planet_amenities_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_ascension_perk = ap_synthetic_servants
+            }
+            owner = {
+                has_valid_civic = civic_agrarian_idyll
+                is_lithoid_empire = yes
+            }
+            is_robot_pop = yes
+        }
+        modifier = {
+            planet_amenities_add = 0.5
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            owner = {
+                has_valid_civic = civic_agrarian_idyll
+                is_lithoid_empire = yes
+            }
+            is_trait_pheremones = yes
+        }
+        modifier = {
+            planet_amenities_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            owner = {
+                has_valid_civic = civic_agrarian_idyll
+                is_lithoid_empire = yes
+            }
+            is_trait_charismatic = yes
+            is_trait_pheremones = no
+        }
+        modifier = {
+            planet_amenities_add = 0.5
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_global_flag = expanded_pops_active
+            is_robot_pop = yes
+            exists = owner
+            owner = {
+                has_relic = r_three_londor
+                has_valid_civic = civic_agrarian_idyll
+                is_lithoid_empire = no
+            }
+        }
+        modifier = {
+            planet_amenities_add = 0.5
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            owner = {
+                has_valid_civic = civic_agrarian_idyll
+                is_lithoid_empire = yes
+            }
+            OR = {
+                has_trait = trait_repugnant
+                has_trait = trait_robot_uncanny
+            }
+        }
+        modifier = {
+            planet_amenities_add = -0.5
+        }
+    }
+    weight = {
+        weight = @worker_job_weight
+        modifier = {
+            factor = 20
+            exists = owner
+            owner = {
+                has_ascension_perk = ap_synthetic_servants
+            }
+            OR = {
+                is_robot_pop = yes
+                NOT = {
+                    has_citizenship_type = {
+                        type = citizenship_full
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 3
+            OR = {
+                has_trait = trait_industrious
+                has_trait = trait_robot_power_drills
+            }
+        }
+        modifier = {
+            factor = 2
+            has_modifier = polytheism
+        }
+        modifier = {
+            factor = 10
+            is_enslaved = yes
+            can_take_servant_job = no
+        }
+        modifier = {
+            factor = 2
+            OR = {
+                is_non_sapient_robot = yes
+                is_shackled_robot = yes
+            }
+            can_take_servant_job = no
+            owner = {
+                has_technology = tech_droid_workers
+            }
+        }
+        modifier = {
+            factor = 200
+            OR = {
+                is_non_sapient_robot = yes
+                is_shackled_robot = yes
+            }
+            can_take_servant_job = no
+            owner = {
+                NOT = {
+                    has_technology = tech_droid_workers
+                }
+            }
+        }
+        modifier = {
+            factor = 0.25
+            can_take_servant_job = yes
+        }
+        modifier = {
+            factor = 0.25
+            can_take_grunt_job = yes
+        }
+        modifier = {
+            factor = 1.1
+            OR = {
+                has_trait = trait_robust
+                has_trait = trait_robot_efficient_processors
+                has_trait = trait_adaptable_evolution
+            }
+        }
+        modifier = {
+            factor = 1.2
+            OR = {
+                has_trait = trait_ageless
+                has_trait = trait_sleepless
+            }
+        }
+        modifier = {
+            factor = 1.5
+            has_trait = mem_trait_redefined_productivity
+        }
+        modifier = {
+            factor = 1.5
+            has_trait = trait_syncretic_proles
+        }
+        modifier = {
+            factor = 1.4
+            has_trait = trait_presapient_proles
+        }
+        modifier = {
+            factor = 2
+            species = {
+                has_species_flag = racket_species_flag
+            }
+        }
+        modifier = {
+            factor = 1.3
+            has_trait = trait_titanic_strength
+        }
+        modifier = {
+            factor = 1.2
+            has_trait = trait_very_strong
+        }
+        modifier = {
+            factor = 1.2
+            has_trait = mem_caretakers_trait
+        }
+        modifier = {
+            factor = 1.1
+            has_trait = trait_strong
+        }
+        modifier = {
+            factor = 0.9
+            OR = {
+                has_trait = trait_weak
+                has_trait = trait_moluscoid
+                has_trait = trait_delicate
+            }
+        }
+        modifier = {
+            factor = 1.1
+            has_trait = trait_nerve_stapled
+        }
+        modifier = {
+            factor = 1.5
+            has_trait = trait_void_dweller_1
+        }
+        modifier = {
+            factor = 0
+            has_living_standard = {
+                type = living_standard_chemical_bliss
+            }
+        }
+        modifier = {
+            factor = 1.1
+            OR = {
+                OR = {
+                    is_unemployed = yes
+                    has_job = servant_noble
+                }
+                has_job = "scrap_miner_event"
+            }
+            exists = planet
+            planet = {
+                has_available_jobs = "scrap_miner_event"
+            }
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 30
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            owner = {
+                has_valid_civic = civic_agrarian_idyll
+                is_lithoid_empire = yes
+            }
+            is_trait_pheremones = yes
+        }
+        modifier = {
+            factor = 1.5
+            owner = {
+                has_valid_civic = civic_agrarian_idyll
+                is_lithoid_empire = yes
+            }
+            is_trait_charismatic = yes
+            is_trait_pheremones = no
+        }
+        modifier = {
+            factor = 0.5
+            owner = {
+                has_valid_civic = civic_agrarian_idyll
+                is_lithoid_empire = yes
+            }
+            OR = {
+                has_trait = trait_repugnant
+                has_trait = trait_robot_uncanny
+            }
+        }
+        modifier = {
+            factor = 0.75
+            has_trait = trait_necrophage
+        }
+    }
+}

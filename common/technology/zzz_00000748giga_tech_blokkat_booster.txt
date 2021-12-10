@@ -10,7 +10,7 @@ giga_tech_blokkat_booster = {
     is_reverse_engineerable = no
     modifier = {
         country_energy_produces_mult = 0.15
-        megastructure_energy_upkeep_mult = -0.1
+        megastructures_energy_upkeep_mult = -0.1
     }
     prereqfor_desc = {
         custom = {

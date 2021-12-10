@@ -590,7 +590,7 @@ large_battery = {
             alloys = 125
         }
         upkeep = {
-            energy = 1
+            energy = 2
         }
     }
     station_modifier = {
@@ -1909,14 +1909,36 @@ heavy_gun_battery = {
             fail_text = "requires_starfortress"
             has_starbase_size >= starbase_starfortress
         }
+        custom_tooltip = {
+            fail_text = "starbase_heavy_gun_battery_limit.tooltip.fail"
+            count_starbase_modules = {
+                count < 3
+                type = heavy_gun_battery
+            }
+        }
     }
     resources = {
         category = starbase_modules
         cost = {
+            trigger = {
+                from = {
+                    is_ai = no
+                }
+            }
+            alloys = 200
+            minerals = 50
+            energy = 100
+        }
+        cost = {
+            trigger = {
+                from = {
+                    is_ai = yes
+                }
+            }
             alloys = 400
         }
         upkeep = {
-            energy = 2
+            energy = 5
         }
     }
     station_modifier = {
@@ -1957,14 +1979,36 @@ heavy_missile_battery = {
             fail_text = "requires_starfortress"
             has_starbase_size >= starbase_starfortress
         }
+        custom_tooltip = {
+            fail_text = "starbase_heavy_missile_battery_limit.tooltip.fail"
+            count_starbase_modules = {
+                count < 3
+                type = heavy_missile_battery
+            }
+        }
     }
     resources = {
         category = starbase_modules
         cost = {
+            trigger = {
+                from = {
+                    is_ai = no
+                }
+            }
+            alloys = 200
+            minerals = 50
+            energy = 100
+        }
+        cost = {
+            trigger = {
+                from = {
+                    is_ai = yes
+                }
+            }
             alloys = 400
         }
         upkeep = {
-            energy = 2
+            energy = 8
         }
     }
     station_modifier = {
@@ -2003,14 +2047,36 @@ heavy_hangar_bay = {
             fail_text = "requires_starfortress"
             has_starbase_size >= starbase_starfortress
         }
+        custom_tooltip = {
+            fail_text = "starbase_heavy_hangar_bay_limit.tooltip.fail"
+            count_starbase_modules = {
+                count < 3
+                type = heavy_hangar_bay
+            }
+        }
     }
     resources = {
         category = starbase_modules
         cost = {
+            trigger = {
+                from = {
+                    is_ai = no
+                }
+            }
+            alloys = 200
+            minerals = 50
+            energy = 100
+        }
+        cost = {
+            trigger = {
+                from = {
+                    is_ai = yes
+                }
+            }
             alloys = 400
         }
         upkeep = {
-            energy = 2
+            energy = 7
         }
     }
     station_modifier = {
@@ -2047,14 +2113,36 @@ heavy_x_gun_battery = {
             fail_text = "requires_citadel"
             has_starbase_size >= starbase_citadel
         }
+        custom_tooltip = {
+            fail_text = "starbase_heavy_x_gun_battery_limit.tooltip.fail"
+            count_starbase_modules = {
+                count < 2
+                type = heavy_x_gun_battery
+            }
+        }
     }
     resources = {
         category = starbase_modules
         cost = {
-            alloys = 850
+            trigger = {
+                from = {
+                    is_ai = no
+                }
+            }
+            alloys = 250
+            minerals = 50
+            energy = 100
+        }
+        cost = {
+            trigger = {
+                from = {
+                    is_ai = yes
+                }
+            }
+            alloys = 500
         }
         upkeep = {
-            energy = 2
+            energy = 10
         }
     }
     station_modifier = {

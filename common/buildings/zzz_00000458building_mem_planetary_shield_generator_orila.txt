@@ -2,6 +2,7 @@ building_mem_planetary_shield_generator_orila = {
     icon = "building_mem_orila_shield_generator"
     can_build = no
     can_demolish = yes
+    planetary_ftl_inhibitor = yes
     position_priority = 100
     category = army
     potential = {

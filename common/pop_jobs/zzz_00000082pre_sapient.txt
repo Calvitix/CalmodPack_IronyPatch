@@ -1,6 +1,7 @@
 pre_sapient = {
     category = pre_sapients
     is_capped_by_modifier = no
+    is_pre_sapient = yes
     clothes_texture_index = 2
     contributes_to_diplo_weight = no
     possible_pre_triggers = {

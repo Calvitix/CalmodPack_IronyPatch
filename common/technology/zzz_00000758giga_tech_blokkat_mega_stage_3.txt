@@ -10,7 +10,7 @@ giga_tech_blokkat_mega_stage_3 = {
     is_reverse_engineerable = no
     modifier = {
         country_resource_max_energy_add = 1000000
-        megastructure_energy_upkeep_mult = -0.1
+        megastructures_energy_upkeep_mult = -0.1
     }
     prereqfor_desc = {
         custom = {
