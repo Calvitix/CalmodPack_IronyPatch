@@ -27,6 +27,7 @@ blokkat_stripminers = {
         modules = {
             foreign_minister_module
             interior_minister_module
+            machine_military_minister_module
         }
     }
     faction = {
