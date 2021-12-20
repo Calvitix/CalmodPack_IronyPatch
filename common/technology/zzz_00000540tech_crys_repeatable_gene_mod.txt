@@ -1,0 +1,35 @@
+tech_crys_repeatable_gene_mod = {
+    area = society
+    cost = 500000
+    cost_per_level = 100000
+    tier = @repeatableTechTier
+    category = {
+        biology
+    }
+    levels = 10
+    weight = @repeatableTechWeight
+    icon = "tech_genetic_resequencing"
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = ap_evolutionary_mastery
+            }
+        }
+        modifier = {
+            factor = @repatableTechFactor
+        }
+    }
+    ai_weight = {
+        factor = 1
+    }
+    weight_groups = {
+        repeatable
+    }
+    mod_weight_if_group_picked = {
+        repeatable = 0.01
+    }
+    modifier = {
+        BIOLOGICAL_species_trait_points_add = 1
+    }
+}

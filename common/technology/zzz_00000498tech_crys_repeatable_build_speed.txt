@@ -1,0 +1,31 @@
+tech_crys_repeatable_build_speed = {
+    area = engineering
+    cost = @repeatableTechBaseCost
+    cost_per_level = @repeatableTechLevelCost
+    tier = @repeatableTechTier
+    category = {
+        industry
+    }
+    levels = -1
+    prerequisites = {
+        "tech_construction_templates"
+    }
+    weight = @repeatableTechWeight
+    icon = "tech_repeatable_reduced_building_time"
+    weight_modifier = {
+        factor = @repatableTechFactor
+    }
+    ai_weight = {
+        factor = 1
+    }
+    weight_groups = {
+        repeatable
+    }
+    mod_weight_if_group_picked = {
+        repeatable = 0.01
+    }
+    modifier = {
+        planet_building_build_speed_mult = 0.1
+        planet_decision_enact_speed_mult = 0.1
+    }
+}

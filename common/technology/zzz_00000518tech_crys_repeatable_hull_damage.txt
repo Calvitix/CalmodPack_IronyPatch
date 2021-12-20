@@ -1,0 +1,31 @@
+tech_crys_repeatable_hull_damage = {
+    area = physics
+    cost = @repeatableTechBaseCost
+    cost_per_level = @repeatableTechLevelCost
+    tier = @repeatableTechTier
+    category = {
+        particles
+    }
+    ai_update_type = military
+    levels = -1
+    prerequisites = {
+        "tech_battleships"
+    }
+    weight = @repeatableTechWeight
+    icon = "tech_plasma_3"
+    weight_modifier = {
+        factor = @repatableTechFactor
+    }
+    ai_weight = {
+        factor = 1
+    }
+    weight_groups = {
+        repeatable
+    }
+    mod_weight_if_group_picked = {
+        repeatable = 0.01
+    }
+    modifier = {
+        ship_hull_damage_mult = 0.02
+    }
+}

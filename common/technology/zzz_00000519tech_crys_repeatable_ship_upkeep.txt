@@ -1,0 +1,31 @@
+tech_crys_repeatable_ship_upkeep = {
+    area = physics
+    cost = @repeatableTechBaseCost
+    cost_per_level = @repeatableTechLevelCost
+    tier = @repeatableTechTier
+    category = {
+        field_manipulation
+    }
+    ai_update_type = military
+    levels = 100
+    prerequisites = {
+        "tech_zero_point_power"
+    }
+    weight = @repeatableTechWeight
+    icon = "tech_power_plant_4"
+    weight_modifier = {
+        factor = @repatableTechFactor
+    }
+    ai_weight = {
+        factor = 1
+    }
+    weight_groups = {
+        repeatable
+    }
+    mod_weight_if_group_picked = {
+        repeatable = 0.01
+    }
+    modifier = {
+        ships_upkeep_mult = -0.01
+    }
+}

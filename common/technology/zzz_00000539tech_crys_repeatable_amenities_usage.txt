@@ -1,0 +1,27 @@
+tech_crys_repeatable_amenities_usage = {
+    area = society
+    cost = @repeatableTechBaseCost
+    cost_per_level = @repeatableTechLevelCost
+    tier = @repeatableTechTier
+    category = {
+        statecraft
+    }
+    levels = 100
+    weight = @repeatableTechWeight
+    icon = "tech_unity_of_purpose"
+    weight_modifier = {
+        factor = @repatableTechFactor
+    }
+    ai_weight = {
+        factor = 1
+    }
+    weight_groups = {
+        repeatable
+    }
+    mod_weight_if_group_picked = {
+        repeatable = 0.01
+    }
+    modifier = {
+        pop_amenities_usage_mult = -0.01
+    }
+}

@@ -1,0 +1,37 @@
+tech_crys_repeatable_psionic_mod = {
+    area = society
+    cost = 500000
+    cost_per_level = 100000
+    tier = @repeatableTechTier
+    category = {
+        psionics
+    }
+    levels = 10
+    weight = @repeatableTechWeight
+    icon = "tech_psionic_theory"
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = ap_transcendence
+            }
+        }
+        modifier = {
+            factor = @repatableTechFactor
+        }
+    }
+    ai_weight = {
+        factor = 1
+    }
+    weight_groups = {
+        repeatable
+    }
+    mod_weight_if_group_picked = {
+        repeatable = 0.01
+    }
+    modifier = {
+        planet_jobs_produces_mult = 0.03
+        planet_telepaths_society_research_produces_add = 0.4
+        planet_telepaths_physics_research_produces_add = 0.4
+    }
+}

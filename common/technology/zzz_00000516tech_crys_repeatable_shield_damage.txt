@@ -1,0 +1,31 @@
+tech_crys_repeatable_shield_damage = {
+    area = physics
+    cost = @repeatableTechBaseCost
+    cost_per_level = @repeatableTechLevelCost
+    tier = @repeatableTechTier
+    category = {
+        computing
+    }
+    ai_update_type = military
+    levels = -1
+    prerequisites = {
+        "tech_shields_5"
+    }
+    weight = @repeatableTechWeight
+    icon = "tech_kinetic_artillery_2"
+    weight_modifier = {
+        factor = @repatableTechFactor
+    }
+    ai_weight = {
+        factor = 1
+    }
+    weight_groups = {
+        repeatable
+    }
+    mod_weight_if_group_picked = {
+        repeatable = 0.01
+    }
+    modifier = {
+        ship_shield_damage_mult = 0.02
+    }
+}

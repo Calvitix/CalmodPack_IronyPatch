@@ -1,0 +1,31 @@
+tech_crys_repeatable_armor_regen = {
+    area = engineering
+    cost = @repeatableTechBaseCost
+    cost_per_level = @repeatableTechLevelCost
+    tier = @repeatableTechTier
+    category = {
+        voidcraft
+    }
+    ai_update_type = military
+    levels = 100
+    prerequisites = {
+        "tech_regenerative_hull_tissue"
+    }
+    weight = @repeatableTechWeight
+    icon = "tech_dragon_armor"
+    weight_modifier = {
+        factor = @repatableTechFactor
+    }
+    ai_weight = {
+        factor = 1
+    }
+    weight_groups = {
+        repeatable
+    }
+    mod_weight_if_group_picked = {
+        repeatable = 0.01
+    }
+    modifier = {
+        ship_armor_regen_add_perc = 0.5
+    }
+}

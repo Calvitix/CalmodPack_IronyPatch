@@ -1,0 +1,35 @@
+tech_crys_repeatable_synth_mod = {
+    area = engineering
+    cost = 500000
+    cost_per_level = 100000
+    tier = @repeatableTechTier
+    category = {
+        industry
+    }
+    levels = 10
+    weight = @repeatableTechWeight
+    icon = "tech_binary_motivators"
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = ap_synthetic_evolution
+            }
+        }
+        modifier = {
+            factor = @repatableTechFactor
+        }
+    }
+    ai_weight = {
+        factor = 1
+    }
+    weight_groups = {
+        repeatable
+    }
+    mod_weight_if_group_picked = {
+        repeatable = 0.01
+    }
+    modifier = {
+        ROBOT_species_trait_points_add = 1
+    }
+}

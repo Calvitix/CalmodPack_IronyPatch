@@ -1,0 +1,30 @@
+tech_crys_repeatable_megastructure_build_cost = {
+    area = engineering
+    cost = @repeatableTechBaseCost
+    cost_per_level = @repeatableTechLevelCost
+    tier = @repeatableTechTier
+    category = {
+        industry
+    }
+    levels = 100
+    prerequisites = {
+        "tech_mega_engineering"
+    }
+    weight = @repeatableTechWeight
+    icon = "tech_assembly_pattern"
+    weight_modifier = {
+        factor = @repatableTechFactor
+    }
+    ai_weight = {
+        factor = 1
+    }
+    weight_groups = {
+        repeatable
+    }
+    mod_weight_if_group_picked = {
+        repeatable = 0.01
+    }
+    modifier = {
+        megastructures_cost_mult = -0.01
+    }
+}

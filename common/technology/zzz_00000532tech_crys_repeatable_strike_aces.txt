@@ -1,0 +1,31 @@
+tech_crys_repeatable_strike_aces = {
+    area = society
+    cost = @repeatableTechBaseCost
+    cost_per_level = @repeatableTechLevelCost
+    tier = @repeatableTechTier
+    category = {
+        military_theory
+    }
+    levels = -1
+    prerequisites = {
+        "tech_strike_craft_3"
+    }
+    weight = @repeatableTechWeight
+    icon = "tech_repeatable_improved_army_damage"
+    weight_modifier = {
+        factor = @repatableTechFactor
+    }
+    ai_weight = {
+        factor = 1
+    }
+    weight_groups = {
+        repeatable
+    }
+    mod_weight_if_group_picked = {
+        repeatable = 0.01
+    }
+    modifier = {
+        weapon_type_strike_craft_weapon_damage_mult = 0.025
+        weapon_type_strike_craft_weapon_fire_rate_mult = 0.025
+    }
+}

@@ -1,0 +1,30 @@
+tech_crys_repeatable_mining_stations = {
+    area = engineering
+    cost = @repeatableTechBaseCost
+    cost_per_level = @repeatableTechLevelCost
+    tier = @repeatableTechTier
+    category = {
+        industry
+    }
+    levels = -1
+    prerequisites = {
+        "tech_mineral_purification_2"
+    }
+    weight = @repeatableTechWeight
+    icon = "tech_space_mining_5"
+    weight_modifier = {
+        factor = @repatableTechFactor
+    }
+    ai_weight = {
+        factor = 1
+    }
+    weight_groups = {
+        repeatable
+    }
+    mod_weight_if_group_picked = {
+        repeatable = 0.01
+    }
+    modifier = {
+        station_gatherers_produces_mult = 0.2
+    }
+}

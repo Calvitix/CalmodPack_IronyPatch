@@ -1,0 +1,36 @@
+tech_crys_repeatable_pop_assembly = {
+    area = engineering
+    cost = @repeatableTechBaseCost
+    cost_per_level = @repeatableTechLevelCost
+    tier = @repeatableTechTier
+    category = {
+        industry
+    }
+    levels = -1
+    weight = @repeatableTechWeight
+    icon = "tech_nanite_assemblers"
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOR = {
+                has_technology = tech_droid_workers
+                has_authority = auth_machine_intelligence
+            }
+        }
+        modifier = {
+            factor = @repatableTechFactor
+        }
+    }
+    ai_weight = {
+        factor = 1
+    }
+    weight_groups = {
+        repeatable
+    }
+    mod_weight_if_group_picked = {
+        repeatable = 0.01
+    }
+    modifier = {
+        planet_pop_assembly_mult = 0.02
+    }
+}

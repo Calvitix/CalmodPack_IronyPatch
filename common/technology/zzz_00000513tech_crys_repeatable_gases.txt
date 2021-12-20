@@ -1,0 +1,31 @@
+tech_crys_repeatable_gases = {
+    area = physics
+    cost = @repeatableTechBaseCost
+    cost_per_level = @repeatableTechLevelCost
+    tier = @repeatableTechTier
+    category = {
+        field_manipulation
+    }
+    ai_update_type = military
+    levels = -1
+    prerequisites = {
+        "tech_exotic_gases"
+    }
+    weight = @repeatableTechWeight
+    icon = "tech_exotic_gases"
+    weight_modifier = {
+        factor = @repatableTechFactor
+    }
+    ai_weight = {
+        factor = 1
+    }
+    weight_groups = {
+        repeatable
+    }
+    mod_weight_if_group_picked = {
+        repeatable = 0.01
+    }
+    modifier = {
+        country_exotic_gases_produces_mult = 0.05
+    }
+}

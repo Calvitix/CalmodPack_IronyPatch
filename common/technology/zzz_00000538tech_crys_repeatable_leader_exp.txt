@@ -1,0 +1,30 @@
+tech_crys_repeatable_leader_exp = {
+    area = society
+    cost = @repeatableTechBaseCost
+    cost_per_level = @repeatableTechLevelCost
+    tier = @repeatableTechTier
+    category = {
+        statecraft
+    }
+    levels = -1
+    prerequisites = {
+        "tech_manifest_destiny"
+    }
+    weight = @repeatableTechWeight
+    icon = "tech_selected_lineages"
+    weight_modifier = {
+        factor = @repatableTechFactor
+    }
+    ai_weight = {
+        factor = 1
+    }
+    weight_groups = {
+        repeatable
+    }
+    mod_weight_if_group_picked = {
+        repeatable = 0.01
+    }
+    modifier = {
+        species_leader_exp_gain = 0.1
+    }
+}

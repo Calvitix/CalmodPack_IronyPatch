@@ -1,0 +1,33 @@
+tech_crys_repeatable_pop_growth = {
+    area = society
+    cost = @repeatableTechBaseCost
+    cost_per_level = @repeatableTechLevelCost
+    tier = @repeatableTechTier
+    category = {
+        biology
+    }
+    levels = -1
+    weight = @repeatableTechWeight
+    icon = "tech_vitality_boosters"
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            has_authority = auth_machine_intelligence
+        }
+        modifier = {
+            factor = @repatableTechFactor
+        }
+    }
+    ai_weight = {
+        factor = 1
+    }
+    weight_groups = {
+        repeatable
+    }
+    mod_weight_if_group_picked = {
+        repeatable = 0.01
+    }
+    modifier = {
+        pop_growth_speed = 0.02
+    }
+}
