@@ -1,0 +1,37 @@
+building_negative_mass_factory_1 = {
+    base_buildtime = 1200
+    category = resource
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @b4_minerals
+            exotic_gases = @b2_rare_cost
+            rare_crystals = @b2_rare_cost
+            volatile_motes = 50
+        }
+        cost = {
+            trigger = {
+                owner = {
+                    is_robot_empire = yes
+                }
+            }
+            minerals = 900
+            alloys = 700
+        }
+        upkeep = {
+            energy = 50
+            exotic_gases = @b2_rare_upkeep
+            rare_crystals = @b2_rare_upkeep
+            volatile_motes = 1
+        }
+        produces = {
+            ehof_sr_negative_mass = 2
+        }
+    }
+    upgrades = {
+        building_negative_mass_factory_2
+    }
+    prerequisites = {
+        "tech_nm_utilization_1"
+    }
+}

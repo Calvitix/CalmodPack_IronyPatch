@@ -1486,7 +1486,7 @@ ehof_sr_negative_mass = {
     tradable = no
     max = 1000000
     prerequisites = {
-        "tech_negative_pressure"
+        "tech_negative_e_s"
     }
     visibility_prerequisite = {
         always = yes

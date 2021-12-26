@@ -1,5 +1,5 @@
 tech_starbase_lance_II = {
-    cost = 15000
+    cost = 55000
     area = physics
     tier = 4
     category = {

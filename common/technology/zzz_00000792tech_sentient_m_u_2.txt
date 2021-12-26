@@ -1,0 +1,25 @@
+tech_sentient_m_u_2 = {
+    area = engineering
+    cost = @gigatier7cost3
+    weight = 0
+    tier = 7
+    is_rare = yes
+    is_reverse_engineerable = no
+    category = {
+        materials
+    }
+    modifier = {
+        all_technology_research_speed = 0.05
+    }
+    ai_weight = {
+        factor = @giga_aiweight_multiplier
+        factor = @ehof_t1_weight
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_field_manipulation"
+            }
+        }
+    }
+}

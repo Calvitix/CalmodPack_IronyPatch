@@ -13,6 +13,9 @@ building_supercomputer = {
             has_modifier = slave_colony
         }
     }
+    upgrades = {
+        "building_giga_supercomputer_1"
+    }
     allow = {
         has_major_upgraded_capital = yes
         or = {

@@ -2,18 +2,17 @@ tech_abstract_2 = {
     area = physics
     cost = @tier3cost3
     weight = @tier3weight1
-    tier = 2
-    is_rare = yes
+    tier = 3
     category = {
         particles
     }
     prerequisites = {
+        "tech_abstract_1"
         "tech_physics_2"
-        "tech_power_plant_3"
-        "tech_ehof_phase_01"
+        "tech_power_plant_4"
     }
     modifier = {
-        all_technology_research_speed = 0.05
+        all_technology_research_speed = 0.2
     }
     weight_modifier = {
         modifier = {
@@ -55,6 +54,7 @@ tech_abstract_2 = {
         }
     }
     ai_weight = {
+        factor = @giga_aiweight_multiplier
         factor = @ehof_t1_weight
         modifier = {
             factor = 1.25

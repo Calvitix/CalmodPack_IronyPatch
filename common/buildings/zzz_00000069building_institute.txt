@@ -22,6 +22,9 @@ building_institute = {
             }
         }
     }
+    upgrades = {
+        "building_giga_institute_1"
+    }
     destroy_trigger = {
         exists = owner
         OR = {

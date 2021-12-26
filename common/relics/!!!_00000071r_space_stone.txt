@@ -1,0 +1,71 @@
+r_space_stone = {
+    activation_duration = 3600
+    portrait = "GFX_relic_space_stone"
+    sound = "relic_activation_space_stone"
+    resources = {
+        category = relics
+        cost = {
+            influence = 50
+        }
+    }
+    ai_weight = {
+        weight = 10
+        modifier = {
+            factor = 200
+            is_at_war = yes
+        }
+        modifier = {
+            factor = 0
+            NOR = {
+                has_technology = tech_jump_drive_1
+                has_technology = tech_psi_jump_drive_1
+                has_technology = tech_space_stone_jump_drive_1
+            }
+        }
+    }
+    triggered_country_modifier = {
+        potential = {
+            always = yes
+        }
+        ship_speed_mult = 0.5
+        ship_evasion_mult = 0.1
+        ship_windup_mult = -0.1
+    }
+    score = 5000
+    active_effect = {
+        add_modifier = {
+            modifier = "space_stone"
+            days = 3600
+        }
+        custom_tooltip = space_stone_triumph_cooldown
+        hidden_effect = {
+            add_modifier = {
+                modifier = "infinity_stone_relic_activation_cooldown"
+                days = 3600
+            }
+            add_modifier = {
+                modifier = "relic_activation_cooldown"
+                days = 1
+            }
+            country_event = {
+                id = infinity_stones_new_gauntlet.6
+                days = 3600
+            }
+            infinity_circuit_apply_modifier = yes
+        }
+    }
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_infinty_stone_no_cooldown"
+            NOT = {
+                has_modifier = infinity_stone_relic_activation_cooldown
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_relic_space_stone"
+            NOT = {
+                has_modifier = space_stone
+            }
+        }
+    }
+}

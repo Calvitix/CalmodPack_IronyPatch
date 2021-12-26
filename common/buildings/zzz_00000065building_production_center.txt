@@ -132,7 +132,7 @@ building_production_center = {
         trigger = {
             always = yes
         }
-        alloys = 1
+        alloys = 3
     }
     ai_resource_production = {
         trigger = {
@@ -140,7 +140,7 @@ building_production_center = {
                 country_uses_consumer_goods = yes
             }
         }
-        consumer_goods = 3
+        consumer_goods = 6
     }
     ai_resource_production = {
         alloys = 3

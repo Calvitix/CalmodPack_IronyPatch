@@ -1,0 +1,25 @@
+tech_arcane_g_r = {
+    area = physics
+    cost = @gigatier7cost1
+    weight = 0
+    tier = 7
+    is_dangerous = yes
+    category = {
+        particles
+    }
+    modifier = {
+        country_influence_produces_mult = 0.25
+        all_technology_research_speed = 0.05
+    }
+    ai_weight = {
+        factor = @giga_aiweight_multiplier
+        factor = @ehof_t1_weight
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+    }
+}

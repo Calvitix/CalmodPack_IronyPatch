@@ -23,6 +23,9 @@ building_research_lab_3 = {
             }
         }
     }
+    upgrades = {
+        "building_giga_research_lab_1"
+    }
     destroy_trigger = {
         OR = {
             has_modifier = slave_colony

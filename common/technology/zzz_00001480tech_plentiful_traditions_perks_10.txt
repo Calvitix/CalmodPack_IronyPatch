@@ -1,0 +1,53 @@
+@tier5cost1 = 75000
+@tier2weight2 = 65
+tech_plentiful_traditions_perks_10 = {
+    area = society
+    cost = @tier5cost1
+    tier = 5
+    category = {
+        biology
+    }
+    ai_update_type = all
+    is_rare = yes
+    weight = @tier2weight2
+    modifier = {
+        ascension_perks_add = 1
+    }
+    potential = {
+        has_technology = "tech_plentiful_traditions_perks_1"
+        has_technology = "tech_plentiful_traditions_perks_2"
+        has_technology = "tech_plentiful_traditions_perks_3"
+        has_technology = "tech_plentiful_traditions_perks_4"
+        has_technology = "tech_plentiful_traditions_perks_5"
+        has_technology = "tech_plentiful_traditions_perks_6"
+        has_technology = "tech_plentiful_traditions_perks_7"
+        has_technology = "tech_plentiful_traditions_perks_8"
+        has_technology = "tech_plentiful_traditions_perks_9"
+        NOT = {
+            has_technology = "tech_plentiful_traditions_perks_10"
+        }
+        NOT = {
+            has_technology = "tech_plentiful_traditions_perks_11"
+        }
+        NOT = {
+            has_technology = "tech_plentiful_traditions_perks_12"
+        }
+        check_variable = {
+            which = "num_of_traditions"
+            value > 9
+        }
+    }
+    weight_modifier = {
+        factor = 2
+        modifier = {
+            factor = 5
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_biology"
+            }
+        }
+    }
+    ai_weight = {
+        weight = 9999
+    }
+}
