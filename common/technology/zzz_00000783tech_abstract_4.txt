@@ -13,7 +13,7 @@ tech_abstract_4 = {
         "tech_hardlight_c_u"
     }
     modifier = {
-        all_technology_research_speed = 0.05
+        planet_researchers_physics_research_produces_mult = 0.075
     }
     ai_weight = {
         factor = @giga_aiweight_multiplier

@@ -1,0 +1,8 @@
+opinion_changed_vassal = {
+    opinion = {
+        base = 75
+    }
+    decay = {
+        base = 5
+    }
+}

@@ -15,6 +15,7 @@ trait_aquatic = {
         pc_reef
         pc_desertislands
         pc_subarctic
+        pc_storm
     }
     species_possible_remove = {
         if = {
@@ -84,6 +85,7 @@ trait_aquatic = {
                     is_planet_class = pc_reef
                     is_planet_class = pc_desertislands
                     is_planet_class = pc_subarctic
+                    is_planet_class = pc_storm
                 }
             }
         }
@@ -102,6 +104,7 @@ trait_aquatic = {
                     is_planet_class = pc_reef
                     is_planet_class = pc_desertislands
                     is_planet_class = pc_subarctic
+                    is_planet_class = pc_storm
                 }
                 exists = owner
                 owner = {
@@ -125,6 +128,7 @@ trait_aquatic = {
                     is_planet_class = pc_reef
                     is_planet_class = pc_desertislands
                     is_planet_class = pc_subarctic
+                    is_planet_class = pc_storm
                 }
                 exists = owner
                 owner = {

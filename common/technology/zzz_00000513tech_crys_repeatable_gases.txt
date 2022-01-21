@@ -14,7 +14,7 @@ tech_crys_repeatable_gases = {
     weight = @repeatableTechWeight
     icon = "tech_exotic_gases"
     weight_modifier = {
-        factor = @repatableTechFactor
+        factor = @repeatableTechFactor
     }
     ai_weight = {
         factor = 1

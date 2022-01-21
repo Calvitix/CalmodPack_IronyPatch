@@ -16,7 +16,7 @@ lot_ap_repeatable = {
         ascension_perks_add = 1
     }
     weight_modifier = {
-        factor = @repatableTechFactor
+        factor = @repeatableTechFactor
     }
     ai_weight = {
         factor = 1

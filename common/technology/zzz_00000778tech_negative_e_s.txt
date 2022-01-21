@@ -10,28 +10,28 @@ tech_negative_e_s = {
     prerequisites = {
         "tech_u_r_e_t"
     }
-    modifier = {
-        factor = 0
-        NOR = {
-            has_country_flag = negative_mass_found
-            any_system_within_border = {
-                any_system_planet = {
-                    has_resource = {
-                        type = sr_negative_mass
-                        amount > 0
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOR = {
+                has_country_flag = negative_mass_found
+                any_system_within_border = {
+                    any_system_planet = {
+                        has_resource = {
+                            type = ehof_sr_negative_mass
+                            amount > 0
+                        }
+                    }
+                }
+                any_relation = {
+                    AND = {
+                        is_country_type = default
+                        has_communications = ROOT
+                        has_technology = tech_tech_negative_e_s
                     }
                 }
             }
-            any_relation = {
-                AND = {
-                    is_country_type = default
-                    has_communications = ROOT
-                    has_technology = tech_tech_negative_e_s
-                }
-            }
         }
-    }
-    weight_modifier = {
         modifier = {
             factor = 0.1
             years_passed < 50

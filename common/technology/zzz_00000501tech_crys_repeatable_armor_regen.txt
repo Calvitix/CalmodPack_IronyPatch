@@ -14,7 +14,7 @@ tech_crys_repeatable_armor_regen = {
     weight = @repeatableTechWeight
     icon = "tech_dragon_armor"
     weight_modifier = {
-        factor = @repatableTechFactor
+        factor = @repeatableTechFactor
     }
     ai_weight = {
         factor = 1

@@ -15,7 +15,7 @@ tech_aec_aw_dpl_defense_platform_repeatable = {
         has_global_flag = eac_aw_dpl_repeatable_tech_allowed
     }
     weight_modifier = {
-        factor = @repatableTechFactor
+        factor = @repeatableTechFactor
     }
     ai_weight = {
         factor = 1

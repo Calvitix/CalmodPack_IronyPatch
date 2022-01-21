@@ -11,7 +11,7 @@ GT_ship_weapon_range_mult = {
     }
     weight = @tier3weight3
     modifier = {
-        ship_weapon_range_mult = 0.1
+        ship_weapon_range_mult = 0.02
     }
     weight_modifier = {
         factor = 0.5

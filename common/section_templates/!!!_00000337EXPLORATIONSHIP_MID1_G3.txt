@@ -27,4 +27,37 @@ ship_section_template = {
             alloys = @cost0
         }
     }
+    ai_weight = {
+        weight = 0.5
+        modifier = {
+            factor = 2
+            has_technology = tech_missiles_2
+        }
+        modifier = {
+            factor = 2
+            has_technology = tech_missiles_3
+        }
+        modifier = {
+            factor = 2
+            has_technology = tech_missiles_4
+        }
+        modifier = {
+            factor = 2
+            has_technology = tech_missiles_5
+        }
+        modifier = {
+            factor = 10
+            or = {
+                is_preferred_weapons = weapon_type_explosive
+                is_preferred_weapons = weapon_type_strike_craft
+            }
+        }
+        modifier = {
+            factor = 0.1
+            NOR = {
+                is_preferred_weapons = weapon_type_explosive
+                is_preferred_weapons = weapon_type_strike_craft
+            }
+        }
+    }
 }

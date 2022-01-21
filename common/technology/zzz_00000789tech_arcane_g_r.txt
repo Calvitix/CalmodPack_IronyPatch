@@ -9,7 +9,7 @@ tech_arcane_g_r = {
     }
     modifier = {
         country_influence_produces_mult = 0.25
-        all_technology_research_speed = 0.05
+        all_technology_research_speed = 0.025
     }
     ai_weight = {
         factor = @giga_aiweight_multiplier

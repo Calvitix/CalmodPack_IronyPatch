@@ -1,7 +1,7 @@
 tech_structural_calcification = {
     area = society
     start_tech = no
-    cost = 40000
+    cost = 10000
     tier = 3
     is_rare = yes
     is_dangerous = yes
@@ -11,7 +11,7 @@ tech_structural_calcification = {
     prerequisites = {
         "tech_megamycete"
     }
-    weight = 15
+    weight = 60
     potential = {
         OR = {
             is_machine_empire = yes

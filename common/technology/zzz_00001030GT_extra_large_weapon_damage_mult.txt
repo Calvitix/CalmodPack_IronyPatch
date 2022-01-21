@@ -10,7 +10,7 @@ GT_extra_large_weapon_damage_mult = {
     }
     weight = @tier6weight1
     modifier = {
-        shipclass_military_station_damage_mult = 0.5
+        shipclass_military_station_damage_mult = 0.2
     }
     weight_modifier = {
         modifier = {

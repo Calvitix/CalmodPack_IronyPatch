@@ -1,9 +1,9 @@
 @EarlyRepeatableTechCost = 12000
-@EarlyRepeatableTechLevelCost = 6000
-@EarlyRepatableTechFactor = 0.65
+@EarlyRepeatableTechLevelCost = 20000
+@EarlyRepeatableTechFactor = 0.5
 @RepeatableCategoryFactor = 0.25
-@RepeatableDifferntFactor = 0.5
-@EarlyRepeatableWeight = 7
+@RepeatableDifferentFactor = 0.5
+@EarlyRepeatableWeight = 4
 @EarlyRepeatableTier = 3
 tech_repeatable_improved_shield_output = {
     area = physics
@@ -21,70 +21,70 @@ tech_repeatable_improved_shield_output = {
     weight = @EarlyRepeatableWeight
     weight_modifier = {
         modifier = {
-            factor = @EarlyRepatableTechFactor
+            factor = @EarlyRepeatableTechFactor
             check_variable = {
                 which = repeatable_shield_mult
                 value > 0
             }
         }
         modifier = {
-            factor = @EarlyRepatableTechFactor
+            factor = @EarlyRepeatableTechFactor
             check_variable = {
                 which = repeatable_shield_mult
                 value > 1
             }
         }
         modifier = {
-            factor = @EarlyRepatableTechFactor
+            factor = @EarlyRepeatableTechFactor
             check_variable = {
                 which = repeatable_shield_mult
                 value > 2
             }
         }
         modifier = {
-            factor = @EarlyRepatableTechFactor
+            factor = @EarlyRepeatableTechFactor
             check_variable = {
                 which = repeatable_shield_mult
                 value > 3
             }
         }
         modifier = {
-            factor = @EarlyRepatableTechFactor
+            factor = @EarlyRepeatableTechFactor
             check_variable = {
                 which = repeatable_shield_mult
                 value > 4
             }
         }
         modifier = {
-            factor = @EarlyRepatableTechFactor
+            factor = @EarlyRepeatableTechFactor
             check_variable = {
                 which = repeatable_shield_mult
                 value > 5
             }
         }
         modifier = {
-            factor = @EarlyRepatableTechFactor
+            factor = @EarlyRepeatableTechFactor
             check_variable = {
                 which = repeatable_shield_mult
                 value > 6
             }
         }
         modifier = {
-            factor = @EarlyRepatableTechFactor
+            factor = @EarlyRepeatableTechFactor
             check_variable = {
                 which = repeatable_shield_mult
                 value > 7
             }
         }
         modifier = {
-            factor = @EarlyRepatableTechFactor
+            factor = @EarlyRepeatableTechFactor
             check_variable = {
                 which = repeatable_shield_mult
                 value > 8
             }
         }
         modifier = {
-            factor = @EarlyRepatableTechFactor
+            factor = @EarlyRepeatableTechFactor
             check_variable = {
                 which = repeatable_shield_mult
                 value > 9
@@ -101,7 +101,7 @@ tech_repeatable_improved_shield_output = {
         ship_repeatable = @RepeatableCategoryFactor
     }
     mod_weight_if_group_picked = {
-        production_repeatable = @RepeatableDifferntFactor
+        production_repeatable = @RepeatableDifferentFactor
     }
     modifier = {
         ship_shield_mult = 0.05

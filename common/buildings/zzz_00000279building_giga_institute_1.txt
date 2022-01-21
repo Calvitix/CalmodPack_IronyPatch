@@ -1,6 +1,7 @@
 building_giga_institute_1 = {
     base_buildtime = @b3_time
     can_build = no
+    base_cap_amount = 1
     potential = {
         NOT = {
             has_modifier = resort_colony

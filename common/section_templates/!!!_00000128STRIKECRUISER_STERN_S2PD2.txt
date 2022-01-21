@@ -42,4 +42,17 @@ ship_section_template = {
             alloys = @cost1
         }
     }
+    ai_weight = {
+        factor = 1
+        modifier = {
+            factor = 8
+            or = {
+                has_technology = tech_pd_tracking_2
+                has_technology = tech_flak_batteries_2
+            }
+            not = {
+                has_technology = tech_lasers_4
+            }
+        }
+    }
 }

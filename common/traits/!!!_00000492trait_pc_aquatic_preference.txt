@@ -1,3 +1,6 @@
+@primary = 0.8
+@secondary = 0.5
+@tertiary = 0.2
 trait_pc_aquatic_preference = {
     icon = "gfx/interface/icons/traits/trait_pc_aquatic_preference.dds"
     allowed_archetypes = {
@@ -11,6 +14,29 @@ trait_pc_aquatic_preference = {
     }
     advanced_trait = yes
     modifier = {
+        pc_panthalassic_habitability = @primary
+        pc_atoll_habitability = @primary
+        pc_crag_habitability = @primary
+        pc_monsoon_habitability = @secondary
+        pc_jungle_habitability = @secondary
+        pc_megaflora_habitability = @secondary
+        pc_mycelium_habitability = @secondary
+        pc_pangea_habitability = @secondary
+        pc_young_habitability = @secondary
+        pc_dune_habitability = @tertiary
+        pc_adiabatic_habitability = @tertiary
+        pc_karstic_habitability = @tertiary
+        pc_dust_habitability = @tertiary
+        pc_mediterranean_habitability = @tertiary
+        pc_coriolis_habitability = @tertiary
+        pc_taiga_habitability = @tertiary
+        pc_frigid_habitability = @tertiary
+        pc_bog_habitability = @tertiary
+        pc_awakened_habitability = @tertiary
+        pc_melting_habitability = @tertiary
+        pc_ice_habitability = @tertiary
+        pc_mineral_habitability = @tertiary
+        pc_plateau_habitability = @tertiary
         pc_aquatic_habitability = 0.8
         pc_ocean_habitability = 0.8
         pc_cascadian_habitability = 0.8
@@ -33,5 +59,8 @@ trait_pc_aquatic_preference = {
         pc_reef_habitability = 0.8
         pc_geothermal_habitability = 0.6
         pc_biolumen_habitability = 0.6
+        pc_storm_habitability = 0.2
+        pc_aquifer_habitability = 0.2
+        pc_supercon_habitability = 0.2
     }
 }

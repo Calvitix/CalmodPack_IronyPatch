@@ -16,7 +16,7 @@ giga_tech_defense_nexus_damage_2 = {
         }
     }
     modifier = {
-        weapon_type_strike_craft_weapon_damage_mult = 0.1
+        weapon_type_strike_craft_weapon_damage_mult = 0.05
     }
     weight_modifier = {
         modifier = {

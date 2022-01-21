@@ -14,7 +14,7 @@ tech_crys_repeatable_shield_damage = {
     weight = @repeatableTechWeight
     icon = "tech_kinetic_artillery_2"
     weight_modifier = {
-        factor = @repatableTechFactor
+        factor = @repeatableTechFactor
     }
     ai_weight = {
         factor = 1

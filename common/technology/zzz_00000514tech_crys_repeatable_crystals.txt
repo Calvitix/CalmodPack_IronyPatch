@@ -14,7 +14,7 @@ tech_crys_repeatable_crystals = {
     weight = @repeatableTechWeight
     icon = "tech_rare_crystals"
     weight_modifier = {
-        factor = @repatableTechFactor
+        factor = @repeatableTechFactor
     }
     ai_weight = {
         factor = 1

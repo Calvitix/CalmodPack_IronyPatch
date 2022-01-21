@@ -10,7 +10,7 @@ giga_tech_repeatable_reduced_mega_building_time = {
     prerequisites = {
         "tech_mega_engineering"
     }
-    weight = 20
+    weight = @repeatableTechWeight
     ai_weight = {
         factor = 1
     }

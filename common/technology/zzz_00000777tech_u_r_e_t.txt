@@ -12,9 +12,6 @@ tech_u_r_e_t = {
         "tech_global_research_initiative"
         "tech_space_science_5"
     }
-    modifier = {
-        all_technology_research_speed = 0.1
-    }
     weight_modifier = {
         modifier = {
             factor = 0.1

@@ -22,7 +22,16 @@ ship_section_template = {
     }
     medium_utility_slots = 4
     ai_weight = {
-        factor = 500
+        modifier = {
+            factor = 10
+            is_preferred_weapons = weapon_type_explosive
+        }
+        modifier = {
+            factor = 0.1
+            NOT = {
+                is_preferred_weapons = weapon_type_explosive
+            }
+        }
     }
     resources = {
         category = ship_sections

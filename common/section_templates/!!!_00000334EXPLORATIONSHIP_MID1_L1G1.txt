@@ -22,4 +22,17 @@ ship_section_template = {
             alloys = @cost0
         }
     }
+    ai_weight = {
+        weight = 0.5
+        modifier = {
+            factor = 0.8
+            is_preferred_weapons = weapon_type_energy
+        }
+        modifier = {
+            factor = 1.6
+            or = {
+                is_warrior_destructor = yes
+            }
+        }
+    }
 }

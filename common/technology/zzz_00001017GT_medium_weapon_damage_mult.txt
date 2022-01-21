@@ -10,8 +10,8 @@ GT_medium_weapon_damage_mult = {
     }
     weight = @tier3weight3
     modifier = {
-        shipclass_starbase_damage_mult = 0.25
-        shipclass_military_station_damage_mult = 0.25
+        shipclass_starbase_damage_mult = 0.05
+        shipclass_military_station_damage_mult = 0.05
     }
     weight_modifier = {
         modifier = {

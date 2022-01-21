@@ -1,4 +1,4 @@
-@megastructure_repeatable_tech_weight = 10
+@megastructure_repeatable_tech_weight = 4
 @lesser_megastructure_base_tech_cost = 36000
 @lesser_megastructure_per_level_cost = 108000
 giga_tech_repeatable_kugel_cap = {

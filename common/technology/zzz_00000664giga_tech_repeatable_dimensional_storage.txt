@@ -10,7 +10,7 @@ giga_tech_repeatable_dimensional_storage = {
     prerequisites = {
         "giga_tech_tetradimensional_engineering"
     }
-    weight = 20
+    weight = @repeatableTechWeight
     ai_weight = {
         factor = 1
     }

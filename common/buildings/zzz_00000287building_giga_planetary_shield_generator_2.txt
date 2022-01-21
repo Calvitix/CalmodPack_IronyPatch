@@ -20,7 +20,7 @@ building_giga_planetary_shield_generator_2 = {
         }
     }
     planet_modifier = {
-        planet_orbital_bombardment_damage = -0.9
+        planet_orbital_bombardment_damage = -0.7
     }
     prerequisites = {
         "tech_giga_planetary_shield_generator_2"

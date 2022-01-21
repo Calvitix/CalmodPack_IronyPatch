@@ -1,8 +1,8 @@
 @EarlyRepeatableTechCost = 12000
-@EarlyRepeatableTechLevelCost = 6000
+@EarlyRepeatableTechLevelCost = 20000
 @RepeatableCategoryFactor = 0.25
-@RepeatableDifferntFactor = 0.5
-@EarlyRepeatableWeight = 7
+@RepeatableDifferentFactor = 0.5
+@EarlyRepeatableWeight = 4
 @EarlyRepeatableTier = 3
 @SpecializationLevel = 0.75
 tech_repeatable_militarization = {
@@ -111,7 +111,7 @@ tech_repeatable_militarization = {
         job_repeatable = 0
     }
     mod_weight_if_group_picked = {
-        production_repeatable = @RepeatableDifferntFactor
+        production_repeatable = @RepeatableDifferentFactor
     }
     modifier = {
         job_soldier_per_pop = 0.02

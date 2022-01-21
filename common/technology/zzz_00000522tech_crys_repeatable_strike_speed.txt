@@ -13,7 +13,7 @@ tech_crys_repeatable_strike_speed = {
     weight = @repeatableTechWeight
     icon = "tech_repeatable_weapon_type_strike_craft_fire_rate"
     weight_modifier = {
-        factor = @repatableTechFactor
+        factor = @repeatableTechFactor
     }
     ai_weight = {
         factor = 1

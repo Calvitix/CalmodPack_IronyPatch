@@ -88,4 +88,42 @@ ship_section_template = {
             alloys = @cost2
         }
     }
+    ai_weight = {
+        modifier = {
+            factor = 0.9
+        }
+        modifier = {
+            factor = 10
+            or = {
+                has_technology = tech_energy_torpedoes_1
+            }
+        }
+        modifier = {
+            factor = 10
+            NOR = {
+                has_ai_personality = map_patronizing_colonizers
+                has_ai_personality = map_defenders_of_the_faith
+                has_ai_personality = map_carefree_hippies
+                has_ai_personality = map_studious_builders
+                has_ai_personality = map_hedonistic_visionaries
+                has_ai_personality = map_generous_philanthropists
+                has_ai_personality = map_adventure_seekers
+                has_ai_personality = map_civilized_nomads
+                has_ai_personality = map_naive_appeasers
+            }
+        }
+        modifier = {
+            factor = 0.1
+            NOR = {
+                has_ai_personality = map_guerilla_fighters
+                has_ai_personality = map_savage_raiders
+                has_ai_personality = map_psychotic_hordes
+                has_ai_personality = map_totalitarian_patriots
+                has_ai_personality = map_enterprising_corsairs
+                has_ai_personality = map_slave_soldiers
+                has_ai_personality = map_lazy_managers
+                has_ai_personality = map_experts_in_xenocide
+            }
+        }
+    }
 }

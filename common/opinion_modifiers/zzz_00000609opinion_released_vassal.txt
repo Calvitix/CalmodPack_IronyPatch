@@ -1,0 +1,8 @@
+opinion_released_vassal = {
+    opinion = {
+        base = 150
+    }
+    decay = {
+        base = 5
+    }
+}

@@ -12,7 +12,7 @@ tech_WS_Fortress_cap = {
     }
     weight = @repeatableTechWeight
     weight_modifier = {
-        factor = @repatableTechFactor
+        factor = @repeatableTechFactor
     }
     ai_weight = {
         factor = 1

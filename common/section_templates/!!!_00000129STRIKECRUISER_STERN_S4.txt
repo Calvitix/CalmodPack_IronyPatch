@@ -37,4 +37,33 @@ ship_section_template = {
             alloys = @cost1
         }
     }
+    ai_weight = {
+        factor = 1.5
+        modifier = {
+            factor = 3
+            or = {
+                has_technology = tech_lasers_3
+                has_technology = tech_plasma_1
+                has_technology = tech_autocannons_1
+            }
+        }
+        modifier = {
+            factor = 4
+            or = {
+                has_technology = tech_lasers_5
+                has_technology = tech_plasma_3
+                has_technology = tech_autocannons_3
+            }
+        }
+        modifier = {
+            factor = 10
+            is_preferred_weapons = weapon_type_kinetic
+        }
+        modifier = {
+            factor = 0.1
+            NOT = {
+                is_preferred_weapons = weapon_type_kinetic
+            }
+        }
+    }
 }

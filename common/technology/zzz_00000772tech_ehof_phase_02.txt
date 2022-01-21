@@ -20,7 +20,7 @@ tech_ehof_phase_02 = {
         }
     }
     modifier = {
-        country_influence_produces_mult = 0.15
+        country_influence_produces_mult = 0.05
     }
     weight_modifier = {
         modifier = {

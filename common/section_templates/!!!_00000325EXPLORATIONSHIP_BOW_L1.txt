@@ -17,4 +17,20 @@ ship_section_template = {
             alloys = @cost0
         }
     }
+    ai_weight = {
+        weight = 1
+        modifier = {
+            factor = 1.8
+            NOT = {
+                is_preferred_weapons = weapon_type_explosive
+            }
+        }
+        modifier = {
+            factor = 0.6
+            or = {
+                is_warrior_destructor = yes
+                is_dont_care = yes
+            }
+        }
+    }
 }

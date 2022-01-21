@@ -7,12 +7,14 @@ action_ask_to_become_subsidiary = {
     AI_acceptance_base_value = -50
     action_type = positive
     potential = {
-        from = {
-            has_authority = auth_corporate
-        }
-        or = {
-            is_ai = no
-            years_passed > @str_years_of_twilight
+        hidden_trigger = {
+            from = {
+                is_megacorp = yes
+            }
+            or = {
+                is_ai = no
+                years_passed > @str_years_of_twilight
+            }
         }
     }
     possible = {
@@ -182,5 +184,6 @@ action_ask_to_become_subsidiary = {
                 has_valid_civic = civic_pompous_purists
             }
         }
+        get_border_test = yes
     }
 }

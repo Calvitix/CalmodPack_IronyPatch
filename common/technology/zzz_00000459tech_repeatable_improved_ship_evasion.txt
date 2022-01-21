@@ -1,9 +1,9 @@
 @EarlyRepeatableTechCost = 12000
-@EarlyRepeatableTechLevelCost = 6000
-@EarlyRepatableTechFactor = 0.65
+@EarlyRepeatableTechLevelCost = 20000
+@EarlyRepeatableTechFactor = 0.5
 @RepeatableCategoryFactor = 0.25
-@RepeatableDifferntFactor = 0.5
-@EarlyRepeatableWeight = 7
+@RepeatableDifferentFactor = 0.5
+@EarlyRepeatableWeight = 4
 @EarlyRepeatableTier = 3
 tech_repeatable_improved_ship_evasion = {
     area = engineering
@@ -20,63 +20,63 @@ tech_repeatable_improved_ship_evasion = {
     weight = @EarlyRepeatableWeight
     weight_modifier = {
         modifier = {
-            factor = @EarlyRepatableTechFactor
+            factor = @EarlyRepeatableTechFactor
             check_variable = {
                 which = repeatable_ship_evasion
                 value > 0
             }
         }
         modifier = {
-            factor = @EarlyRepatableTechFactor
+            factor = @EarlyRepeatableTechFactor
             check_variable = {
                 which = repeatable_ship_evasion
                 value > 1
             }
         }
         modifier = {
-            factor = @EarlyRepatableTechFactor
+            factor = @EarlyRepeatableTechFactor
             check_variable = {
                 which = repeatable_ship_evasion
                 value > 2
             }
         }
         modifier = {
-            factor = @EarlyRepatableTechFactor
+            factor = @EarlyRepeatableTechFactor
             check_variable = {
                 which = repeatable_ship_evasion
                 value > 3
             }
         }
         modifier = {
-            factor = @EarlyRepatableTechFactor
+            factor = @EarlyRepeatableTechFactor
             check_variable = {
                 which = repeatable_ship_evasion
                 value > 4
             }
         }
         modifier = {
-            factor = @EarlyRepatableTechFactor
+            factor = @EarlyRepeatableTechFactor
             check_variable = {
                 which = repeatable_ship_evasion
                 value > 5
             }
         }
         modifier = {
-            factor = @EarlyRepatableTechFactor
+            factor = @EarlyRepeatableTechFactor
             check_variable = {
                 which = repeatable_ship_evasion
                 value > 6
             }
         }
         modifier = {
-            factor = @EarlyRepatableTechFactor
+            factor = @EarlyRepeatableTechFactor
             check_variable = {
                 which = repeatable_ship_evasion
                 value > 7
             }
         }
         modifier = {
-            factor = @EarlyRepatableTechFactor
+            factor = @EarlyRepeatableTechFactor
             check_variable = {
                 which = repeatable_ship_evasion
                 value > 8
@@ -98,8 +98,8 @@ tech_repeatable_improved_ship_evasion = {
         ship_repeatable = @RepeatableCategoryFactor
     }
     mod_weight_if_group_picked = {
-        production_repeatable = @RepeatableDifferntFactor
-        job_repeatable = @RepeatableDifferntFactor
+        production_repeatable = @RepeatableDifferentFactor
+        job_repeatable = @RepeatableDifferentFactor
     }
     modifier = {
         ship_evasion_mult = 0.05

@@ -33,4 +33,7 @@ ship_section_template = {
             alloys = @cost4
         }
     }
+    ai_weight = {
+        factor = 18
+    }
 }

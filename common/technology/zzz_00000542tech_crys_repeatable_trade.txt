@@ -11,7 +11,7 @@ tech_crys_repeatable_trade = {
     icon = "tech_interstellar_campaigns"
     weight_modifier = {
         modifier = {
-            factor = @repatableTechFactor
+            factor = @repeatableTechFactor
         }
         modifier = {
             factor = 0

@@ -14,7 +14,7 @@ tech_crys_repeatable_station_science = {
     weight = @repeatableTechWeight
     icon = "tech_space_science_5"
     weight_modifier = {
-        factor = @repatableTechFactor
+        factor = @repeatableTechFactor
     }
     ai_weight = {
         factor = 1
@@ -26,6 +26,6 @@ tech_crys_repeatable_station_science = {
         repeatable = 0.01
     }
     modifier = {
-        station_researchers_produces_mult = 0.2
+        station_researchers_produces_mult = 0.05
     }
 }

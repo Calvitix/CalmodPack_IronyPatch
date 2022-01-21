@@ -1,9 +1,9 @@
 @EarlyRepeatableTechCost = 12000
-@EarlyRepeatableTechLevelCost = 6000
-@EarlyRepatableTechFactor = 0.65
+@EarlyRepeatableTechLevelCost = 20000
+@EarlyRepeatableTechFactor = 0.5
 @RepeatableCategoryFactor = 0.25
-@RepeatableDifferntFactor = 0.5
-@EarlyRepeatableWeight = 7
+@RepeatableDifferentFactor = 0.5
+@EarlyRepeatableWeight = 4
 @EarlyRepeatableTier = 3
 tech_repeatable_improved_tile_mineral_output = {
     area = engineering
@@ -20,70 +20,70 @@ tech_repeatable_improved_tile_mineral_output = {
     weight = @EarlyRepeatableWeight
     weight_modifier = {
         modifier = {
-            factor = @EarlyRepatableTechFactor
+            factor = @EarlyRepeatableTechFactor
             check_variable = {
                 which = repeatable_mineral_output
                 value > 0
             }
         }
         modifier = {
-            factor = @EarlyRepatableTechFactor
+            factor = @EarlyRepeatableTechFactor
             check_variable = {
                 which = repeatable_mineral_output
                 value > 1
             }
         }
         modifier = {
-            factor = @EarlyRepatableTechFactor
+            factor = @EarlyRepeatableTechFactor
             check_variable = {
                 which = repeatable_mineral_output
                 value > 2
             }
         }
         modifier = {
-            factor = @EarlyRepatableTechFactor
+            factor = @EarlyRepeatableTechFactor
             check_variable = {
                 which = repeatable_mineral_output
                 value > 3
             }
         }
         modifier = {
-            factor = @EarlyRepatableTechFactor
+            factor = @EarlyRepeatableTechFactor
             check_variable = {
                 which = repeatable_mineral_output
                 value > 4
             }
         }
         modifier = {
-            factor = @EarlyRepatableTechFactor
+            factor = @EarlyRepeatableTechFactor
             check_variable = {
                 which = repeatable_mineral_output
                 value > 5
             }
         }
         modifier = {
-            factor = @EarlyRepatableTechFactor
+            factor = @EarlyRepeatableTechFactor
             check_variable = {
                 which = repeatable_mineral_output
                 value > 6
             }
         }
         modifier = {
-            factor = @EarlyRepatableTechFactor
+            factor = @EarlyRepeatableTechFactor
             check_variable = {
                 which = repeatable_mineral_output
                 value > 7
             }
         }
         modifier = {
-            factor = @EarlyRepatableTechFactor
+            factor = @EarlyRepeatableTechFactor
             check_variable = {
                 which = repeatable_mineral_output
                 value > 8
             }
         }
         modifier = {
-            factor = @EarlyRepatableTechFactor
+            factor = @EarlyRepeatableTechFactor
             check_variable = {
                 which = repeatable_mineral_output
                 value > 9
@@ -100,7 +100,7 @@ tech_repeatable_improved_tile_mineral_output = {
         production_repeatable = @RepeatableCategoryFactor
     }
     mod_weight_if_group_picked = {
-        ship_repeatable = @RepeatableDifferntFactor
+        ship_repeatable = @RepeatableDifferentFactor
     }
     modifier = {
         planet_jobs_minerals_produces_mult = 0.05

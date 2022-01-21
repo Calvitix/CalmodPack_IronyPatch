@@ -12,9 +12,6 @@ tech_nm_utilization_2 = {
         "tech_abstract_4"
         "tech_non_local_r_i"
     }
-    modifier = {
-        all_technology_research_speed = 0.05
-    }
     ai_weight = {
         factor = @giga_aiweight_multiplier
         factor = @ehof_t1_weight

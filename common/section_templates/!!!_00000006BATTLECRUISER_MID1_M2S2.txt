@@ -52,4 +52,21 @@ ship_section_template = {
             alloys = @cost0
         }
     }
+    ai_weight = {
+        modifier = {
+            factor = 3
+            OR = {
+                has_ai_personality = peaceful_traders
+                has_ai_personality = migrating_flock
+                has_ai_personality = map_splendid_isolationists
+                has_ai_personality = map_insecure_imitators
+                has_ai_personality = map_efficient_bureaucrats
+                has_ai_personality = map_slave_traders
+                has_ai_personality = map_warrior_mystics
+                has_ai_personality = map_aspiring_precursors
+                has_ai_personality = map_insidious_opportunists
+                has_ai_personality = map_depraved_breeders
+            }
+        }
+    }
 }

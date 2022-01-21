@@ -14,7 +14,7 @@ tech_crys_repeatable_starbase_boost = {
     weight = @repeatableTechWeight
     icon = "tech_starbase_5"
     weight_modifier = {
-        factor = @repatableTechFactor
+        factor = @repeatableTechFactor
     }
     ai_weight = {
         factor = 1

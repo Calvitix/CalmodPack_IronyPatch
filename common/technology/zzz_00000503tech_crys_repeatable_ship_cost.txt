@@ -14,7 +14,7 @@ tech_crys_repeatable_ship_cost = {
     weight = @repeatableTechWeight
     icon = "tech_battleships"
     weight_modifier = {
-        factor = @repatableTechFactor
+        factor = @repeatableTechFactor
     }
     ai_weight = {
         factor = 1

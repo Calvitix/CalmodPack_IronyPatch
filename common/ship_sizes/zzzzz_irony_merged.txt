@@ -365,21 +365,21 @@
 @speed1_1 = 6
 @speed1_2 = 6
 @speed1_3 = 6
-@speed10_1 = 180
-@speed3_1 = 90
-@speed3_2 = 90
-@speed3_3 = 90
-@speed3_4 = 90
-@speed4_1 = 100
-@speed5_1 = 120
-@speed5_2 = 120
-@speed6_1 = 130
-@speed7_1 = 140
-@speed7_2 = 140
-@speed8_1 = 160
-@speed9_1 = 170
-@speed9_2 = 170
-@speed9_3 = 170
+@speed10_1 = 125
+@speed3_1 = 35
+@speed3_2 = 35
+@speed3_3 = 35
+@speed3_4 = 35
+@speed4_1 = 50
+@speed5_1 = 70
+@speed5_2 = 70
+@speed6_1 = 80
+@speed7_1 = 90
+@speed7_2 = 90
+@speed8_1 = 100
+@speed9_1 = 110
+@speed9_2 = 110
+@speed9_3 = 110
 @starbase_build_block_radius_1 = 20
 @starbase_build_block_radius_10 = 20
 @starbase_build_block_radius_11 = 20
@@ -459,7 +459,7 @@ scout_probe = {
     graphical_culture = no
     formation_priority = 10
     entity = probe_entity
-    max_speed = 250
+    max_speed = 150
     acceleration = 0.35
     rotation_speed = 0.2
     collision_radius = 2
@@ -1686,7 +1686,7 @@ military_station_small = {
         ship_piracy_suppression_add = 2
     }
     ship_modifier = {
-        ship_weapon_range_mult = 0.2
+        ship_weapon_range_mult = 0.3
     }
     max_hitpoints = 5000
     size_multiplier = 5
@@ -1835,7 +1835,7 @@ military_station_medium = {
         ship_shield_mult = 1
     }
     ship_modifier = {
-        ship_weapon_range_mult = 0.2
+        ship_weapon_range_mult = 0.4
         ship_fire_rate_mult = 1
     }
     max_hitpoints = 10000
@@ -1991,7 +1991,7 @@ military_station_large = {
         ship_shield_mult = 1
     }
     ship_modifier = {
-        ship_weapon_range_mult = 0.2
+        ship_weapon_range_mult = 0.5
         ship_fire_rate_mult = 1
     }
     max_hitpoints = 20000
@@ -2303,7 +2303,7 @@ starbase_outpost = {
         starbase_defense_platform_capacity_add = 15
     }
     ship_modifier = {
-        ship_fire_rate_mult = 0.1
+        ship_fire_rate_mult = 0.25
         ship_weapon_range_mult = 0.25
     }
     max_hitpoints = 7500
@@ -2536,7 +2536,7 @@ starbase_starhold = {
         starbase_trade_protection_add = 16
     }
     ship_modifier = {
-        ship_fire_rate_mult = 0.1
+        ship_fire_rate_mult = 0.25
         ship_weapon_range_mult = 0.2
     }
     max_hitpoints = 20000
@@ -2673,8 +2673,8 @@ starbase_starfortress = {
         starbase_trade_protection_add = 24
     }
     ship_modifier = {
-        ship_fire_rate_mult = 0.1
-        ship_weapon_range_mult = 0.1
+        ship_fire_rate_mult = 0.25
+        ship_weapon_range_mult = 0.2
     }
     max_hitpoints = 120000
     combat_size_multiplier = 40
@@ -2810,8 +2810,8 @@ starbase_citadel = {
         starbase_trade_protection_add = 32
     }
     ship_modifier = {
-        ship_fire_rate_mult = 0.1
-        ship_weapon_range_mult = 0.1
+        ship_fire_rate_mult = 0.25
+        ship_weapon_range_mult = 0.2
     }
     max_hitpoints = 240000
     combat_size_multiplier = 50
@@ -2948,6 +2948,7 @@ starbase_stronghold = {
     }
     ship_modifier = {
         ship_fire_rate_mult = 0.1
+        ship_weapon_range_mult = 0.2
     }
     max_hitpoints = 300000
     combat_size_multiplier = 50
@@ -5876,7 +5877,7 @@ marauder_station = {
         ships_upkeep_mult = -1
     }
     ship_modifier = {
-        ship_weapon_range_mult = 0.2
+        ship_weapon_range_mult = 0.4
     }
     max_hitpoints = 2000
     size_multiplier = 4
@@ -9024,10 +9025,10 @@ giga_blokkat_custodian = {
     acceleration = 10
     rotation_speed = 10
     collision_radius = 10
-    max_hitpoints = 2000000
+    max_hitpoints = 200000
     modifier = {
-        ship_armor_add = 1000000
-        ship_shield_add = 750000
+        ship_armor_add = 100000
+        ship_shield_add = 75000
         ship_evasion_add = 25
     }
     size_multiplier = 4
@@ -9060,10 +9061,10 @@ giga_blokkat_harvester = {
     acceleration = 10
     rotation_speed = 10
     collision_radius = 10
-    max_hitpoints = 75000000
+    max_hitpoints = 7500000
     modifier = {
-        ship_armor_add = 50000000
-        ship_shield_add = 50000000
+        ship_armor_add = 5000000
+        ship_shield_add = 5000000
         ship_evasion_mult = 0
     }
     size_multiplier = 32
@@ -9096,10 +9097,10 @@ giga_blokkat_mothership = {
     acceleration = 10
     rotation_speed = 10
     collision_radius = 10
-    max_hitpoints = 400000000
+    max_hitpoints = 40000000
     modifier = {
-        ship_armor_add = 200000000
-        ship_shield_add = 200000000
+        ship_armor_add = 20000000
+        ship_shield_add = 20000000
         ship_evasion_mult = 0
     }
     size_multiplier = 32
@@ -9133,13 +9134,13 @@ giga_blokkat_terminator = {
     acceleration = 10
     rotation_speed = 10
     collision_radius = 10
-    max_hitpoints = 500000000
+    max_hitpoints = 50000000
     modifier = {
-        ship_armor_add = 250000000
-        ship_shield_add = 250000000
-        ship_hull_regen_add_static = 10000000
-        ship_armor_regen_add_static = 10000000
-        ship_shield_regen_add_static = 10000000
+        ship_armor_add = 25000000
+        ship_shield_add = 25000000
+        ship_hull_regen_add_static = 1000000
+        ship_armor_regen_add_static = 1000000
+        ship_shield_regen_add_static = 1000000
         ship_evasion_mult = 0
     }
     size_multiplier = 16
@@ -9581,6 +9582,8 @@ asteroid_artillery = {
         ship_evasion_mult = -1
         ship_armor_add = 40000
         ship_shield_add = 40000
+        ship_weapon_range_mult = -0.5
+        ship_fire_rate_mult = -0.3
     }
     max_hitpoints = 60000
     size_multiplier = 32
@@ -9777,6 +9780,8 @@ giga_systemcraft = {
         ship_armor_add = 25000000
         ship_shield_add = 10000000
         starbase_shipyard_capacity_add = 20
+        ship_weapon_range_mult = -0.5
+        ship_fire_rate_mult = -0.3
     }
     max_hitpoints = 65000000
     size_multiplier = 500

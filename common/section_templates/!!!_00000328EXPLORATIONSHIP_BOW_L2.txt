@@ -30,4 +30,18 @@ ship_section_template = {
             alloys = @cost1
         }
     }
+    ai_weight = {
+        weight = 0.5
+        modifier = {
+            factor = 1.8
+            is_preferred_weapons = weapon_type_energy
+        }
+        modifier = {
+            factor = 1.6
+            or = {
+                is_warrior_with_honor = yes
+                is_peaceful_or_careful = yes
+            }
+        }
+    }
 }

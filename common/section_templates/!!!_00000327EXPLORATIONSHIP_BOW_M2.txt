@@ -22,4 +22,20 @@ ship_section_template = {
             alloys = @cost0
         }
     }
+    ai_weight = {
+        weight = 0.5
+        modifier = {
+            factor = 1.8
+            NOT = {
+                is_preferred_weapons = weapon_type_energy
+            }
+        }
+        modifier = {
+            factor = 0.6
+            or = {
+                is_economic_warrior = no
+                is_dont_care = yes
+            }
+        }
+    }
 }

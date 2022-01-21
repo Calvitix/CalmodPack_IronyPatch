@@ -18,7 +18,7 @@ tech_crys_repeatable_pop_assembly = {
             }
         }
         modifier = {
-            factor = @repatableTechFactor
+            factor = @repeatableTechFactor
         }
     }
     ai_weight = {

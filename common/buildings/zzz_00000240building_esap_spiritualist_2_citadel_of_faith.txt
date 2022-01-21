@@ -14,7 +14,7 @@ building_esap_spiritualist_2_citadel_of_faith = {
         }
     }
     allow = {
-        has_fully_upgraded_capital = yes
+        has_major_upgraded_capital = yes
         buildings_upgrade_allow = yes
     }
     destroy_trigger = {

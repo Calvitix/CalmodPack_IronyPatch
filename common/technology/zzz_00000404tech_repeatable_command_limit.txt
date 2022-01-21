@@ -1,9 +1,9 @@
 @EarlyRepeatableTechCost = 12000
-@EarlyRepeatableTechLevelCost = 6000
-@EarlyRepatableTechFactor = 0.65
+@EarlyRepeatableTechLevelCost = 20000
+@EarlyRepeatableTechFactor = 0.5
 @RepeatableCategoryFactor = 0.25
-@RepeatableDifferntFactor = 0.5
-@EarlyRepeatableWeight = 7
+@RepeatableDifferentFactor = 0.5
+@EarlyRepeatableWeight = 4
 @EarlyRepeatableTier = 3
 tech_repeatable_command_limit = {
     area = society
@@ -20,42 +20,42 @@ tech_repeatable_command_limit = {
     weight = @EarlyRepeatableWeight
     weight_modifier = {
         modifier = {
-            factor = @EarlyRepatableTechFactor
+            factor = @EarlyRepeatableTechFactor
             check_variable = {
                 which = repeatable_command_limit
                 value > 0
             }
         }
         modifier = {
-            factor = @EarlyRepatableTechFactor
+            factor = @EarlyRepeatableTechFactor
             check_variable = {
                 which = repeatable_command_limit
                 value > 1
             }
         }
         modifier = {
-            factor = @EarlyRepatableTechFactor
+            factor = @EarlyRepeatableTechFactor
             check_variable = {
                 which = repeatable_command_limit
                 value > 2
             }
         }
         modifier = {
-            factor = @EarlyRepatableTechFactor
+            factor = @EarlyRepeatableTechFactor
             check_variable = {
                 which = repeatable_command_limit
                 value > 3
             }
         }
         modifier = {
-            factor = @EarlyRepatableTechFactor
+            factor = @EarlyRepeatableTechFactor
             check_variable = {
                 which = repeatable_command_limit
                 value > 4
             }
         }
         modifier = {
-            factor = @EarlyRepatableTechFactor
+            factor = @EarlyRepeatableTechFactor
             check_variable = {
                 which = repeatable_command_limit
                 value > 5
@@ -72,7 +72,7 @@ tech_repeatable_command_limit = {
         ship_repeatable = @RepeatableCategoryFactor
     }
     mod_weight_if_group_picked = {
-        production_repeatable = @RepeatableDifferntFactor
+        production_repeatable = @RepeatableDifferentFactor
     }
     modifier = {
         country_command_limit_add = 10

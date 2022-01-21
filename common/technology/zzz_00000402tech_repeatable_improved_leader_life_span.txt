@@ -1,9 +1,9 @@
 @EarlyRepeatableTechCost = 12000
-@EarlyRepeatableTechLevelCost = 6000
-@EarlyRepatableTechFactor = 0.65
+@EarlyRepeatableTechLevelCost = 20000
+@EarlyRepeatableTechFactor = 0.5
 @RepeatableCategoryFactor = 0.25
-@RepeatableDifferntFactor = 0.5
-@EarlyRepeatableWeight = 7
+@RepeatableDifferentFactor = 0.5
+@EarlyRepeatableWeight = 4
 @EarlyRepeatableTier = 3
 tech_repeatable_improved_leader_life_span = {
     area = society
@@ -20,70 +20,70 @@ tech_repeatable_improved_leader_life_span = {
     weight = @EarlyRepeatableWeight
     weight_modifier = {
         modifier = {
-            factor = @EarlyRepatableTechFactor
+            factor = @EarlyRepeatableTechFactor
             check_variable = {
                 which = repeatable_life_span
                 value > 0
             }
         }
         modifier = {
-            factor = @EarlyRepatableTechFactor
+            factor = @EarlyRepeatableTechFactor
             check_variable = {
                 which = repeatable_life_span
                 value > 1
             }
         }
         modifier = {
-            factor = @EarlyRepatableTechFactor
+            factor = @EarlyRepeatableTechFactor
             check_variable = {
                 which = repeatable_life_span
                 value > 2
             }
         }
         modifier = {
-            factor = @EarlyRepatableTechFactor
+            factor = @EarlyRepeatableTechFactor
             check_variable = {
                 which = repeatable_life_span
                 value > 3
             }
         }
         modifier = {
-            factor = @EarlyRepatableTechFactor
+            factor = @EarlyRepeatableTechFactor
             check_variable = {
                 which = repeatable_life_span
                 value > 4
             }
         }
         modifier = {
-            factor = @EarlyRepatableTechFactor
+            factor = @EarlyRepeatableTechFactor
             check_variable = {
                 which = repeatable_life_span
                 value > 5
             }
         }
         modifier = {
-            factor = @EarlyRepatableTechFactor
+            factor = @EarlyRepeatableTechFactor
             check_variable = {
                 which = repeatable_life_span
                 value > 6
             }
         }
         modifier = {
-            factor = @EarlyRepatableTechFactor
+            factor = @EarlyRepeatableTechFactor
             check_variable = {
                 which = repeatable_life_span
                 value > 7
             }
         }
         modifier = {
-            factor = @EarlyRepatableTechFactor
+            factor = @EarlyRepeatableTechFactor
             check_variable = {
                 which = repeatable_life_span
                 value > 8
             }
         }
         modifier = {
-            factor = @EarlyRepatableTechFactor
+            factor = @EarlyRepeatableTechFactor
             check_variable = {
                 which = repeatable_life_span
                 value > 9
@@ -100,7 +100,7 @@ tech_repeatable_improved_leader_life_span = {
         production_repeatable = @RepeatableCategoryFactor
     }
     mod_weight_if_group_picked = {
-        ship_repeatable = @RepeatableDifferntFactor
+        ship_repeatable = @RepeatableDifferentFactor
     }
     modifier = {
         leader_age = 5

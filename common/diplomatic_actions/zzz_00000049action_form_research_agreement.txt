@@ -7,9 +7,11 @@ action_form_research_agreement = {
     AI_acceptance_base_value = -50
     action_type = positive
     potential = {
-        is_country_type = default
-        from = {
-            is_country_type = default
+        hidden_trigger = {
+            is_country_type_with_subjects = yes
+            from = {
+                is_country_type_with_subjects = yes
+            }
         }
     }
     possible = {

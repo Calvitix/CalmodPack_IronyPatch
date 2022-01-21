@@ -58,7 +58,30 @@ ship_section_template = {
     }
     large_utility_slots = 8
     ai_weight = {
-        factor = 500
+        factor = 2.1
+        modifier = {
+            factor = 10
+            NOR = {
+                has_ai_personality = peaceful_traders
+                has_ai_personality = slaving_despots
+                has_ai_personality = migrating_flock
+                has_ai_personality = evangelising_zealots
+                has_ai_personality = hive_mind
+            }
+        }
+        modifier = {
+            factor = 0.3
+            NOR = {
+                has_ai_personality = map_guerilla_fighters
+                has_ai_personality = map_savage_raiders
+                has_ai_personality = map_psychotic_hordes
+                has_ai_personality = map_totalitarian_patriots
+                has_ai_personality = map_enterprising_corsairs
+                has_ai_personality = map_slave_soldiers
+                has_ai_personality = map_lazy_managers
+                has_ai_personality = map_experts_in_xenocide
+            }
+        }
     }
     resources = {
         category = ship_sections

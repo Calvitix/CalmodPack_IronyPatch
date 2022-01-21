@@ -33,7 +33,7 @@ tech_zero_point_power = {
         }
     }
     ai_weight = {
-        factor = 3
+        factor = 30
         modifier = {
             factor = 1.25
             research_leader = {

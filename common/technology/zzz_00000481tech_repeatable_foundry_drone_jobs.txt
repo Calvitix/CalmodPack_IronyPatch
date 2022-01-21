@@ -1,7 +1,7 @@
 @EarlyRepeatableTechCost = 12000
-@EarlyRepeatableTechLevelCost = 6000
-@RepeatableDifferntFactor = 0.5
-@EarlyRepeatableWeight = 7
+@EarlyRepeatableTechLevelCost = 20000
+@RepeatableDifferentFactor = 0.5
+@EarlyRepeatableWeight = 4
 @EarlyRepeatableTier = 3
 @SpecializationLevel = 0.75
 tech_repeatable_foundry_drone_jobs = {
@@ -106,10 +106,10 @@ tech_repeatable_foundry_drone_jobs = {
         job_repeatable
     }
     mod_weight_if_group_picked = {
-        ship_repeatable = @RepeatableDifferntFactor
+        ship_repeatable = @RepeatableDifferentFactor
     }
     mod_weight_if_group_picked = {
-        production_repeatable = @RepeatableDifferntFactor
+        production_repeatable = @RepeatableDifferentFactor
     }
     mod_weight_if_group_picked = {
         job_repeatable = 0

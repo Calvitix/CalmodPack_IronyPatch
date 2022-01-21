@@ -7,12 +7,11 @@ tech_giga_power_plant_1 = {
     }
     prerequisites = {
         "tech_power_plant_4"
-        "tech_reactor_4"
         "tech_abstract_2"
     }
     weight = @tier4weight1
     modifier = {
-        planet_technician_energy_produces_mult = 0.2
+        planet_technician_energy_produces_mult = 0.1
         starbase_constructions_energy_produces_mult = 0.2
     }
     weight_modifier = {

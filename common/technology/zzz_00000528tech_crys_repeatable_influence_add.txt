@@ -10,7 +10,7 @@ tech_crys_repeatable_influence_add = {
     weight = @repeatableTechWeight
     icon = "tech_interstellar_campaigns"
     weight_modifier = {
-        factor = @repatableTechFactor
+        factor = @repeatableTechFactor
     }
     ai_weight = {
         factor = 1

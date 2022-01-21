@@ -14,7 +14,7 @@ tech_crys_repeatable_evasion = {
     weight = @repeatableTechWeight
     icon = "tech_sensors_4"
     weight_modifier = {
-        factor = @repatableTechFactor
+        factor = @repeatableTechFactor
     }
     ai_weight = {
         factor = 1

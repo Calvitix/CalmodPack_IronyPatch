@@ -7,6 +7,7 @@ tech_exotic_gases = {
     }
     prerequisites = {
         "tech_basic_industry"
+        "tech_mine_exotic_gases"
     }
     weight = @tier2weight1
     weight_modifier = {

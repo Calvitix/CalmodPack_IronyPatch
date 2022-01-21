@@ -17,7 +17,7 @@ tech_crys_repeatable_gene_mod = {
             }
         }
         modifier = {
-            factor = @repatableTechFactor
+            factor = @repeatableTechFactor
         }
     }
     ai_weight = {

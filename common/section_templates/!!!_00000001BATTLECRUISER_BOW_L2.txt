@@ -27,7 +27,7 @@ ship_section_template = {
     }
     medium_utility_slots = 4
     ai_weight = {
-        factor = 50
+        factor = 5
     }
     resources = {
         category = ship_sections

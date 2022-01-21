@@ -4,7 +4,6 @@ action_close_borders = {
     requires_actor_independence = no
     requires_recipient_independence = no
     should_show_auto_accept_message_recipient = yes
-    should_notify_all_communications = no
     action_type = negative
     possible = {
         can_control_access_for = from

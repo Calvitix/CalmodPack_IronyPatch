@@ -1,6 +1,7 @@
 building_giga_research_lab_1 = {
     base_buildtime = @b4_time
     can_build = no
+    base_cap_amount = 1
     category = research
     allow = {
         has_major_upgraded_capital = yes

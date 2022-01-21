@@ -1,16 +1,15 @@
 tech_megamycete = {
     area = society
     start_tech = no
-    cost = 20000
+    cost = 6000
     tier = 2
-    is_rare = yes
     is_dangerous = yes
     category = {
         biology
     }
     prerequisites = {
     }
-    weight = 30
+    weight = 80
     potential = {
         NOT = {
             has_origin = origin_exomycosis

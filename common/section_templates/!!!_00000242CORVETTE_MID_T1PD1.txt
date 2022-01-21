@@ -45,6 +45,15 @@ ship_section_template = {
             has_technology = tech_missiles_5
         }
         modifier = {
+            factor = 4
+            or = {
+                has_technology = tech_pd_tracking_2
+                has_technology = tech_pd_tracking_3
+                has_technology = tech_flak_batteries_2
+                has_technology = tech_flak_batteries_3
+            }
+        }
+        modifier = {
             factor = 10
             is_preferred_weapons = weapon_type_explosive
         }

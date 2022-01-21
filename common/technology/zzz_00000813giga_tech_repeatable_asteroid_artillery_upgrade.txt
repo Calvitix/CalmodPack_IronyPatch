@@ -6,11 +6,11 @@ giga_tech_repeatable_asteroid_artillery_upgrade = {
     category = {
         voidcraft
     }
-    levels = 20
+    levels = @repeatableTechWeight
     prerequisites = {
         "giga_tech_asteroid_artillery_planetcraft_upgrade"
     }
-    weight = 20
+    weight = 7
     ai_weight = {
         factor = 1
     }

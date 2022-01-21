@@ -9,7 +9,7 @@ tech_sentient_m_u_2 = {
         materials
     }
     modifier = {
-        all_technology_research_speed = 0.05
+        all_technology_research_speed = 0.025
     }
     ai_weight = {
         factor = @giga_aiweight_multiplier

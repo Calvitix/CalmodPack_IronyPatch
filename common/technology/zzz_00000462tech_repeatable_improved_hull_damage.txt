@@ -1,8 +1,8 @@
 @EarlyRepeatableTechCost = 12000
-@EarlyRepeatableTechLevelCost = 6000
+@EarlyRepeatableTechLevelCost = 20000
 @RepeatableCategoryFactor = 0.25
-@RepeatableDifferntFactor = 0.5
-@EarlyRepeatableWeight = 7
+@RepeatableDifferentFactor = 0.5
+@EarlyRepeatableWeight = 4
 @EarlyRepeatableTier = 3
 @SpecializationPenalty = 0.6
 @SpecializationLevel = 0.75
@@ -252,10 +252,10 @@ tech_repeatable_improved_hull_damage = {
         ship_repeatable = @RepeatableCategoryFactor
     }
     mod_weight_if_group_picked = {
-        production_repeatable = @RepeatableDifferntFactor
-        job_repeatable = @RepeatableDifferntFactor
+        production_repeatable = @RepeatableDifferentFactor
+        job_repeatable = @RepeatableDifferentFactor
     }
     modifier = {
-        ship_hull_damage_mult = 0.05
+        ship_hull_damage_mult = 0.02
     }
 }

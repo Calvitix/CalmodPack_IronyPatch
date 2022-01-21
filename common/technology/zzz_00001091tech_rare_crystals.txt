@@ -7,6 +7,7 @@ tech_rare_crystals = {
     }
     prerequisites = {
         "tech_basic_industry"
+        "tech_mine_rare_crystals"
     }
     weight = @tier2weight1
     weight_modifier = {

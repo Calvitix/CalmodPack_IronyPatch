@@ -45,4 +45,33 @@ ship_section_template = {
             alloys = @cost2
         }
     }
+    ai_weight = {
+        weight = 2
+        modifier = {
+            factor = 2
+            has_technology = tech_missiles_2
+        }
+        modifier = {
+            factor = 4
+            has_technology = tech_missiles_3
+        }
+        modifier = {
+            factor = 4
+            has_technology = tech_missiles_4
+        }
+        modifier = {
+            factor = 4
+            has_technology = tech_missiles_5
+        }
+        modifier = {
+            factor = 10
+            is_preferred_weapons = weapon_type_explosive
+        }
+        modifier = {
+            factor = 0.1
+            NOT = {
+                is_preferred_weapons = weapon_type_explosive
+            }
+        }
+    }
 }

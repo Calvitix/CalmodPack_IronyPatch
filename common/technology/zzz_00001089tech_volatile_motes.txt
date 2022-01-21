@@ -7,6 +7,7 @@ tech_volatile_motes = {
     }
     prerequisites = {
         "tech_basic_industry"
+        "tech_mine_volatile_motes"
     }
     weight = @tier2weight1
     weight_modifier = {

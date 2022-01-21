@@ -1,9 +1,8 @@
 tech_invasive_necrotoxication = {
     area = society
     start_tech = no
-    cost = 40000
+    cost = 10000
     tier = 3
-    is_rare = yes
     is_dangerous = yes
     category = {
         biology
@@ -11,7 +10,7 @@ tech_invasive_necrotoxication = {
     prerequisites = {
         "tech_megamycete"
     }
-    weight = 15
+    weight = 60
     potential = {
         NOR = {
             is_machine_empire = yes

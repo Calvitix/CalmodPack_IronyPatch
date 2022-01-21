@@ -32,5 +32,6 @@ action_ask_to_become_satellite = {
                 has_valid_civic = civic_pompous_purists
             }
         }
+        get_border_test = yes
     }
 }

@@ -13,7 +13,7 @@ tech_abstract_3 = {
         "tech_abstract_2"
     }
     modifier = {
-        all_technology_research_speed = 0.2
+        planet_researchers_physics_research_produces_mult = 0.075
     }
     weight_modifier = {
         modifier = {

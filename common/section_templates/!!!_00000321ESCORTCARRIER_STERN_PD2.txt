@@ -22,4 +22,35 @@ ship_section_template = {
             alloys = @cost0
         }
     }
+    ai_weight = {
+        weight = 0.5
+        modifier = {
+            factor = 2
+            or = {
+                has_technology = tech_pd_tracking_2
+                has_technology = tech_flak_batteries_2
+            }
+        }
+        modifier = {
+            factor = 2
+            or = {
+                has_technology = tech_pd_tracking_3
+                has_technology = tech_flak_batteries_3
+            }
+        }
+        modifier = {
+            factor = 10
+            OR = {
+                has_ai_personality = map_patronizing_colonizers
+                has_ai_personality = map_defenders_of_the_faith
+                has_ai_personality = map_carefree_hippies
+                has_ai_personality = map_studious_builders
+                has_ai_personality = map_hedonistic_visionaries
+                has_ai_personality = map_generous_philanthropists
+                has_ai_personality = map_adventure_seekers
+                has_ai_personality = map_civilized_nomads
+                has_ai_personality = map_naive_appeasers
+            }
+        }
+    }
 }

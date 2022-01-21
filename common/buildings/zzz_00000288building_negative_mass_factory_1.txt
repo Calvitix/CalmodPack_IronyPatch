@@ -1,13 +1,97 @@
 building_negative_mass_factory_1 = {
-    base_buildtime = 1200
-    category = resource
+    base_buildtime = @b4_time
+    category = manufacturing
+    upgrades = {
+        building_negative_mass_factory_2
+    }
+    prerequisites = {
+        "tech_nm_utilization_1"
+    }
+    potential = {
+        NOT = {
+            has_modifier = resort_colony
+        }
+        NOT = {
+            has_modifier = slave_colony
+        }
+        building_relaxed_basic_income_check = yes
+    }
+    allow = {
+        has_upgraded_capital = yes
+        buildings_upgrade_allow = yes
+    }
+    destroy_trigger = {
+        OR = {
+            has_modifier = resort_colony
+            has_modifier = slave_colony
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_ehof_energy_converter_drone_add = @b1_jobs
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_ehof_energy_converter_drone_add = @b1_jobs
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            job_ehof_energy_converter_add = @b1_jobs
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        text = job_ehof_energy_converter_drone_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        text = job_ehof_energy_converter_drone_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        text = job_ehof_energy_converter_effect_desc
+    }
     resources = {
         category = planet_buildings
         cost = {
             minerals = @b4_minerals
             exotic_gases = @b2_rare_cost
             rare_crystals = @b2_rare_cost
-            volatile_motes = 50
         }
         cost = {
             trigger = {
@@ -19,19 +103,7 @@ building_negative_mass_factory_1 = {
             alloys = 700
         }
         upkeep = {
-            energy = 50
-            exotic_gases = @b2_rare_upkeep
-            rare_crystals = @b2_rare_upkeep
-            volatile_motes = 1
+            energy = @b3_upkeep
         }
-        produces = {
-            ehof_sr_negative_mass = 2
-        }
-    }
-    upgrades = {
-        building_negative_mass_factory_2
-    }
-    prerequisites = {
-        "tech_nm_utilization_1"
     }
 }

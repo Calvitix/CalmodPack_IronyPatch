@@ -13,7 +13,7 @@ tech_crys_repeatable_build_speed = {
     weight = @repeatableTechWeight
     icon = "tech_repeatable_reduced_building_time"
     weight_modifier = {
-        factor = @repatableTechFactor
+        factor = @repeatableTechFactor
     }
     ai_weight = {
         factor = 1

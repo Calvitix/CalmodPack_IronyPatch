@@ -13,7 +13,7 @@ tech_crys_repeatable_gestalt_crime = {
     weight = @repeatableTechWeight
     icon = "tech_symbol_unity"
     weight_modifier = {
-        factor = @repatableTechFactor
+        factor = @repeatableTechFactor
     }
     ai_weight = {
         factor = 1

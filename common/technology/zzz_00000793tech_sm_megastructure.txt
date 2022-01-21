@@ -2,7 +2,7 @@ tech_sm_megastructure = {
     area = engineering
     cost = @tier8cost1
     weight = @tier8weight1
-    tier = 8
+    tier = 7
     category = {
         voidcraft
     }
