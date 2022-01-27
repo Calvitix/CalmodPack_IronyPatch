@@ -3,7 +3,6 @@ trait_td_perfect = {
     potential_crossbreeding_chance = 0
     sorting_priority = 8
     custom_tooltip = TRAIT_TD_PERFECT_EFFECT
-    modification = no
     opposites = {
         "trait_td_gifted"
         "trait_td_superior"

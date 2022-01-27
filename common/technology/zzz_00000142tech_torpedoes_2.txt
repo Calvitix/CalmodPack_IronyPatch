@@ -42,7 +42,7 @@ tech_torpedoes_2 = {
             has_ethic = ethic_fanatic_militarist
         }
         modifier = {
-            factor = 1.25
+            factor = value:tech_weight_likelihood
             research_leader = {
                 area = engineering
                 has_trait = "leader_trait_expertise_propulsion"
@@ -96,6 +96,16 @@ tech_torpedoes_2 = {
         modifier = {
             factor = 0.25
             has_ethic = ethic_fanatic_pacifist
+        }
+        modifier = {
+            factor = @favored_weapon_ai_tech_factor
+            is_preferred_weapons = weapon_type_explosive
+        }
+        modifier = {
+            factor = @disfavored_weapon_ai_tech_factor
+            NOT = {
+                is_preferred_weapons = weapon_type_explosive
+            }
         }
     }
 }

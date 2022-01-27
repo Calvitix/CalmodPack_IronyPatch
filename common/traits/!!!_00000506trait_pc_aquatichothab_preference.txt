@@ -1,6 +1,11 @@
 trait_pc_aquatichothab_preference = {
     icon = "gfx/interface/icons/traits/trait_pc_ring_preference.dds"
-    modification = no
+    species_potential_add = {
+        always = no
+    }
+    species_possible_merge_add = {
+        always = yes
+    }
     allowed_archetypes = {
         BIOLOGICAL
         PRESAPIENT

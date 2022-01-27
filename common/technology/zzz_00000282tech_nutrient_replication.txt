@@ -89,7 +89,7 @@ tech_nutrient_replication = {
     }
     ai_weight = {
         weight = 40
-        factor = 125
+        factor = @farming_ai_weight_factor
         modifier = {
             factor = 1.25
             has_ethic = ethic_pacifist

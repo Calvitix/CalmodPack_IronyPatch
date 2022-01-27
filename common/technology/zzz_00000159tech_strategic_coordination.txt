@@ -69,7 +69,6 @@ tech_strategic_coordination = {
         }
     }
     ai_weight = {
-        factor = 10
         modifier = {
             factor = 1.25
             research_leader = {

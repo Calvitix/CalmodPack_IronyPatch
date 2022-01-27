@@ -65,7 +65,6 @@ tech_interstellar_assembly = {
         }
     }
     ai_weight = {
-        factor = 10
         modifier = {
             factor = 1.25
             research_leader = {

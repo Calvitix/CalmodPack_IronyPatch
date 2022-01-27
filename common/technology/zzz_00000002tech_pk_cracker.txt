@@ -54,14 +54,6 @@ tech_pk_cracker = {
         }
     }
     ai_weight = {
-        factor = 0.25
-        modifier = {
-            factor = 1.25
-            has_ethic = ethic_militarist
-        }
-        modifier = {
-            factor = 1.5
-            has_ethic = ethic_fanatic_militarist
-        }
+        factor = 0.5
     }
 }

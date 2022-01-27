@@ -21,7 +21,7 @@ tech_pd_tracking_3 = {
             has_PD_weapon_3 = yes
         }
         modifier = {
-            factor = 1.25
+            factor = value:tech_weight_likelihood
             research_leader = {
                 area = physics
                 has_trait = "leader_trait_expertise_computing"
@@ -49,6 +49,16 @@ tech_pd_tracking_3 = {
             research_leader = {
                 area = physics
                 has_trait = "leader_trait_expertise_computing"
+            }
+        }
+        modifier = {
+            factor = @favored_weapon_ai_tech_factor
+            is_preferred_weapons = weapon_type_strike_craft
+        }
+        modifier = {
+            factor = @disfavored_weapon_ai_tech_factor
+            NOT = {
+                is_preferred_weapons = weapon_type_strike_craft
             }
         }
     }

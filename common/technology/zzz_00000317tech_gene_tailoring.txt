@@ -42,7 +42,7 @@ tech_gene_tailoring = {
             is_xenophile = yes
         }
         modifier = {
-            factor = 1.25
+            factor = value:tech_weight_likelihood
             research_leader = {
                 area = society
                 has_trait = "leader_trait_expertise_biology"

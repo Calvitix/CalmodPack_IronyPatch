@@ -15,7 +15,7 @@ entertainer = {
     resources = {
         category = planet_entertainers
         produces = {
-            unity = 2
+            unity = 1
         }
         upkeep = {
             consumer_goods = 1

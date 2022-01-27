@@ -19,17 +19,10 @@ high_priest = {
     resources = {
         category = planet_priests
         produces = {
-            unity = 5
-            society_research = 2
+            unity = 6
         }
-        produces = {
-            trigger = {
-                exists = owner
-                owner = {
-                    has_valid_civic = civic_exalted_priesthood
-                }
-            }
-            unity = 1
+        upkeep = {
+            consumer_goods = 2
         }
     }
     planet_modifier = {

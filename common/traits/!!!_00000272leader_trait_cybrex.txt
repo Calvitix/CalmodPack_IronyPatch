@@ -1,6 +1,5 @@
 leader_trait_cybrex = {
     cost = 1
-    modification = no
     icon = "gfx/interface/icons/traits/leader_traits/leader_trait_fist.dds"
     modifier = {
         damage_vs_country_type_ai_empire_mult = 0.2

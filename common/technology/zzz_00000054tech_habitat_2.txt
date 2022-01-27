@@ -37,7 +37,7 @@ tech_habitat_2 = {
             has_origin = origin_void_dwellers
         }
         modifier = {
-            factor = 1.25
+            factor = value:tech_weight_likelihood
             research_leader = {
                 area = engineering
                 has_trait = "leader_trait_expertise_voidcraft"

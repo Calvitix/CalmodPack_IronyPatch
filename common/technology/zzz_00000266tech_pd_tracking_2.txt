@@ -51,5 +51,15 @@ tech_pd_tracking_2 = {
                 has_trait = "leader_trait_expertise_computing"
             }
         }
+        modifier = {
+            factor = @favored_weapon_ai_tech_factor
+            is_preferred_weapons = weapon_type_strike_craft
+        }
+        modifier = {
+            factor = @disfavored_weapon_ai_tech_factor
+            NOT = {
+                is_preferred_weapons = weapon_type_strike_craft
+            }
+        }
     }
 }

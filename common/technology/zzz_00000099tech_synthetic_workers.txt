@@ -99,7 +99,7 @@ tech_synthetic_workers = {
     }
     ai_weight = {
         weight = 600
-        factor = 125
+        factor = @robots_ai_tech_factor
         modifier = {
             factor = 2
             OR = {

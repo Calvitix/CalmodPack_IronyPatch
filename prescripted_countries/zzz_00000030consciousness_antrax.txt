@@ -1,0 +1,81 @@
+consciousness_antrax = {
+    key = "Conscience Antraxs"
+    ship_prefix = "Antraxs"
+    species = {
+        class = "MACHINE"
+        portrait = "sd_art_robot"
+        name = "Antrax"
+        plural = "Antrax"
+        adjective = "Antraxian"
+        species_bio = ">>Survivre<< Rien d'autre. Aucune autre directive n'a été trouvée dans les banques de données d'Antrax. Rien qu'une liste d'espèces. Des siècles plus tard, toutes avaient été assimilées, leurs utilisations catalysées et exploitées. Maintenant, le voyage FTL a été déverrouillé et l'univers attend."
+        name_list = "MACHINE1"
+        trait = "trait_machine_unit"
+        trait = "trait_robot_mass_produced"
+        trait = "trait_robot_luxurious"
+        trait = "trait_robot_superconductive"
+        trait = "trait_robot_uncanny"
+        trait = "trait_robot_learning_algorithms"
+    }
+    secondary_species = {
+        class = "HUM"
+        portrait = "humanoid_04"
+        name = "Extension Organique"
+        plural = "Extensions"
+        adjective = "Extension Organique"
+        species_bio = "Tout organisme a son utilité et Antrax les connaît tous. Les plus utiles pour l'acquisition de sujets adéquats sont refaits à l'image du Créateur et modifiés de la manière la plus efficace possible. "
+        name_list = "MACHINE1"
+        trait = "trait_cybernetic"
+        trait = "trait_industrious"
+        trait = "trait_extremely_adaptive"
+        trait = "trait_repugnant"
+        trait = "trait_deviants"
+        trait = "trait_decadent"
+    }
+    name = "Conscience Antrax"
+    adjective = "Antrax"
+    authority = "auth_machine_intelligence"
+    government = "gov_machine_assimilator"
+    advisor_voice_type = "l_machine"
+    planet_name = "Struct. Centrale"
+    planet_class = "pc_desert"
+    system_name = "Corusca"
+    initializer = ""
+    graphical_culture = "humanoid_01"
+    city_graphical_culture = "fungoid_01"
+    empire_flag = {
+        icon = {
+            category = "domination"
+            file = "domination_13.dds"
+        }
+        background = {
+            category = "backgrounds"
+            file = "stripes.dds"
+        }
+        colors = {
+            "red"
+            "dark_grey"
+            "null"
+            "null"
+        }
+    }
+    ruler = {
+        gender = male
+        name = "Antrax "
+        portrait = "sd_art_robot"
+        texture = 1
+        hair = 0
+        clothes = 0
+        ruler_title = "Esprit principal"
+        leader_class = "ruler"
+    }
+    spawn_as_fallen = no
+    ignore_portrait_duplication = no
+    room = "personality_hive_mind_room"
+    spawn_enabled = yes
+    ethic = "ethic_gestalt_consciousness"
+    civics = {
+        "civic_machine_assimilator"
+        "civic_machine_replication"
+    }
+    origin = "origin_default"
+}

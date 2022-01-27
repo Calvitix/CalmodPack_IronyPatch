@@ -1,0 +1,143 @@
+eco_building_industrial_symbiosis = {
+    base_buildtime = 480
+    can_build = no
+    category = unity
+    allow = {
+        has_upgraded_capital = yes
+    }
+    destroy_trigger = {
+        free_building_slots < 2
+        or = {
+            has_modifier = eco_pristine
+            has_modifier = eco_clean
+            has_modifier = eco_waste_clean
+        }
+        not = {
+            has_planet_flag = just_destroyed_building
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_ai = yes
+                str_raw_ecocrisis_level_0 = no
+            }
+            or = {
+                has_modifier = eco_heavy
+                has_modifier = eco_extreme
+                has_modifier = eco_catastrophic
+                has_modifier = eco_waste_mod
+                has_modifier = eco_waste_high
+            }
+        }
+        modifier = {
+            job_starnet_spice_melange_farmer_add = 2
+            job_starnet_spice_melange_antifarmer_add = -2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_waste_drone_add = 4
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_waste_drone_add = 4
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            job_waste_handler_add = 4
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            trigger = {
+                from = {
+                    is_ai = no
+                }
+            }
+            alloys = 20
+            minerals = 600
+            volatile_motes = @b2_rare_cost
+        }
+        cost = {
+            trigger = {
+                from = {
+                    is_ai = yes
+                }
+            }
+            minerals = 600
+            volatile_motes = @b2_rare_cost
+        }
+        upkeep = {
+            energy = @b2_upkeep
+            volatile_motes = @b2_rare_upkeep
+        }
+    }
+    upgrades = {
+        eco_building_industrial_metabolism
+    }
+    prerequisites = {
+        eco_tech_waste_processing_1
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        text = eco_building_waste_effect
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        text = eco_building_waste_gestalt_effect
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        text = eco_building_waste_gestalt_effect
+    }
+    on_built = {
+        set_planet_flag = eco_built_waste_building
+    }
+    on_destroy = {
+        remove_planet_flag = eco_built_waste_building
+    }
+    ai_resource_production = {
+        energy = 3
+        trigger = {
+            always = yes
+        }
+    }
+}

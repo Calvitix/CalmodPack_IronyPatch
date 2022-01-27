@@ -1,7 +1,6 @@
 @categorybonus = 0.15
 leader_trait_expertise_biology = {
     cost = 1
-    modification = no
     icon = "gfx/interface/icons/traits/leader_traits/leader_trait_expertise_biology.dds"
     modifier = {
         category_biology_research_speed_mult = @categorybonus

@@ -67,7 +67,7 @@ tech_juggernaut = {
         }
     }
     ai_weight = {
-        factor = 100
+        factor = @ai_ship_types_factor
         modifier = {
             factor = 1.25
             research_leader = {

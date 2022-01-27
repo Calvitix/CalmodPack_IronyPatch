@@ -7,7 +7,12 @@ trait_pc_gaia_preference_terraforming = {
         LITHOID
     }
     initial = no
-    modification = no
+    species_potential_add = {
+        always = no
+    }
+    species_possible_merge_add = {
+        always = yes
+    }
     sorting_priority = 30
     modifier = {
         pc_gaia_habitability = 1

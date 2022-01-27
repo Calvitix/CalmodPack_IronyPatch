@@ -42,7 +42,7 @@ tech_food_processing_1 = {
             }
         }
         modifier = {
-            factor = 1.25
+            factor = value:tech_weight_likelihood
             research_leader = {
                 area = society
                 has_trait = "leader_trait_expertise_biology"
@@ -51,6 +51,7 @@ tech_food_processing_1 = {
     }
     ai_weight = {
         weight = 10
+        factor = @farming_building_ai_weight_factor
         modifier = {
             factor = 3000
             reroll_society = yes
@@ -61,6 +62,10 @@ tech_food_processing_1 = {
                 area = society
                 has_trait = "leader_trait_expertise_biology"
             }
+        }
+        modifier = {
+            factor = 0
+            country_uses_food = no
         }
     }
 }

@@ -1,0 +1,29 @@
+giga_tech_lunar_assembly = {
+    cost = 250000
+    area = physics
+    tier = 5
+    category = {
+        particles
+    }
+    is_rare = yes
+    weight = 0
+    modifier = {
+        megastructure_build_speed_mult = 0.05
+    }
+    prereqfor_desc = {
+        custom = {
+            title = "allow_lunar_assembly"
+            desc = "allow_lunar_assembly_desc"
+        }
+    }
+    ai_weight = {
+        factor = @giga_aiweight_multiplier_insane
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+    }
+}

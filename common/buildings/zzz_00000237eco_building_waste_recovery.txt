@@ -1,0 +1,164 @@
+eco_building_waste_recovery = {
+    base_cap_amount = 4
+    base_buildtime = @b1_time
+    can_be_ruined = no
+    position_priority = 150
+    category = unity
+    potential = {
+        exists = owner
+        or = {
+            owner = {
+                is_ai = no
+            }
+            and = {
+                owner = {
+                    is_ai = yes
+                }
+                or = {
+                    has_modifier = eco_moderate
+                    has_modifier = eco_heavy
+                    has_modifier = eco_extreme
+                    has_modifier = eco_catastrophic
+                    has_modifier = eco_waste_mod
+                    has_modifier = eco_waste_high
+                }
+            }
+        }
+    }
+    destroy_trigger = {
+        free_building_slots < 2
+        or = {
+            has_modifier = eco_pristine
+            has_modifier = eco_clean
+            has_modifier = eco_waste_clean
+        }
+        not = {
+            has_planet_flag = just_destroyed_building
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_ai = yes
+                str_raw_ecocrisis_level_0 = no
+            }
+            num_buildings = {
+                type = eco_building_waste_recovery
+                value < 2
+            }
+            or = {
+                has_modifier = eco_heavy
+                has_modifier = eco_extreme
+                has_modifier = eco_catastrophic
+                has_modifier = eco_waste_mod
+                has_modifier = eco_waste_high
+            }
+        }
+        modifier = {
+            job_starnet_spice_melange_farmer_add = 1
+            job_starnet_spice_melange_antifarmer_add = -1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_waste_drone_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_waste_drone_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            job_waste_handler_add = 2
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            trigger = {
+                from = {
+                    is_ai = no
+                }
+            }
+            alloys = 10
+            minerals = 400
+        }
+        cost = {
+            trigger = {
+                from = {
+                    is_ai = yes
+                }
+            }
+            minerals = 400
+        }
+        upkeep = {
+            energy = @b1_upkeep
+        }
+    }
+    upgrades = {
+        eco_building_industrial_symbiosis
+    }
+    prerequisites = {
+        eco_tech_waste_processing_0
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        text = eco_building_waste_effect
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        text = eco_building_waste_gestalt_effect
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        text = eco_building_waste_gestalt_effect
+    }
+    on_built = {
+        set_planet_flag = eco_built_waste_building
+    }
+    on_destroy = {
+        remove_planet_flag = eco_built_waste_building
+    }
+    ai_resource_production = {
+        energy = 3
+        trigger = {
+            always = yes
+        }
+    }
+}

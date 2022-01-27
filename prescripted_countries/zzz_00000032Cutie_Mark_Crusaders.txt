@@ -1,5 +1,5 @@
-"Cutie Mark Crusaders" = {
-    key = "Cutie Mark Crusaders"
+cutie_Mark_crusaders = {
+    key = "Croisés 'Cutie Mark'"
     ship_prefix = "MLP"
     species = {
         class = "REP"

@@ -1,4 +1,4 @@
-@activation_cost = 150
+@activation_cost = 3000
 @triumph_duration = 3600
 @triumph_duration_veryshort = 900
 r_war_forge = {
@@ -8,7 +8,7 @@ r_war_forge = {
     resources = {
         category = relics
         cost = {
-            influence = @activation_cost
+            unity = @activation_cost
             minerals = 10000
         }
     }

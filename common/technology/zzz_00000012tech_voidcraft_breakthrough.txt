@@ -23,7 +23,7 @@ tech_voidcraft_breakthrough = {
     weight = 1
     modifier = {
         country_engineering_tech_research_speed = 0.25
-        ship_hull_regen_add_static = 0.2
+        ship_hull_regen_add_perc = 0.5
         ship_hull_mult = 0.1
     }
     weight_modifier = {

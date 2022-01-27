@@ -19,7 +19,7 @@ tech_power_plant_3 = {
             has_tradition = tr_prosperity_adopt
         }
         modifier = {
-            factor = 1.25
+            factor = value:tech_weight_likelihood
             research_leader = {
                 area = physics
                 has_trait = "leader_trait_expertise_field_manipulation"
@@ -27,7 +27,7 @@ tech_power_plant_3 = {
         }
     }
     ai_weight = {
-        factor = 3
+        factor = @technician_ai_factor
         modifier = {
             factor = 1.25
             research_leader = {

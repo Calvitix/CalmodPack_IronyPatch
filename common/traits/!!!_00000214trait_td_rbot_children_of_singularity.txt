@@ -1,7 +1,6 @@
 trait_td_rbot_children_of_singularity = {
     cost = 3
     sorting_priority = 9
-    modification = no
     opposites = {
         "trait_td_rbot_missing_number"
         "trait_td_rbot_deus_ex_machina"

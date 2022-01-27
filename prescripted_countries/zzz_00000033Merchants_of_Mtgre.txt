@@ -1,5 +1,5 @@
-"Merchants of Mtgre" = {
-    key = "Merchants of Mtgre"
+merchants_of_mtgre = {
+    key = "Marchands de Mitagre"
     ship_prefix = "MTGRE"
     species = {
         class = "REP"

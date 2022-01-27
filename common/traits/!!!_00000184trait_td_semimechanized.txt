@@ -2,7 +2,6 @@ trait_td_semimechanized = {
     cost = -1
     potential_crossbreeding_chance = 0
     sorting_priority = 9
-    modification = no
     opposites = {
         "trait_hive_mind"
     }

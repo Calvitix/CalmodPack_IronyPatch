@@ -1,6 +1,5 @@
 trait_ruler_gasbag_pet = {
     cost = 0
-    modification = no
     icon = "gfx/interface/icons/traits/trait_resilient.dds"
     modifier = {
         planet_jobs_society_research_produces_mult = 0.1

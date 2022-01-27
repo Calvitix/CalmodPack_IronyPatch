@@ -2,7 +2,12 @@
 @secondary = 0.5
 trait_pc_depleted_preference = {
     icon = "gfx/interface/icons/traits/trait_pc_nuked_preference.dds"
-    modification = no
+    species_potential_add = {
+        always = no
+    }
+    species_possible_merge_add = {
+        always = yes
+    }
     allowed_archetypes = {
         BIOLOGICAL
         PRESAPIENT

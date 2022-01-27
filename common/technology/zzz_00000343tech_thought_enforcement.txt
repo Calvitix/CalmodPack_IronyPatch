@@ -19,10 +19,6 @@ tech_thought_enforcement = {
     weight_modifier = {
         factor = 0.5
         modifier = {
-            factor = 0
-            host_has_dlc = "Utopia"
-        }
-        modifier = {
             factor = 0.5
             NOT = {
                 research_leader = {

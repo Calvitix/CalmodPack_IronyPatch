@@ -1,4 +1,4 @@
-"Foxia" = {
+foxia = {
     key = "Foxia"
     ship_prefix = "CNF"
     species = {

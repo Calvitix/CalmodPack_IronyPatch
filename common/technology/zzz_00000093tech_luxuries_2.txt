@@ -19,7 +19,7 @@ tech_luxuries_2 = {
     weight_modifier = {
         factor = 2
         modifier = {
-            factor = 1.25
+            factor = value:tech_weight_likelihood
             research_leader = {
                 area = engineering
                 has_trait = "leader_trait_expertise_materials"
@@ -32,7 +32,7 @@ tech_luxuries_2 = {
     }
     ai_weight = {
         weight = 40
-        factor = 25
+        factor = @ai_civilian_factory_factor
         modifier = {
             factor = 5
             has_technology = tech_energy_torpedoes_2

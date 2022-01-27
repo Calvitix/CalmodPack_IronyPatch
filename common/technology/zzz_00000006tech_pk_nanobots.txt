@@ -54,9 +54,9 @@ tech_pk_nanobots = {
         }
     }
     ai_weight = {
-        factor = 0.25
+        factor = 0.5
         modifier = {
-            factor = 1.5
+            factor = 5
             has_ethic = ethic_gestalt_consciousness
             has_valid_civic = civic_machine_assimilator
         }

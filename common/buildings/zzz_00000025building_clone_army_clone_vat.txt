@@ -14,6 +14,16 @@ building_clone_army_clone_vat = {
                 has_country_flag = clone_army_fertility_unlocked
             }
         }
+        if = {
+            limit = {
+                owner = {
+                    is_ai = yes
+                }
+            }
+            NOT = {
+                has_building = building_clone_army_clone_vat
+            }
+        }
     }
     destroy_trigger = {
         exists = owner
@@ -115,4 +125,5 @@ building_clone_army_clone_vat = {
     triggered_desc = {
         text = building_clone_army_clone_vat_effect_desc
     }
+    is_essential = yes
 }

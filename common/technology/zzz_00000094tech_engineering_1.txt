@@ -31,7 +31,7 @@ tech_engineering_1 = {
             years_passed > 20
         }
         modifier = {
-            factor = 1.25
+            factor = value:tech_weight_likelihood
             research_leader = {
                 area = engineering
                 has_trait = "leader_trait_expertise_industry"
@@ -40,6 +40,7 @@ tech_engineering_1 = {
     }
     ai_weight = {
         weight = 300
+        factor = @ai_engineering_tech_speed_factor
         modifier = {
             factor = 500
             has_technology = tech_lasers_4

@@ -30,7 +30,7 @@ tech_society_3 = {
             years_passed > 40
         }
         modifier = {
-            factor = 1.25
+            factor = value:tech_weight_likelihood
             research_leader = {
                 area = society
                 has_trait = "leader_trait_expertise_biology"
@@ -39,7 +39,7 @@ tech_society_3 = {
     }
     ai_weight = {
         weight = 100
-        factor = 125
+        factor = @society_research_ai_factor
         modifier = {
             factor = 1.25
             research_leader = {

@@ -131,7 +131,7 @@ building_imperial_capital = {
             }
         }
         modifier = {
-            job_administrator_add = 6
+            job_politician_add = 6
         }
     }
     triggered_planet_modifier = {
@@ -194,7 +194,7 @@ building_imperial_capital = {
         }
         modifier = {
             job_high_priest_add = 3
-            job_administrator_add = 3
+            job_politician_add = 3
         }
     }
     triggered_planet_modifier = {
@@ -206,7 +206,7 @@ building_imperial_capital = {
         }
         modifier = {
             job_noble_add = 3
-            job_administrator_add = 3
+            job_politician_add = 3
         }
     }
     triggered_planet_modifier = {
@@ -218,7 +218,7 @@ building_imperial_capital = {
         }
         modifier = {
             job_head_researcher_add = 3
-            job_administrator_add = 3
+            job_politician_add = 3
         }
     }
     triggered_planet_modifier = {
@@ -230,7 +230,7 @@ building_imperial_capital = {
         }
         modifier = {
             job_merchant_add = 3
-            job_administrator_add = 3
+            job_politician_add = 3
         }
     }
     triggered_planet_modifier = {
@@ -330,7 +330,7 @@ building_imperial_capital = {
                 is_regular_empire = yes
             }
         }
-        text = job_administrator_effect_desc
+        text = job_politician_effect_desc
     }
     triggered_desc = {
         trigger = {

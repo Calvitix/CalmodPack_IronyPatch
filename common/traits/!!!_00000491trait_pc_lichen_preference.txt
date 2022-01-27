@@ -12,7 +12,12 @@ trait_pc_lichen_preference = {
     ai_weight = {
         weight = 0
     }
-    modification = yes
+    species_potential_add = {
+        always = yes
+    }
+    species_possible_merge_add = {
+        always = yes
+    }
     custom_tooltip = TRAIT_LICHEN_PREFERENCE_EFFECT
     modifier = {
         pc_melting_habitability = @primary

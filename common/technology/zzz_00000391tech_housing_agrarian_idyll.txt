@@ -18,7 +18,7 @@ tech_housing_agrarian_idyll = {
             }
         }
         modifier = {
-            factor = 1.25
+            factor = value:tech_weight_likelihood
             research_leader = {
                 area = society
                 has_trait = "leader_trait_expertise_statecraft"
@@ -34,6 +34,10 @@ tech_housing_agrarian_idyll = {
                 area = society
                 has_trait = "leader_trait_expertise_statecraft"
             }
+        }
+        modifier = {
+            factor = @housing_ai_tech_factor
+            num_pops >= 100
         }
     }
 }

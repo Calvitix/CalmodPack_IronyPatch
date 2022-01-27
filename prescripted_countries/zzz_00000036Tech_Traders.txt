@@ -1,4 +1,4 @@
-"Tech Traders" = {
+tech_traders = {
     key = "Tech Traders"
     ship_prefix = "ISS"
     species = {

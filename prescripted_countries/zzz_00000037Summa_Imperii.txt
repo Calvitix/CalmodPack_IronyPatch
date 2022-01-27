@@ -1,4 +1,4 @@
-"Summa Imperii" = {
+summa_Imperii = {
     key = "Summa Imperii"
     ship_prefix = "Vacuus"
     species = {

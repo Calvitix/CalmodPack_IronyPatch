@@ -3,7 +3,12 @@
 @tertiary = 0.2
 trait_pc_salt_preference = {
     icon = "gfx/interface/icons/traits/trait_pc_salt_preference.dds"
-    modification = yes
+    species_potential_add = {
+        always = yes
+    }
+    species_possible_merge_add = {
+        always = yes
+    }
     allowed_archetypes = {
         BIOLOGICAL
         PRESAPIENT

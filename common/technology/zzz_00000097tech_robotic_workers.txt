@@ -39,7 +39,7 @@ tech_robotic_workers = {
             }
         }
         modifier = {
-            factor = 1.25
+            factor = value:tech_weight_likelihood
             research_leader = {
                 area = engineering
                 has_trait = "leader_trait_expertise_industry"
@@ -52,6 +52,7 @@ tech_robotic_workers = {
     }
     ai_weight = {
         weight = 100
+        factor = @robots_ai_tech_factor
         modifier = {
             factor = 100
             has_technology = tech_energy_torpedoes_2

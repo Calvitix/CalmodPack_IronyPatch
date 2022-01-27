@@ -1,4 +1,4 @@
-"Evil Empire" = {
+evil_empire = {
     key = "Evil Empire"
     ship_prefix = "EES"
     species = {

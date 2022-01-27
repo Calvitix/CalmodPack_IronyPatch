@@ -57,7 +57,7 @@ tech_science_nexus = {
         }
     }
     ai_weight = {
-        factor = 10
+        factor = @best_megastructure_ai_tech_factor
         modifier = {
             factor = 1.25
             research_leader = {

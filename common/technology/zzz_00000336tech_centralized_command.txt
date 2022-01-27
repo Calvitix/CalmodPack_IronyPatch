@@ -15,7 +15,7 @@ tech_centralized_command = {
             is_militarist = yes
         }
         modifier = {
-            factor = 1.25
+            factor = value:tech_weight_likelihood
             research_leader = {
                 area = society
                 has_trait = "leader_trait_expertise_military_theory"

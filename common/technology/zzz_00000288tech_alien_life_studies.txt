@@ -19,7 +19,7 @@ tech_alien_life_studies = {
             has_ethic = ethic_fanatic_xenophile
         }
         modifier = {
-            factor = 1.25
+            factor = value:tech_weight_likelihood
             research_leader = {
                 area = society
                 has_trait = "leader_trait_expertise_biology"
@@ -35,6 +35,7 @@ tech_alien_life_studies = {
         }
     }
     ai_weight = {
+        factor = @society_research_ai_factor
         modifier = {
             factor = 3000
             reroll_society = yes

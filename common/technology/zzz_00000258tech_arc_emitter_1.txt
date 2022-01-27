@@ -7,6 +7,7 @@ tech_arc_emitter_1 = {
     }
     ai_update_type = military
     prerequisites = {
+        "tech_disruptors_3"
         "tech_battleships"
     }
     weight = @tier4weight2
@@ -33,7 +34,7 @@ tech_arc_emitter_1 = {
             has_ethic = ethic_fanatic_militarist
         }
         modifier = {
-            factor = 1.25
+            factor = value:tech_weight_likelihood
             research_leader = {
                 area = physics
                 has_trait = "leader_trait_expertise_particles"
@@ -57,6 +58,16 @@ tech_arc_emitter_1 = {
             research_leader = {
                 area = physics
                 has_trait = "leader_trait_expertise_particles"
+            }
+        }
+        modifier = {
+            factor = @favored_weapon_ai_tech_factor
+            is_preferred_weapons = weapon_type_energy
+        }
+        modifier = {
+            factor = @disfavored_weapon_ai_tech_factor
+            NOT = {
+                is_preferred_weapons = weapon_type_energy
             }
         }
     }

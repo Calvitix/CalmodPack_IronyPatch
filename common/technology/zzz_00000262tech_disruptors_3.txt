@@ -32,7 +32,7 @@ tech_disruptors_3 = {
             has_ethic = ethic_fanatic_militarist
         }
         modifier = {
-            factor = 1.25
+            factor = value:tech_weight_likelihood
             research_leader = {
                 area = physics
                 has_trait = "leader_trait_expertise_particles"
@@ -56,6 +56,16 @@ tech_disruptors_3 = {
             research_leader = {
                 area = physics
                 has_trait = "leader_trait_expertise_particles"
+            }
+        }
+        modifier = {
+            factor = @favored_weapon_ai_tech_factor
+            is_preferred_weapons = weapon_type_energy
+        }
+        modifier = {
+            factor = @disfavored_weapon_ai_tech_factor
+            NOT = {
+                is_preferred_weapons = weapon_type_energy
             }
         }
     }

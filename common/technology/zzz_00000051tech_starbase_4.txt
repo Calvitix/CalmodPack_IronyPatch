@@ -46,7 +46,7 @@ tech_starbase_4 = {
             has_tradition = tr_supremacy_adopt
         }
         modifier = {
-            factor = 1.25
+            factor = value:tech_weight_likelihood
             research_leader = {
                 area = engineering
                 has_trait = "leader_trait_expertise_voidcraft"
@@ -61,7 +61,7 @@ tech_starbase_4 = {
     }
     ai_weight = {
         weight = 5
-        factor = 25
+        factor = @ai_starbase_types_factor
         modifier = {
             factor = 10
             used_naval_capacity_percent > 0.75

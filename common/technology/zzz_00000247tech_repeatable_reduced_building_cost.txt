@@ -16,6 +16,7 @@ tech_repeatable_reduced_building_cost = {
     levels = 5
     prerequisites = {
         "tech_cryostasis_2"
+        "tech_physics_2"
     }
     weight = @EarlyRepeatableWeight
     weight_modifier = {

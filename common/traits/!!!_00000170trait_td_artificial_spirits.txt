@@ -2,7 +2,6 @@ trait_td_artificial_spirits = {
     cost = -3
     potential_crossbreeding_chance = 0
     sorting_priority = 9
-    modification = no
     opposites = {
         "trait_td_exiles_of_the_end"
         "trait_td_semimechanized"

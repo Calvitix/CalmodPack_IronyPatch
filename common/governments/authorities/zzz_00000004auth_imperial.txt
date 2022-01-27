@@ -11,7 +11,7 @@ auth_imperial = {
         }
     }
     country_modifier = {
-        country_edict_cap_add = 1
+        country_power_projection_influence_produces_add = 1
     }
     tags = {
         AUTHORITY_HAS_HEIR

@@ -19,8 +19,8 @@ auth_corporate = {
         }
     }
     country_modifier = {
-        country_admin_cap_add = 20
-        empire_size_penalty_mult = 0.5
+        country_unity_produces_mult = 0.1
+        empire_size_penalty_mult = 0.25
     }
     possible = {
         ethics = {

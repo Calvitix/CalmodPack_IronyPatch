@@ -21,7 +21,7 @@ tech_climate_restoration = {
             has_tradition = tr_expansion_adopt
         }
         modifier = {
-            factor = 1.25
+            factor = value:tech_weight_likelihood
             research_leader = {
                 area = society
                 has_trait = "leader_trait_expertise_new_worlds"
@@ -34,7 +34,7 @@ tech_climate_restoration = {
     }
     ai_weight = {
         factor = 10000
-        factor = 125
+        factor = @terraforming_tech_ai_factor
         modifier = {
             factor = 1.25
             research_leader = {

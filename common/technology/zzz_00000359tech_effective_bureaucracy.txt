@@ -10,7 +10,7 @@ tech_effective_bureaucracy = {
     }
     weight = @tier2weight1
     modifier = {
-        country_admin_cap_mult = 0.05
+        country_edict_fund_add = 20
     }
     weight_modifier = {
         modifier = {
@@ -30,7 +30,7 @@ tech_effective_bureaucracy = {
             num_owned_planets > 4
         }
         modifier = {
-            factor = 1.25
+            factor = value:tech_weight_likelihood
             research_leader = {
                 area = society
                 has_trait = "leader_trait_expertise_statecraft"

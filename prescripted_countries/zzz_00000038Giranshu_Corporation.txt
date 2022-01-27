@@ -1,4 +1,4 @@
-"Giranshu Corporation" = {
+giranshu_Corporation = {
     key = "Giranshu Corporation"
     ship_prefix = "Gira"
     species = {

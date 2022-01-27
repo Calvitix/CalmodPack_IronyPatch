@@ -100,7 +100,7 @@ building_slave_capital = {
                 }
             }
         }
-        job_administrator_add = 2
+        job_politician_add = 2
     }
     triggered_planet_modifier = {
         potential = {
@@ -133,7 +133,7 @@ building_slave_capital = {
                 }
             }
         }
-        text = job_administrator_effect_desc
+        text = job_politician_effect_desc
     }
     triggered_desc = {
         trigger = {

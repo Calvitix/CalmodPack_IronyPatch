@@ -32,7 +32,7 @@ tech_physics_1 = {
             years_passed > 20
         }
         modifier = {
-            factor = 1.25
+            factor = value:tech_weight_likelihood
             research_leader = {
                 area = physics
                 has_trait = "leader_trait_expertise_computing"
@@ -40,7 +40,7 @@ tech_physics_1 = {
         }
     }
     ai_weight = {
-        weight = 10
+        factor = @physics_research_ai_factor
         modifier = {
             factor = 1.25
             research_leader = {

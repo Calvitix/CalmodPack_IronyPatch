@@ -1,6 +1,5 @@
 leader_trait_charismatic = {
     cost = 1
-    modification = no
     icon = "gfx/interface/icons/traits/leader_traits/leader_trait_charismatic.dds"
     modifier = {
         army_morale = 0.25

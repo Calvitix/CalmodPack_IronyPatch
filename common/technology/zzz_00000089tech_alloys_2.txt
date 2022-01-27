@@ -13,7 +13,7 @@ tech_alloys_2 = {
     weight_modifier = {
         factor = 2
         modifier = {
-            factor = 1.25
+            factor = value:tech_weight_likelihood
             research_leader = {
                 area = engineering
                 has_trait = "leader_trait_expertise_materials"
@@ -26,7 +26,7 @@ tech_alloys_2 = {
     }
     ai_weight = {
         weight = 30
-        factor = 25
+        factor = @ai_alloy_factor_factor
         modifier = {
             factor = 1.25
             research_leader = {

@@ -91,7 +91,7 @@ tech_repeatable_improved_tile_mineral_output = {
         }
     }
     ai_weight = {
-        factor = 1
+        factor = @ai_mining_factor
     }
     weight_groups = {
         production_repeatable

@@ -43,12 +43,12 @@ ship_section_template = {
         }
         modifier = {
             factor = 10
-            is_preferred_weapons = weapon_type_energy
+            is_preferred_weapons = weapon_type_strike_craft
         }
         modifier = {
             factor = 0.1
             NOT = {
-                is_preferred_weapons = weapon_type_energy
+                is_preferred_weapons = weapon_type_strike_craft
             }
         }
     }

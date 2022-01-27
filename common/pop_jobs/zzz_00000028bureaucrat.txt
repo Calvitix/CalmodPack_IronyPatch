@@ -14,15 +14,9 @@ bureaucrat = {
         complex_specialist_job_check_trigger = yes
     }
     resources = {
-        category = planet_bureaucrats
+        category = planet_administrators
         produces = {
-            trigger = {
-                exists = owner
-                owner = {
-                    has_valid_civic = civic_byzantine_bureaucracy
-                }
-            }
-            unity = 1
+            unity = 4
         }
         upkeep = {
             consumer_goods = 2
@@ -53,40 +47,6 @@ bureaucrat = {
         }
         modifier = {
             planet_crime_add = -5
-        }
-    }
-    country_modifier = {
-        country_admin_cap_add = 10
-    }
-    triggered_country_modifier = {
-        potential = {
-            exists = planet
-            planet = {
-                exists = sector
-                sector = {
-                    exists = leader
-                    leader = {
-                        has_trait = leader_trait_bureaucrat
-                    }
-                }
-            }
-        }
-        modifier = {
-            country_admin_cap_add = 1
-        }
-    }
-    triggered_country_modifier = {
-        potential = {
-            exists = planet
-            planet = {
-                OR = {
-                    has_designation = col_bureau
-                    has_designation = col_habitat_bureau
-                }
-            }
-        }
-        modifier = {
-            country_admin_cap_add = 2
         }
     }
     weight = {

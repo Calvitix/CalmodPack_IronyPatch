@@ -14,7 +14,9 @@ tech_planetary_unification = {
         campaign_edicts
     }
     modifier = {
-        country_tech_unity_produces_add = 2
+        country_unity_produces_mult = 0.05
+        show_only_custom_tooltip = no
+        custom_tooltip = tech_planetary_unification_effect
     }
     weight_modifier = {
         factor = 4
@@ -30,6 +32,7 @@ tech_planetary_unification = {
     }
     ai_weight = {
         weight = 17
+        factor = @capital_tech_ai_factor
         modifier = {
             factor = 3000
             reroll_society = yes

@@ -1,5 +1,6 @@
 necro_apprentice = {
     category = specialist
+    exempt_from_ai_amenity_prioritization = yes
     condition_string = NECRO_APPRENTICE_JOB_TRIGGER
     building_icon = building_chamber_of_elevation_1
     clothes_texture_index = 3

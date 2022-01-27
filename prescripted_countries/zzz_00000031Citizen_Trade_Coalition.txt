@@ -1,5 +1,5 @@
-"Citizen Trade Coalition" = {
-    key = "Citizen Trade Coalition"
+citizen_Trade_coalition = {
+    key = "Coalition commerciale des citoyens"
     ship_prefix = "ISS"
     species = {
         class = "REP"

@@ -61,7 +61,6 @@ tech_sentry_array = {
         }
     }
     ai_weight = {
-        factor = 10
         modifier = {
             factor = 1.25
             research_leader = {

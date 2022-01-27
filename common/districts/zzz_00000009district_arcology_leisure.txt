@@ -50,8 +50,7 @@ district_arcology_leisure = {
             }
         }
         modifier = {
-            job_entertainer_add = 3
-            job_culture_worker_add = 3
+            job_entertainer_add = 6
         }
     }
     triggered_planet_modifier = {
@@ -63,8 +62,7 @@ district_arcology_leisure = {
             }
         }
         modifier = {
-            job_duelist_add = 3
-            job_culture_worker_add = 3
+            job_duelist_add = 6
         }
     }
     triggered_planet_modifier = {

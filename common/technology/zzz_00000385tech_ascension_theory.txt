@@ -45,7 +45,7 @@ tech_ascension_theory = {
             }
         }
         modifier = {
-            factor = 1.25
+            factor = value:tech_weight_likelihood
             research_leader = {
                 area = society
                 has_trait = "leader_trait_expertise_statecraft"
@@ -53,6 +53,14 @@ tech_ascension_theory = {
         }
     }
     ai_weight = {
-        weight = 999999
+        weight = 9999
+        factor = 5
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_statecraft"
+            }
+        }
     }
 }

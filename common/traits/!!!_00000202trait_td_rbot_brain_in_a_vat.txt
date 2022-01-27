@@ -1,7 +1,6 @@
 trait_td_rbot_brain_in_a_vat = {
     cost = -3
     sorting_priority = 9
-    modification = no
     opposites = {
         "trait_td_rbot_infinity_machines"
         "trait_td_rbot_children_of_singularity"

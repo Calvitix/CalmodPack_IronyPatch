@@ -1,7 +1,6 @@
 @categorybonus = 0.15
 leader_trait_expertise_field_manipulation = {
     cost = 1
-    modification = no
     icon = "gfx/interface/icons/traits/leader_traits/leader_trait_expertise_field_manipulation.dds"
     modifier = {
         category_field_manipulation_research_speed_mult = @categorybonus

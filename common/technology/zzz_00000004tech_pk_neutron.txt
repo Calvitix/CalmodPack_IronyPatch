@@ -73,13 +73,13 @@ tech_pk_neutron = {
         }
     }
     ai_weight = {
-        factor = 0.25
+        factor = 0.5
         modifier = {
-            factor = 1.25
+            factor = 2
             has_ethic = ethic_materialist
         }
         modifier = {
-            factor = 1.5
+            factor = 5
             has_ethic = ethic_fanatic_materialist
         }
     }

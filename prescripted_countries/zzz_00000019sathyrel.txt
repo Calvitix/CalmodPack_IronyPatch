@@ -14,7 +14,7 @@ sathyrel = {
         trait = "trait_aquatic"
         trait = "trait_conservational"
         trait = "trait_docile"
-        trait = "trait_nonadaptive"
+        trait = "trait_sedentary"
         trait = "trait_slow_learners"
     }
     room = "aquatics_room"

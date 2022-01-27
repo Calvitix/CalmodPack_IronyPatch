@@ -1,5 +1,5 @@
-"Meldari Galactic Imperium" = {
-    key = "Meldari Galactic Imperium"
+meldari_galactic_imperium = {
+    key = "Impérium galactique Meldari"
     ship_prefix = "Nave"
     species = {
         class = "AVI"

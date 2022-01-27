@@ -16,7 +16,7 @@ tech_galactic_administration = {
     weight_modifier = {
         factor = 4
         modifier = {
-            factor = 1.25
+            factor = value:tech_weight_likelihood
             research_leader = {
                 area = society
                 has_trait = "leader_trait_expertise_statecraft"
@@ -25,7 +25,7 @@ tech_galactic_administration = {
     }
     ai_weight = {
         weight = 1000
-        factor = 25
+        factor = @capital_tech_ai_factor
         modifier = {
             factor = 1.25
             research_leader = {

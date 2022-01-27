@@ -22,7 +22,6 @@ tech_colossus = {
         }
     }
     ai_weight = {
-        factor = 1
         modifier = {
             factor = 1.25
             research_leader = {

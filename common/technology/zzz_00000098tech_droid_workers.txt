@@ -47,7 +47,7 @@ tech_droid_workers = {
             has_valid_civic = civic_automated_workforce
         }
         modifier = {
-            factor = 1.25
+            factor = value:tech_weight_likelihood
             research_leader = {
                 area = engineering
                 has_trait = "leader_trait_expertise_industry"
@@ -57,7 +57,7 @@ tech_droid_workers = {
     }
     ai_weight = {
         weight = 100
-        factor = 5
+        factor = @robots_ai_tech_factor
         modifier = {
             factor = 2
             OR = {

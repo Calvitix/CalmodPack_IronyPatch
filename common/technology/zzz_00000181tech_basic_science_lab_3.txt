@@ -13,7 +13,7 @@ tech_basic_science_lab_3 = {
     weight_modifier = {
         factor = 2
         modifier = {
-            factor = 1.25
+            factor = value:tech_weight_likelihood
             research_leader = {
                 area = physics
                 has_trait = "leader_trait_expertise_computing"
@@ -21,6 +21,7 @@ tech_basic_science_lab_3 = {
         }
     }
     ai_weight = {
+        factor = @ai_research_lab_factor
         modifier = {
             factor = 1.25
             research_leader = {

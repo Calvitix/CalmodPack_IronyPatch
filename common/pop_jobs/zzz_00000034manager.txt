@@ -11,14 +11,14 @@ manager = {
     }
     possible_precalc = can_fill_specialist_job
     planet_modifier = {
-        trade_value_add = 3
+        trade_value_add = 2
     }
     triggered_planet_modifier = {
         potential = {
             has_trait = trait_thrifty
         }
         modifier = {
-            trade_value_add = 0.75
+            trade_value_add = 0.5
         }
     }
     triggered_planet_modifier = {
@@ -26,7 +26,7 @@ manager = {
             has_trait = trait_nuumismatic_administration
         }
         modifier = {
-            trade_value_add = 0.75
+            trade_value_add = 0.5
         }
     }
     triggered_planet_modifier = {
@@ -67,8 +67,7 @@ manager = {
     resources = {
         category = planet_managers
         produces = {
-            unity = 3
-            society_research = 2
+            unity = 4
         }
         produces = {
             trigger = {
@@ -78,7 +77,6 @@ manager = {
                 }
             }
             unity = 1
-            society_research = -2
         }
         upkeep = {
             consumer_goods = 2

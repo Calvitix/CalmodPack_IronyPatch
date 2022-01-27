@@ -69,7 +69,6 @@ tech_mega_art = {
         }
     }
     ai_weight = {
-        factor = 10
         modifier = {
             factor = 1.25
             research_leader = {

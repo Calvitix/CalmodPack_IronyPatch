@@ -3,7 +3,6 @@ trait_td_lith_paradise_lost = {
     potential_crossbreeding_chance = 0
     sorting_priority = 9
     icon = "gfx/interface/icons/traits/trait_td_paradise_lost.dds"
-    modification = no
     opposites = {
         "trait_td_last_children"
         "trait_td_abominations"

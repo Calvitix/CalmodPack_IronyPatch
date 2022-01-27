@@ -16,6 +16,7 @@ tech_repeatable_improved_tile_food_output = {
     levels = -1
     prerequisites = {
         "tech_colonization_4"
+        "tech_gene_crops"
     }
     weight = @EarlyRepeatableWeight
     weight_modifier = {

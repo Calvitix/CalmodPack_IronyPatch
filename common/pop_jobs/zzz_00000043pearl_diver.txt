@@ -29,17 +29,15 @@ pearl_diver = {
             minerals = 2
         }
     }
-    triggered_planet_modifier = {
-        modifier = {
-            trade_value_add = 2
-        }
+    planet_modifier = {
+        trade_value_add = 3
     }
     triggered_planet_modifier = {
         potential = {
             has_trait = trait_thrifty
         }
         modifier = {
-            trade_value_add = 0.5
+            trade_value_add = 0.75
         }
     }
     triggered_planet_modifier = {
@@ -47,11 +45,11 @@ pearl_diver = {
             has_trait = trait_nuumismatic_administration
         }
         modifier = {
-            trade_value_add = 0.2
+            trade_value_add = 0.3
         }
     }
     weight = {
-        weight = @specialist_job_weight
+        weight = @worker_job_weight
         modifier = {
             factor = 2
             is_enslaved = yes
@@ -64,12 +62,25 @@ pearl_diver = {
             can_take_servant_job = yes
         }
         modifier = {
+            factor = 0.1
+            NOT = {
+                has_job = pearl_diver
+            }
+            exists = owner
+            owner = {
+                resource_income_compare = {
+                    resource = food
+                    value < 5
+                }
+            }
+        }
+        modifier = {
             factor = 5
-            has_job = artisan
+            has_job = pearl_diver
         }
         modifier = {
             factor = 10
-            has_job = artisan
+            has_job = pearl_diver
             OR = {
                 has_trait = trait_robust
                 has_trait = trait_robot_efficient_processors

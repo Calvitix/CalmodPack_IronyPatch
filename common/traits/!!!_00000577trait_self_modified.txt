@@ -1,0 +1,27 @@
+trait_self_modified = {
+    cost = 0
+    icon = "gfx/interface/icons/traits/trait_cybernetic.dds"
+    initial = no
+    randomized = no
+    species_potential_add = {
+        always = no
+    }
+    species_possible_remove = {
+        custom_tooltip = {
+            text = cannot_remove_this_trait
+            always = no
+        }
+    }
+    species_possible_merge_add = {
+        custom_tooltip = {
+            text = cannot_add_this_trait
+            always = no
+        }
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    modifier = {
+    }
+}

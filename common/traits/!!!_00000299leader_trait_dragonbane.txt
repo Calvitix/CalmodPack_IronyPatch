@@ -1,6 +1,5 @@
 leader_trait_dragonbane = {
     cost = 1
-    modification = no
     icon = "gfx/interface/icons/traits/leader_traits/leader_trait_glory_seeker.dds"
     self_modifier = {
         species_leader_exp_gain = 0.25

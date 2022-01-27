@@ -15,7 +15,7 @@ tech_mining_1 = {
     }
     weight_modifier = {
         modifier = {
-            factor = 1.25
+            factor = value:tech_weight_likelihood
             research_leader = {
                 area = engineering
                 has_trait = "leader_trait_expertise_industry"
@@ -23,6 +23,7 @@ tech_mining_1 = {
         }
     }
     ai_weight = {
+        factor = @ai_mining_factor
         weight = 500
         modifier = {
             factor = 100

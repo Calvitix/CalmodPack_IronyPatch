@@ -20,7 +20,7 @@ tech_positronic_implants = {
     }
     weight_modifier = {
         modifier = {
-            factor = 1.25
+            factor = value:tech_weight_likelihood
             research_leader = {
                 area = physics
                 has_trait = "leader_trait_expertise_computing"

@@ -16,6 +16,7 @@ tech_repeatable_improved_tile_energy_output = {
     levels = -1
     prerequisites = {
         "tech_antimatter_power"
+        "tech_power_plant_3"
     }
     weight = @EarlyRepeatableWeight
     weight_modifier = {
@@ -91,7 +92,7 @@ tech_repeatable_improved_tile_energy_output = {
         }
     }
     ai_weight = {
-        factor = 1
+        factor = @technician_ai_factor
     }
     weight_groups = {
         production_repeatable

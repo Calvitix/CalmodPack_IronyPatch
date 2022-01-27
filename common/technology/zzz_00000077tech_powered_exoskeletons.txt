@@ -17,7 +17,7 @@ tech_powered_exoskeletons = {
     weight_modifier = {
         factor = 1.5
         modifier = {
-            factor = 1.25
+            factor = value:tech_weight_likelihood
             research_leader = {
                 area = engineering
                 has_trait = "leader_trait_expertise_industry"
@@ -40,6 +40,11 @@ tech_powered_exoskeletons = {
                 area = engineering
                 has_trait = "leader_trait_expertise_industry"
             }
+        }
+        modifier = {
+            factor = @robots_ai_tech_factor
+            is_spiritualist = no
+            is_hive_empire = no
         }
     }
 }

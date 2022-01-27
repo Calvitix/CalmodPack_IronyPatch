@@ -49,7 +49,7 @@ tech_cruisers = {
             has_tradition = tr_supremacy_adopt
         }
         modifier = {
-            factor = 1.25
+            factor = value:tech_weight_likelihood
             research_leader = {
                 area = engineering
                 has_trait = "leader_trait_expertise_voidcraft"
@@ -58,7 +58,7 @@ tech_cruisers = {
     }
     ai_weight = {
         weight = 600
-        factor = 25
+        factor = @ai_ship_types_factor
         modifier = {
             factor = 1.25
             research_leader = {

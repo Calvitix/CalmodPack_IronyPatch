@@ -152,7 +152,7 @@ building_hab_capital = {
                 is_regular_empire = yes
             }
         }
-        job_administrator_add = 1
+        job_politician_add = 1
     }
     triggered_planet_modifier = {
         potential = {
@@ -230,7 +230,7 @@ building_hab_capital = {
                 is_regular_empire = yes
             }
         }
-        text = job_administrator_effect_desc
+        text = job_politician_effect_desc
     }
     triggered_desc = {
         trigger = {

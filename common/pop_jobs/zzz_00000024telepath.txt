@@ -25,15 +25,6 @@ telepath = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_valid_civic = civic_police_state
-                }
-            }
-            unity = 1
-        }
-        produces = {
-            trigger = {
-                exists = owner
-                owner = {
                     has_active_tradition = tr_domination_judgment_corps
                 }
             }

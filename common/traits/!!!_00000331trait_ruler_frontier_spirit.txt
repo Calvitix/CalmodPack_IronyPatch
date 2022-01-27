@@ -1,6 +1,5 @@
 trait_ruler_frontier_spirit = {
     cost = 1
-    modification = no
     icon = "gfx/interface/icons/traits/leader_traits/trait_ruler_frontier_spirit.dds"
     leader_potential_add = {
         NOT = {

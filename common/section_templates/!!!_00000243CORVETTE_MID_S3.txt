@@ -49,12 +49,16 @@ ship_section_template = {
         }
         modifier = {
             factor = 10
-            is_preferred_weapons = weapon_type_kinetic
+            OR = {
+                is_preferred_weapons = weapon_type_kinetic
+                is_preferred_weapons = weapon_type_energy
+            }
         }
         modifier = {
             factor = 0.1
-            NOT = {
+            NOR = {
                 is_preferred_weapons = weapon_type_kinetic
+                is_preferred_weapons = weapon_type_energy
             }
         }
     }

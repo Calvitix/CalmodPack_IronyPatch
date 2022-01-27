@@ -27,7 +27,7 @@ tech_synthetic_leaders = {
             has_policy_flag = ai_outlawed
         }
         modifier = {
-            factor = 1.25
+            factor = value:tech_weight_likelihood
             research_leader = {
                 area = engineering
                 has_trait = "leader_trait_expertise_industry"
@@ -65,6 +65,10 @@ tech_synthetic_leaders = {
             NOT = {
                 has_ai_personality_behaviour = robot_liberator
             }
+        }
+        modifier = {
+            factor = 2
+            is_materialist = yes
         }
     }
 }

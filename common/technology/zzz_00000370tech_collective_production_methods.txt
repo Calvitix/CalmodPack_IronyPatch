@@ -17,7 +17,7 @@ tech_collective_production_methods = {
     }
     weight_modifier = {
         modifier = {
-            factor = 1.25
+            factor = value:tech_weight_likelihood
             research_leader = {
                 area = society
                 has_trait = "leader_trait_expertise_statecraft"
