@@ -5,6 +5,7 @@ primitive_warrior_2 = {
     clothes_texture_index = 2
     possible_pre_triggers = {
         has_owner = yes
+        is_sapient = yes
     }
     possible = {
         owner = {
@@ -40,7 +41,7 @@ primitive_warrior_2 = {
         planet_crime_add = -20
     }
     weight = {
-        weight = 2
+        weight = @soldier_job_weight
         modifier = {
             factor = 6
             is_militarist = yes

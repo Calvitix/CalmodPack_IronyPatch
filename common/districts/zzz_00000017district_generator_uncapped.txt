@@ -147,6 +147,17 @@ district_generator_uncapped = {
         potential = {
             exists = owner
             owner = {
+                has_tradition = tr_industry_compact_extraction_centers
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
                 has_tradition = tr_plentiful_kleptocracy_finish
             }
             owner = {
@@ -202,12 +213,6 @@ district_generator_uncapped = {
         modifier = {
             planet_housing_add = 1
             job_fe_acolyte_generator_add = 1
-        }
-    }
-    ai_resource_production = {
-        energy = 5
-        trigger = {
-            always = yes
         }
     }
 }

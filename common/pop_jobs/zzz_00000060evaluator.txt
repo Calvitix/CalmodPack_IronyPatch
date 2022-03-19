@@ -25,6 +25,22 @@ evaluator = {
         }
     }
     weight = {
-        weight = 0
+        weight = @synapse_drone_job_weight
+        modifier = {
+            factor = 0.9
+            exists = owner
+            years_passed < 1
+            owner = {
+                has_valid_civic = civic_machine_assimilator
+            }
+            has_trait = trait_cybernetic
+        }
+        modifier = {
+            factor = 1.25
+            OR = {
+                has_trait = trait_traditional
+                has_trait = trait_robot_propaganda_machines
+            }
+        }
     }
 }

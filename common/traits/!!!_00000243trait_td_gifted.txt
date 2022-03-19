@@ -3,6 +3,12 @@ trait_td_gifted = {
     potential_crossbreeding_chance = 0.25
     sorting_priority = 8
     custom_tooltip = TRAIT_TD_GIFTED_EFFECT
+    species_potential_add = {
+        always = no
+    }
+    species_possible_remove = {
+        always = no
+    }
     opposites = {
         "trait_td_superior"
         "trait_td_inferior"

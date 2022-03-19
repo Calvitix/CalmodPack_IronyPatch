@@ -1,5 +1,6 @@
 building_research_lab_1 = {
     base_buildtime = @b1_time
+    exempt_from_ai_planet_specialization = no
     category = research
     potential = {
         NOT = {
@@ -110,13 +111,5 @@ building_research_lab_1 = {
             }
         }
         text = job_calculator_effect_desc
-    }
-    ai_resource_production = {
-        trigger = {
-            always = yes
-        }
-        physics_research = 1
-        society_research = 1
-        engineering_research = 1
     }
 }

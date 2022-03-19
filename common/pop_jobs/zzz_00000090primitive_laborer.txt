@@ -5,6 +5,7 @@ primitive_laborer = {
     clothes_texture_index = 2
     possible_pre_triggers = {
         has_owner = yes
+        is_sapient = yes
     }
     possible = {
         owner = {
@@ -28,6 +29,6 @@ primitive_laborer = {
         }
     }
     weight = {
-        weight = 2
+        weight = @worker_job_weight
     }
 }

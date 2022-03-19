@@ -44,7 +44,8 @@ eco_building_industrial_symbiosis = {
             }
         }
         modifier = {
-            job_waste_drone_add = 4
+            job_waste_overseer_add = 1
+            job_waste_drone_add = 3
         }
     }
     triggered_planet_modifier = {
@@ -55,7 +56,8 @@ eco_building_industrial_symbiosis = {
             }
         }
         modifier = {
-            job_waste_drone_add = 4
+            job_waste_overseer_add = 1
+            job_waste_drone_add = 3
         }
     }
     triggered_planet_modifier = {
@@ -66,7 +68,8 @@ eco_building_industrial_symbiosis = {
             }
         }
         modifier = {
-            job_waste_handler_add = 4
+            job_waste_manager_add = 1
+            job_waste_handler_add = 3
         }
     }
     resources = {

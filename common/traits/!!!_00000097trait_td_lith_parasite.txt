@@ -3,6 +3,12 @@ trait_td_lith_parasite = {
     potential_crossbreeding_chance = 0
     sorting_priority = 9
     icon = "gfx/interface/icons/traits/trait_td_parasite.dds"
+    species_potential_add = {
+        always = no
+    }
+    species_possible_remove = {
+        always = no
+    }
     opposites = {
         "trait_td_virus"
         "trait_td_lith_virus"

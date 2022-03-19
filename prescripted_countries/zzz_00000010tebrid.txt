@@ -38,9 +38,9 @@ tebrid = {
         "civic_machine_predictive_analysis"
     }
     origin = "origin_default"
-    planet_name = "Tebri"
+    planet_name = "PRESCRIPTED_planet_name_Tebri"
     planet_class = "pc_ocean"
-    system_name = "Tebiron"
+    system_name = "PRESCRIPTED_system_name_Tebiron"
     initializer = ""
     graphical_culture = "molluscoid_01"
     city_graphical_culture = "molluscoid_01"

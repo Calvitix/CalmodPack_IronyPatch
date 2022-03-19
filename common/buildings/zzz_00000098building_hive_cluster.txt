@@ -1,6 +1,7 @@
 building_hive_cluster = {
     base_buildtime = @b2_time
     can_build = no
+    exempt_from_ai_planet_specialization = no
     category = unity
     potential = {
         exists = owner

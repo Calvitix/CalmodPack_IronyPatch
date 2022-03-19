@@ -44,8 +44,6 @@ building_giga_supercomputer_2 = {
         upkeep = {
             energy = @b4_upkeep
             exotic_gases = @b4_rare_upkeep
-            rare_crystals = @b3_rare_upkeep
-            volatile_motes = @b2_rare_upkeep
             ehof_sr_negative_mass = 1
         }
     }
@@ -79,9 +77,6 @@ building_giga_supercomputer_2 = {
     }
     triggered_desc = {
         text = job_head_researcher_effect_desc
-    }
-    show_tech_unlock_if = {
-        is_gestalt = yes
     }
     ai_resource_production = {
         trigger = {

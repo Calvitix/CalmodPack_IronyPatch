@@ -36,7 +36,7 @@ building_galactic_memorial_3 = {
             trigger = {
                 exists = owner
             }
-            unity = 2
+            unity = 3
             multiplier = owner.trigger:num_ascension_perks
         }
         cost = {

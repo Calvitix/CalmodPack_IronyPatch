@@ -1,0 +1,64 @@
+tech_pd_destroyer_1 = {
+    cost = @tier2cost2
+    area = engineering
+    tier = 2
+    category = {
+        voidcraft
+    }
+    prerequisites = {
+        "tech_destroyers"
+    }
+    weight = @tier2weight1
+    gateway = ship
+    prereqfor_desc = {
+        ship = {
+            title = "TECH_UNLOCK_PD_DESTROYER_CONSTRUCTION_TITLE"
+            desc = "TECH_UNLOCK_PD_DESTROYER_CONSTRUCTION_DESC"
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 10
+            any_neighbor_country = {
+                has_technology = tech_pd_destroyer_1
+            }
+        }
+        modifier = {
+            factor = 0.1
+            years_passed < 61
+        }
+        modifier = {
+            factor = 1
+            years_passed > 60
+        }
+        modifier = {
+            factor = 2
+            years_passed > 70
+        }
+        modifier = {
+            factor = 3
+            years_passed > 80
+        }
+        modifier = {
+            factor = 4
+            years_passed > 90
+        }
+        modifier = {
+            factor = value:tech_weight_likelihood
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+    }
+    ai_weight = {
+        factor = @ai_ship_types_factor
+        modifier = {
+            factor = value:tech_weight_likelihood
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+    }
+}

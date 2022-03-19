@@ -1,5 +1,6 @@
 building_commercial_zone = {
     base_buildtime = @b1_time
+    exempt_from_ai_planet_specialization = no
     category = trade
     potential = {
         exists = owner
@@ -11,7 +12,10 @@ building_commercial_zone = {
                 prev = {
                     str_uses_comzones = yes
                 }
+                prev = {
+                free_amenities < 0
             }
+        }
         }
         NOT = {
             has_modifier = slave_colony
@@ -29,7 +33,9 @@ building_commercial_zone = {
                     is_ai = yes
                 }
                 years_passed > 5
+                free_amenities > 10
                 str_uses_comzones = no
+                free_building_slots < 2
             }
         }
     }
@@ -92,23 +98,5 @@ building_commercial_zone = {
     }
     upgrades = {
         "building_commercial_megaplex"
-    }
-    ai_resource_production = {
-        energy = 2
-        trigger = {
-            always = yes
-        }
-    }
-    ai_resource_production = {
-        energy = 0
-        trigger = {
-            OR = {
-                num_unemployed >= 10
-                num_assigned_jobs = {
-                    job = servant
-                    value >= 10
-                }
-            }
-        }
     }
 }

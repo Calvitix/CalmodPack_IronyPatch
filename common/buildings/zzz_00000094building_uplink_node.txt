@@ -6,12 +6,18 @@ building_uplink_node = {
         exists = owner
         owner = {
             is_machine_empire = yes
+            NOT = {
+                has_valid_civic = civic_machine_servitor
+            }
         }
     }
     destroy_trigger = {
         exists = owner
         owner = {
-            is_machine_empire = no
+            OR = {
+                is_machine_empire = no
+                has_valid_civic = civic_machine_servitor
+            }
         }
     }
     convert_to = {
@@ -29,6 +35,20 @@ building_uplink_node = {
             energy = @b1_upkeep
         }
     }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+            owner = {
+                has_tradition = tr_plentiful_aspiration_3
+            }
+        }
+        modifier = {
+            job_coordinator_add = 2
+        }
+    }
     planet_modifier = {
         job_coordinator_add = @b1_jobs
     }
@@ -43,5 +63,8 @@ building_uplink_node = {
     }
     show_tech_unlock_if = {
         is_machine_empire = yes
+        NOT = {
+            has_valid_civic = civic_machine_servitor
+        }
     }
 }

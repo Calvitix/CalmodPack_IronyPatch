@@ -1,5 +1,6 @@
 building_crystal_plant = {
     base_buildtime = @b2_time
+    exempt_from_ai_planet_specialization = no
     category = manufacturing
     potential = {
         NOT = {
@@ -121,11 +122,5 @@ building_crystal_plant = {
     upgrades = {
         "building_crystal_plant_2"
         "eb_crystal_plant"
-    }
-    ai_resource_production = {
-        rare_crystals = 1
-        trigger = {
-            always = yes
-        }
     }
 }

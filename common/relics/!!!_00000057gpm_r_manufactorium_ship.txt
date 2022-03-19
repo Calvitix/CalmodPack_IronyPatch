@@ -1,4 +1,4 @@
-@activation_cost = 150
+@activation_cost = 3000
 @triumph_duration = 3600
 gpm_r_manufactorium_ship = {
     activation_duration = @triumph_duration
@@ -10,7 +10,7 @@ gpm_r_manufactorium_ship = {
             trigger = {
                 has_ancrel = no
             }
-            influence = @activation_cost
+            unity = @activation_cost
         }
         cost = {
             trigger = {
@@ -38,13 +38,13 @@ gpm_r_manufactorium_ship = {
     score = 1000
     active_effect = {
         add_resource = {
-            rare_crystals = 500
+            rare_crystals = 2000
         }
         add_resource = {
-            volatile_motes = 500
+            volatile_motes = 2000
         }
         add_resource = {
-            exotic_gases = 500
+            exotic_gases = 2000
         }
         custom_tooltip = relic_triumph_cooldown
         hidden_effect = {

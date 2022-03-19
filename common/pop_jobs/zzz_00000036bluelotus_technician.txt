@@ -71,11 +71,11 @@ bluelotus_technician = {
         }
         modifier = {
             factor = 5
-            has_job = foundry
+            has_job = bluelotus_technician
         }
         modifier = {
             factor = 15
-            has_job = foundry
+            has_job = bluelotus_technician
             OR = {
                 has_trait = trait_robust
                 has_trait = trait_robot_efficient_processors

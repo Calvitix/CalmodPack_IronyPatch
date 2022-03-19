@@ -15,11 +15,11 @@ building_sentinel_posts = {
                     is_ai = no
                 }
                 AND = {
-                    buildings_simple_allow = yes
-                    NOT = {
-                        has_building = building_sentinel_posts
+                    num_buildings = {
+                        type = building_sentinel_posts
+                        value < 4
                     }
-                    planet_crime > 30
+                    planet_crime > 25
                 }
             }
         }

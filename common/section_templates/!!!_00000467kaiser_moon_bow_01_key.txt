@@ -1,0 +1,82 @@
+ship_section_template = {
+    key = "kaiser_moon_bow_01_key"
+    ship_size = giga_massive_planet
+    fits_on_slot = "bow"
+    entity = "kaiser_moon_gun_section_entity"
+    icon = "GFX_ship_part_core_mid"
+    prerequisites = {
+        "giga_tech_kaiser_moon"
+    }
+    component_slot = {
+        name = "OMEGA_GUN_01"
+        template = "invisible_titanic_fixed"
+        locatorname = "omega_gun_01"
+    }
+    component_slot = {
+        name = "OMEGA_GUN_02"
+        template = "invisible_titanic_fixed"
+        locatorname = "omega_gun_01"
+    }
+    component_slot = {
+        name = "EXTRALARGE_GUN_01"
+        template = "invisible_extra_large_fixed"
+        locatorname = "omega_gun_01"
+    }
+    component_slot = {
+        name = "EXTRALARGE_GUN_02"
+        template = "invisible_extra_large_fixed"
+        locatorname = "omega_gun_01"
+    }
+    component_slot = {
+        name = "EXTRALARGE_GUN_03"
+        template = "invisible_extra_large_fixed"
+        locatorname = "omega_gun_01"
+    }
+    component_slot = {
+        name = "EXTRALARGE_GUN_04"
+        template = "invisible_extra_large_fixed"
+        locatorname = "omega_gun_01"
+    }
+    component_slot = {
+        name = "EXTRALARGE_GUN_05"
+        template = "invisible_extra_large_fixed"
+        locatorname = "omega_gun_01"
+    }
+    component_slot = {
+        name = "EXTRALARGE_GUN_06"
+        template = "invisible_extra_large_fixed"
+        locatorname = "omega_gun_01"
+    }
+    component_slot = {
+        name = "EXTRALARGE_GUN_07"
+        template = "invisible_extra_large_fixed"
+        locatorname = "omega_gun_01"
+    }
+    component_slot = {
+        name = "EXTRALARGE_GUN_08"
+        template = "invisible_extra_large_fixed"
+        locatorname = "omega_gun_01"
+    }
+    component_slot = {
+        name = "EXTRALARGE_GUN_09"
+        template = "invisible_extra_large_fixed"
+        locatorname = "omega_gun_01"
+    }
+    component_slot = {
+        name = "EXTRALARGE_GUN_10"
+        template = "invisible_extra_large_fixed"
+        locatorname = "omega_gun_01"
+    }
+    component_slot = {
+        name = "EXTRALARGE_GUN_11"
+        template = "invisible_extra_large_fixed"
+        locatorname = "omega_gun_01"
+    }
+    component_slot = {
+        name = "EXTRALARGE_GUN_12"
+        template = "invisible_extra_large_fixed"
+        locatorname = "omega_gun_01"
+    }
+    large_utility_slots = 12
+    aux_utility_slots = 2
+}

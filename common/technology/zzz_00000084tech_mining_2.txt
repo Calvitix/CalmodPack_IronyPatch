@@ -23,7 +23,7 @@ tech_mining_2 = {
         }
     }
     ai_weight = {
-        weight = 50
+        factor = @ai_mining_factor
         modifier = {
             factor = 200
             has_technology = tech_energy_torpedoes_2

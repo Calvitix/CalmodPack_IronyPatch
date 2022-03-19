@@ -48,11 +48,23 @@ eco_building_waste_recovery = {
                 value < 2
             }
             or = {
+                and = {
+                    is_warrior_destructor = no
+                    is_economic_warrior = no
+                }
                 has_modifier = eco_heavy
                 has_modifier = eco_extreme
                 has_modifier = eco_catastrophic
                 has_modifier = eco_waste_mod
                 has_modifier = eco_waste_high
+            }
+            and = {
+                or = {
+                    is_warrior_destructor = yes
+                    is_economic_warrior = yes
+                }
+                has_modifier = eco_waste_high
+                has_modifier = eco_catastrophic
             }
         }
         modifier = {
@@ -156,9 +168,9 @@ eco_building_waste_recovery = {
         remove_planet_flag = eco_built_waste_building
     }
     ai_resource_production = {
-        energy = 3
+        energy = 2
         trigger = {
-            always = yes
+            is_warrior_destructor = no
         }
     }
 }

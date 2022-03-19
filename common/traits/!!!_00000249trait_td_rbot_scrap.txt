@@ -3,6 +3,12 @@ trait_td_rbot_scrap = {
     sorting_priority = 8
     icon = "gfx/interface/icons/traits/trait_td_inferior.dds"
     custom_tooltip = TRAIT_TD_RBOT_SCRAP_EFFECT
+    species_potential_add = {
+        always = no
+    }
+    species_possible_remove = {
+        always = no
+    }
     allowed_archetypes = {
         MACHINE
     }

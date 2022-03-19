@@ -1,0 +1,112 @@
+ship_section_template = {
+    key = "attack_moon_small_mid_01_key"
+    ship_size = giga_massive_planet
+    fits_on_slot = "mid"
+    entity = "war_moon_hull_entity"
+    icon = "GFX_ship_part_core_mid"
+    prerequisites = {
+        "giga_tech_war_moon_sections"
+    }
+    component_slot = {
+        name = "LARGE_GUN_01"
+        template = "giga_invisible_small_fixed"
+        locatorname = "missile_gun_01"
+    }
+    component_slot = {
+        name = "LARGE_GUN_02"
+        template = "giga_invisible_small_fixed"
+        locatorname = "missile_gun_02"
+    }
+    component_slot = {
+        name = "LARGE_GUN_03"
+        template = "giga_invisible_small_fixed"
+        locatorname = "missile_gun_03"
+    }
+    component_slot = {
+        name = "LARGE_GUN_04"
+        template = "giga_invisible_small_fixed"
+        locatorname = "missile_gun_04"
+    }
+    component_slot = {
+        name = "LARGE_GUN_05"
+        template = "giga_invisible_small_fixed"
+        locatorname = "missile_gun_01"
+    }
+    component_slot = {
+        name = "LARGE_GUN_06"
+        template = "giga_invisible_small_fixed"
+        locatorname = "missile_gun_02"
+    }
+    component_slot = {
+        name = "LARGE_GUN_07"
+        template = "giga_invisible_small_fixed"
+        locatorname = "missile_gun_03"
+    }
+    component_slot = {
+        name = "LARGE_GUN_08"
+        template = "giga_invisible_small_fixed"
+        locatorname = "missile_gun_04"
+    }
+    component_slot = {
+        name = "LARGE_GUN_09"
+        template = "giga_invisible_small_fixed"
+        locatorname = "missile_gun_01"
+    }
+    component_slot = {
+        name = "LARGE_GUN_10"
+        template = "giga_invisible_small_fixed"
+        locatorname = "missile_gun_01"
+    }
+    component_slot = {
+        name = "LARGE_GUN_11"
+        template = "giga_invisible_small_fixed"
+        locatorname = "missile_gun_02"
+    }
+    component_slot = {
+        name = "LARGE_GUN_12"
+        template = "giga_invisible_small_fixed"
+        locatorname = "missile_gun_03"
+    }
+    component_slot = {
+        name = "LARGE_GUN_13"
+        template = "giga_invisible_small_fixed"
+        locatorname = "missile_gun_04"
+    }
+    component_slot = {
+        name = "LARGE_GUN_14"
+        template = "giga_invisible_small_fixed"
+        locatorname = "missile_gun_01"
+    }
+    component_slot = {
+        name = "LARGE_GUN_15"
+        template = "giga_invisible_small_fixed"
+        locatorname = "missile_gun_01"
+    }
+    component_slot = {
+        name = "LARGE_GUN_16"
+        template = "giga_invisible_small_fixed"
+        locatorname = "missile_gun_02"
+    }
+    component_slot = {
+        name = "LARGE_GUN_17"
+        template = "giga_invisible_small_fixed"
+        locatorname = "missile_gun_03"
+    }
+    component_slot = {
+        name = "LARGE_GUN_18"
+        template = "giga_invisible_small_fixed"
+        locatorname = "missile_gun_04"
+    }
+    component_slot = {
+        name = "LARGE_GUN_19"
+        template = "giga_invisible_small_fixed"
+        locatorname = "missile_gun_01"
+    }
+    component_slot = {
+        name = "LARGE_GUN_20"
+        template = "giga_invisible_small_fixed"
+        locatorname = "missile_gun_01"
+    }
+    large_utility_slots = 8
+    aux_utility_slots = 2
+}

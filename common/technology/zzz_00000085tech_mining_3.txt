@@ -23,7 +23,7 @@ tech_mining_3 = {
         }
     }
     ai_weight = {
-        weight = 50
+        factor = @ai_mining_factor
         factor = 25
         modifier = {
             factor = 100

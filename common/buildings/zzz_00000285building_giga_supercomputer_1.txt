@@ -1,7 +1,6 @@
 building_giga_supercomputer_1 = {
     base_buildtime = @b3_time
     icon = building_giga_institute_1
-    can_build = no
     base_cap_amount = 1
     category = research
     potential = {
@@ -47,8 +46,6 @@ building_giga_supercomputer_1 = {
         upkeep = {
             energy = @b3_upkeep
             exotic_gases = @b3_rare_upkeep
-            rare_crystals = @b2_rare_upkeep
-            volatile_motes = 1
         }
     }
     planet_modifier = {
@@ -81,9 +78,6 @@ building_giga_supercomputer_1 = {
     }
     triggered_desc = {
         text = job_head_researcher_effect_desc
-    }
-    show_tech_unlock_if = {
-        is_gestalt = yes
     }
     ai_resource_production = {
         trigger = {

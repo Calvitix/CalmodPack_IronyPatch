@@ -2,7 +2,7 @@ gpm_orbital_alloy_miner = {
     category = specialist
     condition_string = SPECIALIST_JOB_TRIGGER
     building_icon = building_crystal_mines
-    clothes_texture_index = 2
+    clothes_texture_index = 3
     possible_pre_triggers = {
         has_owner = yes
         is_being_purged = no
@@ -14,58 +14,25 @@ gpm_orbital_alloy_miner = {
         hidden_trigger = {
             exists = owner
         }
-        complex_specialist_job_check_trigger = yes
+        owner = {
+            is_gestalt = no
+        }
     }
     resources = {
-        category = planet_miners
+        category = planet_metallurgists
         produces = {
-            alloys = 6
+            alloys = 10
         }
         upkeep = {
-            consumer_goods = 3
+            energy = 5
         }
     }
     weight = {
-        weight = @worker_job_weight
-        modifier = {
-            factor = 1.5
-            OR = {
-                has_trait = trait_industrious
-                has_trait = trait_robot_power_drills
-            }
-        }
-        modifier = {
-            factor = 10
-            is_enslaved = yes
-            can_take_servant_job = no
-        }
+        weight = @specialist_job_weight
         modifier = {
             factor = 2
-            OR = {
-                is_non_sapient_robot = yes
-                is_shackled_robot = yes
-            }
+            is_enslaved = yes
             can_take_servant_job = no
-            owner = {
-                has_technology = tech_droid_workers
-            }
-        }
-        modifier = {
-            factor = 10
-            OR = {
-                is_non_sapient_robot = yes
-                is_shackled_robot = yes
-            }
-            can_take_servant_job = no
-            owner = {
-                NOT = {
-                    has_technology = tech_droid_workers
-                }
-            }
-        }
-        modifier = {
-            factor = 0.25
-            can_take_servant_job = yes
         }
         modifier = {
             factor = 2
@@ -74,16 +41,32 @@ gpm_orbital_alloy_miner = {
             }
         }
         modifier = {
-            factor = 1.2
-            has_trait = trait_very_strong
+            factor = 5
+            has_job = foundry
         }
         modifier = {
-            factor = 1.1
-            has_trait = trait_strong
+            factor = 15
+            has_job = foundry
+            OR = {
+                has_trait = trait_robust
+                has_trait = trait_robot_efficient_processors
+            }
         }
         modifier = {
-            factor = 0.9
-            has_trait = trait_weak
+            factor = 1.5
+            has_trait = trait_void_dweller_1
+            exists = planet
+            planet = {
+                is_planet_class = pc_habitat
+            }
+        }
+        modifier = {
+            factor = 0.85
+            has_trait = trait_void_dweller_1
+            exists = planet
+            planet = {
+                is_artificial = no
+            }
         }
     }
 }

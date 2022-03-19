@@ -10,6 +10,7 @@ building_giga_flusion_capital = {
     potential = {
         always = no
     }
+    position_priority = 0
     destroy_trigger = {
         exists = owner
         owner = {

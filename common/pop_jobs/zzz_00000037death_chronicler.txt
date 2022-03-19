@@ -20,12 +20,14 @@ death_chronicler = {
             society_research = 2
         }
         upkeep = {
+            consumer_goods = 2
+        }
+        upkeep = {
             trigger = {
                 is_organic_species = yes
                 is_phototrophic = no
                 is_lithoid = no
             }
-            consumer_goods = 2
             food = @living_standard_food_normal
         }
         upkeep = {
@@ -38,18 +40,17 @@ death_chronicler = {
             trigger = {
                 is_phototrophic = yes
             }
-            consumer_goods = 2
             food = @living_standard_phototrophic_normal
         }
         upkeep = {
             trigger = {
                 is_lithoid = yes
             }
-            consumer_goods = 2
             minerals = @living_standard_food_normal
         }
     }
     planet_modifier = {
+        planet_stability_add = 2
         planet_amenities_add = 2
     }
     triggered_planet_modifier = {
@@ -71,9 +72,6 @@ death_chronicler = {
             planet_amenities_add = -0.4
         }
     }
-    planet_modifier = {
-        planet_stability_add = 2
-    }
     weight = {
         weight = @specialist_job_weight
         modifier = {
@@ -85,10 +83,7 @@ death_chronicler = {
         }
         modifier = {
             factor = 2
-            OR = {
-                has_trait = trait_traditional
-                has_trait = trait_erudite
-            }
+            has_trait = trait_traditional
         }
         modifier = {
             factor = 1.5
@@ -96,7 +91,7 @@ death_chronicler = {
                 has_trait = trait_robot_propaganda_machines
                 has_trait = trait_traditional
                 has_trait = trait_natural_sociologists
-                has_job = culture_worker
+                has_job = death_chronicler
                 has_trait = trait_intelligent
                 has_trait = trait_psionic
             }

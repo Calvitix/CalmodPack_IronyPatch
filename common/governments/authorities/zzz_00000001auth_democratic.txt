@@ -15,6 +15,11 @@ auth_democratic = {
     country_modifier = {
         planet_resettlement_unemployed_mult = 0.5
     }
+    random_weight = {
+        modifier = {
+            factor = 2
+        }
+    }
     tags = {
         AUTHORITY_ELECTION_DEMOCRATIC
     }

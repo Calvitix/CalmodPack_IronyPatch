@@ -594,9 +594,9 @@ destroyer = {
     }
     num_target_locators = 4
     icon = ship_size_military_2
-    is_space_station = no
     base_buildtime = 120
     combat_disengage_chance = 1.5
+    is_space_station = no
     can_have_federation_design = yes
     enable_default_design = yes
     enable_3dview_in_ship_browser = yes
@@ -663,10 +663,10 @@ cruiser = {
         }
     }
     num_target_locators = 4
-    is_space_station = no
     icon = ship_size_military_4
     base_buildtime = 240
     combat_disengage_chance = 1.25
+    is_space_station = no
     can_have_federation_design = yes
     enable_default_design = yes
     enable_3dview_in_ship_browser = yes
@@ -898,10 +898,10 @@ battleship = {
         }
     }
     num_target_locators = 4
-    is_space_station = no
     icon = ship_size_military_8
     base_buildtime = 480
     combat_disengage_chance = 1
+    is_space_station = no
     can_have_federation_design = yes
     enable_default_design = yes
     enable_3dview_in_ship_browser = yes
@@ -1081,10 +1081,10 @@ titan = {
         }
     }
     num_target_locators = 4
-    is_space_station = no
     icon = ship_size_military_16
     base_buildtime = 1300
     combat_disengage_chance = 1
+    is_space_station = no
     can_have_federation_design = yes
     enable_default_design = yes
     enable_3dview_in_ship_browser = yes
@@ -1408,10 +1408,10 @@ constructor = {
         }
     }
     num_target_locators = 0
-    is_space_station = no
     icon = ship_size_constructor
     base_buildtime = @construction_build_time
     combat_disengage_chance = 1
+    is_space_station = no
     enable_default_design = yes
     enable_3dview_in_ship_browser = yes
     is_designable = no
@@ -1469,10 +1469,10 @@ colonizer = {
         }
     }
     num_target_locators = 0
-    is_space_station = no
     icon = ship_size_colonizer
     base_buildtime = @colony_build_time
     combat_disengage_chance = 0.5
+    is_space_station = no
     enable_default_design = yes
     enable_3dview_in_ship_browser = yes
     is_designable = no
@@ -1594,16 +1594,13 @@ sponsored_colonizer = {
         }
     }
     num_target_locators = 0
-    is_space_station = no
     icon = ship_size_colonizer
     base_buildtime = @colony_build_time
     combat_disengage_chance = 0.5
+    is_space_station = no
     enable_default_design = yes
-    prerequisites = {
-        "tech_colonization_1"
-    }
-    is_civilian = yes
     is_designable = no
+    is_civilian = yes
     components_add_to_cost = no
     valid_target_aggressive_stance = no
     auto_upgrade = yes
@@ -1612,6 +1609,9 @@ sponsored_colonizer = {
             has_civic = civic_corporate_dominion
             has_civic = civic_private_prospectors
         }
+    }
+    prerequisites = {
+        "tech_colonization_1"
     }
     class = shipclass_colonizer
     construction_type = starbase_shipyard
@@ -1648,21 +1648,21 @@ lithoid_colonizer = {
         }
     }
     num_target_locators = 0
-    is_space_station = no
     icon = ship_size_colonizer
     base_buildtime = 150
     combat_disengage_chance = 0.2
+    is_space_station = no
     enable_default_design = yes
-    prerequisites = {
-        "tech_colonization_1"
-    }
-    is_civilian = yes
     is_designable = no
+    is_civilian = yes
     components_add_to_cost = no
     valid_target_aggressive_stance = no
     auto_upgrade = yes
     potential_country = {
         has_origin = origin_lithoid
+    }
+    prerequisites = {
+        "tech_colonization_1"
     }
     class = shipclass_colonizer
     construction_type = starbase_shipyard
@@ -1723,108 +1723,6 @@ military_station_small = {
     required_component_set = "power_core"
     required_component_set = "sensor_components"
     required_component_set = "combat_computers"
-    build_block_radius = @build_block_radius_military
-    potential_construction = {
-        is_scope_type = starbase
-        has_starbase_size >= starbase_outpost
-        exists = owner
-        or = {
-            owner = {
-                is_ai = no
-            }
-            has_starbase_size > starbase_starport
-            and = {
-                owner = {
-                    used_naval_capacity_percent > 0.6
-                }
-                owner = {
-                    has_technology = tech_energy_torpedoes_1
-                }
-                owner = {
-                    resource_stockpile_compare = {
-                        resource = alloys
-                        value > 3000
-                    }
-                }
-                owner = {
-                    resource_income_compare = {
-                        resource = alloys
-                        value > 20
-                    }
-                }
-                owner = {
-                    resource_income_compare = {
-                        resource = energy
-                        value > 10
-                    }
-                }
-                solar_system = {
-                    is_bottleneck_system = yes
-                    any_neighbor_system = {
-                        exists = owner
-                        owner = {
-                            is_country_type = default
-                            not = {
-                                has_defensive_pact = prevprev.owner
-                            }
-                            not = {
-                                has_non_aggression_pact = prevprev.owner
-                            }
-                            not = {
-                                is_in_federation_with = prevprev.owner
-                            }
-                            or = {
-                                nor = {
-                                    has_ethic = ethic_pacifist
-                                    has_ethic = ethic_fanatic_pacifist
-                                }
-                                prev.owner = {
-                                    nor = {
-                                        has_ethic = ethic_pacifist
-                                        has_ethic = ethic_fanatic_pacifist
-                                    }
-                                }
-                            }
-                            or = {
-                                and = {
-                                    is_ai = no
-                                }
-                                opinion = {
-                                    who = prevprev.owner
-                                    value < -10
-                                }
-                                their_opinion = {
-                                    who = prevprev.owner
-                                    value < -10
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-    potential_country = {
-        or = {
-            is_ai = no
-            and = {
-                used_naval_capacity_percent > 0.6
-                has_technology = tech_energy_torpedoes_1
-                resource_stockpile_compare = {
-                    resource = alloys
-                    value > 3000
-                }
-                resource_income_compare = {
-                    resource = alloys
-                    value > 20
-                }
-                resource_income_compare = {
-                    resource = energy
-                    value > 10
-                }
-            }
-        }
-    }
 }
 military_station_medium = {
     max_speed = @speed1_2
@@ -1880,107 +1778,6 @@ military_station_medium = {
     required_component_set = "nsc_sec_power_core"
     required_component_set = "sensor_components"
     required_component_set = "combat_computers"
-    potential_country = {
-        or = {
-            is_ai = no
-            and = {
-                used_naval_capacity_percent > 0.6
-                has_technology = tech_energy_torpedoes_1
-                resource_stockpile_compare = {
-                    resource = alloys
-                    value > 3000
-                }
-                resource_income_compare = {
-                    resource = alloys
-                    value > 20
-                }
-                resource_income_compare = {
-                    resource = energy
-                    value > 10
-                }
-            }
-        }
-    }
-    potential_construction = {
-        is_scope_type = starbase
-        has_starbase_size >= starbase_outpost
-        exists = owner
-        or = {
-            owner = {
-                is_ai = no
-            }
-            has_starbase_size > starbase_starport
-            and = {
-                owner = {
-                    used_naval_capacity_percent > 0.6
-                }
-                owner = {
-                    has_technology = tech_energy_torpedoes_1
-                }
-                owner = {
-                    resource_stockpile_compare = {
-                        resource = alloys
-                        value > 3000
-                    }
-                }
-                owner = {
-                    resource_income_compare = {
-                        resource = alloys
-                        value > 20
-                    }
-                }
-                owner = {
-                    resource_income_compare = {
-                        resource = energy
-                        value > 10
-                    }
-                }
-                solar_system = {
-                    is_bottleneck_system = yes
-                    any_neighbor_system = {
-                        exists = owner
-                        owner = {
-                            is_country_type = default
-                            not = {
-                                has_defensive_pact = prevprev.owner
-                            }
-                            not = {
-                                has_non_aggression_pact = prevprev.owner
-                            }
-                            not = {
-                                is_in_federation_with = prevprev.owner
-                            }
-                            or = {
-                                nor = {
-                                    has_ethic = ethic_pacifist
-                                    has_ethic = ethic_fanatic_pacifist
-                                }
-                                prev.owner = {
-                                    nor = {
-                                        has_ethic = ethic_pacifist
-                                        has_ethic = ethic_fanatic_pacifist
-                                    }
-                                }
-                            }
-                            or = {
-                                and = {
-                                    is_ai = no
-                                }
-                                opinion = {
-                                    who = prevprev.owner
-                                    value < -10
-                                }
-                                their_opinion = {
-                                    who = prevprev.owner
-                                    value < -10
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
 }
 military_station_large = {
     max_speed = @speed1_1
@@ -2040,107 +1837,6 @@ military_station_large = {
     required_component_set = "nsc_sec_power_core"
     required_component_set = "sensor_components"
     required_component_set = "combat_computers"
-    potential_country = {
-        or = {
-            is_ai = no
-            and = {
-                used_naval_capacity_percent > 0.6
-                has_technology = tech_energy_torpedoes_1
-                resource_stockpile_compare = {
-                    resource = alloys
-                    value > 3000
-                }
-                resource_income_compare = {
-                    resource = alloys
-                    value > 20
-                }
-                resource_income_compare = {
-                    resource = energy
-                    value > 10
-                }
-            }
-        }
-    }
-    potential_construction = {
-        is_scope_type = starbase
-        has_starbase_size >= starbase_outpost
-        exists = owner
-        or = {
-            owner = {
-                is_ai = no
-            }
-            has_starbase_size > starbase_starport
-            and = {
-                owner = {
-                    used_naval_capacity_percent > 0.6
-                }
-                owner = {
-                    has_technology = tech_energy_torpedoes_1
-                }
-                owner = {
-                    resource_stockpile_compare = {
-                        resource = alloys
-                        value > 3000
-                    }
-                }
-                owner = {
-                    resource_income_compare = {
-                        resource = alloys
-                        value > 20
-                    }
-                }
-                owner = {
-                    resource_income_compare = {
-                        resource = energy
-                        value > 10
-                    }
-                }
-                solar_system = {
-                    is_bottleneck_system = yes
-                    any_neighbor_system = {
-                        exists = owner
-                        owner = {
-                            is_country_type = default
-                            not = {
-                                has_defensive_pact = prevprev.owner
-                            }
-                            not = {
-                                has_non_aggression_pact = prevprev.owner
-                            }
-                            not = {
-                                is_in_federation_with = prevprev.owner
-                            }
-                            or = {
-                                nor = {
-                                    has_ethic = ethic_pacifist
-                                    has_ethic = ethic_fanatic_pacifist
-                                }
-                                prev.owner = {
-                                    nor = {
-                                        has_ethic = ethic_pacifist
-                                        has_ethic = ethic_fanatic_pacifist
-                                    }
-                                }
-                            }
-                            or = {
-                                and = {
-                                    is_ai = no
-                                }
-                                opinion = {
-                                    who = prevprev.owner
-                                    value < -10
-                                }
-                                their_opinion = {
-                                    who = prevprev.owner
-                                    value < -10
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
 }
 mining_station = {
     max_speed = @speed0_3
@@ -2220,7 +1916,7 @@ research_station = {
     valid_target_aggressive_stance = no
     auto_upgrade = yes
     resources = {
-        category = station_gatherers
+        category = station_researchers
         cost = {
             trigger = {
                 from = {
@@ -2267,7 +1963,7 @@ observation_station = {
     components_add_to_cost = no
     valid_target_aggressive_stance = no
     resources = {
-        category = station_gatherers
+        category = station_observers
         cost = {
             trigger = {
                 from = {
@@ -9351,6 +9047,41 @@ giga_kaiser_moon_flusion = {
         }
     }
 }
+giga_katzen_blimp = {
+    entity = katzen_blimp_entity
+    formation_priority = 80
+    max_speed = 100
+    acceleration = 0.2
+    rotation_speed = 0.15
+    collision_radius = 7
+    max_hitpoints = 20000
+    modifier = {
+        ship_armor_add = 10000
+        ship_shield_add = 5000
+        ships_upkeep_mult = -2
+    }
+    size_multiplier = 16
+    fleet_slot_size = 16
+    section_slots = {
+        "core" = {
+            locator = "part1"
+        }
+    }
+    num_target_locators = 4
+    is_space_station = no
+    icon = ship_size_military_16
+    combat_disengage_chance = 0
+    possible_construction = {
+        always = no
+    }
+    is_designable = no
+    class = shipclass_military
+    required_component_set = "power_core"
+    required_component_set = "ftl_components"
+    required_component_set = "thruster_components"
+    required_component_set = "sensor_components"
+    required_component_set = "combat_computers"
+}
 giga_katzen_cruiser = {
     formation_priority = 50
     max_speed = 120
@@ -9644,8 +9375,8 @@ asteroid_artillery = {
     resources = {
         category = ships
         upkeep = {
-            energy = 75
-            alloys = 25
+            energy = 250
+            alloys = 75
         }
     }
 }
@@ -9679,7 +9410,7 @@ Pouchkguard = {
 }
 giga_massive_planet = {
     graphical_culture = no
-    max_speed = 150
+    max_speed = 120
     acceleration = 0.15
     rotation_speed = 0.05
     collision_radius = 32
@@ -9729,8 +9460,8 @@ giga_massive_planet = {
             alloys = 10000
         }
         upkeep = {
-            energy = 250
-            alloys = 50
+            energy = 500
+            alloys = 125
         }
     }
 }
@@ -9790,8 +9521,8 @@ giga_planet_behemoth = {
             alloys = 10000
         }
         upkeep = {
-            energy = 500
-            alloys = 200
+            energy = 250
+            alloys = 75
         }
     }
 }
@@ -11203,6 +10934,9 @@ strategic_defence_command_platform = {
     is_space_station = no
     section_slots = {
         "bow" = {
+            locator = "part1"
+        }
+        "bow2" = {
             locator = "part1"
         }
         "mid1" = {
@@ -12839,6 +12573,7 @@ nsc_freebooter_flagship = {
     icon = nsc_ship_size_military_18
     combat_disengage_chance = 0
     default_behavior = carrier
+    is_designable = no
     class = shipclass_military
     construction_type = starbase_shipyard
     enable_default_design = yes

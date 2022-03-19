@@ -1,0 +1,42 @@
+tech_invasive_necrotoxication = {
+    area = society
+    start_tech = no
+    cost = 10000
+    tier = 3
+    is_dangerous = yes
+    category = {
+        biology
+    }
+    prerequisites = {
+        "tech_megamycete"
+    }
+    weight = 60
+    potential = {
+        NOR = {
+            is_machine_empire = yes
+            is_lithoid_empire = yes
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_biology"
+            }
+        }
+        modifier = {
+            factor = 4
+            any_owned_planet = {
+                OR = {
+                    has_modifier = harmful_mold_1
+                    has_modifier = harmful_mold_2
+                    has_modifier = harmful_mold_3
+                }
+            }
+        }
+    }
+    ai_weight = {
+        weight = 9999
+    }
+}

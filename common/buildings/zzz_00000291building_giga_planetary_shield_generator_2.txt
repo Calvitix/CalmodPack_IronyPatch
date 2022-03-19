@@ -9,13 +9,11 @@ building_giga_planetary_shield_generator_2 = {
         cost = {
             minerals = @b4_minerals
             exotic_gases = @b2_minerals
-            rare_crystals = @b2_rare_cost
             ehof_sr_negative_mass = 20
         }
         upkeep = {
             energy = @b4_upkeep
             exotic_gases = @b2_upkeep
-            rare_crystals = @b2_rare_upkeep
             ehof_sr_negative_mass = 2
         }
     }

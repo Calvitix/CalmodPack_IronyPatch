@@ -1,0 +1,22 @@
+building_katzen_theater = {
+    can_build = no
+    category = amenity
+    potential = {
+        always = no
+    }
+    can_be_ruined = no
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            has_modifier = resort_colony
+            has_modifier = slave_colony
+            owner = {
+                is_gestalt = yes
+            }
+        }
+    }
+    planet_modifier = {
+        planet_amenities_add = 24
+        pop_ethic_militarist_attraction_mult = 2
+    }
+}

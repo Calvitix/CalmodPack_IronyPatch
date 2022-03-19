@@ -8,19 +8,53 @@ building_posthumous_employment_center = {
             owner = {
                 is_ai = no
             }
-            free_building_slots > 0
+            OR = {
+                NOT = {
+                    exists = assembling_species
+                }
+                AND = {
+                    exists = assembling_species
+                    assembling_species = {
+                        is_organic_species = yes
+                    }
+                }
+            }
+        }
+        OR = {
+            owner = {
+                is_ai = no
+            }
+            NAND = {
+                free_district_slots = 0
+                free_building_slots <= 1
+                free_housing <= 0
+                free_jobs <= 0
+            }
         }
         owner = {
             is_regular_empire = yes
             has_valid_civic = civic_permanent_employment
         }
+    }
+    allow = {
         has_upgraded_capital = yes
     }
     destroy_trigger = {
         exists = owner
-        owner = {
-            NOT = {
-                has_valid_civic = civic_permanent_employment
+        OR = {
+            owner = {
+                NOT = {
+                    has_valid_civic = civic_permanent_employment
+                }
+            }
+            AND = {
+                owner = {
+                    is_ai = yes
+                }
+                free_district_slots = 0
+                free_building_slots = 0
+                free_housing <= 0
+                free_jobs <= 0
             }
         }
     }
@@ -41,7 +75,15 @@ building_posthumous_employment_center = {
     }
     triggered_desc = {
         trigger = {
-            has_building = building_robot_assembly_plant
+            OR = {
+                has_building = building_robot_assembly_plant
+                AND = {
+                    exists = assembling_species
+                    assembling_species = {
+                        is_robotic_species = yes
+                    }
+                }
+            }
         }
         text = tooltip_organic_and_artificial_assembly_warning
     }

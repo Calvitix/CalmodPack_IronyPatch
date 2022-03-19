@@ -75,6 +75,14 @@ pearl_diver = {
             }
         }
         modifier = {
+            factor = 1.5
+            has_trait = trait_thrifty
+        }
+        modifier = {
+            factor = 1.5
+            has_trait = trait_nuumismatic_administration
+        }
+        modifier = {
             factor = 5
             has_job = pearl_diver
         }

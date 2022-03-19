@@ -15,6 +15,12 @@ building_factory_1 = {
         NOT = {
             has_modifier = slave_colony
         }
+        OR = {
+            owner = {
+                is_ai = no
+            }
+            has_any_industry_district = yes
+        }
     }
     destroy_trigger = {
         OR = {
@@ -29,11 +35,11 @@ building_factory_1 = {
                     is_ai = yes
                     resource_income_compare = {
                         resource = consumer_goods
-                        value > 10
+                        value > 25
                     }
                     resource_stockpile_compare = {
                         resource = consumer_goods
-                        value > 300
+                        value > 5000
                     }
                 }
             }
@@ -42,6 +48,20 @@ building_factory_1 = {
                 owner = {
                     is_ai = yes
                     country_uses_consumer_goods = no
+                }
+                AND = {
+                    owner = {
+                        is_ai = yes
+                    }
+                    NOT = {
+                        has_district = district_rw_industrial
+                    }
+                    NOT = {
+                        has_district = district_hab_industrial
+                    }
+                    NOT = {
+                        has_district = district_industrial
+                    }
                 }
             }
         }
@@ -137,12 +157,6 @@ building_factory_1 = {
             }
         }
         text = job_artisan_drone_effect_desc
-    }
-    ai_resource_production = {
-        consumer_goods = 8
-        trigger = {
-            always = yes
-        }
     }
     ai_resource_production = {
         consumer_goods = 8

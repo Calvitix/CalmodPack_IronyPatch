@@ -44,6 +44,7 @@ building_precinct_house = {
                 }
             }
             AND = {
+                free_building_slots < 1
                 owner = {
                     is_ai = yes
                 }

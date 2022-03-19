@@ -34,7 +34,7 @@ gpm_tech_ringworld_neural_nexus = {
             factor = 0.5
             NOT = {
                 research_leader = {
-                    area = society
+                    area = physics
                     has_trait = "leader_trait_expertise_computing"
                 }
             }
@@ -42,7 +42,7 @@ gpm_tech_ringworld_neural_nexus = {
         modifier = {
             factor = 1.1
             research_leader = {
-                area = society
+                area = physics
                 has_level > 2
                 has_trait = "leader_trait_expertise_computing"
             }
@@ -50,7 +50,7 @@ gpm_tech_ringworld_neural_nexus = {
         modifier = {
             factor = 1.5
             research_leader = {
-                area = society
+                area = physics
                 has_level > 3
                 has_trait = "leader_trait_expertise_computing"
             }
@@ -58,7 +58,7 @@ gpm_tech_ringworld_neural_nexus = {
         modifier = {
             factor = 2
             research_leader = {
-                area = society
+                area = physics
                 has_level > 4
                 has_trait = "leader_trait_expertise_computing"
             }
@@ -85,7 +85,7 @@ gpm_tech_ringworld_neural_nexus = {
         modifier = {
             factor = 1.25
             research_leader = {
-                area = society
+                area = physics
                 has_trait = "leader_trait_expertise_computing"
             }
         }

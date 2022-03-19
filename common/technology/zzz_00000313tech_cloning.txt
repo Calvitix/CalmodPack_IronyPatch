@@ -39,7 +39,6 @@ tech_cloning = {
         }
     }
     ai_weight = {
-        factor = 40
         factor = @pop_growth_tech_ai_factor
         modifier = {
             factor = 500

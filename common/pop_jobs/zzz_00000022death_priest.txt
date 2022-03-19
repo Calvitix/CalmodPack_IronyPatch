@@ -20,6 +20,15 @@ death_priest = {
             unity = 3
             society_research = 1
         }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_sacrificial_edict = yes
+                }
+            }
+            unity = 3
+        }
         upkeep = {
             consumer_goods = 2
         }
@@ -100,12 +109,12 @@ death_priest = {
             factor = 0.1
             has_ethic = ethic_materialist
             NOT = {
-                has_job = priest
+                has_job = death_priest
             }
         }
         modifier = {
             factor = 1.5
-            has_job = priest
+            has_job = death_priest
         }
         modifier = {
             factor = 1.5
@@ -121,10 +130,6 @@ death_priest = {
                 has_trait = trait_robust
                 has_trait = trait_robot_efficient_processors
             }
-        }
-        modifier = {
-            factor = 1.15
-            has_trait = trait_erudite
         }
         modifier = {
             factor = 1.05

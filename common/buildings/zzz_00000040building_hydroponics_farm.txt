@@ -23,9 +23,12 @@ building_hydroponics_farm = {
         exists = owner
         OR = {
             str_hydroponics_destroy = yes
-            owner = {
-                is_ai = yes
-                country_uses_food = no
+            and = {
+                owner = {
+                    is_ai = yes
+                    country_uses_food = no
+                }
+                free_building_slots = 0
             }
             planet = {
                 NOT = {
@@ -53,11 +56,12 @@ building_hydroponics_farm = {
                     is_planet_class = pc_pd_molten_hab
                 }
                 free_building_slots = 0
+                exists = owner
                 owner = {
                     is_ai = yes
                     has_monthly_income = {
                         resource = food
-                        value > 100
+                        value > 200
                     }
                 }
             }

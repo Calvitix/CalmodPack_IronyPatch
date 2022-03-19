@@ -62,6 +62,7 @@ tech_gene_crops = {
         }
     }
     ai_weight = {
+        weight = 15
         factor = @farming_ai_weight_factor
         modifier = {
             factor = 500

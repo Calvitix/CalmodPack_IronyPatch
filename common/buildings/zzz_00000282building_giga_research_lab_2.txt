@@ -84,8 +84,6 @@ building_giga_research_lab_2 = {
         upkeep = {
             energy = @b4_upkeep
             exotic_gases = @b4_rare_upkeep
-            rare_crystals = @b2_rare_upkeep
-            volatile_motes = 1
         }
         upkeep = {
             trigger = {

@@ -42,7 +42,7 @@ primitive_warrior = {
         planet_crime_add = -15
     }
     weight = {
-        weight = 2
+        weight = @soldier_job_weight
         modifier = {
             factor = 6
             is_militarist = yes

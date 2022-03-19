@@ -12,6 +12,9 @@ trait_pc_ai_preference = {
         LITHOID
     }
     sorting_priority = 30
+    ai_weight = {
+        weight = 0
+    }
     modifier = {
         pc_ai_habitability = 1
         pc_depleted_habitability = 0.1

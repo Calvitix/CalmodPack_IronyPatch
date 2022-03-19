@@ -1,6 +1,5 @@
 building_giga_planetary_shield_generator_1 = {
     base_buildtime = @b4_time
-    can_build = no
     base_cap_amount = 1
     allow = {
         has_upgraded_capital = yes

@@ -1,6 +1,7 @@
 eb_crystal_plant2 = {
-    base_buildtime = 480
+    base_buildtime = @b2_time
     can_build = no
+    exempt_from_ai_planet_specialization = no
     category = manufacturing
     potential = {
         NOT = {
@@ -49,12 +50,12 @@ eb_crystal_plant2 = {
     resources = {
         category = planet_buildings
         cost = {
-            minerals = 2500
+            minerals = 1500
             alloys = 60
             sr_dark_matter = 25
         }
         upkeep = {
-            energy = 15
+            energy = 10
             sr_dark_matter = 0.5
         }
     }

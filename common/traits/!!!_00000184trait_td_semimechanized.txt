@@ -2,6 +2,12 @@ trait_td_semimechanized = {
     cost = -1
     potential_crossbreeding_chance = 0
     sorting_priority = 9
+    species_potential_add = {
+        always = no
+    }
+    species_possible_remove = {
+        always = no
+    }
     opposites = {
         "trait_hive_mind"
     }

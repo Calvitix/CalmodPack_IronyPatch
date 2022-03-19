@@ -5,6 +5,7 @@ primitive_noble = {
     clothes_texture_index = 1
     possible_pre_triggers = {
         has_owner = yes
+        is_sapient = yes
     }
     possible = {
         owner = {

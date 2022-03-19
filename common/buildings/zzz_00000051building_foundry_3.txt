@@ -15,6 +15,14 @@ building_foundry_3 = {
                 exists = owner
                 buildings_no_motes = yes
             }
+            AND = {
+                exists = owner
+                owner = {
+                    is_ai = yes
+                }
+                has_any_industry_district = no
+                free_building_slots = 0
+            }
         }
     }
     resources = {
@@ -284,12 +292,6 @@ building_foundry_3 = {
             is_planet_class = pc_crucible
         }
         text = job_crucible_fabricator_effect_desc
-    }
-    ai_resource_production = {
-        alloys = 16
-        trigger = {
-            always = yes
-        }
     }
     ai_resource_production = {
         alloys = 16

@@ -1,3 +1,4 @@
+@activation_cost = 3000
 r_aspmod_vermifugum = {
     activation_duration = 3600
     portrait = "GFX_relic_vermifugum"
@@ -5,7 +6,7 @@ r_aspmod_vermifugum = {
     resources = {
         category = relics
         cost = {
-            influence = 200
+            unity = @activation_cost
         }
     }
     ai_weight = {

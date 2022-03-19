@@ -11,7 +11,7 @@ giga_preserver = {
         category = planet_researchers
         produces = {
             society_research = 2
-            unity = 2
+            unity = 3
         }
         upkeep = {
             food = 1

@@ -10,9 +10,6 @@ building_simulation_1 = {
         }
         owner = {
             is_machine_empire = yes
-            NOT = {
-                has_valid_civic = civic_machine_servitor
-            }
             is_memorialist_empire = no
         }
     }
@@ -23,7 +20,6 @@ building_simulation_1 = {
             owner = {
                 OR = {
                     is_machine_empire = no
-                    has_valid_civic = civic_machine_servitor
                     is_memorialist_empire = yes
                 }
             }
@@ -59,9 +55,6 @@ building_simulation_1 = {
     }
     show_tech_unlock_if = {
         is_machine_empire = yes
-        NOT = {
-            has_valid_civic = civic_machine_servitor
-        }
         is_memorialist_empire = no
     }
     upgrades = {

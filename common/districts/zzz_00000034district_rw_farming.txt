@@ -22,9 +22,7 @@ district_rw_farming = {
         }
     }
     potential = {
-        OR = {
-            uses_district_set = ring_world
-        }
+        uses_district_set = ring_world
         exists = owner
         owner = {
             OR = {
@@ -39,6 +37,16 @@ district_rw_farming = {
         }
         NOT = {
             has_modifier = ringworld_upgrade_timer
+        }
+        NOT = {
+            AND = {
+                owner = {
+                    is_ai = yes
+                }
+                owner = {
+                    country_uses_food = no
+                }
+            }
         }
     }
     resources = {

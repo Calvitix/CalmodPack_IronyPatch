@@ -18,10 +18,22 @@ district_farming = {
                 }
             }
             AND = {
+                exists = owner
                 owner = {
                     is_anglers_empire = yes
                 }
                 is_ocean = no
+            }
+        }
+        NOT = {
+            AND = {
+                exists = owner
+                owner = {
+                    is_ai = yes
+                }
+                owner = {
+                    country_uses_food = no
+                }
             }
         }
     }
@@ -323,9 +335,25 @@ district_farming = {
             owner = {
                 is_ai = yes
             }
-            owner = {
-                country_uses_food = no
+            or = {
+                owner = {
+                    country_uses_food = no
+                }
+                owner = {
+                    str_too_much_food = yes
+                }
             }
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_tradition = tr_industry_compact_extraction_centers
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
         }
     }
 }

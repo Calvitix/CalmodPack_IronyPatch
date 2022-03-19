@@ -25,9 +25,18 @@ building_factory_3 = {
             has_modifier = slave_colony
             AND = {
                 exists = owner
+                OR = {
                 owner = {
                     is_ai = yes
                     country_uses_consumer_goods = no
+                }
+                    AND = {
+                        owner = {
+                            is_ai = yes
+                        }
+                        has_any_industry_district = no
+                        free_building_slots = 0
+                    }
                 }
             }
             buildings_no_crystals = yes
@@ -131,12 +140,6 @@ building_factory_3 = {
             }
         }
         text = job_artisan_drone_effect_desc
-    }
-    ai_resource_production = {
-        consumer_goods = 20
-        trigger = {
-            always = yes
-        }
     }
     ai_resource_production = {
         consumer_goods = 20

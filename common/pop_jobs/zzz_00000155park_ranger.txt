@@ -33,6 +33,9 @@ park_ranger = {
             }
             waste = -10
         }
+        upkeep = {
+            consumer_goods = 1
+        }
     }
     pop_modifier = {
         pop_defense_armies_add = 1

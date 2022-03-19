@@ -26,6 +26,9 @@ district_industrial = {
     convert_to = {
         district_arcology_arms_industry
         district_rw_industrial
+        district_corp_industrial
+        district_bioforge_stomach
+        district_mf_alloy
     }
     resources = {
         category = planet_districts_industrial

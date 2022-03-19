@@ -6,7 +6,7 @@ gpm_r_self_assembly_hub = {
     resources = {
         category = relics
         cost = {
-            energy = 10000
+            energy = 20000
         }
     }
     ai_weight = {

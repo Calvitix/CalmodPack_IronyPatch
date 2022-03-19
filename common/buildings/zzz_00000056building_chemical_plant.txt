@@ -1,5 +1,6 @@
 building_chemical_plant = {
     base_buildtime = @b2_time
+    exempt_from_ai_planet_specialization = no
     category = manufacturing
     potential = {
         NOT = {
@@ -120,11 +121,5 @@ building_chemical_plant = {
             }
         }
         text = job_chemist_drone_effect_desc
-    }
-    ai_resource_production = {
-        volatile_motes = 1
-        trigger = {
-            always = yes
-        }
     }
 }

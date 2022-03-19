@@ -1,4 +1,4 @@
-@activation_cost = 150
+@activation_cost = 3000
 @triumph_duration = 3600
 gpm_r_quantum_sphere = {
     activation_duration = @triumph_duration
@@ -7,7 +7,7 @@ gpm_r_quantum_sphere = {
     resources = {
         category = relics
         cost = {
-            influence = @activation_cost
+            unity = @activation_cost
         }
     }
     ai_weight = {
@@ -17,8 +17,8 @@ gpm_r_quantum_sphere = {
         potential = {
             always = yes
         }
-        intel_encryption_mult = 0.25
-        intel_decryption_mult = 0.25
+        intel_encryption_add = 5
+        intel_decryption_add = 5
     }
     score = 1000
     active_effect = {

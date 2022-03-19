@@ -9,19 +9,6 @@ auth_corporate = {
     playable = {
         host_has_dlc = "Megacorp"
     }
-    random_weight = {
-        base = 0.3
-        modifier = {
-            factor = 0
-            NOT = {
-                host_has_dlc = "Megacorp"
-            }
-        }
-    }
-    country_modifier = {
-        country_unity_produces_mult = 0.1
-        empire_size_penalty_mult = 0.25
-    }
     possible = {
         ethics = {
             NOR = {
@@ -30,6 +17,23 @@ auth_corporate = {
                 value = ethic_fanatic_authoritarian
             }
         }
+    }
+    random_weight = {
+        base = 0.3
+        modifier = {
+            factor = 0
+            NOT = {
+                host_has_dlc = "Megacorp"
+            }
+        }
+        modifier = {
+            factor = 1
+            host_has_dlc = "Megacorp"
+        }
+    }
+    country_modifier = {
+        country_unity_produces_mult = 0.1
+        empire_size_penalty_mult = 0.25
     }
     tags = {
         AUTHORITY_ELECTION_OLIGARCHIC

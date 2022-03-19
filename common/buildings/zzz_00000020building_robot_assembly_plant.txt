@@ -8,10 +8,17 @@ building_robot_assembly_plant = {
             owner = {
                 is_ai = no
             }
-            and = {
-                free_building_slots > 0
-                owner = {
-                    num_pops < 1000
+            AND = {
+                OR = {
+                    NOT = {
+                        exists = assembling_species
+                    }
+                    AND = {
+                        exists = assembling_species
+                        assembling_species = {
+                            is_robotic_species = yes
+                        }
+                    }
                 }
                 or = {
                     AND = {
@@ -51,35 +58,11 @@ building_robot_assembly_plant = {
                 owner = {
                     is_ai = no
                 }
-                AND = {
-                    num_buildings = {
-                        type = any
-                        value <= 14
-                    }
-                    NOT = {
-                        is_planet_class = pc_habitat
-                    }
-                    NOT = {
-                        is_planet_class = pc_pd_barren_cold_hab
-                    }
-                    NOT = {
-                        is_planet_class = pc_pd_barren_hab
-                    }
-                    NOT = {
-                        is_planet_class = pc_pd_frozen_hab
-                    }
-                    NOT = {
-                        is_planet_class = pc_pd_gas_giant_hab
-                    }
-                    NOT = {
-                        is_planet_class = pc_pd_hothouse_hab
-                    }
-                    NOT = {
-                        is_planet_class = pc_pd_toxic_hab
-                    }
-                    NOT = {
-                        is_planet_class = pc_pd_molten_hab
-                    }
+                NAND = {
+                    free_district_slots = 0
+                    free_building_slots <= 1
+                    free_housing <= 0
+                    free_jobs <= 0
                 }
             }
         }
@@ -112,30 +95,15 @@ building_robot_assembly_plant = {
                 owner = {
                     is_ai = yes
                 }
-                free_jobs < 1
-                OR = {
-                    num_buildings = {
-                        type = any
-                        value = 16
-                    }
-                    is_planet_class = pc_habitat
-                    is_planet_class = pc_pd_barren_cold_hab
-                    is_planet_class = pc_pd_barren_hab
-                    is_planet_class = pc_pd_frozen_hab
-                    is_planet_class = pc_pd_gas_giant_hab
-                    is_planet_class = pc_pd_hothouse_hab
-                    is_planet_class = pc_pd_toxic_hab
-                    is_planet_class = pc_pd_molten_hab
-                }
+                free_district_slots = 0
+                free_building_slots = 0
+                free_housing <= 0
+                free_jobs <= 0
             }
             owner = {
                 is_ai = yes
                 has_ascension_perk = ap_engineered_evolution
                 is_materialist = no
-            }
-            owner = {
-                is_ai = yes
-                num_pops > 1500
             }
         }
     }
@@ -176,6 +144,12 @@ building_robot_assembly_plant = {
                 has_building = building_clone_vats
                 has_building = building_clone_army_clone_vat
                 has_building = building_posthumous_employment_center
+                AND = {
+                    exists = assembling_species
+                    assembling_species = {
+                        is_organic_species = yes
+                    }
+                }
             }
         }
         text = tooltip_organic_and_artificial_assembly_warning

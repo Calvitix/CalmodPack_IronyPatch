@@ -1,0 +1,153 @@
+@maginot_system_section_cost_alloys = 10000
+@maginot_system_section_upkeep_energy = 250
+@maginot_system_section_upkeep_alloys = 100
+ship_section_template = {
+    key = "system_strategic_defence_command_platform_mid2_01_key"
+    ship_size = strategic_defence_command_platform
+    fits_on_slot = "mid2"
+    entity = "giga_maginot_orbital_defence_platform_entity"
+    icon = "GFX_ship_part_core_mid"
+    prerequisites = {
+        giga_tech_maginot_systemcraft_upgrade
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_01"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_01"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_02"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_02"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_03"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_03"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_04"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_04"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_05"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_01"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_06"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_02"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_07"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_03"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_08"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_04"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_09"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_01"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_10"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_02"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_11"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_03"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_12"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_04"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_13"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_05"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_14"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_05"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_15"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_05"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_16"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_01"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_17"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_02"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_18"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_03"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_19"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_04"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_20"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_05"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_21"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_01"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_22"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_02"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_23"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_03"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_24"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_04"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_25"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_05"
+    }
+    large_utility_slots = 15
+    aux_utility_slots = 5
+    ai_weight = {
+        factor = 3000
+    }
+    resources = {
+        category = ships
+        cost = {
+            alloys = @maginot_system_section_cost_alloys
+        }
+        upkeep = {
+            energy = @maginot_system_section_upkeep_energy
+            alloys = @maginot_system_section_upkeep_alloys
+        }
+    }
+}

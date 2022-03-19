@@ -1,0 +1,62 @@
+building_lichen_mining_plant = {
+    prerequisites = {
+        "tech_purifying_plants"
+    }
+    upgrades = {
+        building_lichen_mining_plant2
+    }
+    base_buildtime = 150
+    ai_weight = {
+        weight = 0
+    }
+    resources = {
+        category = resource
+        cost = {
+            minerals = 100
+            energy = 200
+        }
+        upkeep = {
+            energy = 4
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            job_lichen_worker_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_lichen_drone_add = 1
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        text = job_lichen_worker_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = job_lichen_drone_effect_desc
+    }
+}

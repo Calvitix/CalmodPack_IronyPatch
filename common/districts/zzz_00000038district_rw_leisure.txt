@@ -56,8 +56,7 @@ district_rw_leisure = {
             }
         }
         modifier = {
-            job_entertainer_add = 8
-            job_culture_worker_add = 8
+            job_entertainer_add = 16
         }
     }
     triggered_planet_modifier = {
@@ -69,8 +68,7 @@ district_rw_leisure = {
             }
         }
         modifier = {
-            job_duelist_add = 8
-            job_culture_worker_add = 8
+            job_duelist_add = 16
         }
     }
     triggered_desc = {

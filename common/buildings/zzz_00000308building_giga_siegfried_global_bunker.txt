@@ -1,0 +1,36 @@
+building_giga_siegfried_global_bunker = {
+    base_cap_amount = 1
+    planetary_ftl_inhibitor = yes
+    can_build = no
+    position_priority = 0
+    potential = {
+        always = no
+    }
+    can_be_ruined = no
+    category = army
+    allow = {
+        has_upgraded_capital = yes
+    }
+    destroy_trigger = {
+        always = no
+    }
+    planet_modifier = {
+        planet_orbital_bombardment_damage = -0.25
+        job_maginot_bunker_officer_add = 1
+    }
+    army_modifier = {
+        army_starting_experience_add = 200
+        army_experience_gain_mult = 0.25
+        army_defense_damage_mult = 0.25
+        army_damage_mult = 0.15
+        army_morale_damage_mult = 0.15
+        army_attack_damage_mult = 0.15
+        army_attack_health_mult = 0.15
+        army_attack_morale_mult = 0.15
+        army_defense_health_mult = 0.25
+        army_defense_morale_mult = 0.25
+        army_health = 0.15
+        army_morale = 0.15
+        army_collateral_damage_mult = -0.15
+    }
+}

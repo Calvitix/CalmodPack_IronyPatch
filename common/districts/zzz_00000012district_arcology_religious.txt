@@ -2,13 +2,23 @@ district_arcology_religious = {
     base_buildtime = 600
     is_capped_by_modifier = no
     show_on_uncolonized = {
-        uses_district_set = city_world
+        OR = {
+            uses_district_set = city_world
+            uses_district_set = pdecocity
+            uses_district_set = pdcorpoarc
+            uses_district_set = pdmilarc
+        }
         from = {
             is_spiritualist = yes
         }
     }
     potential = {
-        uses_district_set = city_world
+        OR = {
+            uses_district_set = city_world
+            uses_district_set = pdecocity
+            uses_district_set = pdcorpoarc
+            uses_district_set = pdmilarc
+        }
         owner = {
             exists = owner
             is_spiritualist = yes

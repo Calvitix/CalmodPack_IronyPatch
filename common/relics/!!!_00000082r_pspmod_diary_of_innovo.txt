@@ -5,7 +5,7 @@ r_pspmod_diary_of_innovo = {
     resources = {
         category = relics
         cost = {
-            influence = 250
+            unity = 3000
         }
     }
     ai_weight = {

@@ -225,6 +225,17 @@ district_mining_uncapped = {
         potential = {
             exists = owner
             owner = {
+                has_tradition = tr_industry_compact_extraction_centers
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
                 has_tradition = tr_plentiful_industry_3
             }
             owner = {
@@ -280,12 +291,6 @@ district_mining_uncapped = {
         modifier = {
             planet_housing_add = 1
             job_fe_acolyte_mine_add = 1
-        }
-    }
-    ai_resource_production = {
-        minerals = 5
-        trigger = {
-            always = yes
         }
     }
 }

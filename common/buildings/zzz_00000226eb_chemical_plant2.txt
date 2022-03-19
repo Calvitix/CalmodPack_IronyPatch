@@ -1,6 +1,7 @@
 eb_chemical_plant2 = {
     base_buildtime = @b2_time
     can_build = no
+    exempt_from_ai_planet_specialization = no
     category = manufacturing
     potential = {
         NOT = {
@@ -55,7 +56,7 @@ eb_chemical_plant2 = {
                 }
             }
             alloys = 60
-            minerals = 2500
+            minerals = 1500
             sr_dark_matter = 25
         }
         cost = {
@@ -64,7 +65,7 @@ eb_chemical_plant2 = {
                     is_ai = yes
                 }
             }
-            minerals = 2500
+            minerals = 1500
             sr_dark_matter = 25
         }
         upkeep = {

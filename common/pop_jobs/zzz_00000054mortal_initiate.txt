@@ -65,18 +65,31 @@ mortal_initiate = {
             }
         }
         modifier = {
-            factor = 1.5
+            factor = 1.1
+            has_trait = trait_natural_sociologists
+        }
+        modifier = {
+            factor = 1.05
+            has_trait = trait_intelligent
+        }
+        modifier = {
+            factor = 1.05
+            has_trait = trait_psionic
+        }
+        modifier = {
+            factor = 0.7
+            has_trait = trait_enigmatic_intelligence_failed
+        }
+        modifier = {
+            factor = 1.05
             OR = {
-                has_trait = trait_thrifty
-                has_trait = trait_nuumismatic_administration
+                has_trait = trait_enigmatic_intelligence
+                has_trait = trait_enigmatic_intelligence_poor
             }
         }
         modifier = {
             factor = 1.5
-            OR = {
-                has_trait = trait_robot_domestic_protocols
-                has_trait = trait_charismatic
-            }
+            has_trait = trait_charismatic
         }
         modifier = {
             factor = 0.5
@@ -84,10 +97,11 @@ mortal_initiate = {
         }
         modifier = {
             factor = 1.1
-            OR = {
-                has_trait = trait_robot_propaganda_machines
-                has_trait = trait_traditional
-            }
+            has_trait = trait_traditional
+        }
+        modifier = {
+            factor = 0.9
+            has_trait = trait_presapient_proles
         }
         modifier = {
             factor = 1.2
@@ -105,7 +119,7 @@ mortal_initiate = {
             factor = 0.1
             has_ethic = ethic_materialist
             NOT = {
-                has_job = preacher
+                has_job = mortal_initiate
             }
         }
         modifier = {

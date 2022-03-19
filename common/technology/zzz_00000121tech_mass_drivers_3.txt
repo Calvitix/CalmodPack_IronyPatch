@@ -17,6 +17,7 @@ tech_mass_drivers_3 = {
             is_ai = yes
             OR = {
                 is_preferred_weapons = weapon_type_kinetic
+                is_preferred_weapons = weapon_type_explosive
             }
             has_two_weapons_1 = no
         }

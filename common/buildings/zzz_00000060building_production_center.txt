@@ -16,6 +16,10 @@ building_production_center = {
                 is_gestalt = no
             }
             buildings_no_motes = yes
+            and = {
+            has_any_industry_district = no
+                free_building_slots = 0
+            }
         }
     }
     allow = {
@@ -127,12 +131,6 @@ building_production_center = {
     }
     show_tech_unlock_if = {
         is_gestalt = yes
-    }
-    ai_resource_production = {
-        trigger = {
-            always = yes
-        }
-        alloys = 3
     }
     ai_resource_production = {
         trigger = {

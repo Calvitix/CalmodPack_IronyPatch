@@ -60,6 +60,7 @@ building_heritage_site = {
     show_tech_unlock_if = {
         is_gestalt = no
         is_megacorp = no
+        is_memorialist_empire = no
     }
     upgrades = {
         building_hypercomms_forum

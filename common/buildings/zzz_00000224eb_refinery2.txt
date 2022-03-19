@@ -1,6 +1,7 @@
 eb_refinery2 = {
-    base_buildtime = 480
+    base_buildtime = @b2_time
     can_build = no
+    exempt_from_ai_planet_specialization = no
     category = manufacturing
     potential = {
         NOT = {
@@ -56,7 +57,7 @@ eb_refinery2 = {
             }
             sr_dark_matter = 25
             alloys = 60
-            minerals = 2500
+            minerals = 1500
         }
         cost = {
             trigger = {
@@ -64,7 +65,7 @@ eb_refinery2 = {
                     is_ai = yes
                 }
             }
-            minerals = 2500
+            minerals = 1500
             sr_dark_matter = 25
         }
         upkeep = {

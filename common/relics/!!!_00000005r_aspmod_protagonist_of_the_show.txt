@@ -5,7 +5,7 @@ r_aspmod_protagonist_of_the_show = {
     resources = {
         category = relics
         cost = {
-            influence = 150
+            unity = 2500
         }
     }
     ai_weight = {

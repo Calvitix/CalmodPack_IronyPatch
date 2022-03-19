@@ -1,5 +1,6 @@
 building_refinery = {
     base_buildtime = @b2_time
+    exempt_from_ai_planet_specialization = no
     category = manufacturing
     potential = {
         NOT = {
@@ -120,11 +121,5 @@ building_refinery = {
             }
         }
         text = job_gas_refiner_drone_effect_desc
-    }
-    ai_resource_production = {
-        exotic_gases = 1
-        trigger = {
-            always = yes
-        }
     }
 }

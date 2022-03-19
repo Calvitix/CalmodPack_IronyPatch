@@ -12,6 +12,8 @@ district_nexus = {
             uses_district_set = hive_world
             uses_district_set = machine_world
             uses_district_set = shattered_ring_world
+            uses_district_set = pdmachinefactory
+            uses_district_set = pdmachinefort
         }
     }
     potential = {
@@ -24,6 +26,8 @@ district_nexus = {
             uses_district_set = hive_world
             uses_district_set = machine_world
             uses_district_set = shattered_ring_world
+            uses_district_set = pdmachinefactory
+            uses_district_set = pdmachinefort
         }
     }
     allow = {

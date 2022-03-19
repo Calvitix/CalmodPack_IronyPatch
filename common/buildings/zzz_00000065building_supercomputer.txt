@@ -130,14 +130,6 @@ building_supercomputer = {
     }
     ai_resource_production = {
         trigger = {
-            always = yes
-        }
-        physics_research = 3
-        society_research = 3
-        engineering_research = 3
-    }
-    ai_resource_production = {
-        trigger = {
             or = {
                 num_buildings = {
                     type = building_research_lab_1

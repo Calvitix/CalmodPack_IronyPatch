@@ -5,7 +5,7 @@ r_space_stone = {
     resources = {
         category = relics
         cost = {
-            influence = 50
+            unity = 1000
         }
     }
     ai_weight = {

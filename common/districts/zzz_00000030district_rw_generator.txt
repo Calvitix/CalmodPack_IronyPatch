@@ -283,10 +283,4 @@ district_rw_generator = {
             job_fe_acolyte_generator_add = 1
         }
     }
-    ai_resource_production = {
-        energy = 10
-        trigger = {
-            always = yes
-        }
-    }
 }

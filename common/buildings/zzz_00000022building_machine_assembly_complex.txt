@@ -25,46 +25,8 @@ building_machine_assembly_complex = {
         job_starnet_spice_melange_farmer_add = 2
         job_starnet_spice_melange_antifarmer_add = -2
     }
-    allow = {
-        hidden_trigger = {
-            OR = {
-                owner = {
-                    is_ai = no
-                }
-                AND = {
-                    num_buildings = {
-                        type = any
-                        value <= 14
-                    }
-                    NOT = {
-                        is_planet_class = pc_habitat
-                    }
-                    NOT = {
-                        is_planet_class = pc_pd_barren_cold_hab
-                    }
-                    NOT = {
-                        is_planet_class = pc_pd_barren_hab
-                    }
-                    NOT = {
-                        is_planet_class = pc_pd_frozen_hab
-                    }
-                    NOT = {
-                        is_planet_class = pc_pd_gas_giant_hab
-                    }
-                    NOT = {
-                        is_planet_class = pc_pd_hothouse_hab
-                    }
-                    NOT = {
-                        is_planet_class = pc_pd_toxic_hab
-                    }
-                    NOT = {
-                        is_planet_class = pc_pd_molten_hab
-                    }
-                }
-            }
-        }
-    }
     destroy_trigger = {
+        free_building_slots < 1
         exists = owner
         OR = {
             buildings_no_crystals = yes
@@ -75,21 +37,10 @@ building_machine_assembly_complex = {
                 owner = {
                     is_ai = yes
                 }
-                free_jobs < 1
-                OR = {
-                    num_buildings = {
-                        type = any
-                        value = 16
-                    }
-                    is_planet_class = pc_habitat
-                    is_planet_class = pc_pd_barren_cold_hab
-                    is_planet_class = pc_pd_barren_hab
-                    is_planet_class = pc_pd_frozen_hab
-                    is_planet_class = pc_pd_gas_giant_hab
-                    is_planet_class = pc_pd_hothouse_hab
-                    is_planet_class = pc_pd_toxic_hab
-                    is_planet_class = pc_pd_molten_hab
-                }
+                free_district_slots = 0
+                free_building_slots = 0
+                free_housing <= 0
+                free_jobs <= 0
             }
         }
     }

@@ -2,16 +2,29 @@ district_arcology_leisure = {
     base_buildtime = 600
     is_capped_by_modifier = no
     show_on_uncolonized = {
-        uses_district_set = city_world
+        OR = {
+            uses_district_set = city_world
+            uses_district_set = pdecocity
+            uses_district_set = pdmilarc
+            uses_district_set = pdcorpoarc
+        }
         from = {
             is_regular_empire = yes
         }
     }
     potential = {
-        uses_district_set = city_world
+        OR = {
+            uses_district_set = city_world
+            uses_district_set = pdecocity
+            uses_district_set = pdmilarc
+            uses_district_set = pdcorpoarc
+        }
         owner = {
             exists = owner
             is_regular_empire = yes
+            NOT = {
+                has_valid_civic = civic_urban_idyll
+            }
         }
     }
     conversion_ratio = 1

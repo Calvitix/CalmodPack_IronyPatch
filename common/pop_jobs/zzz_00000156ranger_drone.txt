@@ -22,7 +22,7 @@ ranger_drone = {
         category = planet_ranger
         produces = {
             waste = -22
-            food = 1
+            unity = 1
             society_research = 1
         }
         produces = {
@@ -32,6 +32,9 @@ ranger_drone = {
                 }
             }
             waste = -10
+        }
+        upkeep = {
+            minerals = 2
         }
     }
     planet_modifier = {

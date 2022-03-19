@@ -15,9 +15,9 @@ chronicle_drone = {
         }
     }
     resources = {
-        category = planet_researchers
+        category = planet_administrators
         produces = {
-            unity = 4
+            unity = 2
             society_research = 2
         }
         upkeep = {
@@ -29,18 +29,29 @@ chronicle_drone = {
         }
         upkeep = {
             trigger = {
-                species = {
-                    is_archetype = BIOLOGICAL
-                }
+                is_organic_species = yes
+                is_phototrophic = no
+                is_lithoid = no
             }
             energy = 1
             food = 2
         }
         upkeep = {
             trigger = {
-                species = {
-                    is_archetype = LITHOID
-                }
+                is_phototrophic = yes
+            }
+            energy = 1
+            food = 1
+        }
+        upkeep = {
+            trigger = {
+                has_phototrophic_energy_upkeep = yes
+            }
+            energy = 1
+        }
+        upkeep = {
+            trigger = {
+                is_lithoid = yes
             }
             energy = 1
             minerals = 2
@@ -48,6 +59,26 @@ chronicle_drone = {
     }
     planet_modifier = {
         planet_stability_add = 2
+        planet_amenities_no_happiness_add = 2
+    }
+    triggered_planet_modifier = {
+        potential = {
+            OR = {
+                has_trait = trait_robot_domestic_protocols
+                has_trait = trait_charismatic
+            }
+        }
+        modifier = {
+            planet_amenities_add = 0.4
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_trait = trait_repugnant
+        }
+        modifier = {
+            planet_amenities_add = -0.4
+        }
     }
     weight = {
         weight = @complex_drone_job_weight

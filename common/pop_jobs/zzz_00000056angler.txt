@@ -65,6 +65,10 @@ angler = {
             can_take_servant_job = yes
         }
         modifier = {
+            factor = 0.5
+            has_trait = trait_zombie
+        }
+        modifier = {
             factor = 1.5
             has_trait = trait_syncretic_proles
         }

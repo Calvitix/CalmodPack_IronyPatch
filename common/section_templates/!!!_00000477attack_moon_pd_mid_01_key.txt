@@ -1,0 +1,62 @@
+ship_section_template = {
+    key = "attack_moon_pd_mid_01_key"
+    ship_size = giga_massive_planet
+    fits_on_slot = "mid"
+    entity = "war_moon_hull_entity"
+    icon = "GFX_ship_part_core_mid"
+    prerequisites = {
+        "giga_tech_war_moon_sections"
+    }
+    component_slot = {
+        name = "LARGE_GUN_01"
+        template = "point_defence_turret"
+        locatorname = "missile_gun_01"
+    }
+    component_slot = {
+        name = "LARGE_GUN_02"
+        template = "point_defence_turret"
+        locatorname = "missile_gun_02"
+    }
+    component_slot = {
+        name = "LARGE_GUN_03"
+        template = "point_defence_turret"
+        locatorname = "missile_gun_03"
+    }
+    component_slot = {
+        name = "LARGE_GUN_04"
+        template = "point_defence_turret"
+        locatorname = "missile_gun_04"
+    }
+    component_slot = {
+        name = "LARGE_GUN_05"
+        template = "point_defence_turret"
+        locatorname = "missile_gun_01"
+    }
+    component_slot = {
+        name = "LARGE_GUN_06"
+        template = "point_defence_turret"
+        locatorname = "missile_gun_02"
+    }
+    component_slot = {
+        name = "LARGE_GUN_07"
+        template = "point_defence_turret"
+        locatorname = "missile_gun_03"
+    }
+    component_slot = {
+        name = "LARGE_GUN_08"
+        template = "point_defence_turret"
+        locatorname = "missile_gun_04"
+    }
+    component_slot = {
+        name = "LARGE_GUN_09"
+        template = "point_defence_turret"
+        locatorname = "missile_gun_01"
+    }
+    component_slot = {
+        name = "LARGE_GUN_10"
+        template = "point_defence_turret"
+        locatorname = "missile_gun_01"
+    }
+    large_utility_slots = 8
+    aux_utility_slots = 2
+}

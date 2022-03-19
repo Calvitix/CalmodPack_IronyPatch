@@ -1,0 +1,21 @@
+trait_evolved_machines = {
+    cost = 0
+    initial = no
+    randomized = no
+    species_potential_add = {
+        exists = from
+        from = {
+            has_origin = origin_derelict_evolution
+        }
+    }
+    allowed_archetypes = {
+        ROBOT
+        MACHINE
+    }
+    modifier = {
+        planet_pops_robotics_upkeep_mult = -0.15
+        pop_assembly_speed = 0.15
+        planet_pop_assemblers_upkeep_mult = -0.2
+        army_damage_mult = 0.3
+    }
+}

@@ -1,0 +1,153 @@
+@maginot_system_section_cost_alloys = 10000
+@maginot_system_section_upkeep_energy = 250
+@maginot_system_section_upkeep_alloys = 100
+ship_section_template = {
+    key = "system_strategic_defence_command_platform_bow2_01_key"
+    ship_size = strategic_defence_command_platform
+    fits_on_slot = "bow2"
+    entity = "giga_maginot_orbital_defence_platform_entity"
+    icon = "GFX_ship_part_core_mid"
+    prerequisites = {
+        giga_tech_maginot_systemcraft_upgrade
+    }
+    component_slot = {
+        name = "EXTRALARGE_GUN_01"
+        template = "maginot_extra_large_turret"
+        locatorname = "xl_turret_01"
+    }
+    component_slot = {
+        name = "EXTRALARGE_GUN_02"
+        template = "maginot_extra_large_turret"
+        locatorname = "xl_turret_02"
+    }
+    component_slot = {
+        name = "EXTRALARGE_GUN_03"
+        template = "maginot_extra_large_turret"
+        locatorname = "xl_turret_03"
+    }
+    component_slot = {
+        name = "EXTRALARGE_GUN_04"
+        template = "maginot_extra_large_turret"
+        locatorname = "xl_turret_04"
+    }
+    component_slot = {
+        name = "EXTRALARGE_GUN_05"
+        template = "giga_xl"
+        locatorname = "xl_turret_05"
+    }
+    component_slot = {
+        name = "EXTRALARGE_GUN_06"
+        template = "giga_xl"
+        locatorname = "xl_turret_06"
+    }
+    component_slot = {
+        name = "EXTRALARGE_GUN_07"
+        template = "giga_xl"
+        locatorname = "xl_turret_07"
+    }
+    component_slot = {
+        name = "EXTRALARGE_GUN_08"
+        template = "giga_xl"
+        locatorname = "xl_turret_08"
+    }
+    component_slot = {
+        name = "EXTRALARGE_GUN_09"
+        template = "giga_xl"
+        locatorname = "xl_turret_05"
+    }
+    component_slot = {
+        name = "EXTRALARGE_GUN_10"
+        template = "giga_xl"
+        locatorname = "xl_turret_06"
+    }
+    component_slot = {
+        name = "EXTRALARGE_GUN_11"
+        template = "giga_xl"
+        locatorname = "xl_turret_07"
+    }
+    component_slot = {
+        name = "EXTRALARGE_GUN_12"
+        template = "giga_xl"
+        locatorname = "xl_turret_08"
+    }
+    component_slot = {
+        name = "EXTRALARGE_GUN_13"
+        template = "giga_xl"
+        locatorname = "xl_turret_05"
+    }
+    component_slot = {
+        name = "EXTRALARGE_GUN_14"
+        template = "giga_xl"
+        locatorname = "xl_turret_06"
+    }
+    component_slot = {
+        name = "EXTRALARGE_GUN_15"
+        template = "giga_xl"
+        locatorname = "xl_turret_07"
+    }
+    component_slot = {
+        name = "EXTRALARGE_GUN_16"
+        template = "giga_xl"
+        locatorname = "xl_turret_08"
+    }
+    component_slot = {
+        name = "EXTRALARGE_GUN_17"
+        template = "giga_xl"
+        locatorname = "xl_turret_05"
+    }
+    component_slot = {
+        name = "EXTRALARGE_GUN_18"
+        template = "giga_xl"
+        locatorname = "xl_turret_06"
+    }
+    component_slot = {
+        name = "EXTRALARGE_GUN_19"
+        template = "giga_xl"
+        locatorname = "xl_turret_07"
+    }
+    component_slot = {
+        name = "EXTRALARGE_GUN_20"
+        template = "giga_xl"
+        locatorname = "xl_turret_08"
+    }
+    component_slot = {
+        name = "EXTRALARGE_GUN_21"
+        template = "giga_xl"
+        locatorname = "omega_gun_01"
+    }
+    component_slot = {
+        name = "EXTRALARGE_GUN_22"
+        template = "giga_xl"
+        locatorname = "omega_gun_01"
+    }
+    component_slot = {
+        name = "EXTRALARGE_GUN_23"
+        template = "giga_xl"
+        locatorname = "omega_gun_01"
+    }
+    component_slot = {
+        name = "EXTRALARGE_GUN_24"
+        template = "giga_xl"
+        locatorname = "omega_gun_01"
+    }
+    component_slot = {
+        name = "EXTRALARGE_GUN_25"
+        template = "giga_xl"
+        locatorname = "omega_gun_01"
+    }
+    large_utility_slots = 15
+    aux_utility_slots = 5
+    ai_weight = {
+        factor = 3000
+    }
+    resources = {
+        category = ships
+        cost = {
+            alloys = @maginot_system_section_cost_alloys
+        }
+        upkeep = {
+            energy = @maginot_system_section_upkeep_energy
+            alloys = @maginot_system_section_upkeep_alloys
+        }
+    }
+}

@@ -1,5 +1,6 @@
 building_hive_node = {
     base_buildtime = @b1_time
+    exempt_from_ai_planet_specialization = no
     category = unity
     potential = {
         exists = owner

@@ -1,0 +1,29 @@
+trait_molded = {
+    cost = 0
+    potential_crossbreeding_chance = 0.33
+    initial = no
+    randomized = no
+    species_potential_add = {
+        exists = from
+        from = {
+            has_origin = origin_exomycosis
+        }
+    }
+    species_possible_remove = {
+        always = no
+    }
+    species_possible_merge_add = {
+        always = no
+    }
+    forced_happiness = no
+    allowed_archetypes = {
+        BIOLOGICAL
+    }
+    species_class = {
+        FUN
+    }
+    modifier = {
+        pop_environment_tolerance = 0.1
+        army_morale_damage_mult = 0.3
+    }
+}

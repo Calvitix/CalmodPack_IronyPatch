@@ -5,6 +5,7 @@ primitive_farmer = {
     clothes_texture_index = 2
     possible_pre_triggers = {
         has_owner = yes
+        is_sapient = yes
     }
     possible = {
         owner = {

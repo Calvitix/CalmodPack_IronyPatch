@@ -1,0 +1,5 @@
+opinion_major_splinter_state_destroyed_flusion = {
+    opinion = {
+        base = -200
+    }
+}

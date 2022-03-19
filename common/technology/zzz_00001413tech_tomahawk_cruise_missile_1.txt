@@ -1,0 +1,53 @@
+tech_tomahawk_cruise_missile_1 = {
+    cost = @tier4cost3
+    area = engineering
+    tier = 4
+    category = {
+        voidcraft
+    }
+    prerequisites = {
+        "tech_missiles_5"
+    }
+    weight = @tier4weight3
+    prereqfor_desc = {
+        ship = {
+            title = "TECH_UNLOCK_CRUISEMISSILE_CONSTRUCTION_TITLE"
+            desc = "TECH_UNLOCK_CRUISEMISSILE_CONSTRUCTION_DESC"
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 10
+            any_neighbor_country = {
+                has_technology = tech_tomahawk_cruise_missile_1
+            }
+        }
+        modifier = {
+            factor = value:tech_weight_likelihood
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+    }
+    ai_weight = {
+        factor = 100
+        modifier = {
+            factor = value:tech_weight_likelihood
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+        modifier = {
+            factor = @favored_weapon_ai_tech_factor
+            is_preferred_weapons = weapon_type_explosive
+        }
+        modifier = {
+            factor = @disfavored_weapon_ai_tech_factor
+            NOT = {
+                is_preferred_weapons = weapon_type_explosive
+            }
+        }
+    }
+}

@@ -24,6 +24,7 @@ guardian_stellar_eradicator = {
         all_technology_module = {
         }
         exclusive_diplomacy_module = {
+            contact_rule = always
         }
     }
 }

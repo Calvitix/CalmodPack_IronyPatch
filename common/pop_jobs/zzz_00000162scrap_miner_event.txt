@@ -252,22 +252,6 @@ scrap_miner_event = {
     }
     triggered_planet_modifier = {
         potential = {
-            exists = owner
-            owner = {
-                has_ascension_perk = ap_synthetic_servants
-            }
-            owner = {
-                has_valid_civic = civic_agrarian_idyll
-                is_lithoid_empire = yes
-            }
-            is_robot_pop = yes
-        }
-        modifier = {
-            planet_amenities_add = 0.5
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
             owner = {
                 has_valid_civic = civic_agrarian_idyll
                 is_lithoid_empire = yes
@@ -323,21 +307,6 @@ scrap_miner_event = {
     }
     weight = {
         weight = @worker_job_weight
-        modifier = {
-            factor = 20
-            exists = owner
-            owner = {
-                has_ascension_perk = ap_synthetic_servants
-            }
-            OR = {
-                is_robot_pop = yes
-                NOT = {
-                    has_citizenship_type = {
-                        type = citizenship_full
-                    }
-                }
-            }
-        }
         modifier = {
             factor = 3
             OR = {
@@ -462,7 +431,6 @@ scrap_miner_event = {
             OR = {
                 OR = {
                     is_unemployed = yes
-                    has_job = servant_noble
                 }
                 has_job = "scrap_miner_event"
             }

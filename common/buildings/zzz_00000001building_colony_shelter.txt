@@ -28,7 +28,7 @@ building_colony_shelter = {
     }
     planet_modifier = {
         planet_housing_add = 3
-        planet_amenities_add = 3
+        planet_amenities_add = 7
         planet_max_buildings_add = @buildings_t1
     }
     triggered_planet_modifier = {
@@ -147,66 +147,6 @@ building_colony_shelter = {
                 value > 6
             }
             str_force_city_district = yes
-        }
-        job_starnet_spice_melange_farmer_add = -2
-        job_starnet_spice_melange_antifarmer_add = 2
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_ai = yes
-            }
-            num_buildings = {
-                type = building_stronghold
-                value > 0
-            }
-            str_force_stronghold = yes
-        }
-        job_starnet_spice_melange_farmer_add = -2
-        job_starnet_spice_melange_antifarmer_add = 2
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_ai = yes
-            }
-            num_buildings = {
-                type = building_stronghold
-                value > 2
-            }
-            str_force_stronghold = yes
-        }
-        job_starnet_spice_melange_farmer_add = -2
-        job_starnet_spice_melange_antifarmer_add = 2
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_ai = yes
-            }
-            num_buildings = {
-                type = building_stronghold
-                value > 4
-            }
-            str_force_stronghold = yes
-        }
-        job_starnet_spice_melange_farmer_add = -2
-        job_starnet_spice_melange_antifarmer_add = 2
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_ai = yes
-            }
-            num_buildings = {
-                type = building_stronghold
-                value > 6
-            }
-            str_force_stronghold = yes
         }
         job_starnet_spice_melange_farmer_add = -2
         job_starnet_spice_melange_antifarmer_add = 2

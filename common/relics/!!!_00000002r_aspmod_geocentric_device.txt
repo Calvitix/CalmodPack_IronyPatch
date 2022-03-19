@@ -6,7 +6,7 @@ r_aspmod_geocentric_device = {
         category = relics
         cost = {
             energy = 50000
-            influence = 1000
+            unity = 50000
         }
     }
     ai_weight = {

@@ -102,6 +102,10 @@ turtle_miner_gestalt = {
             has_trait = trait_weak
         }
         modifier = {
+            factor = 0.5
+            has_trait = trait_zombie
+        }
+        modifier = {
             factor = 1.4
             has_trait = trait_presapient_proles
         }

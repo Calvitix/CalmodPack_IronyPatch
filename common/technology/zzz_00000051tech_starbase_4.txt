@@ -43,7 +43,7 @@ tech_starbase_4 = {
         }
         modifier = {
             factor = 1.25
-            has_tradition = tr_supremacy_adopt
+            has_tradition = tr_unyielding_adopt
         }
         modifier = {
             factor = value:tech_weight_likelihood

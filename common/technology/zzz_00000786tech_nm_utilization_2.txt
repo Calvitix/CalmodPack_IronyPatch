@@ -1,0 +1,25 @@
+tech_nm_utilization_2 = {
+    area = physics
+    cost = @tier7cost1
+    weight = @gigatier6weight3
+    tier = 5
+    is_rare = yes
+    category = {
+        particles
+    }
+    prerequisites = {
+        "tech_nm_utilization_1"
+        "tech_abstract_4"
+        "tech_non_local_r_i"
+    }
+    ai_weight = {
+        factor = @ehof_t1_weight
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_field_manipulation"
+            }
+        }
+    }
+}

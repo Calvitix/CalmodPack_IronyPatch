@@ -2,10 +2,16 @@ district_arcology_arms_industry = {
     base_buildtime = 600
     is_capped_by_modifier = no
     show_on_uncolonized = {
-        uses_district_set = city_world
+        OR = {
+            uses_district_set = city_world
+            uses_district_set = pdmilarc
+        }
     }
     potential = {
-        uses_district_set = city_world
+        OR = {
+            uses_district_set = city_world
+            uses_district_set = pdmilarc
+        }
     }
     conversion_ratio = 1
     convert_to = {

@@ -91,6 +91,10 @@ crystal_miner = {
             has_trait = trait_weak
         }
         modifier = {
+            factor = 0.5
+            has_trait = trait_zombie
+        }
+        modifier = {
             factor = 3
             OR = {
                 has_trait = trait_robust

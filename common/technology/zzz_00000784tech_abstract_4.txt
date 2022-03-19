@@ -1,0 +1,29 @@
+tech_abstract_4 = {
+    area = physics
+    cost = @tier6cost3
+    weight = @gigatier6weight3
+    tier = 5
+    is_rare = yes
+    category = {
+        particles
+    }
+    prerequisites = {
+        "tech_u_r_e_t"
+        "tech_ssn_det"
+        "tech_hardlight_c_u"
+    }
+    gateway = ehof
+    modifier = {
+        planet_researchers_physics_research_produces_mult = 0.075
+    }
+    ai_weight = {
+        factor = @ehof_t1_weight
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+    }
+}

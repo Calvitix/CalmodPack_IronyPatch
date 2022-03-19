@@ -60,6 +60,10 @@ tech_ecological_adaptation = {
             }
         }
         modifier = {
+            factor = 5
+            has_origin = origin_life_seeded
+        }
+        modifier = {
             factor = 2
             is_ai = no
         }

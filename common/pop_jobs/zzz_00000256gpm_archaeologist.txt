@@ -16,9 +16,9 @@ gpm_archaeologist = {
     resources = {
         category = planet_researchers
         produces = {
-            physics_research = 5
-            engineering_research = 5
-            society_research = 10
+            physics_research = 10
+            engineering_research = 10
+            society_research = 20
         }
         upkeep = {
             consumer_goods = 1.5
@@ -26,12 +26,6 @@ gpm_archaeologist = {
     }
     weight = {
         weight = @specialist_job_weight
-        modifier = {
-            factor = 0.1
-            planet = {
-                num_pops <= 3
-            }
-        }
         modifier = {
             factor = 0.2
             has_citizenship_rights = no
@@ -120,6 +114,22 @@ gpm_archaeologist = {
         modifier = {
             factor = 1.5
             has_trait = trait_void_dweller_1
+            exists = planet
+            planet = {
+                is_planet_class = pc_habitat
+            }
+        }
+        modifier = {
+            factor = 0.85
+            has_trait = trait_void_dweller_1
+            exists = planet
+            planet = {
+                is_artificial = no
+            }
+        }
+        modifier = {
+            factor = 1.5
+            has_trait = trait_necrophage
         }
     }
 }

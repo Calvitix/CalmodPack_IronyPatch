@@ -7,6 +7,9 @@ building_system_conflux = {
         exists = owner
         owner = {
             is_machine_empire = yes
+            NOT = {
+                has_valid_civic = civic_machine_servitor
+            }
         }
     }
     allow = {
@@ -17,7 +20,10 @@ building_system_conflux = {
         OR = {
             buildings_no_crystals = yes
             owner = {
-                is_machine_empire = no
+                OR = {
+                    is_machine_empire = no
+                    has_valid_civic = civic_machine_servitor
+                }
             }
         }
     }
@@ -38,6 +44,20 @@ building_system_conflux = {
             rare_crystals = @b3_rare_upkeep
         }
     }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+            owner = {
+                has_tradition = tr_plentiful_aspiration_3
+            }
+        }
+        modifier = {
+            job_coordinator_add = 4
+        }
+    }
     planet_modifier = {
         job_coordinator_add = @b3_jobs
     }
@@ -49,5 +69,8 @@ building_system_conflux = {
     }
     show_tech_unlock_if = {
         is_machine_empire = yes
+        NOT = {
+            has_valid_civic = civic_machine_servitor
+        }
     }
 }

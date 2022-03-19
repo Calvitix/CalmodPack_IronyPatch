@@ -3,10 +3,20 @@ district_arcology_housing = {
     is_capped_by_modifier = no
     exempt_from_ai_planet_specialization = yes
     show_on_uncolonized = {
-        uses_district_set = city_world
+        OR = {
+            uses_district_set = city_world
+            uses_district_set = pdecocity
+            uses_district_set = pdmilarc
+            uses_district_set = pdcorpoarc
+        }
     }
     potential = {
-        uses_district_set = city_world
+        OR = {
+            uses_district_set = city_world
+            uses_district_set = pdecocity
+            uses_district_set = pdmilarc
+            uses_district_set = pdcorpoarc
+        }
     }
     conversion_ratio = 1
     convert_to = {

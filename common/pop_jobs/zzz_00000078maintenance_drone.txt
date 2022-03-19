@@ -48,9 +48,23 @@ maintenance_drone = {
         }
     }
     weight = {
-        weight = @maintenance_drone_job
+        weight = @clerk_job_weight
         modifier = {
-            factor = 1.1
+            add = @maintenance_drone_job
+            exists = owner
+            owner = {
+                is_ai = no
+            }
+        }
+        modifier = {
+            add = -2.2
+            exists = owner
+            owner = {
+                is_ai = no
+            }
+        }
+        modifier = {
+            factor = 2
             OR = {
                 has_trait = trait_robot_emotion_emulators
                 has_trait = trait_charismatic
@@ -73,7 +87,63 @@ maintenance_drone = {
             has_trait = trait_cybernetic
         }
         modifier = {
+            factor = 1.1
+            OR = {
+                has_trait = trait_traditional
+                has_trait = trait_robot_propaganda_machines
+            }
+            exists = owner
+            owner = {
+                has_valid_civic = civic_machine_maintenance_protocols
+            }
+        }
+        modifier = {
+            factor = 0.85
+            has_trait = trait_necrophage
+        }
+        modifier = {
+            factor = 1000
+            exists = owner
+            owner = {
+                is_ai = no
+            }
+            NOT = {
+                has_job = maintenance_drone
+            }
+            planet = {
+                free_amenities < 3
+            }
+        }
+        modifier = {
+            factor = 1000
+            exists = owner
+            owner = {
+                is_ai = no
+            }
+            has_job = maintenance_drone
+            planet = {
+                free_amenities < 8
+            }
+        }
+        modifier = {
+            factor = 0.1
+            exists = owner
+            owner = {
+                is_ai = no
+            }
+            NOT = {
+                has_job = maintenance_drone
+            }
+            planet = {
+                free_amenities > 5
+            }
+        }
+        modifier = {
             factor = 0
+            exists = owner
+            owner = {
+                is_ai = yes
+            }
             planet = {
                 habitability = {
                     who = root
@@ -90,9 +160,28 @@ maintenance_drone = {
         }
         modifier = {
             factor = 10000
-            years_passed > 2
+            exists = owner
             owner = {
                 is_ai = yes
+            }
+            years_passed > 2
+        }
+        modifier = {
+            factor = 2
+            planet = {
+                free_amenities <= -1
+            }
+        }
+        modifier = {
+            factor = 1.5
+            planet = {
+                free_amenities <= -5
+            }
+        }
+        modifier = {
+            factor = 1.5
+            planet = {
+                free_amenities <= -10
             }
         }
         modifier = {
@@ -112,15 +201,18 @@ maintenance_drone = {
         }
         modifier = {
             factor = 1000
+            NOT = {
+                has_job = maintenance_drone
+            }
             planet = {
-                free_amenities < 0
+                free_amenities < 3
             }
         }
         modifier = {
             factor = 1000
             has_job = maintenance_drone
             planet = {
-                free_amenities < 6
+                free_amenities < 8
             }
         }
     }

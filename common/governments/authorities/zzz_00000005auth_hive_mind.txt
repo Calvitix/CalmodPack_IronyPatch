@@ -20,6 +20,10 @@ auth_hive_mind = {
                 host_has_dlc = "Utopia"
             }
         }
+        modifier = {
+            factor = 2
+            host_has_dlc = "Utopia"
+        }
     }
     traits = {
         trait = trait_hive_mind

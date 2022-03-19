@@ -1,13 +1,12 @@
-@activation_cost = 150
-@triumph_duration = 3600
+@triumph_duration_veryshort = 900
 gpm_r_experimental_weapon = {
-    activation_duration = @triumph_duration
+    activation_duration = @triumph_duration_veryshort
     portrait = "GFX_gpm_r_experimental_weapon"
     sound = "relic_activation_generic"
     resources = {
         category = relics
         cost = {
-            influence = @activation_cost
+            energy = 10000
         }
     }
     ai_weight = {
@@ -17,19 +16,20 @@ gpm_r_experimental_weapon = {
         potential = {
             always = yes
         }
-        ship_fire_rate_mult = 0.1
+        ship_weapon_range_mult = 0.2
+        ship_engagement_range_mult = 0.2
     }
     score = 1000
     active_effect = {
         add_modifier = {
             modifier = "gpm_r_experimental_weapon_active_effect"
-            days = @triumph_duration
+            days = @triumph_duration_veryshort
         }
-        custom_tooltip = relic_triumph_cooldown
+        custom_tooltip = relic_triumph_cooldown_veryshort
         hidden_effect = {
             add_modifier = {
                 modifier = "relic_activation_cooldown"
-                days = @triumph_duration
+                days = @triumph_duration_veryshort
             }
         }
     }

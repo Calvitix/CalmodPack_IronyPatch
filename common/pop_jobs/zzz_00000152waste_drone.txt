@@ -14,15 +14,7 @@ waste_drone = {
         category = planet_waste
         produces = {
             waste = -42
-        }
-        produces = {
-            trigger = {
-                exists = owner
-                owner = {
-                    has_tradition = tr_environmentalism_waste_management
-                }
-            }
-            waste = -10
+            unity = 1
         }
         produces = {
             trigger = {
@@ -96,9 +88,6 @@ waste_drone = {
             }
             energy = 1
         }
-    }
-    planet_modifier = {
-        planet_amenities_no_happiness_add = 1
     }
     triggered_planet_modifier = {
         potential = {

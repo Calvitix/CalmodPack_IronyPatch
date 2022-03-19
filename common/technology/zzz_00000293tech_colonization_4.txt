@@ -36,7 +36,7 @@ tech_colonization_4 = {
         }
     }
     ai_weight = {
-        factor = 1.5
+        factor = 150
         factor = 25
         modifier = {
             factor = 1.25

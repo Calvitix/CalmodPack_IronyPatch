@@ -2,6 +2,12 @@ trait_td_rbot_mechanical_organism = {
     cost = -4
     sorting_priority = 9
     icon = "gfx/interface/icons/traits/trait_td_semimechanized.dds"
+    species_potential_add = {
+        always = no
+    }
+    species_possible_remove = {
+        always = no
+    }
     opposites = {
         "trait_td_rbot_brain_in_a_vat"
         "trait_td_rbot_infinity_machines"

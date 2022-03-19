@@ -6,6 +6,9 @@ soldier = {
     country_modifier = {
         country_naval_cap_add = 4
     }
+    resources = {
+        category = planet_soldiers
+    }
     triggered_country_modifier = {
         potential = {
             exists = planet
@@ -109,18 +112,30 @@ soldier = {
         }
         modifier = {
             factor = 1.1
+            owner = {
+                has_civic = civic_citizen_service
+            }
             has_trait = trait_presapient_proles
         }
         modifier = {
             factor = 1.1
+            owner = {
+                has_civic = civic_citizen_service
+            }
             has_trait = trait_brainslug
         }
         modifier = {
             factor = 1.05
+            owner = {
+                has_civic = civic_citizen_service
+            }
             has_trait = trait_presapient_natural_intellectuals
         }
         modifier = {
             factor = 1.05
+            owner = {
+                has_civic = civic_citizen_service
+            }
             OR = {
                 has_trait = trait_robust
                 has_trait = trait_robot_efficient_processors
@@ -128,10 +143,16 @@ soldier = {
         }
         modifier = {
             factor = 1.05
+            owner = {
+                has_civic = civic_citizen_service
+            }
             has_trait = trait_nerve_stapled
         }
         modifier = {
             factor = 1.1
+            owner = {
+                has_civic = civic_citizen_service
+            }
             OR = {
                 has_trait = trait_robot_propaganda_machines
                 has_trait = trait_traditional
@@ -139,6 +160,9 @@ soldier = {
         }
         modifier = {
             factor = 0.9
+            owner = {
+                has_civic = civic_citizen_service
+            }
             has_trait = trait_quarrelsome
         }
         modifier = {

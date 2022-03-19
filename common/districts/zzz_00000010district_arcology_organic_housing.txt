@@ -2,13 +2,21 @@ district_arcology_organic_housing = {
     base_buildtime = 600
     is_capped_by_modifier = no
     show_on_uncolonized = {
-        uses_district_set = city_world
+        OR = {
+            uses_district_set = city_world
+            uses_district_set = pdecocity
+            uses_district_set = pdmilarc
+        }
         from = {
             has_valid_civic = civic_machine_servitor
         }
     }
     potential = {
-        uses_district_set = city_world
+        OR = {
+            uses_district_set = city_world
+            uses_district_set = pdecocity
+            uses_district_set = pdmilarc
+        }
         owner = {
             exists = owner
             has_valid_civic = civic_machine_servitor

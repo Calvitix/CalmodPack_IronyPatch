@@ -9,7 +9,7 @@ tech_gpm_precursor_prison_planet_discovery_2 = {
     ai_update_type = all
     weight = 1
     modifier = {
-        pop_factions_influence_produces_add = 0.75
+        pop_factions_unity_produces_mult = 0.2
     }
     weight_modifier = {
         factor = 0

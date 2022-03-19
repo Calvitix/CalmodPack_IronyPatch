@@ -1,6 +1,6 @@
-@triumph_duration = 3600
+@triumph_duration_veryshort = 900
 gpm_r_fallout_emergency_replicator = {
-    activation_duration = @triumph_duration
+    activation_duration = @triumph_duration_veryshort
     portrait = "GFX_gpm_r_fallout_emergency_replicator"
     sound = "relic_activation_the_galatron"
     resources = {
@@ -62,11 +62,11 @@ gpm_r_fallout_emergency_replicator = {
                 consumer_goods = 1500
             }
         }
-        custom_tooltip = relic_triumph_cooldown
+        custom_tooltip = relic_triumph_cooldown_veryshort
         hidden_effect = {
             add_modifier = {
                 modifier = "relic_activation_cooldown"
-                days = @triumph_duration
+                days = @triumph_duration_veryshort
             }
         }
     }

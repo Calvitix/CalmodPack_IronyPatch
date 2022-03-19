@@ -7,7 +7,7 @@ r_pdarchive = {
     resources = {
         category = relics
         cost = {
-            influence = @activation_cost
+            unity = @activation_cost
         }
     }
     triggered_country_modifier = {

@@ -7,7 +7,6 @@ building_am_civics_stellar_banking_institute = {
         owner = {
             has_valid_civic = civic_am_civics_banking_giant
         }
-        has_upgraded_capital = yes
         is_capital = yes
         NOT = {
             has_modifier = slave_colony
@@ -21,8 +20,8 @@ building_am_civics_stellar_banking_institute = {
                 }
             }
             has_modifier = slave_colony
+            is_capital = no
         }
-        is_capital = no
     }
     resources = {
         category = planet_buildings

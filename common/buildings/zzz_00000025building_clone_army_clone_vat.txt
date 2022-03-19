@@ -20,8 +20,14 @@ building_clone_army_clone_vat = {
                     is_ai = yes
                 }
             }
-            NOT = {
+            NOR = {
                 has_building = building_clone_army_clone_vat
+                AND = {
+                    exists = assembling_species
+                    assembling_species = {
+                        is_robotic_species = yes
+                    }
+                }
             }
         }
     }
@@ -124,6 +130,20 @@ building_clone_army_clone_vat = {
     }
     triggered_desc = {
         text = building_clone_army_clone_vat_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            OR = {
+                has_building = building_robot_assembly_plant
+                AND = {
+                    exists = assembling_species
+                    assembling_species = {
+                        is_robotic_species = yes
+                    }
+                }
+            }
+        }
+        text = tooltip_organic_and_artificial_assembly_warning
     }
     is_essential = yes
 }

@@ -72,10 +72,6 @@ culture_worker = {
             has_trait = trait_presapient_natural_intellectuals
         }
         modifier = {
-            factor = 2
-            has_trait = trait_erudite
-        }
-        modifier = {
             factor = 1.5
             OR = {
                 has_trait = trait_robust

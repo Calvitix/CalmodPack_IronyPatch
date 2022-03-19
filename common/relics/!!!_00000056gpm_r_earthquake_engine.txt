@@ -16,12 +16,13 @@ gpm_r_earthquake_engine = {
         potential = {
             always = yes
         }
+        planet_non_artificial_max_districts_add = 2
         district_mining_max = 4
     }
     score = 1000
     active_effect = {
         add_resource = {
-            minerals = 15000
+            minerals = 20000
         }
         custom_tooltip = relic_triumph_cooldown
         hidden_effect = {

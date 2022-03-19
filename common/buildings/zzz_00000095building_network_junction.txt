@@ -7,6 +7,9 @@ building_network_junction = {
         exists = owner
         owner = {
             is_machine_empire = yes
+            NOT = {
+                has_valid_civic = civic_machine_servitor
+            }
         }
     }
     allow = {
@@ -17,7 +20,10 @@ building_network_junction = {
         OR = {
             buildings_no_crystals = yes
             owner = {
-                is_machine_empire = no
+                OR = {
+                    is_machine_empire = no
+                    has_valid_civic = civic_machine_servitor
+                }
             }
         }
     }
@@ -38,6 +44,20 @@ building_network_junction = {
             rare_crystals = @b2_rare_upkeep
         }
     }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+            owner = {
+                has_tradition = tr_plentiful_aspiration_3
+            }
+        }
+        modifier = {
+            job_coordinator_add = 3
+        }
+    }
     planet_modifier = {
         job_coordinator_add = @b2_jobs
     }
@@ -52,5 +72,8 @@ building_network_junction = {
     }
     show_tech_unlock_if = {
         is_machine_empire = yes
+        NOT = {
+            has_valid_civic = civic_machine_servitor
+        }
     }
 }

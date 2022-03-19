@@ -38,7 +38,6 @@ tech_genome_mapping = {
         }
     }
     ai_weight = {
-        factor = 150
         factor = @pop_growth_tech_ai_factor
         modifier = {
             factor = 500

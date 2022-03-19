@@ -2,6 +2,12 @@ trait_td_shadow_creatures = {
     cost = 0
     potential_crossbreeding_chance = 0
     sorting_priority = 9
+    species_potential_add = {
+        always = no
+    }
+    species_possible_remove = {
+        always = no
+    }
     opposites = {
         "trait_td_mirror_images"
         "trait_td_ghosts"

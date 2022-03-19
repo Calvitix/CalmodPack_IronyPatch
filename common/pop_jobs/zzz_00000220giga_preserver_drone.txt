@@ -11,18 +11,24 @@ giga_preserver_drone = {
         category = planet_researchers
         produces = {
             society_research = 2
-            unity = 2
+            unity = 3
         }
         upkeep = {
             food = 1
             trigger = {
-                is_hive_empire = yes
+                exists = owner
+                owner = {
+                    is_hive_empire = yes
+                }
             }
         }
         upkeep = {
             energy = 1
             trigger = {
-                is_machine_empire = yes
+                exists = owner
+                owner = {
+                    is_machine_empire = yes
+                }
             }
         }
     }

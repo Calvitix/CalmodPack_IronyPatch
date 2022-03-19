@@ -1,13 +1,13 @@
-@activation_cost = 150
-@triumph_duration = 3600
+@activation_cost = 3000
+@triumph_duration_short = 1800
 gpm_r_cloaking_device = {
-    activation_duration = @triumph_duration
+    activation_duration = @triumph_duration_short
     portrait = "GFX_gpm_r_cloaking_device"
     sound = "relic_activation_isolated_contingency_core"
     resources = {
         category = relics
         cost = {
-            influence = @activation_cost
+            unity = @activation_cost
         }
     }
     ai_weight = {
@@ -17,7 +17,7 @@ gpm_r_cloaking_device = {
         potential = {
             always = yes
         }
-        spy_network_daily_value_mult = 0.3
+        add_base_country_intel = 30
         show_only_custom_tooltip = no
         custom_tooltip = "gpm_r_cloaking_device_passive_effect_tooltip"
     }
@@ -25,13 +25,13 @@ gpm_r_cloaking_device = {
     active_effect = {
         add_modifier = {
             modifier = "gpm_r_cloaking_device_active_effect"
-            days = @triumph_duration
+            days = @triumph_duration_short
         }
-        custom_tooltip = relic_triumph_cooldown
+        custom_tooltip = relic_triumph_cooldown_short
         hidden_effect = {
             add_modifier = {
                 modifier = "relic_activation_cooldown"
-                days = @triumph_duration
+                days = @triumph_duration_short
             }
         }
     }

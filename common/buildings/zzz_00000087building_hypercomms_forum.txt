@@ -60,5 +60,6 @@ building_hypercomms_forum = {
     show_tech_unlock_if = {
         is_gestalt = no
         is_megacorp = no
+        is_memorialist_empire = no
     }
 }

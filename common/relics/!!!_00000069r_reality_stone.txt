@@ -5,7 +5,7 @@ r_reality_stone = {
     resources = {
         category = relics
         cost = {
-            influence = 100
+            unity = 2000
         }
     }
     ai_weight = {
@@ -24,7 +24,7 @@ r_reality_stone = {
             days = 3600
         }
         custom_tooltip = reality_stone_activated
-        custom_tooltip = soul_stone_triumph_cooldown
+        custom_tooltip = relic_triumph_cooldown
         hidden_effect = {
             add_modifier = {
                 modifier = "infinity_stone_relic_activation_cooldown"

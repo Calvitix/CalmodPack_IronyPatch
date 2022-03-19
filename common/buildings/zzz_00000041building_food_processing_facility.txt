@@ -8,17 +8,32 @@ building_food_processing_facility = {
             is_planet_class = pc_machine
             has_modifier = resort_colony
         }
+        OR = {
+            owner = {
+                is_ai = no
+            }
+            has_any_farming_district_or_buildings = yes
+        }
     }
     destroy_trigger = {
         exists = owner
         OR = {
             str_food_processing_destroy = yes
-            owner = {
-                is_ai = yes
-                country_uses_food = no
+            and = {
+                owner = {
+                    is_ai = yes
+                    country_uses_food = no
+                }
+                free_building_slots = 0
             }
             is_planet_class = pc_machine
             has_modifier = resort_colony
+            AND = {
+                owner = {
+                    is_ai = yes
+                }
+                has_any_farming_district_or_buildings = no
+            }
         }
     }
     allow = {
@@ -159,18 +174,30 @@ building_food_processing_facility = {
     ai_resource_production = {
         food = 10
         trigger = {
-            str_num_districts_farming = {
-                operator = > num
-                 = 3
+            or = {
+                str_num_districts_farming = {
+                    operator = > num
+                     = 3
+                }
+                str_num_buildings_farming = {
+                    operator = > num
+                     = 3
+                }
             }
         }
     }
     ai_resource_production = {
         food = 20
         trigger = {
-            str_num_districts_farming = {
-                operator = > num
-                 = 5
+            or = {
+                str_num_districts_farming = {
+                    operator = > num
+                     = 5
+                }
+                str_num_buildings_farming = {
+                    operator = > num
+                     = 3
+                }
             }
         }
     }

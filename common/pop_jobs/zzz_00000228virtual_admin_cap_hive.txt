@@ -10,22 +10,20 @@ virtual_admin_cap_hive = {
     }
     possible_precalc = can_fill_drone_job
     resources = {
-        category = planet_synapse_drones
+        category = planet_administrators
         produces = {
-            unity = 3
+            unity = 4
         }
         upkeep = {
             trigger = {
                 is_lithoid = no
             }
-            food = 2
             energy = 2
         }
         upkeep = {
             trigger = {
                 is_lithoid = yes
             }
-            minerals = 2
             energy = 2
         }
     }
@@ -51,26 +49,6 @@ virtual_admin_cap_hive = {
             planet_amenities_no_happiness_add = 2
         }
     }
-    country_modifier = {
-        country_admin_cap_add = 10
-    }
-    triggered_country_modifier = {
-        potential = {
-            exists = planet
-            planet = {
-                exists = sector
-                sector = {
-                    exists = leader
-                    leader = {
-                        has_trait = leader_trait_mindfulness
-                    }
-                }
-            }
-        }
-        modifier = {
-            country_admin_cap_add = 2
-        }
-    }
     weight = {
         weight = @synapse_drone_job_weight
         modifier = {
@@ -79,6 +57,10 @@ virtual_admin_cap_hive = {
                 has_trait = trait_traditional
                 has_trait = trait_robot_propaganda_machines
             }
+        }
+        modifier = {
+            factor = 1.5
+            has_trait = trait_necrophage
         }
     }
 }

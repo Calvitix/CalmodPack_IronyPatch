@@ -1,0 +1,89 @@
+GT_pc_tundra_habitability = {
+    cost = @tier2cost3
+    area = society
+    tier = 2
+    category = {
+        new_worlds
+    }
+    is_rare = yes
+    prerequisites = {
+        "tech_frontier_health"
+    }
+    weight = @tier4weight3
+    modifier = {
+        pc_tundra_habitability = 0.05
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                any_planet_within_border = {
+                    is_planet_class = pc_tundra
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            species = {
+                has_trait = trait_pc_tundra_preference
+            }
+        }
+        factor = 0.1
+        modifier = {
+            factor = @ap_technological_ascendancy_rare_tech
+            has_ascension_perk = ap_technological_ascendancy
+        }
+        modifier = {
+            factor = 0
+            has_technology = GT_pc_desert_habitability
+        }
+        modifier = {
+            factor = 0
+            has_technology = GT_pc_arid_habitability
+        }
+        modifier = {
+            factor = 0
+            has_technology = GT_pc_savannah_habitability
+        }
+        modifier = {
+            factor = 0
+            has_technology = GT_pc_tropical_habitability
+        }
+        modifier = {
+            factor = 0
+            has_technology = GT_pc_continental_habitability
+        }
+        modifier = {
+            factor = 0
+            has_technology = GT_pc_ocean_habitability
+        }
+        modifier = {
+            factor = 0
+            has_technology = GT_pc_tundra_habitability
+        }
+        modifier = {
+            factor = 0
+            has_technology = GT_pc_arctic_habitability
+        }
+        modifier = {
+            factor = 0
+            has_technology = GT_pc_alpine_habitability
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+    }
+}

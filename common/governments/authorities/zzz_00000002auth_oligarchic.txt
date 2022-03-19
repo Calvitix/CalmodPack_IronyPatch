@@ -17,6 +17,11 @@ auth_oligarchic = {
     country_modifier = {
         pop_factions_produces_mult = 0.15
     }
+    random_weight = {
+        modifier = {
+            factor = 2
+        }
+    }
     tags = {
         AUTHORITY_ELECTION_OLIGARCHIC
     }

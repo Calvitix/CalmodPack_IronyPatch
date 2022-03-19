@@ -20,6 +20,7 @@ district_generator = {
                 has_modifier = urban_idyll_colony
             }
         }
+        str_energy_district_allow = yes
     }
     conversion_ratio = 1
     convert_to = {
@@ -158,6 +159,17 @@ district_generator = {
         potential = {
             exists = owner
             owner = {
+                has_tradition = tr_industry_compact_extraction_centers
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
                 has_tradition = tr_plentiful_kleptocracy_finish
             }
             owner = {
@@ -213,12 +225,6 @@ district_generator = {
         modifier = {
             planet_housing_add = 1
             job_fe_acolyte_generator_add = 1
-        }
-    }
-    ai_resource_production = {
-        energy = 3
-        trigger = {
-            always = yes
         }
     }
     ai_resource_production = {

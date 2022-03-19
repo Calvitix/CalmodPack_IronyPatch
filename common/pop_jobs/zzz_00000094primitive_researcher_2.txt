@@ -5,6 +5,7 @@ primitive_researcher_2 = {
     clothes_texture_index = 3
     possible_pre_triggers = {
         has_owner = yes
+        is_sapient = yes
     }
     possible = {
         owner = {
@@ -42,7 +43,7 @@ primitive_researcher_2 = {
         }
     }
     weight = {
-        weight = 2
+        weight = @specialist_job_weight
         modifier = {
             factor = 6
             is_materialist = yes

@@ -1,0 +1,128 @@
+@maginot_planet_section_cost_alloys = 1000
+@maginot_planet_section_upkeep_energy = 25
+@maginot_planet_section_upkeep_alloys = 10
+ship_section_template = {
+    key = "planet_strategic_defence_command_platform_mid1_01_key"
+    ship_size = strategic_defence_command_platform
+    fits_on_slot = "mid1"
+    entity = "giga_maginot_orbital_defence_platform_entity"
+    icon = "GFX_ship_part_core_mid"
+    prerequisites = {
+        giga_tech_maginot_planetcraft_upgrade
+    }
+    component_slot = {
+        name = "LARGE_GUN_01"
+        template = "maginot_large_turret"
+        locatorname = "large_turret_01"
+    }
+    component_slot = {
+        name = "LARGE_GUN_02"
+        template = "maginot_large_turret"
+        locatorname = "large_turret_02"
+    }
+    component_slot = {
+        name = "LARGE_GUN_03"
+        template = "maginot_large_turret"
+        locatorname = "large_turret_03"
+    }
+    component_slot = {
+        name = "LARGE_GUN_04"
+        template = "maginot_large_turret"
+        locatorname = "large_turret_04"
+    }
+    component_slot = {
+        name = "LARGE_GUN_05"
+        template = "maginot_large_turret"
+        locatorname = "large_turret_05"
+    }
+    component_slot = {
+        name = "LARGE_GUN_06"
+        template = "maginot_large_turret"
+        locatorname = "large_turret_06"
+    }
+    component_slot = {
+        name = "LARGE_GUN_07"
+        template = "maginot_large_turret"
+        locatorname = "large_turret_07"
+    }
+    component_slot = {
+        name = "LARGE_GUN_08"
+        template = "maginot_large_turret"
+        locatorname = "large_turret_08"
+    }
+    component_slot = {
+        name = "LARGE_GUN_09"
+        template = "maginot_large_turret"
+        locatorname = "large_turret_09"
+    }
+    component_slot = {
+        name = "LARGE_GUN_10"
+        template = "maginot_large_turret"
+        locatorname = "large_turret_10"
+    }
+    component_slot = {
+        name = "LARGE_GUN_11"
+        template = "maginot_large_turret"
+        locatorname = "large_turret_11"
+    }
+    component_slot = {
+        name = "LARGE_GUN_12"
+        template = "maginot_large_turret"
+        locatorname = "large_turret_12"
+    }
+    component_slot = {
+        name = "LARGE_GUN_13"
+        template = "maginot_large_turret"
+        locatorname = "large_turret_13"
+    }
+    component_slot = {
+        name = "LARGE_GUN_14"
+        template = "maginot_large_turret"
+        locatorname = "large_turret_14"
+    }
+    component_slot = {
+        name = "LARGE_GUN_15"
+        template = "maginot_large_turret"
+        locatorname = "large_turret_15"
+    }
+    component_slot = {
+        name = "LARGE_GUN_16"
+        template = "maginot_large_turret"
+        locatorname = "large_turret_01"
+    }
+    component_slot = {
+        name = "LARGE_GUN_17"
+        template = "maginot_large_turret"
+        locatorname = "large_turret_02"
+    }
+    component_slot = {
+        name = "LARGE_GUN_18"
+        template = "maginot_large_turret"
+        locatorname = "large_turret_03"
+    }
+    component_slot = {
+        name = "LARGE_GUN_19"
+        template = "maginot_large_turret"
+        locatorname = "large_turret_04"
+    }
+    component_slot = {
+        name = "LARGE_GUN_20"
+        template = "maginot_large_turret"
+        locatorname = "large_turret_05"
+    }
+    large_utility_slots = 10
+    aux_utility_slots = 3
+    ai_weight = {
+        factor = 2000
+    }
+    resources = {
+        category = ships
+        cost = {
+            alloys = @maginot_planet_section_cost_alloys
+        }
+        upkeep = {
+            energy = @maginot_planet_section_upkeep_energy
+            alloys = @maginot_planet_section_upkeep_alloys
+        }
+    }
+}

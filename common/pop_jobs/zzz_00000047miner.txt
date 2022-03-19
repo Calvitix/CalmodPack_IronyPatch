@@ -104,6 +104,14 @@ miner = {
             has_trait = trait_weak
         }
         modifier = {
+            factor = 0.5
+            has_trait = trait_zombie
+        }
+        modifier = {
+            factor = 0.9
+            has_trait = trait_presapient_natural_intellectuals
+        }
+        modifier = {
             factor = 1.5
             has_trait = trait_syncretic_proles
         }

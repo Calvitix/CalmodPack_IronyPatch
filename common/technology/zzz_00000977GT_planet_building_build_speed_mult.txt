@@ -1,0 +1,33 @@
+GT_planet_building_build_speed_mult = {
+    cost = @tier2cost2
+    area = engineering
+    tier = 2
+    category = {
+        materials
+    }
+    prerequisites = {
+        "tech_assembly_pattern"
+    }
+    weight = @tier3weight2
+    modifier = {
+        planet_building_build_speed_mult = 0.25
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+    }
+}

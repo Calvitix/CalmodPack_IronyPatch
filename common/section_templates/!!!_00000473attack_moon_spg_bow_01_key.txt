@@ -1,0 +1,27 @@
+ship_section_template = {
+    key = "attack_moon_spg_bow_01_key"
+    ship_size = giga_massive_planet
+    fits_on_slot = "bow"
+    entity = "war_moon_spg_full_entity"
+    icon = "GFX_ship_part_core_mid"
+    prerequisites = {
+        "giga_tech_war_moon_artillery"
+    }
+    component_slot = {
+        name = "OMEGA_GUN_01"
+        template = "invisible_titanic_fixed"
+        locatorname = "omega_gun_01"
+    }
+    component_slot = {
+        name = "OMEGA_GUN_02"
+        template = "invisible_titanic_fixed"
+        locatorname = "missile_gun_01"
+    }
+    component_slot = {
+        name = "OMEGA_GUN_03"
+        template = "invisible_titanic_fixed"
+        locatorname = "missile_gun_02"
+    }
+    large_utility_slots = 0
+    aux_utility_slots = 0
+}

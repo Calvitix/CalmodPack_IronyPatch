@@ -10,7 +10,10 @@ virtual_admin_cap_machine = {
     }
     possible_precalc = can_fill_drone_job
     resources = {
-        category = planet_bureaucrats
+        category = planet_administrators
+        produces = {
+            unity = 4
+        }
         upkeep = {
             energy = 4
         }
@@ -26,17 +29,6 @@ virtual_admin_cap_machine = {
             planet_jobs_simple_drone_produces_mult = 0.01
         }
     }
-    triggered_country_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                has_active_tradition = tr_synchronicity_integrated_preservation
-            }
-        }
-        modifier = {
-            country_admin_cap_add = 6
-        }
-    }
     triggered_planet_modifier = {
         potential = {
             exists = owner
@@ -46,26 +38,6 @@ virtual_admin_cap_machine = {
         }
         modifier = {
             planet_crime_no_happiness_add = -2
-        }
-    }
-    country_modifier = {
-        country_admin_cap_add = 30
-    }
-    triggered_country_modifier = {
-        potential = {
-            exists = planet
-            planet = {
-                exists = sector
-                sector = {
-                    exists = leader
-                    leader = {
-                        has_trait = leader_trait_amplifier
-                    }
-                }
-            }
-        }
-        modifier = {
-            country_admin_cap_add = 2
         }
     }
     weight = {

@@ -6,8 +6,9 @@ tech_battleships = {
         voidcraft
     }
     prerequisites = {
-        "tech_cruisers"
+        "tech_Battlecruiser_1"
     }
+    #NSC
     weight = @tier4weight1
     prereqfor_desc = {
         ship = {

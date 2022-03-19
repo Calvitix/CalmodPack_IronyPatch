@@ -121,10 +121,6 @@ priest = {
             }
         }
         modifier = {
-            factor = 1.15
-            has_trait = trait_erudite
-        }
-        modifier = {
             factor = 1.05
             OR = {
                 has_trait = trait_robot_logic_engines

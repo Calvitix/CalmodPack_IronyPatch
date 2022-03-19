@@ -22,8 +22,6 @@ building_giga_energy_nexus_2 = {
         upkeep = {
             energy = 8
             exotic_gases = @b4_rare_upkeep
-            rare_crystals = @b2_rare_upkeep
-            volatile_motes = 1
         }
     }
     prerequisites = {

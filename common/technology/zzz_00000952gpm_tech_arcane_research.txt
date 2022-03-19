@@ -12,6 +12,37 @@ gpm_tech_arcane_research = {
         has_ancrel = yes
     }
     weight_modifier = {
-        factor = 0
+        factor = 0.5
+        modifier = {
+            factor = 0
+            NOT = {
+                has_resource = {
+                    type = minor_artifacts
+                    amount > 0
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ancrel = yes
+            }
+        }
+        modifier = {
+            factor = 2
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_statecraft"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_statecraft"
+            }
+        }
     }
 }

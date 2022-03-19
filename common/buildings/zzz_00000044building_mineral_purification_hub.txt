@@ -25,8 +25,16 @@ building_mineral_purification_hub = {
     }
     destroy_trigger = {
         OR = {
+        OR = {
             has_modifier = resort_colony
             buildings_no_motes = yes
+        }
+            AND = {
+                owner = {
+                    is_ai = yes
+                }
+                has_any_mining_district = no
+            }
         }
     }
     triggered_planet_modifier = {
@@ -219,29 +227,5 @@ building_mineral_purification_hub = {
             }
         }
         text = job_scrap_miner_effect_desc
-    }
-    ai_resource_production = {
-        minerals = 6
-        trigger = {
-            always = yes
-        }
-    }
-    ai_resource_production = {
-        minerals = 10
-        trigger = {
-            str_num_districts_mining = {
-                operator = > num
-                 = 2
-            }
-        }
-    }
-    ai_resource_production = {
-        minerals = 20
-        trigger = {
-            str_num_districts_mining = {
-                operator = > num
-                 = 4
-            }
-        }
     }
 }

@@ -22,15 +22,7 @@ waste_handler = {
         category = planet_waste
         produces = {
             waste = -42
-        }
-        produces = {
-            trigger = {
-                exists = owner
-                owner = {
-                    has_tradition = tr_environmentalism_waste_management
-                }
-            }
-            waste = -10
+            unity = 1
         }
         produces = {
             trigger = {
@@ -86,18 +78,6 @@ waste_handler = {
             }
             consumer_goods = 1
         }
-        produces = {
-            trigger = {
-                exists = owner
-                owner = {
-                    has_valid_civic = civic_environmentalist
-                }
-            }
-            unity = 1
-        }
-    }
-    planet_modifier = {
-        planet_amenities_add = 1
     }
     triggered_planet_modifier = {
         potential = {
@@ -107,7 +87,7 @@ waste_handler = {
             }
         }
         modifier = {
-            planet_amenities_add = 1
+            planet_amenities_add = 2
         }
     }
     triggered_planet_modifier = {
@@ -227,6 +207,14 @@ waste_handler = {
         modifier = {
             factor = 0.9
             has_trait = trait_weak
+        }
+        modifier = {
+            factor = 200
+            planet = {
+                has_modifier = eco_extreme
+                has_modifier = eco_catastrophic
+                has_modifier = eco_waste_high
+            }
         }
     }
 }

@@ -76,6 +76,10 @@ titan_hunter = {
             has_trait = trait_weak
         }
         modifier = {
+            factor = 0.5
+            has_trait = trait_zombie
+        }
+        modifier = {
             factor = 1.5
             has_trait = trait_syncretic_proles
         }

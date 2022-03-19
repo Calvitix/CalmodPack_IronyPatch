@@ -5,7 +5,7 @@ r_mjolnir = {
     resources = {
         category = relics
         cost = {
-            influence = 100
+            unity = 2000
         }
     }
     ai_weight = {

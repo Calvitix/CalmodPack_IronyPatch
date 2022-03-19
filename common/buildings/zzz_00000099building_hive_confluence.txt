@@ -63,6 +63,20 @@ building_hive_confluence = {
         potential = {
             exists = owner
             owner = {
+                is_hive_empire = yes
+            }
+            owner = {
+                has_tradition = tr_plentiful_aspiration_3
+            }
+        }
+        modifier = {
+            job_synapse_drone_add = 4
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
                 has_edict = synaptic_reinforcement
             }
         }

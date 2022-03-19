@@ -1,3 +1,4 @@
+@activation_cost = 3000
 r_aspmod_communist_manifesto = {
     activation_duration = 3600
     portrait = "GFX_relic_communist_manifesto"
@@ -5,7 +6,7 @@ r_aspmod_communist_manifesto = {
     resources = {
         category = relics
         cost = {
-            influence = 200
+            unity = @activation_cost
         }
     }
     ai_weight = {

@@ -123,7 +123,7 @@ tech_ccrebel_unrest_1 = {
             any_neighbor_country = {
                 has_communications = root
                 any_owned_planet = {
-                    any_owned_pop = {
+                    any_owned_species = {
                         is_same_species = root
                     }
                     root = {

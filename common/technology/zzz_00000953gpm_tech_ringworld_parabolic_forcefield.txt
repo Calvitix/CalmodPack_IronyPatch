@@ -23,11 +23,9 @@ gpm_tech_ringworld_parabolic_forcefield = {
             is_planet_class = pc_ringworld_habitable
             is_colony = yes
         }
-        AND = {
-            is_gestalt = no
-            NOT = {
-                has_civic = civic_machine_servitor
-            }
+        is_gestalt = no
+        NOT = {
+            has_civic = civic_machine_servitor
         }
     }
     weight_modifier = {

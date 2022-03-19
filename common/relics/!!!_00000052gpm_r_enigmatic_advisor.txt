@@ -1,13 +1,13 @@
-@activation_cost = 150
-@triumph_duration = 3600
+@activation_cost = 3000
+@triumph_duration_veryshort = 900
 gpm_r_enigmatic_advisor = {
-    activation_duration = @triumph_duration
+    activation_duration = @triumph_duration_veryshort
     portrait = "GFX_gpm_r_enigmatic_advisor"
     sound = "relic_activation_ether_drake_trophy"
     resources = {
         category = relics
         cost = {
-            influence = @activation_cost
+            unity = @activation_cost
         }
     }
     ai_weight = {
@@ -17,20 +17,19 @@ gpm_r_enigmatic_advisor = {
         potential = {
             always = yes
         }
-        envoys_add = 2
-        add_base_country_intel = 20
+        envoys_add = 3
     }
     score = 1000
     active_effect = {
         add_modifier = {
             modifier = "gpm_r_enigmatic_advisor_active_effect"
-            days = @triumph_duration
+            days = @triumph_duration_veryshort
         }
-        custom_tooltip = relic_triumph_cooldown
+        custom_tooltip = relic_triumph_cooldown_veryshort
         hidden_effect = {
             add_modifier = {
                 modifier = "relic_activation_cooldown"
-                days = @triumph_duration
+                days = @triumph_duration_veryshort
             }
         }
     }

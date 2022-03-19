@@ -3,9 +3,15 @@ building_energy_grid = {
     base_cap_amount = 1
     category = resource
     destroy_trigger = {
-        or = {
+        OR = {
             has_modifier = resort_colony
             str_energy_grid_destroy = yes
+            AND = {
+                owner = {
+                    is_ai = yes
+                }
+                has_any_generator_district_or_building = no
+            }
         }
     }
     potential = {
@@ -163,9 +169,15 @@ building_energy_grid = {
     ai_resource_production = {
         energy = 15
         trigger = {
-            str_num_districts_generator = {
-                operator = > num
-                 = 2
+            or = {
+                str_num_districts_generator = {
+                    operator = > num
+                     = 2
+                }
+                str_num_buildings_generator = {
+                    operator = > num
+                     = 2
+                }
             }
         }
     }
@@ -173,6 +185,10 @@ building_energy_grid = {
         energy = 30
         trigger = {
             str_num_districts_generator = {
+                operator = > num
+                 = 4
+            }
+            str_num_buildings_generator = {
                 operator = > num
                  = 4
             }

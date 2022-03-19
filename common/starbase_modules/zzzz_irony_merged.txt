@@ -30,6 +30,13 @@ shipyard = {
     station_modifier = {
         starbase_shipyard_capacity_add = 1
     }
+    triggered_station_modifier = {
+        potential = {
+            exists = this
+            has_starbase_building = drydock
+        }
+        starbase_shipyard_capacity_add = 1
+    }
     ai_build_at_chokepoint = yes
     ai_build_outside_chokepoint = yes
     ai_weight = {
@@ -176,7 +183,7 @@ anchorage = {
         }
         country_naval_cap_add = 10
     }
-    ai_build_at_chokepoint = yes
+    ai_build_at_chokepoint = no
     ai_build_outside_chokepoint = yes
     ai_weight = {
         weight = 150
@@ -686,9 +693,12 @@ hangar_bay = {
         }
     }
     station_modifier = {
+        ship_hull_mult = 0.1
+        ship_armor_mult = 0.1
+        starbase_trade_protection_range_add = 1
         starbase_trade_protection_add = 10
     }
-    ai_build_at_chokepoint = no
+    ai_build_at_chokepoint = yes
     ai_build_outside_chokepoint = yes
     ai_weight = {
         weight = 150

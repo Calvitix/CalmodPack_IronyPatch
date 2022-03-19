@@ -13,6 +13,11 @@ auth_imperial = {
     country_modifier = {
         country_power_projection_influence_produces_add = 1
     }
+    random_weight = {
+        modifier = {
+            factor = 2
+        }
+    }
     tags = {
         AUTHORITY_HAS_HEIR
     }

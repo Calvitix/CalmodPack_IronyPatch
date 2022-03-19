@@ -1,6 +1,6 @@
-@triumph_duration = 3600
+@triumph_duration_short = 1800
 gpm_r_ai_architect = {
-    activation_duration = @triumph_duration
+    activation_duration = @triumph_duration_short
     portrait = "GFX_gpm_r_ai_architect"
     sound = "relic_activation_the_omnicodex"
     resources = {
@@ -22,13 +22,13 @@ gpm_r_ai_architect = {
     active_effect = {
         add_modifier = {
             modifier = "gpm_r_ai_architect_active_effect"
-            days = @triumph_duration
+            days = @triumph_duration_short
         }
-        custom_tooltip = relic_triumph_cooldown
+        custom_tooltip = relic_triumph_cooldown_short
         hidden_effect = {
             add_modifier = {
                 modifier = "relic_activation_cooldown"
-                days = @triumph_duration
+                days = @triumph_duration_short
             }
         }
     }

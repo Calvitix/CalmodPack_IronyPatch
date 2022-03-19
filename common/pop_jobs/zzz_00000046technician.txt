@@ -101,6 +101,10 @@ technician = {
             has_trait = trait_weak
         }
         modifier = {
+            factor = 0.5
+            has_trait = trait_zombie
+        }
+        modifier = {
             factor = 1.3
             has_trait = trait_psionic
         }

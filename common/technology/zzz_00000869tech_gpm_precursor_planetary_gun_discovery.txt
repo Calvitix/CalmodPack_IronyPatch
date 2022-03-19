@@ -9,7 +9,7 @@ tech_gpm_precursor_planetary_gun_discovery = {
     ai_update_type = all
     weight = 1
     modifier = {
-        ship_weapon_range_mult = 0.02
+        ship_weapon_range_mult = 0.05
     }
     weight_modifier = {
         factor = 0

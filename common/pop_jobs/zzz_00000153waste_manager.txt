@@ -15,15 +15,7 @@ waste_manager = {
         category = planet_waste
         produces = {
             waste = -62
-        }
-        produces = {
-            trigger = {
-                exists = owner
-                owner = {
-                    has_tradition = tr_environmentalism_waste_management
-                }
-            }
-            waste = -10
+            unity = 1
         }
         produces = {
             trigger = {
@@ -35,8 +27,7 @@ waste_manager = {
         }
     }
     planet_modifier = {
-        planet_stability_add = 1
-        planet_amenities_add = 2
+        planet_stability_add = 2
     }
     triggered_planet_modifier = {
         potential = {

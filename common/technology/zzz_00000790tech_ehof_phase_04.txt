@@ -1,7 +1,7 @@
 tech_ehof_phase_04 = {
     area = engineering
-    cost = @gigatier7cost2
-    tier = 7
+    cost = @tier7cost2
+    tier = 5
     is_dangerous = yes
     category = {
         voidcraft
@@ -12,7 +12,6 @@ tech_ehof_phase_04 = {
         "tech_prob_c"
         "tech_vedrs"
         "tech_condensed_ews"
-        "tech_arcane_g_r"
     }
     potential = {
         check_variable = {
@@ -34,7 +33,6 @@ tech_ehof_phase_04 = {
         }
     }
     ai_weight = {
-        factor = @giga_aiweight_multiplier
         factor = @ehof_t1_weight
         modifier = {
             factor = 1.25

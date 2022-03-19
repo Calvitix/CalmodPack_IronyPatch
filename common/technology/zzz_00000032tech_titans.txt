@@ -6,8 +6,9 @@ tech_titans = {
         voidcraft
     }
     prerequisites = {
-        "tech_battleships"
+        "tech_Dreadnought_1"
     }
+    #NSC
     weight = @tier5weight1
     ai_update_type = military
     modifier = {
@@ -31,7 +32,7 @@ tech_titans = {
         modifier = {
             factor = 0.1
             NOT = {
-                years_passed > 120
+                years_passed > 100
             }
         }
         modifier = {

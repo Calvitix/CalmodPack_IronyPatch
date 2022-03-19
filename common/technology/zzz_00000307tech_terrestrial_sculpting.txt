@@ -28,6 +28,10 @@ tech_terrestrial_sculpting = {
             has_trait = trait_aquatic
         }
         modifier = {
+            factor = 1.25
+            has_origin = origin_life_seeded
+        }
+        modifier = {
             factor = value:tech_weight_likelihood
             research_leader = {
                 area = society
@@ -79,6 +83,10 @@ tech_terrestrial_sculpting = {
         modifier = {
             factor = 1000
             has_trait = trait_aquatic
+        }
+        modifier = {
+            factor = 100
+            has_origin = origin_life_seeded
         }
         modifier = {
             factor = 2

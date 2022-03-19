@@ -61,12 +61,6 @@ building_commercial_megaplex = {
         is_regular_empire = yes
     }
     ai_resource_production = {
-        energy = 4
-        trigger = {
-            always = yes
-        }
-    }
-    ai_resource_production = {
         energy = 6
         trigger = {
             OR = {

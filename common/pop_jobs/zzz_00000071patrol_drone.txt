@@ -39,13 +39,6 @@ patrol_drone = {
             weight = 20
             exists = owner
             owner = {
-                is_ai = yes
-            }
-        }
-        modifier = {
-            weight = 20
-            exists = owner
-            owner = {
                 is_at_war = yes
             }
         }

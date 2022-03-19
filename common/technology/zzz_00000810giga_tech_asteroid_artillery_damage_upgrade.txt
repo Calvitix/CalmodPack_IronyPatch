@@ -19,7 +19,7 @@ giga_tech_asteroid_artillery_damage_upgrade = {
     }
     weight_modifier = {
         modifier = {
-            factor = 1.25
+            factor = value:tech_weight_likelihood
             research_leader = {
                 area = engineering
                 has_trait = "leader_trait_expertise_voidcraft"
@@ -47,7 +47,7 @@ giga_tech_asteroid_artillery_damage_upgrade = {
     ai_weight = {
         factor = @giga_aiweight_multiplier_medium
         modifier = {
-            factor = 1.25
+            factor = value:tech_weight_likelihood
             research_leader = {
                 area = engineering
                 has_trait = "leader_trait_expertise_voidcraft"

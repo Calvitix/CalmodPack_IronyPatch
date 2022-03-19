@@ -5,7 +5,7 @@ r_aspmod_deadspace_marker = {
     resources = {
         category = relics
         cost = {
-            influence = 150
+            unity = 2000
         }
     }
     ai_weight = {

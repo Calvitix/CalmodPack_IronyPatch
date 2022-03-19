@@ -2,6 +2,13 @@ trait_td_last_children = {
     cost = -8
     potential_crossbreeding_chance = 0
     sorting_priority = 9
+    species_potential_add = {
+        always = no
+    }
+    species_possible_remove = {
+        always = no
+    }
+    randomized = no
     opposites = {
         "trait_fertile"
         "trait_rapid_breeders"

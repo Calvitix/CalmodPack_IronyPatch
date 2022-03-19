@@ -1,6 +1,12 @@
 trait_td_rbot_children_of_singularity = {
     cost = 3
     sorting_priority = 9
+    species_potential_add = {
+        always = no
+    }
+    species_possible_remove = {
+        always = no
+    }
     opposites = {
         "trait_td_rbot_missing_number"
         "trait_td_rbot_deus_ex_machina"

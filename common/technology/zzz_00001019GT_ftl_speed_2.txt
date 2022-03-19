@@ -1,0 +1,36 @@
+GT_ftl_speed_2 = {
+    cost = @tier2cost3
+    area = physics
+    tier = 2
+    category = {
+        field_manipulation
+    }
+    ai_update_type = all
+    prerequisites = {
+        "GT_ftl_speed_1"
+    }
+    weight = @tier3weight3
+    modifier = {
+        ship_interstellar_speed_mult = 0.2
+        ship_windup_mult = -0.2
+        ship_winddown_mult = -0.2
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_field_manipulation"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_field_manipulation"
+            }
+        }
+    }
+}
