@@ -4,6 +4,25 @@ trait_pampered = {
     potential_crossbreeding_chance = 0
     initial = no
     randomized = no
+    species_potential_add = {
+        always = no
+    }
+    species_possible_remove = {
+        if = {
+            limit = {
+                exists = from
+            }
+            custom_tooltip = {
+                fail_text = trait_aquatic_remove_evolutionary_mastery
+                from = {
+                    has_ascension_perk = ap_evolutionary_mastery
+                }
+            }
+        }
+    }
+    species_possible_merge_add = {
+        always = no
+    }
     allowed_archetypes = {
         BIOLOGICAL
         LITHOID

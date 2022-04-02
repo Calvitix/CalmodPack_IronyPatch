@@ -38,5 +38,9 @@ terraform_link = {
         from = {
             remove_modifier = aquatic
         }
+        add_modifier = {
+            modifier = tidal_locked_gaia
+            days = -1
+        }
     }
 }

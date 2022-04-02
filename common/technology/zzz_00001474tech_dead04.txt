@@ -1,0 +1,19 @@
+@tier4cost2 = 10000
+tech_dead04 = {
+    cost = @tier4cost2
+    area = engineering
+    tier = 4
+    category = {
+        industry
+    }
+    weight = 0
+    is_rare = yes
+    is_reverse_engineerable = no
+    modifier = {
+        planet_jobs_robotic_produces_mult = 0.1
+        planet_researchers_engineering_research_produces_mult = 0.25
+    }
+    weight_modifier = {
+        factor = 0
+    }
+}

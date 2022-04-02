@@ -1,7 +1,7 @@
 @wonder_build_time = 1080
 @wonder_build_cost = 4000
 @wonder_influence_cost = 200
-@wonder_unity_prod = 2
+@wonder_unity_prod = 10
 building_est_aesthetics_5_wonder_garden = {
     icon = "building_est_aesthetics_5_wonder_garden"
     base_buildtime = @wonder_build_time

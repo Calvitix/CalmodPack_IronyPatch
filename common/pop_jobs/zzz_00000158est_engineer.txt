@@ -15,14 +15,6 @@ est_engineer = {
         produces = {
             engineering_research = 8
         }
-        produces = {
-            trigger = {
-                owner = {
-                    has_valid_civic = civic_technocracy
-                }
-            }
-            unity = 1
-        }
         upkeep = {
             consumer_goods = 2
         }

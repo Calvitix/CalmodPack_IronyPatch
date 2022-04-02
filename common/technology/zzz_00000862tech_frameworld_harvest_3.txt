@@ -1,0 +1,41 @@
+tech_frameworld_harvest_3 = {
+    cost = @tier4cost1
+    area = society
+    tier = 4
+    category = {
+        new_worlds
+    }
+    prerequisites = {
+        "tech_space_mining_4"
+        "tech_frameworld_harvest_2"
+    }
+    weight = @tier4weight1
+    modifier = {
+        deposit_blockers_frameworld_cost_mult = -0.1
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = leader_trait_expertise_new_worlds
+            }
+        }
+        modifier = {
+            factor = 0
+            not = {
+                has_origin = origin_frameworld
+            }
+        }
+    }
+    ai_weight = {
+        factor = 5
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = leader_trait_expertise_new_worlds
+            }
+        }
+    }
+}

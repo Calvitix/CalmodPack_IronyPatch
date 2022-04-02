@@ -1,0 +1,32 @@
+ship_section_template = {
+    key = "frameworld_defensive_station_section_2"
+    ship_size = frameworld_defensive_station
+    fits_on_slot = "north"
+    fits_on_slot = "west"
+    fits_on_slot = "east"
+    fits_on_slot = "south"
+    should_draw_components = yes
+    entity = "military_station_section_medium_entity"
+    icon = "GFX_ship_part_core_mid"
+    component_slot = {
+        name = "GUN_01"
+        template = "medium_turret"
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "GUN_02"
+        template = "small_turret"
+        locatorname = "medium_gun_02"
+    }
+    medium_utility_slots = 4
+    aux_utility_slots = 1
+    resources = {
+        category = ship_sections
+    }
+    prerequisites = {
+        tech_starbase_3
+    }
+    ai_weight = {
+        factor = 100
+    }
+}

@@ -1,0 +1,72 @@
+ship_section_template = {
+    key = "frameworld_defensive_station_section_5"
+    ship_size = frameworld_defensive_station
+    fits_on_slot = "north"
+    fits_on_slot = "west"
+    fits_on_slot = "east"
+    fits_on_slot = "south"
+    should_draw_components = yes
+    entity = "military_station_section_medium_entity"
+    icon = "GFX_ship_part_core_mid"
+    component_slot = {
+        name = "GUN_01"
+        template = "medium_missile_turret"
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "GUN_02"
+        template = "invisible_missile_turret"
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "GUN_03"
+        template = "invisible_medium_turret"
+        locatorname = "medium_gun_02"
+    }
+    component_slot = {
+        name = "GUN_04"
+        template = "invisible_medium_turret"
+        locatorname = "medium_gun_02"
+    }
+    component_slot = {
+        name = "GUN_05"
+        template = "medium_turret"
+        locatorname = "medium_gun_02"
+    }
+    component_slot = {
+        name = "GUN_06"
+        template = "invisible_large_turret"
+        locatorname = "medium_gun_02"
+    }
+    component_slot = {
+        name = "GUN_07"
+        template = "invisible_large_turret"
+        locatorname = "medium_gun_02"
+    }
+    component_slot = {
+        name = "GUN_08"
+        template = "invisible_large_turret"
+        locatorname = "medium_gun_02"
+    }
+    component_slot = {
+        name = "GUN_09"
+        template = "invisible_point_defence_turret"
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "GUN_10"
+        template = "giga_xl"
+        locatorname = "medium_gun_01"
+    }
+    large_utility_slots = 10
+    aux_utility_slots = 2
+    resources = {
+        category = ship_sections
+    }
+    prerequisites = {
+        giga_tech_maginot_world
+    }
+    ai_weight = {
+        factor = 100000
+    }
+}

@@ -1,0 +1,32 @@
+@tier3cost1 = 4000
+@tier3weight1 = 65
+tech_biosynth_lm_refinery = {
+    cost = @tier3cost1
+    area = engineering
+    tier = 3
+    category = {
+        materials
+    }
+    prerequisites = {
+        "tech_basic_industry"
+        "tech_exotic_gases"
+        "tech_volatile_motes"
+        "tech_rare_crystals"
+    }
+    weight = @tier3weight1
+    is_rare = yes
+    is_reverse_engineerable = no
+    weight_modifier = {
+        factor = 0
+    }
+    ai_weight = {
+        factor = @strategic_resource_ai_tech_factor
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+    }
+}

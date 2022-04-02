@@ -1,5 +1,5 @@
 building_est_nature_preservation = {
-    base_buildtime = 540
+    base_buildtime = @b3_time
     base_cap_amount = 1
     destroy_trigger = {
         owner = {

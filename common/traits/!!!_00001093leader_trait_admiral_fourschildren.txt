@@ -1,0 +1,20 @@
+leader_trait_admiral_fourschildren = {
+    cost = 0
+    icon = "gfx/interface/icons/traits/leader_traits/leader_trait_biosynth_leader.dds"
+    modifier = {
+        ship_fire_rate_mult = 0.1
+        ship_disengage_chance_mult = 0.1
+    }
+    leader_trait = {
+        admiral
+    }
+    leader_class = {
+        admiral
+    }
+    opposites = {
+        "leader_trait_admiral_cyborg"
+        "leader_trait_admiral_synthetic"
+    }
+    initial = no
+    randomized = no
+}

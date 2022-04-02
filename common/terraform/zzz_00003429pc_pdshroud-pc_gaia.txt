@@ -1,4 +1,4 @@
-@terraforming_cost_unshroud = 500
+@terraforming_cost_gaia = 20000
 @terraforming_durantion_shroud = 3600
 terraform_link = {
     from = pc_pdshroud
@@ -6,7 +6,7 @@ terraform_link = {
     resources = {
         category = terraforming
         cost = {
-            sr_zro = @terraforming_cost_unshroud
+            energy = @terraforming_cost_gaia
         }
     }
     duration = @terraforming_durantion_shroud

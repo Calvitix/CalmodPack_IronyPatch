@@ -1,14 +1,14 @@
 building_est_mechanicum_5_guild_of_engineers_1 = {
-    base_buildtime = 360
+    base_buildtime = @b1_time
     base_cap_amount = 1
     category = research
     resources = {
         category = planet_buildings
         cost = {
-            minerals = 480
+            minerals = @b1_minerals
         }
         upkeep = {
-            energy = 5
+            energy = @b1_upkeep
         }
     }
     potential = {

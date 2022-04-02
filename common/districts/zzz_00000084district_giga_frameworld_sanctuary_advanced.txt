@@ -1,0 +1,82 @@
+@advanced_double_cost = 2000
+@advanced_double_rare_cost = 100
+@advanced_double_upkeep = 10
+@advanced_double_rare_upkeep = 2
+@mega_time = 960
+district_giga_frameworld_sanctuary_advanced = {
+    base_buildtime = @mega_time
+    icon = district_arcology_administrative
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        exists = from
+        from = {
+            is_machine_empire = yes
+            has_valid_civic = civic_machine_servitor
+            has_technology = "tech_paradise_dome"
+        }
+        has_deposit = d_frameworld_advanced_sanctuary
+        uses_district_set = giga_frameworld
+    }
+    potential = {
+        exists = owner
+        owner = {
+            is_machine_empire = yes
+            has_valid_civic = civic_machine_servitor
+            has_technology = "tech_paradise_dome"
+        }
+        has_deposit = d_frameworld_advanced_sanctuary
+        uses_district_set = giga_frameworld
+    }
+    allow = {
+        exists = owner
+        owner = {
+            is_ai = no
+        }
+    }
+    conversion_ratio = 1
+    convert_to = {
+        district_giga_frameworld_simulation
+        district_giga_frameworld_synapse
+        district_giga_frameworld_administrative
+        district_giga_frameworld_temple
+        district_giga_frameworld_sanctuary
+    }
+    resources = {
+        category = planet_districts_hab_research
+        cost = {
+            minerals = @advanced_double_cost
+            exotic_gases = @advanced_double_rare_cost
+        }
+        upkeep = {
+            energy = @advanced_double_upkeep
+            exotic_gases = @advanced_double_rare_upkeep
+        }
+    }
+    planet_modifier = {
+        planet_housing_add = 4
+        job_bio_trophy_add = 40
+        job_artisan_drone_add = 2
+        job_maintenance_drone_add = 2
+    }
+    triggered_desc = {
+        text = job_bio_trophy_effect_desc
+    }
+    triggered_desc = {
+        text = job_artisan_drone_effect_desc
+    }
+    triggered_desc = {
+        text = job_maintenance_drone_effect_desc
+    }
+    ai_resource_production = {
+        unity = 4
+        trigger = {
+            always = yes
+        }
+    }
+    ai_resource_production = {
+        consumer_goods = 4
+        trigger = {
+            always = yes
+        }
+    }
+}

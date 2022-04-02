@@ -1,0 +1,122 @@
+@advanced_cost = 1000
+@advanced_rare_cost = 50
+@advanced_upkeep = 5
+@advanced_rare_upkeep = 1
+@advanced_time = 720
+district_giga_frameworld_science = {
+    base_buildtime = @advanced_time
+    icon = district_hab_science
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        exists = from
+        from = {
+            has_technology = "tech_basic_science_lab_2"
+        }
+        uses_district_set = giga_frameworld
+    }
+    potential = {
+        exists = owner
+        owner = {
+            has_technology = "tech_basic_science_lab_2"
+        }
+        uses_district_set = giga_frameworld
+    }
+    prerequisites = {
+        tech_basic_science_lab_2
+    }
+    show_tech_unlock_if = {
+        has_origin = origin_frameworld
+    }
+    resources = {
+        category = planet_districts_hab_research
+        cost = {
+            minerals = @advanced_cost
+            exotic_gases = @advanced_rare_cost
+        }
+        upkeep = {
+            energy = @advanced_upkeep
+            exotic_gases = @advanced_rare_upkeep
+        }
+    }
+    planet_modifier = {
+        planet_housing_add = 2
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            job_researcher_add = 4
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_brain_drone_add = 4
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_calculator_add = 4
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        text = job_researcher_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        text = job_brain_drone_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        text = job_calculator_effect_desc
+    }
+    ai_resource_production = {
+        physics_research = 16
+        trigger = {
+            always = yes
+        }
+    }
+    ai_resource_production = {
+        society_research = 16
+        trigger = {
+            always = yes
+        }
+    }
+    ai_resource_production = {
+        engineering_research = 16
+        trigger = {
+            always = yes
+        }
+    }
+}

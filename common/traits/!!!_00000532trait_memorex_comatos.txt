@@ -4,6 +4,25 @@ trait_memorex_comatos = {
     potential_crossbreeding_chance = 0
     initial = no
     randomized = no
+    species_potential_add = {
+        always = no
+    }
+    species_possible_remove = {
+        if = {
+            limit = {
+                exists = from
+            }
+            custom_tooltip = {
+                fail_text = trait_memorex_comatos_fixed
+                from = {
+                    has_country_flag = memorex_fixed
+                }
+            }
+        }
+    }
+    species_possible_merge_add = {
+        always = no
+    }
     forced_happiness = yes
     infertile = yes
     allowed_archetypes = {

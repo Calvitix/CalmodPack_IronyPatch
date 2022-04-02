@@ -1,0 +1,50 @@
+@tier2cost1 = 4500
+@tier2weight1 = 85
+tech_subsurface_assembly = {
+    icon = tech_subsurface_assembly
+    cost = @tier2cost1
+    area = engineering
+    tier = 2
+    category = {
+        industry
+    }
+    prerequisites = {
+        "tech_basic_industry"
+    }
+    weight = @tier2weight1
+    is_rare = yes
+    is_reverse_engineerable = no
+    start_tech = no
+    weight_modifier = {
+        factor = 25
+        modifier = {
+            factor = 0
+            NOT = {
+                any_owned_planet = {
+                    has_deposit = d_subsurface_assembly
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            has_origin = origin_techno_world
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+    }
+    ai_weight = {
+        factor = 5
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+    }
+}
