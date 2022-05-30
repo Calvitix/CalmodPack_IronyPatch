@@ -10,58 +10,58 @@ clerk = {
         is_sapient = yes
     }
     possible_precalc = can_fill_worker_job
-    resources = {
-        category = planet_clerks
-        produces = {
-            trigger = {
-                exists = owner
-                owner = {
-                    has_valid_civic = civic_founder_cult
+    triggered_planet_modifier = {
+        potential = {
+            planet = {
+                NOT = {
+                    has_planet_flag = has_franchise_headquarters
                 }
             }
-            physics_research = 1
-            engineering_research = 1
-            society_research = 1
         }
-    }
-    planet_modifier = {
-        planet_amenities_add = 2
         trade_value_add = 4
+        mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
     }
     triggered_planet_modifier = {
         potential = {
-            OR = {
-                has_trait = trait_robot_domestic_protocols
-                has_trait = trait_charismatic
+            planet = {
+                has_planet_flag = has_franchise_headquarters
             }
         }
-        modifier = {
-            planet_amenities_add = 0.4
+        trade_value_add = 3
+        mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
+    }
+    overlord_resources = {
+        category = planet_corporate_franchising_meddling
+        produces = {
+            trigger = {
+                planet = {
+                    has_planet_flag = has_franchise_headquarters
+                }
+            }
+            unity = 0.25
         }
     }
     triggered_planet_modifier = {
         potential = {
-            has_trait = trait_repugnant
+            always = yes
         }
-        modifier = {
-            planet_amenities_add = -0.4
-        }
+        planet_amenities_add = 2
+        mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
     }
     triggered_planet_modifier = {
         potential = {
-            has_trait = trait_thrifty
+            planet = {
+                exists = orbital_defence
+                orbital_defence = {
+                    exists = starbase
+                    starbase = {
+                        has_starbase_building = ring_trade_hub
+                    }
+                }
+            }
         }
-        modifier = {
-            trade_value_add = 1
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            has_trait = trait_nuumismatic_administration
-        }
-        modifier = {
-            trade_value_add = 1
-        }
+        planet_amenities_add = 1
+        mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
     }
     triggered_planet_modifier = {
         potential = {
@@ -70,36 +70,13 @@ clerk = {
                 has_tradition = tr_mercantile_trickle_up_economics
             }
         }
-        modifier = {
-            trade_value_add = 1
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            has_trait = trait_thrifty
-            exists = owner
-            owner = {
-                has_tradition = tr_mercantile_trickle_up_economics
-            }
-        }
-        modifier = {
-            trade_value_add = 0.25
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            has_trait = trait_nuumismatic_administration
-            exists = owner
-            owner = {
-                has_tradition = tr_mercantile_trickle_up_economics
-            }
-        }
-        modifier = {
-            trade_value_add = 0.1
-        }
+        trade_value_add = 1
+        mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
     }
     weight = {
         weight = @clerk_job_weight
+        mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
+        mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_trade_mult|
         modifier = {
             factor = 20
             is_enslaved = yes
@@ -127,13 +104,6 @@ clerk = {
             can_fill_specialist_job = no
         }
         modifier = {
-            factor = 1.5
-            OR = {
-                has_trait = trait_thrifty
-                has_trait = trait_nuumismatic_administration
-            }
-        }
-        modifier = {
             factor = 0
             owner = {
                 is_ai = yes
@@ -148,17 +118,6 @@ clerk = {
         modifier = {
             factor = 0.1
             can_take_servant_job = yes
-        }
-        modifier = {
-            factor = 1.5
-            OR = {
-                has_trait = trait_robot_domestic_protocols
-                has_trait = trait_charismatic
-            }
-        }
-        modifier = {
-            factor = 0.5
-            has_trait = trait_repugnant
         }
         modifier = {
             factor = 0.5

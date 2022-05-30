@@ -1,3 +1,16 @@
 action_make_claims_diplomacy_view = {
     is_listed = yes
+    potential = {
+        hidden_trigger = {
+            NAND = {
+                is_subject = yes
+                any_agreement = {
+                    has_term_value = {
+                        term = subject_diplomacy
+                        value = subject_can_not_do_diplomacy
+                    }
+                }
+            }
+        }
+    }
 }

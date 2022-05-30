@@ -23,22 +23,40 @@ catalytic_technician = {
             alloys = 3
             waste = 1
         }
-        produces = {
-            trigger = {
-                exists = owner
-                owner = {
-                    is_ai = no
-                    has_deficit = food
-                }
-            }
-            alloys = -1.5
-        }
         upkeep = {
             food = 9
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_planet_flag = has_material_requisitorium
+                }
+            }
+            alloys = @requisitorium_alloys_reduction
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    has_planet_flag = has_material_requisitorium
+                }
+            }
+            food = 3
+        }
+    }
+    overlord_resources = {
+        category = planet_requisitioned_alloys
+        produces = {
+            trigger = {
+                planet = {
+                    has_planet_flag = has_material_requisitorium
+                }
+            }
+            alloys = @requisitorium_alloys_overlord
         }
     }
     weight = {
         weight = @specialist_job_weight
+        mult = value:job_weights_modifier|JOB|catalytic_technician|RESOURCE|alloys|
         modifier = {
             factor = 2
             is_enslaved = yes
@@ -46,49 +64,7 @@ catalytic_technician = {
         }
         modifier = {
             factor = 5
-            has_trait = trait_necrophage
-        }
-        modifier = {
-            factor = 0.002
-            is_enslaved = yes
-            has_job = foundry
-            planet = {
-                num_unemployed > 0
-            }
-        }
-        modifier = {
-            factor = 2
-            species = {
-                has_species_flag = racket_species_flag
-            }
-        }
-        modifier = {
-            factor = 5
             has_job = catalytic_technician
-        }
-        modifier = {
-            factor = 15
-            has_job = catalytic_technician
-            OR = {
-                has_trait = trait_robust
-                has_trait = trait_robot_efficient_processors
-            }
-        }
-        modifier = {
-            factor = 1.5
-            has_trait = trait_void_dweller_1
-            exists = planet
-            planet = {
-                is_planet_class = pc_habitat
-            }
-        }
-        modifier = {
-            factor = 0.85
-            has_trait = trait_void_dweller_1
-            exists = planet
-            planet = {
-                is_artificial = no
-            }
         }
     }
 }

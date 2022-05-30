@@ -1,0 +1,48 @@
+district_virtual_diplomatic_hive = {
+    base_buildtime = @giga_rw_district_buildtime
+    is_capped_by_modifier = no
+    icon = district_virtual_diplomatic
+    show_on_uncolonized = {
+        uses_district_set = virtual_ring
+        from = {
+            is_hive_empire = yes
+            giga_vr_diplomatic_trigger = yes
+        }
+    }
+    potential = {
+        uses_district_set = virtual_ring
+        owner = {
+            is_hive_empire = yes
+            giga_vr_diplomatic_trigger = yes
+        }
+    }
+    conversion_ratio = 1
+    convert_to = {
+        district_virtual_livestock
+        district_virtual_hell
+        district_virtual_amalgamation
+        district_virtual_diplomatic
+        district_virtual_diplomatic_machine
+        district_virtual_training
+        district_virtual_training_gestalt
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = @giga_rw_cost
+            rare_crystals = @giga_rw_cost_sr
+        }
+        upkeep = {
+            energy = @giga_rw_maintenance
+            rare_crystals = @giga_rw_maintenance_sr
+        }
+    }
+    planet_modifier = {
+        planet_housing_add = 10
+        job_giga_virtual_diplomat_drone_add = 10
+        planet_giga_virtual_diplomats_energy_upkeep_add = 1
+    }
+    triggered_desc = {
+        text = job_giga_virtual_diplomat_drone_effect_desc
+    }
+}

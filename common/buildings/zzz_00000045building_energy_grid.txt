@@ -7,6 +7,7 @@ building_energy_grid = {
             has_modifier = resort_colony
             str_energy_grid_destroy = yes
             AND = {
+                exists = owner
                 owner = {
                     is_ai = yes
                 }

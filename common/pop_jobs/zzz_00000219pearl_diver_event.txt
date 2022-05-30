@@ -1,0 +1,232 @@
+pearl_diver_event = {
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = building_food_processing_facility
+    clothes_texture_index = 2
+    icon = pearl_diver
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+    possible_precalc = can_fill_specialist_job
+    possible = {
+        hidden_trigger = {
+            exists = owner
+        }
+        owner = {
+            is_gestalt = no
+        }
+    }
+    resources = {
+        category = planet_artisans
+        produces = {
+            consumer_goods = 3
+            food = 3
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_valid_civic = civic_agribusiness
+                }
+            }
+            food = 1
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_edict = angler_bounty_campaign
+                }
+            }
+            consumer_goods = 0.5
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    is_lithoid_empire = no
+                    has_technology = tech_agrarian_goods
+                    has_valid_civic = civic_agrarian_idyll
+                }
+            }
+            consumer_goods = 1
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    is_lithoid_empire = no
+                    has_technology = tech_agrarian_goods
+                    has_valid_civic = civic_agrarian_idyll
+                }
+                planet = {
+                    has_active_building = building_factory_2
+                }
+            }
+            consumer_goods = 0.5
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    is_lithoid_empire = no
+                    has_technology = tech_agrarian_goods
+                    has_valid_civic = civic_agrarian_idyll
+                }
+                planet = {
+                    has_active_building = building_factory_3
+                }
+            }
+            consumer_goods = 1
+        }
+        upkeep = {
+            minerals = 2
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_planet_flag = has_produce_requisitorium
+                    exists = owner.overlord
+                    owner.overlord = {
+                        is_gestalt = no
+                    }
+                }
+            }
+            consumer_goods = @requisitorium_consumer_goods_reduction
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    has_planet_flag = has_produce_requisitorium
+                    exists = owner.overlord
+                    owner.overlord = {
+                        is_gestalt = no
+                    }
+                }
+            }
+            minerals = 1
+        }
+    }
+    overlord_resources = {
+        category = planet_requisitioned_consumer_goods
+        produces = {
+            trigger = {
+                planet = {
+                    has_planet_flag = has_produce_requisitorium
+                    exists = owner.overlord
+                    owner.overlord = {
+                        is_gestalt = no
+                    }
+                }
+            }
+            consumer_goods = @requisitorium_consumer_goods_overlord
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            owner = {
+                has_valid_civic = civic_agrarian_idyll
+                is_lithoid_empire = no
+            }
+        }
+        planet_amenities_add = 2
+        mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_valid_civic = civic_agrarian_idyll
+                is_lithoid_empire = no
+                has_technology = tech_housing_agrarian_idyll
+            }
+        }
+        planet_amenities_add = 1
+        mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+    }
+    triggered_planet_modifier = {
+        potential = {
+            always = yes
+        }
+        trade_value_add = 3
+        mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
+    }
+    triggered_planet_modifier = {
+        potential = {
+            owner = {
+                has_valid_civic = civic_agribusiness
+            }
+        }
+        trade_value_add = 4
+        mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
+    }
+    triggered_planet_modifier = {
+        potential = {
+            owner = {
+                has_valid_civic = civic_agribusiness
+                has_valid_civic = civic_criminal_heritage
+            }
+        }
+        trade_value_add = 2
+        mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
+    }
+    weight = {
+        weight = @specialist_job_weight
+        mult = value:job_weights_modifier|JOB|pearl_diver_event|RESOURCE|consumer_goods|FACTOR|0.75|
+        mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_trade_mult|
+        modifier = {
+            factor = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
+            owner = {
+                has_valid_civic = civic_agrarian_idyll
+            }
+        }
+        modifier = {
+            factor = 0.5
+            is_unemployed = no
+            is_pop_category = worker
+        }
+        modifier = {
+            factor = 2
+            is_enslaved = yes
+            can_take_servant_job = no
+        }
+        modifier = {
+            factor = 0.1
+            NOT = {
+                has_job = pearl_diver_event
+            }
+            exists = owner
+            owner = {
+                resource_income_compare = {
+                    resource = food
+                    value < 5
+                }
+            }
+        }
+        modifier = {
+            factor = 5
+            has_job = pearl_diver_event
+        }
+        modifier = {
+            factor = 10
+            has_job = pearl_diver_event
+            OR = {
+                has_trait = trait_robust
+                has_trait = trait_robot_efficient_processors
+            }
+        }
+        modifier = {
+            factor = 1.2
+            exists = planet
+            planet = {
+                has_available_jobs = "pearl_diver_event"
+            }
+            exists = owner
+            owner = {
+                is_ai = yes
+                has_monthly_income = {
+                    resource = consumer_goods
+                    value < 5
+                }
+            }
+        }
+    }
+}

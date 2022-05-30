@@ -11,10 +11,6 @@ merchant = {
         is_sapient = yes
     }
     possible_precalc = can_fill_ruler_job
-    planet_modifier = {
-        planet_amenities_add = 3
-        trade_value_add = 12
-    }
     resources = {
         category = planet_merchants
         upkeep = {
@@ -23,100 +19,25 @@ merchant = {
     }
     triggered_planet_modifier = {
         potential = {
-            has_trait = trait_thrifty
+            always = yes
         }
-        modifier = {
-            trade_value_add = 3
-        }
+        trade_value_add = 12
+        mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
     }
     triggered_planet_modifier = {
         potential = {
-            has_trait = trait_nuumismatic_administration
+            always = yes
         }
-        modifier = {
-            trade_value_add = 3
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            OR = {
-                has_trait = trait_robot_domestic_protocols
-                has_trait = trait_charismatic
-            }
-        }
-        modifier = {
-            planet_amenities_add = 0.6
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            has_trait = trait_repugnant
-        }
-        modifier = {
-            planet_amenities_add = -0.6
-        }
+        planet_amenities_add = 3
+        mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
     }
     weight = {
         weight = @ruler_job_weight
-        modifier = {
-            factor = 2
-            has_trait = trait_thrifty
-        }
-        modifier = {
-            factor = 2
-            has_trait = trait_nuumismatic_administration
-        }
-        modifier = {
-            factor = 1.5
-            OR = {
-                has_trait = trait_robot_domestic_protocols
-                has_trait = trait_charismatic
-            }
-        }
-        modifier = {
-            factor = 0.5
-            has_trait = trait_repugnant
-        }
+        mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
+        mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_trade_mult|
         modifier = {
             factor = 5
             has_job = merchant
-        }
-        modifier = {
-            factor = 1.25
-            owner = {
-                has_civic = civic_merchant_guilds
-            }
-            has_trait = trait_brainslug
-        }
-        modifier = {
-            factor = 1.125
-            owner = {
-                has_civic = civic_merchant_guilds
-            }
-            has_trait = trait_presapient_natural_intellectuals
-        }
-        modifier = {
-            factor = 1.125
-            owner = {
-                has_civic = civic_merchant_guilds
-            }
-            has_trait = trait_robust
-        }
-        modifier = {
-            factor = 1.5
-            has_trait = trait_void_dweller_1
-            exists = planet
-            planet = {
-                is_planet_class = pc_habitat
-            }
-        }
-        modifier = {
-            factor = 0.85
-            has_trait = trait_void_dweller_1
-            exists = planet
-            planet = {
-                is_artificial = no
-            }
         }
         modifier = {
             factor = 0.01

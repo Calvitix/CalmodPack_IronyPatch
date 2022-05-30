@@ -1,0 +1,14 @@
+has_any_generator_district_or_building = {
+    OR = {
+        has_district = district_generator
+        has_district = district_hab_energy
+        has_district = district_generator_uncapped
+        has_district = district_rw_generator
+        has_building = building_betharian_power_plant
+        has_building = eb_energy
+        has_building = eb_energy2
+        has_building = eb_energy3
+        has_district = district_giga_frameworld_generator
+        has_district = district_giga_frameworld_penrose
+    }
+}

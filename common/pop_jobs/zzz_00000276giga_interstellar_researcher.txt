@@ -1,0 +1,25 @@
+giga_interstellar_researcher = {
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = building_research_lab_3
+    clothes_texture_index = 3
+    resources = {
+        category = planet_researchers
+        produces = {
+            physics_research = 5
+        }
+        produces = {
+            society_research = 3
+        }
+        produces = {
+            engineering_research = 5
+        }
+        upkeep = {
+            energy = 3
+        }
+    }
+    possible_precalc = can_fill_specialist_job
+    weight = {
+        weight = value:giga_researcher_weight|JOB|giga_interstellar_researcher|
+    }
+}

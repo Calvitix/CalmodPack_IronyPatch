@@ -82,6 +82,11 @@ action_form_non_aggression_pact = {
                 from = {
                     has_valid_civic = civic_pompous_purists
                 }
+                NOT = {
+                    root = {
+                        is_overlord_to = from
+                    }
+                }
             }
             if = {
                 limit = {

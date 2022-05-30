@@ -53,7 +53,20 @@ district_rw_quberine = {
         }
         produces = {
             sr_living_metal = 1
+        }
+        produces = {
+            trigger = {
+                not = {
+                    has_global_flag = @giga_amb_flag
+                }
+            }
             alloys = 10
+        }
+        produces = {
+            trigger = {
+                has_global_flag = @giga_amb_flag
+            }
+            giga_sr_amb_megaconstruction = 2.5
         }
     }
     triggered_planet_modifier = {

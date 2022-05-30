@@ -1,0 +1,13 @@
+xvcv_mdlc_ruler_trait_qbit_encryption = {
+    cost = 0
+    initial = no
+    randomized = no
+    icon = "gfx/interface/icons/customgui/leader_traits/xvcv_mdlc_ruler_trait_qbit_encryption.dds"
+    modifier = {
+        intel_encryption_add = 2
+    }
+    leader_class = {
+        ruler
+    }
+    leader_trait = all
+}

@@ -1,0 +1,45 @@
+@insula_worker_weight = 2
+bore_engineer = {
+    category = worker
+    condition_string = WORKER_JOB_TRIGGER
+    building_icon = building_nano_forge
+    clothes_texture_index = 2
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+    possible_precalc = can_fill_worker_job
+    possible = {
+        owner = {
+            is_fallen_empire = no
+        }
+    }
+    resources = {
+        category = planet_bore
+        produces = {
+            minerals = 90
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_active_building = building_mineral_purification_plant
+                }
+            }
+            minerals = 10
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_active_building = building_mineral_purification_hub
+                }
+            }
+            minerals = 20
+        }
+    }
+    weight = {
+        weight = value:giga_worker_weight|JOB|bore_engineer|RESOURCE|minerals|
+        mult = @insula_worker_weight
+    }
+}

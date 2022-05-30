@@ -1,0 +1,119 @@
+district_maginot_ringworld_bunkers = {
+    base_buildtime = @maginot_district_buildtime_ringworld
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        uses_district_set = maginot_ringworld_districts
+    }
+    allow = {
+    }
+    potential = {
+        uses_district_set = maginot_ringworld_districts
+        NOT = {
+            is_planet_class = pc_giga_maginot_gas_giant
+        }
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = @maginot_district_cost_minerals_ringworld
+            alloys = @maginot_district_cost_alloys_medium_ringworld
+            volatile_motes = @maginot_district_cost_sr
+        }
+        upkeep = {
+            energy = @maginot_district_upkeep_energy_medium_ringworld
+            volatile_motes = @maginot_district_upkeep_sr_ringworld
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            job_maginot_bunker_officer_add = @maginot_special_jobs_add_ringworld
+            job_soldier_add = @maginot_bunker_police_jobs_add_ringworld
+            job_maginot_military_police_add = @maginot_bunker_police_jobs_add_ringworld
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_maginot_bunker_officer_gestalt_add = @maginot_special_jobs_add_ringworld
+            job_warrior_drone_add = @maginot_bunker_police_jobs_add_ringworld
+            job_patrol_drone_add = @maginot_bunker_police_jobs_add_ringworld
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        text = job_maginot_bunker_officer_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        text = job_soldier_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        text = job_maginot_military_police_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = job_maginot_bunker_officer_gestalt_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = job_warrior_drone_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = job_patrol_drone_effect_desc
+    }
+    planet_modifier = {
+        planet_housing_add = @maginot_district_housing_bunkers_ringworld
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+        }
+        text = job_maginot_planetary_bunker_effect_desc
+    }
+    ai_weight = {
+        weight = 33
+    }
+}

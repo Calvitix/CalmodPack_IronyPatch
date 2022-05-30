@@ -1,2 +1,0 @@
-l_french:
- UI_OVERHAUL_TEXT:1000 "$UI_OVERHAUL_TITLE$ pour v$UI_OVERHAUL_VERSION$ - avec CalmodPack - 26.02.2022§!"

@@ -1,0 +1,120 @@
+salt_miner = {
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = building_salt_mine
+    clothes_texture_index = 3
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+    possible_precalc = can_fill_specialist_job
+    possible = {
+        hidden_trigger = {
+            exists = owner
+        }
+        owner = {
+            is_gestalt = no
+        }
+    }
+    resources = {
+        category = planet_miners
+        produces = {
+            minerals = 4
+        }
+        upkeep = {
+            consumer_goods = 1
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_planet_flag = has_material_requisitorium
+                }
+            }
+            minerals = @requisitorium_minerals_reduction
+        }
+    }
+    overlord_resources = {
+        category = planet_requisitioned_minerals
+        produces = {
+            trigger = {
+                planet = {
+                    has_planet_flag = has_material_requisitorium
+                }
+            }
+            minerals = @requisitorium_minerals_overlord
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            always = yes
+        }
+        planet_amenities_add = 5
+        mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+    }
+    triggered_planet_modifier = {
+        potential = {
+            always = yes
+        }
+        trade_value_add = 4
+        mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
+    }
+    weight = {
+        weight = @worker_job_weight
+        mult = value:job_weights_modifier|JOB|miner|RESOURCE|minerals|
+        modifier = {
+            factor = 10
+            is_enslaved = yes
+            can_take_servant_job = no
+            NOT = {
+                has_slavery_type = {
+                    type = slavery_indentured
+                }
+            }
+        }
+        modifier = {
+            factor = 3
+            OR = {
+                is_non_sapient_robot = yes
+                is_shackled_robot = yes
+            }
+            can_take_servant_job = no
+            owner = {
+                has_technology = tech_droid_workers
+            }
+        }
+        modifier = {
+            factor = 200
+            OR = {
+                is_non_sapient_robot = yes
+                is_shackled_robot = yes
+            }
+            can_take_servant_job = no
+            owner = {
+                NOT = {
+                    has_technology = tech_droid_workers
+                }
+            }
+        }
+        modifier = {
+            factor = 0.25
+            can_take_servant_job = yes
+        }
+        modifier = {
+            factor = 1.1
+            exists = planet
+            planet = {
+                has_available_jobs = "miner"
+            }
+            exists = owner
+            owner = {
+                is_ai = yes
+                has_monthly_income = {
+                    resource = minerals
+                    value < 0
+                }
+            }
+        }
+    }
+}

@@ -11,26 +11,23 @@ gas_extractor = {
     }
     possible_precalc = can_fill_worker_job
     resources = {
-        category = planet_miners
+        category = planet_sr_miners
         produces = {
             exotic_gases = 2
-        }
-        upkeep = {
-            trigger = {
-                exists = owner
-                owner = {
-                    has_edict = mining_subsidies
-                }
-            }
-            energy = 0.5
         }
     }
     weight = {
         weight = @specialist_job_weight
+        mult = value:job_weights_modifier|JOB|gas_extractor|RESOURCE|exotic_gases|
         modifier = {
-            factor = 20
+            factor = 10
             is_enslaved = yes
             can_take_servant_job = no
+            NOT = {
+                has_slavery_type = {
+                    type = slavery_indentured
+                }
+            }
         }
         modifier = {
             factor = 2
@@ -59,63 +56,6 @@ gas_extractor = {
         modifier = {
             factor = 0.1
             can_take_servant_job = yes
-        }
-        modifier = {
-            factor = 5
-            has_trait = trait_syncretic_proles
-        }
-        modifier = {
-            factor = 2
-            species = {
-                has_species_flag = racket_species_flag
-            }
-        }
-        modifier = {
-            factor = 3
-            has_trait = trait_very_strong
-        }
-        modifier = {
-            factor = 1.5
-            has_trait = trait_strong
-        }
-        modifier = {
-            factor = 0.1
-            has_trait = trait_weak
-        }
-        modifier = {
-            factor = 0.5
-            has_trait = trait_zombie
-        }
-        modifier = {
-            factor = 3
-            OR = {
-                has_trait = trait_robust
-                has_trait = trait_robot_efficient_processors
-            }
-        }
-        modifier = {
-            factor = 1.5
-            has_trait = trait_void_dweller_1
-            exists = planet
-            planet = {
-                is_planet_class = pc_habitat
-            }
-        }
-        modifier = {
-            factor = 0.85
-            has_trait = trait_void_dweller_1
-            exists = planet
-            planet = {
-                is_artificial = no
-            }
-        }
-        modifier = {
-            factor = 3
-            has_trait = trait_nerve_stapled
-        }
-        modifier = {
-            factor = 0.75
-            has_trait = trait_necrophage
         }
     }
 }

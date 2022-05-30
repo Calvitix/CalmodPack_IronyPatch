@@ -1,0 +1,119 @@
+ald_hyperfoundry = {
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = building_foundry_3
+    clothes_texture_index = 3
+    icon = foundry
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+    possible_precalc = can_fill_specialist_job
+    possible = {
+        hidden_trigger = {
+            exists = owner
+        }
+        owner = {
+            is_gestalt = no
+        }
+    }
+    resources = {
+        category = planet_metallurgists
+        produces = {
+            alloys = 30
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_catalytic_empire = no
+                }
+            }
+            minerals = 60
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_catalytic_empire = yes
+                }
+            }
+            food = 90
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_valid_civic = civic_bugged_ornamentarian
+                }
+            }
+            unity = 20
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_planet_flag = has_material_requisitorium
+                }
+            }
+            alloys = @requisitorium_alloys_reduction
+            multiplier = 10
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    has_planet_flag = has_material_requisitorium
+                    exists = owner
+                    owner = {
+                        is_catalytic_empire = no
+                    }
+                }
+            }
+            minerals = 20
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    has_planet_flag = has_material_requisitorium
+                    exists = owner
+                    owner = {
+                        is_catalytic_empire = yes
+                    }
+                }
+            }
+            food = 30
+        }
+    }
+    overlord_resources = {
+        category = planet_requisitioned_alloys
+        produces = {
+            trigger = {
+                planet = {
+                    has_planet_flag = has_material_requisitorium
+                }
+            }
+            alloys = @requisitorium_alloys_overlord
+            multiplier = 10
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_valid_civic = civic_bugged_ornamentarian
+            }
+        }
+        planet_amenities_add = 2
+        mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+    }
+    weight = {
+        weight = value:giga_specialist_weight|JOB|ald_hyperfoundry|RESOURCE|alloys|STICKY|5|INDENTURED|2|
+        modifier = {
+            factor = value:giga_amenities_weight
+            exists = owner
+            owner = {
+                has_valid_civic = civic_bugged_ornamentarian
+            }
+        }
+    }
+}

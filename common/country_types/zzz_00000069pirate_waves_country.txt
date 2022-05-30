@@ -1,12 +1,31 @@
 pirate_waves_country = {
+    always_valid_target_aggressive = yes
     attack_unarmed_orbital_stations = yes
     scaled_difficulty_bonuses = 0.5
+    can_own_empty_planets = yes
+    has_capital = no
+    enforces_borders = no
+    share_communications = no
+    can_have_their_comms_shared = no
+    can_receive_envoys = no
     government = no
+    observable = no
+    playable = no
+    piracy_risk = no
+    diplomatic_wars = no
+    share_survey_data = no
+    uses_origins = no
+    targets = {
+        default
+        pirate_waves_country
+    }
     ai = {
         enabled = no
+        traditions = no
     }
     faction = {
         hostile = yes
+        hostile_when_attacked = yes
         pirate = yes
         needs_border_access = no
         generate_borders = no
@@ -16,6 +35,8 @@ pirate_waves_country = {
         exclusive_diplomacy_module = {
         }
         basic_technology_module = {
+        }
+        all_technology_module = {
         }
         standard_event_module = {
         }

@@ -1,0 +1,56 @@
+security_branch_office = {
+    section = "ANCHORAGE_STARBASE_SECTION"
+    icon = "GFX_starbase_security_branch_office"
+    construction_days = 120
+    potential = {
+        is_orbital_ring = no
+        exists = owner
+        owner = {
+            is_gestalt = no
+        }
+    }
+    resources = {
+        category = starbase_modules
+        cost = {
+            trigger = {
+                from = {
+                    is_ai = no
+                }
+            }
+            alloys = 30
+            energy = 50
+            minerals = 50
+            influence = 20
+        }
+        cost = {
+            trigger = {
+                from = {
+                    is_ai = yes
+                }
+            }
+            alloys = 50
+        }
+        upkeep = {
+            energy = 1
+        }
+    }
+    station_modifier = {
+        starbase_trade_protection_add = 25
+        starbase_trade_protection_range_add = 2
+    }
+    system_modifier = {
+        planet_crime_add = -15
+    }
+    ai_build_at_chokepoint = no
+    ai_build_outside_chokepoint = yes
+    ai_weight = {
+        weight = 50
+        modifier = {
+            factor = 0.2
+            count_starbase_modules = {
+                type = security_branch_office
+                count > 0
+            }
+        }
+    }
+}

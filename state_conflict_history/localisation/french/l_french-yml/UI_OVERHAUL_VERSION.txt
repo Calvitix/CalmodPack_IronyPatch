@@ -1,2 +1,0 @@
-l_french:
- UI_OVERHAUL_VERSION:1000 "3.3"

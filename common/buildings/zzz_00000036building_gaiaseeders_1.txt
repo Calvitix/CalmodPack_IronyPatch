@@ -22,6 +22,7 @@ building_gaiaseeders_1 = {
             is_planet_class = pc_city
             is_planet_class = pc_hive
             is_planet_class = pc_machine
+            is_planet_class = pc_relic
         }
         is_artificial = no
     }
@@ -252,6 +253,7 @@ building_gaiaseeders_1 = {
             is_planet_class = pc_city
             is_planet_class = pc_hive
             is_planet_class = pc_machine
+            is_planet_class = pc_relic
             NOT = {
                 exists = owner
             }
@@ -273,6 +275,7 @@ building_gaiaseeders_1 = {
         }
         upkeep = {
             energy = 20
+            multiplier = value:gaiaseeder_upkeep
         }
     }
     planet_modifier = {

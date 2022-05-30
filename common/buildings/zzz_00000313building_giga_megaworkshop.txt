@@ -1,0 +1,77 @@
+building_giga_megaworkshop = {
+    base_buildtime = @b2_time
+    category = manufacturing
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @b2_minerals
+        }
+        upkeep = {
+            energy = @b2_upkeep
+        }
+    }
+    prerequisites = {
+        giga_tech_amb_supertensiles
+    }
+    potential = {
+        NOT = {
+            has_modifier = resort_colony
+        }
+        NOT = {
+            has_modifier = slave_colony
+        }
+        has_global_flag = @giga_amb_flag
+    }
+    allow = {
+        has_upgraded_capital = yes
+    }
+    destroy_trigger = {
+        OR = {
+            has_modifier = resort_colony
+            has_modifier = slave_colony
+            NOT = {
+                has_global_flag = @giga_amb_flag
+            }
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_giga_megaengineer_drone_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            job_giga_megaengineer_add = 2
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        text = job_giga_megaengineer_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = job_giga_megaengineer_drone_effect_desc
+    }
+}

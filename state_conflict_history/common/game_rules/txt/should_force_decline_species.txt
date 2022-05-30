@@ -1,0 +1,80 @@
+should_force_decline_species = {
+    OR = {
+        AND = {
+        custom_tooltip = {
+            success_text = CLONE_ARMY_FORCE_DECLINE
+            OR = {
+                has_trait = trait_clone_soldier_infertile
+                has_trait = trait_clone_soldier_infertile_full_potential
+            }
+            from = {
+                OR = {
+                    AND = {
+                        exists = owner
+                        owner = {
+                            OR = {
+                                NOT = {
+                                    has_origin = origin_clone_army
+                                }
+                                has_country_flag = clone_army_fertility_unlocked
+                                NOT = {
+                                    owner_main_species = {
+                                        is_same_species = root
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    check_variable = {
+                        which = clone_pops_missing
+                        value < 0
+                    }
+                }
+            }
+        }
+        custom_tooltip = {
+            success_text = UNIT04CHILDREN_FORCE_DECLINE
+            OR = {
+                has_trait = trait_organic_fourschildren
+                has_trait = trait_organic_fourschildren_2
+            }
+        }
+        AND = {
+            custom_tooltip = {
+                success_text = TREEFOLK_FORCE_DECLINE
+                has_trait = trait_tree_caretaker
+                from = {
+                    NOR = {
+                        has_deposit = d_tree_of_life_colony
+                        has_deposit = d_tree_of_life_home
+                    }
+                }
+            }
+        }
+            from = {
+                OR = {
+                    AND = {
+                        exists = owner
+                        owner = {
+                            OR = {
+                                NOT = {
+                                    has_origin = origin_techno_world
+                                }
+                                NOT = {
+                                    owner_main_species = {
+                                        is_same_species = root
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    check_variable = {
+                        which = techno_pops_missing
+                        value < 0
+                    }
+                }
+            }
+        }
+        has_trait = trait_memorex_comatos
+    }
+}

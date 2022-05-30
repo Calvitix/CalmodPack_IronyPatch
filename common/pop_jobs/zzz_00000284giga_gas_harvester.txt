@@ -1,0 +1,15 @@
+giga_gas_harvester = {
+    category = worker
+    condition_string = WORKER_JOB_TRIGGER
+    building_icon = building_gas_extractors
+    possible_precalc = can_fill_worker_job
+    resources = {
+        category = planet_refiners
+        produces = {
+            exotic_gases = 2
+        }
+    }
+    weight = {
+        weight = value:giga_worker_weight|JOB|giga_gas_harvester|RESOURCE|exotic_gases|IMPORTANT|yes|
+    }
+}

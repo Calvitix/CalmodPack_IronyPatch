@@ -29,7 +29,9 @@ pc_ringworld_habitable = {
     has_colonization_influence_cost = no
     is_artificial_planet = yes
     modifier = {
+        pop_environment_tolerance = 1.5
         planet_max_buildings_add = 12
+        planet_resettlement_unemployed_destination_mult = 0.5
     }
     carry_cap_per_free_district = @carry_cap_normal
 }

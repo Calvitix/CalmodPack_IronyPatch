@@ -85,8 +85,9 @@ time = {
 }
 energy = {
     tradable = yes
+    category = basic
     max = 50000
-    deficit_modifier = energy_deficit
+    deficit_situation = situation_energy_deficit
     ai_weight = {
         weight = 0.9
         modifier = {
@@ -235,10 +236,11 @@ energy = {
 }
 minerals = {
     tradable = yes
+    category = basic
     market_amount = 100
     market_price = 100
     max = 15000
-    deficit_modifier = minerals_deficit
+    deficit_situation = situation_mineral_deficit
     ai_weight = {
         weight = 1.5
         modifier = {
@@ -458,10 +460,11 @@ minerals = {
 }
 food = {
     tradable = yes
+    category = basic
     market_amount = 100
     market_price = 100
     max = 15000
-    deficit_modifier = food_deficit
+    deficit_situation = situation_food_deficit
     ai_weight = {
         weight = 1
         modifier = {
@@ -598,21 +601,25 @@ food = {
     }
 }
 physics_research = {
+    category = other
     ai_weight = {
         weight = 1
     }
 }
 society_research = {
+    category = other
     ai_weight = {
         weight = 1
     }
 }
 engineering_research = {
+    category = other
     ai_weight = {
         weight = 1
     }
 }
 influence = {
+    category = other
     max = 2500
     tooltip_decimals = 1
     fixed_max_amount = yes
@@ -622,6 +629,7 @@ influence = {
     }
 }
 unity = {
+    category = other
     deficit_modifier = unity_deficit
     ai_weight = {
         weight = 1
@@ -629,10 +637,11 @@ unity = {
 }
 consumer_goods = {
     tradable = yes
+    category = advanced
     market_amount = 50
     market_price = 100
     max = 15000
-    deficit_modifier = consumer_goods_deficit
+    deficit_situation = situation_consumer_goods_deficit
     ai_weight = {
         weight = 2
         modifier = {
@@ -770,10 +779,11 @@ consumer_goods = {
 }
 alloys = {
     tradable = yes
+    category = advanced
     market_amount = 25
     market_price = 100
     max = 15000
-    deficit_modifier = alloys_deficit
+    deficit_situation = situation_alloys_deficit
     ai_weight = {
         weight = 4
         modifier = {
@@ -954,13 +964,14 @@ alloys = {
 }
 volatile_motes = {
     tradable = yes
+    category = strategic
     market_amount = 10
     market_price = 100
     max = 15000
     prerequisites = {
         "tech_mine_volatile_motes"
     }
-    deficit_modifier = volatile_motes_deficit
+    deficit_situation = situation_volatile_motes_deficit
     ai_weight = {
         weight = 10
         modifier = {
@@ -1084,13 +1095,14 @@ volatile_motes = {
 }
 exotic_gases = {
     tradable = yes
+    category = strategic
     market_amount = 10
     market_price = 100
     max = 15000
     prerequisites = {
         "tech_mine_exotic_gases"
     }
-    deficit_modifier = exotic_gases_deficit
+    deficit_situation = situation_exotic_gases_deficit
     ai_weight = {
         weight = 10
         modifier = {
@@ -1214,13 +1226,14 @@ exotic_gases = {
 }
 rare_crystals = {
     tradable = yes
+    category = strategic
     market_amount = 10
     market_price = 100
     max = 15000
     prerequisites = {
         "tech_mine_rare_crystals"
     }
-    deficit_modifier = rare_crystals_deficit
+    deficit_situation = situation_rare_crystals_deficit
     ai_weight = {
         weight = 10
         modifier = {
@@ -1344,6 +1357,7 @@ rare_crystals = {
 }
 sr_living_metal = {
     tradable = yes
+    category = rare
     market_amount = 5
     market_price = 100
     max = 15000
@@ -1353,12 +1367,17 @@ sr_living_metal = {
     visibility_prerequisite = {
         always = yes
     }
+    deficit_modifier = living_metal_deficit
     ai_weight = {
-        weight = 25
+        weight = 100
+    }
+    ai_wants = {
+        base = 5
     }
 }
 sr_zro = {
     tradable = yes
+    category = rare
     market_amount = 5
     market_price = 100
     max = 15000
@@ -1369,11 +1388,15 @@ sr_zro = {
         always = yes
     }
     ai_weight = {
-        weight = 25
+        weight = 100
+    }
+    ai_wants = {
+        base = 5
     }
 }
 sr_dark_matter = {
     tradable = yes
+    category = rare
     market_amount = 5
     market_price = 100
     max = 15000
@@ -1384,11 +1407,15 @@ sr_dark_matter = {
         always = yes
     }
     ai_weight = {
-        weight = 25
+        weight = 100
+    }
+    ai_wants = {
+        base = 5
     }
 }
 nanites = {
     tradable = no
+    category = rare
     max = 15000
     prerequisites = {
         "tech_engineering_2"
@@ -1403,12 +1430,14 @@ nanites = {
 }
 minor_artifacts = {
     tradable = no
+    category = other
     ai_weight = {
         weight = 1
     }
 }
 menace = {
     tradable = no
+    category = other
     ai_weight = {
         weight = 1
     }
@@ -1429,6 +1458,95 @@ starnet_spice_melange = {
 }
 waste = {
     tradable = no
+}
+esc_psionic_charge = {
+    tradable = no
+    max = 10000
+    prerequisites = {
+        "nhsc_tech_psionic_weapons"
+    }
+    visibility_prerequisite = {
+        always = no
+    }
+    ai_weight = {
+        weight = 100
+    }
+}
+esc_gravitic_anomaly = {
+    tradable = no
+    max = 10000
+    prerequisites = {
+        "nhsc_tech_gravity_manipulation"
+    }
+    visibility_prerequisite = {
+        always = no
+    }
+    ai_weight = {
+        weight = 100
+    }
+}
+esc_living_crystal = {
+    tradable = yes
+    market_amount = 25
+    market_price = 100
+    max = 10000
+    prerequisites = {
+        "nhsc_tech_crystal_cannon_1"
+    }
+    visibility_prerequisite = {
+        always = no
+    }
+    ai_weight = {
+        weight = 100
+    }
+}
+esc_transdimensional_vortex = {
+    tradable = no
+    max = 10000
+    prerequisites = {
+        "nhsc_tech_chrono_spatial_weapons"
+    }
+    visibility_prerequisite = {
+        always = no
+    }
+    ai_weight = {
+        weight = 100
+    }
+}
+esc_enigmatic_energy = {
+    tradable = no
+    max = 10000
+    prerequisites = {
+        "nhsc_tech_enigmatic_energy_harvesting"
+    }
+    visibility_prerequisite = {
+        always = no
+    }
+    ai_weight = {
+        weight = 100
+    }
+}
+giga_sr_amb_megaconstruction = {
+    tradable = no
+    max = 1000
+    prerequisites = {
+        giga_tech_amb_supertensiles
+    }
+    deficit_modifier = giga_sr_amb_megaconstruction_deficit
+    visibility_prerequisite = {
+        has_global_flag = @giga_amb_flag
+    }
+    ai_weight = {
+        weight = 5
+    }
+    ai_wants = {
+        base = 0
+        modifier = {
+            has_global_flag = @giga_amb_flag
+            add = giga_amb_building_megas
+        }
+        mult = 500
+    }
 }
 sr_iodizium = {
     tradable = no
@@ -1515,73 +1633,6 @@ ehof_sr_sentient_metal = {
         always = yes
     }
     deficit_modifier = ehof_sm_deficit
-}
-esc_psionic_charge = {
-    tradable = no
-    max = 10000
-    prerequisites = {
-        "nhsc_tech_psionic_weapons"
-    }
-    visibility_prerequisite = {
-        always = no
-    }
-    ai_weight = {
-        weight = 100
-    }
-}
-esc_gravitic_anomaly = {
-    tradable = no
-    max = 10000
-    prerequisites = {
-        "nhsc_tech_gravity_manipulation"
-    }
-    visibility_prerequisite = {
-        always = no
-    }
-    ai_weight = {
-        weight = 100
-    }
-}
-esc_living_crystal = {
-    tradable = yes
-    market_amount = 25
-    market_price = 100
-    max = 10000
-    prerequisites = {
-        "nhsc_tech_crystal_cannon_1"
-    }
-    visibility_prerequisite = {
-        always = no
-    }
-    ai_weight = {
-        weight = 100
-    }
-}
-esc_transdimensional_vortex = {
-    tradable = no
-    max = 10000
-    prerequisites = {
-        "nhsc_tech_chrono_spatial_weapons"
-    }
-    visibility_prerequisite = {
-        always = no
-    }
-    ai_weight = {
-        weight = 100
-    }
-}
-esc_enigmatic_energy = {
-    tradable = no
-    max = 10000
-    prerequisites = {
-        "nhsc_tech_enigmatic_energy_harvesting"
-    }
-    visibility_prerequisite = {
-        always = no
-    }
-    ai_weight = {
-        weight = 100
-    }
 }
 sr_eludium = {
     tradable = no

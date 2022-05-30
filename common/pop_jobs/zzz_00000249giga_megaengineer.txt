@@ -1,0 +1,29 @@
+giga_megaengineer = {
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = building_giga_megaworkshop
+    clothes_texture_index = 3
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+    possible_precalc = can_fill_specialist_job
+    possible = {
+        complex_specialist_job_check_trigger = yes
+    }
+    resources = {
+        category = planet_giga_megaengineers_job
+        produces = {
+            giga_sr_amb_megaconstruction = @giga_amb_megaengineer_output
+        }
+        upkeep = {
+            alloys = @giga_amb_megaengineer_alloys_upkeep
+            unity = @giga_amb_megaengineer_unity_upkeep
+        }
+    }
+    weight = {
+        weight = value:giga_specialist_weight|JOB|giga_megaengineer|RESOURCE|giga_sr_amb_megaconstruction|
+    }
+}

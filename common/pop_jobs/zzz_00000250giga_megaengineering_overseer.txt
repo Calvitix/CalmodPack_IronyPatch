@@ -1,0 +1,28 @@
+giga_megaengineering_overseer = {
+    category = ruler
+    condition_string = RULER_JOB_TRIGGER
+    building_icon = building_giga_megaworkshop_hub
+    clothes_texture_index = 1
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+    possible_precalc = can_fill_ruler_job
+    resources = {
+        category = planet_giga_megaengineering_overseers
+        produces = {
+            giga_sr_amb_megaconstruction = @giga_amb_megaengineering_overseer_output
+        }
+        upkeep = {
+            consumer_goods = @giga_amb_megaengineering_overseer_extra
+            alloys = @giga_amb_megaengineering_overseer_alloys_upkeep
+            unity = @giga_amb_megaengineering_overseer_unity_upkeep
+        }
+    }
+    weight = {
+        weight = value:giga_ruler_weight|JOB|giga_megaengineering_overseer|RESOURCE|giga_sr_amb_megaconstruction|
+    }
+}

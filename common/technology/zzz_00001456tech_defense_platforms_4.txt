@@ -1,0 +1,40 @@
+tech_defense_platforms_4 = {
+    cost = @tier5cost1
+    area = engineering
+    tier = 5
+    category = {
+        voidcraft
+    }
+    prerequisites = {
+        "tech_defense_platforms_3"
+    }
+    weight = @tier5weight1
+    modifier = {
+        starbase_defense_platform_capacity_add = 16
+    }
+    weight_modifier = {
+        modifier = {
+            factor = value:tech_weight_likelihood
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+        modifier = {
+            factor = 1.5
+            is_specialist_subject_type = {
+                TYPE = bulwark
+            }
+        }
+    }
+    ai_weight = {
+        factor = @ai_starbase_types_factor
+        modifier = {
+            factor = value:tech_weight_likelihood
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+    }
+}

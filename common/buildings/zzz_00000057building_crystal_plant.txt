@@ -10,20 +10,6 @@ building_crystal_plant = {
             has_modifier = slave_colony
         }
     }
-    allow = {
-        has_upgraded_capital = yes
-    }
-    destroy_trigger = {
-        free_building_slots = 0
-        exists = owner
-        owner = {
-            is_ai = yes
-            has_monthly_income = {
-                resource = rare_crystals
-                value > 9
-            }
-        }
-    }
     triggered_planet_modifier = {
         potential = {
             exists = owner

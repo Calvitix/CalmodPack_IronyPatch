@@ -46,6 +46,16 @@ building_hive_major_capital = {
     }
     triggered_planet_modifier = {
         potential = {
+            owner = {
+                has_origin = origin_progenitor_hive
+            }
+            is_planet_class = pc_hive
+        }
+        job_spawning_drone_add = -1
+        job_offspring_drone_add = 1
+    }
+    triggered_planet_modifier = {
+        potential = {
             exists = owner
             owner = {
                 has_ascension_perk = ap_total_assimilation

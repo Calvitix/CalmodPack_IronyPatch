@@ -11,7 +11,6 @@ healthcare = {
     }
     possible_precalc = can_fill_specialist_job
     planet_modifier = {
-        planet_amenities_add = 5
         pop_growth_speed = 0.05
         planet_pop_assembly_organic_mult = 0.05
         pop_environment_tolerance = 0.025
@@ -24,42 +23,20 @@ healthcare = {
     }
     triggered_planet_modifier = {
         potential = {
-            OR = {
-                has_trait = trait_robot_domestic_protocols
-                has_trait = trait_charismatic
-            }
+            always = yes
         }
-        modifier = {
-            planet_amenities_add = 1
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            has_trait = trait_repugnant
-        }
-        modifier = {
-            planet_amenities_add = -1
-        }
+        planet_amenities_add = 5
+        mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
     }
     weight = {
-        weight = @spawner_drone_job_weight
+        weight = @high_prio_specialist_job_weight
+        mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
         modifier = {
             factor = 0.2
             has_citizenship_rights = no
             NOT = {
                 has_trait = trait_mechanical
             }
-        }
-        modifier = {
-            factor = 1.5
-            OR = {
-                has_trait = trait_robot_domestic_protocols
-                has_trait = trait_charismatic
-            }
-        }
-        modifier = {
-            factor = 0.5
-            has_trait = trait_repugnant
         }
         modifier = {
             factor = 0.1
@@ -74,6 +51,16 @@ healthcare = {
             is_enslaved = yes
             has_slavery_type = {
                 type = slavery_indentured
+            }
+        }
+        modifier = {
+            factor = 10
+            NOT = {
+                has_job = healthcare
+            }
+            planet = {
+                free_amenities < 0
+                has_available_jobs = healthcare
             }
         }
     }

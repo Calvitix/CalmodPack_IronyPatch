@@ -28,28 +28,57 @@ pearl_diver = {
             food = 2
             minerals = 2
         }
+        produces = {
+            trigger = {
+                planet = {
+                    has_planet_flag = has_produce_requisitorium
+                    exists = owner.overlord
+                    owner.overlord = {
+                        is_gestalt = no
+                    }
+                }
+            }
+            consumer_goods = @requisitorium_consumer_goods_reduction
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    has_planet_flag = has_produce_requisitorium
+                    exists = owner.overlord
+                    owner.overlord = {
+                        is_gestalt = no
+                    }
+                }
+            }
+            minerals = 1
+        }
     }
-    planet_modifier = {
+    overlord_resources = {
+        category = planet_requisitioned_consumer_goods
+        produces = {
+            trigger = {
+                planet = {
+                    has_planet_flag = has_produce_requisitorium
+                    exists = owner.overlord
+                    owner.overlord = {
+                        is_gestalt = no
+                    }
+                }
+            }
+            consumer_goods = @requisitorium_consumer_goods_overlord
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            always = yes
+        }
         trade_value_add = 3
-    }
-    triggered_planet_modifier = {
-        potential = {
-            has_trait = trait_thrifty
-        }
-        modifier = {
-            trade_value_add = 0.75
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            has_trait = trait_nuumismatic_administration
-        }
-        modifier = {
-            trade_value_add = 0.3
-        }
+        mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
     }
     weight = {
         weight = @worker_job_weight
+        mult = value:job_weights_modifier|JOB|pearl_diver|RESOURCE|consumer_goods|FACTOR|0.75|
+        mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_trade_mult|
         modifier = {
             factor = 2
             is_enslaved = yes
@@ -75,24 +104,8 @@ pearl_diver = {
             }
         }
         modifier = {
-            factor = 1.5
-            has_trait = trait_thrifty
-        }
-        modifier = {
-            factor = 1.5
-            has_trait = trait_nuumismatic_administration
-        }
-        modifier = {
             factor = 5
             has_job = pearl_diver
-        }
-        modifier = {
-            factor = 10
-            has_job = pearl_diver
-            OR = {
-                has_trait = trait_robust
-                has_trait = trait_robot_efficient_processors
-            }
         }
     }
 }

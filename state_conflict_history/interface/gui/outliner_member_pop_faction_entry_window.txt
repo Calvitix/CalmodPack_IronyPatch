@@ -1,0 +1,130 @@
+guiTypes = {
+    @outliner_w = 300
+    @outliner_w_3440 = 400
+    @outliner_h = 22
+    containerWindowType = {
+        name = "outliner_member_pop_faction_entry_window"
+        size = {
+            width = @outliner_w
+            height = @outliner_h
+        }
+        if_resolution = {
+            min_width = 3440
+            size = {
+                width = @outliner_w_3440
+                height = @outliner_h
+            }
+        }
+        buttonType = {
+            name = "background"
+            quadTextureSprite = "GFX_outliner_member_small_bg"
+            if_resolution = {
+                min_width = 3440
+                quadTextureSprite = "GFX_outliner_member_small_3440_bg"
+            }
+            position = {
+                x = -4
+                y = -5
+            }
+            clicksound = "click_outliner"
+        }
+        iconType = {
+            name = "faction_icon"
+            quadTextureSprite = "GFX_faction_icon_imperialist"
+            position = {
+                x = 4
+                y = 0
+            }
+            scale = 0.34
+            alwaysTransparent = yes
+        }
+        instantTextBoxType = {
+            name = "name"
+            font = "cg_16b"
+            text = "0"
+            position = {
+                x = 26
+                y = 1
+            }
+            maxWidth = 108
+            if_resolution
+             {
+                min_width = 3440
+                maxWidth = 208
+            }
+            maxHeight = 20
+            format = left
+            text_color_code = "E"
+            alwaysTransparent = yes
+            fixedSize = yes
+        }
+        iconType = {
+            name = "pops_icon"
+            spriteType = "GFX_planet_view_pop"
+            position = {
+                x = -151
+                y = 1
+            }
+            orientation = upper_right
+            scale = 0.62
+            alwaysTransparent = yes
+        }
+        instantTextBoxType = {
+            name = "num_pops"
+            font = "cg_16b"
+            text = "13"
+            position = {
+                x = -181
+                y = 1
+            }
+            orientation = upper_right
+            maxWidth = 30
+            maxHeight = 16
+            fixedSize = yes
+            format = right
+        }
+        instantTextBoxType = {
+            name = "attraction_label"
+            position = {
+                x = -139
+                y = 1
+            }
+            orientation = upper_right
+            font = "cg_16b"
+            text = "7"
+            text_color_code = "Y"
+            maxWidth = 33
+            maxHeight = 16
+            fixedSize = yes
+            format = center
+        }
+        instantTextBoxType = {
+            name = "approval_label"
+            position = {
+                x = -110
+                y = 1
+            }
+            orientation = upper_right
+            font = "cg_16b"
+            text = "APPROVAL_OF_FACTION"
+            maxWidth = 58
+            maxHeight = 16
+            fixedSize = yes
+            format = left
+        }
+        instantTextBoxType = {
+            name = "influence_label"
+            position = {
+                x = -65
+                y = 1
+            }
+            orientation = upper_right
+            font = "cg_16b"
+            text = "INFLUENCE_GAIN_FROM_FACTION"
+            maxWidth = 50
+            maxHeight = 16
+            fixedSize = yes
+            format = right
+        }
+    }
+}

@@ -1,0 +1,35 @@
+outer_bulwarks = {
+    attack_unarmed_orbital_stations = yes
+    scaled_difficulty_bonuses = 0.5
+    destroys_starbases = yes
+    show_in_contacts_list = yes
+    minimalist_contacts_list_profile = yes
+    share_survey_data = no
+    custom_diplomacy = yes
+    enforces_borders = no
+    needs_survey = no
+    has_complete_sensor = yes
+    can_have_their_comms_shared = yes
+    default_ships = no
+    custom_starbase = starbase_marauder
+    observable = yes
+    ai = {
+        enabled = no
+    }
+    faction = {
+        hostile = no
+        needs_border_access = no
+        generate_borders = yes
+        needs_colony = no
+    }
+    modules = {
+        exclusive_diplomacy_module = {
+        }
+        tiered_technology_module = {
+            tier = 3
+            rare = no
+        }
+        standard_event_module = {
+        }
+    }
+}

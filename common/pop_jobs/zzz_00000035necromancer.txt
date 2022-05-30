@@ -55,6 +55,7 @@ necromancer = {
     }
     weight = {
         weight = @specialist_job_weight
+        mult = value:job_weights_multiple_resources_modifier|JOB|necromancer|RESOURCE1|physics_research|WEIGHT1|0.5|RESOURCE2|society_research|WEIGHT2|0.5|
         modifier = {
             factor = 10
             exists = planet
@@ -91,62 +92,14 @@ necromancer = {
             has_trait = trait_limited_regeneration
         }
         modifier = {
-            factor = 1.1
-            has_trait = trait_brainslug
-        }
-        modifier = {
-            factor = 1.35
-            OR = {
-                has_trait = trait_presapient_natural_intellectuals
-                has_trait = trait_natural_physicists
-                has_trait = trait_natural_sociologists
-                has_trait = trait_intelligent
-            }
-        }
-        modifier = {
-            factor = 1.75
-            has_trait = trait_erudite
-        }
-        modifier = {
-            factor = 1.05
-            OR = {
-                has_trait = trait_robust
-                has_trait = trait_robot_efficient_processors
-            }
-        }
-        modifier = {
-            factor = 0.9
-            has_trait = trait_quarrelsome
-        }
-        modifier = {
             factor = 0
             species = {
                 can_be_soldier = no
             }
         }
         modifier = {
-            factor = 1.5
-            has_trait = trait_void_dweller_1
-            exists = planet
-            planet = {
-                is_planet_class = pc_habitat
-            }
-        }
-        modifier = {
-            factor = 0.85
-            has_trait = trait_void_dweller_1
-            exists = planet
-            planet = {
-                is_artificial = no
-            }
-        }
-        modifier = {
             factor = 2
             has_trait = trait_lithoid
-        }
-        modifier = {
-            factor = 2
-            has_trait = trait_necrophage
         }
     }
 }

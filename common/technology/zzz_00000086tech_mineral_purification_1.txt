@@ -17,6 +17,12 @@ tech_mineral_purification_1 = {
                 has_trait = "leader_trait_expertise_industry"
             }
         }
+        modifier = {
+            factor = 1.5
+            is_specialist_subject_type = {
+                TYPE = prospectorium
+            }
+        }
     }
     ai_weight = {
         factor = @ai_mining_building_factor

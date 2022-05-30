@@ -1,0 +1,14 @@
+is_alpine = {
+    OR = {
+        is_planet_class = pc_alpine
+        is_planet_class = pc_cascadian
+        is_planet_class = pc_boreal
+        is_planet_class = pc_duneforest
+        is_planet_class = pc_lanthanide
+        is_planet_class = pc_storm
+        is_planet_class = pc_mineral
+        is_planet_class = pc_snow
+        is_planet_class = pc_plateau
+        is_planet_class = pc_highland
+    }
+}

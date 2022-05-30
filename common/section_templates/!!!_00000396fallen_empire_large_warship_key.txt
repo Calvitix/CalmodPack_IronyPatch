@@ -17,21 +17,6 @@ ship_section_template = {
         locatorname = "medium_gun_02"
     }
     component_slot = {
-        name = "EXTRA_LARGE_01"
-        template = "invisible_extra_large_fixed"
-        locatorname = "large_gun_01"
-    }
-    component_slot = {
-        name = "EXTRA_LARGE_02"
-        template = "invisible_extra_large_fixed"
-        locatorname = "large_gun_01"
-    }
-    component_slot = {
-        name = "EXTRA_LARGE_03"
-        template = "invisible_extra_large_fixed"
-        locatorname = "large_gun_01"
-    }
-    component_slot = {
         name = "LARGE_GUN_01"
         template = "large_turret"
         locatorname = "large_gun_01"

@@ -1,0 +1,25 @@
+ehof_cultivator = {
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = building_ehof_sm_forge_1
+    clothes_texture_index = 3
+    possible_precalc = can_fill_specialist_job
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+    resources = {
+        category = planet_cultivators
+        produces = {
+            ehof_sr_sentient_metal = 4
+        }
+        upkeep = {
+            alloys = 4
+            energy = 4
+        }
+    }
+    weight = {
+        weight = value:giga_specialist_weight|JOB|ehof_cultivator|RESOURCE|ehof_sr_sentient_metal|INDENTURED|1.2|
+    }
+}

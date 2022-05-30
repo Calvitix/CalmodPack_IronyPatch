@@ -1,0 +1,38 @@
+giga_preserver_drone = {
+    category = complex_drone
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = building_xeno_zoo
+    clothes_texture_index = 3
+    possible = {
+        is_gestalt = yes
+    }
+    possible_precalc = can_fill_drone_job
+    resources = {
+        category = planet_researchers
+        produces = {
+            society_research = 2
+            unity = 3
+        }
+        upkeep = {
+            food = 1
+            trigger = {
+                exists = owner
+                owner = {
+                    is_hive_empire = yes
+                }
+            }
+        }
+        upkeep = {
+            energy = 1
+            trigger = {
+                exists = owner
+                owner = {
+                    is_machine_empire = yes
+                }
+            }
+        }
+    }
+    weight = {
+        weight = value:giga_complex_drone_weight|JOB|giga_preserver_drone|RESOURCE|society_research|WEIGHT|0.4|RESOURCE2|unity|WEIGHT2|0.6|
+    }
+}

@@ -32,6 +32,12 @@ tech_luxuries_1 = {
             }
         }
         modifier = {
+            factor = 1.5
+            is_specialist_subject_type = {
+                TYPE = prospectorium
+            }
+        }
+        modifier = {
             factor = 2
             has_valid_civic = civic_manufactory
         }

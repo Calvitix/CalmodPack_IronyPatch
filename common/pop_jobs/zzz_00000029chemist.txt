@@ -31,6 +31,7 @@ chemist = {
     }
     weight = {
         weight = @specialist_job_weight
+        mult = value:job_weights_modifier|JOB|chemist|RESOURCE|volatile_motes|
         modifier = {
             factor = 0.2
             has_citizenship_rights = no
@@ -45,34 +46,6 @@ chemist = {
         modifier = {
             factor = 7
             has_job = chemist
-        }
-        modifier = {
-            factor = 15
-            has_job = chemist
-            OR = {
-                has_trait = trait_robust
-                has_trait = trait_robot_efficient_processors
-            }
-        }
-        modifier = {
-            factor = 1.5
-            has_trait = trait_void_dweller_1
-            exists = planet
-            planet = {
-                is_planet_class = pc_habitat
-            }
-        }
-        modifier = {
-            factor = 0.85
-            has_trait = trait_void_dweller_1
-            exists = planet
-            planet = {
-                is_artificial = no
-            }
-        }
-        modifier = {
-            factor = 1.5
-            has_trait = trait_necrophage
         }
     }
 }

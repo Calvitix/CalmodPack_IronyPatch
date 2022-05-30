@@ -1,0 +1,58 @@
+ald_hyperfactorio_drone = {
+    category = complex_drone
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = building_factory_3
+    icon = artisan
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+    possible_precalc = can_fill_drone_job
+    possible = {
+        can_think = yes
+    }
+    resources = {
+        category = planet_artisans
+        produces = {
+            consumer_goods = 100
+        }
+        upkeep = {
+            minerals = 100
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_planet_flag = has_produce_requisitorium
+                    exists = owner.overlord
+                    owner.overlord = {
+                        is_gestalt = no
+                    }
+                }
+            }
+            consumer_goods = @requisitorium_consumer_goods_reduction
+            multiplier = 10
+        }
+    }
+    overlord_resources = {
+        category = planet_requisitioned_consumer_goods
+        produces = {
+            trigger = {
+                planet = {
+                    has_planet_flag = has_produce_requisitorium
+                    exists = owner.overlord
+                    owner.overlord = {
+                        is_gestalt = no
+                    }
+                }
+            }
+            consumer_goods = @requisitorium_consumer_goods_overlord
+            multiplier = 10
+        }
+    }
+    weight = {
+        weight = value:giga_complex_drone_weight|JOB|ald_hyperfactorio_drone|RESOURCE|consumer_goods|DEFICIT|2|
+    }
+}

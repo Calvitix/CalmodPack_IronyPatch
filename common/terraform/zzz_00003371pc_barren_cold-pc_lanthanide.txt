@@ -1,0 +1,43 @@
+@terraforming_cost_level_4 = 20000
+@terraforming_duration_level_3 = 28800
+terraform_link = {
+    from = pc_barren_cold
+    to = pc_lanthanide
+    resources = {
+        category = terraforming
+        cost = {
+            energy = @terraforming_cost_level_4
+        }
+    }
+    duration = @terraforming_duration_level_3
+    potential = {
+        from = {
+            has_modifier = pdterra_lanthanide
+        }
+    }
+    condition = {
+        has_technology = "tech_climate_restoration"
+    }
+    effect = {
+        from = {
+            remove_modifier = pdterra_lanthanide
+            remove_deposit = d_minerals_5
+            reroll_deposits = yes
+            add_modifier = {
+                modifier = pdlanthanide
+                days = -1
+            }
+            add_deposit = d_lanthanide_deposit
+        }
+    }
+    ai_weight = {
+        weight = 0
+        modifier = {
+            weight = 2
+            should_terraform_trigger = {
+                CLASS_FROM = pc_barren_cold
+                CLASS_TO = pc_lanthanide
+            }
+        }
+    }
+}

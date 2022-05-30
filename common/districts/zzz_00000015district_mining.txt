@@ -5,9 +5,21 @@ district_mining = {
     max_for_deposits_on_planet = 30
     show_on_uncolonized = {
         uses_district_set = standard
+        NAND = {
+            exists = from
+            from = {
+                is_subterranean_empire = yes
+            }
+        }
     }
     potential = {
         uses_district_set = standard
+        NAND = {
+            exists = owner
+            owner = {
+                is_subterranean_empire = yes
+            }
+        }
     }
     allow = {
         NOT = {

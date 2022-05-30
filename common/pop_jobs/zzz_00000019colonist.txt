@@ -13,27 +13,12 @@ colonist = {
     pop_modifier = {
         pop_defense_armies_add = 1
     }
-    planet_modifier = {
+    triggered_planet_modifier = {
+        potential = {
+            always = yes
+        }
         planet_amenities_add = 3
-    }
-    triggered_planet_modifier = {
-        potential = {
-            OR = {
-                has_trait = trait_robot_domestic_protocols
-                has_trait = trait_charismatic
-            }
-        }
-        modifier = {
-            planet_amenities_add = 1
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            has_trait = trait_repugnant
-        }
-        modifier = {
-            planet_amenities_add = -1
-        }
+        mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
     }
     resources = {
         category = planet_jobs
@@ -52,6 +37,7 @@ colonist = {
     }
     weight = {
         weight = @colonist_job_weight
+        mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
         modifier = {
             factor = 0.1
             can_take_servant_job = yes
@@ -59,17 +45,6 @@ colonist = {
         modifier = {
             factor = 1.5
             has_job = colonist
-        }
-        modifier = {
-            factor = 2
-            OR = {
-                has_trait = trait_robot_domestic_protocols
-                has_trait = trait_charismatic
-            }
-        }
-        modifier = {
-            factor = 0.8
-            has_trait = trait_repugnant
         }
         modifier = {
             factor = 0
@@ -97,22 +72,6 @@ colonist = {
             is_enslaved = yes
             has_slavery_type = {
                 type = slavery_indentured
-            }
-        }
-        modifier = {
-            factor = 1.5
-            has_trait = trait_void_dweller_1
-            exists = planet
-            planet = {
-                is_planet_class = pc_habitat
-            }
-        }
-        modifier = {
-            factor = 0.85
-            has_trait = trait_void_dweller_1
-            exists = planet
-            planet = {
-                is_artificial = no
             }
         }
     }

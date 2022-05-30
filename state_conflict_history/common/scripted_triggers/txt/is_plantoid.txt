@@ -1,0 +1,5 @@
+is_plantoid = {
+    species = {
+        is_archetype = PLANTOID
+    }
+}

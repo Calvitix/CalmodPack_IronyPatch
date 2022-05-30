@@ -1,0 +1,20 @@
+is_tundra = {
+    OR = {
+        is_planet_class = pc_tundra
+        is_planet_class = pc_swamp
+        is_planet_class = pc_mud
+        is_planet_class = pc_hadesert
+        is_planet_class = pc_mushroom
+        is_planet_class = pc_prairie
+        is_planet_class = pc_methane
+        is_planet_class = pc_ammonia
+        is_planet_class = pc_acid
+        is_planet_class = pc_basalt
+        is_planet_class = pc_aeolian
+        is_planet_class = pc_lichen
+        is_planet_class = pc_taiga
+        is_planet_class = pc_frigid
+        is_planet_class = pc_bog
+        is_planet_class = pc_awakened
+    }
+}

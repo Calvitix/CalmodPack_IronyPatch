@@ -1,0 +1,45 @@
+district_virtual_amalgamation = {
+    base_buildtime = @giga_rw_district_buildtime
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        uses_district_set = virtual_ring
+        from = {
+            giga_vr_amalgamation_trigger = yes
+        }
+    }
+    potential = {
+        uses_district_set = virtual_ring
+        owner = {
+            giga_vr_amalgamation_trigger = yes
+        }
+    }
+    conversion_ratio = 1
+    convert_to = {
+        district_virtual_livestock
+        district_virtual_hell
+        district_virtual_diplomatic
+        district_virtual_diplomatic_hive
+        district_virtual_diplomatic_machine
+        district_virtual_training
+        district_virtual_training_gestalt
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = @giga_rw_cost
+        }
+        upkeep = {
+            energy = @giga_rw_maintenance
+        }
+        upkeep = {
+            energy = @giga_rw_maintenance
+        }
+    }
+    planet_modifier = {
+        planet_housing_add = 5
+        job_giga_virtual_organic_battery_add = 20
+    }
+    triggered_desc = {
+        text = job_giga_virtual_organic_battery_effect_desc
+    }
+}

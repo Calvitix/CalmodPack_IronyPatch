@@ -1,0 +1,65 @@
+@maginot_central_command_naval_cap = 100
+@maginot_central_command_crime_reduction = -100
+@maginot_central_command_stability = 25
+@maginot_central_command_stability_martial_law = 25
+@maginot_central_command_unity = 25
+@maginot_central_command_power_projection = 0.5
+@maginot_central_command_influence = 0.5
+@maginot_defence_army_add = 1
+@maginot_ruler_gestalt_upkeep_energy = 50
+@maginot_ruler_gestalt_upkeep_alloys = 30
+@maginot_ruler_job_weight = 1750
+maginot_central_command_gestalt = {
+    category = complex_drone
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = building_imperial_capital
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+        can_think = yes
+    }
+    possible_precalc = can_fill_drone_job
+    country_modifier = {
+        country_naval_cap_add = @maginot_central_command_naval_cap
+        country_power_projection_influence_produces_add = @maginot_central_command_power_projection
+    }
+    pop_modifier = {
+        pop_defense_armies_add = @maginot_defence_army_add
+    }
+    planet_modifier = {
+        planet_crime_no_happiness_add = @maginot_central_command_crime_reduction
+        planet_stability_add = @maginot_central_command_stability
+    }
+    triggered_planet_modifier = {
+        potential = {
+            planet = {
+                OR = {
+                    has_modifier = compliance_protocols
+                    has_modifier = hunter_killer_drones
+                }
+            }
+        }
+        modifier = {
+            planet_stability_add = @maginot_central_command_stability_martial_law
+        }
+    }
+    resources = {
+        category = planet_soldiers
+        produces = {
+            unity = @maginot_central_command_unity
+            influence = @maginot_central_command_influence
+        }
+        upkeep = {
+            energy = @maginot_ruler_gestalt_upkeep_energy
+            alloys = @maginot_ruler_gestalt_upkeep_alloys
+        }
+    }
+    weight = {
+        weight = value:giga_complex_drone_weight|JOB|maginot_central_command_gestalt|RESOURCE|unity|
+        multiply = @maginot_ruler_job_weight
+        multiply = value:giga_army_weight
+    }
+}

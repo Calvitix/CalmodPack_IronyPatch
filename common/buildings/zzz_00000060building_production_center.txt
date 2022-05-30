@@ -8,6 +8,12 @@ building_production_center = {
         owner = {
             is_gestalt = yes
         }
+        OR = {
+            owner = {
+                is_ai = no
+            }
+            has_any_industry_district = yes
+        }
     }
     destroy_trigger = {
         exists = owner
@@ -16,8 +22,11 @@ building_production_center = {
                 is_gestalt = no
             }
             buildings_no_motes = yes
-            and = {
-            has_any_industry_district = no
+            AND = {
+                owner = {
+                    is_ai = yes
+                }
+                has_any_industry_district = no
                 free_building_slots = 0
             }
         }

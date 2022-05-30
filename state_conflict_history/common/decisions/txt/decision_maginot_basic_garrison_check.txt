@@ -1,0 +1,86 @@
+decision_maginot_basic_garrison_check = {
+    sound = maginot_army_noise_effect
+    icon = decision_martial_law
+    resources = {
+        category = decisions
+        cost = {
+            energy = 10
+        }
+    }
+    potential = {
+        is_giga_maginot_world = yes
+        has_planet_flag = giga_maginot_world
+        exists = planet_owner
+        has_ground_combat = no
+        is_occupied_flag = no
+    }
+    allow = {
+        custom_tooltip = {
+            fail_text = maginot_wait_for_army_refresh
+            NOT = {
+                has_planet_flag = maginot_wait_for_army_refresh
+            }
+        }
+    }
+    effect = {
+        custom_tooltip = decision_maginot_basic_garrison_check_effect
+        hidden_effect = {
+            set_timed_planet_flag = {
+                flag = maginot_wait_for_army_refresh
+                days = 1
+            }
+            if = {
+                limit = {
+                    exists = planet_owner
+                }
+                every_planet_army = {
+                    limit = {
+                        OR = {
+                            army_type = "heavy_defender"
+                            army_type = "robot_heavy_defender"
+                            army_type = "machine_heavy_defender"
+                        }
+                    }
+                    remove_army = yes
+                }
+                spawn_giga_maginot_garrison = yes
+                if = {
+                    limit = {
+                        planet_owner = {
+                            is_machine_empire = no
+                        }
+                    }
+                    while = {
+                        count = 5
+                        create_army = {
+                            name = "Unité lourde de défense"
+                            owner = planet_owner
+                            species = planet_owner.species
+                            type = "heavy_defender"
+                        }
+                    }
+                }
+                else_if = {
+                    limit = {
+                        planet_owner = {
+                            is_machine_empire = yes
+                        }
+                    }
+                    while = {
+                        count = 5
+                        create_army = {
+                            name = "Unité lourde de défense"
+                            owner = planet_owner
+                            species = planet_owner.species
+                            type = "machine_heavy_defender"
+                        }
+                    }
+                }
+            }
+            maginot_refresh_ground_armies = yes
+        }
+    }
+    ai_weight = {
+        weight = 0
+    }
+}

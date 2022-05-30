@@ -1,0 +1,16 @@
+giga_gas_harvesting_drone = {
+    category = simple_drone
+    condition_string = WORKER_JOB_TRIGGER
+    icon = giga_gas_harvester
+    building_icon = building_gas_extractors
+    possible_precalc = can_fill_drone_job
+    resources = {
+        category = planet_refiners
+        produces = {
+            exotic_gases = 2
+        }
+    }
+    weight = {
+        weight = value:giga_menial_drone_weight|JOB|giga_gas_harvesting_drone|RESOURCE|exotic_gases|IMPORTANT|yes|
+    }
+}

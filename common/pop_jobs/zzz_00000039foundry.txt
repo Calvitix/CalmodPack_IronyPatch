@@ -37,47 +37,45 @@ foundry = {
         upkeep = {
             minerals = 6
         }
+        produces = {
+            trigger = {
+                planet = {
+                    has_planet_flag = has_material_requisitorium
+                }
+            }
+            alloys = @requisitorium_alloys_reduction
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    has_planet_flag = has_material_requisitorium
+                }
+            }
+            minerals = 2
+        }
+    }
+    overlord_resources = {
+        category = planet_requisitioned_alloys
+        produces = {
+            trigger = {
+                planet = {
+                    has_planet_flag = has_material_requisitorium
+                }
+            }
+            alloys = @requisitorium_alloys_overlord
+        }
     }
     weight = {
         weight = @specialist_job_weight
+        mult = value:job_weights_modifier|JOB|foundry|RESOURCE|alloys|
         modifier = {
             factor = 2
             is_enslaved = yes
             can_take_servant_job = no
         }
         modifier = {
-            factor = 2
-            species = {
-                has_species_flag = racket_species_flag
-            }
-        }
-        modifier = {
             factor = 5
             has_job = foundry
-        }
-        modifier = {
-            factor = 15
-            has_job = foundry
-            OR = {
-                has_trait = trait_robust
-                has_trait = trait_robot_efficient_processors
-            }
-        }
-        modifier = {
-            factor = 1.5
-            has_trait = trait_void_dweller_1
-            exists = planet
-            planet = {
-                is_planet_class = pc_habitat
-            }
-        }
-        modifier = {
-            factor = 0.85
-            has_trait = trait_void_dweller_1
-            exists = planet
-            planet = {
-                is_artificial = no
-            }
         }
     }
 }

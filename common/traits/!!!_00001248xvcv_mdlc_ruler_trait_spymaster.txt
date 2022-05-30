@@ -1,0 +1,13 @@
+xvcv_mdlc_ruler_trait_spymaster = {
+    cost = 0
+    initial = no
+    randomized = no
+    icon = "gfx/interface/icons/customgui/leader_traits/xvcv_mdlc_ruler_trait_spymaster.dds"
+    modifier = {
+        espionage_operation_skill_add = 2
+    }
+    leader_class = {
+        ruler
+    }
+    leader_trait = all
+}

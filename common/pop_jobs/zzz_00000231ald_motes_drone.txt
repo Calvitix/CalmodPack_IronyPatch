@@ -1,0 +1,26 @@
+ald_motes_drone = {
+    category = complex_drone
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = building_chemical_plant
+    icon = chemist
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+    possible_precalc = can_fill_drone_job
+    resources = {
+        category = planet_chemists
+        produces = {
+            volatile_motes = 20
+        }
+        upkeep = {
+            minerals = 100
+        }
+    }
+    weight = {
+        weight = value:giga_complex_drone_weight|JOB|ald_motes_drone|RESOURCE|volatile_motes|
+    }
+}

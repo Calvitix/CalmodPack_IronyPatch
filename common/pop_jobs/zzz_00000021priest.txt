@@ -22,30 +22,17 @@ priest = {
             consumer_goods = 2
         }
     }
-    planet_modifier = {
+    triggered_planet_modifier = {
+        potential = {
+            always = yes
+        }
         planet_amenities_add = 2
-    }
-    triggered_planet_modifier = {
-        potential = {
-            OR = {
-                has_trait = trait_robot_domestic_protocols
-                has_trait = trait_charismatic
-            }
-        }
-        modifier = {
-            planet_amenities_add = 0.4
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            has_trait = trait_repugnant
-        }
-        modifier = {
-            planet_amenities_add = -0.4
-        }
+        mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
     }
     weight = {
         weight = @specialist_job_weight
+        mult = value:job_weights_modifier|JOB|priest|RESOURCE|unity|
+        mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
         modifier = {
             factor = 0.2
             has_citizenship_rights = no
@@ -61,38 +48,12 @@ priest = {
             }
         }
         modifier = {
-            factor = 2
-            OR = {
-                has_trait = trait_robot_domestic_protocols
-                has_trait = trait_charismatic
-            }
-        }
-        modifier = {
-            factor = 0.5
-            has_trait = trait_repugnant
-        }
-        modifier = {
-            factor = 1.5
-            OR = {
-                has_trait = trait_robot_propaganda_machines
-                has_trait = trait_traditional
-            }
-        }
-        modifier = {
             factor = 1.2
             has_ethic = ethic_spiritualist
         }
         modifier = {
-            factor = 0.5
-            has_trait = trait_quarrelsome
-        }
-        modifier = {
             factor = 0.1
             can_take_servant_job = yes
-        }
-        modifier = {
-            factor = 1.1
-            has_trait = trait_natural_sociologists
         }
         modifier = {
             factor = 0.1
@@ -106,72 +67,11 @@ priest = {
             has_job = priest
         }
         modifier = {
-            factor = 1.5
-            has_trait = trait_brainslug
-        }
-        modifier = {
-            factor = 1.3
-            has_trait = trait_presapient_natural_intellectuals
-        }
-        modifier = {
-            factor = 1.3
-            OR = {
-                has_trait = trait_robust
-                has_trait = trait_robot_efficient_processors
-            }
-        }
-        modifier = {
-            factor = 1.05
-            OR = {
-                has_trait = trait_robot_logic_engines
-                has_trait = trait_intelligent
-            }
-        }
-        modifier = {
-            factor = 0.9
-            has_trait = trait_presapient_proles
-        }
-        modifier = {
-            factor = 1.05
-            has_trait = trait_psionic
-        }
-        modifier = {
-            factor = 0.7
-            has_trait = trait_enigmatic_intelligence_failed
-        }
-        modifier = {
-            factor = 1.05
-            OR = {
-                has_trait = trait_enigmatic_intelligence
-                has_trait = trait_enigmatic_intelligence_poor
-            }
-        }
-        modifier = {
             factor = 0.1
             is_enslaved = yes
             has_slavery_type = {
                 type = slavery_indentured
             }
-        }
-        modifier = {
-            factor = 1.5
-            has_trait = trait_void_dweller_1
-            exists = planet
-            planet = {
-                is_planet_class = pc_habitat
-            }
-        }
-        modifier = {
-            factor = 0.85
-            has_trait = trait_void_dweller_1
-            exists = planet
-            planet = {
-                is_artificial = no
-            }
-        }
-        modifier = {
-            factor = 1.5
-            has_trait = trait_necrophage
         }
     }
 }

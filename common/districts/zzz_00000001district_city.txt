@@ -18,7 +18,10 @@ district_city = {
     potential = {
         exists = owner
         owner = {
-            is_regular_empire = yes
+            OR = {
+                is_regular_empire = yes
+                is_country_type = primitive
+            }
         }
         OR = {
             uses_district_set = standard

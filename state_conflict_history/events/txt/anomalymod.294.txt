@@ -1,0 +1,32 @@
+namespace = anomalymod
+planet_event = {
+    id = anomalymod.294
+    title = "uplift.6051.name"
+    desc = "anomalymod.294.desc"
+    picture = GFX_evt_society_research
+    location = root
+    show_sound = notification_uplift
+    is_triggered_only = yes
+    trigger = {
+        NOT = {
+            has_planet_flag = upl_ongoing_planet
+        }
+        is_alpine = yes
+    }
+    option = {
+        name = uplift.6011.a
+        hidden_effect = {
+            owner = {
+                country_event = {
+                    id = tutorial.58
+                    days = 5
+                }
+            }
+        }
+        hidden_effect = {
+            planet_event = {
+                id = uplift.7199
+            }
+        }
+    }
+}

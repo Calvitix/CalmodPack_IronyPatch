@@ -1,0 +1,118 @@
+ald_hyperfoundry_drone = {
+    category = complex_drone
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = building_foundry_3
+    icon = foundry
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+    possible_precalc = can_fill_drone_job
+    possible = {
+        can_think = yes
+    }
+    resources = {
+        category = planet_metallurgists
+        produces = {
+            alloys = 30
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_catalytic_empire = no
+                }
+            }
+            minerals = 60
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_catalytic_empire = yes
+                }
+            }
+            food = 90
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_machine_empire = yes
+                }
+            }
+            alloys = 10
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_machine_empire = yes
+                    is_catalytic_empire = no
+                }
+            }
+            minerals = 20
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_machine_empire = yes
+                    is_catalytic_empire = yes
+                }
+            }
+            food = 30
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_planet_flag = has_material_requisitorium
+                }
+            }
+            alloys = @requisitorium_alloys_reduction
+            multiplier = 10
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    has_planet_flag = has_material_requisitorium
+                    exists = owner
+                    owner = {
+                        is_catalytic_empire = yes
+                    }
+                }
+            }
+            minerals = 30
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    has_planet_flag = has_material_requisitorium
+                    exists = owner
+                    owner = {
+                        is_catalytic_empire = no
+                    }
+                }
+            }
+            minerals = 20
+        }
+    }
+    overlord_resources = {
+        category = planet_requisitioned_alloys
+        produces = {
+            trigger = {
+                planet = {
+                    has_planet_flag = has_material_requisitorium
+                }
+            }
+            alloys = @requisitorium_alloys_overlord
+            multiplier = 10
+        }
+    }
+    weight = {
+        weight = value:giga_complex_drone_weight|JOB|ald_hyperfoundry_drone|RESOURCE|alloys|
+    }
+}

@@ -1,0 +1,5 @@
+is_necroid = {
+    species = {
+        is_archetype = NECROID
+    }
+}

@@ -125,27 +125,17 @@ necro_apprentice = {
             minerals = @living_standard_food_normal
         }
     }
-    planet_modifier = {
+    triggered_planet_modifier = {
+        potential = {
+            always = yes
+        }
         planet_amenities_add = 5
-    }
-    triggered_planet_modifier = {
-        potential = {
-            has_trait = trait_charismatic
-        }
-        modifier = {
-            planet_amenities_add = 1
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            has_trait = trait_repugnant
-        }
-        modifier = {
-            planet_amenities_add = -1
-        }
+        mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
     }
     weight = {
         weight = @ruler_job_weight
+        mult = value:job_weights_modifier|JOB|necro_apprentice|RESOURCE|unity|FACTOR|0.5|
+        mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
         modifier = {
             factor = 0.75
             is_enslaved = yes
@@ -153,14 +143,6 @@ necro_apprentice = {
         modifier = {
             factor = 0.75
             pop_has_happiness = no
-        }
-        modifier = {
-            factor = 1.5
-            has_trait = trait_charismatic
-        }
-        modifier = {
-            factor = 0.5
-            has_trait = trait_repugnant
         }
         modifier = {
             factor = 0.1

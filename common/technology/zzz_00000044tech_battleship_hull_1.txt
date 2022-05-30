@@ -10,7 +10,9 @@ tech_battleship_hull_1 = {
     }
     weight = @tier4weight3
     modifier = {
+        custom_tooltip = tech_battleship_hull_effect
         shipsize_battleship_hull_add = 800
+        shipsize_offspring_battleship_hull_add = 800
     }
     weight_modifier = {
         modifier = {

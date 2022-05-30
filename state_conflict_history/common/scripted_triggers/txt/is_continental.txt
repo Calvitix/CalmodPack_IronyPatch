@@ -1,0 +1,17 @@
+is_continental = {
+    OR = {
+        is_planet_class = pc_continental
+        is_planet_class = pc_superhabitable
+        is_planet_class = pc_retinal
+        is_planet_class = pc_med
+        is_planet_class = pc_tidallylocked
+        is_planet_class = pc_snowball
+        is_planet_class = pc_tepid
+        is_planet_class = pc_supercon
+        is_planet_class = pc_boreal
+        is_planet_class = pc_pangea
+        is_planet_class = pc_young
+        is_planet_class = pc_primal
+        is_planet_class = pc_meridiem
+    }
+}

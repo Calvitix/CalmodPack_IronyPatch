@@ -1,0 +1,13 @@
+planet_pop_assemblers = {
+    parent = planet_jobs
+    generate_add_modifiers = {
+        cost
+        produces
+        upkeep
+    }
+    generate_mult_modifiers = {
+        cost
+        produces
+        upkeep
+    }
+}

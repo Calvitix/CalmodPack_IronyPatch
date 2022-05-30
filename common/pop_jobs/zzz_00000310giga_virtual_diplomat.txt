@@ -1,0 +1,308 @@
+giga_virtual_diplomat = {
+    category = specialist
+    clothes_texture_index = 3
+    building_icon = building_embassy
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+        is_enslaved = no
+    }
+    possible_precalc = can_fill_specialist_job
+    resources = {
+        category = planet_giga_virtual_diplomats
+        upkeep = {
+            consumer_goods = 2
+        }
+    }
+    triggered_country_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_militarist = yes
+            }
+        }
+        diplo_weight_naval_mult = 0.005
+        country_vassal_naval_capacity_contribution_mult = 0.01
+        op_cat_military_speed_mult = 0.02
+    }
+    triggered_country_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_ethic = ethic_fanatic_militarist
+            }
+        }
+        diplo_weight_naval_mult = 0.005
+        country_vassal_naval_capacity_contribution_mult = 0.01
+        op_cat_military_speed_mult = 0.02
+    }
+    triggered_country_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_pacifist = yes
+            }
+        }
+        country_trust_growth = 0.01
+        defensive_pacts_influence_upkeep_mult = -0.01
+    }
+    triggered_country_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_ethic = ethic_fanatic_pacifist
+            }
+        }
+        country_trust_growth = 0.01
+        defensive_pacts_influence_upkeep_mult = -0.01
+    }
+    triggered_country_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_authoritarian = yes
+            }
+        }
+        spy_network_daily_value_mult = 0.01
+        op_cat_subterfuge_speed_mult = 0.02
+    }
+    triggered_country_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_ethic = ethic_fanatic_authoritarian
+            }
+        }
+        spy_network_daily_value_mult = 0.01
+        op_cat_subterfuge_speed_mult = 0.02
+    }
+    triggered_country_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_egalitarian = yes
+            }
+        }
+        giga_tooltips_influence_produces_add = 1
+        op_cat_government_speed_mult = 0.02
+    }
+    triggered_country_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_ethic = ethic_fanatic_egalitarian
+            }
+        }
+        giga_tooltips_influence_produces_add = 1
+        op_cat_government_speed_mult = 0.02
+    }
+    triggered_country_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_spiritualist = yes
+            }
+        }
+        country_organic_trust_cap_add = 2
+        diplo_weight_envoys_mult = 0.002
+    }
+    triggered_country_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_ethic = ethic_fanatic_spiritualist
+            }
+        }
+        country_organic_trust_cap_add = 2
+        diplo_weight_envoys_mult = 0.002
+    }
+    triggered_country_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_materialist = yes
+            }
+        }
+        research_agreements_influence_upkeep_mult = -0.01
+        country_subject_technology_sharing_mult = 0.02
+    }
+    triggered_country_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_ethic = ethic_fanatic_materialist
+            }
+        }
+        research_agreements_influence_upkeep_mult = -0.01
+        country_subject_technology_sharing_mult = 0.02
+    }
+    triggered_country_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_xenophobe = yes
+            }
+        }
+        envoy_harm_relations_mult = 0.02
+        country_insult_efficiency = 0.02
+    }
+    triggered_country_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_ethic = ethic_fanatic_xenophobe
+            }
+        }
+        envoy_harm_relations_mult = 0.02
+        country_insult_efficiency = 0.02
+    }
+    triggered_country_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_xenophile = yes
+            }
+        }
+        giga_tooltips_influence_produces_add = 0.5
+        envoy_improve_relations_mult = 0.01
+        planet_immigration_pull_mult = 0.01
+    }
+    triggered_country_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_ethic = ethic_fanatic_xenophile
+            }
+        }
+        giga_tooltips_influence_produces_add = 0.5
+        envoy_improve_relations_mult = 0.01
+        planet_immigration_pull_mult = 0.01
+    }
+    triggered_country_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_anthropocentric = yes
+            }
+        }
+        diplo_weight_economy_mult = 0.01
+        op_cat_economy_speed_mult = 0.02
+    }
+    triggered_country_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_ethic = ethic_fanatic_anthropocentric
+            }
+        }
+        diplo_weight_economy_mult = 0.01
+        op_cat_economy_speed_mult = 0.02
+    }
+    triggered_country_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_ecocentrist = yes
+            }
+        }
+        diplo_weight_economy_mult = 0.01
+        country_organic_trust_cap_add = 2
+    }
+    triggered_country_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_ethic = ethic_fanatic_ecocentrist
+            }
+        }
+        diplo_weight_economy_mult = 0.01
+        country_organic_trust_cap_add = 2
+    }
+    triggered_country_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_cooperative = yes
+            }
+        }
+        diplo_weight_mult = 0.0025
+        country_subject_trust_cap_add = 2
+    }
+    triggered_country_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_ethic = ethic_fanatic_cooperative
+            }
+        }
+        diplo_weight_mult = 0.0025
+        country_subject_trust_cap_add = 2
+    }
+    triggered_country_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_competitive = yes
+            }
+        }
+        country_trade_attractiveness = 0.01
+        commercial_pacts_unity_produces_add = 0.5
+    }
+    triggered_country_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_ethic = ethic_fanatic_competitive
+            }
+        }
+        country_trade_attractiveness = 0.01
+        commercial_pacts_unity_produces_add = 0.5
+    }
+    triggered_country_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_elitist = yes
+            }
+        }
+        country_subject_acceptance_add = 0.5
+        country_subject_power_penalty_mult = -0.005
+        subject_tribute_mult = 0.005
+    }
+    triggered_country_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_ethic = ethic_fanatic_elitist
+            }
+        }
+        country_subject_acceptance_add = 0.5
+        country_subject_power_penalty_mult = -0.005
+        subject_tribute_mult = 0.005
+    }
+    triggered_country_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_pluralist = yes
+            }
+        }
+        diplo_weight_pops_mult = 0.01
+        op_cat_government_skill_add = 0.05
+    }
+    triggered_country_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_ethic = ethic_fanatic_pluralist
+            }
+        }
+        diplo_weight_pops_mult = 0.01
+        op_cat_government_skill_add = 0.05
+    }
+    weight = {
+        weight = value:giga_specialist_no_resource_weight|JOB|giga_virtual_diplomat|
+    }
+}

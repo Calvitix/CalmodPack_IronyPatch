@@ -1,0 +1,434 @@
+@livestock_unity = 0.5
+@livestock_society = 0.5
+@livestock_research = 0.2
+@livestock_energy = 0.5
+@livestock_food = 1
+@livestock_minerals = 0.5
+@livestock_experience = 2
+@livestock_trade = 1
+@livestock_trade_thrifty = 0.25
+giga_virtual_livestock = {
+    category = worker
+    clothes_texture_index = 2
+    pop_modifier = {
+        pop_housing_usage_add = -0.5
+        pop_political_power = -0.1
+        pop_happiness = 0.2
+    }
+    possible_pre_triggers = {
+        is_enslaved = yes
+        is_sapient = yes
+    }
+    possible = {
+        has_citizenship_type = {
+            type = citizenship_slavery
+        }
+        has_slavery_type = {
+            type = slavery_livestock
+        }
+    }
+    planet_modifier = {
+        planet_pops_energy_upkeep_mult = -0.001
+        planet_jobs_energy_upkeep_mult = -0.001
+    }
+    resources = {
+        category = planet_livestock
+        produces = {
+            trigger = {
+                is_organic_species = yes
+                is_lithoid = no
+            }
+            food = 5
+        }
+        produces = {
+            trigger = {
+                is_organic_species = yes
+                is_lithoid = no
+                planet = {
+                    has_active_building = building_food_processing_facility
+                }
+            }
+            food = 1
+        }
+        produces = {
+            trigger = {
+                is_organic_species = yes
+                is_lithoid = no
+                planet = {
+                    has_active_building = building_food_processing_center
+                }
+            }
+            food = 2
+        }
+        produces = {
+            trigger = {
+                is_lithoid = yes
+            }
+            minerals = 3
+        }
+        produces = {
+            trigger = {
+                is_lithoid = yes
+                planet = {
+                    has_active_building = building_mineral_purification_plant
+                }
+            }
+            minerals = 1
+        }
+        produces = {
+            trigger = {
+                is_lithoid = yes
+                planet = {
+                    has_active_building = building_mineral_purification_hub
+                }
+            }
+            minerals = 2
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_pacifist = yes
+                }
+            }
+            unity = @livestock_unity
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_ethic = ethic_fanatic_pacifist
+                }
+            }
+            unity = @livestock_unity
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_authoritarian = yes
+                }
+            }
+            unity = @livestock_unity
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_ethic = ethic_fanatic_authoritarian
+                }
+            }
+            unity = @livestock_unity
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_elitist = yes
+                }
+            }
+            unity = @livestock_unity
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_ethic = ethic_fanatic_elitist
+                }
+            }
+            unity = @livestock_unity
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_egalitarian = yes
+                }
+            }
+            society_research = @livestock_society
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_ethic = ethic_fanatic_egalitarian
+                }
+            }
+            society_research = @livestock_society
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_spiritualist = yes
+                }
+            }
+            society_research = @livestock_society
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_ethic = ethic_fanatic_spiritualist
+                }
+            }
+            society_research = @livestock_society
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_cooperative = yes
+                }
+            }
+            society_research = @livestock_society
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_ethic = ethic_fanatic_cooperative
+                }
+            }
+            society_research = @livestock_society
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_materialist = yes
+                }
+            }
+            physics_research = @livestock_research
+            society_research = @livestock_research
+            engineering_research = @livestock_research
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_ethic = ethic_fanatic_materialist
+                }
+            }
+            physics_research = @livestock_research
+            society_research = @livestock_research
+            engineering_research = @livestock_research
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_anthropocentric = yes
+                }
+            }
+            energy = @livestock_energy
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_ethic = ethic_fanatic_anthropocentric
+                }
+            }
+            energy = @livestock_energy
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_ecocentrist = yes
+                }
+                is_organic_species = yes
+                is_lithoid = no
+            }
+            food = @livestock_food
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_ecocentrist = yes
+                }
+                is_lithoid = yes
+            }
+            minerals = @livestock_minerals
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_ethic = ethic_fanatic_ecocentrist
+                }
+                is_organic_species = yes
+                is_lithoid = no
+            }
+            food = @livestock_food
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_ethic = ethic_fanatic_ecocentrist
+                }
+                is_lithoid = yes
+            }
+            minerals = @livestock_minerals
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_pluralist = yes
+                }
+                is_organic_species = yes
+                is_lithoid = no
+            }
+            food = @livestock_food
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_pluralist = yes
+                }
+                is_lithoid = yes
+            }
+            minerals = @livestock_minerals
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_ethic = ethic_fanatic_pluralist
+                }
+                is_organic_species = yes
+                is_lithoid = no
+            }
+            food = @livestock_food
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_ethic = ethic_fanatic_pluralist
+                }
+                is_lithoid = yes
+            }
+            minerals = @livestock_minerals
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_militarist = yes
+            }
+        }
+        army_starting_experience_add = @livestock_experience
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_ethic = ethic_fanatic_militarist
+            }
+        }
+        army_starting_experience_add = @livestock_experience
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_competitive = yes
+            }
+        }
+        trade_value_add = @livestock_trade
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_trait = trait_thrifty
+            exists = owner
+            owner = {
+                is_competitive = yes
+            }
+        }
+        trade_value_add = @livestock_trade_thrifty
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_ethic = ethic_fanatic_competitive
+            }
+        }
+        trade_value_add = @livestock_trade
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_trait = trait_thrifty
+            exists = owner
+            owner = {
+                has_ethic = ethic_fanatic_competitive
+            }
+        }
+        trade_value_add = @livestock_trade_thrifty
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_valid_civic = civic_bugged_organs_corpo
+            }
+        }
+        modifier = {
+            trade_value_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_valid_civic = civic_bugged_organs_corpo
+            }
+            has_trait = trait_thrifty
+        }
+        modifier = {
+            trade_value_add = 0.5
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_global_flag = bug_branch_active
+            exists = owner
+            owner = {
+                or = {
+                    is_competitive = yes
+                    has_valid_civic = civic_bugged_organs_corpo
+                }
+            }
+            planet = {
+                has_active_building = building_bugged_planetary_stock_exchange
+            }
+        }
+        trade_value_add = 1
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_global_flag = bug_branch_active
+            exists = owner
+            owner = {
+                or = {
+                    is_competitive = yes
+                    has_valid_civic = civic_bugged_organs_corpo
+                }
+            }
+            planet = {
+                has_active_building = building_galactic_stock_exchange
+            }
+        }
+        trade_value_add = 2
+    }
+    weight = {
+        weight = value:giga_worker_weight|JOB|giga_virtual_livestock|RESOURCE|food|
+    }
+}

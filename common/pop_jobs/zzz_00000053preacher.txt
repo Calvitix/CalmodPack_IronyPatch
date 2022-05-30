@@ -17,47 +17,25 @@ preacher = {
             unity = 1
         }
     }
-    planet_modifier = {
-        planet_amenities_add = 3
+    triggered_planet_modifier = {
+        potential = {
+            always = yes
+        }
         trade_value_add = 4
+        mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
     }
     triggered_planet_modifier = {
         potential = {
-            OR = {
-                has_trait = trait_robot_domestic_protocols
-                has_trait = trait_charismatic
-            }
+            always = yes
         }
-        modifier = {
-            planet_amenities_add = 0.6
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            has_trait = trait_repugnant
-        }
-        modifier = {
-            planet_amenities_add = -0.6
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            has_trait = trait_thrifty
-        }
-        modifier = {
-            trade_value_add = 1
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            has_trait = trait_nuumismatic_administration
-        }
-        modifier = {
-            trade_value_add = 1
-        }
+        planet_amenities_add = 3
+        mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
     }
     weight = {
         weight = @specialist_job_weight
+        mult = value:job_weights_modifier|JOB|preacher|RESOURCE|unity|FACTOR|0.25|
+        mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
+        mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_trade_mult|
         modifier = {
             factor = 0.2
             has_citizenship_rights = no
@@ -66,59 +44,8 @@ preacher = {
             }
         }
         modifier = {
-            factor = 0
-            planet = {
-                habitability = {
-                    who = root
-                    value < 0.4
-                }
-            }
-            planet = {
-                num_pops > 1
-                num_pops < 7
-            }
-            owner = {
-                num_pops < 100
-            }
-        }
-        modifier = {
-            factor = 2
-            owner = {
-                has_civic = civic_exalted_priesthood
-            }
-        }
-        modifier = {
-            factor = 1.5
-            OR = {
-                has_trait = trait_thrifty
-                has_trait = trait_nuumismatic_administration
-            }
-        }
-        modifier = {
-            factor = 1.5
-            OR = {
-                has_trait = trait_robot_domestic_protocols
-                has_trait = trait_charismatic
-            }
-        }
-        modifier = {
-            factor = 0.5
-            has_trait = trait_repugnant
-        }
-        modifier = {
-            factor = 1.1
-            OR = {
-                has_trait = trait_robot_propaganda_machines
-                has_trait = trait_traditional
-            }
-        }
-        modifier = {
             factor = 1.2
             has_ethic = ethic_spiritualist
-        }
-        modifier = {
-            factor = 0.5
-            has_trait = trait_quarrelsome
         }
         modifier = {
             factor = 0.1
@@ -130,41 +57,6 @@ preacher = {
             NOT = {
                 has_job = preacher
             }
-        }
-        modifier = {
-            factor = 1.05
-            has_trait = trait_very_strong
-        }
-        modifier = {
-            factor = 1.025
-            has_trait = trait_strong
-        }
-        modifier = {
-            factor = 0.9
-            has_trait = trait_weak
-        }
-        modifier = {
-            factor = 0.5
-            has_trait = trait_zombie
-        }
-        modifier = {
-            factor = 1.1
-            has_trait = trait_brainslug
-        }
-        modifier = {
-            factor = 1.05
-            has_trait = trait_presapient_natural_intellectuals
-        }
-        modifier = {
-            factor = 1.05
-            OR = {
-                has_trait = trait_robust
-                has_trait = trait_robot_efficient_processors
-            }
-        }
-        modifier = {
-            factor = 0.01
-            has_trait = trait_nerve_stapled
         }
     }
 }

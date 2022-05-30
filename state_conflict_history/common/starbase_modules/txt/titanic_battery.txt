@@ -1,0 +1,80 @@
+titanic_battery = {
+    section = "TITANIC_STARBASE_SECTION"
+    icon = "GFX_starbase_titanic_battery"
+    construction_days = 420
+    potential = {
+        is_orbital_ring = no
+    }
+    resources = {
+        category = starbase_modules
+        cost = {
+            trigger = {
+                from = {
+                    is_ai = no
+                }
+            }
+            alloys = 300
+            energy = 150
+            minerals = 200
+        }
+        cost = {
+            trigger = {
+                from = {
+                    is_ai = yes
+                }
+            }
+            alloys = 750
+        }
+        upkeep = {
+            alloys = 3
+            energy = 5
+        }
+    }
+    station_modifier = {
+        starbase_trade_protection_range_add = 2
+        starbase_trade_protection_add = 7
+    }
+    ai_build_at_chokepoint = yes
+    ai_build_outside_chokepoint = no
+    potential = {
+        exists = owner
+        owner = {
+            has_technology = tech_titans
+        }
+        has_starbase_size >= starbase_citadel
+    }
+    possible = {
+        custom_tooltip = {
+            fail_text = "starbase_t_limit.tooltip.fail"
+            count_starbase_modules = {
+                count < 2
+                type = titanic_battery
+            }
+        }
+    }
+    ai_weight = {
+        weight = 180
+        modifier = {
+            factor = 0.6
+            count_starbase_modules = {
+                type = titanic_battery
+                count > 1
+            }
+        }
+        modifier = {
+            factor = 0.5
+            count_starbase_modules = {
+                type = titanic_battery
+                count > 2
+            }
+        }
+        modifier = {
+            factor = 0.5
+            count_starbase_modules = {
+                type = titanic_battery
+                count > 3
+            }
+        }
+    }
+    show_in_tech = "tech_titans"
+}

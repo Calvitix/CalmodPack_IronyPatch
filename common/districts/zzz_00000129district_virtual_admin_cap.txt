@@ -1,0 +1,22 @@
+district_virtual_admin_cap = {
+    base_buildtime = @giga_rw_district_buildtime
+    show_on_uncolonized = {
+        always = no
+    }
+    potential = {
+        always = no
+    }
+    allow = {
+        always = no
+    }
+    conversion_ratio = 1
+    convert_to = {
+        district_virtual_administrative
+        district_virtual_religious
+        district_virtual_relay
+        district_virtual_organic_housing
+    }
+    resources = {
+        category = planet_districts
+    }
+}

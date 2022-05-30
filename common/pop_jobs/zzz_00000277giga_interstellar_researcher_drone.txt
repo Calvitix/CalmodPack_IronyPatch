@@ -1,0 +1,25 @@
+giga_interstellar_researcher_drone = {
+    category = complex_drone
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = building_research_lab_3
+    clothes_texture_index = 3
+    resources = {
+        category = planet_researchers
+        produces = {
+            physics_research = 5
+        }
+        produces = {
+            society_research = 3
+        }
+        produces = {
+            engineering_research = 5
+        }
+        upkeep = {
+            energy = 3
+        }
+    }
+    possible_precalc = can_fill_drone_job
+    weight = {
+        weight = value:giga_researcher_drone_weight|JOB|giga_interstellar_researcher_drone|
+    }
+}

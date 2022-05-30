@@ -17,8 +17,12 @@ artificer = {
             is_gestalt = no
         }
     }
-    planet_modifier = {
+    triggered_planet_modifier = {
+        potential = {
+            always = yes
+        }
         trade_value_add = 2
+        mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
     }
     resources = {
         category = planet_artisans
@@ -30,25 +34,50 @@ artificer = {
         upkeep = {
             minerals = 6
         }
+        produces = {
+            trigger = {
+                planet = {
+                    has_planet_flag = has_produce_requisitorium
+                    exists = owner.overlord
+                    owner.overlord = {
+                        is_gestalt = no
+                    }
+                }
+            }
+            consumer_goods = @requisitorium_consumer_goods_reduction
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    has_planet_flag = has_produce_requisitorium
+                    exists = owner.overlord
+                    owner.overlord = {
+                        is_gestalt = no
+                    }
+                }
+            }
+            minerals = 1
+        }
     }
-    triggered_planet_modifier = {
-        potential = {
-            has_trait = trait_thrifty
-        }
-        modifier = {
-            trade_value_add = 0.5
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            has_trait = trait_nuumismatic_administration
-        }
-        modifier = {
-            trade_value_add = 0.2
+    overlord_resources = {
+        category = planet_requisitioned_consumer_goods
+        produces = {
+            trigger = {
+                planet = {
+                    has_planet_flag = has_produce_requisitorium
+                    exists = owner.overlord
+                    owner.overlord = {
+                        is_gestalt = no
+                    }
+                }
+            }
+            consumer_goods = @requisitorium_consumer_goods_overlord
         }
     }
     weight = {
         weight = @specialist_job_weight
+        mult = value:job_weights_multiple_resources_modifier|JOB|artificer|RESOURCE1|consumer_goods|WEIGHT1|0.8|RESOURCE2|engineering_research|WEIGHT2|0.2|
+        mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_trade_mult|
         modifier = {
             factor = 2
             is_enslaved = yes
@@ -57,30 +86,6 @@ artificer = {
         modifier = {
             factor = 5
             has_job = artificer
-        }
-        modifier = {
-            factor = 10
-            has_job = artificer
-            OR = {
-                has_trait = trait_robust
-                has_trait = trait_robot_efficient_processors
-            }
-        }
-        modifier = {
-            factor = 1.5
-            has_trait = trait_void_dweller_1
-            exists = planet
-            planet = {
-                is_planet_class = pc_habitat
-            }
-        }
-        modifier = {
-            factor = 0.85
-            has_trait = trait_void_dweller_1
-            exists = planet
-            planet = {
-                is_artificial = no
-            }
         }
     }
 }

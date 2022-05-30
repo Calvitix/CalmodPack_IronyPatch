@@ -20,6 +20,7 @@ building_mineral_purification_plant = {
         OR = {
             has_modifier = resort_colony
             AND = {
+                exists = owner
                 owner = {
                     is_ai = yes
                 }

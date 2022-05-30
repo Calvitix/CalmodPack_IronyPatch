@@ -1,0 +1,34 @@
+@insula_structure_manager_weight = 5000
+structure_process = {
+    category = complex_drone
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = building_colony_shelter
+    clothes_texture_index = 2
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+    possible = {
+        owner = {
+            is_fallen_empire = no
+        }
+    }
+    possible_precalc = can_fill_drone_job
+    planet_modifier = {
+        planet_max_districts_add = 1
+        job_structure_drone_add = 4
+    }
+    resources = {
+        category = planet_infrastructure
+        produces = {
+            unity = 10
+            engineering_research = 10
+        }
+    }
+    weight = {
+        weight = value:giga_complex_drone_weight|JOB|structure_process|RESOURCE|unity|WEIGHT|0.5|RESOURCE2|engineering_research|WEIGHT2|0.5|
+        mult = @insula_structure_manager_weight
+    }
+}

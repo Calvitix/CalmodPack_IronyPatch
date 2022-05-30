@@ -22,46 +22,24 @@ noble = {
     }
     planet_modifier = {
         planet_stability_add = 2
+    }
+    triggered_planet_modifier = {
+        potential = {
+            always = yes
+        }
         planet_amenities_add = 3
-    }
-    triggered_planet_modifier = {
-        potential = {
-            OR = {
-                has_trait = trait_robot_domestic_protocols
-                has_trait = trait_charismatic
-            }
-        }
-        modifier = {
-            planet_amenities_add = 0.6
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            has_trait = trait_repugnant
-        }
-        modifier = {
-            planet_amenities_add = -0.6
-        }
+        mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
     }
     weight = {
         weight = @ruler_job_weight
+        mult = value:job_weights_modifier|JOB|noble|RESOURCE|unity|
+        mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
         modifier = {
             factor = 0.1
             has_citizenship_rights = no
             NOT = {
                 has_trait = trait_mechanical
             }
-        }
-        modifier = {
-            factor = 1.5
-            OR = {
-                has_trait = trait_robot_propaganda_machines
-                has_trait = trait_traditional
-            }
-        }
-        modifier = {
-            factor = 0.5
-            has_trait = trait_quarrelsome
         }
         modifier = {
             factor = 0.1
@@ -73,26 +51,6 @@ noble = {
         modifier = {
             factor = 5
             has_job = noble
-        }
-        modifier = {
-            factor = 1.5
-            has_trait = trait_necrophage
-        }
-        modifier = {
-            factor = 1.5
-            has_trait = trait_void_dweller_1
-            exists = planet
-            planet = {
-                is_planet_class = pc_habitat
-            }
-        }
-        modifier = {
-            factor = 0.85
-            has_trait = trait_void_dweller_1
-            exists = planet
-            planet = {
-                is_artificial = no
-            }
         }
         modifier = {
             factor = 0.01

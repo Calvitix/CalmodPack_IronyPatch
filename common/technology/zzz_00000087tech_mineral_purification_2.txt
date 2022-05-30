@@ -20,6 +20,12 @@ tech_mineral_purification_2 = {
             }
         }
         modifier = {
+            factor = 1.5
+            is_specialist_subject_type = {
+                TYPE = prospectorium
+            }
+        }
+        modifier = {
             factor = 0
             NOR = {
                 has_technology = tech_mine_volatile_motes

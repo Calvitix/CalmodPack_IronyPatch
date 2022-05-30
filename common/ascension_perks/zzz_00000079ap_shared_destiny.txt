@@ -1,0 +1,43 @@
+ap_shared_destiny = {
+    on_enabled = {
+        custom_tooltip = "ap_shared_destiny_effect"
+        hidden_effect = {
+            country_event = {
+                id = action.446
+            }
+        }
+    }
+    modifier = {
+        envoys_add = 2
+        subject_integration_influence_cost_mult = -0.5
+        country_subject_trust_cap_add = 100
+    }
+    potential = {
+        NOR = {
+            has_valid_civic = civic_fanatic_purifiers
+            has_valid_civic = civic_hive_devouring_swarm
+            has_valid_civic = civic_inwards_perfection
+            has_valid_civic = civic_machine_terminator
+            has_authority = auth_corporate
+        }
+        NOT = {
+            has_ascension_perk = ap_shared_destiny
+        }
+    }
+    ai_weight = {
+        factor = 5
+        modifier = {
+            factor = 0
+            NOT = {
+                any_subject = {
+                    any_agreement = {
+                        agreement_preset = preset_vassal
+                    }
+                }
+            }
+            count_envoy = {
+                count < 3
+            }
+        }
+    }
+}

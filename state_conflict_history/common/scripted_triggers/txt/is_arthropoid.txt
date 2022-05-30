@@ -1,0 +1,5 @@
+is_arthropoid = {
+    species = {
+        is_archetype = ARTHROPOID
+    }
+}

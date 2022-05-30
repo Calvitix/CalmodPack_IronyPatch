@@ -1,0 +1,21 @@
+virtual_rare_resource_gestalt = {
+    category = complex_drone
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = building_power_plant
+    clothes_texture_index = 3
+    possible_precalc = can_fill_drone_job
+    resources = {
+        category = planet_refiners
+        produces = {
+            volatile_motes = 4
+            rare_crystals = 4
+            exotic_gases = 4
+        }
+        upkeep = {
+            minerals = 25
+        }
+    }
+    weight = {
+        weight = value:giga_complex_drone_triple_weight|JOB|virtual_rare_resource|RESOURCE1|volatile_motes|WEIGHT1|0.33|RESOURCE2|rare_crystals|WEIGHT2|0.33|RESOURCE3|exotic_gases|WEIGHT3|0.34|STICKY|7|
+    }
+}

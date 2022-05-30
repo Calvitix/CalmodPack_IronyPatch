@@ -19,17 +19,16 @@ scrap_miner = {
     }
     weight = {
         weight = @worker_job_weight
-        modifier = {
-            factor = 3
-            OR = {
-                has_trait = trait_industrious
-                has_trait = trait_robot_power_drills
-            }
-        }
+        mult = value:job_weights_multiple_resources_modifier|JOB|scrap_miner|RESOURCE1|minerals|WEIGHT1|0.7|RESOURCE2|alloys|WEIGHT2|0.3|
         modifier = {
             factor = 10
             is_enslaved = yes
             can_take_servant_job = no
+            NOT = {
+                has_slavery_type = {
+                    type = slavery_indentured
+                }
+            }
         }
         modifier = {
             factor = 3
@@ -60,51 +59,6 @@ scrap_miner = {
             can_take_servant_job = yes
         }
         modifier = {
-            factor = 2
-            species = {
-                has_species_flag = racket_species_flag
-            }
-        }
-        modifier = {
-            factor = 1.2
-            has_trait = trait_very_strong
-        }
-        modifier = {
-            factor = 1.1
-            has_trait = trait_strong
-        }
-        modifier = {
-            factor = 0.9
-            has_trait = trait_weak
-        }
-        modifier = {
-            factor = 0.5
-            has_trait = trait_zombie
-        }
-        modifier = {
-            factor = 0.9
-            has_trait = trait_presapient_natural_intellectuals
-        }
-        modifier = {
-            factor = 1.5
-            has_trait = trait_syncretic_proles
-        }
-        modifier = {
-            factor = 1.4
-            has_trait = trait_presapient_proles
-        }
-        modifier = {
-            factor = 1.1
-            OR = {
-                has_trait = trait_robust
-                has_trait = trait_robot_efficient_processors
-            }
-        }
-        modifier = {
-            factor = 1.1
-            has_trait = trait_nerve_stapled
-        }
-        modifier = {
             factor = 1.1
             exists = planet
             planet = {
@@ -118,10 +72,6 @@ scrap_miner = {
                     value < 0
                 }
             }
-        }
-        modifier = {
-            factor = 0.75
-            has_trait = trait_necrophage
         }
     }
 }

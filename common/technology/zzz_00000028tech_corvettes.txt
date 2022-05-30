@@ -1,5 +1,5 @@
 tech_corvettes = {
-    cost = 0
+    cost = @tier0cost1
     area = engineering
     start_tech = yes
     category = {
@@ -14,5 +14,11 @@ tech_corvettes = {
             title = "TECH_UNLOCK_CORVETTE_CONSTRUCTION_TITLE"
             desc = "TECH_UNLOCK_CORVETTE_CONSTRUCTION_DESC"
         }
+    }
+    weight_modifier = {
+        factor = 1000
+    }
+    ai_weight = {
+        weight = 10000
     }
 }

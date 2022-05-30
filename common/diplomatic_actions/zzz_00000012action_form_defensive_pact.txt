@@ -6,6 +6,30 @@ action_form_defensive_pact = {
     should_notify_all_communications = yes
     AI_acceptance_base_value = -50
     action_type = positive
+    potential = {
+        hidden_trigger = {
+            NOT = {
+                ROOT = {
+                    is_overlord_to = FROM
+                }
+            }
+        }
+        hidden_trigger = {
+            NOT = {
+                FROM = {
+                    is_overlord_to = ROOT
+                }
+            }
+        }
+        hidden_trigger = {
+            is_subject = no
+        }
+        hidden_trigger = {
+            FROM = {
+                is_subject = no
+            }
+        }
+    }
     possible = {
         custom_tooltip = {
             fail_text = "requires_actor_not_fanatic_purifiers"
@@ -114,6 +138,11 @@ action_form_defensive_pact = {
             limit = {
                 from = {
                     has_valid_civic = civic_pompous_purists
+                }
+                NOT = {
+                    root = {
+                        is_overlord_to = from
+                    }
                 }
             }
             if = {

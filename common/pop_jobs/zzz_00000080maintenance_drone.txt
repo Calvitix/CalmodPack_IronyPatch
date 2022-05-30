@@ -1,0 +1,162 @@
+maintenance_drone = {
+    category = simple_drone
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = building_maintenance_depot
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+    resources = {
+        category = planet_jobs
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_valid_civic = civic_machine_maintenance_protocols
+                }
+            }
+            unity = 1
+        }
+    }
+    possible_precalc = can_fill_drone_job
+    triggered_planet_modifier = {
+        potential = {
+            always = yes
+        }
+        planet_amenities_no_happiness_add = 4
+        mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = planet.orbital_defence
+            planet.orbital_defence = {
+                exists = starbase
+                starbase = {
+                    has_starbase_building = ring_maintenance_hub
+                }
+            }
+        }
+        planet_amenities_no_happiness_add = 1
+        mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+    }
+    weight = {
+        weight = @clerk_job_weight
+        modifier = {
+            add = @maintenance_drone_job
+            exists = owner
+            owner = {
+                is_ai = no
+            }
+        }
+        modifier = {
+            add = -2.2
+            exists = owner
+            owner = {
+                is_ai = no
+            }
+        }
+        mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
+        modifier = {
+            mult = value:job_weights_modifier|JOB|maintenance_drone|RESOURCE|unity|FACTOR|0.25|
+            exists = owner
+            owner = {
+                has_valid_civic = civic_machine_maintenance_protocols
+            }
+        }
+        modifier = {
+            factor = 1.1
+            exists = owner
+            years_passed < 1
+            owner = {
+                has_valid_civic = civic_machine_assimilator
+            }
+            has_trait = trait_cybernetic
+        }
+        modifier = {
+            factor = 1000
+            exists = owner
+            owner = {
+                is_ai = no
+            }
+            NOT = {
+                has_job = maintenance_drone
+            }
+            planet = {
+                free_amenities < 3
+            }
+        }
+        modifier = {
+            factor = 1000
+            exists = owner
+            owner = {
+                is_ai = no
+            }
+            has_job = maintenance_drone
+            planet = {
+                free_amenities < 8
+            }
+        }
+        modifier = {
+            factor = 0.1
+            exists = owner
+            owner = {
+                is_ai = no
+            }
+            NOT = {
+                has_job = maintenance_drone
+            }
+            planet = {
+                free_amenities > 5
+            }
+        }
+        modifier = {
+            factor = 0
+            exists = owner
+            owner = {
+                is_ai = yes
+            }
+            planet = {
+                habitability = {
+                    who = root
+                    value < 0.4
+                }
+            }
+            planet = {
+                num_pops > 1
+                num_pops < 8
+            }
+            owner = {
+                num_pops < 100
+            }
+        }
+        modifier = {
+            factor = 100000
+            exists = owner
+            owner = {
+                is_ai = yes
+            }
+            years_passed > 2
+        }
+        modifier = {
+            factor = 2
+            planet = {
+                free_amenities <= -1
+            }
+        }
+        modifier = {
+            factor = 1.5
+            planet = {
+                free_amenities <= -5
+            }
+        }
+        modifier = {
+            factor = 1.5
+            planet = {
+                free_amenities <= -10
+            }
+        }
+    }
+}

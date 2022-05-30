@@ -54,6 +54,12 @@ enforcer = {
     weight = {
         weight = @specialist_job_weight
         modifier = {
+            mult = value:job_weights_modifier|JOB|enforcer|RESOURCE|unity|FACTOR|0.25|
+            owner = {
+                has_active_tradition = tr_domination_judgment_corps
+            }
+        }
+        modifier = {
             factor = 10
             has_job = enforcer
         }
@@ -122,69 +128,10 @@ enforcer = {
             has_trait = trait_limited_regeneration
         }
         modifier = {
-            factor = 1.1
-            has_trait = trait_presapient_proles
-        }
-        modifier = {
-            factor = 1.1
-            has_trait = trait_brainslug
-            exists = owner
-            owner = {
-                has_valid_civic = civic_police_state
-            }
-        }
-        modifier = {
-            factor = 1.05
-            has_trait = trait_presapient_natural_intellectuals
-            exists = owner
-            owner = {
-                has_valid_civic = civic_police_state
-            }
-        }
-        modifier = {
-            factor = 20
-            has_job = enforcer
-            OR = {
-                has_trait = trait_robust
-                has_trait = trait_robot_efficient_processors
-            }
-        }
-        modifier = {
-            factor = 1.1
-            OR = {
-                has_trait = trait_robot_propaganda_machines
-                has_trait = trait_traditional
-            }
-            exists = owner
-            owner = {
-                has_valid_civic = civic_police_state
-            }
-        }
-        modifier = {
-            factor = 0.9
-            has_trait = trait_quarrelsome
-        }
-        modifier = {
             factor = 0.8
             is_enslaved = yes
             has_slavery_type = {
                 type = slavery_indentured
-            }
-        }
-        modifier = {
-            factor = 1.5
-            has_trait = trait_void_dweller_1
-            exists = planet
-            planet = {
-                is_planet_class = pc_habitat
-            }
-        }
-        modifier = {
-            factor = 0.85
-            has_trait = trait_void_dweller_1
-            exists = planet
-            planet = {
-                is_artificial = no
             }
         }
         modifier = {

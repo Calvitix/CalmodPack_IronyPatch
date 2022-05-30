@@ -1,0 +1,17 @@
+leader_trait_prospectorium_extractor = {
+    cost = 0
+    icon = "gfx/interface/icons/traits/leader_traits/leader_trait_prospectorium_extractor.dds"
+    modifier = {
+        planet_jobs_energy_produces_mult = 0.2
+        planet_jobs_minerals_produces_mult = 0.2
+        planet_jobs_alloys_produces_mult = 0.2
+    }
+    leader_trait = {
+        governor
+    }
+    leader_class = {
+        governor
+    }
+    initial = no
+    randomized = no
+}

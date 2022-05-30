@@ -1,0 +1,29 @@
+ald_gases_drone = {
+    category = complex_drone
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = building_refinery
+    icon = gas_refiner
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+    possible_precalc = can_fill_drone_job
+    possible = {
+        can_think = yes
+    }
+    resources = {
+        category = planet_refiners
+        produces = {
+            exotic_gases = 20
+        }
+        upkeep = {
+            minerals = 100
+        }
+    }
+    weight = {
+        weight = value:giga_complex_drone_weight|JOB|ald_gases_drone|RESOURCE|exotic_gases|
+    }
+}

@@ -1,0 +1,45 @@
+@insula_worker_weight = 2
+penrose_engineer = {
+    category = worker
+    condition_string = WORKER_JOB_TRIGGER
+    building_icon = building_class_4_singularity
+    clothes_texture_index = 2
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+    possible_precalc = can_fill_worker_job
+    possible = {
+        owner = {
+            is_fallen_empire = no
+        }
+    }
+    resources = {
+        category = planet_penrose
+        produces = {
+            energy = 90
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_active_building = building_energy_grid
+                }
+            }
+            energy = 10
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_active_building = building_energy_nexus
+                }
+            }
+            energy = 20
+        }
+    }
+    weight = {
+        weight = value:giga_worker_weight|JOB|penrose_engineer|RESOURCE|energy|
+        mult = @insula_worker_weight
+    }
+}

@@ -24,30 +24,18 @@ head_researcher = {
             consumer_goods = 2
         }
     }
-    planet_modifier = {
+    triggered_planet_modifier = {
+        potential = {
+            always = yes
+        }
         planet_amenities_add = 3
-    }
-    triggered_planet_modifier = {
-        potential = {
-            OR = {
-                has_trait = trait_robot_domestic_protocols
-                has_trait = trait_charismatic
-            }
-        }
-        modifier = {
-            planet_amenities_add = 0.6
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            has_trait = trait_repugnant
-        }
-        modifier = {
-            planet_amenities_add = -0.6
-        }
+        mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
     }
     weight = {
         weight = @ruler_job_weight
+        mult = value:job_weights_research_modifier|JOB|head_researcher|
+        mult = value:job_weights_modifier|JOB|head_researcher|RESOURCE|unity|FACTOR|0.25|
+        mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
         modifier = {
             factor = 0.2
             has_citizenship_rights = no
@@ -62,93 +50,8 @@ head_researcher = {
             }
         }
         modifier = {
-            factor = 3
-            has_trait = trait_erudite
-        }
-        modifier = {
-            factor = 2
-            OR = {
-                has_trait = trait_robot_logic_engines
-                has_trait = trait_intelligent
-            }
-        }
-        modifier = {
-            factor = 1.5
-            OR = {
-                has_trait = trait_natural_engineers
-                has_trait = trait_natural_physicists
-                has_trait = trait_natural_sociologists
-            }
-        }
-        modifier = {
             factor = 5
             has_job = head_researcher
-        }
-        modifier = {
-            factor = 0.65
-            has_trait = trait_presapient_proles
-        }
-        modifier = {
-            factor = 1.5
-            has_trait = trait_latent_psionic
-        }
-        modifier = {
-            factor = 2
-            has_trait = trait_psionic
-        }
-        modifier = {
-            factor = 0.1
-            has_trait = trait_enigmatic_intelligence_failed
-        }
-        modifier = {
-            factor = 2
-            OR = {
-                has_trait = trait_enigmatic_intelligence
-                has_trait = trait_enigmatic_intelligence_poor
-            }
-        }
-        modifier = {
-            factor = 2
-            has_trait = trait_presapient_natural_intellectuals
-        }
-        modifier = {
-            factor = 2
-            has_trait = trait_brainslug
-        }
-        modifier = {
-            factor = 1.5
-            has_trait = trait_robust
-        }
-        modifier = {
-            factor = 1.25
-            OR = {
-                has_trait = trait_robot_domestic_protocols
-                has_trait = trait_charismatic
-            }
-        }
-        modifier = {
-            factor = 0.75
-            has_trait = trait_repugnant
-        }
-        modifier = {
-            factor = 1.5
-            has_trait = trait_necrophage
-        }
-        modifier = {
-            factor = 1.5
-            has_trait = trait_void_dweller_1
-            exists = planet
-            planet = {
-                is_planet_class = pc_habitat
-            }
-        }
-        modifier = {
-            factor = 0.85
-            has_trait = trait_void_dweller_1
-            exists = planet
-            planet = {
-                is_artificial = no
-            }
         }
         modifier = {
             factor = 0.01

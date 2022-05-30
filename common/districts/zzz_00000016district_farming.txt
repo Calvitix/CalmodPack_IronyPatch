@@ -30,8 +30,6 @@ district_farming = {
                 exists = owner
                 owner = {
                     is_ai = yes
-                }
-                owner = {
                     country_uses_food = no
                 }
             }
@@ -246,6 +244,17 @@ district_farming = {
     }
     prerequisites = {
         tech_industrial_farming
+    }
+    destroy_trigger = {
+        exists = owner
+        AND = {
+            owner = {
+                is_ai = yes
+            }
+            owner = {
+                country_uses_food = no
+            }
+        }
     }
     triggered_planet_modifier = {
         potential = {

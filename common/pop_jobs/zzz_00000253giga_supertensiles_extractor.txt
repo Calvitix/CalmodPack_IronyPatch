@@ -1,0 +1,39 @@
+giga_supertensiles_extractor = {
+    category = worker
+    condition_string = WORKER_JOB_TRIGGER
+    building_icon = building_giga_supertensiles_mines
+    clothes_texture_index = 2
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+    possible_precalc = can_fill_worker_job
+    possible = {
+        hidden_trigger = {
+            exists = owner
+        }
+        owner = {
+            is_gestalt = no
+        }
+    }
+    resources = {
+        category = planet_miners
+        produces = {
+            giga_sr_amb_megaconstruction = @giga_amb_supertensiles_miner_output
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_edict = mining_subsidies
+                }
+            }
+            energy = 0.5
+        }
+    }
+    weight = {
+        weight = value:giga_worker_weight|JOB|giga_supertensiles_extractor|RESOURCE|giga_sr_amb_megaconstruction|IMPORTANT|yes|
+    }
+}

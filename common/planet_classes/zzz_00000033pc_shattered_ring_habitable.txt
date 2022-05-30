@@ -28,5 +28,8 @@ pc_shattered_ring_habitable = {
     orbit_lines = no
     has_colonization_influence_cost = no
     is_artificial_planet = yes
+    modifier = {
+        pop_environment_tolerance = 1.5
+    }
     carry_cap_per_free_district = @carry_cap_normal
 }

@@ -1,0 +1,18 @@
+ver_triggered_opinion_blood = {
+    trigger = {
+        any_agreement = {
+            OR = {
+                agreement_preset = preset_verblood
+                agreement_preset = preset_verdebtor
+            }
+        }
+        FROM = {
+            any_subject = {
+                is_same_value = ROOT
+            }
+        }
+    }
+    opinion = {
+        base = -1000
+    }
+}

@@ -37,6 +37,12 @@ tech_engineering_1 = {
                 has_trait = "leader_trait_expertise_industry"
             }
         }
+        modifier = {
+            factor = 1.5
+            is_specialist_subject_type = {
+                TYPE = scholarium
+            }
+        }
     }
     ai_weight = {
         weight = 300

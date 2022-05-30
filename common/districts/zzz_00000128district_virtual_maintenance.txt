@@ -1,0 +1,63 @@
+district_virtual_maintenance = {
+    base_buildtime = @giga_rw_district_buildtime
+    is_capped_by_modifier = no
+    icon = district_arcology_leisure
+    show_on_uncolonized = {
+        uses_district_set = virtual_ring
+        exists = from
+        from = {
+            or = {
+                is_hive_empire = yes
+                and = {
+                    is_machine_empire = yes
+                    not = {
+                        has_valid_civic = civic_machine_servitor
+                    }
+                }
+            }
+        }
+    }
+    potential = {
+        uses_district_set = virtual_ring
+        exists = owner
+        owner = {
+            or = {
+                is_hive_empire = yes
+                and = {
+                    is_machine_empire = yes
+                    not = {
+                        has_valid_civic = civic_machine_servitor
+                    }
+                }
+            }
+        }
+    }
+    conversion_ratio = 1
+    convert_to = {
+        district_virtual_leisure
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = @giga_rw_cost
+            rare_crystals = @giga_rw_cost_sr
+        }
+        upkeep = {
+            energy = @giga_rw_maintenance
+            rare_crystals = @giga_rw_maintenance_sr
+        }
+    }
+    planet_modifier = {
+        planet_housing_add = 10
+        job_patrol_drone_add = 2
+        job_maintenance_drone_add = 8
+        planet_amenities_mult = 0.05
+        planet_stability_add = 5
+    }
+    triggered_desc = {
+        text = job_patrol_drone_effect_desc
+    }
+    triggered_desc = {
+        text = job_maintenance_drone_effect_desc
+    }
+}

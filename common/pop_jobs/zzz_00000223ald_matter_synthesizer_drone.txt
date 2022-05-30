@@ -1,0 +1,45 @@
+ald_matter_synthesizer_drone = {
+    category = simple_drone
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = building_mine_generic
+    icon = miner
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+    possible_precalc = can_fill_drone_job
+    resources = {
+        category = planet_miners
+        produces = {
+            minerals = 40
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_planet_flag = has_material_requisitorium
+                }
+            }
+            minerals = @requisitorium_minerals_reduction
+            multiplier = 10
+        }
+        upkeep = {
+            energy = 20
+        }
+    }
+    overlord_resources = {
+        category = planet_requisitioned_minerals
+        produces = {
+            trigger = {
+                planet = {
+                    has_planet_flag = has_material_requisitorium
+                }
+            }
+            minerals = @requisitorium_minerals_overlord
+            multiplier = 10
+        }
+    }
+    weight = {
+        weight = value:giga_menial_drone_weight|JOB|ald_matter_synthesizer_drone|RESOURCE|minerals|QUOTA|85|
+    }
+}

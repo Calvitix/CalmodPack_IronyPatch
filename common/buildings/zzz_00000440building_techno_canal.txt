@@ -1,0 +1,108 @@
+building_techno_canal = {
+    base_buildtime = @b3_time
+    base_cap_amount = 1
+    category = resource
+    potential = {
+        NOT = {
+            has_modifier = resort_colony
+        }
+        NOT = {
+            has_modifier = slave_colony
+        }
+        NOT = {
+            is_planet_class = pc_technoorganic
+        }
+        is_pd_arcology = no
+        is_pd_robot_arcology = no
+        is_pd_hive_arcology = no
+    }
+    allow = {
+        buildings_simple_allow = yes
+        has_upgraded_capital = yes
+    }
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            owner = {
+                is_machine_empire = yes
+                NOT = {
+                    has_civic = civic_machine_servitor
+                }
+            }
+            has_modifier = slave_colony
+            has_modifier = resort_colony
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                NOT = {
+                    has_deficit = sr_living_metal
+                }
+            }
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        planet_jobs_food_produces_mult = 0.2
+        planet_jobs_engineering_research_produces_mult = 0.2
+        job_farmer_add = 4
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                NOT = {
+                    has_deficit = sr_living_metal
+                }
+            }
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        planet_jobs_food_produces_mult = 0.2
+        planet_jobs_engineering_research_produces_mult = 0.2
+        job_agri_drone_add = 4
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @b3_minerals
+            sr_living_metal = 100
+        }
+        upkeep = {
+            energy = @b3_upkeep
+            sr_living_metal = 1
+        }
+    }
+    prerequisites = {
+        "tech_techno_canal"
+    }
+    ai_resource_production = {
+        food = 3
+        trigger = {
+            always = yes
+        }
+    }
+    ai_resource_production = {
+        food = 3
+        trigger = {
+            planet_resource_compare = {
+                resource = food
+                value >= 20
+                type = produces
+            }
+        }
+    }
+    ai_resource_production = {
+        food = 3
+        trigger = {
+            planet_resource_compare = {
+                resource = food
+                value >= 40
+                type = produces
+            }
+        }
+    }
+}

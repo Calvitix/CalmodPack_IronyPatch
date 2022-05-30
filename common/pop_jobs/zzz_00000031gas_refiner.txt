@@ -31,6 +31,7 @@ gas_refiner = {
     }
     weight = {
         weight = @specialist_job_weight
+        mult = value:job_weights_modifier|JOB|gas_refiner|RESOURCE|exotic_gases|
         modifier = {
             factor = 0.2
             has_citizenship_rights = no
@@ -43,22 +44,8 @@ gas_refiner = {
             can_take_servant_job = yes
         }
         modifier = {
-            factor = 2
-            species = {
-                has_species_flag = racket_species_flag
-            }
-        }
-        modifier = {
             factor = 7
             has_job = gas_refiner
-        }
-        modifier = {
-            factor = 15
-            has_job = gas_refiner
-            OR = {
-                has_trait = trait_robust
-                has_trait = trait_robot_efficient_processors
-            }
         }
         modifier = {
             factor = 1.2
@@ -66,26 +53,6 @@ gas_refiner = {
             has_slavery_type = {
                 type = slavery_indentured
             }
-        }
-        modifier = {
-            factor = 1.5
-            has_trait = trait_void_dweller_1
-            exists = planet
-            planet = {
-                is_planet_class = pc_habitat
-            }
-        }
-        modifier = {
-            factor = 0.85
-            has_trait = trait_void_dweller_1
-            exists = planet
-            planet = {
-                is_artificial = no
-            }
-        }
-        modifier = {
-            factor = 1.5
-            has_trait = trait_necrophage
         }
     }
 }

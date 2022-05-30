@@ -23,7 +23,6 @@ pc_habitat_shielded = {
     planet_size = 25
     moon_size = 1
     colonizable = no
-    ideal = yes
     starting_planet = no
     orbit_lines = no
     has_colonization_influence_cost = no

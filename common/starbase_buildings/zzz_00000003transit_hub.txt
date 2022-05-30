@@ -1,0 +1,90 @@
+transit_hub = {
+    icon = "GFX_spaceport_module_pioneering_terminal"
+    construction_days = 180
+    potential = {
+        exists = owner
+        owner = {
+            has_technology = tech_hyper_drive_2
+        }
+    }
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_starport_or_ring"
+            OR = {
+                has_starbase_size >= starbase_starport
+                is_orbital_ring = yes
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_colonized_planet"
+            solar_system = {
+                any_system_planet = {
+                    is_owned_by = from
+                }
+            }
+        }
+        solar_system = {
+            count_starbase_buildings = {
+                type = transit_hub
+                count < 1
+                include_being_constructed = yes
+            }
+        }
+    }
+    abort_construction_trigger = {
+        solar_system = {
+            count_starbase_buildings = {
+                type = communications_jammer
+                count > 1
+                include_being_constructed = yes
+            }
+        }
+    }
+    resources = {
+        category = starbase_buildings
+        cost = {
+            trigger = {
+                from = {
+                    is_ai = no
+                }
+            }
+            alloys = 50
+            energy = 50
+            minerals = 50
+        }
+        cost = {
+            trigger = {
+                from = {
+                    is_ai = yes
+                }
+            }
+            alloys = 100
+        }
+        upkeep = {
+            energy = 3
+        }
+    }
+    system_modifier = {
+        planet_resettlement_unemployed_mult = 1
+    }
+    show_in_tech = "tech_hyper_drive_2"
+    custom_tooltip = sm_transit_hub_desc_modifier
+    ai_build_at_chokepoint = yes
+    ai_build_outside_chokepoint = yes
+    ai_weight = {
+        weight = 100
+        modifier = {
+            factor = 0
+            NOT = {
+                solar_system = {
+                    any_system_planet = {
+                        exists = owner
+                        owner = {
+                            is_country_type = default
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

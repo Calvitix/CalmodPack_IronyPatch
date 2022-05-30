@@ -1,0 +1,5 @@
+is_avian = {
+    species = {
+        is_archetype = AVIAN
+    }
+}

@@ -1,0 +1,52 @@
+@maginot_defence_army_add = 1
+@maginot_specialist_stability = 5
+@maginot_specialist_unity = 5
+@maginot_specialist_upkeep_energy = 10
+@maginot_specialist_upkeep_alloys = 1
+@maginot_specialist_job_weight = 250
+maginot_planetary_cannon_operator_gestalt = {
+    category = complex_drone
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = building_maintenance_depot
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+        can_think = yes
+    }
+    possible_precalc = can_fill_drone_job
+    triggered_planet_modifier = {
+        potential = {
+            exists = planet
+            planet = {
+                OR = {
+                    has_modifier = compliance_protocols
+                    has_modifier = hunter_killer_drones
+                }
+            }
+        }
+        modifier = {
+            planet_stability_add = @maginot_specialist_stability
+        }
+    }
+    pop_modifier = {
+        pop_defense_armies_add = @maginot_defence_army_add
+    }
+    resources = {
+        category = planet_soldiers
+        produces = {
+            unity = @maginot_specialist_unity
+        }
+        upkeep = {
+            energy = @maginot_specialist_upkeep_energy
+            alloys = @maginot_specialist_upkeep_alloys
+        }
+    }
+    weight = {
+        weight = value:giga_complex_drone_weight|JOB|maginot_planetary_cannon_operator_gestalt|RESOURCE|unity|STICKY|10|
+        multiply = value:giga_army_weight
+        multiply = @maginot_specialist_job_weight
+    }
+}

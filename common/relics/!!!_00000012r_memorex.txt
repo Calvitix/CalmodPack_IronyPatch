@@ -6,7 +6,7 @@ r_memorex = {
     resources = {
         category = relics
         cost = {
-            influence = 300
+            unity = 6000
         }
     }
     ai_weight = {
@@ -30,7 +30,7 @@ r_memorex = {
         species_leader_exp_gain = 0.5
         leader_skill_levels = 1
     }
-    score = 7500
+    score = 2000
     active_effect = {
         custom_tooltip = relic_memorex
         custom_tooltip = relic_triumph_cooldown

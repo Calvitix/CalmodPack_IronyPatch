@@ -1,0 +1,75 @@
+can_resettle_pop = {
+    custom_tooltip = {
+        fail_text = "self_modified_refuse"
+        NOT = {
+            has_trait = trait_self_modified
+        }
+    }
+    custom_tooltip = {
+        fail_text = "caretaker_refuse"
+        NOT = {
+            has_trait = trait_tree_caretaker
+        }
+    }
+    if = {
+        limit = {
+            is_shackled_robot = yes
+        }
+        always = yes
+    }
+    else_if = {
+        limit = {
+            planet = {
+                OR = {
+                    has_modifier = deteriorating_ecosystem
+                    has_modifier = catastrophe_approach
+                    has_modifier = apocalypse
+                    has_modifier = ravenous_locusts
+                    has_modifier = planet_active_worm
+                    is_doomsday_planet = yes
+                }
+            }
+        }
+        always = yes
+    }
+    else_if = {
+        limit = {
+            planet = {
+                has_modifier = planet_culture_shock
+            }
+        }
+        OR = {
+            is_same_species = planet.owner
+            planet = {
+                NOT = {
+                    has_modifier = planet_culture_shock
+                }
+            }
+        }
+    }
+    else_if = {
+        limit = {
+            is_enslaved = yes
+        }
+        is_enslaved = yes
+    }
+    else_if = {
+        limit = {
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        always = yes
+    }
+    else = {
+        custom_tooltip = {
+            fail_text = RESETTLEMENT_POLICY_FAIL
+            owner = {
+                OR = {
+                    has_policy_flag = resettlement_allowed
+                    is_gestalt = yes
+                }
+            }
+        }
+    }
+}

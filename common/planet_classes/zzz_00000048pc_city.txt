@@ -12,6 +12,7 @@ pc_city = {
     atmosphere_width = 0.5
     city_color_lut = "gfx/portraits/misc/colorcorrection_continental.dds"
     modifier = {
+        pop_environment_tolerance = 1.5
         planet_jobs_produces_mult = 0.2
         pop_growth_speed = 0.5
         planet_max_buildings_add = 12
@@ -34,7 +35,6 @@ pc_city = {
     colonizable = yes
     district_set = city_world
     starting_planet = no
-    ideal = yes
     uses_alternative_skies_for_moons = yes
     carry_cap_per_free_district = @carry_cap_high
 }

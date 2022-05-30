@@ -10,7 +10,9 @@ tech_cruiser_hull_1 = {
     }
     weight = @tier3weight3
     modifier = {
+        custom_tooltip = tech_cruiser_hull_effect
         shipsize_cruiser_hull_add = 500
+        shipsize_offspring_cruiser_hull_add = 500
     }
     weight_modifier = {
         modifier = {

@@ -20,6 +20,11 @@ building_clone_vats = {
             assembling_species = {
                 is_organic_species = yes
             }
+        }
+        OR = {
+            owner = {
+                is_ai = no
+            }
             NAND = {
                 free_district_slots = 0
                 free_building_slots <= 1

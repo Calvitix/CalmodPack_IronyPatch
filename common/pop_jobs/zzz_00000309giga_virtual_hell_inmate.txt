@@ -1,0 +1,352 @@
+@hell_unity = 2
+@hell_engineering = 2
+@hell_morale = 0.005
+@hell_ethics = 0.02
+@hell_minus_crime = -0.5
+@hell_plus_crime = 1
+@hell_trade = 4
+@hell_trade_thrifty = 1
+giga_virtual_hell_inmate = {
+    category = criminal
+    is_capped_by_modifier = yes
+    clothes_texture_index = 2
+    contributes_to_diplo_weight = no
+    possible_pre_triggers = {
+        has_owner = yes
+        is_sapient = yes
+    }
+    possible = {
+        NOT = {
+            has_citizenship_type = {
+                country = owner
+                type = citizenship_robot_servitude
+            }
+        }
+        owner = {
+            is_gestalt = no
+        }
+    }
+    resources = {
+        category = planet_jobs_productive
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_ecocentrist = no
+                }
+            }
+            energy = 2
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_spiritualist = yes
+                }
+            }
+            unity = @hell_unity
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_ethic = ethic_fanatic_spiritualist
+                }
+            }
+            unity = @hell_unity
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_xenophobe = yes
+                }
+            }
+            unity = @hell_unity
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_ethic = ethic_fanatic_xenophobe
+                }
+            }
+            unity = @hell_unity
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_materialist = yes
+                }
+            }
+            engineering_research = @hell_engineering
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_ethic = ethic_fanatic_materialist
+                }
+            }
+            engineering_research = @hell_engineering
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_anthropocentric = yes
+                }
+            }
+            society_research = @hell_engineering
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_ethic = ethic_fanatic_anthropocentric
+                }
+            }
+            society_research = @hell_engineering
+        }
+    }
+    pop_modifier = {
+        pop_housing_usage_add = -1
+        pop_happiness = -2
+    }
+    planet_modifier = {
+        planet_crime_add = 5
+    }
+    country_modifier = {
+        planet_crime_add = -4
+    }
+    triggered_country_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_militarist = yes
+            }
+        }
+        army_morale = @hell_morale
+    }
+    triggered_country_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_ethic = ethic_fanatic_militarist
+            }
+        }
+        army_morale = @hell_morale
+    }
+    triggered_country_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_authoritarian = yes
+            }
+        }
+        pop_government_ethic_attraction = @hell_ethics
+    }
+    triggered_country_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_ethic = ethic_fanatic_authoritarian
+            }
+        }
+        pop_government_ethic_attraction = @hell_ethics
+    }
+    triggered_country_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_egalitarian = yes
+            }
+        }
+        pop_government_ethic_attraction = @hell_ethics
+    }
+    triggered_country_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_ethic = ethic_fanatic_egalitarian
+            }
+        }
+        pop_government_ethic_attraction = @hell_ethics
+    }
+    triggered_country_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_elitist = yes
+            }
+        }
+        pop_government_ethic_attraction = @hell_ethics
+    }
+    triggered_country_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_ethic = ethic_fanatic_elitist
+            }
+        }
+        pop_government_ethic_attraction = @hell_ethics
+    }
+    triggered_country_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_xenophile = yes
+            }
+        }
+        planet_crime_add = @hell_minus_crime
+    }
+    triggered_country_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_ethic = ethic_fanatic_xenophile
+            }
+        }
+        planet_crime_add = @hell_minus_crime
+    }
+    triggered_country_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_cooperative = yes
+            }
+        }
+        planet_crime_add = @hell_minus_crime
+    }
+    triggered_country_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_ethic = ethic_fanatic_cooperative
+            }
+        }
+        planet_crime_add = @hell_minus_crime
+    }
+    triggered_country_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_pluralist = yes
+            }
+        }
+        planet_crime_add = @hell_minus_crime
+    }
+    triggered_country_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_ethic = ethic_fanatic_pluralist
+            }
+        }
+        planet_crime_add = @hell_minus_crime
+    }
+    triggered_country_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_competitive = yes
+            }
+        }
+        planet_crime_add = @hell_plus_crime
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_competitive = yes
+            }
+        }
+        trade_value_add = @hell_trade
+        planet_crime_add = @hell_plus_crime
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_competitive = yes
+            }
+            has_trait = trait_thrifty
+        }
+        trade_value_add = @hell_trade_thrifty
+    }
+    triggered_country_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_ethic = ethic_fanatic_competitive
+            }
+        }
+        planet_crime_add = @hell_plus_crime
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_ethic = ethic_fanatic_competitive
+            }
+        }
+        trade_value_add = @hell_trade
+        planet_crime_add = @hell_plus_crime
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_ethic = ethic_fanatic_competitive
+            }
+            has_trait = trait_thrifty
+        }
+        trade_value_add = @hell_trade_thrifty
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_global_flag = bug_branch_active
+            exists = owner
+            owner = {
+                is_competitive = yes
+            }
+            planet = {
+                has_active_building = building_bugged_planetary_stock_exchange
+            }
+        }
+        trade_value_add = 1
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_global_flag = bug_branch_active
+            exists = owner
+            owner = {
+                is_competitive = yes
+            }
+            planet = {
+                has_active_building = building_galactic_stock_exchange
+            }
+        }
+        trade_value_add = 2
+    }
+    weight = {
+        weight = @criminal_job_weight
+        modifier = {
+            factor = 0.1
+            exists = owner
+            owner = {
+                is_xenophobe = yes
+            }
+            has_citizenship_rights = yes
+        }
+        modifier = {
+            factor = 5
+            exists = owner
+            owner = {
+                is_xenophobe = yes
+            }
+            has_citizenship_rights = no
+        }
+    }
+}

@@ -1,0 +1,5 @@
+is_reptilian = {
+    species = {
+        is_archetype = REPTILIAN
+    }
+}

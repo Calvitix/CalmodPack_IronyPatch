@@ -1,0 +1,35 @@
+matter_synthesizer_drone = {
+    category = simple_drone
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = building_mine_generic
+    clothes_texture_index = 2
+    possible_precalc = can_fill_drone_job
+    resources = {
+        category = planet_miners
+        produces = {
+            minerals = 4
+        }
+        upkeep = {
+            energy = 2
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_active_building = building_mineral_purification_plant
+                }
+            }
+            minerals = 1
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_active_building = building_mineral_purification_hub
+                }
+            }
+            minerals = 2
+        }
+    }
+    weight = {
+        weight = value:giga_meanial_drone_weight|JOB|matter_synthesizer_drone|RESOURCE|minerals|
+    }
+}

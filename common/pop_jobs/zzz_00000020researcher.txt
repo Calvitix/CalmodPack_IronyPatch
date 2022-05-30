@@ -26,6 +26,7 @@ researcher = {
     }
     weight = {
         weight = @specialist_job_weight
+        mult = value:job_weights_research_modifier|JOB|researcher|
         modifier = {
             factor = 0.2
             has_citizenship_rights = no
@@ -40,69 +41,12 @@ researcher = {
             }
         }
         modifier = {
-            factor = 3
-            has_trait = trait_erudite
-        }
-        modifier = {
-            factor = 2
-            OR = {
-                has_trait = trait_robot_logic_engines
-                has_trait = trait_intelligent
-            }
-        }
-        modifier = {
-            factor = 2
-            has_trait = trait_brainslug
-        }
-        modifier = {
-            factor = 1.5
-            OR = {
-                has_trait = trait_natural_engineers
-                has_trait = trait_natural_physicists
-                has_trait = trait_natural_sociologists
-            }
-        }
-        modifier = {
             factor = 0.1
             can_take_servant_job = yes
         }
         modifier = {
-            factor = 0.65
-            has_trait = trait_presapient_proles
-        }
-        modifier = {
             factor = 1.5
             has_job = researcher
-        }
-        modifier = {
-            factor = 1.5
-            has_trait = trait_latent_psionic
-        }
-        modifier = {
-            factor = 2
-            has_trait = trait_psionic
-        }
-        modifier = {
-            factor = 0.1
-            has_trait = trait_enigmatic_intelligence_failed
-        }
-        modifier = {
-            factor = 2
-            OR = {
-                has_trait = trait_enigmatic_intelligence
-                has_trait = trait_enigmatic_intelligence_poor
-            }
-        }
-        modifier = {
-            factor = 2
-            has_trait = trait_presapient_natural_intellectuals
-        }
-        modifier = {
-            factor = 1.5
-            OR = {
-                has_trait = trait_robust
-                has_trait = trait_robot_efficient_processors
-            }
         }
         modifier = {
             factor = 0.8
@@ -110,26 +54,6 @@ researcher = {
             has_slavery_type = {
                 type = slavery_indentured
             }
-        }
-        modifier = {
-            factor = 1.5
-            has_trait = trait_void_dweller_1
-            exists = planet
-            planet = {
-                is_planet_class = pc_habitat
-            }
-        }
-        modifier = {
-            factor = 0.85
-            has_trait = trait_void_dweller_1
-            exists = planet
-            planet = {
-                is_artificial = no
-            }
-        }
-        modifier = {
-            factor = 1.5
-            has_trait = trait_necrophage
         }
     }
 }

@@ -1,4 +1,4 @@
-@activation_cost = 150
+@activation_cost = 3000
 @triumph_duration = 3600
 r_three_londor = {
     activation_duration = @triumph_duration
@@ -7,7 +7,7 @@ r_three_londor = {
     resources = {
         category = relics
         cost = {
-            influence = @activation_cost
+            unity = @activation_cost
         }
     }
     ai_weight = {
@@ -35,7 +35,7 @@ r_three_londor = {
         }
         planet_crime_no_happiness_add = -10
     }
-    score = 5000
+    score = 1000
     active_effect = {
         if = {
             limit = {

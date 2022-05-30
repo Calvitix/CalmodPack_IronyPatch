@@ -25,6 +25,7 @@ culture_worker = {
     }
     weight = {
         weight = @specialist_job_weight
+        mult = value:job_weights_multiple_resources_modifier|JOB|culture_worker|RESOURCE1|unity|WEIGHT1|0.5|RESOURCE2|society_research|WEIGHT2|0.5|
         modifier = {
             factor = 0.2
             has_citizenship_rights = no
@@ -33,100 +34,12 @@ culture_worker = {
             }
         }
         modifier = {
-            factor = 2
-            has_trait = trait_robot_propaganda_machines
-            OR = {
-                is_non_sapient_robot = yes
-                is_shackled_robot = yes
-            }
-        }
-        modifier = {
-            factor = 1.5
-            OR = {
-                has_trait = trait_robot_propaganda_machines
-                has_trait = trait_traditional
-            }
-        }
-        modifier = {
-            factor = 0.5
-            has_trait = trait_quarrelsome
-        }
-        modifier = {
             factor = 0.1
             can_take_servant_job = yes
         }
         modifier = {
             factor = 1.5
-            has_trait = trait_natural_sociologists
-        }
-        modifier = {
-            factor = 1.5
             has_job = culture_worker
-        }
-        modifier = {
-            factor = 3
-            has_trait = trait_brainslug
-        }
-        modifier = {
-            factor = 2
-            has_trait = trait_presapient_natural_intellectuals
-        }
-        modifier = {
-            factor = 1.5
-            OR = {
-                has_trait = trait_robust
-                has_trait = trait_robot_efficient_processors
-            }
-        }
-        modifier = {
-            factor = 1.4
-            OR = {
-                has_trait = trait_robot_logic_engines
-                has_trait = trait_intelligent
-            }
-        }
-        modifier = {
-            factor = 0.5
-            has_trait = trait_presapient_proles
-        }
-        modifier = {
-            factor = 1.1
-            has_trait = trait_latent_psionic
-        }
-        modifier = {
-            factor = 1.2
-            has_trait = trait_psionic
-        }
-        modifier = {
-            factor = 0.5
-            has_trait = trait_enigmatic_intelligence_failed
-        }
-        modifier = {
-            factor = 1.4
-            OR = {
-                has_trait = trait_enigmatic_intelligence
-                has_trait = trait_enigmatic_intelligence_poor
-            }
-        }
-        modifier = {
-            factor = 1.5
-            has_trait = trait_void_dweller_1
-            exists = planet
-            planet = {
-                is_planet_class = pc_habitat
-            }
-        }
-        modifier = {
-            factor = 0.85
-            has_trait = trait_void_dweller_1
-            exists = planet
-            planet = {
-                is_artificial = no
-            }
-        }
-        modifier = {
-            factor = 1.5
-            has_trait = trait_necrophage
         }
     }
 }

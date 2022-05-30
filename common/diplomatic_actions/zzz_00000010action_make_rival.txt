@@ -13,6 +13,26 @@ action_make_rival = {
                 is_fallen_machine_empire = no
             }
         }
+        hidden_trigger = {
+            NAND = {
+                is_subject = yes
+                FROM = {
+                    OR = {
+                        is_fallen_empire = yes
+                        is_overlord_to = ROOT
+                        has_overlord = ROOT.overlord
+                    }
+                }
+            }
+        }
+        hidden_trigger = {
+            NOT = {
+                FROM = {
+                    is_subject = yes
+                    has_overlord = ROOT
+                }
+            }
+        }
         custom_tooltip = grants_humiliation_cb_originator
     }
     possible = {

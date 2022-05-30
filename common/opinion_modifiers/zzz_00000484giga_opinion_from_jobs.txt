@@ -1,0 +1,9 @@
+giga_opinion_from_jobs = {
+    trigger = {
+        always = yes
+    }
+    opinion = {
+        add = 1
+        multiply = from.modifier:giga_tooltips_influence_produces_add
+    }
+}

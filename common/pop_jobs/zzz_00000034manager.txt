@@ -10,47 +10,31 @@ manager = {
         is_sapient = yes
     }
     possible_precalc = can_fill_specialist_job
-    planet_modifier = {
+    triggered_planet_modifier = {
+        potential = {
+            always = yes
+        }
+        trade_value_add = 2
+        mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_valid_civic = civic_efficiency_expert
+            }
+        }
         trade_value_add = 2
     }
     triggered_planet_modifier = {
         potential = {
             has_trait = trait_thrifty
-        }
-        modifier = {
-            trade_value_add = 0.5
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            has_trait = trait_nuumismatic_administration
-        }
-        modifier = {
-            trade_value_add = 0.5
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
             exists = owner
             owner = {
                 has_valid_civic = civic_efficiency_expert
             }
         }
-        modifier = {
-            trade_value_add = 2
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            has_trait = trait_thrifty
-            exists = owner
-            owner = {
-                has_valid_civic = civic_efficiency_expert
-            }
-        }
-        modifier = {
-            trade_value_add = 0.5
-        }
+        trade_value_add = 0.5
     }
     triggered_planet_modifier = {
         potential = {
@@ -60,9 +44,7 @@ manager = {
                 has_valid_civic = civic_efficiency_expert
             }
         }
-        modifier = {
-            trade_value_add = 0.5
-        }
+        trade_value_add = 0.5
     }
     resources = {
         category = planet_managers
@@ -84,6 +66,8 @@ manager = {
     }
     weight = {
         weight = @specialist_job_weight
+        mult = value:job_weights_modifier|JOB|manager|RESOURCE|unity|
+        mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_trade_mult|
         modifier = {
             factor = 0.2
             has_citizenship_rights = no
@@ -92,88 +76,12 @@ manager = {
             }
         }
         modifier = {
-            factor = 2
-            has_trait = trait_robot_propaganda_machines
-            OR = {
-                is_non_sapient_robot = yes
-                is_shackled_robot = yes
-            }
-        }
-        modifier = {
-            factor = 1.5
-            OR = {
-                has_trait = trait_robot_propaganda_machines
-                has_trait = trait_traditional
-            }
-        }
-        modifier = {
-            factor = 0.5
-            has_trait = trait_quarrelsome
-        }
-        modifier = {
             factor = 0.1
             can_take_servant_job = yes
         }
         modifier = {
             factor = 1.5
-            has_trait = trait_natural_sociologists
-        }
-        modifier = {
-            factor = 1.5
-            has_trait = trait_thrifty
-        }
-        modifier = {
-            factor = 1.5
-            has_trait = trait_nuumismatic_administration
-        }
-        modifier = {
-            factor = 1.5
             has_job = manager
-        }
-        modifier = {
-            factor = 3
-            has_trait = trait_brainslug
-        }
-        modifier = {
-            factor = 2
-            has_trait = trait_presapient_natural_intellectuals
-        }
-        modifier = {
-            factor = 1.5
-            OR = {
-                has_trait = trait_robust
-                has_trait = trait_robot_efficient_processors
-            }
-        }
-        modifier = {
-            factor = 1.4
-            OR = {
-                has_trait = trait_robot_logic_engines
-                has_trait = trait_intelligent
-            }
-        }
-        modifier = {
-            factor = 0.5
-            has_trait = trait_presapient_proles
-        }
-        modifier = {
-            factor = 1.1
-            has_trait = trait_latent_psionic
-        }
-        modifier = {
-            factor = 1.2
-            has_trait = trait_psionic
-        }
-        modifier = {
-            factor = 0.5
-            has_trait = trait_enigmatic_intelligence_failed
-        }
-        modifier = {
-            factor = 1.4
-            OR = {
-                has_trait = trait_enigmatic_intelligence
-                has_trait = trait_enigmatic_intelligence_poor
-            }
         }
         modifier = {
             factor = 0.1
@@ -181,26 +89,6 @@ manager = {
             has_slavery_type = {
                 type = slavery_indentured
             }
-        }
-        modifier = {
-            factor = 1.5
-            has_trait = trait_void_dweller_1
-            exists = planet
-            planet = {
-                is_planet_class = pc_habitat
-            }
-        }
-        modifier = {
-            factor = 0.85
-            has_trait = trait_void_dweller_1
-            exists = planet
-            planet = {
-                is_artificial = no
-            }
-        }
-        modifier = {
-            factor = 1.25
-            has_trait = trait_necrophage
         }
     }
 }

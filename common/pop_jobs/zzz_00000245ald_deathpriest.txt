@@ -1,0 +1,42 @@
+ald_deathpriest = {
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = building_sacrificial_temple_3
+    icon = death_priest
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+    possible_precalc = can_fill_specialist_job
+    resources = {
+        category = planet_priests
+        produces = {
+            unity = 30
+            society_research = 10
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_sacrificial_edict = yes
+                }
+            }
+            unity = 30
+        }
+        upkeep = {
+            consumer_goods = 20
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            always = yes
+        }
+        planet_amenities_add = 2
+        mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+    }
+    weight = {
+        weight = value:giga_specialist_weight|JOB|ald_deathpriest|RESOURCE|unity|WEIGHT|0.75|RESOURCE2|society_research|WEIGHT2|0.25|AMENITIES|yes|INDENTURED|0.1|
+        multiply = value:giga_priest_weight|JOB|ald_deathpriest|
+    }
+}

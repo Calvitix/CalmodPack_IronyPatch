@@ -11,7 +11,9 @@ tech_destroyer_hull_2 = {
     }
     weight = @tier3weight1
     modifier = {
+        custom_tooltip = tech_destroyer_hull_effect
         shipsize_destroyer_hull_add = 200
+        shipsize_offspring_destroyer_hull_add = 200
     }
     weight_modifier = {
         modifier = {

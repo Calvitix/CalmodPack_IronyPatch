@@ -1,0 +1,44 @@
+district_virtual_organic_housing = {
+    base_buildtime = @giga_rw_district_buildtime
+    is_capped_by_modifier = no
+    icon = district_arcology_administrative
+    show_on_uncolonized = {
+        from = {
+            is_machine_empire = yes
+            has_valid_civic = civic_machine_servitor
+        }
+        uses_district_set = virtual_ring
+    }
+    potential = {
+        owner = {
+            is_machine_empire = yes
+            has_valid_civic = civic_machine_servitor
+        }
+        uses_district_set = virtual_ring
+    }
+    conversion_ratio = 1
+    convert_to = {
+        district_virtual_administrative
+        district_virtual_religious
+        district_virtual_relay
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = @giga_rw_cost
+            exotic_gases = @giga_rw_cost_sr
+        }
+        upkeep = {
+            energy = @giga_rw_maintenance
+            exotic_gases = @giga_rw_maintenance_sr
+        }
+    }
+    planet_modifier = {
+        job_bio_trophy_add = 20
+        planet_bio_trophies_unity_produces_add = 0.5
+        planet_bio_trophies_energy_upkeep_add = 0.5
+    }
+    triggered_desc = {
+        text = job_bio_trophy_effect_desc
+    }
+}

@@ -1,0 +1,39 @@
+ald_duelists = {
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = building_corporate_vault
+    icon = duelist
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+    possible = {
+        battle_thrall_job_check_trigger = yes
+    }
+    resources = {
+        category = planet_entertainers
+        produces = {
+            unity = 20
+        }
+        upkeep = {
+            alloys = 10
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            always = yes
+        }
+        planet_amenities_add = 10
+        mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+    }
+    country_modifier = {
+        country_naval_cap_add = 20
+    }
+    weight = {
+        weight = value:giga_specialist_weight|JOB|ald_duelists|RESOURCE|unity|AMENITIES|yes|
+        multiply = value:giga_amenities_dynamic_weight|JOB|ald_duelists|
+        multiply = value:giga_battle_thrall_weight
+        multiply = value:giga_militarist_weight
+    }
+}

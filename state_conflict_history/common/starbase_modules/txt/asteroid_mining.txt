@@ -1,0 +1,132 @@
+asteroid_mining = {
+    section = "ANCHORAGE_STARBASE_SECTION"
+    icon = "GFX_starbase_asteroid_mining"
+    construction_days = 120
+    resources = {
+        category = starbase_modules
+        cost = {
+            trigger = {
+                from = {
+                    is_ai = no
+                }
+            }
+            alloys = 40
+            energy = 50
+            minerals = 50
+        }
+        cost = {
+            trigger = {
+                from = {
+                    is_ai = yes
+                }
+            }
+            alloys = 50
+        }
+        produces = {
+            minerals = 8
+        }
+        produces = {
+            trigger = {
+                has_starbase_building = mining_experts
+            }
+            minerals = 2
+        }
+        upkeep = {
+            energy = 2
+        }
+    }
+    possible = {
+        custom_tooltip = {
+            fail_text = "nsc.requires.asteroid"
+            solar_system = {
+                any_system_planet = {
+                    is_asteroid = yes
+                }
+            }
+        }
+        custom_tooltip = {
+            fail_text = "starbase_h_limit.tooltip.fail"
+            count_starbase_modules = {
+                count < 4
+                type = asteroid_mining
+            }
+        }
+    }
+    ai_build_at_chokepoint = yes
+    ai_build_outside_chokepoint = yes
+    ai_weight = {
+        weight = 75
+        modifier = {
+            factor = 5
+            has_starbase_size < starbase_starport
+        }
+        modifier = {
+            factor = 500
+            owner = {
+                resource_income_compare = {
+                    resource = minerals
+                    value < 30
+                }
+            }
+            owner = {
+                resource_stockpile_compare = {
+                    resource = minerals
+                    value < 1000
+                }
+            }
+        }
+        modifier = {
+            factor = 4
+            count_starbase_modules = {
+                type = asteroid_mining
+                count > 1
+            }
+        }
+        modifier = {
+            factor = 3
+            count_starbase_modules = {
+                type = asteroid_mining
+                count > 2
+            }
+        }
+        modifier = {
+            factor = 2
+            count_starbase_modules = {
+                type = asteroid_mining
+                count > 3
+            }
+        }
+        modifier = {
+            factor = 1
+            count_starbase_modules = {
+                type = asteroid_mining
+                count > 4
+            }
+        }
+        modifier = {
+            factor = 0
+            count_starbase_modules = {
+                type = asteroid_mining
+                count > 5
+            }
+        }
+        modifier = {
+            factor = 0
+            or = {
+                years_passed > 60
+                owner = {
+                    resource_stockpile_compare = {
+                        resource = minerals
+                        value > 2500
+                    }
+                }
+                owner = {
+                    resource_income_compare = {
+                        resource = minerals
+                        value > 150
+                    }
+                }
+            }
+        }
+    }
+}

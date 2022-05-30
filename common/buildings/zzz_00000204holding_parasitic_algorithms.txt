@@ -1,0 +1,109 @@
+holding_parasitic_algorithms = {
+    base_buildtime = @b2_time
+    owner_type = subject_holding
+    icon = holding_parasitic_algorithms
+    base_cap_amount = 1
+    potential = {
+        has_overlord_dlc = yes
+    }
+    allow = {
+        custom_tooltip = {
+            fail_text = is_capital
+            exists = planet
+            planet = {
+                is_capital = yes
+            }
+        }
+        custom_tooltip = {
+            fail_text = subject_is_scholarium
+            exists = planet.owner
+            planet.owner = {
+                is_specialist_subject_type = {
+                    TYPE = scholarium
+                }
+            }
+        }
+    }
+    resources = {
+        category = planet_holdings
+        cost = {
+            minerals = @b1_minerals
+        }
+        upkeep = {
+            energy = @b1_upkeep
+        }
+    }
+    country_modifier = {
+        all_technology_research_speed = 0.03
+    }
+    planet_modifier = {
+        monthly_loyalty = -1
+    }
+    triggered_planet_modifier = {
+        potential = {
+            overlord_has_num_science_ships_in_orbit = {
+                NUM = 1
+            }
+        }
+        modifier = {
+            monthly_loyalty = -0.5
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            overlord_has_num_science_ships_in_orbit = {
+                NUM = 2
+            }
+        }
+        modifier = {
+            monthly_loyalty = -1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            overlord_has_more_than_num_science_ships_in_orbit = {
+                NUM = 2
+            }
+        }
+        modifier = {
+            monthly_loyalty = -1.5
+        }
+    }
+    triggered_country_modifier = {
+        potential = {
+            overlord_has_num_science_ships_in_orbit = {
+                NUM = 1
+            }
+        }
+        all_technology_research_speed = 0.03
+    }
+    triggered_country_modifier = {
+        potential = {
+            overlord_has_num_science_ships_in_orbit = {
+                NUM = 2
+            }
+        }
+        all_technology_research_speed = 0.06
+    }
+    triggered_country_modifier = {
+        potential = {
+            overlord_has_more_than_num_science_ships_in_orbit = {
+                NUM = 2
+            }
+        }
+        all_technology_research_speed = 0.09
+    }
+    destroy_trigger = {
+        exists = planet.owner
+        planet.owner = {
+            NOT = {
+                is_specialist_subject_type = {
+                    TYPE = scholarium
+                }
+            }
+        }
+    }
+    triggered_desc = {
+        text = holding_parasitic_algorithms_effect_desc
+    }
+}

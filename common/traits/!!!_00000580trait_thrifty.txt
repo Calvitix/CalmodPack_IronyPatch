@@ -1,0 +1,16 @@
+trait_thrifty = {
+    cost = 2
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    opposites = {
+        "trait_hive_mind"
+    }
+    modifier = {
+        pop_job_trade_mult = 0.25
+    }
+    slave_cost = {
+        energy = 500
+    }
+}

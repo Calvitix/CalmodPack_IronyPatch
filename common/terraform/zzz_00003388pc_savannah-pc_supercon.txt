@@ -1,0 +1,41 @@
+@terraforming_cost_level_3 = 15000
+@terraforming_duration_level_3 = 28800
+terraform_link = {
+    from = pc_savannah
+    to = pc_supercon
+    resources = {
+        category = terraforming
+        cost = {
+            energy = @terraforming_cost_level_3
+        }
+    }
+    duration = @terraforming_duration_level_3
+    potential = {
+        from = {
+            has_modifier = pdterra_supercon
+        }
+    }
+    condition = {
+        has_technology = "tech_climate_restoration"
+    }
+    effect = {
+        from = {
+            remove_modifier = pdterra_supercon
+            add_modifier = {
+                modifier = supercon
+                days = -1
+            }
+            add_deposit = d_supercon_site
+        }
+    }
+    ai_weight = {
+        weight = 0
+        modifier = {
+            weight = 2
+            should_terraform_trigger = {
+                CLASS_FROM = pc_savannah
+                CLASS_TO = pc_supercon
+            }
+        }
+    }
+}

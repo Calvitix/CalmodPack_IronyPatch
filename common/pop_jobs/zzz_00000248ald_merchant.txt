@@ -1,0 +1,37 @@
+ald_merchant = {
+    category = ruler
+    condition_string = RULER_JOB_TRIGGER
+    building_icon = building_galactic_stock_exchange
+    icon = merchant
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+    possible_precalc = can_fill_ruler_job
+    resources = {
+        category = planet_merchants
+        upkeep = {
+            consumer_goods = 20
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            always = yes
+        }
+        trade_value_add = 120
+        mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
+    }
+    triggered_planet_modifier = {
+        potential = {
+            always = yes
+        }
+        planet_amenities_add = 3
+        mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+    }
+    weight = {
+        weight = value:giga_ruler_no_resource_weight|JOB|ald_merchant|TRADE|yes|AMENITIES|yes|
+    }
+}

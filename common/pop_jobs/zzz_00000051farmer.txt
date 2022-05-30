@@ -32,19 +32,27 @@ farmer = {
             }
             food = -1
         }
+        produces = {
+            trigger = {
+                planet = {
+                    has_planet_flag = has_produce_requisitorium
+                }
+            }
+            food = @requisitorium_food_reduction
+        }
     }
     planet_modifier = {
         planet_pops_food_upkeep_mult = -0.01
     }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                has_valid_civic = civic_agrarian_idyll
+    overlord_resources = {
+        category = planet_requisitioned_food
+        produces = {
+            trigger = {
+                planet = {
+                    has_planet_flag = has_produce_requisitorium
+                }
             }
-        }
-        modifier = {
-            planet_amenities_add = 2
+            food = @requisitorium_food_overlord
         }
     }
     triggered_planet_modifier = {
@@ -53,36 +61,13 @@ farmer = {
             owner = {
                 has_valid_civic = civic_agrarian_idyll
             }
-            OR = {
-                has_trait = trait_robot_domestic_protocols
-                has_trait = trait_charismatic
-            }
         }
-        modifier = {
-            planet_amenities_add = 0.4
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                has_valid_civic = civic_agrarian_idyll
-            }
-            has_trait = trait_repugnant
-        }
-        modifier = {
-            planet_amenities_add = -0.4
-        }
+        planet_amenities_add = 2
+        mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
     }
     weight = {
         weight = @worker_job_weight
-        modifier = {
-            factor = 3
-            OR = {
-                has_trait = trait_robot_harvesters
-                has_trait = trait_agrarian
-            }
-        }
+        mult = value:job_weights_modifier|JOB|farmer|RESOURCE|food|
         modifier = {
             factor = 1.1
             owner = {
@@ -93,6 +78,11 @@ farmer = {
             factor = 10
             is_enslaved = yes
             can_take_servant_job = no
+            NOT = {
+                has_slavery_type = {
+                    type = slavery_indentured
+                }
+            }
         }
         modifier = {
             factor = 3
@@ -119,89 +109,13 @@ farmer = {
             }
         }
         modifier = {
-            factor = 200
-            OR = {
-                is_non_sapient_robot = yes
-                is_shackled_robot = yes
-            }
-            owner = {
-                is_ai = yes
-            }
-        }
-        modifier = {
             factor = 0.25
             can_take_servant_job = yes
         }
         modifier = {
-            factor = 2
-            has_trait = trait_syncretic_proles
-        }
-        modifier = {
-            factor = 1.2
-            has_trait = trait_very_strong
-        }
-        modifier = {
-            factor = 1.1
-            has_trait = trait_strong
-        }
-        modifier = {
-            factor = 0.9
-            has_trait = trait_weak
-        }
-        modifier = {
-            factor = 0.5
-            has_trait = trait_zombie
-        }
-        modifier = {
-            factor = 1.5
-            has_trait = trait_syncretic_proles
-        }
-        modifier = {
-            factor = 1.4
-            has_trait = trait_presapient_proles
-        }
-        modifier = {
-            factor = 1.1
-            OR = {
-                has_trait = trait_robust
-                has_trait = trait_robot_efficient_processors
-            }
-        }
-        modifier = {
-            factor = 1.1
-            has_trait = trait_nerve_stapled
-        }
-        modifier = {
-            factor = 1.5
+            factor = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
             owner = {
                 has_valid_civic = civic_agrarian_idyll
-            }
-            OR = {
-                has_trait = trait_robot_domestic_protocols
-                has_trait = trait_charismatic
-            }
-        }
-        modifier = {
-            factor = 0.5
-            owner = {
-                has_valid_civic = civic_agrarian_idyll
-            }
-            has_trait = trait_repugnant
-        }
-        modifier = {
-            factor = 1.5
-            has_trait = trait_void_dweller_1
-            exists = planet
-            planet = {
-                is_planet_class = pc_habitat
-            }
-        }
-        modifier = {
-            factor = 0.85
-            has_trait = trait_void_dweller_1
-            exists = planet
-            planet = {
-                is_artificial = no
             }
         }
         modifier = {
@@ -229,10 +143,6 @@ farmer = {
                     value >= 0
                 }
             }
-        }
-        modifier = {
-            factor = 0.75
-            has_trait = trait_necrophage
         }
     }
 }

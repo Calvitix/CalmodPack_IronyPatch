@@ -27,30 +27,17 @@ mortal_initiate = {
             society_research = 1
         }
     }
-    planet_modifier = {
+    triggered_planet_modifier = {
+        potential = {
+            always = yes
+        }
         planet_amenities_add = 2
-    }
-    triggered_planet_modifier = {
-        potential = {
-            OR = {
-                has_trait = trait_robot_domestic_protocols
-                has_trait = trait_charismatic
-            }
-        }
-        modifier = {
-            planet_amenities_add = 0.4
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            has_trait = trait_repugnant
-        }
-        modifier = {
-            planet_amenities_add = -0.4
-        }
+        mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
     }
     weight = {
         weight = @specialist_job_weight
+        mult = value:job_weights_multiple_resources_modifier|JOB|mortal_initiate|RESOURCE1|unity|WEIGHT1|0.5|RESOURCE2|society_research|WEIGHT2|0.3|
+        mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
         modifier = {
             factor = 0.2
             has_citizenship_rights = no
@@ -59,57 +46,8 @@ mortal_initiate = {
             }
         }
         modifier = {
-            factor = 2
-            owner = {
-                has_civic = civic_exalted_priesthood
-            }
-        }
-        modifier = {
-            factor = 1.1
-            has_trait = trait_natural_sociologists
-        }
-        modifier = {
-            factor = 1.05
-            has_trait = trait_intelligent
-        }
-        modifier = {
-            factor = 1.05
-            has_trait = trait_psionic
-        }
-        modifier = {
-            factor = 0.7
-            has_trait = trait_enigmatic_intelligence_failed
-        }
-        modifier = {
-            factor = 1.05
-            OR = {
-                has_trait = trait_enigmatic_intelligence
-                has_trait = trait_enigmatic_intelligence_poor
-            }
-        }
-        modifier = {
-            factor = 1.5
-            has_trait = trait_charismatic
-        }
-        modifier = {
-            factor = 0.5
-            has_trait = trait_repugnant
-        }
-        modifier = {
-            factor = 1.1
-            has_trait = trait_traditional
-        }
-        modifier = {
-            factor = 0.9
-            has_trait = trait_presapient_proles
-        }
-        modifier = {
             factor = 1.2
             has_ethic = ethic_spiritualist
-        }
-        modifier = {
-            factor = 0.5
-            has_trait = trait_quarrelsome
         }
         modifier = {
             factor = 0.1
@@ -121,18 +59,6 @@ mortal_initiate = {
             NOT = {
                 has_job = mortal_initiate
             }
-        }
-        modifier = {
-            factor = 1.05
-            has_trait = trait_weak
-        }
-        modifier = {
-            factor = 1.05
-            has_trait = trait_presapient_natural_intellectuals
-        }
-        modifier = {
-            factor = 0.01
-            has_trait = trait_nerve_stapled
         }
     }
 }

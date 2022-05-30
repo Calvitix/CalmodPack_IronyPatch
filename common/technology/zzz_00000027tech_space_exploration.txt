@@ -5,9 +5,6 @@ tech_space_exploration = {
     category = {
         voidcraft
     }
-    prerequisites = {
-        "tech_basic_science_lab_1"
-    }
     tier = 0
     prereqfor_desc = {
         ship = {

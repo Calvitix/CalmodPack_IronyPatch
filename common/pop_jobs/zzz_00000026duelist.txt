@@ -21,33 +21,20 @@ duelist = {
             alloys = 1
         }
     }
-    planet_modifier = {
+    triggered_planet_modifier = {
+        potential = {
+            always = yes
+        }
         planet_amenities_add = 10
+        mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
     }
     country_modifier = {
         country_naval_cap_add = 2
     }
-    triggered_planet_modifier = {
-        potential = {
-            OR = {
-                has_trait = trait_robot_domestic_protocols
-                has_trait = trait_charismatic
-            }
-        }
-        modifier = {
-            planet_amenities_add = 2
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            has_trait = trait_repugnant
-        }
-        modifier = {
-            planet_amenities_add = -2
-        }
-    }
     weight = {
         weight = @specialist_job_weight
+        mult = value:job_weights_modifier|JOB|duelist|RESOURCE|unity|
+        mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
         modifier = {
             factor = 0.1
             has_ethic = ethic_pacifist
@@ -63,28 +50,6 @@ duelist = {
             }
         }
         modifier = {
-            factor = 3
-            has_trait = trait_robot_domestic_protocols
-            OR = {
-                is_non_sapient_robot = yes
-                is_shackled_robot = yes
-            }
-        }
-        modifier = {
-            factor = 1.5
-            OR = {
-                has_trait = trait_robot_domestic_protocols
-                has_trait = trait_charismatic
-            }
-        }
-        modifier = {
-            factor = 1.25
-            OR = {
-                has_trait = trait_traditional
-                has_trait = trait_robot_propaganda_machines
-            }
-        }
-        modifier = {
             factor = 10
             is_enslaved = yes
             has_slavery_type = {
@@ -92,27 +57,15 @@ duelist = {
             }
         }
         modifier = {
-            factor = 0.75
-            has_trait = trait_quarrelsome
-        }
-        modifier = {
-            factor = 1.25
-            has_trait = trait_brainslug
-        }
-        modifier = {
             factor = 1.2
             has_ethic = ethic_militarist
-        }
-        modifier = {
-            factor = 1.05
-            has_trait = trait_presapient_natural_intellectuals
         }
         modifier = {
             factor = 1.5
             has_job = duelist
         }
         modifier = {
-            factor = 0.1
+            factor = 0.5
             NOT = {
                 has_job = duelist
             }
@@ -120,26 +73,6 @@ duelist = {
             planet = {
                 free_amenities > 5
             }
-        }
-        modifier = {
-            factor = 1.5
-            has_trait = trait_void_dweller_1
-            exists = planet
-            planet = {
-                is_planet_class = pc_habitat
-            }
-        }
-        modifier = {
-            factor = 0.85
-            has_trait = trait_void_dweller_1
-            exists = planet
-            planet = {
-                is_artificial = no
-            }
-        }
-        modifier = {
-            factor = 1.25
-            has_trait = trait_necrophage
         }
     }
 }

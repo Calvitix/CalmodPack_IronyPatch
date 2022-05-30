@@ -1,0 +1,118 @@
+namespace = terra
+planet_event = {
+    id = terra.30
+    title = terra.30.name
+    desc = terra.30.desc
+    picture = {
+        trigger = {
+            is_desert = yes
+        }
+        picture = GFX_evt_desert
+    }
+    picture = {
+        trigger = {
+            is_tropical = yes
+        }
+        picture = GFX_evt_tropical
+    }
+    picture = {
+        trigger = {
+            is_arid = yes
+        }
+        picture = GFX_evt_arid
+    }
+    picture = {
+        trigger = {
+            OR = {
+                is_continental = yes
+                is_alpine = yes
+                is_savannah = yes
+            }
+        }
+        picture = GFX_evt_continental
+    }
+    picture = {
+        trigger = {
+            is_ocean = yes
+        }
+        picture = GFX_evt_ocean
+    }
+    picture = {
+        trigger = {
+            is_tundra = yes
+        }
+        picture = GFX_evt_tundra
+    }
+    picture = {
+        trigger = {
+            is_arctic = yes
+        }
+        picture = GFX_evt_arctic
+    }
+    picture = {
+        trigger = {
+            is_gaia = yes
+        }
+        picture = GFX_evt_gaia
+    }
+    picture = {
+        trigger = {
+            is_nuked = yes
+        }
+        picture = GFX_evt_tomb_world
+    }
+    show_sound = event_administrative_work
+    is_triggered_only = yes
+    location = this
+    trigger = {
+        has_planet_flag = terraform_blocker_flag
+        NOT = {
+            any_deposit = {
+                NOT = {
+                    is_same_value = From
+                }
+                is_deposit_type = d_terraforming_blocker
+            }
+        }
+    }
+    immediate = {
+        remove_planet_flag = terraform_blocker_flag
+    }
+    option = {
+        name = terra.30.a
+        owner = {
+            switch = {
+                trigger = has_technology
+                tech_climate_restoration = {
+                    add_monthly_resource_mult = {
+                        resource = society_research
+                        value = @tier5researchreward
+                        min = @tier5researchmin
+                        max = @tier5researchmax
+                    }
+                }
+                tech_ecological_adaptation = {
+                    add_tech_option_or_research_effect = {
+                        TECH = tech_climate_restoration
+                        PROGRESS = 0.2
+                        CATEGORY = society_research
+                    }
+                }
+                tech_terrestrial_sculpting = {
+                    add_tech_option_or_research_effect = {
+                        TECH = tech_ecological_adaptation
+                        PROGRESS = 0.4
+                        CATEGORY = society_research
+                    }
+                }
+                default = {
+                    add_tech_option_or_research_effect = {
+                        TECH = tech_terrestrial_sculpting
+                        PROGRESS = 0.8
+                        CATEGORY = society_research
+                    }
+                }
+            }
+        }
+    }
+}

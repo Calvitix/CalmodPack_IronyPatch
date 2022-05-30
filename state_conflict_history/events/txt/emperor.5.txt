@@ -1,0 +1,41 @@
+namespace = emperor
+country_event = {
+    id = emperor.5
+    title = "emperor.5.name"
+    desc = "emperor.5.desc"
+    picture = GFX_evt_galactic_empire
+    show_sound = event_announcement
+    is_triggered_only = yes
+    trigger = {
+        is_galactic_community_member = yes
+        has_federation = yes
+        federation = {
+            NAND = {
+                has_federation_type = vf_ef_federation
+                any_member = {
+                    is_galactic_emperor = yes
+                }
+            }
+        }
+    }
+    option = {
+        name = emperor.5.a
+        tooltip = {
+            leave_alliance = {
+                override_requirements = yes
+            }
+        }
+    }
+    after = {
+        hidden_effect = {
+            if = {
+                limit = {
+                    exists = federation
+                }
+                leave_alliance = {
+                    override_requirements = yes
+                }
+            }
+        }
+    }
+}

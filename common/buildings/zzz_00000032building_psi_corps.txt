@@ -3,8 +3,12 @@ building_psi_corps = {
     category = government
     base_cap_amount = 1
     potential = {
+        host_has_dlc = "Utopia"
         owner = {
-            has_ascension_perk = ap_mind_over_matter
+            OR = {
+                has_ascension_perk = ap_mind_over_matter
+                has_origin = origin_shroudwalker_apprentice
+            }
         }
         NOT = {
             has_modifier = resort_colony
@@ -21,7 +25,10 @@ building_psi_corps = {
         exists = owner
         NOT = {
             owner = {
-                has_ascension_perk = ap_mind_over_matter
+                OR = {
+                    has_ascension_perk = ap_mind_over_matter
+                    has_origin = origin_shroudwalker_apprentice
+                }
             }
         }
     }

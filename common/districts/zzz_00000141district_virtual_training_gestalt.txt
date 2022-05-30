@@ -1,0 +1,71 @@
+district_virtual_training_gestalt = {
+    base_buildtime = @giga_rw_district_buildtime
+    is_capped_by_modifier = no
+    icon = district_virtual_training
+    show_on_uncolonized = {
+        uses_district_set = virtual_ring
+        from = {
+            is_gestalt = yes
+            giga_vr_training_trigger = yes
+        }
+    }
+    potential = {
+        uses_district_set = virtual_ring
+        owner = {
+            is_gestalt = yes
+            giga_vr_training_trigger = yes
+        }
+    }
+    conversion_ratio = 1
+    convert_to = {
+        district_virtual_livestock
+        district_virtual_hell
+        district_virtual_amalgamation
+        district_virtual_diplomatic
+        district_virtual_diplomatic_hive
+        district_virtual_diplomatic_machine
+        district_virtual_training
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = @giga_rw_cost
+            exotic_gases = @giga_rw_cost_sr
+        }
+        upkeep = {
+            energy = @giga_rw_maintenance
+            exotic_gases = @giga_rw_maintenance_sr
+        }
+    }
+    planet_modifier = {
+        planet_housing_add = 10
+        job_giga_virtual_training_coordination_drone_add = 5
+        planet_giga_virtual_trainers_energy_upkeep_add = 1
+        job_patrol_drone_add = 1
+        job_warrior_drone_add = 4
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        text = job_giga_virtual_training_coordination_drone_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        text = job_giga_virtual_training_coordination_drone_effect_machine_desc
+    }
+    triggered_desc = {
+        text = job_patrol_drone_effect_desc
+    }
+    triggered_desc = {
+        text = job_warrior_drone_effect_desc
+    }
+}

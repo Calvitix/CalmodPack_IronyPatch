@@ -33,6 +33,12 @@ tech_defense_platform_hull_1 = {
                 has_trait = "leader_trait_expertise_voidcraft"
             }
         }
+        modifier = {
+            factor = 1.5
+            is_specialist_subject_type = {
+                TYPE = bulwark
+            }
+        }
     }
     modifier = {
         shipsize_military_station_small_hull_add = 500

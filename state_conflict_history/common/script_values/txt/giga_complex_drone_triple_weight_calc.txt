@@ -1,0 +1,36 @@
+giga_complex_drone_triple_weight_calc = {
+    base = 0
+    complex_trigger_modifier = {
+        trigger = check_economic_production_modifier_for_job
+        parameters = {
+            job = $JOB$
+            resource = {
+                $RESOURCE1$ = $WEIGHT1$
+                $RESOURCE2$ = $WEIGHT2$
+                $RESOURCE2$ = $WEIGHT3$
+            }
+        }
+        mode = add
+    }
+    add = 1
+    min = 0
+    pow = 3
+    modifier = {
+        owner = {
+            has_deficit = $RESOURCE1$
+        }
+        mult = @\[ 10 * $WEIGHT1$ ]
+    }
+    modifier = {
+        owner = {
+            has_deficit = $RESOURCE2$
+        }
+        mult = @\[ 10 * $WEIGHT2$ ]
+    }
+    modifier = {
+        owner = {
+            has_deficit = $RESOURCE3$
+        }
+        mult = @\[ 10 * $WEIGHT3$ ]
+    }
+}

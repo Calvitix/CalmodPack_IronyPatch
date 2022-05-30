@@ -25,11 +25,12 @@ building_mineral_purification_hub = {
     }
     destroy_trigger = {
         OR = {
-        OR = {
-            has_modifier = resort_colony
-            buildings_no_motes = yes
-        }
+            OR = {
+                has_modifier = resort_colony
+                buildings_no_motes = yes
+            }
             AND = {
+                exists = owner
                 owner = {
                     is_ai = yes
                 }

@@ -20,6 +20,12 @@ tech_ship_armor_2 = {
                 has_trait = "leader_trait_expertise_materials"
             }
         }
+        modifier = {
+            factor = 1.5
+            is_specialist_subject_type = {
+                TYPE = bulwark
+            }
+        }
     }
     ai_weight = {
         weight = 1

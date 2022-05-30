@@ -1,0 +1,19 @@
+giga_zro_extractor = {
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = building_giga_habitat_zro_harvester
+    clothes_texture_index = 3
+    possible_precalc = can_fill_specialist_job
+    resources = {
+        category = planet_refiners
+        produces = {
+            sr_zro = 1
+        }
+        upkeep = {
+            energy = 5
+        }
+    }
+    weight = {
+        weight = value:giga_specialist_weight|JOB|giga_zro_extractor|RESOURCE|sr_zro|STICKY|5|INDENTURED|1.2|
+    }
+}

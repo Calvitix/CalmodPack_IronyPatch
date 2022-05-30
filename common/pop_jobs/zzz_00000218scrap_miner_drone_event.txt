@@ -1,0 +1,87 @@
+scrap_miner_drone_event = {
+    category = simple_drone
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = building_mineral_purification_plant
+    icon = miner
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+    possible_precalc = can_fill_drone_job
+    resources = {
+        category = planet_miners
+        produces = {
+            minerals = 2
+            alloys = 2
+        }
+        produces = {
+            trigger = {
+                exists = planet
+                planet = {
+                    has_planet_flag = pirate_graveyard
+                }
+                exists = owner
+                owner = {
+                    is_gestalt = yes
+                }
+            }
+            minerals = 2
+            volatile_motes = 0.5
+            exotic_gases = 0.5
+            rare_crystals = 0.5
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    is_hive_empire = yes
+                }
+                is_lithoid = yes
+            }
+            minerals = 1
+        }
+        produces = {
+            trigger = {
+                is_lithoid = yes
+            }
+            minerals = 1
+        }
+        produces = {
+            trigger = {
+                has_global_flag = EcologyMod_active
+            }
+            waste = 1
+        }
+    }
+    weight = {
+        weight = @simple_drone_job_weight
+        mult = value:job_weights_multiple_resources_modifier|JOB|scrap_miner_drone_event|RESOURCE1|minerals|WEIGHT1|0.7|RESOURCE2|alloys|WEIGHT2|0.3|
+        modifier = {
+            factor = 1.1
+            years_passed < 1
+            owner = {
+                has_valid_civic = civic_machine_assimilator
+            }
+            has_trait = trait_cybernetic
+        }
+        modifier = {
+            factor = 1.2
+            has_job = scrap_miner_drone_event
+        }
+        modifier = {
+            factor = 1.2
+            exists = planet
+            planet = {
+                has_available_jobs = scrap_miner_drone_event
+            }
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 0
+                }
+            }
+        }
+    }
+}

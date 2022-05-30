@@ -21,27 +21,12 @@ entertainer = {
             consumer_goods = 1
         }
     }
-    planet_modifier = {
+    triggered_planet_modifier = {
+        potential = {
+            always = yes
+        }
         planet_amenities_add = 10
-    }
-    triggered_planet_modifier = {
-        potential = {
-            OR = {
-                has_trait = trait_robot_domestic_protocols
-                has_trait = trait_charismatic
-            }
-        }
-        modifier = {
-            planet_amenities_add = 2
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            has_trait = trait_repugnant
-        }
-        modifier = {
-            planet_amenities_add = -2
-        }
+        mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
     }
     triggered_planet_modifier = {
         potential = {
@@ -55,7 +40,9 @@ entertainer = {
         }
     }
     weight = {
-        weight = @specialist_job_weight
+        weight = @high_prio_specialist_job_weight
+        mult = value:job_weights_modifier|JOB|entertainer|RESOURCE|unity|FACTOR|0.25|
+        mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
         modifier = {
             factor = 0.2
             has_citizenship_rights = no
@@ -73,68 +60,32 @@ entertainer = {
         }
         modifier = {
             factor = 1.5
-            OR = {
-                has_trait = trait_robot_domestic_protocols
-                has_trait = trait_charismatic
-            }
-        }
-        modifier = {
-            factor = 0.5
-            has_trait = trait_repugnant
-        }
-        modifier = {
-            factor = 1.25
-            OR = {
-                has_trait = trait_traditional
-                has_trait = trait_robot_propaganda_machines
-            }
-        }
-        modifier = {
-            factor = 0.75
-            has_trait = trait_quarrelsome
-        }
-        modifier = {
-            factor = 1.5
             has_job = entertainer
-        }
-        modifier = {
-            factor = 1.25
-            has_trait = trait_brainslug
-        }
-        modifier = {
-            factor = 1.1
-            has_trait = trait_presapient_natural_intellectuals
         }
         modifier = {
             factor = 0.1
             is_domestic_servant = yes
         }
         modifier = {
-            factor = 1.1
-            OR = {
-                has_trait = trait_robust
-                has_trait = trait_robot_efficient_processors
+            factor = 0.1
+            NOT = {
+                has_job = entertainer
             }
-        }
-        modifier = {
-            factor = 1.5
-            has_trait = trait_void_dweller_1
             exists = planet
             planet = {
-                is_planet_class = pc_habitat
+                free_amenities > 5
             }
         }
         modifier = {
-            factor = 0.85
-            has_trait = trait_void_dweller_1
+            factor = 2
+            NOT = {
+                has_job = entertainer
+            }
             exists = planet
             planet = {
-                is_artificial = no
+                free_amenities < 2
+                has_available_jobs = entertainer
             }
-        }
-        modifier = {
-            factor = 1.25
-            has_trait = trait_necrophage
         }
     }
 }

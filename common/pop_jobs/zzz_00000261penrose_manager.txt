@@ -1,0 +1,33 @@
+@insula_specialist_weight = 1000
+penrose_manager = {
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = building_class_4_singularity
+    clothes_texture_index = 2
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+    possible = {
+        owner = {
+            is_fallen_empire = no
+        }
+    }
+    possible_precalc = can_fill_specialist_job
+    planet_modifier = {
+        job_penrose_engineer_add = 8
+        job_penrose_weaver_add = 2
+    }
+    resources = {
+        category = planet_penrose
+        produces = {
+            physics_research = 50
+        }
+    }
+    weight = {
+        weight = value:giga_specialist_weight|JOB|penrose_manager|RESOURCE|physics_research|
+        mult = @insula_specialist_weight
+    }
+}

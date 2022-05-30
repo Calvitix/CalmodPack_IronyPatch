@@ -1,0 +1,93 @@
+district_virtual_relay = {
+    base_buildtime = @giga_rw_district_buildtime
+    is_capped_by_modifier = no
+    icon = district_arcology_administrative
+    show_on_uncolonized = {
+        from = {
+            or = {
+                is_hive_empire = yes
+                and = {
+                    is_machine_empire = yes
+                    not = {
+                        has_valid_civic = civic_machine_servitor
+                    }
+                }
+            }
+        }
+        uses_district_set = virtual_ring
+    }
+    potential = {
+        owner = {
+            or = {
+                is_hive_empire = yes
+                and = {
+                    is_machine_empire = yes
+                    not = {
+                        has_valid_civic = civic_machine_servitor
+                    }
+                }
+            }
+        }
+        uses_district_set = virtual_ring
+    }
+    conversion_ratio = 1
+    convert_to = {
+        district_virtual_administrative
+        district_virtual_religious
+        district_virtual_organic_housing
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = @giga_rw_cost
+            rare_crystals = @giga_rw_cost_sr
+        }
+        upkeep = {
+            energy = @giga_rw_maintenance
+            rare_crystals = @giga_rw_maintenance_sr
+        }
+    }
+    planet_modifier = {
+        planet_housing_add = 10
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        job_synapse_drone_add = 10
+        planet_administrators_unity_produces_add = 1
+        planet_administrators_energy_upkeep_add = 1
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        text = job_synapse_drone_effect_desc
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        job_coordinator_add = 10
+        planet_administrators_unity_produces_add = 1
+        planet_administrators_energy_upkeep_add = 1
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        text = job_coordinator_effect_desc
+    }
+}

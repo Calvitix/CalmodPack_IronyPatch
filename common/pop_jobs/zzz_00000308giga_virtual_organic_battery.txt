@@ -1,0 +1,49 @@
+giga_virtual_organic_battery = {
+    category = worker
+    clothes_texture_index = 2
+    pop_modifier = {
+        pop_housing_usage_add = -0.5
+        pop_happiness = 0.35
+    }
+    possible_pre_triggers = {
+        is_enslaved = yes
+        is_sapient = yes
+    }
+    possible = {
+        has_citizenship_type = {
+            type = citizenship_slavery
+        }
+        has_slavery_type = {
+            type = slavery_matrix
+        }
+    }
+    planet_modifier = {
+        planet_pops_energy_upkeep_mult = -0.001
+        planet_jobs_energy_upkeep_mult = -0.001
+    }
+    resources = {
+        category = planet_jobs
+        produces = {
+            energy = 5
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_active_building = building_energy_grid
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_active_building = building_energy_nexus
+                }
+            }
+            energy = 2
+        }
+    }
+    weight = {
+        weight = value:giga_worker_weight|JOB|giga_virtual_organic_battery|RESOURCE|energy|
+    }
+}

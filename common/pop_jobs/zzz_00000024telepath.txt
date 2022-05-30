@@ -71,13 +71,8 @@ telepath = {
     }
     weight = {
         weight = @specialist_job_weight
-        modifier = {
-            factor = 0
-            NOR = {
-                has_trait = trait_latent_psionic
-                has_trait = trait_psionic
-            }
-        }
+        mult = 2
+        mult = value:job_weights_modifier|JOB|telepath|RESOURCE|unity|
         modifier = {
             factor = 0.2
             has_citizenship_rights = no
@@ -85,13 +80,6 @@ telepath = {
         modifier = {
             factor = 2
             has_trait = trait_resilient
-        }
-        modifier = {
-            factor = 10
-            OR = {
-                has_trait = trait_latent_psionic
-                has_trait = trait_psionic
-            }
         }
         modifier = {
             factor = 0.1
@@ -102,57 +90,11 @@ telepath = {
             has_job = telepath
         }
         modifier = {
-            factor = 1.5
-            OR = {
-                has_trait = trait_robot_propaganda_machines
-                has_trait = trait_traditional
-            }
-        }
-        modifier = {
-            factor = 0.5
-            has_trait = trait_quarrelsome
-        }
-        modifier = {
-            factor = 1.5
-            has_trait = trait_brainslug
-        }
-        modifier = {
-            factor = 1.25
-            has_trait = trait_presapient_natural_intellectuals
-        }
-        modifier = {
-            factor = 1.25
-            OR = {
-                has_trait = trait_robust
-                has_trait = trait_robot_efficient_processors
-            }
-        }
-        modifier = {
             factor = 0.1
             is_enslaved = yes
             has_slavery_type = {
                 type = slavery_indentured
             }
-        }
-        modifier = {
-            factor = 1.5
-            has_trait = trait_void_dweller_1
-            exists = planet
-            planet = {
-                is_planet_class = pc_habitat
-            }
-        }
-        modifier = {
-            factor = 0.85
-            has_trait = trait_void_dweller_1
-            exists = planet
-            planet = {
-                is_artificial = no
-            }
-        }
-        modifier = {
-            factor = 1.5
-            has_trait = trait_necrophage
         }
     }
 }

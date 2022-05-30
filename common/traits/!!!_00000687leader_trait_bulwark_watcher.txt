@@ -1,0 +1,17 @@
+leader_trait_bulwark_watcher = {
+    cost = 0
+    icon = "gfx/interface/icons/traits/leader_traits/leader_trait_bulwark_watcher.dds"
+    modifier = {
+        ship_friendly_territory_evasion_mult = 0.15
+        ship_friendly_territory_tracking_mult = 0.15
+        ship_sensor_range_add = 1
+    }
+    leader_trait = {
+        admiral
+    }
+    leader_class = {
+        admiral
+    }
+    initial = no
+    randomized = no
+}

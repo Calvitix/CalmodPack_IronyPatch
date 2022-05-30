@@ -1,0 +1,69 @@
+@maginot_central_command_naval_cap = 100
+@maginot_central_command_crime_reduction = -100
+@maginot_central_command_stability = 25
+@maginot_central_command_stability_martial_law = 25
+@maginot_central_command_unity = 25
+@maginot_central_command_power_projection = 0.5
+@maginot_central_command_influence = 0.5
+@maginot_defence_army_add = 1
+@maginot_ruler_upkeep_energy = 10
+@maginot_ruler_upkeep_consumer_goods = 50
+@maginot_ruler_job_weight = 1750
+maginot_central_command = {
+    category = ruler
+    condition_string = RULER_JOB_TRIGGER
+    building_icon = building_imperial_capital
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+    possible_precalc = can_fill_ruler_job
+    country_modifier = {
+        country_naval_cap_add = @maginot_central_command_naval_cap
+        country_power_projection_influence_produces_add = @maginot_central_command_power_projection
+    }
+    pop_modifier = {
+        pop_defense_armies_add = @maginot_defence_army_add
+    }
+    planet_modifier = {
+        planet_crime_add = @maginot_central_command_crime_reduction
+        planet_stability_add = @maginot_central_command_stability
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = planet
+            planet = {
+                has_modifier = martial_law
+            }
+        }
+        modifier = {
+            planet_stability_add = @maginot_central_command_stability_martial_law
+        }
+    }
+    resources = {
+        category = planet_soldiers
+        produces = {
+            unity = @maginot_central_command_unity
+            influence = @maginot_central_command_influence
+        }
+        upkeep = {
+            energy = @maginot_ruler_upkeep_energy
+            consumer_goods = @maginot_ruler_upkeep_consumer_goods
+        }
+    }
+    weight = {
+        weight = value:giga_ruler_weight|JOB|maginot_central_command|RESOURCE|unity|
+        multiply = @maginot_ruler_job_weight
+        multiply = value:giga_army_weight
+        modifier = {
+            factor = 0
+            has_citizenship_rights = no
+            NOT = {
+                has_trait = trait_mechanical
+            }
+        }
+    }
+}
