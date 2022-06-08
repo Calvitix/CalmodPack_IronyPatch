@@ -1,5 +1,5 @@
 is_mammalian = {
     species = {
-        is_archetype = MAMMALIAN
+        is_species_class = MAM
     }
 }

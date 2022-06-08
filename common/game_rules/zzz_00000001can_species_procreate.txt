@@ -68,9 +68,6 @@ can_species_procreate = {
         }
     }
     NOT = {
-        has_trait = trait_plentiful_traditions_pt_cocoon
-    }
-    NOT = {
         has_species_flag = nivlac_no_procreation
     }
 }

@@ -75,4 +75,13 @@ pop_category_drones = {
             has_trait = xvcv_mdlc_trait_bio_robot
         }
     }
+    triggered_upkeep_modifier = {
+        key = pop_category_drones_organics
+        modifier_types = {
+            add
+        }
+        trigger = {
+            is_robot_pop = no
+        }
+    }
 }

@@ -1,52 +1,12 @@
 pop_category_slave = {
     parent = planet_pops
-    generate_add_modifiers = {
-        produces
-        upkeep
-    }
     generate_mult_modifiers = {
-        produces
         upkeep
+        produces
     }
-    triggered_produces_modifier = {
-        key = pop_category_psionic_slave
-        modifier_types = {
-            add
-            mult
-        }
-        trigger = {
-            has_trait = trait_psionic
-        }
-    }
-    triggered_upkeep_modifier = {
-        key = pop_category_psionic_slave
-        modifier_types = {
-            add
-            mult
-        }
-        trigger = {
-            has_trait = trait_psionic
-        }
-    }
-    triggered_produces_modifier = {
-        key = pop_category_latent_psionic_slave
-        modifier_types = {
-            add
-            mult
-        }
-        trigger = {
-            has_trait = trait_latent_psionic
-        }
-    }
-    triggered_upkeep_modifier = {
-        key = pop_category_latent_psionic_slave
-        modifier_types = {
-            add
-            mult
-        }
-        trigger = {
-            has_trait = trait_latent_psionic
-        }
+    generate_add_modifiers = {
+        upkeep
+        produces
     }
     triggered_upkeep_modifier = {
         key = pop_category_slave_organics

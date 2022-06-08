@@ -1,0 +1,13 @@
+planet_buildings_hab_capital = {
+    parent = planet_buildings
+    generate_mult_modifiers = {
+        cost
+        upkeep
+        produces
+    }
+    generate_add_modifiers = {
+        cost
+        upkeep
+        produces
+    }
+}

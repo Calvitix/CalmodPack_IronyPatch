@@ -27,6 +27,16 @@ ap_nihilistic_acquisition = {
         factor = 10
         modifier = {
             factor = 0
+            not = {
+                has_ascension_perk = ap_executive_vigor
+            }
+        }
+        modifier = {
+            factor = 0
+            turtler2 = no
+        }
+        modifier = {
+            factor = 0
             NOT = {
                 has_ai_personality_behaviour = slaver
             }

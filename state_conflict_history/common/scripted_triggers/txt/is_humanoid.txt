@@ -1,5 +1,5 @@
 is_humanoid = {
     species = {
-        is_archetype = HUMANOID
+        is_species_class = HUM
     }
 }

@@ -1,0 +1,11 @@
+is_megacorp = {
+    OR = {
+        has_authority = auth_corporate
+        has_authority = auth_corporate_imperial
+        has_government = gov_imperial_domain_megacorp
+        has_authority = auth_corporate_democratic
+        has_authority = auth_cooperative
+        has_authority = auth_corporate_fiefdom
+        has_authority = auth_tec_patrocorporate
+    }
+}

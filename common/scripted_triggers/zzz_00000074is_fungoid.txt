@@ -1,5 +1,5 @@
 is_fungoid = {
     species = {
-        is_archetype = FUNGOID
+        is_species_class = FUN
     }
 }

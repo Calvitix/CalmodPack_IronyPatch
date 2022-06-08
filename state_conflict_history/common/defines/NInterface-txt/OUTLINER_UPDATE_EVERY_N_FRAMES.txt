@@ -1,3 +1,0 @@
-NInterface = {
-    OUTLINER_UPDATE_EVERY_N_FRAMES = 14
-}

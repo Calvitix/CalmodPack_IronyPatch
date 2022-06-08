@@ -1,5 +1,5 @@
 is_moluscoid = {
     species = {
-        is_archetype = MOLUSCOID
+        is_species_class = MOL
     }
 }

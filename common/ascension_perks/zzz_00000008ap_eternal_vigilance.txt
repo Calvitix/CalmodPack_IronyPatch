@@ -1,7 +1,4 @@
 ap_eternal_vigilance = {
-    on_enabled = {
-        custom_tooltip = "describe_custom_eternal_vigi_mod"
-    }
     possible = {
         custom_tooltip = {
             fail_text = "requires_technology_starbase_4"
@@ -21,8 +18,7 @@ ap_eternal_vigilance = {
         shipclass_starbase_damage_mult = 0.25
         shipclass_starbase_hull_mult = 0.25
         shipclass_military_station_damage_mult = 0.25
-        starbase_defense_platform_capacity_add = 10
-        country_starbase_capacity_add = 8 #15
+        starbase_defense_platform_capacity_add = 5
     }
     potential = {
         NOT = {
@@ -30,7 +26,7 @@ ap_eternal_vigilance = {
         }
     }
     ai_weight = {
-        factor = 5
+        factor = 10
         modifier = {
             factor = 2
             has_civic = civic_inwards_perfection

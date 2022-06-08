@@ -14,6 +14,8 @@ maginot_shield_generator_operator_gestalt = {
         is_being_purged = no
         is_being_assimilated = no
         is_sapient = yes
+    }
+    possible = {
         can_think = yes
     }
     possible_precalc = can_fill_drone_job

@@ -1,5 +1,5 @@
 planet_bore = {
-    icon = "job_bore_manager"
+    icon = "job_void_bore_manager"
     parent = planet_jobs_productive
     generate_add_modifiers = {
         produces

@@ -31,14 +31,43 @@ ap_mind_over_matter = {
         }
         custom_tooltip = {
             fail_text = "requires_not_ap_engineered_evolution"
-            NOT = {
-                has_ascension_perk = ap_engineered_evolution
+            OR = {
+                NOT = {
+                    has_ascension_perk = ap_engineered_evolution
+                }
+                has_ascension_perk = ap_esap_bio_cyber_psi_1
+                has_ascension_perk = ap_esap_bio_cyber_psi_2_plain
+                AND = {
+                    num_ascension_perks > 12
+                    AND = {
+                        has_tradition = tr_plentiful_biogenesis_finish
+                        has_tradition = tr_plentiful_mutagenesis_finish
+                    }
+                    AND = {
+                        has_tradition = tr_plentiful_mysticism_finish
+                        has_tradition = tr_plentiful_faith_finish
+                    }
+                    has_ascension_perk = ap_engineered_evolution
+                }
             }
         }
         custom_tooltip = {
             fail_text = "requires_not_ap_the_flesh_is_weak"
-            NOT = {
-                has_ascension_perk = ap_the_flesh_is_weak
+            OR = {
+                NOT = {
+                    has_ascension_perk = ap_the_flesh_is_weak
+                }
+                has_ascension_perk = ap_esap_bio_cyber_psi_1
+                has_ascension_perk = ap_esap_bio_cyber_psi_2_plain
+                AND = {
+                    num_ascension_perks > 12
+                    has_tradition = tr_plentiful_cybernetics_finish
+                    AND = {
+                        has_tradition = tr_plentiful_mysticism_finish
+                        has_tradition = tr_plentiful_faith_finish
+                    }
+                    has_ascension_perk = ap_the_flesh_is_weak
+                }
             }
         }
     }
@@ -50,16 +79,22 @@ ap_mind_over_matter = {
             has_origin = origin_pd_shroud
             has_authority = "auth_machine_intelligence"
         }
-        is_mechanical_empire = no
-        is_cyborg_empire = no
+        Or = {
+            And = {
+                is_mechanical_empire = no
         NOT = {
             has_origin = origin_techno_world
         }
+                is_cyborg_empire = no
+            }
+            has_ascension_perk = ap_esap_bio_cyber_psi_1
+            has_ascension_perk = ap_esap_bio_cyber_psi_2_plain
+        }
     }
     ai_weight = {
-        factor = 100
+        factor = 1000
         modifier = {
-            factor = 0.1
+            factor = 0.01
             NOR = {
                 has_ethic = ethic_spiritualist
                 has_ethic = ethic_fanatic_spiritualist

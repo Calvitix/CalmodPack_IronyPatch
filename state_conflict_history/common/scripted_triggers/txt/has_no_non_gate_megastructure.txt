@@ -523,11 +523,8 @@ has_no_non_gate_megastructure = {
                 }
             }
         }
-    }
-    NOR = {
+        NOT = {
             has_star_flag = ring_world_built
-        has_planet_class = pc_SMCO_void_star
-        has_planet_class = pc_SMCO_sub_brown_dwarf_star
-        has_planet_class = pc_SMCO_bok_globule
+        }
     }
 }

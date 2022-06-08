@@ -1,7 +1,0 @@
-pop_recently_conquered = {
-    pop_happiness = -0.2
-    planet_jobs_produces_mult = -0.35
-    species_empire_size_mult = 0.35
-    pop_government_ethic_attraction = -0.35
-    pop_cat_slave_political_power = 0.35
-}

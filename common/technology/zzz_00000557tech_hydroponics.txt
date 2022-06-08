@@ -1,5 +1,5 @@
 tech_hydroponics = {
-    cost = @tier2cost3
+    cost = @tier1cost1
     area = society
     tier = 1
     category = {

@@ -29,7 +29,11 @@ ap_defender_of_the_galaxy = {
         }
     }
     ai_weight = {
-        factor = 20
+        factor = 5
+        modifier = {
+            factor = 5
+            has_global_flag = galactic_crisis_happened
+        }
         modifier = {
             factor = 0
             NOR = {
@@ -47,6 +51,11 @@ ap_defender_of_the_galaxy = {
                         is_country_type = extradimensional_3
                         is_country_type = ai_empire
                         is_country_type = gray_goo
+                        relative_power = {
+                            who = prev
+                            value > equivalent
+                        }
+                        has_ascension_perk = ap_become_the_crisis
                         is_country_type = compound_empire
                         is_country_type = dormant_aeternum
                         is_country_type = katzenartig_imperium
@@ -78,6 +87,34 @@ ap_defender_of_the_galaxy = {
                         is_country_type = dormant_aeternum
                         is_country_type = katzenartig_imperium
                         is_country_type = blokkat_stripminers
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 100
+            has_global_flag = galactic_crisis_happened
+            fleet_power < 200000
+        }
+        modifier = {
+            factor = 100
+            any_country = {
+                has_ascension_perk = ap_become_the_crisis
+                or = {
+                    relative_power = {
+                        who = prev
+                        category = technology
+                        value > equivalent
+                    }
+                    relative_power = {
+                        who = prev
+                        category = economy
+                        value > equivalent
+                    }
+                    relative_power = {
+                        who = prev
+                        category = fleet
+                        value > equivalent
                     }
                 }
             }

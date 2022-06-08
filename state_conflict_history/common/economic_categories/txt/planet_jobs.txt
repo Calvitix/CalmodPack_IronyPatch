@@ -43,24 +43,65 @@ planet_jobs = {
             }
         }
     }
+    triggered_upkeep_modifier = {
+        key = habitat_jobs
+        modifier_types = {
+            add
+            mult
+        }
+        trigger = {
+            exists = planet
+            planet = {
+                is_planet_class = pc_habitat
+            }
+        }
+    }
+    triggered_produces_modifier = {
+        key = artificial_planet_jobs
+        modifier_types = {
+            add
+            mult
+        }
+        trigger = {
+            exists = planet
+            planet = {
+                is_artificial = yes
+            }
+        }
+    }
+    triggered_upkeep_modifier = {
+        key = artificial_planet_jobs
+        modifier_types = {
+            add
+            mult
+        }
+        trigger = {
+            exists = planet
+            planet = {
+                is_artificial = yes
+            }
+        }
+    }
     triggered_produces_modifier = {
         key = non_artificial_planet_jobs
         modifier_types = {
+            add
             mult
         }
         trigger = {
             exists = planet
             planet = {
                 is_artificial = no
-                NOT = {
-                    is_planet_class = pc_relic
-                }
+            }
+            NOT = {
+                is_planet_class = pc_relic
             }
         }
     }
     triggered_produces_modifier = {
         key = nsc_non_artificial_planet_slave
         modifier_types = {
+            add
             mult
         }
         trigger = {
@@ -68,9 +109,9 @@ planet_jobs = {
             exists = planet
             planet = {
                 is_artificial = no
-                NOT = {
-                    is_planet_class = pc_relic
-                }
+            }
+            NOT = {
+                is_planet_class = pc_relic
             }
         }
     }
@@ -138,111 +179,6 @@ planet_jobs = {
             }
         }
     }
-    triggered_upkeep_modifier = {
-        key = habitat_jobs
-        modifier_types = {
-            add
-            mult
-        }
-        trigger = {
-            exists = planet
-            planet = {
-                is_planet_class = pc_habitat
-            }
-        }
-    }
-    triggered_produces_modifier = {
-        key = artificial_planet_jobs
-        modifier_types = {
-            add
-            mult
-        }
-        trigger = {
-            exists = planet
-            planet = {
-                is_artificial = yes
-            }
-        }
-    }
-    triggered_upkeep_modifier = {
-        key = artificial_planet_jobs
-        modifier_types = {
-            add
-            mult
-        }
-        trigger = {
-            exists = planet
-            planet = {
-                is_artificial = yes
-            }
-        }
-    }
-    triggered_produces_modifier = {
-        key = non_artificial_planet_jobs
-        modifier_types = {
-            add
-            mult
-        }
-        trigger = {
-            exists = planet
-            planet = {
-                is_artificial = no
-            }
-        }
-    }
-    triggered_upkeep_modifier = {
-        key = non_artificial_planet_jobs
-        modifier_types = {
-            add
-            mult
-        }
-        trigger = {
-            exists = planet
-            planet = {
-                is_artificial = no
-            }
-        }
-    }
-    triggered_produces_modifier = {
-        key = planet_jobs_latent_psionic
-        modifier_types = {
-            mult
-            add
-        }
-        trigger = {
-            has_trait = trait_latent_psionic
-        }
-    }
-    triggered_upkeep_modifier = {
-        key = planet_jobs_latent_psionic
-        modifier_types = {
-            mult
-            add
-        }
-        trigger = {
-            has_trait = trait_latent_psionic
-        }
-    }
-    triggered_produces_modifier = {
-        key = planet_jobs_psionic
-        modifier_types = {
-            mult
-            add
-        }
-        trigger = {
-            has_trait = trait_psionic
-        }
-    }
-    triggered_upkeep_modifier = {
-        key = planet_jobs_psionic
-        modifier_types = {
-            mult
-            add
-        }
-        trigger = {
-            has_trait = trait_psionic
-        }
-    }
     triggered_produces_modifier = {
         key = planet_jobs_worker
         modifier_types = {
@@ -250,12 +186,85 @@ planet_jobs = {
             add
         }
         trigger = {
-            is_pop_category = worker
             OR = {
-                is_pop_category = slave
-                has_job_category = worker
+                is_pop_category = worker
+                AND = {
+                    is_pop_category = slave
+                    has_job_category = worker
+                }
+                is_pop_category = simple_drone
             }
-            is_pop_category = simple_drone
+        }
+    }
+    triggered_upkeep_modifier = {
+        key = non_artificial_planet_jobs
+        modifier_types = {
+            add
+            mult
+        }
+        trigger = {
+            exists = planet
+            planet = {
+                is_artificial = no
+            }
+            NOT = {
+                is_planet_class = pc_relic
+            }
+        }
+    }
+    triggered_produces_modifier = {
+        key = planet_jobs_latent_psionic
+        modifier_types = {
+            mult
+            add
+        }
+        trigger = {
+            has_trait = trait_latent_psionic
+        }
+    }
+    triggered_upkeep_modifier = {
+        key = planet_jobs_latent_psionic
+        modifier_types = {
+            mult
+            add
+        }
+        trigger = {
+            has_trait = trait_latent_psionic
+        }
+    }
+    triggered_produces_modifier = {
+        key = planet_jobs_psionic
+        modifier_types = {
+            mult
+            add
+        }
+        trigger = {
+            has_trait = trait_psionic
+        }
+    }
+    triggered_upkeep_modifier = {
+        key = planet_jobs_psionic
+        modifier_types = {
+            mult
+            add
+        }
+        trigger = {
+            has_trait = trait_psionic
+        }
+    }
+    triggered_produces_modifier = {
+        key = planet_jobs_worker_only
+        modifier_types = {
+            mult
+        }
+        trigger = {
+            OR = {
+                is_pop_category = worker
+                AND = {
+                    is_pop_category = slave
+                    has_job_category = worker
+                }
+            }
         }
     }
     triggered_upkeep_modifier = {
@@ -283,6 +292,21 @@ planet_jobs = {
             OR = {
                 is_pop_category = specialist
                 is_pop_category = complex_drone
+                AND = {
+                    is_pop_category = slave
+                    has_job_category = specialist
+                }
+            }
+        }
+    }
+    triggered_produces_modifier = {
+        key = planet_jobs_specialist_only
+        modifier_types = {
+            mult
+        }
+        trigger = {
+            OR = {
+                is_pop_category = specialist
                 AND = {
                     is_pop_category = slave
                     has_job_category = specialist
@@ -377,6 +401,18 @@ planet_jobs = {
             is_robot_pop = no
         }
     }
+    triggered_produces_modifier = {
+        key = planet_jobs_complex_and_simple_drone
+        modifier_types = {
+            mult
+        }
+        trigger = {
+            OR = {
+                is_pop_category = complex_drone
+                is_pop_category = simple_drone
+            }
+        }
+    }
     triggered_upkeep_modifier = {
         key = planet_jobs_organic
         modifier_types = {
@@ -405,6 +441,26 @@ planet_jobs = {
         }
         trigger = {
             is_robot_pop = yes
+        }
+    }
+    triggered_produces_modifier = {
+        key = planet_jobs_organic
+        modifier_types = {
+            mult
+            add
+        }
+        trigger = {
+            is_robot_pop = no
+        }
+    }
+    triggered_upkeep_modifier = {
+        key = planet_jobs_organic
+        modifier_types = {
+            mult
+            add
+        }
+        trigger = {
+            is_robot_pop = no
         }
     }
     triggered_produces_modifier = {

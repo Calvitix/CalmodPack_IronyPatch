@@ -1,0 +1,28 @@
+subject_verdisciple_effect = {
+    term = subject_ver_effects
+    activate_effect = {
+        target = {
+            country_event = {
+                id = veru.9000
+            }
+        }
+    }
+    overlord_resources = {
+        category = subjects
+        produces = {
+            unity = 0.15
+            multiplier = ver_monthly_unity
+        }
+    }
+    subject_resources = {
+        category = subjects
+        upkeep = {
+            unity = 0.15
+            multiplier = ver_monthly_unity
+        }
+    }
+    target_modifier = {
+        pop_ethic_spiritualist_attraction_mult = 0.5
+    }
+    extra_term_text_subject = ver_extra_subject
+}

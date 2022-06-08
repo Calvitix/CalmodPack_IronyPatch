@@ -1,0 +1,23 @@
+col_ecu_trade = {
+    icon = GFX_colony_type_urban
+    potential = {
+        OR = {
+            is_planet_class = pc_city
+            uses_district_set = pdecocity
+            uses_district_set = pdcorpoarc
+        }
+    }
+    planet_modifier = {
+        trade_value_mult = 0.25
+    }
+    weight_modifier = {
+        modifier = {
+            add = 2
+            has_designation = col_ecu_trade
+        }
+        modifier = {
+            add = 2
+            has_designation = col_ecu_research
+        }
+    }
+}

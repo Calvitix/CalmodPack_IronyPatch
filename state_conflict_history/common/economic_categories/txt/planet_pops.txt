@@ -1,9 +1,9 @@
 planet_pops = {
     parent = planets
-    generate_add_modifiers = {
+    generate_mult_modifiers = {
         upkeep
     }
-    generate_mult_modifiers = {
+    generate_add_modifiers = {
         upkeep
     }
     triggered_upkeep_modifier = {
@@ -55,32 +55,6 @@ planet_pops = {
         }
         trigger = {
             is_lithoid = yes
-        }
-    }
-    triggered_upkeep_modifier = {
-        key = hfe_planet_pops_ocean
-        modifier_types = {
-            mult
-        }
-        trigger = {
-            exists = planet
-            planet = {
-                is_planet_class = pc_ocean
-            }
-        }
-    }
-    triggered_upkeep_modifier = {
-        key = hfe_planet_pops_non_ocean
-        modifier_types = {
-            mult
-        }
-        trigger = {
-            exists = planet
-            planet = {
-                not = {
-                    is_planet_class = pc_ocean
-                }
-            }
         }
     }
 }

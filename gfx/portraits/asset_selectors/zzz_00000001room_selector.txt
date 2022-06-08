@@ -520,5 +520,11 @@ room_selector = {
                 }
             }
         }
+        "ego_nice_room" = {
+            always = no
+        }
+        "ego_angry_room" = {
+            always = no
+        }
     }
 }
