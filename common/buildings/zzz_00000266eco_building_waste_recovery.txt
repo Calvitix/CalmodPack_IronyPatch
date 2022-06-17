@@ -26,6 +26,10 @@ eco_building_waste_recovery = {
         }
     }
     destroy_trigger = {
+        exists = owner
+        owner = {
+            is_ai = yes
+        }
         free_building_slots < 2
         or = {
             has_modifier = eco_pristine

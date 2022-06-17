@@ -8,7 +8,5 @@ has_any_generator_district_or_building = {
         has_building = eb_energy
         has_building = eb_energy2
         has_building = eb_energy3
-        has_district = district_giga_frameworld_generator
-        has_district = district_giga_frameworld_penrose
     }
 }

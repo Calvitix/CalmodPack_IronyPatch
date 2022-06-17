@@ -6,6 +6,10 @@ eco_building_industrial_symbiosis = {
         has_upgraded_capital = yes
     }
     destroy_trigger = {
+        exists = owner
+        owner = {
+            is_ai = yes
+        }
         free_building_slots < 2
         or = {
             has_modifier = eco_pristine

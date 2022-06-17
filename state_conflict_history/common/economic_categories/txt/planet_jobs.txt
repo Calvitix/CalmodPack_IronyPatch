@@ -92,11 +92,11 @@ planet_jobs = {
             exists = planet
             planet = {
                 is_artificial = no
-            }
             NOT = {
                 is_planet_class = pc_relic
             }
         }
+    }
     }
     triggered_produces_modifier = {
         key = nsc_non_artificial_planet_slave
@@ -109,11 +109,11 @@ planet_jobs = {
             exists = planet
             planet = {
                 is_artificial = no
-            }
             NOT = {
                 is_planet_class = pc_relic
             }
         }
+    }
     }
     triggered_produces_modifier = {
         key = nsc_non_artificial_planet_worker
@@ -399,6 +399,16 @@ planet_jobs = {
         }
         trigger = {
             is_robot_pop = no
+        }
+    }
+    triggered_produces_modifier = {
+        key = planet_jobs_complex_drone
+        modifier_types = {
+            mult
+            add
+        }
+        trigger = {
+            is_pop_category = complex_drone
         }
     }
     triggered_produces_modifier = {

@@ -19,8 +19,8 @@ district_arcology_leisure = {
             uses_district_set = pdmilarc
             uses_district_set = pdcorpoarc
         }
+        exists = owner
         owner = {
-            exists = owner
             is_regular_empire = yes
             NOT = {
                 has_valid_civic = civic_urban_idyll

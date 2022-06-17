@@ -1,0 +1,30 @@
+subject_holdings_limit_2 = {
+    term = subject_holdings_limit
+    loyalty_change = -15
+    target_modifier = {
+        monthly_loyalty = -1
+        planet_max_subject_holding_buildings_add = 2
+    }
+    possible = {
+        custom_tooltip = {
+            fail_text = not_allowed_for_tributary
+            NOT = {
+                agreement_preset = preset_tributary
+            }
+        }
+        custom_tooltip = {
+            fail_text = not_allowed_for_auto_state
+            NOT = {
+                agreement_preset = preset_auto_state
+            }
+        }
+    }
+    potential = {
+        has_overlord_dlc = yes
+        NOT = {
+            owner = {
+                has_tradition = tr_plentiful_dedication_4
+            }
+        }
+    }
+}

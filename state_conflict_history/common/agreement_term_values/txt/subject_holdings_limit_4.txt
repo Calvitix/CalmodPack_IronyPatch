@@ -1,0 +1,49 @@
+subject_holdings_limit_4 = {
+    term = subject_holdings_limit
+    loyalty_change = -50
+    target_modifier = {
+        monthly_loyalty = -4
+        planet_max_subject_holding_buildings_add = 4
+    }
+    possible = {
+        custom_tooltip = {
+            fail_text = not_allowed_for_tributary
+            NOT = {
+                agreement_preset = preset_tributary
+            }
+        }
+        custom_tooltip = {
+            fail_text = not_allowed_for_galcom_resolution
+            OR = {
+                NOT = {
+                    owner = {
+                        is_galactic_community_member = yes
+                    }
+                }
+                NOT = {
+                    is_active_resolution = resolution_bureaucraticsurveillance_borderless_authority
+                }
+            }
+        }
+        custom_tooltip = {
+            fail_text = not_allowed_for_verdevolved
+            NOT = {
+                agreement_preset = preset_verdevolved
+            }
+        }
+        custom_tooltip = {
+            fail_text = not_allowed_for_auto_state
+            NOT = {
+                agreement_preset = preset_auto_state
+            }
+        }
+    }
+    potential = {
+        has_overlord_dlc = yes
+        NOT = {
+            owner = {
+                has_tradition = tr_plentiful_dedication_4
+            }
+        }
+    }
+}

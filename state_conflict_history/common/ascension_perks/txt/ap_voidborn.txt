@@ -12,7 +12,12 @@ ap_voidborn = {
         }
     }
     on_enabled = {
-        custom_tooltip = "ap_voidborn_habitat_effect"
+        if = {
+            limit = {
+                is_gestalt = no
+            }
+            custom_tooltip = "ap_voidborn_habitat_effect"
+        }
         if = {
             limit = {
                 NOT = {
@@ -34,6 +39,14 @@ ap_voidborn = {
     }
     modifier = {
         pc_habitat_habitability = 0.2
+        pc_pd_barren_hab_habitability = 0.2
+        pc_pd_barren_cold_hab_habitability = 0.2
+        pc_pd_frozen_hab_habitability = 0.2
+        pc_pd_molten_hab_habitability = 0.2
+        pc_pd_hothouse_hab_habitability = 0.2
+        pc_pd_toxic_hab_habitability = 0.2
+        pc_pd_gas_giant_hab_habitability = 0.2
+        pc_pd_asteroid_hab_habitability = 0.2
     }
     ai_weight = {
         base = 10
