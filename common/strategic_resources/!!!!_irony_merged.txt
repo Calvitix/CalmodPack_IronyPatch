@@ -602,18 +602,21 @@ food = {
 }
 physics_research = {
     category = other
+    allow_deficit = no
     ai_weight = {
         weight = 1
     }
 }
 society_research = {
     category = other
+    allow_deficit = no
     ai_weight = {
         weight = 1
     }
 }
 engineering_research = {
     category = other
+    allow_deficit = no
     ai_weight = {
         weight = 1
     }

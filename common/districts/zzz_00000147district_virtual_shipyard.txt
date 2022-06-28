@@ -75,7 +75,7 @@ district_virtual_shipyard = {
         potential = {
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
                 is_catalytic_empire = no
             }
         }
@@ -87,7 +87,7 @@ district_virtual_shipyard = {
         potential = {
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
                 is_catalytic_empire = yes
             }
         }
@@ -129,7 +129,7 @@ district_virtual_shipyard = {
         trigger = {
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
                 is_catalytic_empire = no
             }
         }
@@ -139,7 +139,7 @@ district_virtual_shipyard = {
         trigger = {
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
                 is_catalytic_empire = yes
             }
         }

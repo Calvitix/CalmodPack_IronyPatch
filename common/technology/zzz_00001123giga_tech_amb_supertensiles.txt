@@ -1,0 +1,77 @@
+giga_tech_amb_supertensiles = {
+    cost = @tier3cost1
+    area = physics
+    tier = 1
+    category = {
+        field_manipulation
+    }
+    prerequisites = {
+    }
+    weight = @tier3weight1
+    potential = {
+        has_global_flag = @giga_amb_flag
+    }
+    modifier = {
+        country_base_giga_sr_amb_megaconstruction_produces_add = 10
+    }
+    weight_modifier = {
+        mult = 5
+        modifier = {
+            factor = value:tech_weight_likelihood
+            research_leader = {
+                area = physics
+                has_trait = leader_trait_expertise_field_manipulation
+            }
+        }
+        modifier = {
+            factor = 0
+            nor = {
+                has_technology = tech_starbase_3
+                count_owned_megastructure = {
+                    count > 0
+                    limit = {
+                        giga_is_wrecked_ship = no
+                    }
+                }
+                has_country_flag = giga_sr_amb_megaconstruction_found
+            }
+        }
+        modifier = {
+            factor = 0
+            not = {
+                has_global_flag = @giga_amb_flag
+            }
+        }
+    }
+    ai_weight = {
+        factor = @giga_aiweight_multiplier_strong
+        modifier = {
+            factor = value:tech_weight_likelihood
+            research_leader = {
+                area = physics
+                has_trait = leader_trait_expertise_field_manipulation
+            }
+        }
+        modifier = {
+            factor = 100
+            or = {
+                check_variable = {
+                    which = giga_amb_building_technical
+                    value > 0
+                }
+                check_variable = {
+                    which = giga_amb_building_kilos
+                    value > 0
+                }
+                check_variable = {
+                    which = giga_amb_building_megas
+                    value > 0
+                }
+                check_variable = {
+                    which = giga_amb_building_gigas
+                    value > 0
+                }
+            }
+        }
+    }
+}

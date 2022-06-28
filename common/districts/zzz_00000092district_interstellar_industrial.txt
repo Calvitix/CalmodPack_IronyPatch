@@ -36,7 +36,7 @@ district_interstellar_industrial = {
         potential = {
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
                 is_crafter_empire = no
             }
         }
@@ -48,7 +48,7 @@ district_interstellar_industrial = {
         potential = {
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
                 is_crafter_empire = yes
             }
         }
@@ -60,7 +60,7 @@ district_interstellar_industrial = {
         potential = {
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
                 is_catalytic_empire = no
             }
         }
@@ -96,7 +96,7 @@ district_interstellar_industrial = {
         potential = {
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
                 is_catalytic_empire = yes
             }
         }
@@ -145,7 +145,7 @@ district_interstellar_industrial = {
         trigger = {
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
             }
         }
         text = "job_artisan_effect_desc"
@@ -164,7 +164,7 @@ district_interstellar_industrial = {
         trigger = {
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
                 is_catalytic_empire = no
             }
         }
@@ -194,7 +194,7 @@ district_interstellar_industrial = {
         trigger = {
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
                 is_catalytic_empire = yes
             }
         }

@@ -1,0 +1,106 @@
+building_giga_fe_megaworkshop = {
+    base_buildtime = @b2_time
+    can_build = yes
+    can_demolish = yes
+    potential = {
+        custom_tooltip = {
+            exists = owner
+            OR = {
+                owner = {
+                    is_fallen_empire = yes
+                }
+                owner = {
+                    check_variable = {
+                        which = giga_fe_megaworkshop_build_count
+                        value >= 1
+                    }
+                }
+            }
+            fail_text = "ancrel.10004.failtext"
+        }
+    }
+    resources = {
+        category = planet_buildings
+        produces = {
+            alloys = 10
+        }
+        produces = {
+            trigger = {
+                or = {
+                    not = {
+                        exists = owner
+                    }
+                    owner = {
+                        is_fallen_empire_spiritualist = no
+                    }
+                }
+            }
+            alloys = 10
+            giga_sr_amb_megaconstruction = 10
+        }
+        cost = {
+            minerals = @b3_minerals
+        }
+        upkeep = {
+            minerals = 40
+            energy = 20
+        }
+        upkeep = {
+            trigger = {
+                or = {
+                    not = {
+                        exists = owner
+                    }
+                    owner = {
+                        is_fallen_empire_spiritualist = no
+                    }
+                }
+            }
+            minerals = 20
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_fallen_empire_spiritualist = yes
+            }
+        }
+        job_giga_amb_fe_celestial_architect_add = 1
+        job_giga_amb_fe_acolyte_foundry_add = 2
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_fallen_empire_spiritualist = yes
+            }
+        }
+        text = job_giga_amb_fe_celestial_architect_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_fallen_empire_spiritualist = yes
+            }
+        }
+        text = job_giga_amb_fe_acolyte_foundry_effect_desc
+    }
+    on_queued = {
+        owner = {
+            subtract_variable = {
+                which = giga_fe_megaworkshop_build_count
+                value = 1
+            }
+        }
+    }
+    on_unqueued = {
+        owner = {
+            change_variable = {
+                which = giga_fe_megaworkshop_build_count
+                value = 1
+            }
+        }
+    }
+}

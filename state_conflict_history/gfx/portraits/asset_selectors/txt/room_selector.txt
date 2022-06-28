@@ -114,6 +114,12 @@ room_selector = {
         "default_room" = {
             always = no
         }
+        "blokkat3d_room" = {
+            exists = owner
+            owner = {
+                is_country_type = blokkat_stripminers
+            }
+        }
         "crisis_room" = {
             exists = owner
             owner = {

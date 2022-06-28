@@ -3848,11 +3848,11 @@ ion_cannon = {
     }
     num_target_locators = 0
     ship_class_icon_frame = 26
-    base_buildtime = 1080
+    base_buildtime = @battleship_build_time
     is_space_station = yes
     enable_default_design = yes
     is_designable = yes
-    components_add_to_cost = no
+    components_add_to_cost = yes
     uses_name_prefix = no
     takes_name_from_ship_design = yes
     potential_construction = {
@@ -3873,7 +3873,7 @@ ion_cannon = {
                 }
             }
             alloys = 500
-            energy = 600
+            energy = 300
             minerals = 200
         }
         cost = {
@@ -3882,12 +3882,12 @@ ion_cannon = {
                     is_ai = yes
                 }
             }
-            alloys = 2000
+            alloys = 1000
         }
         cost = {
         }
         upkeep = {
-            energy = 8
+            energy = 4
         }
     }
     prerequisites = {
@@ -6257,8 +6257,8 @@ marauder_station = {
         ship_armor_add = 1400
         ship_shield_add = 700
         ships_upkeep_mult = -1
-        ship_hull_regen_add_static = 1
-        ship_armor_regen_add_static = 1
+        ship_hull_regen_add_static = 0.1
+        ship_armor_regen_add_static = 0.1
     }
     ship_modifier = {
         ship_weapon_range_mult = 0.2
@@ -9792,8 +9792,13 @@ giga_blokkat_evictor = {
     is_space_station = no
     icon = ship_size_military_2
     combat_disengage_chance = 0
+    potential_construction = {
+        is_scope_type = starbase
+        has_starbase_size = giga_blokkat_mothership_player
+    }
     possible_construction = {
-        always = no
+        is_scope_type = starbase
+        has_starbase_size = giga_blokkat_mothership_player
     }
     is_designable = no
     class = shipclass_military
@@ -9988,6 +9993,46 @@ giga_blokkat_individual = {
     required_component_set = "sensor_components"
     required_component_set = "combat_computers"
 }
+giga_blokkat_mothership_player = {
+    entity = blokkat_ringworld_triple_entity
+    graphical_culture = no
+    formation_priority = 20
+    max_speed = 150
+    acceleration = 10
+    rotation_speed = 10
+    collision_radius = 10
+    max_hitpoints = 400000000
+    modifier = {
+        ship_armor_add = 200000000
+        ship_shield_add = 200000000
+        ship_evasion_mult = 0
+        starbase_shipyard_capacity_add = 8
+    }
+    size_multiplier = 32
+    fleet_slot_size = 32
+    section_slots = {
+        "mid" = {
+            locator = "part1"
+        }
+    }
+    num_target_locators = 4
+    is_space_station = no
+    icon = ship_size_military_32
+    is_space_object = yes
+    combat_disengage_chance = 0
+    possible_construction = {
+        always = no
+    }
+    is_designable = no
+    class = shipclass_starbase
+    construction_type = starbase_shipyard
+    required_component_set = "power_core"
+    required_component_set = "ftl_components"
+    required_component_set = "thruster_components"
+    required_component_set = "sensor_components"
+    required_component_set = "combat_computers"
+    required_component_set = "ship_aura_components"
+}
 giga_corrona_planetcraft = {
     entity = arthropoid_01_corvette_entity
     graphical_culture = no
@@ -10001,8 +10046,8 @@ giga_corrona_planetcraft = {
         ship_evasion_mult = -1
         ship_armor_add = 800000
         ship_windup_mult = -0.9
-        ship_hull_regen_add_perc = 0.5
-        ship_armor_regen_add_perc = 0.5
+        ship_hull_regen_add_perc = 0.1
+        ship_armor_regen_add_perc = 0.1
         ships_upkeep_mult = -1
     }
     max_hitpoints = 800000
@@ -10077,8 +10122,8 @@ giga_kaiser_moon_flusion = {
         ship_evasion_mult = -1
         ship_armor_add = 200000
         ship_windup_mult = -0.8
-        ship_hull_regen_add_perc = 0.3
-        ship_armor_regen_add_perc = 0.3
+        ship_hull_regen_add_perc = 0.05
+        ship_armor_regen_add_perc = 0.05
     }
     max_hitpoints = 400000
     size_multiplier = 64
@@ -10793,8 +10838,8 @@ giga_war_moon_flusion = {
         ship_evasion_mult = -1
         ship_armor_add = 100000
         ships_upkeep_mult = -1
-        ship_hull_regen_add_perc = 0.4
-        ship_armor_regen_add_perc = 0.4
+        ship_hull_regen_add_perc = 0.1
+        ship_armor_regen_add_perc = 0.1
     }
     max_hitpoints = 200000
     size_multiplier = 50
@@ -10846,6 +10891,7 @@ hornet = {
     required_component_set = "sensor_components"
     required_component_set = "combat_computers"
     required_component_set = "ftl_components"
+    required_component_set = "COMPOUND_IMMUNITY_AURA_SET"
     is_designable = no
 }
 stalker = {
@@ -10880,6 +10926,7 @@ stalker = {
     required_component_set = "sensor_components"
     required_component_set = "combat_computers"
     required_component_set = "ftl_components"
+    required_component_set = "COMPOUND_IMMUNITY_AURA_SET"
     is_designable = no
 }
 humiliator = {
@@ -10917,6 +10964,7 @@ humiliator = {
     required_component_set = "sensor_components"
     required_component_set = "combat_computers"
     required_component_set = "ftl_components"
+    required_component_set = "COMPOUND_IMMUNITY_AURA_SET"
     is_designable = no
 }
 apex = {
@@ -10954,6 +11002,7 @@ apex = {
     required_component_set = "sensor_components"
     required_component_set = "combat_computers"
     required_component_set = "ftl_components"
+    required_component_set = "COMPOUND_IMMUNITY_AURA_SET"
     is_designable = no
 }
 sovereign = {
@@ -10992,6 +11041,7 @@ sovereign = {
     required_component_set = "sensor_components"
     required_component_set = "combat_computers"
     required_component_set = "ftl_components"
+    required_component_set = "COMPOUND_IMMUNITY_AURA_SET"
     is_designable = no
 }
 architect = {
@@ -11021,6 +11071,7 @@ architect = {
     required_component_set = "thruster_components"
     required_component_set = "sensor_components"
     required_component_set = "ftl_components"
+    required_component_set = "COMPOUND_IMMUNITY_AURA_SET"
 }
 propagator = {
     is_space_object = yes
@@ -11048,6 +11099,7 @@ propagator = {
     required_component_set = "thruster_components"
     required_component_set = "sensor_components"
     required_component_set = "ftl_components"
+    required_component_set = "COMPOUND_IMMUNITY_AURA_SET"
 }
 reshaper = {
     formation_priority = @colossus_formation_priority
@@ -11077,6 +11129,7 @@ reshaper = {
     required_component_set = "sensor_components"
     required_component_set = "combat_computers"
     required_component_set = "ftl_components"
+    required_component_set = "COMPOUND_IMMUNITY_AURA_SET"
     class = shipclass_military_special
 }
 annihilator = {
@@ -11608,6 +11661,7 @@ starbase_ehof_01 = {
     required_component_set = "sensor_components"
     required_component_set = "combat_computers"
     required_component_set = "COMPOUND_COMMUNICATIONS_JAMMER"
+    required_component_set = "COMPOUND_IMMUNITY_AURA_SET"
     is_designable = no
 }
 starbase_ehof_02 = {
@@ -11641,6 +11695,7 @@ starbase_ehof_02 = {
     required_component_set = "sensor_components"
     required_component_set = "combat_computers"
     required_component_set = "COMPOUND_COMMUNICATIONS_JAMMER"
+    required_component_set = "COMPOUND_IMMUNITY_AURA_SET"
     is_designable = no
 }
 starbase_ehof_03 = {
@@ -11674,6 +11729,7 @@ starbase_ehof_03 = {
     required_component_set = "sensor_components"
     required_component_set = "combat_computers"
     required_component_set = "COMPOUND_COMMUNICATIONS_JAMMER"
+    required_component_set = "COMPOUND_IMMUNITY_AURA_SET"
     is_designable = no
 }
 starbase_ehof_04 = {
@@ -11707,6 +11763,7 @@ starbase_ehof_04 = {
     required_component_set = "sensor_components"
     required_component_set = "combat_computers"
     required_component_set = "COMPOUND_COMMUNICATIONS_JAMMER"
+    required_component_set = "COMPOUND_IMMUNITY_AURA_SET"
     is_designable = no
 }
 starbase_ehof_05 = {
@@ -11740,6 +11797,7 @@ starbase_ehof_05 = {
     required_component_set = "sensor_components"
     required_component_set = "combat_computers"
     required_component_set = "COMPOUND_COMMUNICATIONS_JAMMER"
+    required_component_set = "COMPOUND_IMMUNITY_AURA_SET"
     build_block_radius = @build_block_radius_starbase_2
     formation_priority = @starbase_formation_priority_2
     icon_frame = -1

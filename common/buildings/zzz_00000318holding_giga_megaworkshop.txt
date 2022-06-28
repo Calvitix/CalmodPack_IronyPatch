@@ -1,0 +1,65 @@
+holding_giga_megaworkshop = {
+    base_buildtime = @b2_time
+    owner_type = subject_holding
+    empire_limit = 1
+    potential = {
+        has_overlord_dlc = yes
+        has_global_flag = @giga_amb_flag
+    }
+    allow = {
+        custom_tooltip = {
+            fail_text = ove_requires_giga_tech_amb_supertensiles
+            owner.overlord = {
+                has_technology = giga_tech_amb_supertensiles
+            }
+        }
+    }
+    planet_modifier = {
+        monthly_loyalty = -1.5
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = planet.owner
+            planet.owner = {
+                is_gestalt = no
+            }
+        }
+        job_giga_overlord_megaengineer_add = 1
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = planet.owner
+            planet.owner = {
+                is_gestalt = yes
+            }
+        }
+        job_giga_overlord_megaengineer_drone_add = 1
+    }
+    resources = {
+        category = planet_holdings
+        cost = {
+            minerals = @b1_minerals
+        }
+        upkeep = {
+            energy = @b1_upkeep
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = planet.owner
+            planet.owner = {
+                is_gestalt = no
+            }
+        }
+        text = job_giga_overlord_megaengineer_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = planet.owner
+            planet.owner = {
+                is_gestalt = yes
+            }
+        }
+        text = job_giga_overlord_megaengineer_drone_effect_desc
+    }
+}

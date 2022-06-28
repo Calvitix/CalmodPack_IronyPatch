@@ -1,0 +1,27 @@
+trait_blokkat_omnitae = {
+    cost = 0
+    leader_potential_add = {
+        always = no
+    }
+    icon = "gfx/interface/icons/traits/trait_blokkat_omnitae.dds"
+    leader_trait = all
+    immortal_leaders = yes
+    modifier = {
+        ship_hull_damage_mult = 0.2
+        planet_jobs_unity_produces_mult = 0.3
+        planet_amenities_mult = 0.3
+        pop_growth_speed = 0.15
+    }
+    leader_class = {
+        governor
+        scientist
+        admiral
+        general
+        ruler
+    }
+    initial = no
+    randomized = no
+    ai_weight = {
+        weight = 0
+    }
+}

@@ -81,7 +81,7 @@ eb_silo = {
         country_resource_max_add = 5000
     }
     prerequisites = {
-        "tech_powered_exoskeletons"
+        "tech_droid_workers"
     }
     triggered_desc = {
         trigger = {

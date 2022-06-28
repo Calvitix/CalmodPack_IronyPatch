@@ -120,6 +120,13 @@ clerk = {
             can_take_servant_job = yes
         }
         modifier = {
+            factor = 1.1
+            exists = owner
+            owner = {
+                is_megacorp = yes
+            }
+        }
+        modifier = {
             factor = 0.5
             exists = owner
             owner = {

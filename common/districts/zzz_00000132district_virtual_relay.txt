@@ -17,6 +17,7 @@ district_virtual_relay = {
         uses_district_set = virtual_ring
     }
     potential = {
+        exists = owner
         owner = {
             or = {
                 is_hive_empire = yes

@@ -41,7 +41,7 @@ district_giga_gas_giant_habitat_industrial = {
         potential = {
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
                 is_crafter_empire = no
             }
         }
@@ -53,7 +53,7 @@ district_giga_gas_giant_habitat_industrial = {
         potential = {
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
                 is_crafter_empire = yes
             }
         }
@@ -65,7 +65,7 @@ district_giga_gas_giant_habitat_industrial = {
         potential = {
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
                 is_catalytic_empire = no
             }
         }
@@ -77,7 +77,7 @@ district_giga_gas_giant_habitat_industrial = {
         potential = {
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
                 is_catalytic_empire = yes
             }
         }
@@ -166,7 +166,7 @@ district_giga_gas_giant_habitat_industrial = {
             has_designation = col_giga_gas_giant_habitat_foundry
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
                 is_crafter_empire = no
                 is_catalytic_empire = no
             }
@@ -181,7 +181,7 @@ district_giga_gas_giant_habitat_industrial = {
             has_designation = col_giga_gas_giant_habitat_foundry
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
                 is_crafter_empire = yes
                 is_catalytic_empire = no
             }
@@ -196,7 +196,7 @@ district_giga_gas_giant_habitat_industrial = {
             has_designation = col_giga_gas_giant_habitat_foundry
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
                 is_crafter_empire = no
                 is_catalytic_empire = yes
             }
@@ -211,7 +211,7 @@ district_giga_gas_giant_habitat_industrial = {
             has_designation = col_giga_gas_giant_habitat_foundry
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
                 is_crafter_empire = yes
                 is_catalytic_empire = yes
             }
@@ -255,7 +255,7 @@ district_giga_gas_giant_habitat_industrial = {
         trigger = {
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
                 is_crafter_empire = no
             }
         }
@@ -265,7 +265,7 @@ district_giga_gas_giant_habitat_industrial = {
         trigger = {
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
                 has_civic = civic_crafters
             }
         }
@@ -285,7 +285,7 @@ district_giga_gas_giant_habitat_industrial = {
         trigger = {
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
                 is_catalytic_empire = no
             }
         }
@@ -295,7 +295,7 @@ district_giga_gas_giant_habitat_industrial = {
         trigger = {
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
                 is_catalytic_empire = yes
             }
         }

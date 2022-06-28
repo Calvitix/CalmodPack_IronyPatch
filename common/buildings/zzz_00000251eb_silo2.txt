@@ -81,7 +81,7 @@ eb_silo2 = {
         country_resource_max_add = 5000
     }
     prerequisites = {
-        "tech_robotic_workers"
+        "tech_synthetic_workers"
     }
     triggered_desc = {
         trigger = {

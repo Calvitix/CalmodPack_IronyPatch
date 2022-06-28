@@ -49,18 +49,31 @@ building_giga_megaworkshop = {
         potential = {
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
+                is_fallen_empire_spiritualist = no
             }
         }
         modifier = {
             job_giga_megaengineer_add = 2
         }
     }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_fallen_empire_spiritualist = yes
+            }
+        }
+        modifier = {
+            job_giga_amb_fe_acolyte_foundry_add = 2
+        }
+    }
     triggered_desc = {
         trigger = {
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
+                is_fallen_empire_spiritualist = no
             }
         }
         text = job_giga_megaengineer_effect_desc
@@ -73,5 +86,14 @@ building_giga_megaworkshop = {
             }
         }
         text = job_giga_megaengineer_drone_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_fallen_empire_spiritualist = yes
+            }
+        }
+        text = job_giga_amb_fe_acolyte_foundry_effect_desc
     }
 }

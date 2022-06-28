@@ -44,6 +44,7 @@ building_imperial_hive_capital = {
     }
     triggered_planet_modifier = {
         potential = {
+            exists = owner
             owner = {
                 has_origin = origin_progenitor_hive
             }

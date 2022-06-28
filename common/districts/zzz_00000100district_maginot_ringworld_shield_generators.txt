@@ -47,7 +47,7 @@ district_maginot_ringworld_shield_generators = {
         trigger = {
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
             }
         }
         text = job_maginot_shield_generator_operator_effect_desc

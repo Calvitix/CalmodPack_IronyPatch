@@ -19,7 +19,7 @@ telepath = {
     resources = {
         category = planet_telepaths
         produces = {
-            unity = 3
+            unity = 6
         }
         produces = {
             trigger = {

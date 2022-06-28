@@ -49,7 +49,7 @@ building_corporate_vault = {
         }
     }
     planet_modifier = {
-        planet_managers_produces_mult = 0.15
+        planet_administrators_produces_mult = 0.15
     }
     prerequisites = {
         "tech_autocurating_vault"

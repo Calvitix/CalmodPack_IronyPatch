@@ -1,0 +1,42 @@
+terraform_link = {
+    from = "pc_badlands"
+    to = "pc_geothermal"
+    resources = {
+        category = terraforming
+        cost = {
+            energy = @terraforming_cost_level_3
+        }
+    }
+    duration = @terraforming_duration_level_3
+    potential = {
+        NOR = {
+            has_policy_flag = terraforming_rare_invisible
+            has_policy_flag = terraforming_wet_invisible
+        }
+        OR = {
+            has_ascension_perk = ap_sublunaris_progressus
+            from = {
+                has_modifier = pdterra_geothermal
+            }
+        }
+    }
+    condition = {
+        has_technology = tech_climate_restoration
+    }
+    effect = {
+        from = {
+            remove_modifier = pdterra_geothermal
+            add_deposit = d_geothermal_pools_deposit
+        }
+    }
+    ai_weight = {
+        weight = 0
+        modifier = {
+            weight = 1
+            should_terraform_trigger = {
+                CLASS_FROM = pc_badlands
+                CLASS_TO = pc_geothermal
+            }
+        }
+    }
+}

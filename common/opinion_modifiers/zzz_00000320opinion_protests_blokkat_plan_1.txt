@@ -1,0 +1,8 @@
+opinion_protests_blokkat_plan_1 = {
+    opinion = {
+        base = -50
+    }
+    decay = {
+        base = 1
+    }
+}

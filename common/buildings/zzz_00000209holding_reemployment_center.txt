@@ -55,4 +55,10 @@ holding_reemployment_center = {
     triggered_desc = {
         text = job_overlord_reassigner_effect_desc
     }
+    triggered_desc = {
+        trigger = {
+            has_planet_flag = reemployment_center_timer
+        }
+        text = holding_reemployment_center_effect
+    }
 }

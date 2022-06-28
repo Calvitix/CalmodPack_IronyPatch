@@ -1,0 +1,27 @@
+trait_blokkat_blokkazoi = {
+    cost = 0
+    leader_potential_add = {
+        always = no
+    }
+    icon = "gfx/interface/icons/traits/trait_blokkat_blokkazoi.dds"
+    leader_trait = all
+    immortal_leaders = yes
+    modifier = {
+        ship_weapon_damage = 0.2
+        ship_fire_rate_mult = 0.2
+        force_disparity_fire_rate_mult = 0.3
+        ship_evasion_mult = 0.2
+    }
+    leader_class = {
+        governor
+        scientist
+        admiral
+        general
+        ruler
+    }
+    initial = no
+    randomized = no
+    ai_weight = {
+        weight = 0
+    }
+}

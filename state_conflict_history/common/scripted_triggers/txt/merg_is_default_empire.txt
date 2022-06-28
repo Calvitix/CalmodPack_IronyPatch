@@ -1,0 +1,7 @@
+merg_is_default_empire = {
+    OR = {
+        is_country_type = default
+        is_zofe_country = yes
+        is_country_type = default_ev
+    }
+}

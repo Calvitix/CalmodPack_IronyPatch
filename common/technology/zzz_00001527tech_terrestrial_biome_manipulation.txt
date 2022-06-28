@@ -1,0 +1,72 @@
+tech_terrestrial_biome_manipulation = {
+    cost = @tier3cost2
+    area = society
+    tier = 3
+    category = {
+        new_worlds
+    }
+    prerequisites = {
+        "tech_terrestrial_sculpting"
+    }
+    weight = @tier3weight2
+    prereqfor_desc = {
+        custom = {
+            title = "tech_unlock_terrestrial_biome_manipulation_title"
+            desc = "tech_unlock_terrestrial_biome_manipulation_desc"
+        }
+    }
+    modifier = {
+        terraform_speed_mult = 0.1
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            has_tradition = tr_expansion_adopt
+        }
+        modifier = {
+            factor = value:tech_weight_likelihood
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+    }
+    ai_weight = {
+        factor = @terraforming_tech_ai_factor
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 2
+            is_xenophobe = yes
+        }
+        modifier = {
+            factor = 5
+            OR = {
+                any_owned_planet = {
+                    habitability = {
+                        who = root
+                        value < 0.5
+                    }
+                }
+                any_system_within_border = {
+                    any_system_planet = {
+                        is_planet_class = pc_nuked
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 5
+            has_origin = origin_life_seeded
+        }
+        modifier = {
+            factor = 2
+            is_ai = no
+        }
+    }
+}

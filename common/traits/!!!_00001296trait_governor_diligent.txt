@@ -1,0 +1,20 @@
+trait_governor_diligent = {
+    cost = 1
+    randomized = no
+    icon = "gfx/interface/icons/traits/leader_traits/trait_governor_diligent.dds"
+    modifier = {
+        planet_jobs_unity_produces_mult = 0.1
+    }
+    leader_trait = {
+        governor
+    }
+    leader_class = {
+        governor
+    }
+    requires_traits = {
+        xte_trait_humble
+    }
+    ai_weight = {
+        weight = 150
+    }
+}

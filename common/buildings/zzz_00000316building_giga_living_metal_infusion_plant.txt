@@ -30,7 +30,8 @@ building_giga_living_metal_infusion_plant = {
         potential = {
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
+                is_fallen_empire_spiritualist = no
             }
         }
         job_giga_megaengineer_add = 1
@@ -43,6 +44,15 @@ building_giga_living_metal_infusion_plant = {
             }
         }
         job_giga_megaengineer_drone_add = 1
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_fallen_empire_spiritualist = yes
+            }
+        }
+        job_giga_amb_fe_acolyte_foundry_add = 1
     }
     planet_modifier = {
         planet_giga_megaengineers_produces_mult = 0.2
@@ -65,7 +75,8 @@ building_giga_living_metal_infusion_plant = {
         trigger = {
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
+                is_fallen_empire_spiritualist = no
             }
         }
         text = job_giga_megaengineer_effect_desc
@@ -78,6 +89,15 @@ building_giga_living_metal_infusion_plant = {
             }
         }
         text = job_giga_megaengineer_drone_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_fallen_empire_spiritualist = yes
+            }
+        }
+        text = job_giga_amb_fe_acolyte_foundry_effect_desc
     }
     ai_resource_production = {
         giga_sr_amb_megaconstruction = 5

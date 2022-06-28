@@ -1,0 +1,20 @@
+trait_general_cavalier = {
+    cost = 0
+    randomized = no
+    icon = "gfx/interface/icons/traits/leader_traits/trait_general_cavalier.dds"
+    modifier = {
+        army_disengage_chance_mult = -0.2
+    }
+    leader_trait = {
+        general
+    }
+    leader_class = {
+        general
+    }
+    requires_traits = {
+        xte_trait_prideful
+    }
+    ai_weight = {
+        weight = 0
+    }
+}

@@ -1,0 +1,56 @@
+tech_terraforming_frozen = {
+    cost = @tier5cost1
+    area = society
+    tier = 5
+    category = {
+        new_worlds
+    }
+    is_rare = yes
+    prerequisites = {
+        "tech_climate_restoration"
+    }
+    weight = @tier5weight1
+    potential = {
+        has_ascension_perk = ap_breath_of_creation
+    }
+    modifier = {
+        country_exotic_gases_produces_mult = 0.1
+    }
+    prereqfor_desc = {
+        custom = {
+            title = "tech_unlock_terraforming_frozen"
+            desc = "tech_unlock_terraforming_frozen_desc"
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            has_tradition = tr_expansion_adopt
+        }
+        modifier = {
+            factor = value:tech_weight_likelihood
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+    }
+    ai_weight = {
+        factor = @terraforming_tech_ai_factor
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 5
+            any_system_within_border = {
+                any_system_planet = {
+                    is_planet_class = pc_nuked
+                }
+            }
+        }
+    }
+}

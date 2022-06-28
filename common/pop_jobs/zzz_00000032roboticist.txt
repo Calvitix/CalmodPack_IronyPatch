@@ -22,6 +22,12 @@ roboticist = {
     weight = {
         weight = 5000
         modifier = {
+            factor = 10
+            owner = {
+                is_synthetic_empire = yes
+            }
+        }
+        modifier = {
             factor = 0.001
             exists = planet
             exists = planet.controller

@@ -1,0 +1,61 @@
+namespace = enclave
+country_event = {
+    id = enclave.4100
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        exists = event_target:shroudwalker_enclave_country
+    }
+    immediate = {
+        random_list = {
+            5 = {
+                modifier = {
+                    factor = 0.2
+                    has_country_flag = recent_divination_locus
+                }
+                start_situation = {
+                    type = divination_locus
+                }
+                set_timed_country_flag = {
+                    flag = recent_divination_locus
+                    years = 20
+                }
+            }
+            5 = {
+                modifier = {
+                    factor = 0.2
+                    has_country_flag = recent_divination_visitors
+                }
+                start_situation = {
+                    type = divination_visitors
+                }
+                set_timed_country_flag = {
+                    flag = recent_divination_visitors
+                    years = 20
+                }
+            }
+            5 = {
+                modifier = {
+                    factor = 0.2
+                    has_country_flag = recent_divination_worm
+                }
+                modifier = {
+                    factor = 0.2
+                    is_ai = yes
+                }
+                modifier = {
+                    factor = 0.2
+                    has_distar = no
+                    has_ancrel = no
+                }
+                start_situation = {
+                    type = divination_worm
+                }
+                set_timed_country_flag = {
+                    flag = recent_divination_worm
+                    years = 20
+                }
+            }
+        }
+    }
+}

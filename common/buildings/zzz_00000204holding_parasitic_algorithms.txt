@@ -2,7 +2,7 @@ holding_parasitic_algorithms = {
     base_buildtime = @b2_time
     owner_type = subject_holding
     icon = holding_parasitic_algorithms
-    base_cap_amount = 1
+    empire_limit = 1
     potential = {
         has_overlord_dlc = yes
     }
@@ -39,59 +39,15 @@ holding_parasitic_algorithms = {
     planet_modifier = {
         monthly_loyalty = -1
     }
-    triggered_planet_modifier = {
-        potential = {
-            overlord_has_num_science_ships_in_orbit = {
-                NUM = 1
-            }
-        }
-        modifier = {
-            monthly_loyalty = -0.5
+    on_built = {
+        planet = {
+            set_planet_flag = has_science_ministry
         }
     }
-    triggered_planet_modifier = {
-        potential = {
-            overlord_has_num_science_ships_in_orbit = {
-                NUM = 2
-            }
+    on_destroy = {
+        planet = {
+            remove_planet_flag = has_science_ministry
         }
-        modifier = {
-            monthly_loyalty = -1
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            overlord_has_more_than_num_science_ships_in_orbit = {
-                NUM = 2
-            }
-        }
-        modifier = {
-            monthly_loyalty = -1.5
-        }
-    }
-    triggered_country_modifier = {
-        potential = {
-            overlord_has_num_science_ships_in_orbit = {
-                NUM = 1
-            }
-        }
-        all_technology_research_speed = 0.03
-    }
-    triggered_country_modifier = {
-        potential = {
-            overlord_has_num_science_ships_in_orbit = {
-                NUM = 2
-            }
-        }
-        all_technology_research_speed = 0.06
-    }
-    triggered_country_modifier = {
-        potential = {
-            overlord_has_more_than_num_science_ships_in_orbit = {
-                NUM = 2
-            }
-        }
-        all_technology_research_speed = 0.09
     }
     destroy_trigger = {
         exists = planet.owner

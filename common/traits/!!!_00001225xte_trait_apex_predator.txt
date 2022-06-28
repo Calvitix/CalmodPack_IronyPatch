@@ -1,0 +1,22 @@
+xte_trait_apex_predator = {
+    cost = 4
+    initial = yes
+    randomized = yes
+    advanced_trait = yes
+    opposites = {
+        "xte_trait_nervous"
+        "trait_nerve_stapled"
+        "trait_syncretic_proles"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+    }
+    potential_crossbreeding_chance = 1
+    modifier = {
+        pop_ethic_militarist_attraction_mult = 0.1
+        army_damage_mult = 0.5
+        pop_growth_from_immigration = 0.3
+        planet_pops_food_upkeep_mult = 0.25
+        pop_growth_speed = -0.05
+    }
+}

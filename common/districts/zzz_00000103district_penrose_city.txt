@@ -4,7 +4,7 @@ district_penrose_city = {
     show_on_uncolonized = {
         exists = from
         from = {
-            is_regular_empire = yes
+            is_gestalt = no
         }
         is_planet_class = pc_giga_penrose_habitable
         NOT = {
@@ -14,7 +14,7 @@ district_penrose_city = {
     potential = {
         exists = owner
         owner = {
-            is_regular_empire = yes
+            is_gestalt = no
         }
         is_planet_class = pc_giga_penrose_habitable
         NOT = {
@@ -56,7 +56,7 @@ district_penrose_city = {
         potential = {
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
                 is_fallen_empire = no
             }
         }
@@ -116,7 +116,7 @@ district_penrose_city = {
             has_planet_flag = giga_archology
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
                 is_fallen_empire = no
             }
         }
@@ -129,7 +129,7 @@ district_penrose_city = {
             has_planet_flag = giga_archology
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
                 is_fallen_empire = no
             }
         }
@@ -142,7 +142,7 @@ district_penrose_city = {
             has_planet_flag = giga_archology
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
                 is_fallen_empire = no
             }
         }

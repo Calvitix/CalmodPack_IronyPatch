@@ -6,6 +6,9 @@ tech_space_exploration = {
         voidcraft
     }
     tier = 0
+    feature_flags = {
+        tech_automated_exploration
+    }
     prereqfor_desc = {
         ship = {
             title = "TECH_UNLOCK_SCIENCE_SHIP_CONSTRUCTION_TITLE"

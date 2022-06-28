@@ -6,6 +6,9 @@ tech_basic_science_lab_1 = {
         computing
     }
     start_tech = yes
+    feature_flags = {
+        unlocks_auto_research
+    }
     weight_modifier = {
         factor = 1000
     }

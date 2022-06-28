@@ -1,0 +1,26 @@
+building_giga_blokkat_energy_capacitor = {
+    base_buildtime = 720
+    category = resource
+    prerequisites = {
+        "giga_tech_blokkat_gigarelay_core"
+    }
+    country_modifier = {
+        country_resource_max_energy_add = 10000000
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            alloys = 5000
+            energy = 50000
+            rare_crystals = 200
+            volatile_motes = 200
+            exotic_gases = 200
+        }
+        upkeep = {
+            alloys = 50
+            rare_crystals = 5
+            volatile_motes = 5
+            exotic_gases = 5
+        }
+    }
+}

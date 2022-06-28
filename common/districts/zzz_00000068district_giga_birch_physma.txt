@@ -241,7 +241,7 @@ district_giga_birch_physma = {
         potential = {
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
             }
         }
         modifier = {

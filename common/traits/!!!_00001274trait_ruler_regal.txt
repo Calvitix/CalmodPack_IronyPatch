@@ -1,0 +1,21 @@
+trait_ruler_regal = {
+    cost = 0
+    randomized = no
+    icon = "gfx/interface/icons/traits/leader_traits/trait_ruler_regal.dds"
+    modifier = {
+        country_edict_fund_add = 20
+        edicts_upkeep_mult = -0.05
+    }
+    leader_trait = {
+        ruler
+    }
+    leader_class = {
+        ruler
+    }
+    requires_traits = {
+        xte_trait_illustrious
+    }
+    ai_weight = {
+        weight = 150
+    }
+}

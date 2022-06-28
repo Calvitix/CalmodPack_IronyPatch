@@ -7,7 +7,7 @@ eco_tech_waste_processing_3 = {
     }
     prerequisites = {
         "eco_tech_waste_processing_2"
-        "tech_colonization_2"
+        "tech_colonization_3"
     }
     weight = @tier3weight3
     weight_modifier = {

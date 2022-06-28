@@ -44,7 +44,7 @@ district_flusion_mining = {
             owner = {
                 OR = {
                     is_country_type = katzenartig_imperium
-                    is_regular_empire = yes
+                    is_gestalt = no
                 }
             }
         }
@@ -73,7 +73,7 @@ district_flusion_mining = {
             owner = {
                 OR = {
                     is_country_type = katzenartig_imperium
-                    is_regular_empire = yes
+                    is_gestalt = no
                 }
             }
         }

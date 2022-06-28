@@ -6,7 +6,7 @@ district_giga_planet_leisure = {
         uses_district_set = giga_planet
         exists = from
         from = {
-            is_regular_empire = yes
+            is_gestalt = no
         }
         has_planet_flag = giga_elysium
     }
@@ -14,7 +14,7 @@ district_giga_planet_leisure = {
         uses_district_set = giga_planet
         exists = owner
         owner = {
-            is_regular_empire = yes
+            is_gestalt = no
         }
         has_planet_flag = giga_elysium
     }
@@ -42,7 +42,7 @@ district_giga_planet_leisure = {
         potential = {
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
                 has_valid_civic = civic_memorialist
             }
         }
@@ -55,7 +55,7 @@ district_giga_planet_leisure = {
         potential = {
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
                 OR = {
                     has_valid_civic = civic_death_cult
                     has_valid_civic = civic_death_cult_corporate
@@ -72,7 +72,7 @@ district_giga_planet_leisure = {
         potential = {
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
                 is_spiritualist = no
                 is_megacorp = yes
             }
@@ -85,7 +85,7 @@ district_giga_planet_leisure = {
         potential = {
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
                 is_spiritualist = yes
             }
         }
@@ -97,7 +97,7 @@ district_giga_planet_leisure = {
         potential = {
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
                 is_spiritualist = no
                 is_megacorp = no
                 NOR = {
@@ -115,7 +115,7 @@ district_giga_planet_leisure = {
         potential = {
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
                 NOT = {
                     has_valid_civic = civic_warrior_culture
                 }
@@ -129,7 +129,7 @@ district_giga_planet_leisure = {
         potential = {
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
                 has_valid_civic = civic_warrior_culture
             }
         }
@@ -141,7 +141,7 @@ district_giga_planet_leisure = {
         trigger = {
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
                 has_valid_civic = civic_memorialist
             }
         }
@@ -151,7 +151,7 @@ district_giga_planet_leisure = {
         trigger = {
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
                 OR = {
                     has_valid_civic = civic_death_cult
                     has_valid_civic = civic_death_cult_corporate
@@ -164,7 +164,7 @@ district_giga_planet_leisure = {
         trigger = {
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
                 is_spiritualist = no
                 is_megacorp = yes
             }
@@ -175,7 +175,7 @@ district_giga_planet_leisure = {
         trigger = {
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
                 is_spiritualist = yes
             }
         }
@@ -185,7 +185,7 @@ district_giga_planet_leisure = {
         trigger = {
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
                 is_spiritualist = no
                 is_megacorp = no
                 NOR = {

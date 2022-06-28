@@ -1,0 +1,24 @@
+@triumph_duration = 3600
+r_arcane_manipulator_1 = {
+    activation_duration = @triumph_duration
+    portrait = "GFX_relic_arcane_manipulator"
+    sound = relic_activation_generic
+    score = 0
+    resources = {
+        category = relics
+    }
+    possible = {
+        hidden_trigger = {
+            always = no
+        }
+    }
+    triggered_country_modifier = {
+        potential = {
+            always = yes
+        }
+        all_technology_research_speed = 0.05
+    }
+    active_effect = {
+        custom_tooltip = giga_relic_no_active
+    }
+}

@@ -34,7 +34,7 @@ district_giga_planet_alloys = {
         potential = {
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
                 is_catalytic_empire = no
             }
         }
@@ -70,7 +70,7 @@ district_giga_planet_alloys = {
         potential = {
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
                 is_catalytic_empire = yes
             }
         }
@@ -94,7 +94,7 @@ district_giga_planet_alloys = {
         trigger = {
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
                 is_catalytic_empire = no
             }
         }
@@ -124,7 +124,7 @@ district_giga_planet_alloys = {
         trigger = {
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
                 is_catalytic_empire = yes
             }
         }

@@ -33,7 +33,7 @@ district_giga_alderson_admin = {
         potential = {
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
             }
         }
         modifier = {
@@ -66,7 +66,7 @@ district_giga_alderson_admin = {
         trigger = {
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
             }
         }
         text = "job_bureaucrat_effect_desc"

@@ -10,6 +10,7 @@ district_virtual_organic_housing = {
         uses_district_set = virtual_ring
     }
     potential = {
+        exists = owner
         owner = {
             is_machine_empire = yes
             has_valid_civic = civic_machine_servitor

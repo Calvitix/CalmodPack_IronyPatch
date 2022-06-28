@@ -1,0 +1,23 @@
+trait_blokkat_payrise = {
+    cost = 0
+    leader_potential_add = {
+        always = no
+    }
+    icon = "gfx/interface/icons/traits/trait_blokkat_payrise.dds"
+    leader_trait = all
+    self_modifier = {
+        species_leader_exp_gain = -0.3
+        leaders_upkeep_mult = 3
+    }
+    leader_class = {
+        general
+        admiral
+        scientist
+        governor
+    }
+    initial = no
+    randomized = no
+    ai_weight = {
+        weight = 0
+    }
+}

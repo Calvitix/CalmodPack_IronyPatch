@@ -1,0 +1,28 @@
+terraform_link = {
+    from = "pc_antarctic"
+    to = "pc_gaia"
+    resources = {
+        category = terraforming
+        cost = {
+            energy = @terraforming_cost_level_3
+        }
+    }
+    duration = @terraforming_duration_level_3
+    potential = {
+        NOT = {
+            has_policy_flag = terraforming_special_invisible
+        }
+        has_ascension_perk = ap_world_shaper
+    }
+    condition = {
+        has_ascension_perk = ap_world_shaper
+    }
+    effect = {
+        from = {
+            add_deposit = d_pdgaia
+        }
+    }
+    ai_weight = {
+        weight = 100
+    }
+}

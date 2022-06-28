@@ -1,0 +1,7 @@
+merg_is_standard_empire = {
+    OR = {
+        is_country_type_with_subjects = yes
+        is_fallen_empire = yes
+        is_country_type = default
+    }
+}

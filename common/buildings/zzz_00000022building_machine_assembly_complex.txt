@@ -17,9 +17,8 @@ building_machine_assembly_complex = {
             owner = {
                 is_ai = yes
             }
-            num_buildings = {
-                type = building_machine_assembly_complex
-                value = 0
+            NOT = {
+                has_building = building_machine_assembly_complex
             }
         }
         job_starnet_spice_melange_farmer_add = 2

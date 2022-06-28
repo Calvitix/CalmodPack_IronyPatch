@@ -48,7 +48,7 @@ district_virtual_consumer = {
         potential = {
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
                 is_crafter_empire = no
             }
         }
@@ -60,7 +60,7 @@ district_virtual_consumer = {
         potential = {
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
                 is_crafter_empire = yes
             }
         }
@@ -81,7 +81,7 @@ district_virtual_consumer = {
         trigger = {
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
                 is_crafter_empire = no
             }
         }
@@ -91,7 +91,7 @@ district_virtual_consumer = {
         trigger = {
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
                 has_civic = civic_crafters
             }
         }

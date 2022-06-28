@@ -36,7 +36,7 @@ district_giga_alderson_consumer = {
             exists = owner
             owner = {
                 is_crafter_empire = no
-                is_regular_empire = yes
+                is_gestalt = no
             }
         }
         modifier = {

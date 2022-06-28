@@ -1,0 +1,46 @@
+terraform_link = {
+    from = "pc_tropical"
+    to = "pc_acid"
+    resources = {
+        category = terraforming
+        cost = {
+            energy = @terraforming_cost_level_4
+        }
+    }
+    duration = @terraforming_duration_level_4
+    potential = {
+        has_global_flag = planetarydiversityexotics
+        NOT = {
+            has_policy_flag = terraforming_special_invisible
+        }
+        OR = {
+            has_ascension_perk = ap_sublunaris_progressus
+            from = {
+                has_modifier = terraforming_candidate
+            }
+        }
+    }
+    condition = {
+        has_technology = tech_climate_restoration
+    }
+    effect = {
+        from = {
+            remove_modifier = terraforming_candidate
+            add_modifier = {
+                modifier = pdacid
+                days = -1
+            }
+            add_deposit = d_acid_lakes
+        }
+    }
+    ai_weight = {
+        weight = 0
+        modifier = {
+            weight = 1
+            should_terraform_trigger = {
+                CLASS_FROM = pc_tropical
+                CLASS_TO = pc_acid
+            }
+        }
+    }
+}

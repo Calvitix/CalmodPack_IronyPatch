@@ -28,7 +28,7 @@ district_giga_birch_extraction = {
             }
         }
         modifier = {
-            job_void_bore_manager_add = 1
+            job_bore_manager_add = 1
         }
     }
     triggered_planet_modifier = {
@@ -50,7 +50,7 @@ district_giga_birch_extraction = {
             }
         }
         modifier = {
-            job_void_bore_manager_per_pop = 0.01
+            job_bore_manager_per_pop = 0.01
         }
     }
     triggered_planet_modifier = {
@@ -72,7 +72,7 @@ district_giga_birch_extraction = {
             }
         }
         modifier = {
-            job_void_bore_mind_add = 1
+            job_bore_mind_add = 1
         }
     }
     triggered_planet_modifier = {
@@ -94,7 +94,7 @@ district_giga_birch_extraction = {
             }
         }
         modifier = {
-            job_void_bore_mind_per_pop = 0.01
+            job_bore_mind_per_pop = 0.01
         }
     }
     triggered_planet_modifier = {
@@ -116,7 +116,7 @@ district_giga_birch_extraction = {
             }
         }
         modifier = {
-            job_void_bore_process_add = 1
+            job_bore_process_add = 1
         }
     }
     triggered_planet_modifier = {
@@ -138,7 +138,7 @@ district_giga_birch_extraction = {
             }
         }
         modifier = {
-            job_void_bore_process_per_pop = 0.01
+            job_bore_process_per_pop = 0.01
         }
     }
     triggered_planet_modifier = {

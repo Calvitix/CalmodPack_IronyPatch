@@ -43,7 +43,7 @@ district_flusion_farming = {
             owner = {
                 OR = {
                     is_country_type = katzenartig_imperium
-                    is_regular_empire = yes
+                    is_gestalt = no
                 }
             }
         }
@@ -70,7 +70,7 @@ district_flusion_farming = {
             owner = {
                 OR = {
                     is_country_type = katzenartig_imperium
-                    is_regular_empire = yes
+                    is_gestalt = no
                 }
             }
         }
@@ -82,7 +82,7 @@ district_flusion_farming = {
             owner = {
                 OR = {
                     is_country_type = katzenartig_imperium
-                    is_regular_empire = yes
+                    is_gestalt = no
                 }
             }
         }

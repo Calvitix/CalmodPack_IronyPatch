@@ -20,7 +20,11 @@ building_robot_assembly_plant = {
                         }
                     }
                 }
-                or = {
+                owner = {
+                    is_ai = yes
+                    num_pops < 1000
+                }
+                OR = {
                     AND = {
                         str_is_col_factory = no
                         str_is_col_foundry = no
@@ -58,11 +62,26 @@ building_robot_assembly_plant = {
                 owner = {
                     is_ai = no
                 }
-                NAND = {
-                    free_district_slots = 0
-                    free_building_slots <= 1
-                    free_housing <= 0
-                    free_jobs <= 0
+                AND = {
+                    owner = {
+                        is_ai = yes
+                    }
+                    NAND = {
+                        free_jobs < 1
+                        OR = {
+                            num_buildings = {
+                                type = any
+                                value >= 2
+                            }
+                            is_planet_class = pc_habitat
+                        }
+                    }
+                    NAND = {
+                        free_district_slots = 0
+                        free_building_slots <= 1
+                        free_housing <= 0
+                        free_jobs <= 0
+                    }
                 }
             }
         }
@@ -73,9 +92,8 @@ building_robot_assembly_plant = {
             owner = {
                 is_ai = yes
             }
-            num_buildings = {
-                type = building_robot_assembly_plant
-                value = 0
+            NOT = {
+                has_building = building_robot_assembly_plant
             }
         }
         job_starnet_spice_melange_farmer_add = 2
@@ -104,6 +122,10 @@ building_robot_assembly_plant = {
                 is_ai = yes
                 has_ascension_perk = ap_engineered_evolution
                 is_materialist = no
+            }
+            owner = {
+                is_ai = yes
+                num_pops > 1500
             }
         }
     }

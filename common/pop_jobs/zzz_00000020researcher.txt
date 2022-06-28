@@ -23,6 +23,27 @@ researcher = {
         upkeep = {
             consumer_goods = 2
         }
+        upkeep = {
+            trigger = {
+                planet = {
+                    has_planet_flag = has_science_ministry
+                }
+            }
+            consumer_goods = 1
+        }
+    }
+    overlord_resources = {
+        category = planet_requisitioned_research
+        produces = {
+            trigger = {
+                planet = {
+                    has_planet_flag = has_science_ministry
+                }
+            }
+            physics_research = 2
+            engineering_research = 2
+            society_research = 2
+        }
     }
     weight = {
         weight = @specialist_job_weight

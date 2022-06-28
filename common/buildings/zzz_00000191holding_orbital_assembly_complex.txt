@@ -13,67 +13,13 @@ holding_orbital_assembly_complex = {
         }
         upkeep = {
             energy = @b1_upkeep
-            minerals = 10
-        }
-        produces = {
-            trigger = {
-                overlord_has_num_constructors_in_orbit = {
-                    NUM = 1
-                }
-            }
-            alloys = 3
-        }
-        produces = {
-            trigger = {
-                overlord_has_num_constructors_in_orbit = {
-                    NUM = 2
-                }
-            }
-            alloys = 6
-        }
-        produces = {
-            trigger = {
-                overlord_has_more_than_num_constructors_in_orbit = {
-                    NUM = 2
-                }
-            }
-            alloys = 9
+            alloys = 5
         }
     }
     planet_modifier = {
         planet_building_build_speed_mult = 0.1
     }
-    triggered_planet_modifier = {
-        potential = {
-            overlord_has_num_constructors_in_orbit = {
-                NUM = 1
-            }
-        }
-        modifier = {
-            planet_building_build_speed_mult = 0.1
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            overlord_has_num_constructors_in_orbit = {
-                NUM = 2
-            }
-        }
-        modifier = {
-            planet_building_build_speed_mult = 0.2
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            overlord_has_more_than_num_constructors_in_orbit = {
-                NUM = 2
-            }
-        }
-        modifier = {
-            planet_building_build_speed_mult = 0.3
-        }
-    }
     triggered_desc = {
-        text = holding_orbital_assembly_complex_constructors_desc
+        text = holding_orbital_assembly_complex_effect
     }
 }

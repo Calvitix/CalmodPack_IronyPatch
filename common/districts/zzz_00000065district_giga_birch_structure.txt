@@ -26,7 +26,7 @@ district_giga_birch_structure = {
         potential = {
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
             }
         }
         modifier = {
@@ -92,7 +92,7 @@ district_giga_birch_structure = {
         potential = {
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
                 is_lithoid_empire = yes
             }
         }
@@ -150,7 +150,7 @@ district_giga_birch_structure = {
         potential = {
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
                 is_crafter_empire = no
             }
         }
@@ -171,7 +171,7 @@ district_giga_birch_structure = {
         potential = {
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
                 is_crafter_empire = yes
             }
         }

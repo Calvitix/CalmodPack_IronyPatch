@@ -1,0 +1,24 @@
+trait_blokkat_on_strike_governor = {
+    cost = 0
+    leader_potential_add = {
+        always = no
+    }
+    icon = "gfx/interface/icons/traits/trait_blokkat_on_strike.dds"
+    leader_trait = all
+    self_modifier = {
+        species_leader_exp_gain = -0.5
+    }
+    modifier = {
+        planet_jobs_produces_mult = -0.2
+        planet_jobs_unity_produces_mult = -0.3
+        planet_building_build_speed_mult = -0.4
+    }
+    leader_class = {
+        governor
+    }
+    initial = no
+    randomized = no
+    ai_weight = {
+        weight = 0
+    }
+}

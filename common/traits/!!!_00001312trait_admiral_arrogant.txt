@@ -1,0 +1,24 @@
+trait_admiral_arrogant = {
+    cost = 0
+    randomized = no
+    icon = "gfx/interface/icons/traits/leader_traits/trait_admiral_arrogant.dds"
+    modifier = {
+        ship_disengage_chance_mult = -0.15
+        ship_emergency_ftl_min_days_mult = 0.25
+    }
+    leader_trait = {
+        admiral
+    }
+    leader_class = {
+        admiral
+    }
+    requires_traits = {
+        xte_trait_prideful
+    }
+    opposites = {
+        "leader_trait_trickster"
+    }
+    ai_weight = {
+        weight = 0
+    }
+}

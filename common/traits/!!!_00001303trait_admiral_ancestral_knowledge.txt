@@ -1,0 +1,20 @@
+trait_admiral_ancestral_knowledge = {
+    cost = 0
+    randomized = no
+    icon = "gfx/interface/icons/traits/leader_traits/trait_admiral_ancestral_knowledge.dds"
+    modifier = {
+        ship_fire_rate_mult = 0.06
+    }
+    leader_trait = {
+        admiral
+    }
+    leader_class = {
+        admiral
+    }
+    requires_traits = {
+        xte_trait_genetic_memory
+    }
+    ai_weight = {
+        weight = 100
+    }
+}

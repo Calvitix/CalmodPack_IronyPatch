@@ -1,0 +1,35 @@
+giga_amb_fe_celestial_architect = {
+    category = precursor
+    building_icon = building_giga_megaworkshop_hub
+    clothes_texture_index = 1
+    possible_pre_triggers = {
+        has_owner = yes
+        is_sapient = yes
+    }
+    possible = {
+        owner = {
+            is_fallen_empire_spiritualist = yes
+        }
+        is_same_species = owner
+    }
+    resources = {
+        category = planet_giga_megaengineers
+        produces = {
+            giga_sr_amb_megaconstruction = @giga_amb_celestial_architect_output
+        }
+    }
+    weight = {
+        weight = 30000
+        modifier = {
+            factor = 0.01
+            exists = planet
+            exists = planet.controller
+            planet.controller = {
+                OR = {
+                    is_country_type = swarm
+                    is_country_type = ai_empire
+                }
+            }
+        }
+    }
+}

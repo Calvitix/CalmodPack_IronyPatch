@@ -41,7 +41,7 @@ building_alpha_hub = {
         }
     }
     planet_modifier = {
-        planet_administrators_unity_produces_mult = 0.15
+        planet_administrators_produces_mult = 0.15
     }
     prerequisites = {
         "tech_autocurating_vault"

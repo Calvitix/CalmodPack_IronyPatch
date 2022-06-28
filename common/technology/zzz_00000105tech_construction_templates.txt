@@ -13,6 +13,8 @@ tech_construction_templates = {
     modifier = {
         planet_building_build_speed_mult = 0.5
         empire_size_districts_mult = -0.1
+        show_only_custom_tooltip = no
+        custom_tooltip = tech_construction_templates_effect
     }
     weight_modifier = {
         factor = 0.5

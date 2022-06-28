@@ -6,9 +6,6 @@ tech_automated_exploration = {
         computing
     }
     weight = @tier1weight2
-    feature_flags = {
-        tech_automated_exploration
-    }
     modifier = {
         science_ship_survey_speed = 0.25
     }

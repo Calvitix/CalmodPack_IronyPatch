@@ -1,0 +1,30 @@
+terraform_link = {
+    from = "pc_cenote"
+    to = "pc_ocean"
+    resources = {
+        category = terraforming
+        cost = {
+            energy = @terraforming_cost_level_1
+        }
+    }
+    duration = @terraforming_duration_level_1
+    potential = {
+        NOR = {
+            has_policy_flag = terraforming_basic_invisible
+            has_policy_flag = terraforming_wet_invisible
+        }
+    }
+    condition = {
+        has_technology = "tech_terrestrial_sculpting"
+    }
+    ai_weight = {
+        weight = 0
+        modifier = {
+            weight = 1
+            should_terraform_trigger = {
+                CLASS_FROM = pc_cenote
+                CLASS_TO = pc_ocean
+            }
+        }
+    }
+}

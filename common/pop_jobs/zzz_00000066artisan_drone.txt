@@ -50,7 +50,7 @@ artisan_drone = {
         }
     }
     weight = {
-        weight = @complex_drone_job_weight
+        weight = 500
         mult = value:job_weights_modifier|JOB|artisan_drone|RESOURCE|consumer_goods|
         modifier = {
             factor = 0.9

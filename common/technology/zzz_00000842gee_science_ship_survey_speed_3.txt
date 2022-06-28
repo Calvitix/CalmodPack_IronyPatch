@@ -1,0 +1,37 @@
+gee_science_ship_survey_speed_3 = {
+    cost = @tier3cost3
+    area = engineering
+    tier = 3
+    category = {
+        voidcraft
+    }
+    prerequisites = {
+        "gee_science_ship_survey_speed_2"
+    }
+    weight = @tier3weight3
+    modifier = {
+        science_ship_survey_speed = 0.5
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            years_passed > 50
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+    }
+}

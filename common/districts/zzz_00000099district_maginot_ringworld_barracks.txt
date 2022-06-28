@@ -25,7 +25,7 @@ district_maginot_ringworld_barracks = {
         potential = {
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
                 NOT = {
                     has_valid_civic = civic_warrior_culture
                 }
@@ -42,7 +42,7 @@ district_maginot_ringworld_barracks = {
         potential = {
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
                 has_valid_civic = civic_warrior_culture
             }
         }
@@ -110,7 +110,7 @@ district_maginot_ringworld_barracks = {
         trigger = {
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
             }
         }
         text = job_merchant_effect_desc
@@ -119,7 +119,7 @@ district_maginot_ringworld_barracks = {
         trigger = {
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
             }
         }
         text = job_merchant_effect_desc
@@ -148,7 +148,7 @@ district_maginot_ringworld_barracks = {
         trigger = {
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
             }
         }
         text = job_clerk_effect_desc

@@ -1,0 +1,21 @@
+trait_governor_naturalist = {
+    cost = 1
+    randomized = no
+    icon = "gfx/interface/icons/traits/leader_traits/trait_governor_naturalist.dds"
+    modifier = {
+        pop_environment_tolerance = 0.05
+        planet_pops_upkeep_mult = -0.05
+    }
+    leader_trait = {
+        governor
+    }
+    leader_class = {
+        governor
+    }
+    requires_traits = {
+        xte_trait_theoretical
+    }
+    ai_weight = {
+        weight = 200
+    }
+}

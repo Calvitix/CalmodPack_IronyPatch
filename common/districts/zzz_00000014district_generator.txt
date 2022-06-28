@@ -159,17 +159,6 @@ district_generator = {
         potential = {
             exists = owner
             owner = {
-                has_tradition = tr_industry_compact_extraction_centers
-            }
-        }
-        modifier = {
-            planet_housing_add = 1
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
                 has_tradition = tr_plentiful_kleptocracy_finish
             }
             owner = {

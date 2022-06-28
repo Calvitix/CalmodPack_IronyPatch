@@ -64,7 +64,7 @@ district_giga_planet_admin = {
         potential = {
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
                 is_megacorp = no
             }
         }
@@ -76,7 +76,7 @@ district_giga_planet_admin = {
         potential = {
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
                 is_megacorp = yes
             }
         }
@@ -110,7 +110,7 @@ district_giga_planet_admin = {
         trigger = {
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
                 is_megacorp = no
             }
         }
@@ -120,7 +120,7 @@ district_giga_planet_admin = {
         trigger = {
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
                 is_megacorp = yes
             }
         }

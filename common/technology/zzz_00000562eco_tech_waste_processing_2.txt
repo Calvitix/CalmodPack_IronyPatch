@@ -9,6 +9,7 @@ eco_tech_waste_processing_2 = {
         "eco_tech_waste_processing_1"
         "tech_eco_simulation"
         "tech_robotic_workers"
+        "tech_colonization_2"
     }
     weight = @tier2weight3
     weight_modifier = {

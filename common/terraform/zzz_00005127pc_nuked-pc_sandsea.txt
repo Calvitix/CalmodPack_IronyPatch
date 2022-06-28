@@ -1,0 +1,30 @@
+terraform_link = {
+    from = "pc_nuked"
+    to = "pc_sandsea"
+    resources = {
+        category = terraforming
+        cost = {
+            energy = @terraforming_cost_level_4
+        }
+    }
+    duration = @terraforming_duration_level_4
+    potential = {
+        NOR = {
+            has_policy_flag = terraforming_basic_invisible
+            has_policy_flag = terraforming_dry_invisible
+        }
+    }
+    condition = {
+        has_technology = "tech_climate_restoration"
+    }
+    ai_weight = {
+        weight = 0
+        modifier = {
+            weight = 1
+            should_terraform_trigger = {
+                CLASS_FROM = pc_nuked
+                CLASS_TO = pc_sandsea
+            }
+        }
+    }
+}

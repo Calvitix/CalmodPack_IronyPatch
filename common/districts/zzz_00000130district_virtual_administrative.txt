@@ -4,14 +4,15 @@ district_virtual_administrative = {
     icon = district_arcology_administrative
     show_on_uncolonized = {
         from = {
-            is_regular_empire = yes
+            is_gestalt = no
             is_spiritualist = no
         }
         uses_district_set = virtual_ring
     }
     potential = {
+        exists = owner
         owner = {
-            is_regular_empire = yes
+            is_gestalt = no
             is_spiritualist = no
         }
         uses_district_set = virtual_ring

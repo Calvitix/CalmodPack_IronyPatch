@@ -1,0 +1,51 @@
+building_giga_blokkat_blokkwork_node = {
+    base_buildtime = 720
+    category = research
+    prerequisites = {
+        "giga_tech_blokkat_blokkwork_power_node"
+    }
+    base_cap_amount = 1
+    country_modifier = {
+        country_resource_max_energy_add = 5000000
+    }
+    planet_modifier = {
+        planet_jobs_produces_mult = 0.3
+        planet_pops_energy_upkeep_mult = -0.3
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            alloys = 10000
+            energy = 20000
+            rare_crystals = 250
+            volatile_motes = 250
+            exotic_gases = 250
+        }
+        upkeep = {
+            alloys = 100
+            rare_crystals = 5
+            volatile_motes = 5
+            exotic_gases = 5
+        }
+        produces = {
+            energy = 200
+        }
+    }
+    on_built = {
+        planet = {
+            if = {
+                limit = {
+                    exists = owner
+                    owner = {
+                        NOT = {
+                            has_country_flag = blokkat_joinblokkats_stage_4_researched
+                        }
+                    }
+                }
+                planet_event = {
+                    id = giga_blokkat_join.2031
+                }
+            }
+        }
+    }
+}

@@ -19,7 +19,40 @@ overlord_beholder_drone = {
     resources = {
         category = planet_overlord_beholders
         upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_specialist_subject_tier = {
+                        TYPE = bulwark
+                        TIER = 1
+                    }
+                }
+            }
             alloys = 2
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_specialist_subject_tier = {
+                        TYPE = bulwark
+                        TIER = 2
+                    }
+                }
+            }
+            alloys = 4
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_specialist_subject_tier = {
+                        TYPE = bulwark
+                        TIER = 3
+                    }
+                }
+            }
+            alloys = 8
         }
     }
     weight = {

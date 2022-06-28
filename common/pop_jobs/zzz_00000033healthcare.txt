@@ -29,7 +29,7 @@ healthcare = {
         mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
     }
     weight = {
-        weight = @high_prio_specialist_job_weight
+        weight = 100
         mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
         modifier = {
             factor = 0.2

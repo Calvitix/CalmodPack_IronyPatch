@@ -1,0 +1,90 @@
+terraform_link = {
+    from = "pc_hothouse"
+    to = "pc_subarctic"
+    resources = {
+        category = terraforming
+        cost = {
+            energy = @terraforming_cost_level_4
+        }
+    }
+    duration = @terraforming_duration_level_4
+    potential = {
+        OR = {
+            has_technology = "tech_terraforming_toxic"
+            from = {
+                has_modifier = terraforming_candidate
+            }
+        }
+        NOR = {
+            has_policy_flag = terraforming_basic_invisible
+            has_policy_flag = terraforming_wet_invisible
+        }
+    }
+    condition = {
+        has_technology = "tech_climate_restoration"
+    }
+    effect = {
+        from = {
+            remove_modifier = terraforming_candidate
+            reroll_planet = yes
+            if = {
+                limit = {
+                    has_global_flag = has_guillis_planet_modifiers_mod
+                }
+                gpm_purge_all_planetary_modifiers = yes
+                reroll_planet = yes
+                gpm_spawn_normal_habitable_world_modifier = yes
+            }
+            else = {
+                reroll_planet = yes
+            }
+            while = {
+                count = 5
+                random_list = {
+                    20 = {
+                        add_deposit = d_rushing_waterfalls
+                    }
+                    20 = {
+                        add_deposit = d_prosperous_mesa
+                    }
+                    20 = {
+                        add_deposit = d_fertile_lands
+                    }
+                    10 = {
+                        add_deposit = d_black_soil
+                    }
+                    5 = {
+                        add_deposit = d_tempestous_mountain
+                    }
+                    5 = {
+                        add_deposit = d_submerged_ore_veins
+                    }
+                    5 = {
+                        add_deposit = d_alien_pets_deposit
+                    }
+                    5 = {
+                        add_deposit = d_betharian_deposit
+                    }
+                    2 = {
+                        add_deposit = d_dust_caverns
+                    }
+                    2 = {
+                        add_deposit = d_dust_desert
+                    }
+                    2 = {
+                        add_deposit = d_fuming_bog
+                    }
+                    2 = {
+                        add_deposit = d_crystal_reef
+                    }
+                    2 = {
+                        add_deposit = d_bubbling_swamp
+                    }
+                }
+            }
+        }
+    }
+    ai_weight = {
+        weight = 0
+    }
+}

@@ -156,7 +156,7 @@ district_giga_birch_ktisma = {
         potential = {
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
                 is_catalytic_empire = no
                 is_crafter_empire = no
             }
@@ -174,7 +174,7 @@ district_giga_birch_ktisma = {
         potential = {
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
                 is_catalytic_empire = no
                 is_crafter_empire = yes
             }
@@ -192,7 +192,7 @@ district_giga_birch_ktisma = {
         potential = {
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
                 is_catalytic_empire = yes
                 is_crafter_empire = no
             }
@@ -242,7 +242,7 @@ district_giga_birch_ktisma = {
         potential = {
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_gestalt = no
                 is_catalytic_empire = yes
                 is_crafter_empire = yes
             }

@@ -1,0 +1,35 @@
+can_pop_auto_migrate = {
+    hidden_trigger = {
+        is_unemployed = yes
+    }
+    custom_tooltip = {
+        fail_text = AUTO_MIGRATE_ASSIMILATED
+        is_being_assimilated = no
+    }
+    if = {
+        limit = {
+            OR = {
+                is_shackled_robot = yes
+                is_enslaved = yes
+            }
+        }
+        custom_tooltip = {
+            fail_text = AUTO_MIGRATE_SLAVE_PROCESSING
+            OR = {
+                planet = {
+                    has_building = building_slave_processing
+                }
+                planet = {
+                    has_building = building_plentiful_traditions_advanced_slave_processing
+                }
+                solar_system = {
+                    count_starbase_buildings = {
+                        type = transit_hub
+                        count >= 1
+                        include_being_constructed = no
+                    }
+                }
+            }
+        }
+    }
+}

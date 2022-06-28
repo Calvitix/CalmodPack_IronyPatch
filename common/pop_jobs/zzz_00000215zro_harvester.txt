@@ -25,21 +25,6 @@ zro_harvester = {
         weight = @specialist_job_weight
         mult = value:job_weights_modifier|JOB|zro_harvester|RESOURCE|sr_zro|
         modifier = {
-            factor = 20
-            exists = owner
-            owner = {
-                has_ascension_perk = ap_synthetic_servants
-            }
-            OR = {
-                is_robot_pop = yes
-                NOT = {
-                    has_citizenship_type = {
-                        type = citizenship_full
-                    }
-                }
-            }
-        }
-        modifier = {
             factor = 10
             is_enslaved = yes
             can_take_servant_job = no

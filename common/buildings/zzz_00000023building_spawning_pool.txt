@@ -1,0 +1,99 @@
+building_spawning_pool = {
+    base_buildtime = @b1_time
+    base_cap_amount = 4
+    category = pop_assembly
+    potential = {
+        exists = owner
+        owner = {
+            is_hive_empire = yes
+            NOT = {
+                has_origin = origin_progenitor_hive
+            }
+        }
+        or = {
+            num_buildings = {
+                type = any
+                value < 15
+            }
+            owner = {
+                is_ai = no
+            }
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_ai = yes
+                str_raw_ecocrisis_level_0 = no
+            }
+            num_buildings = {
+                type = building_spawning_pool
+                value < 3
+            }
+        }
+        modifier = {
+            job_starnet_spice_melange_farmer_add = 3
+            job_starnet_spice_melange_antifarmer_add = -3
+        }
+    }
+    destroy_trigger = {
+        exists = owner
+        owner = {
+            OR = {
+                is_hive_empire = no
+                has_origin = origin_progenitor_hive
+            }
+        }
+    }
+    planet_modifier = {
+        job_spawning_drone_add = 1
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @b1_minerals
+        }
+        upkeep = {
+            energy = 2
+        }
+    }
+    convert_to = {
+        building_offspring_nest
+    }
+    triggered_desc = {
+        trigger = {
+            NAND = {
+                exists = owner
+                owner = {
+                    has_origin = origin_necrophage
+                }
+                exists = growing_species
+                growing_species = {
+                    NOT = {
+                        has_trait = trait_hive_mind
+                    }
+                }
+            }
+        }
+        text = job_spawning_drone_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                has_origin = origin_necrophage
+            }
+            exists = growing_species
+            growing_species = {
+                NOT = {
+                    has_trait = trait_hive_mind
+                }
+            }
+        }
+        text = job_spawning_drone_necrophage_effect_desc
+    }
+    triggered_desc = {
+        text = spawning_pool_tooltip
+    }
+}

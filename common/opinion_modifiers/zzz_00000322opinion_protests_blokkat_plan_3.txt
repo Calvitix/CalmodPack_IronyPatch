@@ -1,0 +1,5 @@
+opinion_protests_blokkat_plan_3 = {
+    opinion = {
+        base = -1000
+    }
+}
