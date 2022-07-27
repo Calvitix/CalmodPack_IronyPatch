@@ -1,6 +1,6 @@
 tech_gpm_precursor_floating_city_discovery_2 = {
     area = physics
-    cost = @tier2cost1
+    cost = @tier5cost3
     category = {
         field_manipulation
     }

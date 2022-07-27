@@ -1,0 +1,40 @@
+@Battlecruiser_power_6 = 2415
+@Battlecruiser_cost_6 = 222
+utility_component_template = {
+    key = "BATTLECRUISER_DARK_MATTER_REACTOR"
+    size = small
+    icon = "GFX_ship_part_dark_matter_power_core"
+    icon_frame = 1
+    power = @Battlecruiser_power_6
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = @Battlecruiser_cost_6
+            sr_dark_matter = 2
+        }
+        upkeep = {
+            energy = 2.22
+            alloys = 0.222
+        }
+    }
+    prerequisites = {
+        "tech_dark_matter_power_core"
+    }
+    component_set = "power_core"
+    size_restriction = {
+        esc_dummy_battle_cruiser
+        @NSC_BattleCruiser
+        @NSC_ExplorationShip
+        @NSC_EscortCarrier
+    }
+    upgrades_to = BATTLECRUISER_ESC_DARK_MATTER_CORE_2
+    ai_weight = {
+        weight = 6
+        modifier = {
+            factor = 0
+            no_resource_for_component = {
+                RESOURCE = sr_dark_matter
+            }
+        }
+    }
+}

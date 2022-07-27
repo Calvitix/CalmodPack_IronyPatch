@@ -1,6 +1,7 @@
 trait_gpm_enigmatic_update = {
-    cost = -1
+    cost = 0
     initial = no
+    randomized = no
     species_potential_add = {
         always = no
     }
@@ -8,7 +9,10 @@ trait_gpm_enigmatic_update = {
         always = no
     }
     species_possible_merge_add = {
-        always = no
+        exists = from
+        from = {
+            has_country_flag = gpm_enigmatic_hack_happened_country
+        }
     }
     allowed_archetypes = {
         ROBOT

@@ -17,7 +17,7 @@ gpm_r_power_core = {
         potential = {
             always = yes
         }
-        station_gatherers_energy_produces_mult = 1
+        station_gatherers_energy_produces_mult = 0.5
     }
     score = 1000
     active_effect = {

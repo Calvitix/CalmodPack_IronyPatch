@@ -26,19 +26,19 @@ tech_ehof_phase_03 = {
     weight_modifier = {
         modifier = {
             factor = 0.1
-            years_passed < 50
+            years_passed < 90
         }
         modifier = {
             factor = 2
-            years_passed > 60
+            years_passed > 110
         }
         modifier = {
             factor = 3
-            years_passed > 70
+            years_passed > 130
         }
         modifier = {
             factor = 4
-            years_passed > 80
+            years_passed > 150
         }
         modifier = {
             factor = 1.25

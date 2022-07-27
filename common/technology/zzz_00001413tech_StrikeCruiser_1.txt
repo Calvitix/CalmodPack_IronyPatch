@@ -7,6 +7,8 @@ tech_StrikeCruiser_1 = {
     }
     prerequisites = {
         "tech_cruisers"
+        "tech_explorationship_1"
+        "tech_cold_fusion_power"
     }
     weight = @tier3weight3
     gateway = ship
@@ -29,15 +31,15 @@ tech_StrikeCruiser_1 = {
         }
         modifier = {
             factor = 0.1
-            years_passed < 40
+            years_passed < 100
         }
         modifier = {
             factor = 1
-            years_passed > 40
+            years_passed > 100
         }
         modifier = {
             factor = 10
-            years_passed > 45
+            years_passed > 120
         }
         modifier = {
             factor = value:tech_weight_likelihood

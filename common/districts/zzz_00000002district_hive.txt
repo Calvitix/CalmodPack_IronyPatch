@@ -16,6 +16,7 @@ district_hive = {
             uses_district_set = pdflorafort
             uses_district_set = machine_world
             uses_district_set = shattered_ring_world
+            uses_district_set = pdnecroplanet
         }
     }
     potential = {
@@ -32,6 +33,7 @@ district_hive = {
             uses_district_set = pdflorafort
             uses_district_set = machine_world
             uses_district_set = shattered_ring_world
+            uses_district_set = pdnecroplanet
         }
     }
     allow = {

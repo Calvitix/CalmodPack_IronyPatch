@@ -1,0 +1,131 @@
+namespace = pirate
+ship_event = {
+    id = pirate.70
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        is_ship_class = shipclass_starbase
+        exists = from
+        from = {
+            owner = {
+                OR = {
+                    is_country_type = pirate
+                    is_country_type = pirate_waves_country
+                }
+            }
+        }
+    }
+    immediate = {
+        solar_system = {
+            if = {
+                limit = {
+                    is_pirate_system = no
+                }
+                from.owner = {
+                    save_event_target_as = pirate_band
+                }
+                random_system_planet = {
+                    limit = {
+                        is_star = no
+                    }
+                    weights = {
+                        base = 1
+                        modifier = {
+                            add = 1
+                            is_asteroid = yes
+                        }
+                    }
+                    save_event_target_as = pirate_home
+                }
+                create_pirate_base_1 = yes
+            }
+            else_if = {
+                limit = {
+                    NOT = {
+                        has_global_flag = pirate_republic_inactive
+                    }
+                    is_pirate_system = yes
+                    NOT = {
+                        any_fleet_in_system = {
+                            is_ship_size = pirate_station
+                            has_fleet_flag = pirate_waves_station_flag
+                            has_fleet_flag = pirate_waves_station_life_flag
+                        }
+                    }
+                    space_owner = {
+                        NOR = {
+                            has_country_flag = pirates_spawned
+                            has_ethic = ethic_gestalt_consciousness
+                            any_situation = {
+                                is_situation_type = situation_planetary_revolt
+                            }
+                        }
+                        any_system_within_border = {
+                            is_pirate_system = yes
+                            NOR = {
+                                is_same_value = prevprev
+                                any_fleet_in_system = {
+                                    is_ship_size = pirate_station
+                                    has_fleet_flag = pirate_waves_station_flag
+                                    has_fleet_flag = pirate_waves_station_life_flag
+                                }
+                            }
+                        }
+                        any_system_within_border = {
+                            is_capital_system = no
+                            any_system_planet = {
+                                is_colony = yes
+                                is_under_colonization = no
+                                planet_stability < 80
+                                NOT = {
+                                    has_planet_flag = pirate_invasion
+                                }
+                                has_ground_combat = no
+                                owner = {
+                                    is_primitive = no
+                                    is_hostile = event_target:pirate_band
+                                }
+                            }
+                        }
+                    }
+                    NOR = {
+                        any_fleet_in_system = {
+                            is_mobile = yes
+                            exists = owner
+                            is_owned_by = space_owner
+                            is_civilian = no
+                        }
+                        any_system_planet = {
+                            has_owner = yes
+                            NOR = {
+                                is_owned_by = from.owner
+                                is_controlled_by = from.owner
+                            }
+                            planet_stability < 80
+                        }
+                    }
+                    closest_system = {
+                        min_steps = 0
+                        max_steps = 10
+                        limit = {
+                            is_owned_by = root
+                            is_capital_system = no
+                            any_system_planet = {
+                                is_colony = yes
+                                is_under_colonization = no
+                                planet_stability < 80
+                            }
+                        }
+                    }
+                }
+                space_owner = {
+                    country_event = {
+                        id = pirate_republic.10
+                        days = 6
+                        random = 6
+                    }
+                }
+            }
+        }
+    }
+}

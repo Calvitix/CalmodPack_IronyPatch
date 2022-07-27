@@ -17,6 +17,7 @@ cloud_feeding = {
     }
     modules = {
         exclusive_diplomacy_module = {
+            contact_rule = on_action_only
         }
         basic_technology_module = {
         }

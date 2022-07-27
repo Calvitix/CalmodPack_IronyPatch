@@ -76,6 +76,12 @@ ap_the_flesh_is_weak = {
                 has_origin = origin_shroudwalker_apprentice
             }
         }
+        custom_tooltip = {
+            fail_text = "requires_not_shroudwalker_apprentice"
+            NOT = {
+                has_origin = origin_pd_shroud
+            }
+        }
     }
     potential = {
         host_has_dlc = "Utopia"

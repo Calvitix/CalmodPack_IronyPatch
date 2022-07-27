@@ -13,6 +13,7 @@ district_city = {
             uses_district_set = hive_world
             uses_district_set = machine_world
             uses_district_set = shattered_ring_world
+            uses_district_set = pdnecroplanet
         }
     }
     potential = {
@@ -28,6 +29,7 @@ district_city = {
             uses_district_set = hive_world
             uses_district_set = machine_world
             uses_district_set = shattered_ring_world
+            uses_district_set = pdnecroplanet
         }
     }
     allow = {

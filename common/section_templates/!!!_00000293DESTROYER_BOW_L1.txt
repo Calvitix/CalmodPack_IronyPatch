@@ -27,7 +27,10 @@ ship_section_template = {
         }
         modifier = {
             factor = 100
-            can_kill_turtles = yes
+            or = {
+                can_kill_turtles = yes
+                has_technology = tech_lasers_4
+            }
         }
         modifier = {
             factor = 100

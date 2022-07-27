@@ -1,0 +1,38 @@
+@Carrier_power_6 = 6000
+@battleship_cost_6 = 296
+utility_component_template = {
+    key = "CARRIER_DARK_MATTER_REACTOR"
+    size = small
+    icon = "GFX_ship_part_dark_matter_power_core"
+    icon_frame = 1
+    power = @Carrier_power_6
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = @battleship_cost_6
+            sr_dark_matter = 3
+        }
+        upkeep = {
+            energy = 2.98
+            alloys = 0.298
+        }
+    }
+    prerequisites = {
+        "tech_dark_matter_power_core"
+    }
+    component_set = "power_core"
+    upgrades_to = CARRIER_ESC_DARK_MATTER_CORE_2
+    size_restriction = {
+        esc_dummy_carrier
+        @NSC_Carrier
+    }
+    ai_weight = {
+        weight = 6
+        modifier = {
+            factor = 0
+            no_resource_for_component = {
+                RESOURCE = sr_dark_matter
+            }
+        }
+    }
+}

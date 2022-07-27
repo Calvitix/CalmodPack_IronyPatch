@@ -35,9 +35,9 @@ ap_engineered_evolution = {
         custom_tooltip = {
             fail_text = "synthetic_empire_biological_ascension"
             Or = {
-            NOT = {
-                has_trait = trait_mechanical
-            }
+                NOT = {
+                    has_trait = trait_mechanical
+                }
                 has_ascension_perk = ap_esap_bio_cyber_psi_1
                 has_ascension_perk = ap_esap_bio_cyber_psi_2_plain
             }
@@ -95,6 +95,18 @@ ap_engineered_evolution = {
             fail_text = "requires_not_shroudwalker_apprentice"
             NOT = {
                 has_origin = origin_shroudwalker_apprentice
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_not_shroudwalker_apprentice"
+            NOT = {
+                has_origin = origin_shroudwalker_apprentice
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_not_shroudwalker_apprentice"
+            NOT = {
+                has_origin = origin_pd_shroud
             }
         }
     }

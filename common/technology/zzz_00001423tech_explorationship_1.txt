@@ -24,7 +24,7 @@ tech_explorationship_1 = {
     weight_modifier = {
         modifier = {
             factor = 0.1
-            years_passed < 10
+            years_passed < 40
         }
         modifier = {
             factor = 10
@@ -34,7 +34,7 @@ tech_explorationship_1 = {
         }
         modifier = {
             factor = 10
-            years_passed > 25
+            years_passed > 60
         }
         modifier = {
             factor = 1.25

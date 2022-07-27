@@ -14,6 +14,7 @@ district_nexus = {
             uses_district_set = shattered_ring_world
             uses_district_set = pdmachinefactory
             uses_district_set = pdmachinefort
+            uses_district_set = pdnecroplanet
         }
     }
     potential = {
@@ -28,6 +29,7 @@ district_nexus = {
             uses_district_set = shattered_ring_world
             uses_district_set = pdmachinefactory
             uses_district_set = pdmachinefort
+            uses_district_set = pdnecroplanet
         }
     }
     allow = {

@@ -24,6 +24,9 @@ district_arcology_religious = {
             is_spiritualist = yes
         }
     }
+    allow = {
+        str_habitat_culture_allow = yes
+    }
     conversion_ratio = 1
     convert_to = {
         district_nexus

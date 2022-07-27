@@ -145,7 +145,6 @@
 @cruiser_evasion_7 = 15
 @cruiser_evasion_8 = 15
 @cruiser_evasion_9 = 15
-@cruiser_formation_1 = 3
 @cruiser_hp_1 = 1400
 @cruiser_hp_2 = 1400
 @cruiser_hp_3 = 1400
@@ -755,26 +754,8 @@ corvette = {
     }
     ai_ship_data = {
         fraction = {
-            base = 100
             modifier = {
-                add = -50
-                has_technology = tech_destroyers
-            }
-            modifier = {
-                add = -25
-                has_technology = tech_cruisers
-            }
-            modifier = {
-                add = -15
-                has_technology = tech_battleships
-            }
-            modifier = {
-                add = -5
-                has_technology = tech_Dreadnought_1
-            }
-            modifier = {
-                add = -100
-                uses_standard_ship_sizes = no
+                add = value:str_value_ai_ship_data_corvette
             }
         }
     }
@@ -849,30 +830,8 @@ destroyer = {
     }
     ai_ship_data = {
         fraction = {
-            base = 0
             modifier = {
-                add = 50
-                has_technology = tech_destroyers
-            }
-            modifier = {
-                add = -25
-                has_technology = tech_cruisers
-            }
-            modifier = {
-                add = -10
-                has_technology = tech_battleships
-            }
-            modifier = {
-                add = -5
-                has_technology = tech_Carrier_1
-            }
-            modifier = {
-                add = -5
-                has_technology = tech_Dreadnought_1
-            }
-            modifier = {
-                add = -100
-                uses_standard_ship_sizes = no
+                add = value:str_value_ai_ship_data_destroyer
             }
         }
     }
@@ -899,7 +858,7 @@ destroyer = {
     }
 }
 cruiser = {
-    formation_priority = @cruiser_formation_1
+    formation_priority = @cruiser_formation_priority
     max_speed = @speed7_2
     acceleration = @acceleration2_3
     rotation_speed = @rotation4_2
@@ -948,26 +907,8 @@ cruiser = {
     }
     ai_ship_data = {
         fraction = {
-            base = 0
             modifier = {
-                add = 50
-                has_technology = tech_cruisers
-            }
-            modifier = {
-                add = -10
-                has_technology = tech_StrikeCruiser_1
-            }
-            modifier = {
-                add = -20
-                has_technology = tech_Battlecruiser_1
-            }
-            modifier = {
-                add = -10
-                has_technology = tech_Carrier_1
-            }
-            modifier = {
-                add = -100
-                uses_standard_ship_sizes = no
+                add = value:str_value_ai_ship_data_cruiser
             }
         }
     }
@@ -1031,14 +972,8 @@ StrikeCruiser = {
     }
     ai_ship_data = {
         fraction = {
-            base = 0
             modifier = {
-                add = 10
-                has_technology = tech_StrikeCruiser_1
-            }
-            modifier = {
-                add = -100
-                uses_standard_ship_sizes = no
+                add = value:str_value_ai_ship_data_StrikeCruiser
             }
         }
     }
@@ -1105,14 +1040,8 @@ escortcarrier = {
     }
     ai_ship_data = {
         fraction = {
-            base = 0
             modifier = {
-                add = 0
-                has_technology = tech_escortcarrier_1
-            }
-            modifier = {
-                add = -100
-                uses_standard_ship_sizes = no
+                add = value:str_value_ai_ship_data_escortcarrier
             }
         }
     }
@@ -1181,18 +1110,8 @@ Battlecruiser = {
     }
     ai_ship_data = {
         fraction = {
-            base = 0
             modifier = {
-                add = 20
-                has_technology = tech_Battlecruiser_1
-            }
-            modifier = {
-                add = 5
-                has_technology = tech_battleships
-            }
-            modifier = {
-                add = -100
-                uses_standard_ship_sizes = no
+                add = value:str_value_ai_ship_data_Battlecruiser
             }
         }
     }
@@ -1254,22 +1173,8 @@ battleship = {
     }
     ai_ship_data = {
         fraction = {
-            base = 0
             modifier = {
-                add = 20
-                has_technology = tech_battleships
-            }
-            modifier = {
-                add = 5
-                has_technology = tech_Carrier_1
-            }
-            modifier = {
-                add = -5
-                has_technology = tech_titans
-            }
-            modifier = {
-                add = -100
-                uses_standard_ship_sizes = no
+                add = value:str_value_ai_ship_data_battleship
             }
         }
     }
@@ -1337,14 +1242,8 @@ Carrier = {
     }
     ai_ship_data = {
         fraction = {
-            base = 0
             modifier = {
-                add = 10
-                has_technology = tech_Carrier_1
-            }
-            modifier = {
-                add = -100
-                uses_standard_ship_sizes = no
+                add = value:str_value_ai_ship_data_Carrier
             }
         }
     }
@@ -1415,14 +1314,8 @@ Dreadnought = {
     }
     ai_ship_data = {
         fraction = {
-            base = 0
             modifier = {
-                add = 10
-                has_technology = tech_Dreadnought_1
-            }
-            modifier = {
-                add = -100
-                uses_standard_ship_sizes = no
+                add = value:str_value_ai_ship_data_Dreadnought
             }
         }
     }
@@ -1464,6 +1357,9 @@ titan = {
     icon = ship_size_military_18
     base_buildtime = 1300
     combat_disengage_chance = 1
+    selectable = {
+        host_has_dlc = "Apocalypse"
+    }
     is_space_station = no
     can_have_federation_design = yes
     enable_default_design = yes
@@ -1531,19 +1427,8 @@ titan = {
         alloys = 16
     }
     ai_ship_data = {
-        min = 1
-        max = 99
-        fraction = {
-            base = 0
-            modifier = {
-                add = 5
-                has_technology = tech_titans
-            }
-            modifier = {
-                add = -100
-                uses_standard_ship_sizes = no
-            }
-        }
+        min = value:str_value_ai_ship_data_min_titan
+        max = value:str_value_ai_ship_data_max_titan
     }
     required_component_set = "power_core"
     required_component_set = "ftl_components"
@@ -2803,7 +2688,7 @@ starbase_starfortress = {
     rotation_speed = @starbase_range_of_motion_11
     modifier = {
         ship_evasion_mult = -1
-        ship_armor_add = 20000
+        ship_armor_add = 10000
         starbase_module_capacity_add = 10
         starbase_building_capacity_add = 10
         starbase_defense_platform_capacity_add = 60
@@ -2812,10 +2697,10 @@ starbase_starfortress = {
         starbase_trade_protection_add = 24
     }
     ship_modifier = {
-        ship_fire_rate_mult = 0.25
+        ship_fire_rate_mult = 0.2
         ship_weapon_range_mult = 0.2
     }
-    max_hitpoints = 120000
+    max_hitpoints = 60000
     combat_size_multiplier = 40
     size_multiplier = 4
     fleet_slot_size = 2
@@ -2943,7 +2828,7 @@ starbase_citadel = {
     rotation_speed = @starbase_range_of_motion_10
     modifier = {
         ship_evasion_mult = -1
-        ship_armor_add = 40000
+        ship_armor_add = 20000
         starbase_module_capacity_add = 14
         starbase_building_capacity_add = 14
         starbase_defense_platform_capacity_add = 90
@@ -2952,10 +2837,10 @@ starbase_citadel = {
         starbase_trade_protection_add = 32
     }
     ship_modifier = {
-        ship_fire_rate_mult = 0.25
+        ship_fire_rate_mult = 0.2
         ship_weapon_range_mult = 0.2
     }
-    max_hitpoints = 240000
+    max_hitpoints = 80000
     combat_size_multiplier = 50
     size_multiplier = 4
     fleet_slot_size = 2
@@ -3083,7 +2968,7 @@ starbase_stronghold = {
     rotation_speed = @starbase_range_of_motion_9
     modifier = {
         ship_evasion_mult = -1
-        ship_armor_add = 60000
+        ship_armor_add = 40000
         starbase_module_capacity_add = 21
         starbase_building_capacity_add = 21
         starbase_defense_platform_capacity_add = 150
@@ -3095,7 +2980,7 @@ starbase_stronghold = {
         ship_fire_rate_mult = 0.1
         ship_weapon_range_mult = 0.2
     }
-    max_hitpoints = 300000
+    max_hitpoints = 100000
     combat_size_multiplier = 50
     size_multiplier = 4
     fleet_slot_size = 2
@@ -3232,9 +3117,9 @@ starbase_headquarters = {
         starbase_trade_protection_add = 60
     }
     ship_modifier = {
-        ship_fire_rate_mult = 0.25
+        ship_fire_rate_mult = 0.2
     }
-    max_hitpoints = 250000
+    max_hitpoints = 150000
     combat_size_multiplier = 50
     size_multiplier = 4
     fleet_slot_size = 2
@@ -3564,14 +3449,14 @@ starbase_marauder = {
     rotation_speed = @starbase_range_of_motion_3
     modifier = {
         ship_evasion_mult = -1
-        ship_shield_add = 50000
-        ship_armor_add = 50000
+        ship_shield_add = 20000
+        ship_armor_add = 20000
         ship_sensor_range_add = 1
     }
     ship_modifier = {
         ship_weapon_range_mult = 0.5
-        ship_tracking_add = 25
-        ship_accuracy_add = 25
+        ship_tracking_add = 5
+        ship_accuracy_add = 5
     }
     potential_construction = {
         is_scope_type = planet
@@ -3580,7 +3465,7 @@ starbase_marauder = {
             exists = orbital_defence
         }
     }
-    max_hitpoints = 90000
+    max_hitpoints = 40000
     combat_size_multiplier = 50
     size_multiplier = 4
     fleet_slot_size = 2
@@ -3614,13 +3499,13 @@ starbase_gatebuilders = {
     rotation_speed = @starbase_range_of_motion_2
     modifier = {
         ship_evasion_mult = -1
-        ship_shield_add = 80000
-        ship_armor_add = 80000
+        ship_shield_add = 20000
+        ship_armor_add = 20000
     }
     ship_modifier = {
         ship_weapon_range_mult = 0.5
-        ship_tracking_add = 25
-        ship_accuracy_add = 25
+        ship_tracking_add = 5
+        ship_accuracy_add = 5
     }
     potential_construction = {
         is_scope_type = planet
@@ -3935,6 +3820,9 @@ colossus = {
     can_have_federation_design = no
     enable_default_design = yes
     enable_3dview_in_ship_browser = yes
+    selectable = {
+        host_has_dlc = "Apocalypse"
+    }
     potential_construction = {
         OR = {
             is_scope_type = starbase
@@ -4000,8 +3888,8 @@ colossus = {
         alloys = 10
     }
     ai_ship_data = {
-        min = 1
-        max = 1
+        min = value:str_value_ai_ship_data_min_colossus
+        max = value:str_value_ai_ship_data_max_colossus
     }
     required_component_set = "power_core"
     required_component_set = "ftl_components"
@@ -5991,7 +5879,8 @@ marauder_corvette = {
         "pirate_01"
         "madd_01"
     }
-    entity = pirate_corvette_entity
+    graphical_culture = yes
+    entity = pirate_01_pirate_corvette_entity
     max_speed = @speed_very_fast
     acceleration = 0.35
     rotation_speed = 0.1
@@ -6048,6 +5937,7 @@ marauder_destroyer = {
         "pirate_01"
         "madd_01"
     }
+    graphical_culture = yes
     entity = pirate_01_pirate_destroyer_entity
     max_speed = @speed_fast
     acceleration = 0.3
@@ -6101,7 +5991,8 @@ marauder_cruiser = {
         "pirate_01"
         "madd_01"
     }
-    entity = pirate_01_pirate_cruiser_entity
+    graphical_culture = yes
+    entity = pirate_cruiser_entity
     max_speed = @speed_fast
     acceleration = 0.2
     rotation_speed = 0.2
@@ -6156,7 +6047,8 @@ marauder_galleon = {
         "pirate_01"
         "madd_01"
     }
-    entity = pirate_01_galleon_entity
+    graphical_culture = yes
+    entity = galleon_entity
     max_speed = @speed_very_slow
     acceleration = 0.3
     rotation_speed = 0.05
@@ -6248,6 +6140,7 @@ marauder_station = {
         "pirate_01"
         "madd_01"
     }
+    graphical_culture = yes
     entity = pirate_01_pirate_station_entity
     max_speed = 0
     acceleration = 0
@@ -6257,8 +6150,8 @@ marauder_station = {
         ship_armor_add = 1400
         ship_shield_add = 700
         ships_upkeep_mult = -1
-        ship_hull_regen_add_static = 0.1
-        ship_armor_regen_add_static = 0.1
+        ship_hull_regen_add_static = 0.2
+        ship_armor_regen_add_static = 0.2
     }
     ship_modifier = {
         ship_weapon_range_mult = 0.2
@@ -8207,6 +8100,9 @@ juggernaut = {
     icon = ship_size_military_64
     ship_class_icon_frame = 35
     base_buildtime = 2200
+    selectable = {
+        host_has_dlc = "Federations"
+    }
     can_have_federation_design = yes
     enable_default_design = yes
     enable_3dview_in_ship_browser = yes
@@ -8279,8 +8175,8 @@ juggernaut = {
         alloys = 50
     }
     ai_ship_data = {
-        min = 1
-        max = 1
+        min = value:str_value_ai_ship_data_min_juggernaut
+        max = value:str_value_ai_ship_data_max_juggernaut
     }
     required_component_set = "power_core"
     required_component_set = "sensor_components"
@@ -8325,6 +8221,9 @@ headquarters = {
     ship_class_icon_frame = 35
     base_buildtime = 2500
     use_shipnames_from = juggernaut
+    selectable = {
+        host_has_dlc = "Federations"
+    }
     can_have_federation_design = no
     enable_default_design = yes
     enable_3dview_in_ship_browser = yes
@@ -8343,6 +8242,12 @@ headquarters = {
         }
     }
     possible_construction = {
+        hidden_trigger = {
+            exists = owner
+            owner = {
+                is_ai = no
+            }
+        }
         custom_tooltip = {
             fail_text = starbase_citadel_trigger
             OR = {
@@ -8401,8 +8306,8 @@ headquarters = {
         alloys = 50
     }
     ai_ship_data = {
-        min = 1
-        max = 1
+        min = value:str_value_ai_ship_data_min_headquarters
+        max = value:str_value_ai_ship_data_min_headquarters
     }
     required_component_set = "power_core"
     required_component_set = "sensor_components"
@@ -9186,7 +9091,6 @@ WS_military_station_large = {
     required_component_set = "power_core"
     required_component_set = "sensor_components"
     required_component_set = "combat_computers"
-    required_component_set = "ftl_inhibitor"
     build_block_radius = @build_block_radius_military
     possible_construction = {
         custom_tooltip = {
@@ -10891,7 +10795,6 @@ hornet = {
     required_component_set = "sensor_components"
     required_component_set = "combat_computers"
     required_component_set = "ftl_components"
-    required_component_set = "COMPOUND_IMMUNITY_AURA_SET"
     is_designable = no
 }
 stalker = {
@@ -10926,7 +10829,6 @@ stalker = {
     required_component_set = "sensor_components"
     required_component_set = "combat_computers"
     required_component_set = "ftl_components"
-    required_component_set = "COMPOUND_IMMUNITY_AURA_SET"
     is_designable = no
 }
 humiliator = {
@@ -10964,7 +10866,6 @@ humiliator = {
     required_component_set = "sensor_components"
     required_component_set = "combat_computers"
     required_component_set = "ftl_components"
-    required_component_set = "COMPOUND_IMMUNITY_AURA_SET"
     is_designable = no
 }
 apex = {
@@ -11002,7 +10903,6 @@ apex = {
     required_component_set = "sensor_components"
     required_component_set = "combat_computers"
     required_component_set = "ftl_components"
-    required_component_set = "COMPOUND_IMMUNITY_AURA_SET"
     is_designable = no
 }
 sovereign = {
@@ -11041,7 +10941,6 @@ sovereign = {
     required_component_set = "sensor_components"
     required_component_set = "combat_computers"
     required_component_set = "ftl_components"
-    required_component_set = "COMPOUND_IMMUNITY_AURA_SET"
     is_designable = no
 }
 architect = {
@@ -11071,7 +10970,6 @@ architect = {
     required_component_set = "thruster_components"
     required_component_set = "sensor_components"
     required_component_set = "ftl_components"
-    required_component_set = "COMPOUND_IMMUNITY_AURA_SET"
 }
 propagator = {
     is_space_object = yes
@@ -11099,7 +10997,6 @@ propagator = {
     required_component_set = "thruster_components"
     required_component_set = "sensor_components"
     required_component_set = "ftl_components"
-    required_component_set = "COMPOUND_IMMUNITY_AURA_SET"
 }
 reshaper = {
     formation_priority = @colossus_formation_priority
@@ -11129,7 +11026,6 @@ reshaper = {
     required_component_set = "sensor_components"
     required_component_set = "combat_computers"
     required_component_set = "ftl_components"
-    required_component_set = "COMPOUND_IMMUNITY_AURA_SET"
     class = shipclass_military_special
 }
 annihilator = {
@@ -11822,7 +11718,7 @@ gpm_crystal_ship_large_blue_elite = {
         }
     }
     num_target_locators = 0
-    icon_frame = 12
+    icon = ship_size_space_monster
     class = shipclass_military
     is_designable = no
 }
@@ -11846,7 +11742,7 @@ gpm_crystal_ship_large_green_elite = {
         }
     }
     num_target_locators = 0
-    icon_frame = 12
+    icon = ship_size_space_monster
     class = shipclass_military
     is_designable = no
 }
@@ -11870,7 +11766,7 @@ gpm_crystal_ship_large_yellow_elite = {
         }
     }
     num_target_locators = 0
-    icon_frame = 12
+    icon = ship_size_space_monster
     class = shipclass_military
     is_designable = no
 }
@@ -11894,7 +11790,7 @@ gpm_crystal_ship_large_red_elite = {
         }
     }
     num_target_locators = 0
-    icon_frame = 12
+    icon = ship_size_space_monster
     class = shipclass_military
     is_designable = no
 }
@@ -11916,7 +11812,7 @@ gpm_manufactorium_ship = {
         }
     }
     num_target_locators = 0
-    icon_frame = 9
+    icon = ship_size_military_1
     is_space_station = no
     is_civilian = yes
     components_add_to_cost = no
@@ -11943,6 +11839,7 @@ gpm_precursor_destroyer = {
         ship_piracy_suppression_add = 8
     }
     ship_modifier = {
+        ship_hyperlane_range_add = -3
         ship_jumpdrive_cooldown_mult = -5
         ship_ftl_jumpdrive_range_mult = 5
         ship_weapon_damage = -0.75
@@ -11999,7 +11896,7 @@ gpm_ego = {
     num_target_locators = 4
     is_space_station = no
     build_block_radius = @build_block_radius_military_5
-    icon_frame = 7
+    icon = ship_size_space_monster
     class = shipclass_military
     is_designable = no
 }
@@ -12773,7 +12670,7 @@ mem_azran = {
     modifier = {
         ship_evasion_mult = -0.5
         ship_weapon_damage = 1
-        ship_shield_regen_add_perc = 2
+        ship_shield_regen_add_perc = 0.4
         ship_shield_mult = 10
         ship_accuracy_mult = 10
         ship_armor_mult = 1

@@ -18,7 +18,7 @@ gpm_orbital_spicer_drone = {
     resources = {
         category = planet_miners
         produces = {
-            rare_crystals = 4
+            rare_crystals = 5
         }
         upkeep = {
             energy = 1
@@ -26,6 +26,7 @@ gpm_orbital_spicer_drone = {
     }
     weight = {
         weight = @complex_drone_job_weight
+        mult = value:job_weights_modifier|JOB|gpm_orbital_spicer_drone|RESOURCE|rare_crystals|
         modifier = {
             factor = 1.1
             exists = owner
@@ -34,18 +35,6 @@ gpm_orbital_spicer_drone = {
                 has_valid_civic = civic_machine_assimilator
             }
             has_trait = trait_cybernetic
-        }
-        modifier = {
-            factor = 5
-            has_job = crystal_mining_drone
-            OR = {
-                has_trait = trait_robust
-                has_trait = trait_robot_efficient_processors
-            }
-        }
-        modifier = {
-            factor = 1.5
-            has_trait = trait_necrophage
         }
     }
 }

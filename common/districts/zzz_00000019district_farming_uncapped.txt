@@ -7,10 +7,12 @@ district_farming_uncapped = {
         OR = {
             uses_district_set = hive_world
             uses_district_set = shattered_ring_world
+            uses_district_set = pdnecroplanet
         }
     }
     potential = {
         OR = {
+            uses_district_set = pdnecroplanet
             uses_district_set = hive_world
             uses_district_set = shattered_ring_world
             AND = {

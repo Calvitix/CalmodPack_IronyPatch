@@ -44,6 +44,12 @@ entertainer = {
         mult = value:job_weights_modifier|JOB|entertainer|RESOURCE|unity|FACTOR|0.25|
         mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
         modifier = {
+            add = 1000
+            planet = {
+                free_amenities < 25
+            }
+        }
+        modifier = {
             factor = 0.2
             has_citizenship_rights = no
             NOT = {

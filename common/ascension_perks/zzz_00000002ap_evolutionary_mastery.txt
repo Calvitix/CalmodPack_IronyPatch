@@ -2,6 +2,7 @@
 @ap_evolutionary_mastery_COST_MULT = -0.25
 ap_evolutionary_mastery = {
     on_enabled = {
+        add_research_option = giga_tech_the_vat
         add_research_option = tech_genetic_resequencing
         if = {
             limit = {

@@ -1,0 +1,91 @@
+@tier3cost3 = 6000
+@tier3weight1 = 65
+tech_pdhabitat_1 = {
+    cost = @tier3cost3
+    area = engineering
+    category = {
+        voidcraft
+    }
+    tier = 3
+    prerequisites = {
+        tech_hydroponics
+    }
+    weight = @tier3weight1
+    weight_modifier = {
+        modifier = {
+            factor = 0.1
+            NOT = {
+                years_passed > 50
+            }
+        }
+        modifier = {
+            factor = 10
+            any_neighbor_country = {
+                has_technology = tech_pdhabitat_1
+            }
+        }
+        modifier = {
+            factor = 2
+            years_passed > 60
+        }
+        modifier = {
+            factor = 3
+            years_passed > 75
+        }
+        modifier = {
+            factor = 4
+            years_passed > 90
+        }
+        modifier = {
+            factor = 5
+            count_starbase_sizes = {
+                starbase_size = starbase_starhold
+                count >= 3
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_tradition = tr_expansion_adopt
+        }
+        modifier = {
+            factor = 1.25
+            has_tradition = tr_expansion_finish
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+        modifier = {
+            factor = 10
+            or = {
+                has_tradition = tr_expansion_finish
+                has_origin = origin_void_dwellers
+                has_origin = origin_shattered_ring
+                has_ascension_perk = ap_voidborn
+            }
+        }
+        modifier = {
+            factor = 10
+            years_passed > 50
+        }
+    }
+    prereqfor_desc = {
+        ship = {
+            title = "allow_1habs"
+            desc = "allow_1habs_DETAILS"
+        }
+    }
+    ai_weight = {
+        factor = 1
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+    }
+}

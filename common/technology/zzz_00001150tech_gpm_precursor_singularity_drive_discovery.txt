@@ -9,7 +9,7 @@ tech_gpm_precursor_singularity_drive_discovery = {
     ai_update_type = all
     weight = 1
     modifier = {
-        tech_cost_empire_size_mult = -0.08
+        country_government_civic_points_add = 1
     }
     weight_modifier = {
         factor = 0

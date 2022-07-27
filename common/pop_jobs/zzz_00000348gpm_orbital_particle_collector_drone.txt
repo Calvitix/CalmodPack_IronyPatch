@@ -1,7 +1,7 @@
 gpm_orbital_particle_collector_drone = {
     category = simple_drone
     condition_string = DRONE_JOB_TRIGGER
-    building_icon = building_crystal_mines
+    building_icon = building_energy_grid
     possible_pre_triggers = {
         has_owner = yes
         is_enslaved = no
@@ -27,17 +27,11 @@ gpm_orbital_particle_collector_drone = {
     }
     weight = {
         weight = @simple_drone_job_weight
-        modifier = {
-            factor = 2
-            OR = {
-                has_trait = trait_robot_superconductive
-                has_trait = trait_ingenious
-            }
-        }
+        mult = value:job_weights_modifier|JOB|gpm_orbital_particle_collector_drone|RESOURCE|energy|
         modifier = {
             factor = 0.9
             NOT = {
-                has_job = technician_drone
+                has_job = gpm_orbital_particle_collector_drone
             }
             owner = {
                 has_monthly_income = {
@@ -48,7 +42,7 @@ gpm_orbital_particle_collector_drone = {
         }
         modifier = {
             factor = 1.2
-            has_job = technician_drone
+            has_job = gpm_orbital_particle_collector_drone
         }
         modifier = {
             factor = 1.1
@@ -58,10 +52,6 @@ gpm_orbital_particle_collector_drone = {
                 has_valid_civic = civic_machine_assimilator
             }
             has_trait = trait_cybernetic
-        }
-        modifier = {
-            factor = 0.65
-            has_trait = trait_necrophage
         }
     }
 }

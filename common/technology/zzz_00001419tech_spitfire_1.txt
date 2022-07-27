@@ -25,15 +25,15 @@ tech_spitfire_1 = {
         }
         modifier = {
             factor = 0.1
-            years_passed < 60
+            years_passed < 120
         }
         modifier = {
             factor = 1
-            years_passed > 60
+            years_passed > 120
         }
         modifier = {
             factor = 10
-            years_passed > 70
+            years_passed > 140
         }
         modifier = {
             factor = value:tech_weight_likelihood

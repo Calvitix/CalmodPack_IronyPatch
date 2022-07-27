@@ -26,15 +26,15 @@ tech_supercarrier_1 = {
         }
         modifier = {
             factor = 0.1
-            years_passed < 100
+            years_passed < 160
         }
         modifier = {
             factor = 1
-            years_passed > 100
+            years_passed > 160
         }
         modifier = {
             factor = 10
-            years_passed > 110
+            years_passed > 170
         }
         modifier = {
             factor = value:tech_weight_likelihood

@@ -24,15 +24,15 @@ tech_starbase_6 = {
         }
         modifier = {
             factor = 0.1
-            years_passed < 120
+            years_passed < 140
         }
         modifier = {
             factor = 1
-            years_passed > 120
+            years_passed > 140
         }
         modifier = {
             factor = 10
-            years_passed > 130
+            years_passed > 160
         }
         modifier = {
             factor = value:tech_weight_likelihood

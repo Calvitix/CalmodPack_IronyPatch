@@ -106,7 +106,7 @@ guiTypes = {
         }
         instantTextBoxType = {
             name = "name"
-            font = "malgun_goth_24"
+            font = "font_header_20"
             text = "Starbase"
             position = {
                 x = -200
@@ -161,8 +161,8 @@ guiTypes = {
                     name = "title_hex"
                     quadTextureSprite = "GFX_small_hex_bg"
                     position = {
-                        x = -14
-                        y = -10
+                        x = -9
+                        y = -13
                     }
                     alwaysTransparent = yes
                 }
@@ -177,14 +177,14 @@ guiTypes = {
                 }
                 instantTextBoxType = {
                     name = "current_class_name"
-                    font = "malgun_goth_24"
+                    font = "font_header_20"
                     text = "STARBASE_MODULES"
                     position = {
-                        x = 17
-                        y = 7
+                        x = 19
+                        y = 0
                     }
                     maxWidth = 280
-                    maxHeight = 24
+                    maxHeight = 36
                     fixedSize = yes
                     format = left
                     vertical_alignment = center
@@ -223,35 +223,37 @@ guiTypes = {
                 }
                 instantTextBoxType = {
                     name = "next_class_name"
-                    font = "malgun_goth_24"
+                    font = "font_header_20"
                     text = "STARBASE_MODULES"
                     position = {
-                        x = 46
-                        y = 41
+                        x = 50
+                        y = 38
                     }
                     maxWidth = 280
-                    maxHeight = 24
+                    maxHeight = 36
+                    fixedSize = yes
                     format = left
                     vertical_alignment = center
                 }
                 instantTextBoxType = {
                     name = "cost"
-                    font = "malgun_goth_24"
+                    font = "font_header_20"
                     text = "COST"
                     position = {
                         x = -195
-                        y = 8
+                        y = 0
                     }
                     orientation = upper_right
                     maxWidth = 140
-                    maxHeight = 24
+                    maxHeight = 36
                     fixedSize = yes
                     format = right
                     text_color_code = "H"
+                    vertical_alignment = center
                 }
                 instantTextBoxType = {
                     name = "time"
-                    font = "malgun_goth_24"
+                    font = "font_header_20"
                     text = "TIME"
                     position = {
                         x = -195
@@ -259,17 +261,18 @@ guiTypes = {
                     }
                     orientation = upper_right
                     maxWidth = 140
-                    maxHeight = 24
+                    maxHeight = 36
                     fixedSize = yes
                     format = right
+                    vertical_alignment = center
                     text_color_code = "H"
                 }
                 buttonType = {
                     name = "upgrade"
                     quadTextureSprite = "GFX_ui_button_up"
                     position = {
-                        x = 0
-                        y = 35
+                        x = 6
+                        y = 37
                     }
                     clicksound = "click_upgrade_starbase"
                     shortcut = "U"
@@ -313,7 +316,7 @@ guiTypes = {
                 }
                 instantTextBoxType = {
                     name = "modules_label"
-                    font = "malgun_goth_24"
+                    font = "font_header_20"
                     text = "STARBASE_MODULES"
                     position = {
                         x = 0
@@ -353,9 +356,9 @@ guiTypes = {
                         x = 37
                         y = 0
                     }
-                    buttonFont = "cg_16b"
+                    buttonFont = "font_text_14"
                     text = "TRADE_ROUTES"
-                    font = "cg_16b"
+                    font = "font_text_14"
                     shortcut = "T"
                 }
                 gridBoxType = {
@@ -415,7 +418,7 @@ guiTypes = {
                 }
                 instantTextBoxType = {
                     name = "buildings_label"
-                    font = "malgun_goth_24"
+                    font = "font_header_20"
                     text = "STARBASE_BUILDINGS"
                     position = {
                         x = 0
@@ -507,7 +510,7 @@ guiTypes = {
                 }
                 instantTextBoxType = {
                     name = "no_constructions"
-                    font = "malgun_goth_24"
+                    font = "font_header_20"
                     text = "STARBASE_QUEUE"
                     position = {
                         x = 0
@@ -583,7 +586,7 @@ guiTypes = {
                 }
                 instantTextBoxType = {
                     name = "defense_platform_capacity"
-                    font = "cg_16b"
+                    font = "font_text_14"
                     text = "STARBASE_DEFENSE_PLATFORM_CAPACITY"
                     position = {
                         x = 10
@@ -602,7 +605,7 @@ guiTypes = {
                         y = 2
                     }
                     orientation = upper_right
-                    buttonFont = "cg_16b"
+                    buttonFont = "font_text_14"
                     shortcut = "U"
                 }
                 buttonType = {
@@ -613,7 +616,7 @@ guiTypes = {
                         y = 2
                     }
                     orientation = upper_right
-                    buttonFont = "cg_16b"
+                    buttonFont = "font_text_14"
                     pdx_tooltip = "DISBAND"
                 }
             }
@@ -633,7 +636,7 @@ guiTypes = {
                 }
                 instantTextBoxType = {
                     name = "orbitals_label"
-                    font = "malgun_goth_24"
+                    font = "font_header_20"
                     text = "DOCKED"
                     position = {
                         x = 0
@@ -647,7 +650,7 @@ guiTypes = {
                 }
                 instantTextBoxType = {
                     name = "no_orbitals"
-                    font = "cg_16b"
+                    font = "font_text_14"
                     text = "STARBASE_NO_PLATFORMS"
                     position = {
                         x = 0
@@ -718,7 +721,7 @@ guiTypes = {
                 }
                 instantTextBoxType = {
                     name = "no_constructions"
-                    font = "malgun_goth_24"
+                    font = "font_header_20"
                     text = "DEFENSE_QUEUE"
                     position = {
                         x = 0
@@ -815,7 +818,7 @@ guiTypes = {
                         x = 75
                         y = 24
                     }
-                    font = "malgun_goth_24"
+                    font = "font_header_20"
                     text = "STARBASE_SHIPYARD_CAPACITY"
                     maxWidth = 200
                     maxHeight = 26
@@ -862,7 +865,7 @@ guiTypes = {
                 }
                 instantTextBoxType = {
                     name = "orbitals_label"
-                    font = "malgun_goth_24"
+                    font = "font_header_20"
                     text = "DOCKED"
                     position = {
                         x = 0
@@ -876,7 +879,7 @@ guiTypes = {
                 }
                 instantTextBoxType = {
                     name = "no_orbitals"
-                    font = "cg_16b"
+                    font = "font_text_14"
                     text = "PLANETVIEW_NO_DOCKED"
                     position = {
                         x = 0
@@ -955,7 +958,7 @@ guiTypes = {
                 }
                 instantTextBoxType = {
                     name = "title"
-                    font = "cg_16b"
+                    font = "font_text_14"
                     text = "STARBASE_MODIFIER_EFFECTS"
                     position = {
                         x = 0
@@ -1009,7 +1012,7 @@ guiTypes = {
                 }
                 instantTextBoxType = {
                     name = "no_constructions"
-                    font = "malgun_goth_24"
+                    font = "font_header_20"
                     text = "SHIPYARD_QUEUE"
                     position = {
                         x = 0
@@ -1116,7 +1119,7 @@ guiTypes = {
                     y = 0
                 }
                 buttonText = "STARBASE_STARBASE_TAB"
-                buttonFont = "cg_16b"
+                buttonFont = "font_text_14"
                 clicksound = "tab_click"
                 shortcut = "w"
             }
@@ -1128,7 +1131,7 @@ guiTypes = {
                     y = 0
                 }
                 buttonText = "STARBASE_STARBASE_TAB"
-                buttonFont = "cg_16b"
+                buttonFont = "font_text_14"
                 clicksound = "tab_click"
                 shortcut = "w"
             }
@@ -1140,7 +1143,7 @@ guiTypes = {
                     y = 0
                 }
                 buttonText = "STARBASE_DEFENSES_TAB"
-                buttonFont = "cg_16b"
+                buttonFont = "font_text_14"
                 clicksound = "tab_click"
                 shortcut = "x"
             }
@@ -1152,7 +1155,7 @@ guiTypes = {
                     y = 0
                 }
                 buttonText = "STARBASE_DEFENSES_TAB"
-                buttonFont = "cg_16b"
+                buttonFont = "font_text_14"
                 clicksound = "tab_click"
                 shortcut = "x"
             }
@@ -1164,7 +1167,7 @@ guiTypes = {
                     y = 0
                 }
                 buttonText = "STARBASE_SHIPYARD_TAB"
-                buttonFont = "cg_16b"
+                buttonFont = "font_text_14"
                 clicksound = "tab_click"
                 shortcut = "c"
             }
@@ -1176,7 +1179,7 @@ guiTypes = {
                     y = 0
                 }
                 buttonText = "STARBASE_SHIPYARD_TAB"
-                buttonFont = "cg_16b"
+                buttonFont = "font_text_14"
                 clicksound = "tab_click"
                 shortcut = "c"
             }

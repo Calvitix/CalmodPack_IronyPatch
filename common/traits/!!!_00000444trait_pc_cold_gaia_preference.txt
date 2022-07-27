@@ -1,4 +1,3 @@
-@pdbadhab = -5
 trait_pc_cold_gaia_preference = {
     icon = "gfx/interface/icons/traits/trait_pc_gaia_preference.dds"
     species_potential_add = {
@@ -23,6 +22,6 @@ trait_pc_cold_gaia_preference = {
         potential = {
             is_pd_bad_exotic = yes
         }
-        pop_environment_tolerance = @pdbadhab
+        pop_environment_tolerance = -2
     }
 }

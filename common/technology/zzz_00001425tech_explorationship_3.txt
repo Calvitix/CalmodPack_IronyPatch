@@ -31,7 +31,7 @@ tech_explorationship_3 = {
         }
         modifier = {
             factor = 10
-            years_passed > 100
+            years_passed > 120
         }
         modifier = {
             factor = 1.25

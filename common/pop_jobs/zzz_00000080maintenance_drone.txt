@@ -43,21 +43,7 @@ maintenance_drone = {
         mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
     }
     weight = {
-        weight = @clerk_job_weight
-        modifier = {
-            add = @maintenance_drone_job
-            exists = owner
-            owner = {
-                is_ai = no
-            }
-        }
-        modifier = {
-            add = -2.2
-            exists = owner
-            owner = {
-                is_ai = no
-            }
-        }
+        weight = @maintenance_drone_job
         mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
         modifier = {
             mult = value:job_weights_modifier|JOB|maintenance_drone|RESOURCE|unity|FACTOR|0.25|
@@ -77,10 +63,6 @@ maintenance_drone = {
         }
         modifier = {
             factor = 1000
-            exists = owner
-            owner = {
-                is_ai = no
-            }
             NOT = {
                 has_job = maintenance_drone
             }
@@ -90,10 +72,6 @@ maintenance_drone = {
         }
         modifier = {
             factor = 1000
-            exists = owner
-            owner = {
-                is_ai = no
-            }
             has_job = maintenance_drone
             planet = {
                 free_amenities < 8

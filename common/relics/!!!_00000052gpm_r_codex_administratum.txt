@@ -21,9 +21,24 @@ gpm_r_codex_administratum = {
     }
     score = 1000
     active_effect = {
-        add_modifier = {
-            modifier = "gpm_r_codex_administratum_active_effect"
-            days = @triumph_duration
+        if = {
+            limit = {
+                is_machine_empire = yes
+            }
+            add_modifier = {
+                modifier = "relay_network_stability_edict_modifier"
+                multiplier = 3.34
+                days = @triumph_duration
+            }
+        }
+        if = {
+            limit = {
+                is_machine_empire = no
+            }
+            add_modifier = {
+                modifier = "gpm_r_codex_administratum_active_effect"
+                days = @triumph_duration
+            }
         }
         custom_tooltip = relic_triumph_cooldown
         hidden_effect = {

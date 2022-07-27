@@ -27,6 +27,9 @@ district_arcology_leisure = {
             }
         }
     }
+    allow = {
+        str_habitat_culture_allow = yes
+    }
     conversion_ratio = 1
     convert_to = {
         district_arcology_organic_housing

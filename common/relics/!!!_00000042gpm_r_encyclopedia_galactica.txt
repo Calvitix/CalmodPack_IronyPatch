@@ -17,7 +17,7 @@ gpm_r_encyclopedia_galactica = {
         potential = {
             always = yes
         }
-        empire_size_mult = -0.2
+        num_tech_alternatives_add = 4
     }
     score = 1000
     active_effect = {

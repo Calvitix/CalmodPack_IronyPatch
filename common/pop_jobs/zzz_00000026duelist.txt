@@ -36,6 +36,12 @@ duelist = {
         mult = value:job_weights_modifier|JOB|duelist|RESOURCE|unity|
         mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
         modifier = {
+            add = 1000
+            planet = {
+                free_amenities < 25
+            }
+        }
+        modifier = {
             factor = 0.1
             has_ethic = ethic_pacifist
             NOT = {

@@ -24,7 +24,7 @@ tech_field_manipulation_breakthrough = {
     modifier = {
         country_physics_tech_research_speed = 0.3
         ship_shield_mult = 0.2
-        ship_shield_regen_add_perc = 5
+        ship_shield_regen_add_perc = 1
     }
     weight_modifier = {
         modifier = {

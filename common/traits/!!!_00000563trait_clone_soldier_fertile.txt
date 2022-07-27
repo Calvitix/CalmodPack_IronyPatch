@@ -28,7 +28,4 @@ trait_clone_soldier_fertile = {
         pop_government_ethic_attraction = 0.2
         army_damage_mult = 0.2
     }
-    slave_cost = {
-        energy = 1000
-    }
 }

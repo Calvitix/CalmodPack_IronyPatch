@@ -42,15 +42,15 @@ tech_Flagship_1 = {
         }
         modifier = {
             factor = 0.1
-            years_passed < 140
+            years_passed < 180
         }
         modifier = {
             factor = 1
-            years_passed > 140
+            years_passed > 180
         }
         modifier = {
             factor = 10
-            years_passed >= 160
+            years_passed >= 220
         }
         modifier = {
             factor = @ap_technological_ascendancy_rare_tech

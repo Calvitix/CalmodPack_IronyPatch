@@ -1,7 +1,7 @@
 gpm_orbital_mineral_miner_drone = {
     category = simple_drone
     condition_string = DRONE_JOB_TRIGGER
-    building_icon = building_crystal_mines
+    building_icon = building_mineral_purification_plant
     possible_pre_triggers = {
         has_owner = yes
         is_enslaved = no
@@ -21,13 +21,7 @@ gpm_orbital_mineral_miner_drone = {
     }
     weight = {
         weight = @simple_drone_job_weight
-        modifier = {
-            factor = 2
-            OR = {
-                has_trait = trait_industrious
-                has_trait = trait_robot_power_drills
-            }
-        }
+        mult = value:job_weights_modifier|JOB|gpm_orbital_mineral_miner_drone|RESOURCE|minerals|
         modifier = {
             factor = 1.1
             exists = owner
@@ -39,12 +33,12 @@ gpm_orbital_mineral_miner_drone = {
         }
         modifier = {
             factor = 1.2
-            has_job = mining_drone
+            has_job = gpm_orbital_mineral_miner_drone
         }
         modifier = {
             factor = 0.9
             NOT = {
-                has_job = mining_drone
+                has_job = gpm_orbital_mineral_miner_drone
             }
             owner = {
                 has_monthly_income = {
@@ -52,10 +46,6 @@ gpm_orbital_mineral_miner_drone = {
                     value > 85
                 }
             }
-        }
-        modifier = {
-            factor = 0.65
-            has_trait = trait_necrophage
         }
     }
 }

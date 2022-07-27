@@ -2,7 +2,7 @@ hyper_relay = {
     entity = "hyper_relay_entity"
     construction_entity = "hyper_relay_entity"
     construction_blocks_and_blocked_by = none
-    portrait = "GFX_megastructure_construction_background"
+    portrait = "GFX_megastructure_hyper_relay_background"
     place_entity_on_planet_plane = no
     build_outside_gravity_well = yes
     show_galactic_map_icon = no
@@ -21,12 +21,29 @@ hyper_relay = {
     construction_blocks_and_blocked_by = self_type
     potential = {
         has_technology = tech_hyper_relays
+        custom_tooltip = {
+            fail_text = "requires_some_ai_fixes_on_players_disabled"
+            if = {
+                limit = {
+                    has_global_flag = ai_hyper_relay_construction_flag
+                    has_global_flag = ai_and_player_flag
+                }
+                always = no
+            }
+            else_if = {
+                limit = {
+                    has_global_flag = ai_hyper_relay_construction_flag
+                }
+                is_ai = no
+            }
+        }
     }
     possible = {
         exists = starbase
         custom_tooltip = {
             fail_text = "requires_inside_border_or_subject"
             OR = {
+                mmghyper_is_starless = yes
                 is_inside_border = from
                 AND = {
                     exists = owner
@@ -79,7 +96,7 @@ hyper_relay = {
     placement_rules = {
     }
     ai_weight = {
-        factor = 10
+        factor = 5
         modifier = {
             factor = 0.2
             owner = {
@@ -101,11 +118,11 @@ hyper_relay = {
         }
         modifier = {
             factor = 3
-            has_star_flag = mmghyper_path_to_capital
+            has_star_flag = mmghyper_path_to_capital@FROM
         }
         modifier = {
             factor = 2
-            has_star_flag = mmghyper_path_to_sector_capital
+            has_star_flag = mmghyper_path_to_sector_capital@FROM
         }
         modifier = {
             factor = 1.5
@@ -115,48 +132,19 @@ hyper_relay = {
         }
         modifier = {
             factor = 0
-            NOR = {
-                is_capital_system = yes
-                AND = {
-                    NOT = {
-                        has_star_flag = mmghyper_path_to_capital
-                    }
-                    any_system_planet = {
-                        is_sector_capital = yes
-                        colony_age > 120
-                    }
-                }
-                AND = {
-                    any_neighbor_system = {
-                        exists = owner
-                        owner = {
-                            is_country = prevprev.owner
-                        }
-                        mmghyper_has_hyper_relay = yes
-                    }
-                    OR = {
-                        has_star_flag = mmghyper_path_to_capital
-                        has_star_flag = mmghyper_path_to_sector_capital
-                    }
-                }
-                AND = {
-                    any_neighbor_system = {
-                        exists = owner
-                        owner = {
-                            is_country = prevprev.owner
-                        }
-                        mmghyper_has_hyper_relay = yes
-                    }
-                    any_neighbor_system = {
-                        exists = owner
-                        owner = {
-                            NOT = {
-                                is_country = prevprev.owner
-                            }
-                        }
-                    }
+            NOT = {
+                mmghyper_is_ai_build_target = {
+                    COUNTRY = from
                 }
             }
+        }
+        modifier = {
+            factor = 0.2
+            from = {
+                is_gestalt = no
+            }
+            is_capital_system = no
+            has_trade_route = no
         }
     }
     bypass_type = relay_bypass
@@ -165,9 +153,20 @@ hyper_relay = {
     on_build_cancel = {
     }
     on_build_complete = {
-        from = {
-            country_event = {
-                id = tutorial.2131
+        if = {
+            limit = {
+                exists = from
+            }
+            from = {
+                country_event = {
+                    id = tutorial.2131
+                }
+            }
+        }
+        solar_system = {
+            system_event = {
+                id = mmghyper.11
+                days = 1
             }
         }
     }

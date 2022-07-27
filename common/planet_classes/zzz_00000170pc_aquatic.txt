@@ -34,5 +34,6 @@ pc_aquatic = {
         planet_jobs_produces_mult = 0.1
         biological_pop_happiness = 0.1
         lithoid_pop_happiness = 0.1
+        planet_resettlement_unemployed_destination_mult = 0.5
     }
 }

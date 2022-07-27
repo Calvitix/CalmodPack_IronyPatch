@@ -1,7 +1,7 @@
 gpm_android_entertainer = {
     category = specialist
     condition_string = SPECIALIST_JOB_TRIGGER
-    building_icon = building_residence
+    building_icon = building_autochthon_monument
     clothes_texture_index = 3
     possible_pre_triggers = {
         has_owner = yes
@@ -16,7 +16,7 @@ gpm_android_entertainer = {
     resources = {
         category = planet_entertainers
         produces = {
-            unity = 1
+            unity = 3
         }
     }
     planet_modifier = {
@@ -24,22 +24,10 @@ gpm_android_entertainer = {
     }
     triggered_planet_modifier = {
         potential = {
-            OR = {
-                has_trait = trait_robot_domestic_protocols
-                has_trait = trait_charismatic
-            }
+            always = yes
         }
-        modifier = {
-            planet_amenities_add = 2
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            has_trait = trait_repugnant
-        }
-        modifier = {
-            planet_amenities_add = -2
-        }
+        planet_amenities_add = 2
+        mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
     }
     triggered_planet_modifier = {
         potential = {
@@ -54,6 +42,8 @@ gpm_android_entertainer = {
     }
     weight = {
         weight = @specialist_job_weight
+        mult = value:job_weights_modifier|JOB|gpm_android_entertainer|RESOURCE|unity|
+        mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
         modifier = {
             factor = 0.2
             has_citizenship_rights = no
@@ -62,77 +52,12 @@ gpm_android_entertainer = {
             }
         }
         modifier = {
-            factor = 3
-            has_trait = trait_robot_domestic_protocols
-            OR = {
-                is_non_sapient_robot = yes
-                is_shackled_robot = yes
-            }
-        }
-        modifier = {
-            factor = 1.5
-            OR = {
-                has_trait = trait_robot_domestic_protocols
-                has_trait = trait_charismatic
-            }
-        }
-        modifier = {
-            factor = 0.5
-            has_trait = trait_repugnant
-        }
-        modifier = {
-            factor = 1.25
-            OR = {
-                has_trait = trait_traditional
-                has_trait = trait_robot_propaganda_machines
-            }
-        }
-        modifier = {
-            factor = 0.75
-            has_trait = trait_quarrelsome
-        }
-        modifier = {
-            factor = 1.5
-            has_job = entertainer
-        }
-        modifier = {
-            factor = 1.25
-            has_trait = trait_brainslug
-        }
-        modifier = {
-            factor = 1.1
-            has_trait = trait_presapient_natural_intellectuals
-        }
-        modifier = {
             factor = 0.1
-            is_domestic_servant = yes
-        }
-        modifier = {
-            factor = 1.1
-            OR = {
-                has_trait = trait_robust
-                has_trait = trait_robot_efficient_processors
-            }
+            can_take_servant_job = yes
         }
         modifier = {
             factor = 1.5
-            has_trait = trait_void_dweller_1
-            exists = planet
-            planet = {
-                is_planet_class = pc_habitat
-            }
-        }
-        modifier = {
-            factor = 0.85
-            has_trait = trait_void_dweller_1
-            exists = planet
-            planet = {
-                is_artificial = no
-            }
-        }
-        modifier = {
-            factor = 1.25
-            has_trait = trait_necrophage
+            has_job = gpm_android_entertainer
         }
     }
 }

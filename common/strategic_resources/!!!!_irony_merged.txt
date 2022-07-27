@@ -1390,6 +1390,7 @@ sr_zro = {
     visibility_prerequisite = {
         always = yes
     }
+    deficit_modifier = zro_deficit
     ai_weight = {
         weight = 100
     }

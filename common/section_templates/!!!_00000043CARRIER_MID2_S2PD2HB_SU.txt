@@ -3,7 +3,7 @@ ship_section_template = {
     key = "CARRIER_MID2_S2PD2HB_SU"
     ship_size = Carrier
     fits_on_slot = mid2
-    entity = "Carrier_mid2_S4LHB_entity"
+    entity = "battleship_mid_S4LHB_entity"
     icon = "GFX_ship_part_core_mid"
     prerequisites = {
         "tech_supercarrier_1"

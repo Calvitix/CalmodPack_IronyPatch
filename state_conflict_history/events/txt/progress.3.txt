@@ -1,0 +1,331 @@
+namespace = progress
+planet_event = {
+    id = progress.3
+    title = "progress.3.name"
+    picture = GFX_evt_big_landing_ship
+    location = root
+    desc = {
+        text = progress.3.desc_lith
+        trigger = {
+            exists = FROM
+            FROM = {
+                is_ship_size = lithoid_colonizer
+            }
+        }
+    }
+    desc = {
+        text = progress.3.desc_01
+        trigger = {
+            is_pd_continental = yes
+            NOR = {
+                owner = {
+                    has_authority = auth_machine_intelligence
+                }
+                AND = {
+                    exists = FROM
+                    FROM = {
+                        is_ship_size = lithoid_colonizer
+                    }
+                }
+            }
+        }
+    }
+    desc = {
+        text = progress.3.desc_02
+        trigger = {
+            is_pd_ocean = yes
+            NOR = {
+                owner = {
+                    has_authority = auth_machine_intelligence
+                }
+                AND = {
+                    exists = FROM
+                    FROM = {
+                        is_ship_size = lithoid_colonizer
+                    }
+                }
+            }
+        }
+    }
+    desc = {
+        text = progress.3.desc_03
+        trigger = {
+            is_pd_desert = yes
+            NOR = {
+                owner = {
+                    has_authority = auth_machine_intelligence
+                }
+                AND = {
+                    exists = FROM
+                    FROM = {
+                        is_ship_size = lithoid_colonizer
+                    }
+                }
+            }
+        }
+    }
+    desc = {
+        text = progress.3.desc_04
+        trigger = {
+            is_pd_tropical = yes
+            NOR = {
+                owner = {
+                    has_authority = auth_machine_intelligence
+                }
+                AND = {
+                    exists = FROM
+                    FROM = {
+                        is_ship_size = lithoid_colonizer
+                    }
+                }
+            }
+        }
+    }
+    desc = {
+        text = progress.3.desc_05
+        trigger = {
+            is_pd_arid = yes
+            NOR = {
+                owner = {
+                    has_authority = auth_machine_intelligence
+                }
+                AND = {
+                    exists = FROM
+                    FROM = {
+                        is_ship_size = lithoid_colonizer
+                    }
+                }
+            }
+        }
+    }
+    desc = {
+        text = progress.3.desc_06
+        trigger = {
+            is_pd_tundra = yes
+            NOR = {
+                owner = {
+                    has_authority = auth_machine_intelligence
+                }
+                AND = {
+                    exists = FROM
+                    FROM = {
+                        is_ship_size = lithoid_colonizer
+                    }
+                }
+            }
+        }
+    }
+    desc = {
+        text = progress.3.desc_07
+        trigger = {
+            is_pd_arctic = yes
+            NOR = {
+                owner = {
+                    has_authority = auth_machine_intelligence
+                }
+                AND = {
+                    exists = FROM
+                    FROM = {
+                        is_ship_size = lithoid_colonizer
+                    }
+                }
+            }
+        }
+    }
+    desc = {
+        text = progress.3.desc_08
+        trigger = {
+            is_pd_savannah = yes
+            NOR = {
+                owner = {
+                    has_authority = auth_machine_intelligence
+                }
+                AND = {
+                    exists = FROM
+                    FROM = {
+                        is_ship_size = lithoid_colonizer
+                    }
+                }
+            }
+        }
+    }
+    desc = {
+        text = progress.3.desc_09
+        trigger = {
+            is_planet_class = pc_alpine
+            NOR = {
+                owner = {
+                    has_authority = auth_machine_intelligence
+                }
+                AND = {
+                    exists = FROM
+                    FROM = {
+                        is_ship_size = lithoid_colonizer
+                    }
+                }
+            }
+        }
+    }
+    desc = {
+        text = progress.3.desc_gaia
+        trigger = {
+            is_planet_class = pc_gaia
+            NOR = {
+                owner = {
+                    has_authority = auth_machine_intelligence
+                }
+                AND = {
+                    exists = FROM
+                    FROM = {
+                        is_ship_size = lithoid_colonizer
+                    }
+                }
+            }
+        }
+    }
+    desc = {
+        text = progress.3.desc_relic
+        trigger = {
+            is_planet_class = pc_relic
+            NOR = {
+                owner = {
+                    has_authority = auth_machine_intelligence
+                }
+                AND = {
+                    exists = FROM
+                    FROM = {
+                        is_ship_size = lithoid_colonizer
+                    }
+                }
+            }
+        }
+    }
+    desc = {
+        text = progress.3.desc_city
+        trigger = {
+            is_planet_class = pc_city
+            NOR = {
+                owner = {
+                    has_authority = auth_machine_intelligence
+                }
+                AND = {
+                    exists = FROM
+                    FROM = {
+                        is_ship_size = lithoid_colonizer
+                    }
+                }
+            }
+        }
+    }
+    desc = {
+        text = progress.3.desc_nuked
+        trigger = {
+            is_planet_class = pc_nuked
+            NOR = {
+                owner = {
+                    has_authority = auth_machine_intelligence
+                }
+                AND = {
+                    exists = FROM
+                    FROM = {
+                        is_ship_size = lithoid_colonizer
+                    }
+                }
+            }
+        }
+    }
+    desc = {
+        text = progress.3.desc_ringworld
+        trigger = {
+            is_ringworld = yes
+            NOR = {
+                owner = {
+                    has_authority = auth_machine_intelligence
+                }
+                AND = {
+                    exists = FROM
+                    FROM = {
+                        is_ship_size = lithoid_colonizer
+                    }
+                }
+            }
+        }
+    }
+    desc = {
+        text = progress.3.desc_other
+        trigger = {
+            NOR = {
+                is_planet_class = pc_continental
+                is_planet_class = pc_ocean
+                is_planet_class = pc_desert
+                is_planet_class = pc_tropical
+                is_planet_class = pc_arid
+                is_planet_class = pc_tundra
+                is_planet_class = pc_arctic
+                is_planet_class = pc_savannah
+                is_planet_class = pc_alpine
+                is_planet_class = pc_gaia
+                is_planet_class = pc_relic
+                is_planet_class = pc_city
+                is_planet_class = pc_nuked
+                is_planet_class = pc_habitat
+                is_ringworld = yes
+            }
+            NOT = {
+                owner = {
+                    has_authority = auth_machine_intelligence
+                }
+            }
+            NOT = {
+                FROM = {
+                    exists = FROM
+                    is_ship_size = lithoid_colonizer
+                }
+            }
+        }
+    }
+    desc = {
+        text = progress.3.desc_10
+        trigger = {
+            owner = {
+                has_authority = auth_machine_intelligence
+            }
+        }
+    }
+    is_triggered_only = yes
+    trigger = {
+        NOR = {
+            is_planet_class = pc_gaia
+            is_pd_gaia = yes
+            is_planet_class = pc_habitat
+            is_ringworld = yes
+            is_planet_class = pc_relic
+            is_planet_class = pc_nuked
+            owner = {
+                has_origin = origin_remnants
+            }
+        }
+        owner = {
+            NOT = {
+                has_country_flag = first_colony
+            }
+            num_owned_planets < 3
+        }
+    }
+    immediate = {
+        owner = {
+            set_country_flag = first_colony
+        }
+    }
+    option = {
+        name = "progress.3.a"
+        owner = {
+            add_monthly_resource_mult = {
+                resource = engineering_research
+                value = @tier1researchreward
+                min = @tier1researchmin
+                max = @tier1researchmax
+            }
+        }
+    }
+}

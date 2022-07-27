@@ -29,15 +29,15 @@ tech_Carrier_1 = {
         }
         modifier = {
             factor = 0.1
-            years_passed < 80
+            years_passed < 120
         }
         modifier = {
             factor = 1
-            years_passed > 80
+            years_passed > 120
         }
         modifier = {
             factor = 10
-            years_passed > 90
+            years_passed > 140
         }
         modifier = {
             factor = value:tech_weight_likelihood

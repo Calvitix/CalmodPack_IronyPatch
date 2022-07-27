@@ -26,6 +26,6 @@ tech_crys_repeatable_shield_regen = {
         repeatable = 0.01
     }
     modifier = {
-        ship_shield_regen_add_perc = 0.5
+        ship_shield_regen_add_perc = 0.1
     }
 }

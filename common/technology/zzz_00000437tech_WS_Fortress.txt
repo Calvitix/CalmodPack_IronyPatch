@@ -8,6 +8,7 @@ tech_WS_Fortress = {
     prerequisites = {
         "tech_starbase_4"
         "tech_ftl_inhibitor"
+        "tech_habitat_1"
     }
     weight = @tier4cost3
     weight_modifier = {
