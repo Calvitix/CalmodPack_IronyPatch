@@ -11,13 +11,13 @@ mega_shipyard_restored = {
         mega_shipyard_ruined
     }
     ship_modifier = {
-        ship_starting_experience_add = 100
+        ship_starting_experience_add = 800
     }
     station_modifier = {
-        starbase_shipyard_capacity_add = 20
+        starbase_shipyard_capacity_add = 50
     }
     country_modifier = {
-        starbase_shipyard_build_speed_mult = 1
+        starbase_shipyard_build_speed_mult = 1.25
     }
     build_time = 3600
     resources = {

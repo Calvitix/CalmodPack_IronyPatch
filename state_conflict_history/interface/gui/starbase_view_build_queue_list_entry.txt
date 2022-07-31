@@ -1,0 +1,110 @@
+guiTypes = {
+    containerWindowType = {
+        name = "starbase_view_build_queue_list_entry"
+        size = {
+            width = 257
+            height = 52
+        }
+        background = {
+            name = "planet_view_module_spaceport_buildqueue_entry_background"
+            spriteType = "GFX_tiles_dark_area_cut_8"
+            clicksound = "back_click"
+        }
+        iconType = {
+            name = "icon"
+            position = {
+                x = 5
+                y = 5
+            }
+            spriteType = "GFX_ship_class_small"
+            alwaysTransparent = yes
+            tooltip_mode_enabled = yes
+        }
+        instantTextBoxType = {
+            name = "title"
+            font = "font_text_14"
+            text = ""
+            position = {
+                x = 34
+                y = 3
+            }
+            maxWidth = 140
+            maxHeight = 16
+            fixedSize = yes
+            format = left
+            alwaysTransparent = yes
+        }
+        instantTextBoxType = {
+            name = "time"
+            font = "font_text_14"
+            text = ""
+            position = {
+                x = 175
+                y = 3
+            }
+            maxWidth = 54
+            maxHeight = 16
+            fixedSize = yes
+            format = right
+        }
+        iconType = {
+            name = "progressbar"
+            spriteType = "GFX_queue_progressbar"
+            position = {
+                x = 13
+                y = 36
+            }
+            alwaysTransparent = yes
+        }
+        instantTextBoxType = {
+            name = "name"
+            font = "font_text_14"
+            text = ""
+            position = {
+                x = 34
+                y = 19
+            }
+            maxWidth = 200
+            maxHeight = 16
+            fixedSize = yes
+            format = left
+            alwaysTransparent = yes
+            text_color_code = "E"
+        }
+        buttonType = {
+            name = "cancel_button"
+            position = {
+                x = -1
+                y = -1
+            }
+            size = {
+                x = 259
+                y = 54
+            }
+            quadTextureSprite = "GFX_button_light"
+            clicksound = "back_click"
+        }
+        buttonType = {
+            name = "priority_upwards"
+            quadTextureSprite = "GFX_button_up"
+            position = {
+                x = 231
+                y = -2
+            }
+            buttonFont = "font_text_14"
+            pdx_tooltip = "STARBASE_BUILDQUEUE_UP"
+            clicksound = "increment_click"
+        }
+        buttonType = {
+            name = "priority_downwards"
+            quadTextureSprite = "GFX_button_down"
+            position = {
+                x = 231
+                y = 26
+            }
+            buttonFont = "font_text_14"
+            pdx_tooltip = "STARBASE_BUILDQUEUE_DOWN"
+            clicksound = "decrement_click"
+        }
+    }
+}

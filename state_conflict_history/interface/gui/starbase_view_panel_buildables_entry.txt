@@ -1,0 +1,31 @@
+guiTypes = {
+    @side_view_list_width = 528
+    containerWindowType = {
+        name = "starbase_view_panel_buildables_entry"
+        size = {
+            width = @side_view_list_width
+            height = 736
+        }
+        smoothListBoxType = {
+            name = "entries"
+            position = {
+                x = 0
+                y = 0
+            }
+            size = {
+                x = @side_view_list_width
+                y = 736
+            }
+            scrollbarType = "standardlistbox_slider_thick"
+            borderSize = {
+                x = 0
+                y = 0
+            }
+            offset = {
+                x = -3
+                y = 0
+            }
+            spacing = 1
+        }
+    }
+}

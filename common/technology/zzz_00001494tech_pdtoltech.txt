@@ -23,7 +23,7 @@ tech_pdtoltech = {
         }
     }
     ai_weight = {
-        factor = 4
+        factor = 10000
         modifier = {
             factor = 0
             NOT = {

@@ -1,0 +1,42 @@
+guiTypes = {
+    containerWindowType = {
+        name = "starbase_view_current_component_grid_entry"
+        size = {
+            width = 40
+            height = 40
+        }
+        background = {
+            name = "planet_view_module_spaceport_buildqueue_entry_background"
+            spriteType = "GFX_tiled_window_transparent"
+            scale = 0.45
+        }
+        background = {
+            name = "planet_view_module_spaceport_buildqueue_entry_overlay"
+            spriteType = "GFX_drop_area_green"
+            scale = 0.4
+        }
+        iconType = {
+            name = "icon"
+            spriteType = "GFX_spaceport_modules"
+            scale = 0.7
+        }
+        iconType = {
+            name = "locked"
+            spriteType = "GFX_ui_planet_locked_slot"
+            position = {
+                x = 2
+                y = 3
+            }
+            scale = 0.45
+        }
+        iconType = {
+            name = "unlocked"
+            spriteType = "GFX_ui_planet_building_slot"
+            position = {
+                x = 2
+                y = 3
+            }
+            scale = 0.45
+        }
+    }
+}

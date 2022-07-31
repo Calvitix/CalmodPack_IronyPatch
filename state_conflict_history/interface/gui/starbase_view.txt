@@ -1085,7 +1085,7 @@ guiTypes = {
                     y = 0
                 }
                 pdx_tooltip = "GOTO"
-                shortcut = "a"
+                shortcut = "A"
             }
             buttonType = {
                 name = "close"
@@ -1096,7 +1096,6 @@ guiTypes = {
                 }
                 pdx_tooltip = "CLOSE"
                 shortcut = "ESCAPE"
-                actionShortcut = "cancel"
             }
         }
         containerWindowType = {

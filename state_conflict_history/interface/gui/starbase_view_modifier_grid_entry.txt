@@ -1,0 +1,38 @@
+guiTypes = {
+    containerWindowType = {
+        name = "starbase_view_modifier_grid_entry"
+        size = {
+            width = 86
+            height = 30
+        }
+        background = {
+            name = "planet_view_module_spaceport_orbital_entry_background"
+            spriteType = "GFX_interface_list_light"
+        }
+        iconType = {
+            name = "icon"
+            position = {
+                x = 19
+                y = 15
+            }
+            spriteType = "GFX_ship_class_small"
+            alwaysTransparent = yes
+            centerPosition = yes
+        }
+        instantTextBoxType = {
+            name = "amount"
+            font = "font_text_14"
+            text = "20%"
+            position = {
+                x = 35
+                y = 0
+            }
+            maxWidth = 50
+            maxHeight = 30
+            fixedSize = yes
+            format = center
+            vertical_alignment = center
+            alwaysTransparent = yes
+        }
+    }
+}

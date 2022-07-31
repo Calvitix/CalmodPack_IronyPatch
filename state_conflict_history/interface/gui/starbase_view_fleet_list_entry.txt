@@ -1,0 +1,56 @@
+guiTypes = {
+    containerWindowType = {
+        name = "starbase_view_fleet_list_entry"
+        size = {
+            width = 271
+            height = 40
+        }
+        background = {
+            name = "planet_view_module_spaceport_orbital_entry_background"
+            spriteType = "GFX_interface_list_light"
+        }
+        iconType = {
+            name = "fleet_type"
+            position = {
+                x = 17
+                y = 7
+            }
+            spriteType = "GFX_ship_class_small"
+            alwaysTransparent = yes
+            tooltip_mode_enabled = yes
+        }
+        iconType = {
+            name = "health"
+            position = {
+                x = 0
+                y = -1
+            }
+            spriteType = "GFX_fleet_view_health"
+            alwaysTransparent = yes
+        }
+        instantTextBoxType = {
+            name = "name"
+            font = "font_text_14"
+            text = ""
+            position = {
+                x = 45
+                y = 0
+            }
+            maxWidth = 195
+            maxHeight = 40
+            fixedSize = yes
+            format = left
+            vertical_alignment = center
+            alwaysTransparent = yes
+        }
+        iconType = {
+            name = "repairing"
+            spriteType = "GFX_repairing"
+            position = {
+                x = 188
+                y = 8
+            }
+            scale = 1
+        }
+    }
+}

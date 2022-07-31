@@ -2944,10 +2944,12 @@ orbital_ring_giga_mining_district = {
         potential = {
             exists = owner
             orbit = {
+                or = {
                 is_planet_class = pc_ll_temperate
                 is_planet_class = pc_ll_foggy
                 is_planet_class = pc_ll_torrid
             }
+        }
         }
         district_mining_max = 3
     }

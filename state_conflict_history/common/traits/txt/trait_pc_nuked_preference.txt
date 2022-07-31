@@ -105,7 +105,7 @@ trait_pc_nuked_preference = {
         pc_aquifer_habitability = 0.6
         pc_coral_habitability = 0.6
         pc_storm_habitability = 0.6
-        pc_rogue_habitability = 0.6
+        pc_cryoflora_habitability = 0.6
         pc_lichen_habitability = 0.6
         pc_eyeball_habitability = 0.6
         pc_megaflora_habitability = 0.6
@@ -116,6 +116,6 @@ trait_pc_nuked_preference = {
         potential = {
             is_pd_bad_exotic = yes
         }
-        pop_environment_tolerance = @pdbadhab
+        pop_environment_tolerance = -2
     }
 }

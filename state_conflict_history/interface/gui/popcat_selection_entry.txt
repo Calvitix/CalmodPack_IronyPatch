@@ -1,0 +1,98 @@
+guiTypes = {
+    containerWindowType = {
+        name = "popcat_selection_entry"
+        position = {
+            x = 10
+            y = 0
+        }
+        size = {
+            width = 500
+            height = 60
+        }
+        clipping = no
+        background = {
+            name = "popcat_selection_entry_background"
+            quadTextureSprite = "GFX_black_box_planet_view"
+        }
+        buttonType = {
+            name = "baseline_pop"
+            spriteType = "GFX_ui_colonist_frame"
+            size = {
+                x = 500
+                y = 60
+            }
+            alwaysTransparent = yes
+        }
+        containerWindowType = {
+            name = "portrait"
+            position = {
+                x = 1
+                y = 1
+            }
+            size = {
+                width = 65
+                height = 58
+            }
+            clipping = yes
+            background = {
+                name = "portrait_background"
+                quadTextureSprite = "GFX_tiled_window_transparent"
+                alwaysTransparent = yes
+            }
+            iconType = {
+                name = "species_portrait"
+                spriteType = "GFX_portrait_character"
+                position = {
+                    x = -25
+                    y = -12
+                }
+                scale = 0.2
+                alwaysTransparent = yes
+            }
+        }
+        instantTextBoxType = {
+            name = "species_name"
+            font = "font_header_20"
+            text = "SPECIES"
+            position = {
+                x = 70
+                y = 5
+            }
+            maxWidth = 200
+            maxHeight = 40
+            fixedSize = yes
+            format = left
+            text_color_code = "E"
+            alwaysTransparent = yes
+        }
+        instantTextBoxType = {
+            name = "ideal_planet_type"
+            font = "font_header_20"
+            text = "SPECIES"
+            position = {
+                x = 70
+                y = 29
+            }
+            maxWidth = 160
+            maxHeight = 40
+            fixedSize = yes
+            format = left
+            alwaysTransparent = yes
+            pdx_tooltip = "IDEAL_PLANET_CLASS_TOOLTIP"
+        }
+        overlappingElementsBoxType = {
+            name = "traits_list"
+            size = {
+                x = 260
+                y = 24
+            }
+            position = {
+                x = -263
+                y = -35
+            }
+            orientation = lower_right
+            format = right
+            spacing = 0
+        }
+    }
+}

@@ -1,0 +1,95 @@
+guiTypes = {
+    containerWindowType = {
+        name = "starbase_view_ship_list_entry"
+        size = {
+            width = 246
+            height = 40
+        }
+        background = {
+            name = "planet_view_module_spaceport_orbital_entry_background"
+            spriteType = "GFX_interface_list_light"
+        }
+        iconType = {
+            name = "health"
+            position = {
+                x = 0
+                y = 0
+            }
+            spriteType = "GFX_fleet_view_health"
+            alwaysTransparent = yes
+        }
+        iconType = {
+            name = "armor"
+            position = {
+                x = 7
+                y = 0
+            }
+            spriteType = "GFX_fleet_view_armor"
+            alwaysTransparent = yes
+        }
+        iconType = {
+            name = "shields"
+            position = {
+                x = 14
+                y = 0
+            }
+            spriteType = "GFX_fleet_view_shields"
+            alwaysTransparent = yes
+        }
+        iconType = {
+            name = "ship_type"
+            position = {
+                x = 21
+                y = 6
+            }
+            spriteType = "GFX_ship_sizes"
+            frame = 1
+        }
+        instantTextBoxType = {
+            name = "name"
+            position = {
+                x = 51
+                y = 0
+            }
+            font = "font_text_14"
+            text = "NAME"
+            maxWidth = 85
+            maxHeight = 40
+            fixedSize = yes
+            format = left
+            vertical_alignment = center
+        }
+        buttonType = {
+            name = "details"
+            quadTextureSprite = "GFX_fleetview_inspect_ship"
+            position = {
+                x = -107
+                y = 2
+            }
+            orientation = upper_right
+            buttonFont = "font_text_14"
+            pdx_tooltip = "    "
+        }
+        buttonType = {
+            name = "upgrade"
+            quadTextureSprite = "GFX_fleet_action_button_upgrade"
+            position = {
+                x = -73
+                y = 2
+            }
+            orientation = upper_right
+            buttonFont = "font_text_14"
+        }
+        buttonType = {
+            name = "disband"
+            quadTextureSprite = "GFX_fleetview_destroy_fleet"
+            position = {
+                x = -39
+                y = 2
+            }
+            orientation = upper_right
+            buttonFont = "font_text_14"
+            pdx_tooltip = "DISBAND"
+        }
+    }
+}

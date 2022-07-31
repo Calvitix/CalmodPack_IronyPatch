@@ -1,0 +1,69 @@
+guiTypes = {
+    @side_view_entry_width = 527
+    containerWindowType = {
+        name = "starbase_view_buildable_component_list_entry"
+        size = {
+            width = @side_view_entry_width
+            height = 30
+        }
+        background = {
+            name = "starbase_view_buildable_component_list_entry"
+            spriteType = "GFX_button_light"
+            clicksound = queing_spaceport_module
+            oversound = mouse_over
+        }
+        containerWindowType = {
+            name = "fake_background"
+            size = {
+                width = 100%
+                height = 100%
+            }
+            background = {
+                name = "fake_background"
+                spriteType = "GFX_dark_area_button"
+                alwaysTransparent = yes
+            }
+        }
+        iconType = {
+            name = "icon"
+            spriteType = "GFX_spaceport_modules"
+            position = {
+                x = -1
+                y = 0
+            }
+            alwaysTransparent = yes
+            tooltip_mode_enabled = yes
+            scale = 0.55
+        }
+        instantTextBoxType = {
+            name = "name"
+            font = "font_text_14"
+            text = "NAME"
+            text_color_code = "H"
+            position = {
+                x = 36
+                y = 7
+            }
+            maxWidth = 325
+            maxHeight = 20
+            fixedSize = yes
+            format = left
+            alwaysTransparent = yes
+        }
+        instantTextBoxType = {
+            name = "cost"
+            font = "font_text_14"
+            text = "COST"
+            position = {
+                x = 45
+                y = 7
+            }
+            maxWidth = 475
+            maxHeight = 80
+            fixedSize = yes
+            format = right
+            alwaysTransparent = yes
+            text_color_code = "Y"
+        }
+    }
+}

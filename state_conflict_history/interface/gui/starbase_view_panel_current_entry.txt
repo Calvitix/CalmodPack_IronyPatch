@@ -1,0 +1,63 @@
+guiTypes = {
+    @side_view_entry_width = 527
+    containerWindowType = {
+        name = "starbase_view_panel_current_entry"
+        size = {
+            width = @side_view_entry_width
+            height = 69
+        }
+        show_sound = "planet_view_menu_slide"
+        background = {
+            name = "starbase_view_panel_current_entry"
+            spriteType = "GFX_invisible"
+        }
+        containerWindowType = {
+            name = "fake_background"
+            size = {
+                width = @side_view_entry_width
+                height = -10
+            }
+            background = {
+                name = "fake_background"
+                spriteType = "GFX_tiles_frame"
+            }
+        }
+        iconType = {
+            name = "icon"
+            spriteType = "GFX_spaceport_modules"
+            position = {
+                x = 1
+                y = 1
+            }
+            alwaysTransparent = yes
+            tooltip_mode_enabled = yes
+        }
+        instantTextBoxType = {
+            name = "name"
+            font = "font_text_14"
+            text = "NAME"
+            text_color_code = "H"
+            position = {
+                x = 50
+                y = 3
+            }
+            maxWidth = 303
+            maxHeight = 20
+            fixedSize = yes
+            format = center
+            alwaysTransparent = yes
+        }
+        buttonType = {
+            name = "dismantle"
+            quadTextureSprite = "GFX_standard_button_180_34_button"
+            position = {
+                x = 100
+                y = 10
+            }
+            buttonFont = "font_text_14"
+            text = "STARBASE_DISMANTLE_LABEL"
+            font = "font_text_14"
+            clicksound = "click_dismantle_starbase"
+        }
+    }
+}

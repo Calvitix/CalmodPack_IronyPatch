@@ -39,6 +39,16 @@ building_necroseeders_2 = {
         NOT = {
             is_planet_class = pc_pd_necro
         }
+        owner = {
+            OR = {
+                has_civic = civic_memorialist
+                has_civic = civic_death_cult
+                has_civic = civic_death_cult_corporate
+                has_civic = civic_permanent_employment
+                has_civic = civic_reanimated_armies
+                has_origin = origin_necrophage
+            }
+        }
     }
     planet_modifier = {
         planet_jobs_produces_mult = 0.05
