@@ -6,15 +6,8 @@ merg_is_habitat = {
         is_planet_class = pc_interstellar_habitat
         is_planet_class = pc_gigaorbital_ring
         is_planet_class = pc_mem_vazuran_habitat
-        is_planet_class = pc_dm_habitat
-        is_planet_class = pc_ae_habitat
-        is_planet_class = pc_sigma_habitat
-        is_planet_class = pc_sigma_deepspace_habitat
         is_planet_class = pc_habitat_robot
-        uses_district_set = starborn_start
-        uses_district_set = skypalace
         is_planet_class = pc_gigaorbital_ring
         is_planet_class = pc_pd_toxic_hab
-        is_planet_class = pc_GFnytp_habitis
     }
 }

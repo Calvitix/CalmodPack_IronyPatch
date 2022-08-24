@@ -1,0 +1,30 @@
+giga_elysium_controller_drone = {
+    category = complex_drone
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = building_palace
+    icon = giga_elysium_controller
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+    possible_precalc = can_fill_drone_job
+    possible = {
+        can_think = yes
+    }
+    resources = {
+        category = planet_jobs
+        upkeep = {
+            energy = 4
+        }
+    }
+    planet_modifier = {
+        giga_elysium_host_stability_add = 8
+    }
+    weight = {
+        weight = value:giga_complex_drone_no_resource_weight|JOB|giga_elysium_controller_drone|
+        mult = 3
+    }
+}

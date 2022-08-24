@@ -1,0 +1,10 @@
+is_autocracy = {
+    OR = {
+        has_ethic = ethic_gestalt_consciousness
+        has_authority = auth_imperial
+        has_authority = auth_dictatorial
+        AND = {
+            is_authoritarian = yes
+        }
+    }
+}

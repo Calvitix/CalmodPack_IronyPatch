@@ -1,0 +1,19 @@
+giga_tech_stellarite_kaiser_moon = {
+    cost = 750000
+    area = engineering
+    tier = 5
+    category = {
+        voidcraft
+    }
+    is_rare = yes
+    weight = 0
+    potential = {
+        has_country_flag = kaiser_moon_tech_possible
+    }
+    prereqfor_desc = {
+        custom = {
+            title = "allow_stellarite_kaiser_moon"
+            desc = "desc_stellarite_kaiser_moon"
+        }
+    }
+}

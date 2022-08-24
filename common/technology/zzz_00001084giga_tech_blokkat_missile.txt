@@ -1,0 +1,23 @@
+giga_tech_blokkat_missile = {
+    cost = 1200000
+    area = physics
+    tier = 5
+    category = {
+        blokkats
+    }
+    is_rare = yes
+    weight = 0
+    is_reverse_engineerable = no
+    potential = {
+        has_country_flag = blokkat_missile_possible
+    }
+    modifier = {
+        weapon_type_explosive_weapon_damage_mult = 0.15
+    }
+    prereqfor_desc = {
+        custom = {
+            title = "giga_tech_blokkat_knowledge_50_chance"
+            desc = "giga_tech_blokkat_knowledge_50_chance"
+        }
+    }
+}

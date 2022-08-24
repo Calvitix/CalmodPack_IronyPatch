@@ -1,0 +1,25 @@
+giga_tech_blokkat_gigarelay_core = {
+    cost = 500000000
+    area = physics
+    tier = 5
+    category = {
+        blokkats
+    }
+    is_rare = yes
+    is_dangerous = yes
+    weight = 0
+    is_reverse_engineerable = no
+    potential = {
+        has_country_flag = blokkat_gigarelay_possible
+    }
+    modifier = {
+        megastructure_build_speed_mult = 0.2
+        country_resource_max_energy_add = 10000000
+    }
+    prereqfor_desc = {
+        custom = {
+            title = "blokkat_gigarelay_core_title"
+            desc = "blokkat_gigarelay_core_title"
+        }
+    }
+}

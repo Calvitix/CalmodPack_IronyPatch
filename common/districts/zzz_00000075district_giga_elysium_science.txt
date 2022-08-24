@@ -1,0 +1,85 @@
+@elysium_cost = 500
+@elysium_maintenance = 5
+district_giga_elysium_science = {
+    base_buildtime = 240
+    is_capped_by_modifier = no
+    icon = district_hab_science
+    show_on_uncolonized = {
+        uses_district_set = giga_elysium
+    }
+    potential = {
+        uses_district_set = giga_elysium
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = @elysium_cost
+        }
+        upkeep = {
+            energy = @elysium_maintenance
+        }
+    }
+    planet_modifier = {
+        planet_housing_add = 2
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            job_head_researcher_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_brain_drone_add = 3
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_calculator_add = 3
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        text = job_head_researcher_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        text = job_brain_drone_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        text = job_calculator_effect_desc
+    }
+}

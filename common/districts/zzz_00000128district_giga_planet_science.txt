@@ -1,0 +1,17 @@
+district_giga_planet_science = {
+    base_buildtime = @giga_planet_district_buildtime
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        always = no
+    }
+    potential = {
+        always = no
+    }
+    resources = {
+        category = planet_districts
+    }
+    conversion_ratio = 1
+    convert_to = {
+        district_giga_pcc_science
+    }
+}

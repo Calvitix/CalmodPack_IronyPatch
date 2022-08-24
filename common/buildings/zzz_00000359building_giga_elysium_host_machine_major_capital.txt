@@ -1,0 +1,137 @@
+@advanced_amenities = 10
+building_giga_elysium_host_machine_major_capital = {
+    base_buildtime = @b2_time
+    capital = yes
+    can_build = no
+    can_demolish = no
+    can_be_ruined = no
+    can_be_disabled = no
+    position_priority = 0
+    icon = building_machine_major_capital
+    category = government
+    potential = {
+        has_planet_flag = has_orbital_elysium
+        exists = owner
+        owner = {
+            is_machine_empire = yes
+        }
+    }
+    allow = {
+        num_pops >= 40
+    }
+    prerequisites = {
+        "tech_colonial_centralization"
+    }
+    show_tech_unlock_if = {
+        always = no
+    }
+    convert_to = {
+        building_giga_elysium_host_major_capital
+        building_giga_elysium_host_hive_major_capital
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 500
+        }
+        upkeep = {
+            energy = 6
+        }
+    }
+    on_built = {
+        if = {
+            limit = {
+                not = {
+                    has_building = building_giga_elysium_host_booster
+                }
+            }
+            add_building = building_giga_elysium_host_booster
+        }
+    }
+    planet_modifier = {
+        planet_housing_add = 10
+        planet_amenities_add = @advanced_amenities
+        job_patrol_drone_add = 4
+        job_replicator_add = 2
+        job_maintenance_drone_add = 2
+    }
+    triggered_planet_modifier = {
+        potential = {
+            num_pops >= 10
+        }
+        modifier = {
+            job_replicator_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            num_pops >= 40
+        }
+        modifier = {
+            job_replicator_add = 1
+        }
+    }
+    triggered_desc = {
+        text = job_patrol_drone_effect_desc
+    }
+    triggered_desc = {
+        text = job_replicator_effect_desc
+    }
+    triggered_desc = {
+        text = job_maintenance_drone_effect_desc
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_technology = tech_mega_assembly
+            }
+        }
+        job_replicator_add = 1
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_civic = civic_machine_assimilator
+            }
+        }
+        modifier = {
+            job_replicator_add = -1
+            job_maintenance_drone_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            is_variable_set = giga_elysium_stability
+        }
+        modifier = {
+            planet_stability_add = 1
+        }
+        multiplier = giga_elysium_stability
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_technology = tech_capital_productivity_1
+            }
+        }
+        modifier = {
+            planet_jobs_productive_upkeep_mult = 0.1
+            planet_jobs_productive_produces_mult = 0.1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_technology = tech_capital_productivity_2
+            }
+        }
+        modifier = {
+            planet_jobs_productive_upkeep_mult = 0.1
+            planet_jobs_productive_produces_mult = 0.1
+        }
+    }
+}

@@ -1,0 +1,122 @@
+@elysium_cost = 500
+@elysium_maintenance = 5
+district_giga_elysium_control = {
+    base_buildtime = 240
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        uses_district_set = giga_elysium
+    }
+    potential = {
+        uses_district_set = giga_elysium
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = @elysium_cost
+        }
+        upkeep = {
+            energy = @elysium_maintenance
+        }
+    }
+    planet_modifier = {
+        planet_housing_add = 2
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            job_giga_elysium_controller_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                has_ascension_perk = ap_mind_over_matter
+            }
+        }
+        modifier = {
+            job_telepath_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                not = {
+                    has_ascension_perk = ap_mind_over_matter
+                }
+            }
+        }
+        modifier = {
+            job_enforcer_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_giga_elysium_controller_drone_add = 2
+            job_patrol_drone_add = 1
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        text = job_giga_elysium_controller_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                has_ascension_perk = ap_mind_over_matter
+            }
+        }
+        text = job_telepath_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                not = {
+                    has_ascension_perk = ap_mind_over_matter
+                }
+            }
+        }
+        text = job_enforcer_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = job_giga_elysium_controller_drone_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = job_patrol_drone_effect_desc
+    }
+}

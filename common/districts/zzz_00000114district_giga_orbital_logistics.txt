@@ -1,0 +1,112 @@
+district_giga_orbital_logistics = {
+    base_buildtime = @giga_planet_urban_district_buildtime
+    is_capped_by_modifier = yes
+    show_on_uncolonized = {
+        uses_district_set = giga_orbital
+    }
+    potential = {
+        uses_district_set = giga_orbital
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = @giga_planet_urban_cost
+        }
+        upkeep = {
+            energy = 5
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_valid_civic = civic_machine_servitor
+                }
+            }
+            energy = 5
+        }
+    }
+    planet_modifier = {
+        giga_system_resettlement_unemployed_mult = 0.1
+        planet_max_buildings_add = 0.5
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                not = {
+                    has_valid_civic = civic_machine_servitor
+                }
+            }
+        }
+        giga_system_resettlement_unemployed_mult = 0.1
+        planet_jobs_productive_produces_mult = 0.05
+        planet_jobs_productive_upkeep_mult = 0.05
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_valid_civic = civic_machine_servitor
+            }
+        }
+        giga_system_bio_trophy_propagation = 0.1
+        planet_bio_trophies_consumer_goods_upkeep_add = 0.25
+        planet_bio_trophies_energy_upkeep_add = 1
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        job_enforcer_add = 1
+        job_clerk_add = 1
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        text = job_enforcer_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        text = job_clerk_effect_desc
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        job_patrol_drone_add = 1
+        job_maintenance_drone_add = 1
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = job_patrol_drone_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = job_maintenance_drone_effect_desc
+    }
+}

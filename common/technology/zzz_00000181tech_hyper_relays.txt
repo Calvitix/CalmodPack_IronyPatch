@@ -16,9 +16,10 @@ tech_hyper_relays = {
     }
     feature_flags = {
         hyper_relay_construction
+        tech_hyperlane_generation
     }
     weight_modifier = {
-        factor = 0.5
+        factor = 0.05
         modifier = {
             factor = 0
             NOR = {
@@ -85,6 +86,18 @@ tech_hyper_relays = {
             has_ascension_perk = ap_grasp_the_void
         }
         modifier = {
+            factor = 0.001
+            NOT = {
+                has_ascension_perk = ap_grasp_the_void
+            }
+        }
+        modifier = {
+            factor = 0.001
+            NOT = {
+                has_ascension_perk = ap_esap_bio_cyber_psi_1
+            }
+        }
+        modifier = {
             factor = @federation_perk_factor
             has_federation = yes
             federation = {
@@ -109,7 +122,7 @@ tech_hyper_relays = {
             is_ai = no
         }
         modifier = {
-            factor = 5
+            factor = 0.5
             NOT = {
                 has_seen_any_bypass = relay_bypass
             }

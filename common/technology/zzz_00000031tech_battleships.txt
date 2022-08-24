@@ -23,7 +23,7 @@ tech_battleships = {
         modifier = {
             factor = 0.1
             NOT = {
-                years_passed > 80
+                years_passed > 150
             }
         }
         modifier = {
@@ -34,15 +34,15 @@ tech_battleships = {
         }
         modifier = {
             factor = 2
-            years_passed > 100
+            years_passed > 180
         }
         modifier = {
             factor = 3
-            years_passed > 120
+            years_passed > 200
         }
         modifier = {
             factor = 4
-            years_passed > 140
+            years_passed > 250
         }
         modifier = {
             factor = 1.25

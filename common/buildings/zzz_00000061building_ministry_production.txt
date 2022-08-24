@@ -133,4 +133,14 @@ building_ministry_production = {
             }
         }
     }
+    ai_resource_production = {
+        ehof_sr_sentient_metal = 6
+        trigger = {
+            planet_resource_compare = {
+                resource = ehof_sr_sentient_metal
+                value >= 40
+                type = produces
+            }
+        }
+    }
 }

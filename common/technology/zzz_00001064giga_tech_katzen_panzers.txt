@@ -1,0 +1,13 @@
+giga_tech_katzen_panzers = {
+    cost = 20000
+    area = society
+    tier = 4
+    category = {
+        military_theory
+    }
+    is_rare = yes
+    potential = {
+        has_country_flag = panzer_tech_possible
+    }
+    weight = 0
+}

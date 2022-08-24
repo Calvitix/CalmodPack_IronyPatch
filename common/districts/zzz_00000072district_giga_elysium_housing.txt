@@ -1,0 +1,168 @@
+@elysium_cost = 500
+@elysium_maintenance = 5
+district_giga_elysium_housing = {
+    base_buildtime = 240
+    is_capped_by_modifier = no
+    exempt_from_ai_planet_specialization = yes
+    icon = district_hab_housing
+    show_on_uncolonized = {
+        uses_district_set = giga_elysium
+    }
+    potential = {
+        uses_district_set = giga_elysium
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = @elysium_cost
+        }
+        upkeep = {
+            energy = @elysium_maintenance
+        }
+    }
+    planet_modifier = {
+        planet_housing_add = 8
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_megacorp = no
+                nor = {
+                    has_valid_civic = civic_exalted_priesthood
+                    has_valid_civic = civic_aristocratic_elite
+                    has_valid_civic = civic_merchant_guilds
+                }
+            }
+        }
+        modifier = {
+            job_politician_add = 1
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_megacorp = no
+                nor = {
+                    has_valid_civic = civic_exalted_priesthood
+                    has_valid_civic = civic_aristocratic_elite
+                    has_valid_civic = civic_merchant_guilds
+                }
+            }
+        }
+        text = job_politician_effect_desc
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_megacorp = yes
+                nor = {
+                    has_valid_civic = civic_exalted_priesthood
+                    has_valid_civic = civic_aristocratic_elite
+                    has_valid_civic = civic_merchant_guilds
+                }
+            }
+        }
+        modifier = {
+            job_executive_add = 1
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_megacorp = yes
+                nor = {
+                    has_valid_civic = civic_exalted_priesthood
+                    has_valid_civic = civic_aristocratic_elite
+                    has_valid_civic = civic_merchant_guilds
+                }
+            }
+        }
+        text = job_executive_effect_desc
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_valid_civic = civic_exalted_priesthood
+            }
+        }
+        modifier = {
+            job_high_priest_add = 1
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                has_valid_civic = civic_exalted_priesthood
+            }
+        }
+        text = job_high_priest_effect_desc
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_valid_civic = civic_aristocratic_elite
+            }
+        }
+        modifier = {
+            job_noble_add = 1
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                has_valid_civic = civic_aristocratic_elite
+            }
+        }
+        text = job_noble_effect_desc
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_valid_civic = civic_merchant_guilds
+            }
+        }
+        modifier = {
+            job_merchant_add = 1
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                has_valid_civic = civic_merchant_guilds
+            }
+        }
+        text = job_merchant_effect_desc
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_maintenance_drone_add = 2
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = job_maintenance_drone_effect_desc
+    }
+}

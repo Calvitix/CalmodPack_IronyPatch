@@ -1,0 +1,263 @@
+@basic_amenities = 5
+building_giga_elysium_host_capital = {
+    capital = yes
+    can_build = no
+    can_demolish = no
+    can_be_ruined = no
+    can_be_disabled = no
+    position_priority = 0
+    icon = building_capital
+    category = government
+    potential = {
+        has_planet_flag = has_orbital_elysium
+        exists = owner
+        owner = {
+            is_gestalt = no
+        }
+    }
+    convert_to = {
+        building_giga_elysium_host_machine_capital
+        building_giga_elysium_host_hive_capital
+    }
+    resources = {
+        category = planet_buildings
+        upkeep = {
+            energy = 2
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_ascension_perk = ap_engineered_evolution
+                    is_lithoid_empire = no
+                }
+            }
+            food = 30
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_ascension_perk = ap_engineered_evolution
+                    is_lithoid_empire = yes
+                }
+            }
+            minerals = 30
+        }
+    }
+    planet_modifier = {
+        planet_housing_add = 5
+        planet_amenities_add = @basic_amenities
+        job_enforcer_add = 2
+        job_clerk_add = 2
+        planet_max_branch_office_buildings_add = 1
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_ascension_perk = ap_mind_over_matter
+            }
+        }
+        modifier = {
+            job_enforcer_add = -1
+            job_telepath_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_mechanical_empire = yes
+            }
+        }
+        modifier = {
+            job_clerk_add = -1
+            job_roboticist_add = 1
+        }
+    }
+    triggered_desc = {
+        text = job_enforcer_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                has_ascension_perk = ap_mind_over_matter
+            }
+        }
+        text = job_telepath_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                or = {
+                    is_mechanical_empire = yes
+                    and = {
+                        not = {
+                            has_ascension_perk = ap_engineered_evolution
+                        }
+                        has_technology = tech_robotic_workers
+                        has_policy_flag = robots_allowed
+                    }
+                }
+            }
+        }
+        text = job_roboticist_effect_desc
+    }
+    triggered_desc = {
+        text = job_clerk_effect_desc
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_origin = origin_necrophage
+                is_homicidal = no
+                is_mechanical_empire = no
+            }
+        }
+        job_necro_apprentice_add = 1
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_origin = origin_necrophage
+                is_homicidal = no
+                is_mechanical_empire = no
+            }
+            num_organic_pops_per_year >= 0.2
+        }
+        job_necro_apprentice_add = 1
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_origin = origin_necrophage
+                is_homicidal = no
+                is_mechanical_empire = no
+            }
+            num_organic_pops_per_year >= 0.3
+        }
+        job_necro_apprentice_add = 1
+    }
+    triggered_desc = {
+        text = job_necro_apprentice_effect_desc
+        trigger = {
+            exists = owner
+            owner = {
+                has_origin = origin_necrophage
+                is_homicidal = no
+                is_lithoid_empire = no
+                is_mechanical_empire = no
+            }
+        }
+    }
+    triggered_desc = {
+        text = job_necro_apprentice_effect_lithoid_desc
+        trigger = {
+            exists = owner
+            owner = {
+                has_origin = origin_necrophage
+                is_homicidal = no
+                is_lithoid_empire = yes
+                is_mechanical_empire = no
+            }
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                not = {
+                    has_ascension_perk = ap_engineered_evolution
+                }
+                has_technology = tech_robotic_workers
+                has_policy_flag = robots_allowed
+            }
+        }
+        job_roboticist_add = 1
+    }
+    triggered_planet_modifier = {
+        potential = {
+            is_variable_set = giga_elysium_admin
+            exists = owner
+            owner = {
+                is_death_cult_empire = yes
+            }
+        }
+        modifier = {
+            job_mortal_initiate_add = 1
+        }
+        multiplier = giga_elysium_admin
+    }
+    triggered_desc = {
+        trigger = {
+            is_variable_set = giga_elysium_admin
+            exists = owner
+            owner = {
+                is_death_cult_empire = yes
+            }
+        }
+        text = job_mortal_initiate_effect_desc
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_ascension_perk = ap_engineered_evolution
+            }
+        }
+        planet_pop_assembly_organic_add = 3
+    }
+    triggered_planet_modifier = {
+        potential = {
+            is_variable_set = giga_elysium_stability
+        }
+        modifier = {
+            planet_stability_add = 1
+        }
+        multiplier = giga_elysium_stability
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_technology = tech_capital_productivity_1
+            }
+        }
+        modifier = {
+            planet_jobs_productive_upkeep_mult = 0.1
+            planet_jobs_productive_produces_mult = 0.1
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            has_planet_flag = necrophage_elevation_timer
+            exists = owner
+            owner = {
+                has_origin = origin_necrophage
+                is_homicidal = no
+                is_mechanical_empire = no
+            }
+        }
+        text = necrophage_elevation_timer_tooltip
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                has_origin = origin_necrophage
+                is_homicidal = no
+                is_mechanical_empire = no
+            }
+        }
+        text = building_necrophage_elevation_chamber_scaling_tooltip
+    }
+    upgrades = {
+        building_giga_elysium_host_major_capital
+    }
+}

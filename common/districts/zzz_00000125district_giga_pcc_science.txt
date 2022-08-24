@@ -1,0 +1,79 @@
+district_giga_pcc_science = {
+    base_buildtime = @giga_planet_district_buildtime
+    icon = district_virtual_science
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        uses_district_set = giga_planetary_computer
+    }
+    potential = {
+        uses_district_set = giga_planetary_computer
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = @giga_planet_science_cost
+            alloys = @giga_planet_sr
+        }
+        upkeep = {
+            energy = @giga_planet_science_maintenance
+            alloys = @giga_planet_science_alloys
+        }
+    }
+    planet_modifier = {
+        planet_housing_add = 5
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        job_researcher_add = 5
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        job_brain_drone_add = 5
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        job_calculator_add = 5
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        text = "job_researcher_effect_desc"
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        text = "job_brain_drone_effect_desc"
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        text = "job_calculator_effect_desc"
+    }
+}

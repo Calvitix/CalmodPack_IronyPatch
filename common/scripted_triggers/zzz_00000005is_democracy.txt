@@ -3,11 +3,7 @@ is_democracy = {
         has_authority = auth_democratic
         has_authority = auth_strict_democratic
         AND = {
-            has_authority = auth_democratic_dictatorship
             is_egalitarian = yes
         }
-        has_authority = auth_direct_democratic
-        has_authority = auth_corporate_democratic
-        has_authority = auth_cooperative
     }
 }

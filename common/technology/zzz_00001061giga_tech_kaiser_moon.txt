@@ -1,0 +1,19 @@
+giga_tech_kaiser_moon = {
+    cost = 150000
+    area = engineering
+    tier = 5
+    category = {
+        voidcraft
+    }
+    is_rare = yes
+    weight = 0
+    potential = {
+        has_country_flag = kaiser_moon_tech_possible
+    }
+    prereqfor_desc = {
+        custom = {
+            title = "allow_kaiser_moon"
+            desc = "desc_kaiser_moon"
+        }
+    }
+}

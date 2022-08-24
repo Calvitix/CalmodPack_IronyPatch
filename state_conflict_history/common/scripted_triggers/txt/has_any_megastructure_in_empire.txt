@@ -528,7 +528,6 @@ has_any_megastructure_in_empire = {
             }
             any_system_planet = {
                 is_giga_maginot_world = yes
-                is_planet_class = pc_giga_frameworld
                 is_planet_class = pc_giga_planetary_computer
             }
         }

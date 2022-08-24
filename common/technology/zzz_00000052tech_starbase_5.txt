@@ -13,7 +13,7 @@ tech_starbase_5 = {
         modifier = {
             factor = 0.1
             NOT = {
-                years_passed > 70
+                years_passed > 90
             }
         }
         modifier = {
@@ -24,15 +24,15 @@ tech_starbase_5 = {
         }
         modifier = {
             factor = 2
-            years_passed > 90
+            years_passed > 110
         }
         modifier = {
             factor = 3
-            years_passed > 95
+            years_passed > 130
         }
         modifier = {
             factor = 4
-            years_passed > 100
+            years_passed > 150
         }
         modifier = {
             factor = 5

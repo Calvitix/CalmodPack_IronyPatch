@@ -24,17 +24,17 @@
 @battlecruiser_collision_1 = 6
 @battlecruiser_formation_1 = 5
 @battleship_collision_1 = 6
-@battleship_collision_radius_1 = 6
-@battleship_collision_radius_10 = 3
-@battleship_collision_radius_11 = 3
-@battleship_collision_radius_12 = 3
-@battleship_collision_radius_2 = 36
-@battleship_collision_radius_3 = 36
+@battleship_collision_radius_1 = 3
+@battleship_collision_radius_10 = 36
+@battleship_collision_radius_11 = 36
+@battleship_collision_radius_12 = 6
+@battleship_collision_radius_2 = 3
+@battleship_collision_radius_3 = 3
 @battleship_collision_radius_4 = 6
-@battleship_collision_radius_5 = 6
+@battleship_collision_radius_5 = 3
 @battleship_collision_radius_6 = 3
 @battleship_collision_radius_7 = 3
-@battleship_collision_radius_8 = 3
+@battleship_collision_radius_8 = 6
 @battleship_collision_radius_9 = 6
 @battleship_formation_1 = 6
 @battleship_formation_priority_1 = 5
@@ -130,9 +130,9 @@
 @corvette_upkeep_energy_1 = 0.1
 @cruiser_collision_1 = 3.5
 @cruiser_collision_2 = 3.5
-@cruiser_collision_radius_1 = 3.5
+@cruiser_collision_radius_1 = 3
 @cruiser_collision_radius_2 = 3
-@cruiser_collision_radius_3 = 3
+@cruiser_collision_radius_3 = 3.5
 @cruiser_evasion_1 = 15
 @cruiser_evasion_10 = 15
 @cruiser_evasion_11 = 15
@@ -223,21 +223,21 @@
 @rotation7_2 = 10
 @rotation7_3 = 10
 @speed_crawl_1 = 30
-@speed_default_1 = 100
+@speed_default_1 = 120
 @speed_default_10 = 120
 @speed_default_11 = 120
-@speed_default_12 = 120
+@speed_default_12 = 100
 @speed_default_2 = 120
 @speed_default_3 = 120
-@speed_default_4 = 100
+@speed_default_4 = 120
 @speed_default_5 = 120
 @speed_default_6 = 100
 @speed_default_7 = 100
 @speed_default_8 = 120
-@speed_default_9 = 120
+@speed_default_9 = 100
 @speed_fast_1 = 140
-@speed_fast_10 = 120
-@speed_fast_11 = 120
+@speed_fast_10 = 140
+@speed_fast_11 = 140
 @speed_fast_12 = 140
 @speed_fast_13 = 140
 @speed_fast_14 = 140
@@ -246,31 +246,31 @@
 @speed_fast_17 = 140
 @speed_fast_18 = 140
 @speed_fast_19 = 140
-@speed_fast_2 = 120
+@speed_fast_2 = 140
 @speed_fast_20 = 140
 @speed_fast_21 = 140
 @speed_fast_22 = 140
 @speed_fast_23 = 140
 @speed_fast_24 = 140
 @speed_fast_25 = 140
-@speed_fast_26 = 140
-@speed_fast_27 = 140
-@speed_fast_28 = 140
-@speed_fast_29 = 140
-@speed_fast_3 = 120
+@speed_fast_26 = 120
+@speed_fast_27 = 120
+@speed_fast_28 = 120
+@speed_fast_29 = 120
+@speed_fast_3 = 140
 @speed_fast_30 = 140
 @speed_fast_31 = 140
 @speed_fast_32 = 140
-@speed_fast_33 = 140
-@speed_fast_34 = 140
-@speed_fast_35 = 140
+@speed_fast_33 = 120
+@speed_fast_34 = 120
+@speed_fast_35 = 120
 @speed_fast_36 = 140
-@speed_fast_4 = 120
+@speed_fast_4 = 140
 @speed_fast_5 = 140
 @speed_fast_6 = 140
 @speed_fast_7 = 140
-@speed_fast_8 = 120
-@speed_fast_9 = 120
+@speed_fast_8 = 140
+@speed_fast_9 = 140
 @speed_slow_1 = 100
 @speed_slow_10 = 100
 @speed_slow_11 = 100
@@ -314,37 +314,37 @@
 @speed_very_fast_19 = 160
 @speed_very_fast_2 = 160
 @speed_very_fast_20 = 160
-@speed_very_fast_21 = 160
+@speed_very_fast_21 = 170
 @speed_very_fast_22 = 160
 @speed_very_fast_23 = 160
-@speed_very_fast_3 = 170
+@speed_very_fast_3 = 160
 @speed_very_fast_4 = 160
 @speed_very_fast_5 = 160
 @speed_very_fast_6 = 160
 @speed_very_fast_7 = 160
 @speed_very_fast_8 = 160
 @speed_very_fast_9 = 160
-@speed_very_slow_1 = 60
+@speed_very_slow_1 = 80
 @speed_very_slow_10 = 80
-@speed_very_slow_11 = 60
-@speed_very_slow_12 = 60
-@speed_very_slow_13 = 60
-@speed_very_slow_14 = 80
-@speed_very_slow_15 = 80
-@speed_very_slow_16 = 80
+@speed_very_slow_11 = 80
+@speed_very_slow_12 = 80
+@speed_very_slow_13 = 80
+@speed_very_slow_14 = 60
+@speed_very_slow_15 = 60
+@speed_very_slow_16 = 60
 @speed_very_slow_17 = 80
 @speed_very_slow_18 = 80
 @speed_very_slow_19 = 80
-@speed_very_slow_2 = 60
+@speed_very_slow_2 = 80
 @speed_very_slow_20 = 80
 @speed_very_slow_21 = 80
 @speed_very_slow_22 = 80
-@speed_very_slow_23 = 80
-@speed_very_slow_24 = 80
-@speed_very_slow_25 = 80
-@speed_very_slow_26 = 80
-@speed_very_slow_3 = 60
-@speed_very_slow_4 = 60
+@speed_very_slow_23 = 60
+@speed_very_slow_24 = 60
+@speed_very_slow_25 = 60
+@speed_very_slow_26 = 60
+@speed_very_slow_3 = 80
+@speed_very_slow_4 = 80
 @speed_very_slow_5 = 80
 @speed_very_slow_6 = 80
 @speed_very_slow_7 = 80
@@ -436,11 +436,11 @@
 @starbase_range_of_motion_9 = 0
 @strikecruiser_formation_1 = 4
 @titan_collision_1 = 12
-@titan_collision_radius_1 = 15
+@titan_collision_radius_1 = 12
 @titan_collision_radius_2 = 15
 @titan_collision_radius_3 = 15
 @titan_collision_radius_4 = 15
-@titan_collision_radius_5 = 12
+@titan_collision_radius_5 = 15
 @titan_formation_1 = 8
 @titan_formation_priority_1 = 1
 @titan_formation_priority_2 = 1
@@ -501,9 +501,10 @@ orbital_ring_tier_1 = {
     modifier = {
         ship_evasion_mult = -1
         ship_armor_add = 1000
+        ship_shield_add = 1000
         starbase_defense_platform_capacity_add = 2
         starbase_module_capacity_add = 2
-        starbase_building_capacity_add = 0
+        starbase_building_capacity_add = 2
     }
     ship_modifier = {
         ship_fire_rate_mult = 1
@@ -557,8 +558,8 @@ orbital_ring_tier_1 = {
     required_component_set = "power_core"
     required_component_set = "sensor_components"
     required_component_set = "combat_computers"
-    build_block_radius = @build_block_orbital_ring_3
-    formation_priority = @orbital_ring_formation_priority_3
+    build_block_radius = @build_block_orbital_ring_1
+    formation_priority = @orbital_ring_formation_priority_1
     icon_frame = 7
     scales_with_planet = yes
     graphical_culture = yes
@@ -570,9 +571,10 @@ orbital_ring_tier_2 = {
     modifier = {
         ship_evasion_mult = -1
         ship_armor_add = 2000
+        ship_shield_add = 2000
         starbase_defense_platform_capacity_add = 4
-        starbase_module_capacity_add = 3
-        starbase_building_capacity_add = 1
+        starbase_module_capacity_add = 6
+        starbase_building_capacity_add = 3
     }
     ship_modifier = {
         ship_fire_rate_mult = 1
@@ -641,10 +643,11 @@ orbital_ring_tier_3 = {
     rotation_speed = 0
     modifier = {
         ship_evasion_mult = -1
-        ship_armor_add = 2000
+        ship_armor_add = 4000
+        ship_shield_add = 4000
         starbase_defense_platform_capacity_add = 6
-        starbase_module_capacity_add = 4
-        starbase_building_capacity_add = 2
+        starbase_module_capacity_add = 8
+        starbase_building_capacity_add = 4
     }
     ship_modifier = {
         ship_fire_rate_mult = 1
@@ -704,15 +707,15 @@ orbital_ring_tier_3 = {
     required_component_set = "power_core"
     required_component_set = "sensor_components"
     required_component_set = "combat_computers"
-    build_block_radius = @build_block_orbital_ring_1
-    formation_priority = @orbital_ring_formation_priority_1
+    build_block_radius = @build_block_orbital_ring_3
+    formation_priority = @orbital_ring_formation_priority_3
     icon_frame = 9
     scales_with_planet = yes
     graphical_culture = yes
 }
 corvette = {
     formation_priority = @corvette_formation_1
-    max_speed = @speed9_3
+    max_speed = @speed9_1
     acceleration = @acceleration4_1
     rotation_speed = @rotation1_1
     collision_radius = @corvette_collision_1
@@ -786,8 +789,8 @@ corvette = {
 destroyer = {
     formation_priority = @destroyer_formation_1
     max_speed = @speed8_1
-    acceleration = @acceleration3_6
-    rotation_speed = @rotation5_6
+    acceleration = @acceleration3_1
+    rotation_speed = @rotation5_1
     collision_radius = @destroyer_collision_1
     modifier = {
         ship_evasion_add = 35
@@ -859,10 +862,10 @@ destroyer = {
 }
 cruiser = {
     formation_priority = @cruiser_formation_priority
-    max_speed = @speed7_2
-    acceleration = @acceleration2_3
-    rotation_speed = @rotation4_2
-    collision_radius = @cruiser_collision_2
+    max_speed = @speed7_1
+    acceleration = @acceleration2_1
+    rotation_speed = @rotation4_1
+    collision_radius = @cruiser_collision_1
     modifier = {
         ship_evasion_add = 15
         ship_piracy_suppression_add = 6
@@ -925,8 +928,8 @@ StrikeCruiser = {
     formation_priority = @strikecruiser_formation_1
     max_speed = @speed10_1
     acceleration = @acceleration2_2
-    rotation_speed = @rotation4_1
-    collision_radius = @cruiser_collision_1
+    rotation_speed = @rotation4_2
+    collision_radius = @cruiser_collision_2
     modifier = {
         ship_evasion_add = 10
         ship_piracy_suppression_add = 12
@@ -989,8 +992,8 @@ StrikeCruiser = {
 escortcarrier = {
     formation_priority = @escortcarrier_formation_1
     max_speed = @speed6_1
-    acceleration = @acceleration1_6
-    rotation_speed = @rotation2_6
+    acceleration = @acceleration1_1
+    rotation_speed = @rotation2_1
     collision_radius = @escortcarrier_collision_1
     modifier = {
         ship_evasion_add = 8
@@ -1055,8 +1058,8 @@ escortcarrier = {
 }
 Battlecruiser = {
     formation_priority = @battlecruiser_formation_1
-    max_speed = @speed7_1
-    acceleration = @acceleration2_1
+    max_speed = @speed7_2
+    acceleration = @acceleration2_3
     rotation_speed = @rotation3_1
     collision_radius = @battlecruiser_collision_1
     modifier = {
@@ -1126,8 +1129,8 @@ Battlecruiser = {
 battleship = {
     formation_priority = @battleship_formation_1
     max_speed = @speed4_1
-    acceleration = @acceleration1_5
-    rotation_speed = @rotation2_5
+    acceleration = @acceleration1_2
+    rotation_speed = @rotation2_2
     collision_radius = @battleship_collision_1
     modifier = {
         ship_evasion_add = 5
@@ -1189,9 +1192,9 @@ battleship = {
 }
 Carrier = {
     formation_priority = @carrier_formation_1
-    max_speed = @speed3_4
-    acceleration = @acceleration1_4
-    rotation_speed = @rotation2_4
+    max_speed = @speed3_1
+    acceleration = @acceleration1_3
+    rotation_speed = @rotation2_3
     collision_radius = @carrier_collision_1
     modifier = {
         ship_evasion_add = -50
@@ -1258,9 +1261,9 @@ Carrier = {
 }
 Dreadnought = {
     formation_priority = @dreadnought_formation_1
-    max_speed = @speed3_3
-    acceleration = @acceleration1_3
-    rotation_speed = @rotation2_3
+    max_speed = @speed3_2
+    acceleration = @acceleration1_4
+    rotation_speed = @rotation2_4
     collision_radius = @dreadnought_collision_1
     modifier = {
         ship_evasion_add = -50
@@ -1330,9 +1333,9 @@ Dreadnought = {
 }
 titan = {
     formation_priority = @titan_formation_1
-    max_speed = @speed3_2
-    acceleration = @acceleration1_2
-    rotation_speed = @rotation2_2
+    max_speed = @speed3_3
+    acceleration = @acceleration1_5
+    rotation_speed = @rotation2_5
     collision_radius = @titan_collision_1
     modifier = {
         ship_evasion_add = -50
@@ -1443,9 +1446,9 @@ titan = {
 }
 Flagship = {
     formation_priority = @flagship_formation_1
-    max_speed = @speed3_1
-    acceleration = @acceleration1_1
-    rotation_speed = @rotation2_1
+    max_speed = @speed3_4
+    acceleration = @acceleration1_6
+    rotation_speed = @rotation2_6
     collision_radius = @flagship_collision_1
     modifier = {
         ship_evasion_add = -50
@@ -1532,9 +1535,9 @@ Flagship = {
     required_component_set = "nsc_flagship_aura"
 }
 constructor = {
-    max_speed = @speed5_2
-    acceleration = @acceleration3_5
-    rotation_speed = @rotation5_5
+    max_speed = @speed5_1
+    acceleration = @acceleration3_2
+    rotation_speed = @rotation5_2
     modifier = {
         ship_evasion_add = @construction_evasion
     }
@@ -1599,8 +1602,8 @@ constructor = {
 }
 science = {
     max_speed = @speed9_2
-    acceleration = @acceleration3_4
-    rotation_speed = @rotation5_4
+    acceleration = @acceleration3_3
+    rotation_speed = @rotation5_3
     modifier = {
         ship_evasion_add = @science_evasion
     }
@@ -1672,9 +1675,9 @@ science = {
     required_component_set = "sensor_components"
 }
 explorationship = {
-    max_speed = @speed5_1
-    acceleration = @acceleration3_3
-    rotation_speed = @rotation5_3
+    max_speed = @speed5_2
+    acceleration = @acceleration3_4
+    rotation_speed = @rotation5_4
     modifier = {
         ship_evasion_add = 10
         ship_piracy_suppression_add = 2
@@ -1742,8 +1745,8 @@ explorationship = {
 }
 colonizer = {
     max_speed = @speed_very_slow
-    acceleration = @acceleration3_2
-    rotation_speed = @rotation5_2
+    acceleration = @acceleration3_5
+    rotation_speed = @rotation5_5
     modifier = {
         ship_evasion_add = @colony_evasion
     }
@@ -1870,8 +1873,8 @@ colonizer = {
 }
 sponsored_colonizer = {
     max_speed = @speed_very_slow
-    acceleration = @acceleration3_1
-    rotation_speed = @rotation5_1
+    acceleration = @acceleration3_6
+    rotation_speed = @rotation5_6
     modifier = {
         ship_evasion_add = @colony_evasion
     }
@@ -1927,7 +1930,7 @@ sponsored_colonizer = {
 lithoid_colonizer = {
     graphical_culture = no
     entity = "lithoid_01_meteor_colonyship_entity"
-    max_speed = @speed9_1
+    max_speed = @speed9_3
     acceleration = @acceleration6_1
     rotation_speed = @rotation6_1
     modifier = {
@@ -1982,9 +1985,9 @@ lithoid_colonizer = {
     }
 }
 military_station_small = {
-    max_speed = @speed1_3
-    rotation_speed = @rotation7_3
-    acceleration = @acceleration7_3
+    max_speed = @speed1_1
+    rotation_speed = @rotation7_1
+    acceleration = @acceleration7_1
     modifier = {
         ship_armor_add = 1000
         ship_evasion_mult = -1
@@ -2018,7 +2021,7 @@ military_station_small = {
     resources = {
         category = ships
     }
-    build_block_radius = @block_radius_military_3
+    build_block_radius = @block_radius_military_1
     prerequisites = {
         "tech_space_defense_station_1"
     }
@@ -2088,9 +2091,9 @@ military_station_medium = {
     required_component_set = "combat_computers"
 }
 military_station_large = {
-    max_speed = @speed1_1
-    rotation_speed = @rotation7_1
-    acceleration = @acceleration7_1
+    max_speed = @speed1_3
+    rotation_speed = @rotation7_3
+    acceleration = @acceleration7_3
     modifier = {
         ship_evasion_mult = -1
         ship_armor_add = 6000
@@ -2139,7 +2142,7 @@ military_station_large = {
     resources = {
         category = ships
     }
-    build_block_radius = @block_radius_military_1
+    build_block_radius = @block_radius_military_3
     prerequisites = {
         "tech_space_defense_station_3"
     }
@@ -2151,9 +2154,9 @@ military_station_large = {
     required_component_set = "combat_computers"
 }
 mining_station = {
-    max_speed = @speed0_3
-    acceleration = @acceleration0_3
-    rotation_speed = @rotation0_3
+    max_speed = @speed0_1
+    acceleration = @acceleration0_1
+    rotation_speed = @rotation0_1
     modifier = {
         ship_armor_add = 1000
         ship_evasion_mult = -1
@@ -2197,7 +2200,7 @@ mining_station = {
             energy = 1
         }
     }
-    build_block_radius = @block_radius_civilian_3
+    build_block_radius = @block_radius_civilian_1
     prerequisites = {
         "tech_space_construction"
     }
@@ -2257,9 +2260,9 @@ research_station = {
     class = shipclass_research_station
 }
 observation_station = {
-    max_speed = @speed0_1
-    acceleration = @acceleration0_1
-    rotation_speed = @rotation0_1
+    max_speed = @speed0_3
+    acceleration = @acceleration0_3
+    rotation_speed = @rotation0_3
     modifier = {
         ship_armor_add = 1000
         ship_evasion_mult = -1
@@ -2297,14 +2300,14 @@ observation_station = {
             energy = 1
         }
     }
-    build_block_radius = @block_radius_civilian_1
+    build_block_radius = @block_radius_civilian_3
     class = shipclass_observation_station
 }
 starbase_outpost = {
-    formation_priority = @starbase_formation_priority_33
-    max_speed = @starbase_range_of_motion_14
-    acceleration = @starbase_range_of_motion_14
-    rotation_speed = @starbase_range_of_motion_14
+    formation_priority = @starbase_formation_priority_1
+    max_speed = @starbase_range_of_motion_1
+    acceleration = @starbase_range_of_motion_1
+    rotation_speed = @starbase_range_of_motion_1
     modifier = {
         ship_evasion_mult = -1
         ship_armor_add = 1000
@@ -2379,7 +2382,7 @@ starbase_outpost = {
             energy = 1
         }
     }
-    formation_priority = @starbase_formation_priority_33
+    formation_priority = @starbase_formation_priority_1
     potential_construction = {
         is_scope_type = planet
         is_primary_star = yes
@@ -2390,7 +2393,7 @@ starbase_outpost = {
     possible_construction = {
         always = yes
     }
-    build_block_radius = @starbase_build_block_radius_14
+    build_block_radius = @starbase_build_block_radius_1
     prerequisites = {
         "tech_starbase_1"
     }
@@ -2400,10 +2403,10 @@ starbase_outpost = {
     required_component_set = "combat_computers"
 }
 starbase_starport = {
-    formation_priority = @starbase_formation_priority_31
-    max_speed = @starbase_range_of_motion_13
-    acceleration = @starbase_range_of_motion_13
-    rotation_speed = @starbase_range_of_motion_13
+    formation_priority = @starbase_formation_priority_3
+    max_speed = @starbase_range_of_motion_2
+    acceleration = @starbase_range_of_motion_2
+    rotation_speed = @starbase_range_of_motion_2
     modifier = {
         ship_evasion_mult = -1
         ship_armor_add = 2000
@@ -2524,7 +2527,7 @@ starbase_starport = {
             energy = 2
         }
     }
-    build_block_radius = @starbase_build_block_radius_13
+    build_block_radius = @starbase_build_block_radius_2
     prerequisites = {
         "tech_starbase_2"
     }
@@ -2541,10 +2544,10 @@ starbase_starport = {
     }
 }
 starbase_starhold = {
-    formation_priority = @starbase_formation_priority_29
-    max_speed = @starbase_range_of_motion_12
-    acceleration = @starbase_range_of_motion_12
-    rotation_speed = @starbase_range_of_motion_12
+    formation_priority = @starbase_formation_priority_5
+    max_speed = @starbase_range_of_motion_3
+    acceleration = @starbase_range_of_motion_3
+    rotation_speed = @starbase_range_of_motion_3
     modifier = {
         ship_evasion_mult = -1
         ship_armor_add = 5000
@@ -2665,7 +2668,7 @@ starbase_starhold = {
             energy = 3
         }
     }
-    build_block_radius = @starbase_build_block_radius_12
+    build_block_radius = @starbase_build_block_radius_3
     prerequisites = {
         "tech_starbase_3"
     }
@@ -2682,10 +2685,10 @@ starbase_starhold = {
     }
 }
 starbase_starfortress = {
-    formation_priority = @starbase_formation_priority_27
-    max_speed = @starbase_range_of_motion_11
-    acceleration = @starbase_range_of_motion_11
-    rotation_speed = @starbase_range_of_motion_11
+    formation_priority = @starbase_formation_priority_7
+    max_speed = @starbase_range_of_motion_4
+    acceleration = @starbase_range_of_motion_4
+    rotation_speed = @starbase_range_of_motion_4
     modifier = {
         ship_evasion_mult = -1
         ship_armor_add = 10000
@@ -2805,7 +2808,7 @@ starbase_starfortress = {
             energy = 4
         }
     }
-    build_block_radius = @starbase_build_block_radius_11
+    build_block_radius = @starbase_build_block_radius_4
     prerequisites = {
         "tech_starbase_4"
     }
@@ -2822,10 +2825,10 @@ starbase_starfortress = {
     }
 }
 starbase_citadel = {
-    formation_priority = @starbase_formation_priority_25
-    max_speed = @starbase_range_of_motion_10
-    acceleration = @starbase_range_of_motion_10
-    rotation_speed = @starbase_range_of_motion_10
+    formation_priority = @starbase_formation_priority_9
+    max_speed = @starbase_range_of_motion_5
+    acceleration = @starbase_range_of_motion_5
+    rotation_speed = @starbase_range_of_motion_5
     modifier = {
         ship_evasion_mult = -1
         ship_armor_add = 20000
@@ -2945,7 +2948,7 @@ starbase_citadel = {
             energy = 5
         }
     }
-    build_block_radius = @starbase_build_block_radius_10
+    build_block_radius = @starbase_build_block_radius_5
     prerequisites = {
         "tech_starbase_5"
     }
@@ -2962,10 +2965,10 @@ starbase_citadel = {
     }
 }
 starbase_stronghold = {
-    formation_priority = @starbase_formation_priority_23
-    max_speed = @starbase_range_of_motion_9
-    acceleration = @starbase_range_of_motion_9
-    rotation_speed = @starbase_range_of_motion_9
+    formation_priority = @starbase_formation_priority_11
+    max_speed = @starbase_range_of_motion_6
+    acceleration = @starbase_range_of_motion_6
+    rotation_speed = @starbase_range_of_motion_6
     modifier = {
         ship_evasion_mult = -1
         ship_armor_add = 40000
@@ -3085,7 +3088,7 @@ starbase_stronghold = {
             energy = 8
         }
     }
-    build_block_radius = @starbase_build_block_radius_9
+    build_block_radius = @starbase_build_block_radius_6
     prerequisites = {
         "tech_starbase_6"
     }
@@ -3102,10 +3105,10 @@ starbase_stronghold = {
     }
 }
 starbase_headquarters = {
-    formation_priority = @starbase_formation_priority_21
-    max_speed = @starbase_range_of_motion_8
-    acceleration = @starbase_range_of_motion_8
-    rotation_speed = @starbase_range_of_motion_8
+    formation_priority = @starbase_formation_priority_13
+    max_speed = @starbase_range_of_motion_7
+    acceleration = @starbase_range_of_motion_7
+    rotation_speed = @starbase_range_of_motion_7
     modifier = {
         ship_evasion_mult = -1
         ship_armor_add = 90000
@@ -3224,7 +3227,7 @@ starbase_headquarters = {
             energy = 10
         }
     }
-    build_block_radius = @starbase_build_block_radius_8
+    build_block_radius = @starbase_build_block_radius_7
     prerequisites = {
         "tech_starbase_7"
     }
@@ -3244,10 +3247,10 @@ starbase_swarm = {
     graphical_culture = {
         "swarm_01"
     }
-    formation_priority = @starbase_formation_priority_19
-    max_speed = @starbase_range_of_motion_7
-    acceleration = @starbase_range_of_motion_7
-    rotation_speed = @starbase_range_of_motion_7
+    formation_priority = @starbase_formation_priority_15
+    max_speed = @starbase_range_of_motion_8
+    acceleration = @starbase_range_of_motion_8
+    rotation_speed = @starbase_range_of_motion_8
     modifier = {
         ship_evasion_mult = -1
         ship_armor_add = 30000
@@ -3284,7 +3287,7 @@ starbase_swarm = {
     can_disable = no
     is_listed = no
     class = shipclass_starbase
-    build_block_radius = @starbase_build_block_radius_7
+    build_block_radius = @starbase_build_block_radius_8
     required_component_set = "sensor_components"
 }
 starbase_ai = {
@@ -3292,9 +3295,9 @@ starbase_ai = {
         "ai_01"
     }
     formation_priority = @starbase_formation_priority_17
-    max_speed = @starbase_range_of_motion_6
-    acceleration = @starbase_range_of_motion_6
-    rotation_speed = @starbase_range_of_motion_6
+    max_speed = @starbase_range_of_motion_9
+    acceleration = @starbase_range_of_motion_9
+    rotation_speed = @starbase_range_of_motion_9
     modifier = {
         ship_evasion_mult = -1
         ship_armor_add = 20000
@@ -3331,7 +3334,7 @@ starbase_ai = {
     components_add_to_cost = no
     can_disable = no
     is_listed = no
-    build_block_radius = @starbase_build_block_radius_6
+    build_block_radius = @starbase_build_block_radius_9
     class = shipclass_starbase
     required_component_set = "sensor_components"
     required_component_set = "combat_computers"
@@ -3342,10 +3345,10 @@ starbase_exd_0 = {
         "extra_dimensional_02"
         "extra_dimensional_03"
     }
-    formation_priority = @starbase_formation_priority_15
-    max_speed = @starbase_range_of_motion_5
-    acceleration = @starbase_range_of_motion_5
-    rotation_speed = @starbase_range_of_motion_5
+    formation_priority = @starbase_formation_priority_19
+    max_speed = @starbase_range_of_motion_10
+    acceleration = @starbase_range_of_motion_10
+    rotation_speed = @starbase_range_of_motion_10
     modifier = {
         ship_evasion_mult = -1
         ship_shield_add = 40000
@@ -3381,7 +3384,7 @@ starbase_exd_0 = {
     components_add_to_cost = no
     can_disable = no
     is_listed = no
-    build_block_radius = @starbase_build_block_radius_5
+    build_block_radius = @starbase_build_block_radius_10
     class = shipclass_starbase
     required_component_set = "sensor_components"
     required_component_set = "combat_computers"
@@ -3392,10 +3395,10 @@ starbase_exd = {
         "extra_dimensional_02"
         "extra_dimensional_03"
     }
-    formation_priority = @starbase_formation_priority_13
-    max_speed = @starbase_range_of_motion_4
-    acceleration = @starbase_range_of_motion_4
-    rotation_speed = @starbase_range_of_motion_4
+    formation_priority = @starbase_formation_priority_21
+    max_speed = @starbase_range_of_motion_11
+    acceleration = @starbase_range_of_motion_11
+    rotation_speed = @starbase_range_of_motion_11
     modifier = {
         ship_evasion_mult = -1
         ship_shield_add = 80000
@@ -3433,7 +3436,7 @@ starbase_exd = {
     components_add_to_cost = no
     can_disable = no
     is_listed = no
-    build_block_radius = @starbase_build_block_radius_4
+    build_block_radius = @starbase_build_block_radius_11
     class = shipclass_starbase
     required_component_set = "sensor_components"
     required_component_set = "combat_computers"
@@ -3443,10 +3446,10 @@ starbase_marauder = {
         "pirate_01"
         "madd_01"
     }
-    formation_priority = @starbase_formation_priority_11
-    max_speed = @starbase_range_of_motion_3
-    acceleration = @starbase_range_of_motion_3
-    rotation_speed = @starbase_range_of_motion_3
+    formation_priority = @starbase_formation_priority_23
+    max_speed = @starbase_range_of_motion_12
+    acceleration = @starbase_range_of_motion_12
+    rotation_speed = @starbase_range_of_motion_12
     modifier = {
         ship_evasion_mult = -1
         ship_shield_add = 20000
@@ -3486,17 +3489,17 @@ starbase_marauder = {
     components_add_to_cost = no
     can_disable = no
     is_listed = no
-    build_block_radius = @starbase_build_block_radius_3
+    build_block_radius = @starbase_build_block_radius_12
     class = shipclass_starbase
     required_component_set = "power_core"
     required_component_set = "sensor_components"
     required_component_set = "combat_computers"
 }
 starbase_gatebuilders = {
-    formation_priority = @starbase_formation_priority_9
-    max_speed = @starbase_range_of_motion_2
-    acceleration = @starbase_range_of_motion_2
-    rotation_speed = @starbase_range_of_motion_2
+    formation_priority = @starbase_formation_priority_25
+    max_speed = @starbase_range_of_motion_13
+    acceleration = @starbase_range_of_motion_13
+    rotation_speed = @starbase_range_of_motion_13
     modifier = {
         ship_evasion_mult = -1
         ship_shield_add = 20000
@@ -3537,7 +3540,7 @@ starbase_gatebuilders = {
     components_add_to_cost = no
     can_disable = no
     is_listed = no
-    build_block_radius = @starbase_build_block_radius_2
+    build_block_radius = @starbase_build_block_radius_13
     class = shipclass_starbase
     required_component_set = "power_core"
     required_component_set = "sensor_components"
@@ -3550,10 +3553,10 @@ starbase_fe_outpost = {
         "fallen_empire_03"
         "fallen_empire_04"
     }
-    formation_priority = @starbase_formation_priority_7
-    max_speed = @starbase_range_of_motion_1
-    acceleration = @starbase_range_of_motion_1
-    rotation_speed = @starbase_range_of_motion_1
+    formation_priority = @starbase_formation_priority_27
+    max_speed = @starbase_range_of_motion_14
+    acceleration = @starbase_range_of_motion_14
+    rotation_speed = @starbase_range_of_motion_14
     modifier = {
         ship_evasion_mult = -1
         ship_armor_add = 1000
@@ -3635,7 +3638,7 @@ starbase_fe_outpost = {
             exists = orbital_defence
         }
     }
-    build_block_radius = @starbase_build_block_radius_1
+    build_block_radius = @starbase_build_block_radius_14
     prerequisites = {
         "tech_starbase_1"
     }
@@ -3645,9 +3648,9 @@ starbase_fe_outpost = {
     required_component_set = "combat_computers"
 }
 xl_cannon = {
-    max_speed = @cannon_speed_2
-    rotation_speed = @cannon_rotation_2
-    acceleration = @cannon_acceleration_2
+    max_speed = @cannon_speed_1
+    rotation_speed = @cannon_rotation_1
+    acceleration = @cannon_acceleration_1
     modifier = {
         ship_evasion_mult = -1
     }
@@ -3713,9 +3716,9 @@ xl_cannon = {
     required_component_set = "combat_computers"
 }
 ion_cannon = {
-    max_speed = @cannon_speed_1
-    rotation_speed = @cannon_rotation_1
-    acceleration = @cannon_acceleration_1
+    max_speed = @cannon_speed_2
+    rotation_speed = @cannon_rotation_2
+    acceleration = @cannon_acceleration_2
     modifier = {
         ship_evasion_mult = -1
     }
@@ -3915,7 +3918,7 @@ asteroid = {
     is_designable = no
 }
 abandoned_ship = {
-    max_speed = @speed_slow_30
+    max_speed = @speed_slow_1
     rotation_speed = 0.15
     acceleration = 0.3
     fleet_slot_size = 4
@@ -3937,7 +3940,7 @@ abandoned_ship = {
     required_component_set = "ftl_components"
 }
 ark_ship = {
-    max_speed = @speed_fast_36
+    max_speed = @speed_fast_1
     rotation_speed = 0.15
     acceleration = 0.3
     modifier = {
@@ -3958,7 +3961,7 @@ ark_ship = {
     is_designable = no
 }
 probe = {
-    max_speed = @speed_very_fast_23
+    max_speed = @speed_very_fast_1
     rotation_speed = 0.15
     acceleration = 0.35
     modifier = {
@@ -3998,7 +4001,7 @@ station_generic_01 = {
     }
     num_target_locators = 0
     is_space_station = yes
-    build_block_radius = @build_block_radius_civilian_19
+    build_block_radius = @build_block_radius_civilian_1
     class = shipclass_military_station
     is_designable = no
     icon = ship_size_military_station
@@ -4023,7 +4026,7 @@ sensor_station_01 = {
     }
     num_target_locators = 0
     is_space_station = yes
-    build_block_radius = @build_block_radius_civilian_18
+    build_block_radius = @build_block_radius_civilian_2
     class = shipclass_military_station
     is_designable = no
     icon = ship_size_military_station
@@ -4058,7 +4061,7 @@ alien_racing_ship = {
 }
 eventship_01 = {
     graphical_culture = no
-    max_speed = @speed_fast_35
+    max_speed = @speed_fast_2
     acceleration = 0.25
     rotation_speed = 0.175
     collision_radius = 4
@@ -4085,7 +4088,7 @@ eventship_01 = {
 }
 eventship_02 = {
     graphical_culture = no
-    max_speed = @speed_very_fast_22
+    max_speed = @speed_very_fast_2
     acceleration = 0.35
     rotation_speed = 0.1
     collision_radius = 2
@@ -4113,7 +4116,7 @@ eventship_02 = {
 }
 eventship_03 = {
     graphical_culture = no
-    max_speed = @speed_default_12
+    max_speed = @speed_default_1
     acceleration = 0.2
     rotation_speed = 0.15
     collision_radius = 5
@@ -4142,7 +4145,7 @@ eventship_03 = {
 eventship_04 = {
     graphical_culture = no
     entity = eventship_04_blue_entity
-    max_speed = @speed_default_11
+    max_speed = @speed_default_2
     acceleration = 0.2
     rotation_speed = 0.15
     collision_radius = 5
@@ -4170,10 +4173,10 @@ eventship_04 = {
 }
 nomad_destroyer = {
     graphical_culture = no
-    max_speed = @speed_fast_34
+    max_speed = @speed_fast_3
     acceleration = 0.3
     rotation_speed = 0.2
-    collision_radius = @destroyer_collision_radius_12
+    collision_radius = @destroyer_collision_radius_1
     modifier = {
         ship_evasion_add = 35
         ship_piracy_suppression_add = 8
@@ -4197,7 +4200,7 @@ nomad_destroyer = {
 }
 eventship_05 = {
     graphical_culture = no
-    max_speed = @speed_fast_33
+    max_speed = @speed_fast_4
     acceleration = 0.5
     rotation_speed = 0.2
     collision_radius = 4
@@ -4225,7 +4228,7 @@ eventship_05 = {
 }
 eventship_06 = {
     graphical_culture = no
-    max_speed = @speed_fast_32
+    max_speed = @speed_fast_5
     acceleration = 0.3
     rotation_speed = 0.2
     collision_radius = 3
@@ -4253,7 +4256,7 @@ eventship_06 = {
 }
 eventship_07 = {
     graphical_culture = no
-    max_speed = @speed_fast_31
+    max_speed = @speed_fast_6
     acceleration = 0.3
     rotation_speed = 0.2
     collision_radius = 3
@@ -4282,7 +4285,7 @@ eventship_07 = {
 civilian_freighter = {
     graphical_culture = no
     entity = cargo_transport_containers_entity
-    max_speed = @speed_slow_29
+    max_speed = @speed_slow_2
     acceleration = 0.3
     rotation_speed = 0.2
     modifier = {
@@ -4310,7 +4313,7 @@ civilian_freighter = {
 civilian_tanker = {
     graphical_culture = no
     entity = cargo_transport_tanker_entity
-    max_speed = @speed_slow_28
+    max_speed = @speed_slow_3
     acceleration = 0.3
     rotation_speed = 0.2
     modifier = {
@@ -4338,7 +4341,7 @@ civilian_tanker = {
 passenger_liner = {
     graphical_culture = no
     entity = abandoned_ship_section_entity
-    max_speed = @speed_slow_27
+    max_speed = @speed_slow_4
     acceleration = 0.3
     rotation_speed = 0.2
     modifier = {
@@ -4382,13 +4385,13 @@ primitive_space_station = {
     is_designable = no
     num_target_locators = 0
     is_space_station = yes
-    build_block_radius = @build_block_radius_civilian_17
+    build_block_radius = @build_block_radius_civilian_3
     class = shipclass_military_station
     icon = ship_size_military_station
 }
 ancient_drone_station = {
     is_space_object = yes
-    max_speed = @speed_default_10
+    max_speed = @speed_default_3
     rotation_speed = 10
     acceleration = 10
     modifier = {
@@ -4406,7 +4409,7 @@ ancient_drone_station = {
 ghost_ship = {
     graphical_culture = no
     entity = ai_01_science_ship_entity
-    max_speed = @speed_very_slow_26
+    max_speed = @speed_very_slow_1
     acceleration = 0.1
     rotation_speed = 0.1
     modifier = {
@@ -4435,10 +4438,10 @@ large_ship_swarm = {
     graphical_culture = {
         "swarm_01"
     }
-    max_speed = @speed_slow_26
+    max_speed = @speed_slow_5
     acceleration = 0.2
     rotation_speed = 0.15
-    collision_radius = @battleship_collision_radius_12
+    collision_radius = @battleship_collision_radius_1
     modifier = {
         ship_evasion_add = 5
         ship_armor_add = 3000
@@ -4463,10 +4466,10 @@ large_ship_carrier_swarm = {
     graphical_culture = {
         "swarm_01"
     }
-    max_speed = @speed_slow_25
+    max_speed = @speed_slow_6
     acceleration = 0.2
     rotation_speed = 0.15
-    collision_radius = @battleship_collision_radius_11
+    collision_radius = @battleship_collision_radius_2
     modifier = {
         ship_evasion_add = 5
         ship_armor_add = 3000
@@ -4491,10 +4494,10 @@ small_ship_swarm = {
     graphical_culture = {
         "swarm_01"
     }
-    max_speed = @speed_fast_30
+    max_speed = @speed_fast_7
     acceleration = 0.3
     rotation_speed = 0.2
-    collision_radius = @destroyer_collision_radius_11
+    collision_radius = @destroyer_collision_radius_2
     modifier = {
         ship_evasion_add = 65
         ship_armor_add = 1000
@@ -4519,10 +4522,10 @@ queen_swarm = {
     graphical_culture = {
         "swarm_01"
     }
-    max_speed = @speed_slow_24
+    max_speed = @speed_slow_7
     acceleration = 0.2
     rotation_speed = 0.15
-    collision_radius = @battleship_collision_radius_10
+    collision_radius = @battleship_collision_radius_3
     modifier = {
         ship_evasion_add = 5
         ship_armor_add = 6000
@@ -4547,7 +4550,7 @@ construction_ship_swarm = {
         "swarm_01"
     }
     is_space_object = yes
-    max_speed = @speed_slow_23
+    max_speed = @speed_slow_8
     acceleration = 0.3
     rotation_speed = 0.2
     modifier = {
@@ -4577,7 +4580,7 @@ colony_ship_swarm = {
         "swarm_01"
     }
     is_space_object = yes
-    max_speed = @speed_slow_22
+    max_speed = @speed_slow_9
     acceleration = 0.3
     rotation_speed = 0.2
     modifier = {
@@ -4607,7 +4610,7 @@ transport_ship_swarm = {
         "swarm_01"
     }
     is_space_object = yes
-    max_speed = @speed_fast_29
+    max_speed = @speed_fast_8
     acceleration = 0.3
     rotation_speed = 0.2
     acceleration = 0.6
@@ -4653,13 +4656,13 @@ sentinel_station = {
     }
     num_target_locators = 0
     is_space_station = yes
-    build_block_radius = @build_block_radius_civilian_16
+    build_block_radius = @build_block_radius_civilian_4
     class = shipclass_military_station
     is_designable = no
     icon = ship_size_military_station
 }
 massive_ship_fallen_empire = {
-    formation_priority = @titan_formation_priority_3
+    formation_priority = @titan_formation_priority_1
     graphical_culture = {
         "fallen_empire_01"
         "fallen_empire_02"
@@ -4667,10 +4670,10 @@ massive_ship_fallen_empire = {
         "fallen_empire_04"
         "fallen_machine_empire_01"
     }
-    max_speed = @speed_slow_21
+    max_speed = @speed_slow_10
     acceleration = 0.15
     rotation_speed = 0.1
-    collision_radius = @titan_collision_radius_5
+    collision_radius = @titan_collision_radius_1
     modifier = {
         ship_evasion_add = 2
         ship_hull_regen_add_perc = 0.5
@@ -4709,7 +4712,7 @@ massive_ship_fallen_empire = {
     }
 }
 large_ship_fallen_empire = {
-    formation_priority = @battleship_formation_priority_4
+    formation_priority = @battleship_formation_priority_1
     graphical_culture = {
         "fallen_empire_01"
         "fallen_empire_02"
@@ -4717,10 +4720,10 @@ large_ship_fallen_empire = {
         "fallen_empire_04"
         "fallen_machine_empire_01"
     }
-    max_speed = @speed_slow_20
+    max_speed = @speed_slow_11
     acceleration = 0.2
     rotation_speed = 0.15
-    collision_radius = @battleship_collision_radius_9
+    collision_radius = @battleship_collision_radius_4
     modifier = {
         ship_evasion_add = 10
         ship_hull_regen_add_perc = 0.5
@@ -4757,7 +4760,7 @@ large_ship_fallen_empire = {
     }
 }
 small_ship_fallen_empire = {
-    formation_priority = @destroyer_formation_priority_4
+    formation_priority = @destroyer_formation_priority_1
     graphical_culture = {
         "fallen_empire_01"
         "fallen_empire_02"
@@ -4765,10 +4768,10 @@ small_ship_fallen_empire = {
         "fallen_empire_04"
         "fallen_machine_empire_01"
     }
-    max_speed = @speed_fast_28
+    max_speed = @speed_fast_9
     acceleration = 0.3
     rotation_speed = 0.2
-    collision_radius = @destroyer_collision_radius_10
+    collision_radius = @destroyer_collision_radius_3
     modifier = {
         ship_evasion_add = 35
         ship_hull_regen_add_perc = 0.5
@@ -4835,7 +4838,7 @@ military_station_small_fallen_empire = {
     }
     num_target_locators = 0
     is_space_station = yes
-    build_block_radius = @build_block_radius_military_8
+    build_block_radius = @build_block_radius_military_1
     uses_name_prefix = no
     takes_name_from_ship_design = yes
     resources = {
@@ -4880,7 +4883,7 @@ military_station_large_fallen_empire = {
     }
     num_target_locators = 0
     is_space_station = yes
-    build_block_radius = @build_block_radius_military_7
+    build_block_radius = @build_block_radius_military_2
     uses_name_prefix = no
     takes_name_from_ship_design = yes
     resources = {
@@ -4903,10 +4906,10 @@ large_ship_ed = {
         "extra_dimensional_02"
         "extra_dimensional_03"
     }
-    max_speed = @speed_slow_19
+    max_speed = @speed_slow_12
     acceleration = 0.2
     rotation_speed = 0.15
-    collision_radius = @battleship_collision_radius_8
+    collision_radius = @battleship_collision_radius_5
     modifier = {
         ship_evasion_add = 15
     }
@@ -4930,10 +4933,10 @@ medium_ship_ed = {
         "extra_dimensional_02"
         "extra_dimensional_03"
     }
-    max_speed = @speed_default_9
+    max_speed = @speed_default_4
     acceleration = 0.25
     rotation_speed = 0.175
-    collision_radius = @cruiser_collision_radius_3
+    collision_radius = @cruiser_collision_radius_1
     modifier = {
         ship_evasion_add = 25
     }
@@ -4957,10 +4960,10 @@ small_ship_ed = {
         "extra_dimensional_02"
         "extra_dimensional_03"
     }
-    max_speed = @speed_fast_27
+    max_speed = @speed_fast_10
     acceleration = 0.3
     rotation_speed = 0.2
-    collision_radius = @destroyer_collision_radius_9
+    collision_radius = @destroyer_collision_radius_4
     modifier = {
         ship_evasion_add = 20
     }
@@ -5001,7 +5004,7 @@ dimensional_portal_ed = {
     }
     num_target_locators = 0
     is_space_station = yes
-    build_block_radius = @build_block_radius_none_8
+    build_block_radius = @build_block_radius_none_1
     icon = ship_size_space_monster
     class = shipclass_military_station
     is_designable = no
@@ -5013,7 +5016,7 @@ construction_ship_ed = {
         "extra_dimensional_03"
     }
     is_space_object = yes
-    max_speed = @speed_slow_18
+    max_speed = @speed_slow_13
     acceleration = 0.3
     rotation_speed = 0.2
     modifier = {
@@ -5040,490 +5043,7 @@ crystal_ship_small_blue = {
     entity = crystal_ship_small_blue_entity
     graphical_culture = no
     is_space_object = yes
-    max_speed = @speed_very_fast_21
-    rotation_speed = 0.15
-    acceleration = 0.35
-    modifier = {
-        ship_evasion_add = @corvette_evasion_8
-    }
-    max_hitpoints = @corvette_hp_8
-    size_multiplier = 1
-    fleet_slot_size = 1
-    section_slots = {
-        "mid" = {
-            locator = "light_pos"
-        }
-    }
-    num_target_locators = 0
-    icon = ship_size_space_monster
-    class = shipclass_military
-    is_designable = no
-}
-crystal_ship_medium_blue = {
-    entity = crystal_ship_blue_entity
-    graphical_culture = no
-    is_space_object = yes
-    max_speed = @speed_fast_26
-    rotation_speed = 0.075
-    acceleration = 0.325
-    modifier = {
-        ship_evasion_add = @destroyer_evasion_8
-    }
-    max_hitpoints = @destroyer_hp_8
-    size_multiplier = 2
-    fleet_slot_size = 2
-    section_slots = {
-        "mid" = {
-            locator = "light_pos"
-        }
-    }
-    num_target_locators = 0
-    icon = ship_size_space_monster
-    class = shipclass_military
-    is_designable = no
-}
-crystal_ship_large_blue = {
-    entity = crystal_ship_large_blue_entity
-    graphical_culture = no
-    is_space_object = yes
-    max_speed = @speed_slow_17
-    rotation_speed = 0.01
-    acceleration = 0.3
-    modifier = {
-        ship_evasion_add = @cruiser_evasion_12
-    }
-    max_hitpoints = @cruiser_hp_8
-    size_multiplier = 4
-    fleet_slot_size = 4
-    section_slots = {
-        "mid" = {
-            locator = "light_pos"
-        }
-    }
-    num_target_locators = 0
-    icon = ship_size_space_monster
-    class = shipclass_military
-    is_designable = no
-}
-crystal_ship_small_green = {
-    entity = crystal_ship_small_green_entity
-    graphical_culture = no
-    is_space_object = yes
-    max_speed = @speed_very_fast_20
-    rotation_speed = 0.15
-    acceleration = 0.35
-    modifier = {
-        ship_evasion_add = @corvette_evasion_7
-    }
-    max_hitpoints = @corvette_hp_7
-    size_multiplier = 1
-    fleet_slot_size = 1
-    section_slots = {
-        "mid" = {
-            locator = "light_pos"
-        }
-    }
-    num_target_locators = 0
-    icon = ship_size_space_monster
-    class = shipclass_military
-    is_designable = no
-}
-crystal_ship_medium_green = {
-    entity = crystal_ship_green_entity
-    graphical_culture = no
-    is_space_object = yes
-    max_speed = @speed_fast_25
-    rotation_speed = 0.075
-    acceleration = 0.325
-    modifier = {
-        ship_evasion_add = @destroyer_evasion_7
-    }
-    max_hitpoints = @destroyer_hp_7
-    size_multiplier = 2
-    fleet_slot_size = 2
-    section_slots = {
-        "mid" = {
-            locator = "light_pos"
-        }
-    }
-    num_target_locators = 0
-    icon = ship_size_space_monster
-    class = shipclass_military
-    is_designable = no
-}
-crystal_ship_large_green = {
-    entity = crystal_ship_large_green_entity
-    graphical_culture = no
-    is_space_object = yes
-    max_speed = @speed_slow_16
-    rotation_speed = 0.01
-    acceleration = 0.3
-    modifier = {
-        ship_evasion_add = @cruiser_evasion_11
-    }
-    max_hitpoints = @cruiser_hp_7
-    size_multiplier = 4
-    fleet_slot_size = 4
-    section_slots = {
-        "mid" = {
-            locator = "light_pos"
-        }
-    }
-    num_target_locators = 0
-    icon = ship_size_space_monster
-    class = shipclass_military
-    is_designable = no
-}
-crystal_ship_small_yellow = {
-    entity = crystal_ship_small_yellow_entity
-    graphical_culture = no
-    is_space_object = yes
-    max_speed = @speed_very_fast_19
-    rotation_speed = 0.15
-    acceleration = 0.35
-    modifier = {
-        ship_evasion_add = @corvette_evasion_6
-    }
-    max_hitpoints = @corvette_hp_6
-    size_multiplier = 1
-    fleet_slot_size = 1
-    section_slots = {
-        "mid" = {
-            locator = "light_pos"
-        }
-    }
-    num_target_locators = 0
-    icon = ship_size_space_monster
-    class = shipclass_military
-    is_designable = no
-}
-crystal_ship_medium_yellow = {
-    entity = crystal_ship_yellow_entity
-    graphical_culture = no
-    is_space_object = yes
-    max_speed = @speed_fast_24
-    rotation_speed = 0.075
-    acceleration = 0.325
-    modifier = {
-        ship_evasion_add = @destroyer_evasion_6
-    }
-    max_hitpoints = @destroyer_hp_6
-    size_multiplier = 2
-    fleet_slot_size = 2
-    section_slots = {
-        "mid" = {
-            locator = "light_pos"
-        }
-    }
-    num_target_locators = 0
-    icon = ship_size_space_monster
-    class = shipclass_military
-    is_designable = no
-}
-crystal_ship_large_yellow = {
-    entity = crystal_ship_large_yellow_entity
-    graphical_culture = no
-    is_space_object = yes
-    max_speed = @speed_slow_15
-    rotation_speed = 0.01
-    acceleration = 0.3
-    modifier = {
-        ship_evasion_add = @cruiser_evasion_10
-    }
-    max_hitpoints = @cruiser_hp_6
-    size_multiplier = 4
-    fleet_slot_size = 4
-    section_slots = {
-        "mid" = {
-            locator = "light_pos"
-        }
-    }
-    num_target_locators = 0
-    icon = ship_size_space_monster
-    class = shipclass_military
-    is_designable = no
-}
-crystal_ship_small_red = {
-    entity = crystal_ship_small_red_entity
-    graphical_culture = no
-    is_space_object = yes
-    max_speed = @speed_very_fast_18
-    rotation_speed = 0.15
-    acceleration = 0.35
-    modifier = {
-        ship_evasion_add = @corvette_evasion_5
-    }
-    max_hitpoints = @corvette_hp_5
-    size_multiplier = 1
-    fleet_slot_size = 1
-    section_slots = {
-        "mid" = {
-            locator = "light_pos"
-        }
-    }
-    num_target_locators = 0
-    icon = ship_size_space_monster
-    class = shipclass_military
-    is_designable = no
-}
-crystal_ship_medium_red = {
-    entity = crystal_ship_red_entity
-    graphical_culture = no
-    is_space_object = yes
-    max_speed = @speed_fast_23
-    rotation_speed = 0.075
-    acceleration = 0.325
-    modifier = {
-        ship_evasion_add = @destroyer_evasion_5
-    }
-    max_hitpoints = @destroyer_hp_5
-    size_multiplier = 2
-    fleet_slot_size = 2
-    section_slots = {
-        "mid" = {
-            locator = "light_pos"
-        }
-    }
-    num_target_locators = 0
-    icon = ship_size_space_monster
-    class = shipclass_military
-    is_designable = no
-}
-crystal_ship_large_red = {
-    entity = crystal_ship_large_red_entity
-    graphical_culture = no
-    is_space_object = yes
-    max_speed = @speed_slow_14
-    rotation_speed = 0.01
-    acceleration = 0.3
-    modifier = {
-        ship_evasion_add = @cruiser_evasion_9
-    }
-    max_hitpoints = @cruiser_hp_5
-    size_multiplier = 4
-    fleet_slot_size = 4
-    section_slots = {
-        "mid" = {
-            locator = "light_pos"
-        }
-    }
-    num_target_locators = 0
-    icon = ship_size_space_monster
-    class = shipclass_military
-    is_designable = no
-}
-crystal_ship_small_blue_elite = {
-    entity = crystal_ship_small_blue_elite_entity
-    graphical_culture = no
-    is_space_object = yes
-    max_speed = @speed_very_fast_17
-    rotation_speed = 0.15
-    acceleration = 0.35
-    modifier = {
-        ship_evasion_add = @corvette_evasion_4
-    }
-    max_hitpoints = @corvette_hp_4
-    size_multiplier = 1
-    fleet_slot_size = 1
-    section_slots = {
-        "mid" = {
-            locator = "light_pos"
-        }
-    }
-    num_target_locators = 0
-    icon = ship_size_space_monster
-    class = shipclass_military
-    is_designable = no
-}
-crystal_ship_medium_blue_elite = {
-    entity = crystal_ship_blue_elite_entity
-    graphical_culture = no
-    is_space_object = yes
-    max_speed = @speed_fast_22
-    rotation_speed = 0.075
-    acceleration = 0.325
-    modifier = {
-        ship_evasion_add = @destroyer_evasion_4
-    }
-    max_hitpoints = @destroyer_hp_4
-    size_multiplier = 2
-    fleet_slot_size = 2
-    section_slots = {
-        "mid" = {
-            locator = "light_pos"
-        }
-    }
-    num_target_locators = 0
-    icon = ship_size_space_monster
-    class = shipclass_military
-    is_designable = no
-}
-crystal_ship_large_blue_elite = {
-    entity = crystal_ship_large_blue_elite_entity
-    graphical_culture = no
-    is_space_object = yes
-    max_speed = @speed_slow_13
-    rotation_speed = 0.01
-    acceleration = 0.3
-    modifier = {
-        ship_evasion_add = @cruiser_evasion_8
-    }
-    max_hitpoints = @cruiser_hp_4
-    size_multiplier = 4
-    fleet_slot_size = 4
-    section_slots = {
-        "mid" = {
-            locator = "light_pos"
-        }
-    }
-    num_target_locators = 0
-    icon = ship_size_space_monster
-    class = shipclass_military
-    is_designable = no
-}
-crystal_ship_small_green_elite = {
-    entity = crystal_ship_small_green_elite_entity
-    graphical_culture = no
-    is_space_object = yes
-    max_speed = @speed_very_fast_16
-    rotation_speed = 0.15
-    acceleration = 0.35
-    modifier = {
-        ship_evasion_add = @corvette_evasion_3
-    }
-    max_hitpoints = @corvette_hp_3
-    size_multiplier = 1
-    fleet_slot_size = 1
-    section_slots = {
-        "mid" = {
-            locator = "light_pos"
-        }
-    }
-    num_target_locators = 0
-    icon = ship_size_space_monster
-    class = shipclass_military
-    is_designable = no
-}
-crystal_ship_medium_green_elite = {
-    entity = crystal_ship_green_elite_entity
-    graphical_culture = no
-    is_space_object = yes
-    max_speed = @speed_fast_21
-    rotation_speed = 0.075
-    acceleration = 0.325
-    modifier = {
-        ship_evasion_add = @destroyer_evasion_3
-    }
-    max_hitpoints = @destroyer_hp_3
-    size_multiplier = 2
-    fleet_slot_size = 2
-    section_slots = {
-        "mid" = {
-            locator = "light_pos"
-        }
-    }
-    num_target_locators = 0
-    icon = ship_size_space_monster
-    class = shipclass_military
-    is_designable = no
-}
-crystal_ship_large_green_elite = {
-    entity = crystal_ship_large_green_elite_entity
-    graphical_culture = no
-    is_space_object = yes
-    max_speed = @speed_slow_12
-    rotation_speed = 0.01
-    acceleration = 0.3
-    modifier = {
-        ship_evasion_add = @cruiser_evasion_7
-    }
-    max_hitpoints = @cruiser_hp_3
-    size_multiplier = 4
-    fleet_slot_size = 4
-    section_slots = {
-        "mid" = {
-            locator = "light_pos"
-        }
-    }
-    num_target_locators = 0
-    icon = ship_size_space_monster
-    class = shipclass_military
-    is_designable = no
-}
-crystal_ship_small_yellow_elite = {
-    entity = crystal_ship_small_yellow_elite_entity
-    graphical_culture = no
-    is_space_object = yes
-    max_speed = @speed_very_fast_15
-    rotation_speed = 0.15
-    acceleration = 0.35
-    modifier = {
-        ship_evasion_add = @corvette_evasion_2
-    }
-    max_hitpoints = @corvette_hp_2
-    size_multiplier = 1
-    fleet_slot_size = 1
-    section_slots = {
-        "mid" = {
-            locator = "light_pos"
-        }
-    }
-    num_target_locators = 0
-    icon = ship_size_space_monster
-    class = shipclass_military
-    is_designable = no
-}
-crystal_ship_medium_yellow_elite = {
-    entity = crystal_ship_yellow_elite_entity
-    graphical_culture = no
-    is_space_object = yes
-    max_speed = @speed_fast_20
-    rotation_speed = 0.075
-    acceleration = 0.325
-    modifier = {
-        ship_evasion_add = @destroyer_evasion_2
-    }
-    max_hitpoints = @destroyer_hp_2
-    size_multiplier = 2
-    fleet_slot_size = 2
-    section_slots = {
-        "mid" = {
-            locator = "light_pos"
-        }
-    }
-    num_target_locators = 0
-    icon = ship_size_space_monster
-    class = shipclass_military
-    is_designable = no
-}
-crystal_ship_large_yellow_elite = {
-    entity = crystal_ship_large_yellow_elite_entity
-    graphical_culture = no
-    is_space_object = yes
-    max_speed = @speed_slow_11
-    rotation_speed = 0.01
-    acceleration = 0.3
-    modifier = {
-        ship_evasion_add = @cruiser_evasion_6
-    }
-    max_hitpoints = @cruiser_hp_2
-    size_multiplier = 4
-    fleet_slot_size = 4
-    section_slots = {
-        "mid" = {
-            locator = "light_pos"
-        }
-    }
-    num_target_locators = 0
-    icon = ship_size_space_monster
-    class = shipclass_military
-    is_designable = no
-}
-crystal_ship_small_red_elite = {
-    entity = crystal_ship_small_red_elite_entity
-    graphical_culture = no
-    is_space_object = yes
-    max_speed = @speed_very_fast_14
+    max_speed = @speed_very_fast_3
     rotation_speed = 0.15
     acceleration = 0.35
     modifier = {
@@ -5542,11 +5062,11 @@ crystal_ship_small_red_elite = {
     class = shipclass_military
     is_designable = no
 }
-crystal_ship_medium_red_elite = {
-    entity = crystal_ship_red_elite_entity
+crystal_ship_medium_blue = {
+    entity = crystal_ship_blue_entity
     graphical_culture = no
     is_space_object = yes
-    max_speed = @speed_fast_19
+    max_speed = @speed_fast_11
     rotation_speed = 0.075
     acceleration = 0.325
     modifier = {
@@ -5565,17 +5085,500 @@ crystal_ship_medium_red_elite = {
     class = shipclass_military
     is_designable = no
 }
-crystal_ship_large_red_elite = {
-    entity = crystal_ship_large_red_elite_entity
+crystal_ship_large_blue = {
+    entity = crystal_ship_large_blue_entity
     graphical_culture = no
     is_space_object = yes
-    max_speed = @speed_slow_10
+    max_speed = @speed_slow_14
+    rotation_speed = 0.01
+    acceleration = 0.3
+    modifier = {
+        ship_evasion_add = @cruiser_evasion_1
+    }
+    max_hitpoints = @cruiser_hp_1
+    size_multiplier = 4
+    fleet_slot_size = 4
+    section_slots = {
+        "mid" = {
+            locator = "light_pos"
+        }
+    }
+    num_target_locators = 0
+    icon = ship_size_space_monster
+    class = shipclass_military
+    is_designable = no
+}
+crystal_ship_small_green = {
+    entity = crystal_ship_small_green_entity
+    graphical_culture = no
+    is_space_object = yes
+    max_speed = @speed_very_fast_4
+    rotation_speed = 0.15
+    acceleration = 0.35
+    modifier = {
+        ship_evasion_add = @corvette_evasion_2
+    }
+    max_hitpoints = @corvette_hp_2
+    size_multiplier = 1
+    fleet_slot_size = 1
+    section_slots = {
+        "mid" = {
+            locator = "light_pos"
+        }
+    }
+    num_target_locators = 0
+    icon = ship_size_space_monster
+    class = shipclass_military
+    is_designable = no
+}
+crystal_ship_medium_green = {
+    entity = crystal_ship_green_entity
+    graphical_culture = no
+    is_space_object = yes
+    max_speed = @speed_fast_12
+    rotation_speed = 0.075
+    acceleration = 0.325
+    modifier = {
+        ship_evasion_add = @destroyer_evasion_2
+    }
+    max_hitpoints = @destroyer_hp_2
+    size_multiplier = 2
+    fleet_slot_size = 2
+    section_slots = {
+        "mid" = {
+            locator = "light_pos"
+        }
+    }
+    num_target_locators = 0
+    icon = ship_size_space_monster
+    class = shipclass_military
+    is_designable = no
+}
+crystal_ship_large_green = {
+    entity = crystal_ship_large_green_entity
+    graphical_culture = no
+    is_space_object = yes
+    max_speed = @speed_slow_15
+    rotation_speed = 0.01
+    acceleration = 0.3
+    modifier = {
+        ship_evasion_add = @cruiser_evasion_2
+    }
+    max_hitpoints = @cruiser_hp_2
+    size_multiplier = 4
+    fleet_slot_size = 4
+    section_slots = {
+        "mid" = {
+            locator = "light_pos"
+        }
+    }
+    num_target_locators = 0
+    icon = ship_size_space_monster
+    class = shipclass_military
+    is_designable = no
+}
+crystal_ship_small_yellow = {
+    entity = crystal_ship_small_yellow_entity
+    graphical_culture = no
+    is_space_object = yes
+    max_speed = @speed_very_fast_5
+    rotation_speed = 0.15
+    acceleration = 0.35
+    modifier = {
+        ship_evasion_add = @corvette_evasion_3
+    }
+    max_hitpoints = @corvette_hp_3
+    size_multiplier = 1
+    fleet_slot_size = 1
+    section_slots = {
+        "mid" = {
+            locator = "light_pos"
+        }
+    }
+    num_target_locators = 0
+    icon = ship_size_space_monster
+    class = shipclass_military
+    is_designable = no
+}
+crystal_ship_medium_yellow = {
+    entity = crystal_ship_yellow_entity
+    graphical_culture = no
+    is_space_object = yes
+    max_speed = @speed_fast_13
+    rotation_speed = 0.075
+    acceleration = 0.325
+    modifier = {
+        ship_evasion_add = @destroyer_evasion_3
+    }
+    max_hitpoints = @destroyer_hp_3
+    size_multiplier = 2
+    fleet_slot_size = 2
+    section_slots = {
+        "mid" = {
+            locator = "light_pos"
+        }
+    }
+    num_target_locators = 0
+    icon = ship_size_space_monster
+    class = shipclass_military
+    is_designable = no
+}
+crystal_ship_large_yellow = {
+    entity = crystal_ship_large_yellow_entity
+    graphical_culture = no
+    is_space_object = yes
+    max_speed = @speed_slow_16
+    rotation_speed = 0.01
+    acceleration = 0.3
+    modifier = {
+        ship_evasion_add = @cruiser_evasion_3
+    }
+    max_hitpoints = @cruiser_hp_3
+    size_multiplier = 4
+    fleet_slot_size = 4
+    section_slots = {
+        "mid" = {
+            locator = "light_pos"
+        }
+    }
+    num_target_locators = 0
+    icon = ship_size_space_monster
+    class = shipclass_military
+    is_designable = no
+}
+crystal_ship_small_red = {
+    entity = crystal_ship_small_red_entity
+    graphical_culture = no
+    is_space_object = yes
+    max_speed = @speed_very_fast_6
+    rotation_speed = 0.15
+    acceleration = 0.35
+    modifier = {
+        ship_evasion_add = @corvette_evasion_4
+    }
+    max_hitpoints = @corvette_hp_4
+    size_multiplier = 1
+    fleet_slot_size = 1
+    section_slots = {
+        "mid" = {
+            locator = "light_pos"
+        }
+    }
+    num_target_locators = 0
+    icon = ship_size_space_monster
+    class = shipclass_military
+    is_designable = no
+}
+crystal_ship_medium_red = {
+    entity = crystal_ship_red_entity
+    graphical_culture = no
+    is_space_object = yes
+    max_speed = @speed_fast_14
+    rotation_speed = 0.075
+    acceleration = 0.325
+    modifier = {
+        ship_evasion_add = @destroyer_evasion_4
+    }
+    max_hitpoints = @destroyer_hp_4
+    size_multiplier = 2
+    fleet_slot_size = 2
+    section_slots = {
+        "mid" = {
+            locator = "light_pos"
+        }
+    }
+    num_target_locators = 0
+    icon = ship_size_space_monster
+    class = shipclass_military
+    is_designable = no
+}
+crystal_ship_large_red = {
+    entity = crystal_ship_large_red_entity
+    graphical_culture = no
+    is_space_object = yes
+    max_speed = @speed_slow_17
+    rotation_speed = 0.01
+    acceleration = 0.3
+    modifier = {
+        ship_evasion_add = @cruiser_evasion_4
+    }
+    max_hitpoints = @cruiser_hp_4
+    size_multiplier = 4
+    fleet_slot_size = 4
+    section_slots = {
+        "mid" = {
+            locator = "light_pos"
+        }
+    }
+    num_target_locators = 0
+    icon = ship_size_space_monster
+    class = shipclass_military
+    is_designable = no
+}
+crystal_ship_small_blue_elite = {
+    entity = crystal_ship_small_blue_elite_entity
+    graphical_culture = no
+    is_space_object = yes
+    max_speed = @speed_very_fast_7
+    rotation_speed = 0.15
+    acceleration = 0.35
+    modifier = {
+        ship_evasion_add = @corvette_evasion_5
+    }
+    max_hitpoints = @corvette_hp_5
+    size_multiplier = 1
+    fleet_slot_size = 1
+    section_slots = {
+        "mid" = {
+            locator = "light_pos"
+        }
+    }
+    num_target_locators = 0
+    icon = ship_size_space_monster
+    class = shipclass_military
+    is_designable = no
+}
+crystal_ship_medium_blue_elite = {
+    entity = crystal_ship_blue_elite_entity
+    graphical_culture = no
+    is_space_object = yes
+    max_speed = @speed_fast_15
+    rotation_speed = 0.075
+    acceleration = 0.325
+    modifier = {
+        ship_evasion_add = @destroyer_evasion_5
+    }
+    max_hitpoints = @destroyer_hp_5
+    size_multiplier = 2
+    fleet_slot_size = 2
+    section_slots = {
+        "mid" = {
+            locator = "light_pos"
+        }
+    }
+    num_target_locators = 0
+    icon = ship_size_space_monster
+    class = shipclass_military
+    is_designable = no
+}
+crystal_ship_large_blue_elite = {
+    entity = crystal_ship_large_blue_elite_entity
+    graphical_culture = no
+    is_space_object = yes
+    max_speed = @speed_slow_18
     rotation_speed = 0.01
     acceleration = 0.3
     modifier = {
         ship_evasion_add = @cruiser_evasion_5
     }
-    max_hitpoints = @cruiser_hp_1
+    max_hitpoints = @cruiser_hp_5
+    size_multiplier = 4
+    fleet_slot_size = 4
+    section_slots = {
+        "mid" = {
+            locator = "light_pos"
+        }
+    }
+    num_target_locators = 0
+    icon = ship_size_space_monster
+    class = shipclass_military
+    is_designable = no
+}
+crystal_ship_small_green_elite = {
+    entity = crystal_ship_small_green_elite_entity
+    graphical_culture = no
+    is_space_object = yes
+    max_speed = @speed_very_fast_8
+    rotation_speed = 0.15
+    acceleration = 0.35
+    modifier = {
+        ship_evasion_add = @corvette_evasion_6
+    }
+    max_hitpoints = @corvette_hp_6
+    size_multiplier = 1
+    fleet_slot_size = 1
+    section_slots = {
+        "mid" = {
+            locator = "light_pos"
+        }
+    }
+    num_target_locators = 0
+    icon = ship_size_space_monster
+    class = shipclass_military
+    is_designable = no
+}
+crystal_ship_medium_green_elite = {
+    entity = crystal_ship_green_elite_entity
+    graphical_culture = no
+    is_space_object = yes
+    max_speed = @speed_fast_16
+    rotation_speed = 0.075
+    acceleration = 0.325
+    modifier = {
+        ship_evasion_add = @destroyer_evasion_6
+    }
+    max_hitpoints = @destroyer_hp_6
+    size_multiplier = 2
+    fleet_slot_size = 2
+    section_slots = {
+        "mid" = {
+            locator = "light_pos"
+        }
+    }
+    num_target_locators = 0
+    icon = ship_size_space_monster
+    class = shipclass_military
+    is_designable = no
+}
+crystal_ship_large_green_elite = {
+    entity = crystal_ship_large_green_elite_entity
+    graphical_culture = no
+    is_space_object = yes
+    max_speed = @speed_slow_19
+    rotation_speed = 0.01
+    acceleration = 0.3
+    modifier = {
+        ship_evasion_add = @cruiser_evasion_6
+    }
+    max_hitpoints = @cruiser_hp_6
+    size_multiplier = 4
+    fleet_slot_size = 4
+    section_slots = {
+        "mid" = {
+            locator = "light_pos"
+        }
+    }
+    num_target_locators = 0
+    icon = ship_size_space_monster
+    class = shipclass_military
+    is_designable = no
+}
+crystal_ship_small_yellow_elite = {
+    entity = crystal_ship_small_yellow_elite_entity
+    graphical_culture = no
+    is_space_object = yes
+    max_speed = @speed_very_fast_9
+    rotation_speed = 0.15
+    acceleration = 0.35
+    modifier = {
+        ship_evasion_add = @corvette_evasion_7
+    }
+    max_hitpoints = @corvette_hp_7
+    size_multiplier = 1
+    fleet_slot_size = 1
+    section_slots = {
+        "mid" = {
+            locator = "light_pos"
+        }
+    }
+    num_target_locators = 0
+    icon = ship_size_space_monster
+    class = shipclass_military
+    is_designable = no
+}
+crystal_ship_medium_yellow_elite = {
+    entity = crystal_ship_yellow_elite_entity
+    graphical_culture = no
+    is_space_object = yes
+    max_speed = @speed_fast_17
+    rotation_speed = 0.075
+    acceleration = 0.325
+    modifier = {
+        ship_evasion_add = @destroyer_evasion_7
+    }
+    max_hitpoints = @destroyer_hp_7
+    size_multiplier = 2
+    fleet_slot_size = 2
+    section_slots = {
+        "mid" = {
+            locator = "light_pos"
+        }
+    }
+    num_target_locators = 0
+    icon = ship_size_space_monster
+    class = shipclass_military
+    is_designable = no
+}
+crystal_ship_large_yellow_elite = {
+    entity = crystal_ship_large_yellow_elite_entity
+    graphical_culture = no
+    is_space_object = yes
+    max_speed = @speed_slow_20
+    rotation_speed = 0.01
+    acceleration = 0.3
+    modifier = {
+        ship_evasion_add = @cruiser_evasion_7
+    }
+    max_hitpoints = @cruiser_hp_7
+    size_multiplier = 4
+    fleet_slot_size = 4
+    section_slots = {
+        "mid" = {
+            locator = "light_pos"
+        }
+    }
+    num_target_locators = 0
+    icon = ship_size_space_monster
+    class = shipclass_military
+    is_designable = no
+}
+crystal_ship_small_red_elite = {
+    entity = crystal_ship_small_red_elite_entity
+    graphical_culture = no
+    is_space_object = yes
+    max_speed = @speed_very_fast_10
+    rotation_speed = 0.15
+    acceleration = 0.35
+    modifier = {
+        ship_evasion_add = @corvette_evasion_8
+    }
+    max_hitpoints = @corvette_hp_8
+    size_multiplier = 1
+    fleet_slot_size = 1
+    section_slots = {
+        "mid" = {
+            locator = "light_pos"
+        }
+    }
+    num_target_locators = 0
+    icon = ship_size_space_monster
+    class = shipclass_military
+    is_designable = no
+}
+crystal_ship_medium_red_elite = {
+    entity = crystal_ship_red_elite_entity
+    graphical_culture = no
+    is_space_object = yes
+    max_speed = @speed_fast_18
+    rotation_speed = 0.075
+    acceleration = 0.325
+    modifier = {
+        ship_evasion_add = @destroyer_evasion_8
+    }
+    max_hitpoints = @destroyer_hp_8
+    size_multiplier = 2
+    fleet_slot_size = 2
+    section_slots = {
+        "mid" = {
+            locator = "light_pos"
+        }
+    }
+    num_target_locators = 0
+    icon = ship_size_space_monster
+    class = shipclass_military
+    is_designable = no
+}
+crystal_ship_large_red_elite = {
+    entity = crystal_ship_large_red_elite_entity
+    graphical_culture = no
+    is_space_object = yes
+    max_speed = @speed_slow_21
+    rotation_speed = 0.01
+    acceleration = 0.3
+    modifier = {
+        ship_evasion_add = @cruiser_evasion_8
+    }
+    max_hitpoints = @cruiser_hp_8
     size_multiplier = 4
     fleet_slot_size = 4
     section_slots = {
@@ -5610,14 +5613,14 @@ crystal_station_large = {
     }
     num_target_locators = 0
     is_space_station = yes
-    build_block_radius = @build_block_radius_civilian_15
+    build_block_radius = @build_block_radius_civilian_5
     class = shipclass_military_station
     is_designable = no
 }
 space_cloud = {
     graphical_culture = no
     is_space_object = yes
-    max_speed = @speed_very_slow_25
+    max_speed = @speed_very_slow_2
     rotation_speed = 0.1
     acceleration = 0.3
     modifier = {
@@ -5641,7 +5644,7 @@ space_cloud = {
 space_amoeba = {
     graphical_culture = no
     is_space_object = yes
-    max_speed = @speed_slow_9
+    max_speed = @speed_slow_22
     rotation_speed = 0.03
     collision_radius = 1
     acceleration = 0.5
@@ -5666,7 +5669,7 @@ space_amoeba = {
 space_amoeba_mother = {
     graphical_culture = no
     is_space_object = yes
-    max_speed = @speed_slow_8
+    max_speed = @speed_slow_23
     rotation_speed = 0.1
     collision_radius = 5
     acceleration = 1
@@ -5691,7 +5694,7 @@ space_amoeba_mother = {
 space_whale_1 = {
     graphical_culture = no
     is_space_object = yes
-    max_speed = @speed_very_slow_24
+    max_speed = @speed_very_slow_3
     rotation_speed = 0.02
     acceleration = 0.6
     modifier = {
@@ -5714,7 +5717,7 @@ space_whale_1 = {
 space_whale_2 = {
     graphical_culture = no
     is_space_object = yes
-    max_speed = @speed_very_slow_23
+    max_speed = @speed_very_slow_4
     rotation_speed = 0.02
     acceleration = 0.6
     modifier = {
@@ -5738,7 +5741,7 @@ space_whale_3 = {
     graphical_culture = no
     entity = space_whale_orange_section_entity
     is_space_object = yes
-    max_speed = @speed_very_slow_22
+    max_speed = @speed_very_slow_5
     rotation_speed = 0.02
     acceleration = 0.6
     modifier = {
@@ -5762,7 +5765,7 @@ space_whale_4 = {
     graphical_culture = no
     entity = space_whale_albino_section_entity
     is_space_object = yes
-    max_speed = @speed_very_slow_21
+    max_speed = @speed_very_slow_6
     rotation_speed = 0.02
     acceleration = 0.6
     modifier = {
@@ -5783,7 +5786,7 @@ space_whale_4 = {
     is_designable = no
 }
 ancient_mining_drone = {
-    max_speed = @speed_very_fast_13
+    max_speed = @speed_very_fast_11
     rotation_speed = 0.5
     acceleration = 0.5
     modifier = {
@@ -5827,7 +5830,7 @@ ancient_corvette = {
     graphical_culture = no
 }
 ancient_destroyer = {
-    max_speed = @speed_very_fast_11
+    max_speed = @speed_very_fast_13
     rotation_speed = 0.3
     acceleration = 1
     modifier = {
@@ -5853,7 +5856,7 @@ lesser_space_cloud = {
     graphical_culture = no
     entity = space_cloud_entity
     is_space_object = yes
-    max_speed = @speed_very_slow_20
+    max_speed = @speed_very_slow_7
     rotation_speed = 0.1
     acceleration = 0.3
     modifier = {
@@ -6214,10 +6217,10 @@ pirate_corvette = {
     graphical_culture = {
         "pirate_01"
     }
-    max_speed = @speed_very_fast_10
+    max_speed = @speed_very_fast_14
     acceleration = 0.35
     rotation_speed = 0.1
-    collision_radius = @corvette_collision_radius_8
+    collision_radius = @corvette_collision_radius_1
     modifier = {
         ship_armor_add = 3
         ship_evasion_add = 60
@@ -6244,10 +6247,10 @@ pirate_destroyer = {
     graphical_culture = {
         "pirate_01"
     }
-    max_speed = @speed_fast_18
+    max_speed = @speed_fast_19
     acceleration = 0.3
     rotation_speed = 0.2
-    collision_radius = @destroyer_collision_radius_8
+    collision_radius = @destroyer_collision_radius_5
     modifier = {
         ship_evasion_add = 25
         ship_armor_add = 15
@@ -6274,10 +6277,10 @@ pirate_cruiser = {
     graphical_culture = {
         "pirate_01"
     }
-    max_speed = @speed_fast_17
+    max_speed = @speed_fast_20
     acceleration = 0.2
     rotation_speed = 0.2
-    collision_radius = @destroyer_collision_radius_7
+    collision_radius = @destroyer_collision_radius_6
     modifier = {
         ship_evasion_add = 10
         ship_armor_add = 34
@@ -6326,7 +6329,7 @@ pirate_station = {
     icon = ship_size_military_station
     num_target_locators = 0
     is_space_station = yes
-    build_block_radius = @build_block_radius_civilian_14
+    build_block_radius = @build_block_radius_civilian_6
     class = shipclass_military_station
     is_designable = no
 }
@@ -6334,10 +6337,10 @@ bemat_corvette = {
     graphical_culture = {
         "pirate_01"
     }
-    max_speed = @speed_very_fast_9
+    max_speed = @speed_very_fast_15
     acceleration = 0.35
     rotation_speed = 0.1
-    collision_radius = @corvette_collision_radius_7
+    collision_radius = @corvette_collision_radius_2
     modifier = {
         ship_armor_add = 6
         ship_evasion_add = 50
@@ -6367,10 +6370,10 @@ bemat_destroyer = {
         "pirate_01"
     }
     entity = "humanoid_01_destroyer_entity"
-    max_speed = @speed_fast_16
+    max_speed = @speed_fast_21
     acceleration = 0.3
     rotation_speed = 0.35
-    collision_radius = @destroyer_collision_radius_6
+    collision_radius = @destroyer_collision_radius_7
     modifier = {
         ship_armor_add = 25
         ship_evasion_add = 25
@@ -6403,7 +6406,7 @@ bemat_cruiser = {
         "pirate_01"
     }
     entity = "humanoid_01_cruiser_entity"
-    max_speed = @speed_fast_15
+    max_speed = @speed_fast_22
     acceleration = 0.25
     rotation_speed = 0.2
     collision_radius = @cruiser_collision_radius_2
@@ -6441,10 +6444,10 @@ large_ship_ai = {
     graphical_culture = {
         "ai_01"
     }
-    max_speed = @speed_slow_7
+    max_speed = @speed_slow_24
     acceleration = 0.2
     rotation_speed = 0.15
-    collision_radius = @battleship_collision_radius_7
+    collision_radius = @battleship_collision_radius_6
     modifier = {
         ship_evasion_add = 10
     }
@@ -6466,10 +6469,10 @@ small_ship_ai = {
     graphical_culture = {
         "ai_01"
     }
-    max_speed = @speed_default_8
+    max_speed = @speed_default_5
     acceleration = 0.3
     rotation_speed = 0.2
-    collision_radius = @destroyer_collision_radius_5
+    collision_radius = @destroyer_collision_radius_8
     modifier = {
         ship_evasion_add = 25
     }
@@ -6510,7 +6513,7 @@ military_station_large_ai = {
     }
     num_target_locators = 0
     is_space_station = yes
-    build_block_radius = @build_block_radius_none_7
+    build_block_radius = @build_block_radius_none_2
     class = shipclass_military_station
     is_designable = no
     icon = ship_size_military_station
@@ -6538,7 +6541,7 @@ military_station_small_ai = {
     }
     num_target_locators = 0
     is_space_station = yes
-    build_block_radius = @build_block_radius_none_6
+    build_block_radius = @build_block_radius_none_3
     class = shipclass_military_station
     is_designable = no
     icon = ship_size_military_station
@@ -6567,7 +6570,7 @@ core_ai = {
     }
     num_target_locators = 0
     is_space_station = yes
-    build_block_radius = @build_block_radius_none_5
+    build_block_radius = @build_block_radius_none_4
     class = shipclass_military_station
     is_designable = no
     icon = ship_size_military_station
@@ -6597,7 +6600,7 @@ final_core_ai = {
     }
     num_target_locators = 0
     is_space_station = yes
-    build_block_radius = @build_block_radius_none_4
+    build_block_radius = @build_block_radius_none_5
     class = shipclass_military_station
     is_designable = no
     icon = ship_size_military_station
@@ -6607,7 +6610,7 @@ construction_ship_ai = {
         "ai_01"
     }
     is_space_object = yes
-    max_speed = @speed_slow_6
+    max_speed = @speed_slow_25
     acceleration = 0.3
     rotation_speed = 0.2
     modifier = {
@@ -6635,7 +6638,7 @@ colony_ship_ai = {
         "ai_01"
     }
     is_space_object = yes
-    max_speed = @speed_slow_5
+    max_speed = @speed_slow_26
     acceleration = 0.3
     rotation_speed = 0.2
     modifier = {
@@ -6663,7 +6666,7 @@ transport_ship_ai = {
         "ai_01"
     }
     is_space_object = yes
-    max_speed = @speed_fast_14
+    max_speed = @speed_fast_23
     acceleration = 0.3
     rotation_speed = 0.2
     acceleration = 0.6
@@ -6709,7 +6712,7 @@ blue_core_ai = {
     }
     num_target_locators = 0
     is_space_station = yes
-    build_block_radius = @build_block_radius_none_3
+    build_block_radius = @build_block_radius_none_6
     class = shipclass_military_station
     is_designable = no
     icon = ship_size_military_station
@@ -6738,7 +6741,7 @@ blue_military_station_large_ai = {
     }
     num_target_locators = 0
     is_space_station = yes
-    build_block_radius = @build_block_radius_none_2
+    build_block_radius = @build_block_radius_none_7
     class = shipclass_military_station
     is_designable = no
     icon = ship_size_military_station
@@ -6767,7 +6770,7 @@ blue_military_station_small_ai = {
     }
     num_target_locators = 0
     is_space_station = yes
-    build_block_radius = @build_block_radius_none_1
+    build_block_radius = @build_block_radius_none_8
     build_time = 360
     class = shipclass_military_station
     is_designable = no
@@ -6805,7 +6808,7 @@ space_dragon_red = {
     is_space_object = yes
     graphical_culture = no
     can_be_inspected = no
-    max_speed = @speed_very_fast_8
+    max_speed = @speed_very_fast_16
     acceleration = 0.4
     rotation_speed = 0.5
     collision_radius = 7
@@ -6862,7 +6865,7 @@ enclave_station = {
     }
     num_target_locators = 0
     is_space_station = yes
-    build_block_radius = @build_block_radius_civilian_13
+    build_block_radius = @build_block_radius_civilian_7
     icon = ship_size_military_station
     use_shipnames_from = military_station_small
     class = shipclass_military_station
@@ -6875,7 +6878,7 @@ stellarite = {
     max_speed = @speed_crawl_1
     acceleration = 0.2
     rotation_speed = 0.01
-    collision_radius = @titan_collision_radius_4
+    collision_radius = @titan_collision_radius_2
     modifier = {
         ship_evasion_add = 30
     }
@@ -6899,7 +6902,7 @@ sphere = {
     graphical_culture = {
         "techno"
     }
-    max_speed = @speed_very_slow_19
+    max_speed = @speed_very_slow_8
     acceleration = 0.3
     rotation_speed = 1
     collision_radius = @titan_collision_radius_3
@@ -6928,7 +6931,7 @@ galleon = {
         "pirate_01"
     }
     graphical_culture = yes
-    max_speed = @speed_very_slow_18
+    max_speed = @speed_very_slow_9
     acceleration = 0.3
     rotation_speed = 0.05
     collision_radius = 7
@@ -6972,7 +6975,7 @@ station_xl = {
     }
     num_target_locators = 5
     is_space_station = yes
-    build_block_radius = @build_block_radius_civilian_12
+    build_block_radius = @build_block_radius_civilian_8
     icon = ship_size_military_station
     class = shipclass_military_station
     is_designable = no
@@ -6998,7 +7001,7 @@ station_l = {
     }
     num_target_locators = 2
     is_space_station = yes
-    build_block_radius = @build_block_radius_civilian_11
+    build_block_radius = @build_block_radius_civilian_9
     icon = ship_size_military_station
     class = shipclass_military_station
     is_designable = no
@@ -7048,7 +7051,7 @@ station_s = {
     }
     num_target_locators = 1
     is_space_station = yes
-    build_block_radius = @build_block_radius_civilian_9
+    build_block_radius = @build_block_radius_civilian_11
     icon = ship_size_military_station
     class = shipclass_military_station
     is_designable = no
@@ -7073,7 +7076,7 @@ station_xs = {
     }
     num_target_locators = 1
     is_space_station = yes
-    build_block_radius = @build_block_radius_civilian_8
+    build_block_radius = @build_block_radius_civilian_12
     icon = ship_size_military_station
     class = shipclass_military_station
     is_designable = no
@@ -7105,7 +7108,7 @@ dimensional_horror = {
     }
     num_target_locators = 4
     is_space_station = no
-    build_block_radius = @build_block_radius_military_6
+    build_block_radius = @build_block_radius_military_3
     icon = ship_size_space_monster
     class = shipclass_military
     is_designable = no
@@ -7117,7 +7120,7 @@ npc_warship_01 = {
     }
     is_space_object = yes
     graphical_culture = yes
-    max_speed = @speed_slow_4
+    max_speed = @speed_slow_27
     acceleration = 0.15
     rotation_speed = 0.1
     collision_radius = 7
@@ -7165,7 +7168,7 @@ homebase = {
     }
     num_target_locators = 5
     is_space_station = yes
-    build_block_radius = @build_block_radius_civilian_7
+    build_block_radius = @build_block_radius_civilian_13
     class = shipclass_military_station
     is_designable = no
     icon = ship_size_military_station
@@ -7190,7 +7193,7 @@ hive_asteroid = {
     }
     num_target_locators = 1
     is_space_station = yes
-    build_block_radius = @build_block_radius_civilian_6
+    build_block_radius = @build_block_radius_civilian_14
     icon = ship_size_space_monster
     class = shipclass_military_station
     is_designable = no
@@ -7199,7 +7202,7 @@ wraith_01_blue = {
     is_space_object = yes
     graphical_culture = no
     can_be_inspected = no
-    max_speed = @speed_very_slow_17
+    max_speed = @speed_very_slow_10
     acceleration = 0.3
     rotation_speed = 0.5
     collision_radius = 8
@@ -7226,7 +7229,7 @@ wraith_01_red = {
     is_space_object = yes
     graphical_culture = no
     can_be_inspected = no
-    max_speed = @speed_very_slow_16
+    max_speed = @speed_very_slow_11
     acceleration = 0.3
     rotation_speed = 0.5
     collision_radius = 8
@@ -7253,7 +7256,7 @@ wraith_01_yellow = {
     is_space_object = yes
     graphical_culture = no
     can_be_inspected = no
-    max_speed = @speed_very_slow_15
+    max_speed = @speed_very_slow_12
     acceleration = 0.3
     rotation_speed = 0.5
     collision_radius = 8
@@ -7310,7 +7313,7 @@ space_dragon_blue = {
     is_space_object = yes
     graphical_culture = no
     can_be_inspected = no
-    max_speed = @speed_very_fast_7
+    max_speed = @speed_very_fast_17
     acceleration = 0.4
     rotation_speed = 0.5
     collision_radius = 7
@@ -7349,7 +7352,7 @@ space_dragon_origin = {
     is_space_object = yes
     graphical_culture = no
     can_be_inspected = no
-    max_speed = @speed_very_fast_6
+    max_speed = @speed_very_fast_18
     acceleration = 0.4
     rotation_speed = 0.5
     collision_radius = 7
@@ -7449,7 +7452,7 @@ space_dragon_origin_baby = {
 psionic_avatar = {
     graphical_culture = no
     is_space_object = yes
-    max_speed = @speed_very_fast_5
+    max_speed = @speed_very_fast_19
     rotation_speed = 1
     acceleration = 0.3
     modifier = {
@@ -7473,7 +7476,7 @@ psionic_avatar = {
 corrupted_avatar = {
     graphical_culture = no
     is_space_object = yes
-    max_speed = @speed_very_fast_4
+    max_speed = @speed_very_fast_20
     rotation_speed = 1
     acceleration = 0.2
     modifier = {
@@ -7497,7 +7500,7 @@ corrupted_avatar = {
 shroud_manifestation = {
     graphical_culture = no
     is_space_object = yes
-    max_speed = @speed_fast_13
+    max_speed = @speed_fast_24
     rotation_speed = 1
     acceleration = 0.2
     modifier = {
@@ -7521,7 +7524,7 @@ shroud_manifestation = {
 warped_consciousness = {
     graphical_culture = no
     is_space_object = yes
-    max_speed = @speed_very_slow_14
+    max_speed = @speed_very_slow_13
     rotation_speed = 1
     acceleration = 0.1
     modifier = {
@@ -7545,7 +7548,7 @@ warped_consciousness = {
 leviathan_01_scavenger_bot = {
     graphical_culture = no
     can_be_inspected = no
-    max_speed = @speed_very_slow_13
+    max_speed = @speed_very_slow_14
     acceleration = 0.3
     rotation_speed = 0.05
     collision_radius = 7
@@ -7581,7 +7584,7 @@ leviathan_01_elder_tiyanki = {
     graphical_culture = no
     can_be_inspected = no
     is_space_object = yes
-    max_speed = @speed_very_slow_12
+    max_speed = @speed_very_slow_15
     rotation_speed = 0.2
     acceleration = 0.6
     modifier = {
@@ -7616,7 +7619,7 @@ leviathan_01_voidspawn = {
     is_space_object = yes
     graphical_culture = no
     can_be_inspected = no
-    max_speed = @speed_default_7
+    max_speed = @speed_default_6
     acceleration = 0.2
     rotation_speed = 0.2
     collision_radius = 7
@@ -7656,7 +7659,7 @@ enigmatic_cache = {
     is_space_object = yes
     graphical_culture = no
     can_be_inspected = no
-    max_speed = @speed_very_slow_11
+    max_speed = @speed_very_slow_16
     acceleration = 0.3
     rotation_speed = 0.2
     collision_radius = 12
@@ -7716,7 +7719,7 @@ space_amoeba_centenarian = {
     graphical_culture = no
     can_be_inspected = no
     is_space_object = yes
-    max_speed = @speed_default_6
+    max_speed = @speed_default_7
     rotation_speed = 0.8
     collision_radius = 5
     acceleration = 1
@@ -7742,7 +7745,7 @@ space_amoeba_centenarian = {
 graygoo_mothership = {
     graphical_culture = no
     entity = "gatebuilder_01_mothership_entity"
-    max_speed = @speed_default_5
+    max_speed = @speed_default_8
     acceleration = 0.2
     rotation_speed = 0.15
     collision_radius = 5
@@ -7771,7 +7774,7 @@ graygoo_mothership = {
 graygoo_interdictor = {
     graphical_culture = no
     entity = gatebuilder_01_cruiser_entity
-    max_speed = @speed_fast_12
+    max_speed = @speed_fast_25
     acceleration = 0.25
     rotation_speed = 0.175
     collision_radius = 4
@@ -7819,7 +7822,7 @@ graygoo_factory = {
     }
     num_target_locators = 0
     is_space_station = yes
-    build_block_radius = @build_block_radius_civilian_5
+    build_block_radius = @build_block_radius_civilian_15
     class = shipclass_military_station
     is_designable = no
     icon = ship_size_military_station
@@ -7864,8 +7867,8 @@ starbase_caravaneer = {
     required_component_set = "power_core"
     required_component_set = "sensor_components"
     required_component_set = "combat_computers"
-    build_block_radius = @build_block_radius_starbase_3
-    formation_priority = @starbase_formation_priority_35
+    build_block_radius = @build_block_radius_starbase_1
+    formation_priority = @starbase_formation_priority_29
     icon_frame = -1
     icon = ship_size_military_station
 }
@@ -8961,7 +8964,7 @@ enclave_mercenary_station = {
     num_target_locators = 0
     can_disable = no
     is_space_station = yes
-    build_block_radius = @build_block_radius_civilian_4
+    build_block_radius = @build_block_radius_civilian_16
     icon = ship_size_military_station
     use_shipnames_from = military_station_small
     class = shipclass_starbase
@@ -8996,7 +8999,7 @@ enclave_salvager_station = {
     num_target_locators = 0
     can_disable = no
     is_space_station = yes
-    build_block_radius = @build_block_radius_civilian_3
+    build_block_radius = @build_block_radius_civilian_17
     use_shipnames_from = military_station_small
     class = shipclass_starbase
     is_designable = no
@@ -9030,7 +9033,7 @@ enclave_shroudwalker_station = {
     num_target_locators = 0
     can_disable = no
     is_space_station = yes
-    build_block_radius = @build_block_radius_civilian_2
+    build_block_radius = @build_block_radius_civilian_18
     icon = ship_size_military_station
     use_shipnames_from = military_station_small
     class = shipclass_starbase
@@ -9395,7 +9398,7 @@ leviathan_01_void_dragon = {
     graphical_culture = no
     entity = leviathan_01_voidspawn_entity
     can_be_inspected = no
-    max_speed = @speed_very_fast_3
+    max_speed = @speed_very_fast_21
     acceleration = 0.2
     rotation_speed = 0.2
     collision_radius = 7
@@ -11550,7 +11553,7 @@ starbase_ehof_01 = {
     num_target_locators = 0
     is_space_station = yes
     build_block_radius = @build_block_radius_civilian
-    formation_priority = @starbase_formation_priority_6
+    formation_priority = @starbase_formation_priority_30
     icon_frame = -1
     class = shipclass_military_station
     required_component_set = "power_core"
@@ -11584,7 +11587,7 @@ starbase_ehof_02 = {
     num_target_locators = 0
     is_space_station = yes
     build_block_radius = @build_block_radius_civilian
-    formation_priority = @starbase_formation_priority_5
+    formation_priority = @starbase_formation_priority_31
     icon_frame = -1
     class = shipclass_military_station
     required_component_set = "power_core"
@@ -11618,7 +11621,7 @@ starbase_ehof_03 = {
     num_target_locators = 0
     is_space_station = yes
     build_block_radius = @build_block_radius_civilian
-    formation_priority = @starbase_formation_priority_4
+    formation_priority = @starbase_formation_priority_32
     icon_frame = -1
     class = shipclass_military_station
     required_component_set = "power_core"
@@ -11652,7 +11655,7 @@ starbase_ehof_04 = {
     num_target_locators = 0
     is_space_station = yes
     build_block_radius = @build_block_radius_civilian
-    formation_priority = @starbase_formation_priority_3
+    formation_priority = @starbase_formation_priority_33
     icon_frame = -1
     class = shipclass_military_station
     required_component_set = "power_core"
@@ -11695,7 +11698,7 @@ starbase_ehof_05 = {
     required_component_set = "COMPOUND_COMMUNICATIONS_JAMMER"
     required_component_set = "COMPOUND_IMMUNITY_AURA_SET"
     build_block_radius = @build_block_radius_starbase_2
-    formation_priority = @starbase_formation_priority_2
+    formation_priority = @starbase_formation_priority_34
     icon_frame = -1
 }
 gpm_crystal_ship_large_blue_elite = {
@@ -11703,11 +11706,11 @@ gpm_crystal_ship_large_blue_elite = {
     graphical_culture = no
     can_be_inspected = no
     is_space_object = yes
-    max_speed = @speed_very_slow_10
+    max_speed = @speed_very_slow_17
     rotation_speed = 0.01
     acceleration = 0.3
     modifier = {
-        ship_evasion_add = @cruiser_evasion_4
+        ship_evasion_add = @cruiser_evasion_9
     }
     max_hitpoints = 40000
     size_multiplier = 4
@@ -11727,11 +11730,11 @@ gpm_crystal_ship_large_green_elite = {
     graphical_culture = no
     can_be_inspected = no
     is_space_object = yes
-    max_speed = @speed_very_slow_9
+    max_speed = @speed_very_slow_18
     rotation_speed = 0.01
     acceleration = 0.3
     modifier = {
-        ship_evasion_add = @cruiser_evasion_3
+        ship_evasion_add = @cruiser_evasion_10
     }
     max_hitpoints = 40000
     size_multiplier = 4
@@ -11751,11 +11754,11 @@ gpm_crystal_ship_large_yellow_elite = {
     graphical_culture = no
     can_be_inspected = no
     is_space_object = yes
-    max_speed = @speed_very_slow_8
+    max_speed = @speed_very_slow_19
     rotation_speed = 0.01
     acceleration = 0.3
     modifier = {
-        ship_evasion_add = @cruiser_evasion_2
+        ship_evasion_add = @cruiser_evasion_11
     }
     max_hitpoints = 40000
     size_multiplier = 4
@@ -11775,11 +11778,11 @@ gpm_crystal_ship_large_red_elite = {
     graphical_culture = no
     can_be_inspected = no
     is_space_object = yes
-    max_speed = @speed_very_slow_7
+    max_speed = @speed_very_slow_20
     rotation_speed = 0.01
     acceleration = 0.3
     modifier = {
-        ship_evasion_add = @cruiser_evasion_1
+        ship_evasion_add = @cruiser_evasion_12
     }
     max_hitpoints = 40000
     size_multiplier = 4
@@ -11795,7 +11798,7 @@ gpm_crystal_ship_large_red_elite = {
     is_designable = no
 }
 gpm_manufactorium_ship = {
-    max_speed = @speed_very_slow_6
+    max_speed = @speed_very_slow_21
     entity = eventship_03_entity
     rotation_speed = 0.15
     acceleration = 0.3
@@ -11829,11 +11832,11 @@ gpm_manufactorium_ship = {
     required_component_set = "thruster_components"
 }
 gpm_precursor_destroyer = {
-    max_speed = @speed_very_slow_5
+    max_speed = @speed_very_slow_22
     entity = eventship_08_entity
     acceleration = 0.1
     rotation_speed = 0.1
-    collision_radius = @battleship_collision_radius_6
+    collision_radius = @battleship_collision_radius_7
     modifier = {
         ship_evasion_add = @battleship_evasion
         ship_piracy_suppression_add = 8
@@ -11895,23 +11898,25 @@ gpm_ego = {
     }
     num_target_locators = 4
     is_space_station = no
-    build_block_radius = @build_block_radius_military_5
+    build_block_radius = @build_block_radius_military_4
     icon = ship_size_space_monster
     class = shipclass_military
     is_designable = no
 }
 npc_galleon_01 = {
+    is_space_object = yes
     graphical_culture = {
+        "pirate_01"
         "npf_01_dirty"
         "npf_01"
+        "madd_01"
     }
-    is_space_object = yes
     graphical_culture = yes
     formation_priority = 40
     max_speed = @speed_slow
     acceleration = 0.3
     rotation_speed = 0.1
-    collision_radius = 9
+    collision_radius = 12
     modifier = {
         ship_evasion_add = 35
         ship_armor_add = 20000
@@ -11920,8 +11925,8 @@ npc_galleon_01 = {
         ship_shield_mult = 3
     }
     max_hitpoints = 40000
-    combat_size_multiplier = 20
-    size_multiplier = 8
+    combat_size_multiplier = 24
+    size_multiplier = 12
     fleet_slot_size = 4
     section_slots = {
         "mid" = {
@@ -12093,10 +12098,10 @@ mem_ancient_weapon = {
         "mem_ancient_02"
     }
     is_space_object = yes
-    max_speed = @speed_very_slow_4
+    max_speed = @speed_very_slow_23
     acceleration = 0.2
     rotation_speed = 0.15
-    collision_radius = @titan_collision_radius_2
+    collision_radius = @titan_collision_radius_4
     modifier = {
         ship_evasion_add = 20
         ship_hull_regen_add_perc = 0.05
@@ -12120,16 +12125,16 @@ mem_ancient_weapon = {
     is_designable = no
 }
 mem_ancient_cruiser = {
-    formation_priority = @battleship_formation_priority_3
+    formation_priority = @battleship_formation_priority_2
     graphical_culture = {
         "mem_ancient_01"
         "mem_ancient_02"
     }
     is_space_object = yes
-    max_speed = @speed_default_4
+    max_speed = @speed_default_9
     acceleration = 0.25
     rotation_speed = 0.175
-    collision_radius = @battleship_collision_radius_5
+    collision_radius = @battleship_collision_radius_8
     modifier = {
         ship_evasion_add = 20
         ship_hull_regen_add_perc = 0.05
@@ -12153,16 +12158,16 @@ mem_ancient_cruiser = {
     is_designable = no
 }
 mem_ancient_escort = {
-    formation_priority = @destroyer_formation_priority_3
+    formation_priority = @destroyer_formation_priority_2
     graphical_culture = {
         "mem_ancient_01"
         "mem_ancient_02"
     }
     is_space_object = yes
-    max_speed = @speed_fast_11
+    max_speed = @speed_fast_26
     acceleration = 0.3
     rotation_speed = 0.2
-    collision_radius = @destroyer_collision_radius_4
+    collision_radius = @destroyer_collision_radius_9
     modifier = {
         ship_evasion_add = 40
         ship_hull_regen_add_perc = 0.05
@@ -12186,16 +12191,16 @@ mem_ancient_escort = {
     is_designable = no
 }
 mem_ancient_control_drone = {
-    formation_priority = @corvette_formation_priority_5
+    formation_priority = @corvette_formation_priority_1
     graphical_culture = {
         "mem_ancient_01"
         "mem_ancient_02"
     }
     is_space_object = yes
-    max_speed = @speed_fast_10
+    max_speed = @speed_fast_27
     acceleration = 0.35
     rotation_speed = 0.1
-    collision_radius = @corvette_collision_radius_6
+    collision_radius = @corvette_collision_radius_3
     modifier = {
         ship_evasion_add = 60
         ship_hull_regen_add_perc = 0.05
@@ -12219,16 +12224,16 @@ mem_ancient_control_drone = {
     is_designable = no
 }
 mem_ancient_combat_drone = {
-    formation_priority = @corvette_formation_priority_4
+    formation_priority = @corvette_formation_priority_2
     graphical_culture = {
         "mem_ancient_01"
         "mem_ancient_02"
     }
     is_space_object = yes
-    max_speed = @speed_fast_9
+    max_speed = @speed_fast_28
     acceleration = 0.35
     rotation_speed = 0.1
-    collision_radius = @corvette_collision_radius_5
+    collision_radius = @corvette_collision_radius_4
     modifier = {
         ship_evasion_add = 60
         ship_hull_regen_add_perc = 0.05
@@ -12276,7 +12281,7 @@ mem_ancient_large_military_station = {
     }
     num_target_locators = 0
     is_space_station = yes
-    build_block_radius = @build_block_radius_military_4
+    build_block_radius = @build_block_radius_military_5
     uses_name_prefix = no
     takes_name_from_ship_design = yes
     class = shipclass_military_station
@@ -12308,7 +12313,7 @@ mem_ancient_small_military_station = {
     }
     num_target_locators = 0
     is_space_station = yes
-    build_block_radius = @build_block_radius_military_3
+    build_block_radius = @build_block_radius_military_6
     uses_name_prefix = no
     takes_name_from_ship_design = yes
     class = shipclass_military_station
@@ -12321,7 +12326,7 @@ mem_ancient_alt_science = {
         "mem_ancient_02"
     }
     is_space_object = yes
-    max_speed = @speed_fast_8
+    max_speed = @speed_fast_29
     acceleration = 0.3
     rotation_speed = 0.2
     modifier = {
@@ -12403,7 +12408,7 @@ mem_charmak_ship_size = {
 mem_colony_ship_size = {
     graphical_culture = no
     entity = abandoned_ship_section_entity
-    max_speed = @speed_slow_3
+    max_speed = @speed_slow_28
     acceleration = 0.3
     rotation_speed = 0.2
     modifier = {
@@ -12490,10 +12495,10 @@ mem_doom_dragon_ship = {
 mem_dpe_proto_corvette = {
     entity = mammalian_01_corvette_entity
     formation_priority = @corvette_formation_priority_3
-    max_speed = @speed_fast_7
+    max_speed = @speed_fast_30
     acceleration = 0.32
     rotation_speed = 0.1
-    collision_radius = @corvette_collision_radius_4
+    collision_radius = @corvette_collision_radius_5
     max_hitpoints = 250
     modifier = {
         ship_evasion_add = 50
@@ -12546,12 +12551,12 @@ mem_dread_pirate_gigawarform = {
 }
 mem_food_constructor_large_ship = {
     entity = fallen_empire_02_large_ship_fallen_empire_entity
-    formation_priority = @battleship_formation_priority_2
+    formation_priority = @battleship_formation_priority_3
     graphical_culture = no
-    max_speed = @speed_slow_2
+    max_speed = @speed_slow_29
     acceleration = 0.2
     rotation_speed = 0.15
-    collision_radius = @battleship_collision_radius_4
+    collision_radius = @battleship_collision_radius_9
     modifier = {
         ship_evasion_add = 10
         ship_hull_regen_add_perc = 0.05
@@ -12581,12 +12586,12 @@ mem_food_constructor_large_ship = {
 }
 mem_food_constructor_small_ship = {
     entity = fallen_empire_02_small_ship_fallen_empire_entity
-    formation_priority = @destroyer_formation_priority_2
+    formation_priority = @destroyer_formation_priority_3
     graphical_culture = no
-    max_speed = @speed_fast_6
+    max_speed = @speed_fast_31
     acceleration = 0.3
     rotation_speed = 0.2
-    collision_radius = @destroyer_collision_radius_3
+    collision_radius = @destroyer_collision_radius_10
     modifier = {
         ship_evasion_add = 35
         ship_hull_regen_add_perc = 0.25
@@ -12618,7 +12623,7 @@ mem_crystal_ship_giant_blue = {
     entity = mem_crystal_ship_large_blue_entity
     graphical_culture = no
     is_space_object = yes
-    max_speed = @speed_very_slow_3
+    max_speed = @speed_very_slow_24
     rotation_speed = 0.01
     acceleration = 0.3
     modifier = {
@@ -12641,7 +12646,7 @@ mem_crystal_ship_giant = {
     entity = mem_crystal_ship_large_blue_entity
     graphical_culture = no
     is_space_object = yes
-    max_speed = @speed_very_slow_2
+    max_speed = @speed_very_slow_25
     rotation_speed = 0.01
     acceleration = 0.3
     modifier = {
@@ -12858,10 +12863,10 @@ mem_rubicon_fortress = {
 mem_rubicon_battleship = {
     graphical_culture = no
     entity = "mem_rubicon_battleship_entity"
-    max_speed = @speed_slow_1
+    max_speed = @speed_slow_30
     acceleration = 0.2
     rotation_speed = 0.15
-    collision_radius = @battleship_collision_radius_3
+    collision_radius = @battleship_collision_radius_10
     max_hitpoints = 2000
     modifier = {
         ship_evasion_add = 5
@@ -12881,10 +12886,10 @@ mem_rubicon_battleship = {
 mem_rubicon_cruiser = {
     graphical_culture = no
     entity = "mem_rubicon_cruiser_entity"
-    max_speed = @speed_default_3
+    max_speed = @speed_default_10
     acceleration = 0.25
     rotation_speed = 0.175
-    collision_radius = @cruiser_collision_radius_1
+    collision_radius = @cruiser_collision_radius_3
     max_hitpoints = 1000
     modifier = {
         ship_evasion_add = 10
@@ -12904,10 +12909,10 @@ mem_rubicon_cruiser = {
 mem_rubicon_destroyer = {
     graphical_culture = no
     entity = "mem_rubicon_destroyer_entity"
-    max_speed = @speed_fast_5
+    max_speed = @speed_fast_32
     acceleration = 0.3
     rotation_speed = 0.2
-    collision_radius = @destroyer_collision_radius_2
+    collision_radius = @destroyer_collision_radius_11
     max_hitpoints = 500
     modifier = {
         ship_evasion_add = 35
@@ -12927,10 +12932,10 @@ mem_rubicon_destroyer = {
 mem_rubicon_corvette = {
     graphical_culture = no
     entity = "mem_rubicon_corvette_entity"
-    max_speed = @speed_very_fast_2
+    max_speed = @speed_very_fast_22
     acceleration = 0.35
     rotation_speed = 0.1
-    collision_radius = @corvette_collision_radius_3
+    collision_radius = @corvette_collision_radius_6
     max_hitpoints = 150
     modifier = {
         ship_evasion_add = 60
@@ -12950,10 +12955,10 @@ mem_rubicon_corvette = {
 mem_rubicon_mender = {
     graphical_culture = no
     entity = "eventship_03_entity"
-    max_speed = @speed_default_2
+    max_speed = @speed_default_11
     acceleration = 0.25
     rotation_speed = 0.175
-    collision_radius = @battleship_collision_radius_2
+    collision_radius = @battleship_collision_radius_11
     max_hitpoints = 15000
     modifier = {
         ship_evasion_add = 5
@@ -13026,7 +13031,7 @@ mem_sadrell_void_home = {
     }
     num_target_locators = 0
     is_space_station = yes
-    build_block_radius = @build_block_radius_civilian_1
+    build_block_radius = @build_block_radius_civilian_19
     class = shipclass_military_station
     is_designable = no
 }
@@ -13242,20 +13247,20 @@ mem_surveyor_outpost = {
     required_component_set = "power_core"
     required_component_set = "sensor_components"
     required_component_set = "combat_computers"
-    build_block_radius = @build_block_radius_starbase_1
-    formation_priority = @starbase_formation_priority_1
+    build_block_radius = @build_block_radius_starbase_3
+    formation_priority = @starbase_formation_priority_35
     icon_frame = -1
 }
 mem_vazuran_weapon = {
-    formation_priority = @titan_formation_priority_1
+    formation_priority = @titan_formation_priority_3
     graphical_culture = {
         "mem_ancient_02"
     }
     is_space_object = yes
-    max_speed = @speed_very_slow_1
+    max_speed = @speed_very_slow_26
     acceleration = 0.2
     rotation_speed = 0.15
-    collision_radius = @titan_collision_radius_1
+    collision_radius = @titan_collision_radius_5
     modifier = {
         ship_evasion_add = 10
         ships_upkeep_mult = -1
@@ -13277,15 +13282,15 @@ mem_vazuran_weapon = {
     is_designable = no
 }
 mem_vazuran_cruiser = {
-    formation_priority = @battleship_formation_priority_1
+    formation_priority = @battleship_formation_priority_4
     graphical_culture = {
         "mem_ancient_02"
     }
     is_space_object = yes
-    max_speed = @speed_default_1
+    max_speed = @speed_default_12
     acceleration = 0.25
     rotation_speed = 0.175
-    collision_radius = @battleship_collision_radius_1
+    collision_radius = @battleship_collision_radius_12
     modifier = {
         ship_evasion_add = 10
         ships_upkeep_mult = -1
@@ -13307,15 +13312,15 @@ mem_vazuran_cruiser = {
     is_designable = no
 }
 mem_vazuran_escort = {
-    formation_priority = @destroyer_formation_priority_1
+    formation_priority = @destroyer_formation_priority_4
     graphical_culture = {
         "mem_ancient_02"
     }
     is_space_object = yes
-    max_speed = @speed_fast_4
+    max_speed = @speed_fast_33
     acceleration = 0.3
     rotation_speed = 0.2
-    collision_radius = @destroyer_collision_radius_1
+    collision_radius = @destroyer_collision_radius_12
     modifier = {
         ship_evasion_add = 20
         ships_upkeep_mult = -1
@@ -13337,15 +13342,15 @@ mem_vazuran_escort = {
     is_designable = no
 }
 mem_vazuran_control_drone = {
-    formation_priority = @corvette_formation_priority_2
+    formation_priority = @corvette_formation_priority_4
     graphical_culture = {
         "mem_ancient_02"
     }
     is_space_object = yes
-    max_speed = @speed_fast_3
+    max_speed = @speed_fast_34
     acceleration = 0.35
     rotation_speed = 0.1
-    collision_radius = @corvette_collision_radius_2
+    collision_radius = @corvette_collision_radius_7
     modifier = {
         ship_evasion_add = 30
         ships_upkeep_mult = -1
@@ -13367,15 +13372,15 @@ mem_vazuran_control_drone = {
     is_designable = no
 }
 mem_vazuran_combat_drone = {
-    formation_priority = @corvette_formation_priority_1
+    formation_priority = @corvette_formation_priority_5
     graphical_culture = {
         "mem_ancient_02"
     }
     is_space_object = yes
-    max_speed = @speed_fast_2
+    max_speed = @speed_fast_35
     acceleration = 0.35
     rotation_speed = 0.1
-    collision_radius = @corvette_collision_radius_1
+    collision_radius = @corvette_collision_radius_8
     modifier = {
         ship_evasion_add = 30
         ships_upkeep_mult = -1
@@ -13419,7 +13424,7 @@ mem_vazuran_large_military_station = {
     }
     num_target_locators = 0
     is_space_station = yes
-    build_block_radius = @build_block_radius_military_2
+    build_block_radius = @build_block_radius_military_7
     uses_name_prefix = no
     takes_name_from_ship_design = yes
     class = shipclass_military_station
@@ -13449,7 +13454,7 @@ mem_vazuran_small_military_station = {
     }
     num_target_locators = 0
     is_space_station = yes
-    build_block_radius = @build_block_radius_military_1
+    build_block_radius = @build_block_radius_military_8
     uses_name_prefix = no
     takes_name_from_ship_design = yes
     class = shipclass_military_station
@@ -13556,7 +13561,7 @@ mem_wpdr_tiny_ship = {
 }
 project_ark_ship = {
     graphical_culture = no
-    max_speed = @speed_fast_1
+    max_speed = @speed_fast_36
     rotation_speed = 0.15
     acceleration = 0.3
     modifier = {
@@ -13670,7 +13675,7 @@ bulwark_station = {
     }
 }
 transport = {
-    max_speed = @speed_very_fast_1
+    max_speed = @speed_very_fast_23
     rotation_speed = 0.2
     acceleration = 0.6
     max_hitpoints = 400

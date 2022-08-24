@@ -1,9 +1,6 @@
 building_giga_iodizium_research = {
     base_buildtime = 350
     category = research
-    allow = {
-        has_upgraded_capital = yes
-    }
     prerequisites = {
         "giga_tech_fusion_suppressor"
     }
@@ -13,6 +10,23 @@ building_giga_iodizium_research = {
         }
         NOT = {
             has_modifier = slave_colony
+        }
+    }
+    allow = {
+        has_upgraded_capital = yes
+        hidden_trigger = {
+            exists = owner
+            or = {
+                owner = {
+                    is_ai = no
+                }
+                and = {
+                    planet_resource_compare = {
+                        resource = physics_research
+                        value >= 50
+                    }
+                }
+            }
         }
     }
     planet_modifier = {
@@ -51,11 +65,14 @@ building_giga_iodizium_research = {
         }
     }
     ai_resource_production = {
-        physics_research = 25
-        engineering_research = 25
-        society_research = 25
         trigger = {
-            always = yes
+            planet_resource_compare = {
+                resource = physics_research
+                value >= 30
+            }
         }
+        physics_research = 20
+        society_research = 20
+        engineering_research = 20
     }
 }

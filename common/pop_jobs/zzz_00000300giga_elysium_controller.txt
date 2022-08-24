@@ -1,0 +1,26 @@
+giga_elysium_controller = {
+    category = ruler
+    condition_string = RULER_JOB_TRIGGER
+    building_icon = building_palace
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+    possible_precalc = can_fill_ruler_job
+    resources = {
+        category = planet_jobs
+        upkeep = {
+            consumer_goods = 2
+        }
+    }
+    planet_modifier = {
+        giga_elysium_host_stability_add = 8
+    }
+    weight = {
+        weight = value:giga_ruler_no_resource_weight|JOB|giga_elysium_controller|
+        mult = 3
+    }
+}

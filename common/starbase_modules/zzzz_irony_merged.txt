@@ -1801,7 +1801,7 @@ asteroid_mining = {
             }
         }
         custom_tooltip = {
-            fail_text = "starbase_h_limit.tooltip.fail"
+            fail_text = "starbase_ast_limit.tooltip.fail"
             count_starbase_modules = {
                 count < 4
                 type = asteroid_mining
@@ -2521,7 +2521,7 @@ heavy_hangar_bay = {
             alloys = 400
         }
         upkeep = {
-            energy = 7
+            energy = 9
         }
     }
     station_modifier = {
@@ -2644,7 +2644,7 @@ heavy_x_gun_battery = {
             alloys = 500
         }
         upkeep = {
-            energy = 15
+            energy = 20
         }
     }
     station_modifier = {

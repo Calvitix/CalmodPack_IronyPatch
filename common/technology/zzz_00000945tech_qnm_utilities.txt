@@ -1,0 +1,23 @@
+tech_qnm_utilities = {
+    cost = @tier7cost3
+    area = engineering
+    tier = 5
+    category = {
+        propulsion
+    }
+    weight = 0
+    is_rare = yes
+    potential = {
+        has_country_flag = qnm_utilities_possible
+    }
+    ai_weight = {
+        factor = @giga_aiweight_multiplier_questionable
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_propulsion"
+            }
+        }
+    }
+}

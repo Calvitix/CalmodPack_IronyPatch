@@ -1,0 +1,24 @@
+giga_tech_blokkat_energy_transfer = {
+    cost = 150000000
+    area = physics
+    tier = 5
+    category = {
+        blokkats
+    }
+    is_rare = yes
+    weight = 0
+    is_reverse_engineerable = no
+    potential = {
+        has_country_flag = blokkat_math_projects_possible
+    }
+    modifier = {
+        megastructures_energy_produces_mult = 0.3
+        country_resource_max_energy_add = 5000000
+    }
+    prereqfor_desc = {
+        custom = {
+            title = "blokkat_protocols_physics_title"
+            desc = "blokkat_protocols_physics_title"
+        }
+    }
+}

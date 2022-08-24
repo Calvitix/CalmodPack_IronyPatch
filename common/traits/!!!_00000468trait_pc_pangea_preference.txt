@@ -96,6 +96,7 @@ trait_pc_pangea_preference = {
         pc_reef_habitability = 0.6
         pc_geothermal_habitability = 0.6
         pc_biolumen_habitability = 0.6
+        pc_cryoflora_habitability = 0.2
         pc_lichen_habitability = 0.2
         pc_storm_habitability = 0.4
         pc_eyeball_habitability = 0.2

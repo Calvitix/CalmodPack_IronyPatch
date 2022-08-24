@@ -1,3 +1,6 @@
+@galwonders_weight = 5000
+@mega_engineering_perks = 5
+@structure_perks = 4
 ap_galactic_wonders_megacorp = {
     on_enabled = {
         if = {
@@ -8,15 +11,48 @@ ap_galactic_wonders_megacorp = {
             }
             add_research_option = tech_matter_decompressor
         }
+        if = {
+            limit = {
+                is_ai = yes
+                NOT = {
+                    has_technology = tech_mega_engineering
+                }
+            }
+            add_research_option = tech_mega_engineering
+        }
     }
     possible = {
         custom_tooltip = {
             fail_text = "requires_mega_engineering"
-            has_technology = tech_mega_engineering
+            or = {
+                has_technology = tech_mega_engineering
+                and = {
+                    is_ai = yes
+                    or = {
+                        any_country = {
+                            is_ai = no
+                            has_galactic_wonders = yes
+                        }
+                        num_ascension_perks >= @mega_engineering_perks
+                    }
+                }
+            }
         }
         custom_tooltip = {
             fail_text = "requires_built_or_repaired_megastructure"
-            has_country_flag = has_built_or_repaired_megastructure
+            or = {
+                has_country_flag = has_built_or_repaired_megastructure
+                and = {
+                    is_ai = yes
+                    or = {
+                        any_country = {
+                            is_ai = no
+                            has_galactic_wonders = yes
+                        }
+                        num_ascension_perks >= @structure_perks
+                    }
+                }
+            }
         }
     }
     potential = {
@@ -27,7 +63,7 @@ ap_galactic_wonders_megacorp = {
         }
     }
     ai_weight = {
-        factor = 500
+        factor = @galwonders_weight
         modifier = {
             factor = 2
             has_ethic = ethic_pacifist
@@ -43,6 +79,14 @@ ap_galactic_wonders_megacorp = {
         modifier = {
             factor = 3
             has_ethic = ethic_fanatic_materialist
+        }
+        modifier = {
+            factor = 100
+            or = {
+                has_ascension_perk = ap_transcendence
+                has_ascension_perk = ap_synthetic_evolution
+                has_ascension_perk = ap_evolutionary_mastery
+            }
         }
     }
 }

@@ -1,0 +1,5 @@
+merg_is_default_empire = {
+    OR = {
+        is_country_type = default
+    }
+}

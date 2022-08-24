@@ -11,12 +11,22 @@ building_solar_farm = {
         potential = {
             exists = owner
             owner = {
-                is_machine_empire = yes
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            job_technician_add = 8
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
             }
         }
         modifier = {
             job_technician_drone_add = 8
-            job_maintenance_drone_add = 6
         }
     }
 }

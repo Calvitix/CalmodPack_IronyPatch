@@ -1,0 +1,322 @@
+building_giga_elysium_host_jobs = {
+    can_build = no
+    can_demolish = no
+    can_be_ruined = no
+    can_be_disabled = no
+    position_priority = 1
+    icon = building_maintenance_depot
+    category = government
+    potential = {
+        has_planet_flag = has_orbital_elysium
+        exists = owner
+        owner = {
+            is_gestalt = no
+        }
+    }
+    convert_to = {
+        building_giga_elysium_host_machine_jobs
+        building_giga_elysium_host_hive_jobs
+    }
+    resources = {
+        category = planet_buildings
+        upkeep = {
+            energy = 2
+        }
+    }
+    triggered_desc = {
+        text = building_giga_elysium_host_jobs_amenities_effect
+    }
+    triggered_planet_modifier = {
+        job_clerk_per_pop = 1
+        multiplier = value:giga_elysium_regular_job_mult|JOB|clerk|
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            nand = {
+                is_wet = yes
+                owner = {
+                    is_anglers_empire = yes
+                }
+            }
+            giga_planet_no_farming = no
+        }
+        job_farmer_per_pop = 1
+        multiplier = value:giga_elysium_regular_job_mult|JOB|farmer|
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            is_wet = yes
+            owner = {
+                is_anglers_empire = yes
+            }
+        }
+        job_angler_per_pop = 0.5
+        job_pearl_diver_per_pop = 0.5
+        multiplier = value:giga_elysium_regular_job_mult|JOB|farmer|
+    }
+    triggered_planet_modifier = {
+        potential = {
+            giga_planet_no_farming = yes
+        }
+        job_miner_per_pop = 0.5
+        job_technician_per_pop = 0.5
+        multiplier = value:giga_elysium_regular_job_mult|JOB|farmer|
+    }
+    triggered_planet_modifier = {
+        potential = {
+            giga_planet_is_ecumenopolis = no
+        }
+        job_miner_per_pop = 1
+        multiplier = value:giga_elysium_regular_job_mult|JOB|miner|
+    }
+    triggered_planet_modifier = {
+        potential = {
+            giga_planet_is_ecumenopolis = yes
+        }
+        job_clerk_per_pop = 0.5
+        job_scrap_miner_per_pop = 0.5
+        multiplier = value:giga_elysium_regular_job_mult|JOB|miner|
+    }
+    triggered_planet_modifier = {
+        job_technician_per_pop = 1
+        multiplier = value:giga_elysium_regular_job_mult|JOB|technician|
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_global_flag = bug_branch_active
+            exists = owner
+            owner = {
+                has_policy_flag = economic_stance_bugged_free_market
+            }
+        }
+        job_technician_per_pop = -0.5
+        job_bugged_trader_per_pop = 0.5
+        multiplier = value:giga_elysium_regular_job_mult|JOB|technician|
+    }
+    triggered_planet_modifier = {
+        job_soldier_per_pop = 1
+        multiplier = value:giga_elysium_regular_job_mult|JOB|soldier|
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_valid_civic = civic_reanimated_armies
+            }
+        }
+        job_necromancer_per_pop = 0.1
+        job_soldier_per_pop = -0.1
+        multiplier = value:giga_elysium_regular_job_mult|JOB|soldier|
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_global_flag = bug_branch_active
+            exists = owner
+            owner = {
+                or = {
+                    has_valid_civic = civic_bugged_private_militaries
+                    has_valid_civic = civic_bugged_private_militaries_corpo
+                }
+            }
+        }
+        job_soldier_per_pop = -0.5
+        job_bugged_mercenary_per_pop = 0.5
+        multiplier = value:giga_elysium_regular_job_mult|JOB|soldier|
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_crafter_empire = no
+            }
+        }
+        job_artisan_per_pop = 1
+        multiplier = value:giga_elysium_regular_job_mult|JOB|artisan|
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_crafter_empire = yes
+            }
+        }
+        job_artificer_per_pop = 1
+        multiplier = value:giga_elysium_regular_job_mult|JOB|artisan|
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_catalytic_empire = no
+            }
+        }
+        job_foundry_per_pop = 1
+        multiplier = value:giga_elysium_regular_job_mult|JOB|metallurgist|
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_catalytic_empire = yes
+            }
+        }
+        job_catalytic_technician_per_pop = 1
+        multiplier = value:giga_elysium_regular_job_mult|JOB|metallurgist|
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_megacorp = no
+                is_spiritualist = no
+            }
+        }
+        job_bureaucrat_per_pop = 1
+        multiplier = value:giga_elysium_regular_job_mult|JOB|bureaucrat|
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_megacorp = yes
+                is_spiritualist = no
+            }
+        }
+        job_manager_per_pop = 1
+        multiplier = value:giga_elysium_regular_job_mult|JOB|bureaucrat|
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_megacorp = no
+                is_spiritualist = yes
+                is_death_cult_empire = no
+            }
+        }
+        job_priest_per_pop = 1
+        multiplier = value:giga_elysium_regular_job_mult|JOB|bureaucrat|
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_megacorp = yes
+                is_spiritualist = yes
+                is_death_cult_empire = no
+            }
+        }
+        job_priest_per_pop = 0.5
+        job_manager_per_pop = 0.5
+        multiplier = value:giga_elysium_regular_job_mult|JOB|bureaucrat|
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_megacorp = no
+                is_spiritualist = yes
+                is_death_cult_empire = yes
+            }
+        }
+        job_death_priest_per_pop = 1
+        multiplier = value:giga_elysium_regular_job_mult|JOB|bureaucrat|
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_megacorp = yes
+                is_spiritualist = yes
+                is_death_cult_empire = yes
+            }
+        }
+        job_death_priest_per_pop = 0.5
+        job_manager_per_pop = 0.5
+        multiplier = value:giga_elysium_regular_job_mult|JOB|bureaucrat|
+    }
+    triggered_planet_modifier = {
+        job_researcher_per_pop = 1
+        multiplier = value:giga_elysium_regular_job_mult|JOB|researcher|
+    }
+    triggered_planet_modifier = {
+        job_researcher_per_pop = 1
+        multiplier = value:giga_elysium_regular_job_mult|JOB|researcher|
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_technology = tech_volatile_motes
+            }
+        }
+        job_chemist_per_pop = 1
+        multiplier = value:giga_elysium_regular_job_mult|JOB|chemist|
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                not = {
+                    has_technology = tech_volatile_motes
+                }
+            }
+        }
+        job_clerk_per_pop = 1
+        multiplier = value:giga_elysium_regular_job_mult|JOB|chemist|
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_technology = tech_rare_crystals
+            }
+        }
+        job_translucer_per_pop = 1
+        multiplier = value:giga_elysium_regular_job_mult|JOB|translucer|
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                not = {
+                    has_technology = tech_rare_crystals
+                }
+            }
+        }
+        job_clerk_per_pop = 1
+        multiplier = value:giga_elysium_regular_job_mult|JOB|translucer|
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_technology = tech_exotic_gases
+            }
+        }
+        job_gas_refiner_per_pop = 1
+        multiplier = value:giga_elysium_regular_job_mult|JOB|gas_refiner|
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                not = {
+                    has_technology = tech_exotic_gases
+                }
+            }
+        }
+        job_clerk_per_pop = 1
+        multiplier = value:giga_elysium_regular_job_mult|JOB|gas_refiner|
+    }
+    triggered_planet_modifier = {
+        job_giga_megaengineer_per_pop = 1
+        multiplier = value:giga_elysium_regular_job_mult|JOB|megaengineer|
+    }
+    triggered_planet_modifier = {
+        planet_amenities_add = 1
+        multiplier = value:giga_elysium_clerk_count
+    }
+}

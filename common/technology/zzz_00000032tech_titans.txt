@@ -32,7 +32,7 @@ tech_titans = {
         modifier = {
             factor = 0.1
             NOT = {
-                years_passed > 150
+                years_passed > 200
             }
         }
         modifier = {
@@ -43,15 +43,15 @@ tech_titans = {
         }
         modifier = {
             factor = 2
-            years_passed > 180
+            years_passed > 250
         }
         modifier = {
             factor = 3
-            years_passed > 200
+            years_passed > 300
         }
         modifier = {
             factor = 4
-            years_passed > 220
+            years_passed > 350
         }
         modifier = {
             factor = 1.25

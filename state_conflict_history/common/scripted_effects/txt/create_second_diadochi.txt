@@ -1,4 +1,5 @@
 create_second_diadochi = {
+    optimize_memory
     if = {
         limit = {
             exists = event_target:second_diadochi_origin

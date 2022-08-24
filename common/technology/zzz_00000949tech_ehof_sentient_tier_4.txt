@@ -1,0 +1,35 @@
+tech_ehof_sentient_tier_4 = {
+    area = engineering
+    cost = @tier6cost3
+    weight = 0
+    tier = 5
+    category = {
+        materials
+    }
+    is_rare = yes
+    ai_update_type = all
+    modifier = {
+        planet_researchers_engineering_research_produces_mult = 0.05
+    }
+    potential = {
+        OR = {
+            AND = {
+                any_country = {
+                    has_technology = tech_ehof_sentient_tier_7
+                }
+                is_ai = yes
+            }
+            has_country_flag = ehof_code_4_complete
+        }
+    }
+    ai_weight = {
+        factor = @giga_aiweight_multiplier_questionable
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+    }
+}

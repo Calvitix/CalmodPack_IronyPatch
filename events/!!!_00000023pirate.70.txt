@@ -36,8 +36,8 @@ ship_event = {
                         }
                     }
                     save_event_target_as = pirate_home
+                    create_pirate_base_1 = yes
                 }
-                create_pirate_base_1 = yes
             }
             else_if = {
                 limit = {

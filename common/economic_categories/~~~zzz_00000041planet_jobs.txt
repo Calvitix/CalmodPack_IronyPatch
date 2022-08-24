@@ -39,7 +39,7 @@ planet_jobs = {
         trigger = {
             exists = planet
             planet = {
-                is_planet_class = pc_habitat
+                is_giga_habitat = yes
             }
         }
     }
@@ -52,7 +52,7 @@ planet_jobs = {
         trigger = {
             exists = planet
             planet = {
-                is_planet_class = pc_habitat
+                is_giga_habitat = yes
             }
         }
     }
@@ -206,9 +206,9 @@ planet_jobs = {
             exists = planet
             planet = {
                 is_artificial = no
-				NOT = {
-					is_planet_class = pc_relic
-				}
+            }
+            NOT = {
+                is_planet_class = pc_relic
             }
         }
     }
