@@ -95,7 +95,7 @@ hyper_relay = {
     placement_rules = {
     }
     ai_weight = {
-        factor = 5
+        factor = 1
         modifier = {
             factor = 0.2
             owner = {

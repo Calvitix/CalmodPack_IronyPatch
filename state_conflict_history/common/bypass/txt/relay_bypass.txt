@@ -1,0 +1,35 @@
+relay_bypass = {
+    name = HYPER_RELAY_GALACTIC
+    is_pathfind = yes
+    uses_action = no
+    always_active = yes
+    windup_time = 10
+    winddown_time = 0
+    icon_frame = 30
+    remember_instances = no
+    galactic_map_tooltip_header = HYPER_RELAY_GALACTIC
+    galactic_map_tooltip_desc = HYPER_RELAY_GALACTIC_DESC
+    connection_type = hyper_relay
+    animation_time = 1
+    ftl_ship_effect = "gateway_ftl_ship_effect_entity"
+    ftl_bypass_effect = "gateway_ftl_bypass_effect_entity"
+    country_can_use = {
+        custom_tooltip = {
+            fail_text = HYPER_RELAY_COUNTRY_CANNOT_USE
+            OR = {
+                NOT = {
+                    exists = from
+                }
+                AND = {
+                    exists = from
+                    from = {
+                        NOR = {
+                            has_closed_borders = root
+                            is_hostile = root
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
