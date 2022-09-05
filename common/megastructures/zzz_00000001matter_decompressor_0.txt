@@ -1,0 +1,156 @@
+matter_decompressor_0 = {
+    entity = "construction_platform_entity"
+    construction_entity = "construction_platform_entity"
+    construction_blocks_and_blocked_by = none
+    portrait = "GFX_megastructure_construction_background"
+    place_entity_on_planet_plane = no
+    entity_offset = {
+        x = -1.1
+        y = -2.8
+    }
+    rotate_to_center = no
+    scale_offset = yes
+    prerequisites = {
+        "tech_matter_decompressor"
+    }
+    build_time = 1800
+    resources = {
+        category = giga_matter_decompressor
+        cost = {
+            alloys = 5000
+            unity = @giga_big_mega_start_unity_cost
+        }
+        cost = {
+            alloys = -1
+            multiplier = value:giga_ai_savings_cost|CATEGORY|important|RESOURCE|alloys|AMOUNT|5000|
+        }
+        cost = {
+            unity = -1
+            multiplier = value:giga_ai_savings_cost|CATEGORY|important|RESOURCE|unity|AMOUNT|@giga_big_mega_start_unity_cost|
+        }
+        upkeep = {
+            energy = 5
+        }
+    }
+    on_build_start = {
+        giga_ai_savings_withdraw = {
+            CATEGORY = important
+            RESOURCE = alloys
+            AMOUNT = 5000
+        }
+        giga_ai_savings_withdraw = {
+            CATEGORY = important
+            RESOURCE = unity
+            AMOUNT = @giga_big_mega_start_unity_cost
+        }
+    }
+    on_build_cancel = {
+        giga_ai_savings_refund = {
+            CATEGORY = important
+            RESOURCE = alloys
+        }
+        giga_ai_savings_refund = {
+            CATEGORY = important
+            RESOURCE = unity
+        }
+    }
+    potential = {
+        NOT = {
+            has_global_flag = vanilla_matter_disabled
+        }
+        has_gw_matter_decompressor = yes
+        OR = {
+            check_variable = {
+                which = giga_vanilla_matter_cap
+                value = 0
+            }
+            check_variable = {
+                which = giga_current_vanilla_matter
+                value < giga_vanilla_matter_cap
+            }
+        }
+    }
+    possible = {
+        exists = starbase
+        custom_tooltip = {
+            fail_text = "requires_inside_border"
+            is_inside_border = from
+        }
+        custom_tooltip = {
+            fail_text = "requires_surveyed_system"
+            giga_system_is_surveyed = yes
+        }
+        custom_tooltip = {
+            fail_text = "requires_no_habitable_planets"
+            giga_any_hab_planets = no
+        }
+        custom_tooltip = {
+            fail_text = "requires_not_capped"
+            from = {
+                OR = {
+                    check_variable = {
+                        which = giga_vanilla_matter_cap
+                        value = 0
+                    }
+                    check_variable = {
+                        which = giga_current_vanilla_matter
+                        value < giga_vanilla_matter_cap
+                    }
+                }
+            }
+        }
+    }
+    placement_rules = {
+        planet_possible = {
+            custom_tooltip = {
+                fail_text = "must_build_around_star"
+                is_star = yes
+            }
+            custom_tooltip = {
+                fail_text = "requires_no_existing_megastructure"
+                planet_has_no_megastructure = yes
+            }
+            custom_tooltip = {
+                fail_text = "requires_no_anomaly"
+                has_anomaly = no
+            }
+            custom_tooltip = {
+                fail_text = "must_build_around_black_hole"
+                giga_black_hole = yes
+            }
+        }
+    }
+    ai_weight = {
+        weight = value:giga_ai_base_mega
+        mult = value:giga_ai_upkeep|RESOURCE|energy|AMOUNT|100|
+        mult = value:giga_ai_output|RESOURCE|minerals|AMOUNT|2000|
+        mult = value:giga_ai_unlocks_gigastructures
+        mult = value:giga_ai_core_territory
+        mult = value:giga_ai_weight_savings|CATEGORY|important|RESOURCE|alloys|AMOUNT|55000|
+        mult = value:giga_ai_prevent_spam|MEGA|matter_decompressor|
+    }
+    on_build_complete = {
+        from = {
+            set_timed_country_flag = {
+                flag = has_recently_built_matter_decompressor
+                years = 20
+            }
+            set_country_flag = built_matter_decompressor_site
+            change_variable = {
+                which = giga_current_vanilla_matter
+                value = 1
+            }
+        }
+        fromfrom.planet = {
+            giga_set_has_mega_flag = yes
+            if = {
+                limit = {
+                    has_orbital_station = yes
+                }
+                orbital_station = {
+                    dismantle = yes
+                }
+            }
+        }
+    }
+}

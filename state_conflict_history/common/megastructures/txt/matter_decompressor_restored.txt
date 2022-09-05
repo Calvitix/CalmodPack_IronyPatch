@@ -1,0 +1,75 @@
+matter_decompressor_restored = {
+    entity = "matter_decompressor_stage_4_entity"
+    construction_entity = "matter_decompressor_stage_4_construction_entity"
+    portrait = "GFX_megastructure_matter_decompressor_background"
+    entity_offset = {
+        x = -1.1
+        y = -2.8
+    }
+    rotate_to_center = yes
+    scale_offset = yes
+    place_entity_on_planet_plane = no
+    upgrade_from = {
+        matter_decompressor_ruined
+    }
+    build_time = 4800
+    resources = {
+        category = giga_megastructures
+        cost = {
+            alloys = 20000
+            unity = @giga_big_mega_repair_unity_cost
+        }
+        cost = {
+            alloys = -1
+            multiplier = value:giga_ai_savings_cost|CATEGORY|important|RESOURCE|alloys|AMOUNT|20000|
+        }
+        cost = {
+            unity = -1
+            multiplier = value:giga_ai_savings_cost|CATEGORY|important|RESOURCE|unity|AMOUNT|@giga_big_mega_repair_unity_cost|
+        }
+        produces = {
+            minerals = 2000
+        }
+        upkeep = {
+            energy = 100
+        }
+    }
+    on_build_start = {
+        giga_ai_savings_withdraw = {
+            CATEGORY = important
+            RESOURCE = alloys
+            AMOUNT = 20000
+        }
+        giga_ai_savings_withdraw = {
+            CATEGORY = important
+            RESOURCE = unity
+            AMOUNT = @giga_big_mega_repair_unity_cost
+        }
+        fromfrom = {
+            set_graphical_culture = root.from
+        }
+    }
+    possible = {
+        exists = from
+        from = {
+            has_technology = tech_mega_engineering
+        }
+    }
+    ai_weight = {
+        factor = value:giga_ai_base_repairs
+    }
+    on_build_complete = {
+        giga_remove_system_debris = yes
+        set_star_flag = matter_decompressor_built
+        from = {
+            set_country_flag = has_built_or_repaired_megastructure
+            set_country_flag = has_built_or_repaired_gigastructure
+            country_event = {
+                id = mega.9101
+            }
+        }
+        fromfrom.planet = {
+            giga_set_has_mega_flag = yes
+        }
+    }
+}
