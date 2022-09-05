@@ -1,0 +1,87 @@
+building_glacio_mine = {
+    base_buildtime = 600
+    category = resource
+    potential = {
+        NOT = {
+            has_modifier = resort_colony
+        }
+        is_planet_class = pc_glacio
+        NOT = {
+            has_building = building_glacio_foundry
+        }
+        NOT = {
+            has_building_construction = building_glacio_foundry
+        }
+        NOT = {
+            has_building = building_glacio_resort
+        }
+        NOT = {
+            has_building_construction = building_glacio_resort
+        }
+        NOT = {
+            has_building = building_glacio_mine
+        }
+        NOT = {
+            has_building_construction = building_glacio_mine
+        }
+    }
+    allow = {
+        has_upgraded_capital = yes
+    }
+    planet_modifier = {
+        planet_miners_minerals_produces_add = 2
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            job_miner_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_mining_drone_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_mining_drone_add = 2
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 800
+        }
+        upkeep = {
+            energy = 2
+        }
+    }
+    destroy_trigger = {
+        planet = {
+            NOT = {
+                is_planet_class = pc_glacio
+            }
+            OR = {
+                has_building = building_glacio_foundry
+                has_building = building_glacio_resort
+            }
+        }
+    }
+}

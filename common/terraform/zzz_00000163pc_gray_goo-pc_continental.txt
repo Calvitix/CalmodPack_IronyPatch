@@ -1,23 +1,16 @@
 terraform_link = {
-    from = "pc_gray_goo"
-    to = "pc_continental"
+    from = pc_gray_goo
+    to = pc_continental
     resources = {
         category = terraforming
         cost = {
-            energy = @terraforming_cost_level_4
+            energy = 1000
         }
     }
-    duration = @terraforming_duration_level_4
+    duration = 360
     potential = {
-        NOR = {
-            has_policy_flag = terraforming_basic_invisible
-            has_policy_flag = terraforming_wet_invisible
-        }
-        OR = {
-            has_ascension_perk = ap_sublunaris_progressus
-            from = {
-                has_modifier = terraforming_candidate
-            }
+        from = {
+            has_modifier = terraforming_candidate
         }
     }
     condition = {
@@ -31,7 +24,7 @@ terraform_link = {
     ai_weight = {
         weight = 0
         modifier = {
-            weight = 1
+            weight = 2
             should_terraform_trigger = {
                 CLASS_FROM = pc_gray_goo
                 CLASS_TO = pc_continental

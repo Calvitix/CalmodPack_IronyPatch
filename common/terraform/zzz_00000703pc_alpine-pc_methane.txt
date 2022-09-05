@@ -1,0 +1,48 @@
+@terraforming_cost_level_4 = 20000
+@terraforming_duration_level_4 = 36000
+terraform_link = {
+    from = "pc_alpine"
+    to = "pc_methane"
+    resources = {
+        category = terraforming
+        cost = {
+            energy = @terraforming_cost_level_4
+        }
+    }
+    duration = @terraforming_duration_level_4
+    potential = {
+        has_global_flag = planetarydiversityexotics
+        NOT = {
+            has_policy_flag = terraforming_special_invisible
+        }
+        OR = {
+            has_ascension_perk = ap_sublunaris_progressus
+            from = {
+                has_modifier = terraforming_candidate
+            }
+        }
+    }
+    condition = {
+        has_technology = tech_climate_restoration
+    }
+    effect = {
+        from = {
+            remove_modifier = terraforming_candidate
+            add_modifier = {
+                modifier = methane
+                days = -1
+            }
+            add_deposit = d_frozen_gas_mountain
+        }
+    }
+    ai_weight = {
+        weight = 0
+        modifier = {
+            weight = 1
+            should_terraform_trigger = {
+                CLASS_FROM = pc_alpine
+                CLASS_TO = pc_methane
+            }
+        }
+    }
+}

@@ -1,0 +1,91 @@
+building_lanthanide_lab = {
+    base_buildtime = 600
+    category = research
+    potential = {
+        exists = owner
+        NOT = {
+            has_modifier = resort_colony
+        }
+        is_planet_class = pc_lanthanide
+        NOT = {
+            has_building = building_lanthanide_mine
+        }
+        NOT = {
+            has_building_construction = building_lanthanide_mine
+        }
+        NOT = {
+            has_building = building_lanthanide_guild
+        }
+        NOT = {
+            has_building_construction = building_lanthanide_guild
+        }
+        NOT = {
+            has_building = building_lanthanide_lab
+        }
+        NOT = {
+            has_building_construction = building_lanthanide_lab
+        }
+    }
+    allow = {
+        has_upgraded_capital = yes
+    }
+    planet_modifier = {
+        planet_researchers_engineering_research_produces_add = 2
+        planet_researchers_physics_research_produces_add = 2
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            job_researcher_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_brain_drone_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_calculator_add = 2
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 800
+        }
+        upkeep = {
+            energy = 4
+        }
+    }
+    destroy_trigger = {
+        planet = {
+            OR = {
+                NOT = {
+                    is_planet_class = pc_lanthanide
+                }
+                OR = {
+                    has_building = building_lanthanide_mine
+                    has_building = building_lanthanide_guild
+                }
+            }
+        }
+    }
+}

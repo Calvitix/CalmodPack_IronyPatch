@@ -1,0 +1,109 @@
+d_karst_cave = {
+    is_for_colonizable = yes
+    category = deposit_cat_rare
+    potential = {
+        OR = {
+            is_dry = yes
+            is_wet = yes
+            is_cold = yes
+            is_planet_class = pc_nuked
+            is_planet_class = pc_gaia
+            is_planet_class = pc_cold_gaia
+            is_planet_class = pc_hot_gaia
+            is_planet_class = pc_relic
+            is_planet_class = pc_tidallylocked
+            is_planet_class = pc_sterile
+        }
+        NOR = {
+            has_modifier = "infernal_world"
+            has_modifier = "subglacial_world"
+            has_modifier = "panthalassic_world"
+            has_modifier = "ocean_tidally_locked"
+            has_modifier = "eyeball_world"
+        }
+    }
+    planet_modifier = {
+        planet_max_districts_add = 1
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            building_karst_mine_max = 1
+            job_smuggler_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_aberrant_drone_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_renegade_drone_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+            is_planet_class = pc_karst
+        }
+        modifier = {
+            building_karst_mine_max = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+            is_planet_class = pc_karst
+        }
+        modifier = {
+            building_karst_mine_max = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+            is_planet_class = pc_karst
+        }
+        modifier = {
+            building_karst_mine_max = 1
+        }
+    }
+    drop_weight = {
+        weight = 0.25
+        modifier = {
+            factor = 20
+            has_modifier = "karstic_world"
+        }
+        modifier = {
+            factor = 5
+            has_modifier = "mesa_world"
+        }
+    }
+}

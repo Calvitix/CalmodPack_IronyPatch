@@ -1,0 +1,4 @@
+is_pd_shroud_world = {
+    is_planet_class = pc_pdshroud
+    is_planet_class = pc_tidallyshroud
+}

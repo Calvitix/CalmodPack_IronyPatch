@@ -29,28 +29,12 @@ crucible_alloy_drone = {
                     is_planet_class = pc_crucible
                 }
             }
-            energy = 4
+            energy = 6
         }
         produces = {
             trigger = {
                 planet = {
                     is_planet_class = pc_clean_crucible
-                }
-            }
-            alloys = 3.5
-        }
-        upkeep = {
-            trigger = {
-                planet = {
-                    is_planet_class = pc_clean_crucible
-                }
-            }
-            energy = 4
-        }
-        produces = {
-            trigger = {
-                planet = {
-                    is_planet_class = pc_shroud_crucible
                 }
             }
             alloys = 4
@@ -58,11 +42,27 @@ crucible_alloy_drone = {
         upkeep = {
             trigger = {
                 planet = {
+                    is_planet_class = pc_clean_crucible
+                }
+            }
+            energy = 8
+        }
+        produces = {
+            trigger = {
+                planet = {
                     is_planet_class = pc_shroud_crucible
                 }
             }
-            energy = 4
-            sr_zro = 0.1
+            alloys = 5
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    is_planet_class = pc_shroud_crucible
+                }
+            }
+            energy = 6
+            sr_zro = 0.2
         }
         produces = {
             trigger = {

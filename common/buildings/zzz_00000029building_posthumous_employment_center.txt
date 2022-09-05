@@ -8,11 +8,16 @@ building_posthumous_employment_center = {
             owner = {
                 is_ai = no
             }
-            NOT = {
-                exists = assembling_species
-            }
-            assembling_species = {
-                is_organic_species = yes
+            OR = {
+                NOT = {
+                    exists = assembling_species
+                }
+                AND = {
+                    exists = assembling_species
+                    assembling_species = {
+                        is_organic_species = yes
+                    }
+                }
             }
         }
         OR = {

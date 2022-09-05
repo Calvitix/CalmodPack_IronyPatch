@@ -18,6 +18,9 @@ district_arcology_housing = {
             uses_district_set = pdcorpoarc
         }
     }
+    allow = {
+        str_city_district_allow = yes
+    }
     conversion_ratio = 1
     convert_to = {
         district_city

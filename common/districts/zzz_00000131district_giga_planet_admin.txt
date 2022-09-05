@@ -86,7 +86,7 @@ district_giga_planet_admin = {
                 is_megacorp = no
             }
         }
-        text = "job_bureaucrat_effect_desc"
+        text = job_bureaucrat_effect_desc
     }
     triggered_desc = {
         trigger = {
@@ -96,7 +96,7 @@ district_giga_planet_admin = {
                 is_megacorp = yes
             }
         }
-        text = "job_manager_effect_desc"
+        text = job_manager_effect_desc
     }
     triggered_desc = {
         trigger = {
@@ -105,7 +105,7 @@ district_giga_planet_admin = {
                 is_hive_empire = yes
             }
         }
-        text = "job_synapse_drone_effect_desc"
+        text = job_synapse_drone_effect_desc
     }
     triggered_desc = {
         trigger = {
@@ -114,6 +114,6 @@ district_giga_planet_admin = {
                 is_machine_empire = yes
             }
         }
-        text = "job_coordinator_effect_desc"
+        text = job_coordinator_effect_desc
     }
 }

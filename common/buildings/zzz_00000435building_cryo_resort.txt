@@ -1,0 +1,76 @@
+building_cryo_resort = {
+    base_buildtime = 600
+    category = trade
+    potential = {
+        owner = {
+            is_gestalt = no
+        }
+        is_planet_class = pc_cryoflora
+        NOT = {
+            has_building = building_cryo_lab
+        }
+        NOT = {
+            has_building = building_cryo_guild
+        }
+        NOT = {
+            has_building = building_cryo_resort
+        }
+        NOT = {
+            has_building_construction = building_cryo_lab
+        }
+        NOT = {
+            has_building_construction = building_cryo_guild
+        }
+        NOT = {
+            has_building_construction = building_cryo_resort
+        }
+    }
+    allow = {
+        has_upgraded_capital = yes
+    }
+    planet_modifier = {
+        planet_entertainers_unity_produces_add = 2
+        job_entertainer_add = 2
+    }
+    triggered_planet_modifier = {
+        potential = {
+            always = yes
+        }
+        trade_value_add = 2
+        mult = value:pdentertainingtrade
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 800
+        }
+        upkeep = {
+            energy = 4
+        }
+    }
+    destroy_trigger = {
+        planet = {
+            OR = {
+                owner = {
+                    is_gestalt = no
+                }
+                NOT = {
+                    is_planet_class = pc_cryoflora
+                }
+                has_building = building_cryo_lab
+                has_building = building_cryo_guild
+            }
+        }
+    }
+    ai_resource_production = {
+        trigger = {
+            planet_resource_compare = {
+                resource = physics_research
+                value >= 30
+            }
+        }
+        physics_research = 5
+        society_research = 5
+        engineering_research = 5
+    }
+}

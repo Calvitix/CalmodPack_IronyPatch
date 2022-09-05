@@ -27,7 +27,7 @@ building_production_center = {
                     is_ai = yes
                 }
                 has_any_industry_district = no
-                free_building_slots = 0
+                free_building_slots < 0
             }
         }
     }

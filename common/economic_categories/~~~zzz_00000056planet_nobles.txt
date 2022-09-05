@@ -1,0 +1,11 @@
+planet_nobles = {
+    parent = planet_politicians
+    generate_add_modifiers = {
+        produces
+        upkeep
+    }
+    generate_mult_modifiers = {
+        produces
+        upkeep
+    }
+}

@@ -38,7 +38,7 @@ tech_rad_bloom_farm = {
         }
     }
     ai_weight = {
-        factor = 5
+        factor = 10000
         modifier = {
             factor = 1.25
             research_leader = {

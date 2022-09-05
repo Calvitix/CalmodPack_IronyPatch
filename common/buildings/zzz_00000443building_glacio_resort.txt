@@ -1,0 +1,65 @@
+building_glacio_resort = {
+    base_buildtime = 600
+    category = trade
+    potential = {
+        owner = {
+            is_gestalt = no
+        }
+        is_planet_class = pc_glacio
+        NOT = {
+            has_building = building_glacio_foundry
+        }
+        NOT = {
+            has_building_construction = building_glacio_foundry
+        }
+        NOT = {
+            has_building = building_glacio_resort
+        }
+        NOT = {
+            has_building_construction = building_glacio_resort
+        }
+        NOT = {
+            has_building = building_glacio_mine
+        }
+        NOT = {
+            has_building_construction = building_glacio_mine
+        }
+    }
+    allow = {
+        has_upgraded_capital = yes
+    }
+    planet_modifier = {
+        planet_entertainers_unity_produces_add = 2
+        job_entertainer_add = 2
+    }
+    triggered_planet_modifier = {
+        potential = {
+            always = yes
+        }
+        trade_value_add = 2
+        mult = value:pdentertainingtrade
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 800
+        }
+        upkeep = {
+            energy = 4
+        }
+    }
+    destroy_trigger = {
+        planet = {
+            OR = {
+                owner = {
+                    is_gestalt = yes
+                }
+                NOT = {
+                    is_planet_class = pc_glacio
+                }
+                has_building = building_glacio_foundry
+                has_building = building_glacio_mine
+            }
+        }
+    }
+}

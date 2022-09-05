@@ -62,6 +62,7 @@ trait_pc_acid_preference = {
         pc_geothermal_habitability = 0.35
         pc_superhabitable_habitability = 0.35
         pc_tidallylocked_habitability = 0.35
+        pc_wettidallylocked_habitability = 0.35
         pc_supercon_habitability = 0.35
         pc_biolumen_habitability = 0.35
         pc_karst_habitability = 0.35

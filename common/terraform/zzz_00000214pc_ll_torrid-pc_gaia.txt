@@ -1,10 +1,11 @@
+@terraforming_cost_level_3 = 15000
 terraform_link = {
     from = pc_ll_torrid
     to = pc_gaia
     resources = {
         category = terraforming
         cost = {
-            energy = 10000
+            energy = @terraforming_cost_level_3
         }
     }
     duration = 7200

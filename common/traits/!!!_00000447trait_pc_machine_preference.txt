@@ -17,5 +17,6 @@ trait_pc_machine_preference = {
     }
     modifier = {
         pc_machine_habitability = 1
+        pc_machinetidallylocked_habitability = 1
     }
 }

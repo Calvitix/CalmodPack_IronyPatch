@@ -106,8 +106,10 @@ is_pd_planet_class_all = {
         is_planet_class = pc_tidallyaquatic
         is_planet_class = pc_tidallygaia
         is_planet_class = pc_tidallylocked
+        is_planet_class = pc_wettidallylocked
         is_planet_class = pc_veld
         is_planet_class = pc_wetswamp
+        is_planet_class = pc_machinetidallylocked
         is_pd_unique = yes
     }
 }

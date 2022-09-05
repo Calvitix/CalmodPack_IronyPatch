@@ -1,14 +1,16 @@
+@terraforming_cost_level_3 = 15000
+@terraforming_duration_level_1 = 7200
 terraform_link = {
     from = "pc_ringworld_habitable"
     to = "pc_ringworld_machine"
     resources = {
         category = terraforming
         cost = {
-            energy = 10000
+            energy = @terraforming_cost_level_3
             alloys = 5000
         }
     }
-    duration = 1800
+    duration = @terraforming_duration_level_1
     condition = {
         has_ascension_perk = "ap_machine_worlds"
     }

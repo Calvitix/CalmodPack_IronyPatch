@@ -1,5 +1,3 @@
-@primary = 0.8
-@secondary = 0.5
 @pdbadhab = -5
 trait_pc_nuked_preference = {
     icon = "gfx/interface/icons/traits/trait_pc_nuked_preference.dds"
@@ -14,38 +12,12 @@ trait_pc_nuked_preference = {
         PRESAPIENT
         LITHOID
     }
-    prerequisites = {
-        tech_ap_plentiful_traditions_tomb_life
-    }
     sorting_priority = 30
     ai_weight = {
         weight = 0
     }
+    custom_tooltip = TRAIT_NUKED_PREFERENCE_EFFECT
     modifier = {
-        pc_depleted_habitability = @primary
-        pc_dune_habitability = @secondary
-        pc_adiabatic_habitability = @secondary
-        pc_karstic_habitability = @secondary
-        pc_dust_habitability = @secondary
-        pc_mediterranean_habitability = @secondary
-        pc_coriolis_habitability = @secondary
-        pc_monsoon_habitability = @secondary
-        pc_jungle_habitability = @secondary
-        pc_megaflora_habitability = @secondary
-        pc_mycelium_habitability = @secondary
-        pc_pangea_habitability = @secondary
-        pc_young_habitability = @secondary
-        pc_taiga_habitability = @secondary
-        pc_frigid_habitability = @secondary
-        pc_bog_habitability = @secondary
-        pc_awakened_habitability = @secondary
-        pc_melting_habitability = @secondary
-        pc_ice_habitability = @secondary
-        pc_panthalassic_habitability = @secondary
-        pc_atoll_habitability = @secondary
-        pc_crag_habitability = @secondary
-        pc_mineral_habitability = @secondary
-        pc_plateau_habitability = @secondary
         pc_nuked_habitability = 0.8
         pc_irradiated_habitability = 0.7
         pc_continental_habitability = 0.6
@@ -96,6 +68,7 @@ trait_pc_nuked_preference = {
         pc_geothermal_habitability = 0.6
         pc_superhabitable_habitability = 0.6
         pc_tidallylocked_habitability = 0.6
+        pc_wettidallylocked_habitability = 0.6
         pc_supercon_habitability = 0.6
         pc_biolumen_habitability = 0.6
         pc_karst_habitability = 0.6
@@ -114,8 +87,22 @@ trait_pc_nuked_preference = {
     }
     triggered_planet_growth_habitability_modifier = {
         potential = {
-            is_pd_bad_exotic = yes
+            planet = {
+                is_pd_bad_exotic = yes
+            }
         }
-        pop_environment_tolerance = -2
+        pop_environment_tolerance = @pdbadhab
+    }
+    triggered_planet_growth_habitability_modifier = {
+        potential = {
+            planet = {
+                OR = {
+                    is_planet_class = pc_gaia
+                    is_planet_class = pc_cold_gaia
+                    is_planet_class = pc_hot_gaia
+                }
+            }
+        }
+        pop_environment_tolerance = -1
     }
 }

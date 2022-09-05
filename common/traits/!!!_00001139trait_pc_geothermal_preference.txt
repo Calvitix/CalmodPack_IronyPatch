@@ -1,6 +1,3 @@
-@primary = 0.8
-@secondary = 0.5
-@tertiary = 0.2
 @pdbadhab = -5
 trait_pc_geothermal_preference = {
     icon = "gfx/interface/icons/traits/trait_pc_geothermal_preference.dds"
@@ -13,7 +10,6 @@ trait_pc_geothermal_preference = {
     ai_weight = {
         weight = 0
     }
-    custom_tooltip = TRAIT_GEOTHERMAL_PREFERENCE_EFFECT
     modifier = {
         pc_melting_habitability = @primary
         pc_ice_habitability = @primary
@@ -72,7 +68,7 @@ trait_pc_geothermal_preference = {
         pc_karst_habitability = 0.6
         pc_reef_habitability = 0.6
         pc_biolumen_habitability = 0.8
-        pc_cryoflora_habitability = 0.4
+        pc_cryoflora_habitability = 0.2
         pc_lichen_habitability = 0.4
         pc_storm_habitability = 0.4
         pc_eyeball_habitability = 0.4

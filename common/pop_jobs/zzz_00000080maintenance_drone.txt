@@ -111,7 +111,7 @@ maintenance_drone = {
             }
         }
         modifier = {
-            factor = 100000
+            factor = 10
             exists = owner
             owner = {
                 is_ai = yes

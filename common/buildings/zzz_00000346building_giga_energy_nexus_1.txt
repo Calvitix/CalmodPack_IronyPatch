@@ -39,6 +39,13 @@ building_giga_energy_nexus_1 = {
     planet_modifier = {
         planet_technician_energy_produces_add = 2
     }
+    triggered_planet_modifier = {
+        potential = {
+            always = yes
+        }
+        multiplier = modifier:giga_planet_job_size
+        planet_technician_energy_produces_add = 2
+    }
     upgrades = {
         building_giga_energy_nexus_2
     }

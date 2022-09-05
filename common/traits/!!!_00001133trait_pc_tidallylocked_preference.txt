@@ -1,6 +1,3 @@
-@primary = 0.8
-@secondary = 0.5
-@tertiary = 0.2
 @pdbadhab = -5
 trait_pc_tidallylocked_preference = {
     icon = "gfx/interface/icons/traits/trait_pc_tidallylocked_preference.dds"
@@ -13,7 +10,6 @@ trait_pc_tidallylocked_preference = {
     ai_weight = {
         weight = 0
     }
-    custom_tooltip = TRAIT_TIDALLYLOCKED_PREFERENCE_EFFECT
     modifier = {
         pc_dune_habitability = @primary
         pc_adiabatic_habitability = @primary

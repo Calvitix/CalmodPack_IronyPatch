@@ -1,4 +1,4 @@
-@primary = 0.8
+@primary = 0.7
 @secondary = 0.5
 @tertiary = 0.2
 @pdbadhab = -5
@@ -88,23 +88,28 @@ trait_pc_crystal_preference = {
         pc_coral_habitability = 0.2
         pc_primal_habitability = 0.2
         pc_supercon_habitability = 0.4
-        pc_superhabitable_habitability = 0.6
+        pc_tidallylocked_habitability = 0.2
         pc_megaflora_habitability = 0.6
-        pc_karst_habitability = 0.6
         pc_reef_habitability = 0.6
-        pc_geothermal_habitability = 0.8
-        pc_biolumen_habitability = 0.8
-        pc_lichen_habitability = 0.2
+        pc_geothermal_habitability = 0.6
+        pc_biolumen_habitability = 0.6
+        pc_superhabitable_habitability = 0.6
+        pc_wettidallylocked_habitability = 0.6
+        pc_karst_habitability = 0.6
         pc_storm_habitability = 0.4
-        pc_eyeball_habitability = 0.2
+        pc_cryoflora_habitability = 0.2
+        pc_lichen_habitability = 0.2
         pc_glacio_habitability = 0.2
+        pc_eyeball_habitability = 0.2
     }
     ai_weight = {
         weight = 0
     }
     triggered_planet_growth_habitability_modifier = {
         potential = {
-            is_pd_bad_exotic = yes
+            planet = {
+                is_pd_bad_exotic = yes
+            }
         }
         pop_environment_tolerance = @pdbadhab
     }

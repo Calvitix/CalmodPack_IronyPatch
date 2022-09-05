@@ -1,24 +1,20 @@
+@terraforming_cost_level_3 = 15000
+@terraforming_duration_level_4 = 36000
 terraform_link = {
-    from = "pc_tundra"
-    to = "pc_machine"
+    from = pc_tundra
+    to = pc_machine
     resources = {
         category = terraforming
         cost = {
             energy = @terraforming_cost_level_3
         }
     }
-    duration = @terraforming_duration_level_3
-    potential = {
-        NOT = {
-            has_policy_flag = terraforming_special_invisible
-        }
-        has_ascension_perk = ap_machine_worlds
-    }
+    duration = @terraforming_duration_level_4
     condition = {
         has_ascension_perk = ap_machine_worlds
     }
     ai_weight = {
-        weight = 250
+        weight = 20
         modifier = {
             factor = 0
             from = {
@@ -29,12 +25,6 @@ terraform_link = {
                     }
                     is_sapient = yes
                 }
-            }
-        }
-        modifier = {
-            factor = 0
-            from = {
-                is_colony = no
             }
         }
     }

@@ -1,4 +1,6 @@
 @advanced_amenities = 10
+@upgrade_count = 40
+@upgrade_count_origin = 20
 building_giga_elysium_host_machine_major_capital = {
     base_buildtime = @b2_time
     capital = yes
@@ -17,7 +19,16 @@ building_giga_elysium_host_machine_major_capital = {
         }
     }
     allow = {
-        num_pops >= 40
+        or = {
+            and = {
+                exists = owner
+                owner = {
+                    has_origin = origin_elysium
+                }
+                num_pops >= @upgrade_count_origin
+            }
+            num_pops >= @upgrade_count
+        }
     }
     prerequisites = {
         "tech_colonial_centralization"
@@ -36,16 +47,6 @@ building_giga_elysium_host_machine_major_capital = {
         }
         upkeep = {
             energy = 6
-        }
-    }
-    on_built = {
-        if = {
-            limit = {
-                not = {
-                    has_building = building_giga_elysium_host_booster
-                }
-            }
-            add_building = building_giga_elysium_host_booster
         }
     }
     planet_modifier = {
@@ -109,6 +110,15 @@ building_giga_elysium_host_machine_major_capital = {
             planet_stability_add = 1
         }
         multiplier = giga_elysium_stability
+    }
+    triggered_planet_modifier = {
+        potential = {
+            is_variable_set = giga_elysium_output
+        }
+        modifier = {
+            planet_jobs_productive_produces_mult = 1
+        }
+        multiplier = giga_elysium_output
     }
     triggered_planet_modifier = {
         potential = {

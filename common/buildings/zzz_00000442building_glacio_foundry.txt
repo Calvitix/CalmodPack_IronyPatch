@@ -1,0 +1,93 @@
+building_glacio_foundry = {
+    base_buildtime = 600
+    category = manufacturing
+    potential = {
+        NOT = {
+            has_modifier = resort_colony
+        }
+        is_planet_class = pc_glacio
+        owner = {
+            NOT = {
+                is_catalytic_empire = yes
+            }
+        }
+        NOT = {
+            has_building = building_glacio_foundry
+        }
+        NOT = {
+            has_building_construction = building_glacio_foundry
+        }
+        NOT = {
+            has_building = building_glacio_resort
+        }
+        NOT = {
+            has_building_construction = building_glacio_resort
+        }
+        NOT = {
+            has_building = building_glacio_mine
+        }
+        NOT = {
+            has_building_construction = building_glacio_mine
+        }
+    }
+    allow = {
+        has_upgraded_capital = yes
+    }
+    planet_modifier = {
+        planet_metallurgists_alloys_produces_add = 1
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+                is_catalytic_empire = no
+            }
+        }
+        modifier = {
+            job_foundry_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_alloy_drone_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_fabricator_add = 2
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 800
+        }
+        upkeep = {
+            energy = 8
+        }
+    }
+    destroy_trigger = {
+        planet = {
+            NOT = {
+                is_planet_class = pc_glacio
+            }
+            OR = {
+                has_building = building_glacio_resort
+                has_building = building_glacio_mine
+            }
+        }
+    }
+}

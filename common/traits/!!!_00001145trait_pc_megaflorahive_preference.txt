@@ -21,7 +21,9 @@ trait_pc_megaflorahive_preference = {
     }
     triggered_planet_growth_habitability_modifier = {
         potential = {
-            is_pd_bad_exotic = yes
+            planet = {
+                is_pd_bad_exotic = yes
+            }
         }
         pop_environment_tolerance = @pdbadhab
     }

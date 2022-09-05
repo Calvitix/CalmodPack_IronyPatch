@@ -38,6 +38,13 @@ building_giga_energy_nexus_3 = {
     }
     triggered_planet_modifier = {
         potential = {
+            always = yes
+        }
+        multiplier = modifier:giga_planet_job_size
+        planet_technician_energy_produces_add = 4
+    }
+    triggered_planet_modifier = {
+        potential = {
             exists = owner
             owner = {
                 is_regular_empire = yes

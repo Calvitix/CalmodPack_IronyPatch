@@ -1,4 +1,4 @@
-@primary = 0.8
+@primary = 0.7
 @secondary = 0.5
 @tertiary = 0.2
 @pdbadhab = -5
@@ -56,7 +56,7 @@ trait_pc_aquatic_preference = {
         pc_cenote_habitability = 0.6
         pc_superhabitable_habitability = 0.6
         pc_megaflora_habitability = 0.6
-        pc_karst_habitability = 0.8
+        pc_karst_habitability = 0.6
         pc_reef_habitability = 0.8
         pc_geothermal_habitability = 0.6
         pc_biolumen_habitability = 0.6
@@ -66,7 +66,9 @@ trait_pc_aquatic_preference = {
     }
     triggered_planet_growth_habitability_modifier = {
         potential = {
-            is_pd_bad_exotic = yes
+            planet = {
+                is_pd_bad_exotic = yes
+            }
         }
         pop_environment_tolerance = @pdbadhab
     }

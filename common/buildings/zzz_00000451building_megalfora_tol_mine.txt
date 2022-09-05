@@ -1,0 +1,99 @@
+building_megalfora_tol_mine = {
+    base_buildtime = 600
+    category = resource
+    potential = {
+        exists = owner
+        owner = {
+            has_origin = origin_pd_tree_of_life
+        }
+        NOT = {
+            has_modifier = resort_colony
+        }
+        OR = {
+            is_planet_class = pc_megaflorahive
+            is_planet_class = pc_megafloratol
+        }
+        NOT = {
+            has_building = building_megalfora_tol_mine
+        }
+        NOT = {
+            has_building_construction = building_megalfora_tol_mine
+        }
+        NOT = {
+            has_building = building_megalfora_tol_lab
+        }
+        NOT = {
+            has_building_construction = building_megalfora_tol_lab
+        }
+        NOT = {
+            has_building = building_megalfora_tol_grid
+        }
+        NOT = {
+            has_building_construction = building_megalfora_tol_grid
+        }
+    }
+    allow = {
+        has_upgraded_capital = yes
+    }
+    planet_modifier = {
+        planet_miners_minerals_produces_add = 2
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            job_miner_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_mining_drone_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_mining_drone_add = 2
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 800
+        }
+        upkeep = {
+            energy = 2
+        }
+    }
+    destroy_trigger = {
+        planet = {
+            OR = {
+                NOT = {
+                    is_planet_class = pc_megaflorahive
+                }
+                NOT = {
+                    is_planet_class = pc_megafloratol
+                }
+            }
+            OR = {
+                has_building = building_megalfora_tol_lab
+                has_building = building_megalfora_tol_grid
+            }
+        }
+    }
+}

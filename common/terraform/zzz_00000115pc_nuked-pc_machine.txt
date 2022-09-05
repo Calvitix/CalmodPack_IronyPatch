@@ -1,6 +1,8 @@
+@terraforming_cost_level_4 = 20000
+@terraforming_duration_level_4 = 36000
 terraform_link = {
-    from = "pc_nuked"
-    to = "pc_machine"
+    from = pc_nuked
+    to = pc_machine
     resources = {
         category = terraforming
         cost = {
@@ -9,16 +11,13 @@ terraform_link = {
     }
     duration = @terraforming_duration_level_4
     potential = {
-        NOT = {
-            has_policy_flag = terraforming_special_invisible
-        }
         has_ascension_perk = ap_machine_worlds
     }
     condition = {
         has_ascension_perk = ap_machine_worlds
     }
     ai_weight = {
-        weight = 250
+        weight = 20
         modifier = {
             factor = 0
             from = {
@@ -29,12 +28,6 @@ terraform_link = {
                     }
                     is_sapient = yes
                 }
-            }
-        }
-        modifier = {
-            factor = 0
-            from = {
-                is_colony = no
             }
         }
     }

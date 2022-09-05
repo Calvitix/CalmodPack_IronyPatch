@@ -114,7 +114,7 @@ building_robot_assembly_plant = {
                     is_ai = yes
                 }
                 free_district_slots = 0
-                free_building_slots = 0
+                free_building_slots <= 1
                 free_housing <= 0
                 free_jobs <= 0
             }

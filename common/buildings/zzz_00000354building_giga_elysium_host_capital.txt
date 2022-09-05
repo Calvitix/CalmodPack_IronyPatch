@@ -224,6 +224,15 @@ building_giga_elysium_host_capital = {
     }
     triggered_planet_modifier = {
         potential = {
+            is_variable_set = giga_elysium_output
+        }
+        modifier = {
+            planet_jobs_productive_produces_mult = 1
+        }
+        multiplier = giga_elysium_output
+    }
+    triggered_planet_modifier = {
+        potential = {
             exists = owner
             owner = {
                 has_technology = tech_capital_productivity_1

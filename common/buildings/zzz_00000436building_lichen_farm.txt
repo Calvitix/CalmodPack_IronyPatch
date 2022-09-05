@@ -1,0 +1,80 @@
+building_lichen_farm = {
+    base_buildtime = 600
+    category = resource
+    potential = {
+        exists = owner
+        owner = {
+            country_uses_food = yes
+        }
+        NOT = {
+            has_modifier = resort_colony
+        }
+        is_planet_class = pc_lichen
+        NOT = {
+            has_building = building_lichen_farm
+        }
+        NOT = {
+            has_building_construction = building_lichen_farm
+        }
+        NOT = {
+            has_building = building_lichen_grid
+        }
+        NOT = {
+            has_building_construction = building_lichen_grid
+        }
+        NOT = {
+            has_building = building_lichen_lab
+        }
+        NOT = {
+            has_building_construction = building_lichen_lab
+        }
+    }
+    allow = {
+        has_upgraded_capital = yes
+    }
+    planet_modifier = {
+        planet_farmers_food_produces_add = 2
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            job_farmer_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_agri_drone_add = 2
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 800
+        }
+        upkeep = {
+            energy = 4
+        }
+    }
+    destroy_trigger = {
+        planet = {
+            OR = {
+                NOT = {
+                    is_planet_class = pc_lichen
+                }
+                has_building = building_lichen_grid
+                has_building = building_lichen_lab
+            }
+        }
+    }
+}

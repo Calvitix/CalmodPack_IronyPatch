@@ -1,4 +1,4 @@
-@primary = 0.8
+@primary = 0.7
 @secondary = 0.5
 @tertiary = 0.2
 trait_pc_awakened_preference = {

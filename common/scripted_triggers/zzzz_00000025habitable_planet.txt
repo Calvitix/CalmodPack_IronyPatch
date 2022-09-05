@@ -51,6 +51,7 @@ habitable_planet = {
         is_planet_class = pc_geothermal
         is_planet_class = pc_superhabitable
         is_planet_class = pc_tidallylocked
+        is_planet_class = pc_wettidallylocked
         is_planet_class = pc_supercon
         is_planet_class = pc_floating
         is_planet_class = pc_pd_zro

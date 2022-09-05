@@ -15,58 +15,30 @@ country_event = {
             add_modifier = {
                 modifier = intentionally_tidally_locked
             }
+            IF = {
+                limit = {
+                    is_moon = no
+                    is_dry = yes
+                }
+                change_pc = pc_tidallylocked
+            }
+            IF = {
+                limit = {
+                    is_moon = no
+                    is_cold = yes
+                }
+                change_pc = pc_eyeball
+            }
+            IF = {
+                limit = {
+                    is_moon = no
+                    is_cold = yes
+                }
+                change_pc = pc_wettidallylocked
+            }
         }
         From = {
             set_planet_flag = tidally_locked_world
-            if = {
-                limit = {
-                    has_global_flag = planetarydiversity
-                }
-                change_pc = pc_tidallylocked
-                add_deposit = d_nightside_mining_operations
-                remove_modifier = intentionally_tidally_locked
-                add_modifier = {
-                    modifier = tidal_locked2
-                }
-                add_modifier = {
-                    modifier = intentionally_tidally_locked_2
-                }
-            }
-            else_if = {
-                limit = {
-                    has_global_flag = has_new_frontiers_mod
-                }
-                change_pc = pc_tidallylocked
-                remove_modifier = intentionally_tidally_locked
-                add_modifier = {
-                    modifier = intentionally_tidally_locked_2
-                }
-                if = {
-                    limit = {
-                        has_planet_flag = tundra_terraform
-                        has_planet_flag = arctic_terraform
-                        has_planet_flag = alpine_terraform
-                    }
-                    add_modifier = {
-                        modifier = "eyeball_world"
-                        days = -1
-                    }
-                    set_planet_entity = {
-                        picture = pc_eyeball
-                        entity = eyeball_planet_01_entity
-                    }
-                }
-                else = {
-                    add_modifier = {
-                        modifier = "meridiem_world"
-                        days = -1
-                    }
-                    set_planet_entity = {
-                        picture = pc_meridiem
-                        entity = meridiem_planet_01_entity
-                    }
-                }
-            }
         }
         custom_tooltip = terra.40.b.tooltip
     }

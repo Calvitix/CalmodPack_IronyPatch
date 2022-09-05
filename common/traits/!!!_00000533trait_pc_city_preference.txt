@@ -1,4 +1,4 @@
-@primary = 0.8
+@primary = 0.7
 trait_pc_city_preference = {
     icon = "gfx/interface/icons/traits/trait_pc_ai_preference.dds"
     species_potential_add = {

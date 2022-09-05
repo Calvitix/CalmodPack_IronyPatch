@@ -25,7 +25,6 @@ building_machine_assembly_complex = {
         job_starnet_spice_melange_antifarmer_add = -2
     }
     destroy_trigger = {
-        free_building_slots < 1
         exists = owner
         OR = {
             buildings_no_crystals = yes
@@ -37,7 +36,7 @@ building_machine_assembly_complex = {
                     is_ai = yes
                 }
                 free_district_slots = 0
-                free_building_slots = 0
+                free_building_slots < 1
                 free_housing <= 0
                 free_jobs <= 0
             }

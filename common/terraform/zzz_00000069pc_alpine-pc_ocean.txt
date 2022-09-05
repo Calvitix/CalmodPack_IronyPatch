@@ -1,3 +1,5 @@
+@terraforming_cost_level_2 = 10000
+@terraforming_duration_level_2 = 18000
 terraform_link = {
     from = "pc_alpine"
     to = "pc_ocean"

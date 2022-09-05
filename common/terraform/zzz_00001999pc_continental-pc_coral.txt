@@ -1,45 +1,36 @@
+@terraforming_cost_gaia = 20000
+@terraforming_duration_gaia = 18000
 terraform_link = {
-    from = "pc_continental"
-    to = "pc_coral"
+    from = pc_continental
+    to = pc_coral
     resources = {
         category = terraforming
         cost = {
-            energy = @terraforming_cost_level_3
+            energy = @terraforming_cost_gaia
         }
     }
-    duration = @terraforming_duration_level_3
+    duration = @terraforming_duration_gaia
     potential = {
-        NOR = {
-            has_policy_flag = terraforming_rare_invisible
-            has_policy_flag = terraforming_dry_invisible
-        }
-        OR = {
-            has_ascension_perk = ap_sublunaris_progressus
-            from = {
-                has_modifier = pdterra_coral
-            }
-        }
+        has_ascension_perk = ap_world_shaper
     }
     condition = {
-        has_technology = tech_climate_restoration
-    }
-    effect = {
-        from = {
-            remove_modifier = pdterra_coral
-            add_modifier = {
-                modifier = pdcoral
-                days = -1
-            }
-            add_deposit = d_coral_fields
-        }
+        has_ascension_perk = ap_world_shaper
     }
     ai_weight = {
-        weight = 0
+        weight = 2
         modifier = {
-            weight = 1
-            should_terraform_trigger = {
-                CLASS_FROM = pc_continental
-                CLASS_TO = pc_coral
+            factor = 0
+            resource_stockpile_compare = {
+                resource = energy
+                value < 40000
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                is_mechanical_empire = yes
+                is_cyborg_empire = yes
+                has_authority = auth_machine_intelligence
             }
         }
     }

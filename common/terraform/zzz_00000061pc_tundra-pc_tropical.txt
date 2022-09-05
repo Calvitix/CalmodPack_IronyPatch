@@ -1,6 +1,8 @@
+@terraforming_cost_level_2 = 10000
+@terraforming_duration_level_2 = 18000
 terraform_link = {
-    from = "pc_tundra"
-    to = "pc_tropical"
+    from = pc_tundra
+    to = pc_tropical
     resources = {
         category = terraforming
         cost = {
@@ -8,20 +10,13 @@ terraform_link = {
         }
     }
     duration = @terraforming_duration_level_2
-    potential = {
-        has_technology = "tech_terrestrial_biome_manipulation"
-        NOR = {
-            has_policy_flag = terraforming_basic_invisible
-            has_policy_flag = terraforming_wet_invisible
-        }
-    }
     condition = {
-        has_technology = "tech_terrestrial_biome_manipulation"
+        has_technology = tech_terrestrial_sculpting
     }
     ai_weight = {
         weight = 0
         modifier = {
-            weight = 1
+            weight = 2
             should_terraform_trigger = {
                 CLASS_FROM = pc_tundra
                 CLASS_TO = pc_tropical
